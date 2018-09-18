@@ -1,0 +1,2635 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+            <title>MBA em Big Data (Data Science) - MBA - FIAP</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Mude seu mindset: use métodos matemáticos e estatísticos sobre um volume crescente de dados, e obtenha soluções nunca antes pensadas.">
+
+    <meta property="og:image" content="https://s3.amazonaws.com/wpfiap/wp-content/uploads/2013/11/BDT.png">
+
+    <meta property="og:title" content="MBA em Big Data (Data Science) - FIAP">
+
+    <meta property="og:description" content="Venha pensar e criar o novo com a gente.">
+
+    <link rel="shortcut icon" href="https://www.fiap.com.br/wp-content/themes/fiap2016/images/favicon.ico">
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-1593570-17', 'auto');
+
+            ga('send', 'pageview');
+    </script>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-564S72" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-564S72');</script>
+
+<script>
+    var _gaq = _gaq || {
+        push : function(arr) {
+            ga('send', 'event', arr[1], arr[2], arr[3]);
+        }
+    };
+</script>
+
+    
+    
+
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='stylesheet' id='google-roboto-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A400%2C100%2C100italic%2C300%2C300italic%2C400italic%2C500%2C500italic%2C700%2C700italic%2C900%2C900italic&#038;ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='fiap-css'  href='https://www.fiap.com.br/wp-content/themes/fiap2016/styles/mba.css?ver=4e57b58594b5ecd4c9cb745ecff12c5c' type='text/css' media='all' />
+
+</head>
+<body>
+        <div class="fiap-loader">
+        <div class="fiap-loader-box">
+            <img src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/loader.gif" class="fiap-loader-image">
+
+            <div class="fiap-loader-text">
+                0%
+            </div>
+
+            <svg class="fiap-loader-svg" viewBox="0 0 268 268">
+                <path class="fiap-loader-path" fill="none" stroke-width="2" d="M267,134c0,73.5-59.5,133-133,133S1,207.5,1,134 S60.5,1,134,1S267,60.5,267,134z"/>
+            </svg>
+        </div>
+    </div>
+
+    <nav id="menu" class="menu">
+        <div class="mba-novidades">
+    <div class="wrapper">
+        <div class="mba-novidades-columns">
+            <div class="mba-novidades-column mba-novidades-header">
+                <span class="mba-novidades-title">Receba as novidades</span><br>
+                <span class="mba-novidades-subtitle">dos 25 cursos de MBA da FIAP</span>
+            </div>
+
+            <form action="https://www.fiap.com.br/wp-content/themes/fiap2016/ajax/mba/receba-novidades.php" method="post" class="mba-novidades-column mba-novidades-form">
+                <input type="text" name="nome" placeholder="Digite seu nome" class="mba-novidades-input" required>
+
+                <input type="email" name="email" placeholder="Digite aqui seu e-mail" class="mba-novidades-input" required>
+
+                <input type="submit" value="Enviar" class="mba-novidades-btn" onclick="_gaq.push(['_trackEvent','MBA','Enviar','Email Topo']);">
+            </form>
+
+            <div class="mba-novidades-column mba-novidades-fechar">
+                <a href="#" class="mba-novidades-fechar-link js-mba-novidades-hide">
+                    Fechar&nbsp;&nbsp;✕
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="fiap-menu">
+    <ul class="fiap-menu-wrapper">
+                    <li class="fiap-menu-item">
+                <a href="#" class="fiap-menu-link fiap-menu-link-novidades js-mba-novidades-show" onclick="_gaq.push(['_trackEvent','MBA','Expandir','Receba Novidades Topo']);">
+                    <svg class="fiap-menu-novidades-icon">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-email"></use>
+                    </svg>
+
+                    Receba Novidades
+                </a>
+            </li>
+        
+        <li class="fiap-menu-item">
+            <a href="https://www.fiap.com.br" class="fiap-menu-link">
+                <svg class="fiap-menu-logo">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-fiap"></use>
+                </svg>
+            </a>
+        </li>
+
+        <li class="fiap-menu-item">
+            <a href="javascript: void(0);" class="fiap-menu-link fiap-menu-link-dropdown">
+                Sites
+            </a>
+
+            <ul class="fiap-menu-sub">
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www.fiap.com.br/graduacao/" class="fiap-menu-sub-link">Graduação</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www.fiap.com.br/mba/" class="fiap-menu-sub-link">MBA+</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www.fiap.com.br/online/" class="fiap-menu-sub-link">FIAP ON</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www.fiap.com.br/pronatec/" class="fiap-menu-sub-link">PRONATEC</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www.fiap.com.br/shift/" class="fiap-menu-sub-link">SHIFT</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www.fiap.com.br/corporate/" class="fiap-menu-sub-link">Corporate</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www.fiap.com.br/ihelp/" class="fiap-menu-sub-link">iHelp</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www.fiap.com.br/calltoinnovation/" class="fiap-menu-sub-link">Call to Innovation</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www.fiap.com.br/fiapx/" class="fiap-menu-sub-link">FIAP X</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="http://www.maratonadeaplicativos.com.br/" class="fiap-menu-sub-link">Maratona de Aplicativos</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://on.fiap.com.br/" class="fiap-menu-sub-link">Plataforma FIAP ON</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www2.fiap.com.br/" class="fiap-menu-sub-link">Portal do Aluno</a>
+                </li>
+                <li class="fiap-menu-sub-item">
+                    <a href="https://www.fiap.com.br/colegio/" class="fiap-menu-sub-link">FIAP SCHOOL</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+        <div class="components-menu">
+            <div class="components-menu-logo">
+                <a href="https://www.fiap.com.br/" class="components-menu-logo-link">
+                    <svg class="components-menu-svg">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-fiap"></use>
+                    </svg>
+                </a>
+                <a href="https://www.fiap.com.br/mba/" class="components-menu-logo-link">
+                    <svg class="components-menu-svg" style="max-width: 80px; max-height: 20px">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-mba-2018"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <ul class="components-menu-list">
+                <li class="components-menu-item">
+                    <a href="https://www.fiap.com.br/mba/#cursos" class="components-menu-link ">
+                        Cursos
+                    </a>
+                </li>
+                <li class="components-menu-item">
+                    <a href="https://www.fiap.com.br/mba/#extensoes-internacionais" class="components-menu-link ">
+                        Extensões Internacionais
+                    </a>
+                </li>
+                <li class="components-menu-item">
+                    <a href="https://www.fiap.com.br/mba/#processo-de-admissao" class="components-menu-link ">
+                        Admissão
+                    </a>
+
+                    <ul class="components-menu-sublist">
+                        <li class="components-menu-subitem">
+                            <a href="https://www.fiap.com.br/mba/#processo-de-admissao" class="components-menu-link ">
+                                Processo
+                            </a>
+                        </li>
+                        <li class="components-menu-subitem">
+                            <a href="//www2.fiap.com.br/static/ficha-inscricao-pos/?" class="components-menu-link">
+                                Inscreva-se
+                            </a>
+                        </li>
+                        <li class="components-menu-subitem">
+                            <a href="//www2.fiap.com.br/programas/net/MatriculaOnline/matricula/?" class="components-menu-link">
+                                Matrícula Online
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="components-menu-item">
+                    <a href="https://www.fiap.com.br/mba/startupone/" class="components-menu-link">
+                        Startup One
+                    </a>
+                </li>
+                <li class="components-menu-item">
+                    <a href="https://www.fiap.com.br/mba//institucional/#a-fiap/" class="components-menu-link ">
+                        A FIAP
+                    </a>
+
+                    <ul class="components-menu-sublist">
+                        <li class="components-menu-subitem">
+                            <a href="https://www.fiap.com.br/mba/#business-partners" class="components-menu-link ">
+                                Business partners
+                            </a>
+                        </li>
+                        <li class="components-menu-subitem">
+                            <a href="https://www.fiap.com.br/mba/#disrupcao" class="components-menu-link ">
+                                Disrupção
+                            </a>
+                        </li>
+                        <li class="components-menu-subitem">
+                            <a href="https://www.fiap.com.br/mba/#nomad" class="components-menu-link ">
+                                The Nomad Project
+                            </a>
+                        </li>
+                        <li class="components-menu-subitem">
+                            <a href="https://www.fiap.com.br/mba/#fotos" class="components-menu-link ">
+                                Fotos
+                            </a>
+                        </li>
+                        <li class="components-menu-subitem">
+                            <a href="https://www.fiap.com.br/mba/#videos" class="components-menu-link ">
+                                Vídeos
+                            </a>
+                        </li>
+                        <li class="components-menu-subitem">
+                            <a href="https://www.fiap.com.br/mba/#premios-e-reconhecimentos" class="components-menu-link ">
+                                Prêmios e Reconhecimentos
+                            </a>
+                        </li>
+                        <li class="components-menu-subitem">
+                            <a href="https://www.fiap.com.br/mba/#unidades" class="components-menu-link ">
+                                Unidades
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="components-menu-item">
+                    <a href="https://www.fiap.com.br/mba/contato/" class="components-menu-link">
+                        Contato
+                    </a>
+                </li>
+            </ul>
+
+                                                                        <div class="components-menu-button">
+                            <a href="#turmas" class="components-menu-button-link">
+                                Inscreva-se
+                            </a>
+                        </div>
+                                                
+            <a href="#" class="components-menu-toggle">
+                <span class="components-menu-toggle-icon">Abrir/Fechar Menu</span>
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <div class="background-gradient ">
+            <header id="header" class="mba-curso-header js-lazyload" data-bg="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/mba/curso/header/bdt.jpg">
+    <div class="mba-curso-header-wrapper">
+
+        <p class="mba-curso-header-top">MBA</p>
+        <h1 class="mba-curso-header-title">
+            <p><strong>Big Data</strong><br />
+Data Science</p>
+
+        </h1>
+
+        
+                                    
+                                    
+        <aside class="mba-curso-header-share mba-curso-header-share-mobile">
+            <ul class="mba-curso-header-share-list">
+                <li class="mba-startup-share-item">
+                    <a href="//www.facebook.com/sharer.php?u=https://www.fiap.com.br/mba/mba-em-big-data/&t=MBA em Big Data (Data Science)" class="mba-startup-share-link" target="_blank">
+                        <svg class="mba-startup-share-icon" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-facebook-magenta"></use></svg>
+                    </a>
+                </li>
+                <li class="mba-startup-share-item">
+                    <a href="//twitter.com/share?url=https://www.fiap.com.br/mba/mba-em-big-data/&text=MBA em Big Data (Data Science)" class="mba-startup-share-link" target="_blank">
+                        <svg class="mba-startup-share-icon" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-twitter-magenta"></use></svg>
+                    </a>
+                </li>
+                <li class="mba-startup-share-item">
+                    <a href="//www.linkedin.com/shareArticle?mini=true&url=https://www.fiap.com.br/mba/mba-em-big-data/&title=MBA em Big Data (Data Science)" class="mba-startup-share-link" target="_blank">
+                        <svg class="mba-startup-share-icon" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-linkedin-magenta"></use></svg>
+                    </a>
+                </li>
+                <li class="mba-startup-share-item">
+                                            <a href="https://web.whatsapp.com/send?text=MBA em Big Data (Data Science)%3A%20https://www.fiap.com.br/mba/mba-em-big-data/" target="_blank" class="mba-startup-share-link">
+                            <svg class="mba-startup-share-icon" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-whatsapp-magenta"></use></svg>
+                        </a>
+                                    </li>
+                <li class="mba-curso-header-share-title">
+                    Compartilhe
+                </li>
+            </ul>
+        </aside>
+        <a href="#informacoes" class="components-scroll-circle mba-curso-header-scroll js-scroll">
+            <span class="mba-curso-header-scroll-text">Scroll</span>
+            <span class="components-scroll-circle-icon"></span>
+        </a>
+    </div>
+
+    </header>
+    <section id="informacoes" class="mba-curso-informacoes">
+    <div class="wrapper">
+        <h1 class="mba-curso-informacoes-title">
+            Dados e pessoas direcionando<br />
+o sucesso corporativo.
+        </h1>
+
+        <div class="mba-curso-informacoes-columns">
+            <div class="mba-curso-informacoes-column">
+                <p><strong>POR QUE O CURSO É RELEVANTE?<br />
+</strong><br />
+As tecnologias tradicionais não são mais suficientes para lidar com o aumento do volume de dados nas empresas. Por isso, propomos um desafio: coletar dados nos mais diversos tipos de sensores (smartphones, IoT, web, entre outros). Com o armazenamento e processamento dessas informações, você vai aprender a estruturar dados não estruturados, extrair inteligência, visualizar e disponibilizar todos os dados adequadamente para melhorar o processo de tomada de decisão.</p>
+<p><strong>QUAL A METODOLOGIA?<br />
+</strong><br />
+Nosso programa aborda as mais modernas tecnologias de Big Data: Hadoop, Spark e Bancos de Dados NoSQL (HBase, Cassandra, Mongo, entre outros). Mais metodologias, estratégias e modelos de negócios inovadores voltados para Big Data. Também combinamos teoria com prática, por meio da técnica de aprendizagem baseada em problemas reais (PBL). Assim, você vai saber como criar um projeto de Big Data voltado para a realidade das empresas.</p>
+
+            </div>
+
+            <div class="mba-curso-informacoes-column">
+                <p><strong>QUAIS AS PRINCIPAIS HABILIDADES QUE VÃO SER DESENVOLVIDAS?<br />
+</strong><br />
+Com foco em gestão e tecnologia, este curso vai abrir um mundo de possibilidades:</p>
+<ul>
+<li>Aprenda a desenvolver estratégias de dados para atingir modelos inovadores de negócio.</li>
+<li>Domine o principal framework para processamento e armazenamento de dados (Hadoop e Spark).</li>
+<li>Modele, crie e manipule bancos de dados não estruturados.</li>
+<li>Aplique técnicas de integração e gestão de dados.</li>
+<li>Identifique padrões de comportamento dos dados (Data Mining) para aplicar em modelos matemáticos (Advanced Analytics).</li>
+<li>Crie visualizações adequadas para facilitar o processo de tomada de decisão.</li>
+</ul>
+<p><strong>QUAL O CENÁRIO?<br />
+</strong><br />
+Que estratégia uma empresa deve adotar para otimizar o volume de dados disponível no mundo digital? Como utilizar os dados para obter maior vantagem competitiva? Qual a melhor forma de processar e armazenar um grande volume de dados, na velocidade necessária e utilizando a variedade de fontes atuais? Como extrair inteligência dos dados internos e externos da sua organização? Como melhorar o seu mindset e o da sua empresa para tomar decisões baseadas nos dados? Respostas neste curso.</p>
+
+            </div>
+
+            <div class="mba-curso-informacoes-column">
+                <p><strong>PARA QUEM SE DESTINA?<br />
+</strong></p>
+<ul>
+<li>Analistas, Coordenadores e Gestores que querem utilizar os dados disponíveis no mundo digital, tanto na área de negócios quanto na área técnica de TI.</li>
+<li>Profissionais com perfil hands-on e visão gerencial.</li>
+</ul>
+<p><strong>OBJETIVOS DO CURSO</strong></p>
+<ul>
+<li>Formar o Gestor que vai implementar projetos de Big Data e tomar decisões nessa área.</li>
+<li>Formar o Cientista de Dados que vai usar as ferramentas necessárias para solucionar problemas de Big Data.</li>
+<li>Formar o Arquiteto que vai definir as ferramentas adequadas para prover os dados corporativos.</li>
+<li>Gerar insights de negócios com base nos diversos sensores e dados disponíveis.</li>
+<li>Identificar formas de competitividade com base nos dados internos e externos da organização.</li>
+</ul>
+<p><strong>PRÉ-REQUISITOS </strong></p>
+<ul>
+<li>Vivência corporativa e experiência profissional em negócios.</li>
+<li>Conhecimentos básicos de lógica de programação.</li>
+<li>Conhecimentos básicos de Banco de Dados relacionais.</li>
+<li>Perfil hands-on.</li>
+<li>Conhecimentos básicos em redes sociais (nível de usuário).</li>
+</ul>
+
+            </div>
+        </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+</section>
+    <section id="matriz-curricular" class="mba-curso-matriz">
+    <div class="wrapper">
+        <header class="mba-curso-matriz-header">
+            <div class="mba-curso-matriz-header-column">
+                <h1 class="mba-curso-matriz-header-title">
+                    Conteúdo
+                    <span>360 horas-aula (H/A)</span>
+                </h1>
+            </div>
+
+                            
+                                    </header>
+
+                    <div id="modulo-1" class="mba-curso-matriz-modulo">
+                <div class="mba-curso-matriz-modulo-border">
+                    <div class="mba-curso-matriz-modulo-header">
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-counter">
+                            <span class="mba-curso-matriz-modulo-counter">
+                                Módulo 1.
+                            </span>
+                        </div>
+
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-title">
+                            <h2 class="mba-curso-matriz-modulo-title">
+                                Gestão Empresarial e Chief Data Officer
+                            </h2>
+                        </div>
+
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-carga">
+                            <span class="mba-curso-matriz-modulo-carga">
+                                96 H/A
+                            </span>
+                        </div>
+
+                        <span class="mba-curso-matriz-modulo-plus"></span>
+                    </div>
+
+                    <div class="mba-curso-matriz-modulo-content">
+                        <div class="mba-curso-matriz-modulo-content-wrapper">
+                            <ul>
+ 	<li><strong>Workshop de Abertura</strong>
+<ul>
+ 	<li>Welcome Class</li>
+ 	<li>Dinâmica de Integração</li>
+</ul>
+</li>
+ 	<li><strong>Gestão Estratégica de Negócios</strong>
+<ul>
+ 	<li>Análise SWOT</li>
+ 	<li>Modelo de Porter e Cadeia de Valor</li>
+</ul>
+</li>
+ 	<li><strong>Business Analytics</strong>
+<ul>
+ 	<li>Estratégia de Dados para Data-Driven companies</li>
+ 	<li>Framework para Analytics</li>
+ 	<li>Criação de Roadmap</li>
+</ul>
+</li>
+ 	<li><strong>Governança de Big Data</strong>
+<ul>
+ 	<li>Qualidade de Dados</li>
+ 	<li>Metadados</li>
+ 	<li>Master Data Management</li>
+</ul>
+</li>
+ 	<li><strong>Marketing Analytics</strong>
+<ul>
+ 	<li>CRM Analítico</li>
+ 	<li>Ferramentas para análise de resultados de campanhas</li>
+</ul>
+</li>
+ 	<li><strong>Design Thinking &amp; Gamificação</strong>
+<ul>
+ 	<li>Melhorando a experiência do Cliente</li>
+ 	<li>Validação de ideias através do feedback de usuários</li>
+ 	<li>Refinamento de ideias a partir da compreensão do negócio</li>
+</ul>
+</li>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div id="modulo-2" class="mba-curso-matriz-modulo">
+                <div class="mba-curso-matriz-modulo-border">
+                    <div class="mba-curso-matriz-modulo-header">
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-counter">
+                            <span class="mba-curso-matriz-modulo-counter">
+                                Módulo 2.
+                            </span>
+                        </div>
+
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-title">
+                            <h2 class="mba-curso-matriz-modulo-title">
+                                Arquitetura de Big Data
+                            </h2>
+                        </div>
+
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-carga">
+                            <span class="mba-curso-matriz-modulo-carga">
+                                112 H/A
+                            </span>
+                        </div>
+
+                        <span class="mba-curso-matriz-modulo-plus"></span>
+                    </div>
+
+                    <div class="mba-curso-matriz-modulo-content">
+                        <div class="mba-curso-matriz-modulo-content-wrapper">
+                            <ul>
+ 	<li><strong>Arquitetura de Dados para Tomada de Decisão</strong>
+<ul>
+ 	<li>Modelos de Implantação: Top-Down, Bottom-Up e Incremental</li>
+ 	<li>Arquitetura Lógica e Física</li>
+ 	<li>Data Lake x Data Warehouse</li>
+</ul>
+</li>
+ 	<li><strong>Internet das Coisas IoT</strong>
+<ul>
+ 	<li>Aplicação: indústria, saúde, transporte, etc.</li>
+ 	<li>Automação predial e residencial</li>
+ 	<li>Plataformas de Desenvolvimento</li>
+</ul>
+</li>
+ 	<li><strong>Banco de Dados NoSQL</strong>
+<ul>
+ 	<li>Tipos de BD NoSQL</li>
+ 	<li>Teorema CAP</li>
+ 	<li>Escalabilidade e Consistência</li>
+ 	<li>Ferramentas do Mercado: Cassandra, MongoDB, etc.</li>
+</ul>
+</li>
+ 	<li><strong>Computação Paralela e Distribuída</strong>
+<ul>
+ 	<li>Lei de Moore</li>
+ 	<li>HDFS</li>
+ 	<li>Hadoop, Yarn e MapReduce</li>
+</ul>
+</li>
+ 	<li><strong>Ingestão de Dados</strong>
+<ul>
+ 	<li>Streaming e Data Lake</li>
+ 	<li>Hive e Pig</li>
+ 	<li>Spark</li>
+</ul>
+</li>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div id="modulo-3" class="mba-curso-matriz-modulo">
+                <div class="mba-curso-matriz-modulo-border">
+                    <div class="mba-curso-matriz-modulo-header">
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-counter">
+                            <span class="mba-curso-matriz-modulo-counter">
+                                Módulo 3.
+                            </span>
+                        </div>
+
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-title">
+                            <h2 class="mba-curso-matriz-modulo-title">
+                                Ciência de Dados
+                            </h2>
+                        </div>
+
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-carga">
+                            <span class="mba-curso-matriz-modulo-carga">
+                                132 H/A
+                            </span>
+                        </div>
+
+                        <span class="mba-curso-matriz-modulo-plus"></span>
+                    </div>
+
+                    <div class="mba-curso-matriz-modulo-content">
+                        <div class="mba-curso-matriz-modulo-content-wrapper">
+                            <ul>
+ 	<li><strong>Linguagem de Programação Estatística</strong>
+<ul>
+ 	<li>Linguagem R</li>
+</ul>
+</li>
+ 	<li><strong>Análise Semântica Aplicada</strong>
+<ul>
+ 	<li>Modelagem Conceitual</li>
+ 	<li>Ontologias</li>
+ 	<li>Padrões: RDF, RDFS e OWL</li>
+</ul>
+</li>
+ 	<li><strong>Análise de Correlação e Associação</strong>
+<ul>
+ 	<li>Análise de Cluster e Conglomerado</li>
+ 	<li>Regras de Decisão</li>
+ 	<li>Churn e Attrition</li>
+ 	<li>Credit Scoring</li>
+</ul>
+</li>
+ 	<li><strong>Análise Preditiva e Data Mining</strong>
+<ul>
+ 	<li>Modelagem Preditiva</li>
+ 	<li>Processo de Descoberta de Dados (KDD)</li>
+ 	<li>Classificação supervisionada e não-supervisionada, Estimação e Discriminação</li>
+</ul>
+</li>
+ 	<li><strong>Exploração de Dados Visuais &amp; Geoanálise</strong>
+<ul>
+ 	<li>Métodos e Conceitos de Visualização de Dados</li>
+ 	<li>Storytelling</li>
+ 	<li>Principais ferramentas do mercado: Tableau, MicroStrategy e/ou R</li>
+</ul>
+</li>
+ 	<li><strong>Big Data Mining &amp; Inteligência Artificial</strong>
+<ul>
+ 	<li>Log Analytics</li>
+ 	<li>Levantamento Ad-hoc, Transformação, Limpeza e Controle</li>
+ 	<li>Text Mining</li>
+ 	<li>Machine Learning</li>
+</ul>
+</li>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div id="modulo-4" class="mba-curso-matriz-modulo">
+                <div class="mba-curso-matriz-modulo-border">
+                    <div class="mba-curso-matriz-modulo-header">
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-counter">
+                            <span class="mba-curso-matriz-modulo-counter">
+                                Módulo 4.
+                            </span>
+                        </div>
+
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-title">
+                            <h2 class="mba-curso-matriz-modulo-title">
+                                Startup One
+                            </h2>
+                        </div>
+
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-carga">
+                            <span class="mba-curso-matriz-modulo-carga">
+                                20 H/A
+                            </span>
+                        </div>
+
+                        <span class="mba-curso-matriz-modulo-plus"></span>
+                    </div>
+
+                    <div class="mba-curso-matriz-modulo-content">
+                        <div class="mba-curso-matriz-modulo-content-wrapper">
+                            <ul>
+ 	<li><strong>Empreendedorismo e Inovação</strong>
+<ul>
+ 	<li>Ecossistema Empreendedor</li>
+ 	<li>Intraempreendedorismo</li>
+ 	<li>Inovação</li>
+ 	<li>Open Innovation</li>
+ 	<li>Ideias e Oportunidades</li>
+ 	<li>Business Canvas – BMG</li>
+ 	<li>Prototipação e Design Thinking</li>
+ 	<li>Análise Financeira</li>
+ 	<li>Economia Criativa</li>
+ 	<li>Técnicas de Pitching</li>
+ 	<li>Cases de Sucesso do Cenário Nacional e Global</li>
+</ul>
+</li>
+</ul>
+<a style="font: 13px Roboto" href="https://www.fiap.com.br/mba/startupone/" target="_blank">Saiba mais sobre o Startup One</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div id="modulo-5" class="mba-curso-matriz-modulo">
+                <div class="mba-curso-matriz-modulo-border">
+                    <div class="mba-curso-matriz-modulo-header">
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-counter">
+                            <span class="mba-curso-matriz-modulo-counter">
+                                Módulo 5.
+                            </span>
+                        </div>
+
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-title">
+                            <h2 class="mba-curso-matriz-modulo-title">
+                                Extensão Internacional (Opcional)
+                            </h2>
+                        </div>
+
+                        <div class="mba-curso-matriz-modulo-header-column mba-curso-matriz-modulo-header-column-carga">
+                            <span class="mba-curso-matriz-modulo-carga">
+                                -- H/A
+                            </span>
+                        </div>
+
+                        <span class="mba-curso-matriz-modulo-plus"></span>
+                    </div>
+
+                    <div class="mba-curso-matriz-modulo-content">
+                        <div class="mba-curso-matriz-modulo-content-wrapper">
+                            <ul>
+ 	<li><strong><a href="https://www.fiap.com.br/mba/extensao-internacional/hyper-island/digital-acceleration/">Master Class Digital Acceleration
+(Hyper Island)</a></strong>
+<ul>
+ 	<li>Londres</li>
+ 	<li>Nova Iorque</li>
+ 	<li>Estocolmo</li>
+ 	<li>Singapura</li>
+ 	<li>São Paulo</li>
+</ul>
+</li>
+ 	<li><strong><a href="https://www.fiap.com.br/mba/extensao-internacional/nova/effective-leadership-program/">Effective Leadership Program
+(Nova School of Business &amp; Economics)</a></strong>
+<ul>
+ 	<li>Lisboa</li>
+</ul>
+</li>
+ 	<li><strong><a href="https://www.fiap.com.br/mba/extensao-internacional/babson/the-entrepreneurship-program/" target="_blank">The Entrepreneurship Program
+(Babson College)</a></strong>
+<ul>
+ 	<li>Boston</li>
+</ul>
+</li>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            </div>
+</section>
+    <section id="turmas">
+            <div class="mba-curso-turmas mba-curso-turmas-presencial">
+            <div class="wrapper">
+                <h1 class="mba-curso-turmas-title">
+                    Turmas 2018
+                </h1>
+
+                <div class="mba-curso-turmas-parent">
+                    <div class="mba-curso-turmas-header">
+                        <div class="mba-curso-turmas-header-column unidade">
+                            Campus
+                        </div>
+
+                        <div class="mba-curso-turmas-header-column inicio">
+                            Início
+                        </div>
+
+                        <div class="mba-curso-turmas-header-column duracao">
+                            Duração
+                        </div>
+
+                        <div class="mba-curso-turmas-header-column dias">
+                            Dias
+                        </div>
+
+                        <div class="mba-curso-turmas-header-column horario">
+                            Horário
+                        </div>
+
+                        <div class="mba-curso-turmas-header-column investimento">
+                            Investimento
+                        </div>
+                    </div>
+                    <form action="//www2.fiap.com.br/static/ficha-inscricao-pos/" method="get" class="js-form-mba-turmas mba-cursos-turmas-form">
+                                                    
+                                                            <div class="mba-curso-turmas-box ">
+                                    <div class="mba-curso-turmas-box-column radio mba-cursos-turmas-box-column-turma">
+                                        <label class="mba-curso-turma-radio ">
+                                            <input name="turma" type="radio" class="mba-curso-turma-radio-input" value="34BDT" />
+                                            <span class="mba-curso-turma-radio-bullet"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="mba-curso-turmas-box-column-mobile">
+                                        <div class="mba-curso-turmas-box-column unidade">
+                                            <svg class="mba-curso-turmas-box-icon" viewBox="0 0 132.1 179.1">
+                                                <use xlink:href="#icon-marcador"></use>
+                                            </svg>
+
+                                            <span class="mba-curso-turmas-box-text mba-curso-turmas-box-text-campus">
+                                             Alphaville
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column inicio">
+                                                                                                                                                                                                                                                                                
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Início:
+                                                </span>
+                                                                                                    22/10
+                                                                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column duracao">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Duração:
+                                                </span>
+                                               12 meses
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column dia">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Dias:
+                                                </span>
+                                             Seg e Qua + 18 Sex
+                                        </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column horario">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Horario:
+                                                </span>
+                                                19h10 às 23h20
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column investimento">
+                                                                                                                                        
+                                                                                            <span class="mba-curso-turmas-box-text mba-curso-turmas-box-more js-mba-investimento-open" onclick="_gaq.push(['_trackEvent','MBA','Box Mensalidade','Clique no Preço']);">
+                                                    <span class="mba-curso-turmas-box-text-before">
+                                                        Investimento:
+                                                    </span>
+                                                    24x 891,00*&nbsp;
+                                                    <span class="mba-curso-turmas-box-text-after">
+                                                        Saiba mais
+                                                    </span>
+                                                </span>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                                                                
+                                                            <div class="mba-curso-turmas-box ">
+                                    <div class="mba-curso-turmas-box-column radio mba-cursos-turmas-box-column-turma">
+                                        <label class="mba-curso-turma-radio ">
+                                            <input name="turma" type="radio" class="mba-curso-turma-radio-input" value="35BDT" />
+                                            <span class="mba-curso-turma-radio-bullet"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="mba-curso-turmas-box-column-mobile">
+                                        <div class="mba-curso-turmas-box-column unidade">
+                                            <svg class="mba-curso-turmas-box-icon" viewBox="0 0 132.1 179.1">
+                                                <use xlink:href="#icon-marcador"></use>
+                                            </svg>
+
+                                            <span class="mba-curso-turmas-box-text mba-curso-turmas-box-text-campus">
+                                             Aclimação
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column inicio">
+                                                                                                                                                                                                                                                                                
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Início:
+                                                </span>
+                                                                                                    08/10
+                                                                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column duracao">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Duração:
+                                                </span>
+                                               12 meses
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column dia">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Dias:
+                                                </span>
+                                             Seg e Qua + 12 Sáb
+                                        </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column horario">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Horario:
+                                                </span>
+                                                19h10 às 23h20
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column investimento">
+                                                                                                                                        
+                                                                                            <span class="mba-curso-turmas-box-text mba-curso-turmas-box-more js-mba-investimento-open" onclick="_gaq.push(['_trackEvent','MBA','Box Mensalidade','Clique no Preço']);">
+                                                    <span class="mba-curso-turmas-box-text-before">
+                                                        Investimento:
+                                                    </span>
+                                                    24x 1.048,00*&nbsp;
+                                                    <span class="mba-curso-turmas-box-text-after">
+                                                        Saiba mais
+                                                    </span>
+                                                </span>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                                                                
+                                                            <div class="mba-curso-turmas-box is-disabled">
+                                    <div class="mba-curso-turmas-box-column radio mba-cursos-turmas-box-column-turma">
+                                        <label class="mba-curso-turma-radio is-disabled">
+                                            <input name="turma" type="radio" class="mba-curso-turma-radio-input" value="36BDT" disabled/>
+                                            <span class="mba-curso-turma-radio-bullet"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="mba-curso-turmas-box-column-mobile">
+                                        <div class="mba-curso-turmas-box-column unidade">
+                                            <svg class="mba-curso-turmas-box-icon" viewBox="0 0 132.1 179.1">
+                                                <use xlink:href="#icon-marcador"></use>
+                                            </svg>
+
+                                            <span class="mba-curso-turmas-box-text mba-curso-turmas-box-text-campus">
+                                             Paulista
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column inicio">
+                                                                                                                                                                                                                                                                                
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Início:
+                                                </span>
+                                                                                                    <span class="mba-curso-turmas-box-sold">
+                                                        Sold Out
+                                                    </span>
+                                                                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column duracao">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Duração:
+                                                </span>
+                                               12 meses
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column dia">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Dias:
+                                                </span>
+                                             Ter e Qui + 12 Sáb
+                                        </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column horario">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Horario:
+                                                </span>
+                                                19h10 às 23h20
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column investimento">
+                                                                                                                                        
+                                                                                            <span class="mba-curso-turmas-box-text">
+                                                    24x 1.048,00*
+                                                </span>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                                                                
+                                                            <div class="mba-curso-turmas-box ">
+                                    <div class="mba-curso-turmas-box-column radio mba-cursos-turmas-box-column-turma">
+                                        <label class="mba-curso-turma-radio ">
+                                            <input name="turma" type="radio" class="mba-curso-turma-radio-input" value="37BDT" />
+                                            <span class="mba-curso-turma-radio-bullet"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="mba-curso-turmas-box-column-mobile">
+                                        <div class="mba-curso-turmas-box-column unidade">
+                                            <svg class="mba-curso-turmas-box-icon" viewBox="0 0 132.1 179.1">
+                                                <use xlink:href="#icon-marcador"></use>
+                                            </svg>
+
+                                            <span class="mba-curso-turmas-box-text mba-curso-turmas-box-text-campus">
+                                             Vl. Olímpia
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column inicio">
+                                                                                                                                                                                                                                                                                
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Início:
+                                                </span>
+                                                                                                    27/09
+                                                                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column duracao">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Duração:
+                                                </span>
+                                               12 meses
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column dia">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Dias:
+                                                </span>
+                                             Ter e Qui + 11 Sáb
+                                        </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column horario">
+                                                                                                                                        
+                                            <span class="mba-curso-turmas-box-text">
+                                                <span class="mba-curso-turmas-box-text-before">
+                                                    Horario:
+                                                </span>
+                                                19h10 às 23h20
+                                            </span>
+                                        </div>
+
+                                        <div class="mba-curso-turmas-box-column investimento">
+                                                                                                                                        
+                                                                                            <span class="mba-curso-turmas-box-text mba-curso-turmas-box-more js-mba-investimento-open" onclick="_gaq.push(['_trackEvent','MBA','Box Mensalidade','Clique no Preço']);">
+                                                    <span class="mba-curso-turmas-box-text-before">
+                                                        Investimento:
+                                                    </span>
+                                                    24x 1.048,00*&nbsp;
+                                                    <span class="mba-curso-turmas-box-text-after">
+                                                        Saiba mais
+                                                    </span>
+                                                </span>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                                                        </form>
+                </div>
+                <div class="mba-curso-turmas-notes">
+                    * Valor com desconto para ex-alunos FIAP e empresas conveniadas, com pagamento até o dia 5 de cada mês. Sujeito a alteração durante o ano letivo.
+                </div>
+                                    <div class="text-center">
+                                                    <div class="mba-turma-info-alerta">
+                                <span class="mba-turma-info-alerta-label">Escolha uma turma acima!</span>
+                            </div>
+
+                            <a class="mba-curso-turmas-btn js-mba-curso-turma-ficha-inscricao-btn">
+                                Inscreva-se
+                            </a>
+
+                                                                        </div>
+                            </div>
+        </div>
+    
+    </section>
+
+
+<section id="investimento" class="mba-curso-investimento" style="opacity: 0;">
+    <div class="mba-curso-investimento-wrapper">
+        <div class="mba-curso-investimento-box">
+            <button class="mba-curso-investimento-close js-mba-investimento-close">
+                Fechar
+            </button>
+
+            <h1 class="mba-curso-investimento-title">
+                Investimento
+            </h1>
+
+            <div class="mba-curso-investimento-columns">
+                <div class="mba-curso-investimento-column">
+                    <div class="mba-curso-investimento-subtitle">
+                        24 parcelas
+                    </div>
+                </div>
+
+                <div class="mba-curso-investimento-column">
+                                            
+                                                    <div class="mba-curso-investimento-item">
+                                <div class="mba-curso-investimento-item-header">
+                                    <div class="mba-curso-investimento-item-header-column">
+                                        Para matrículas<br>
+                                        até 28/09/2018
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-header-column">
+                                        Empresas Conveniadas<br>
+                                        Ex-alunos FIAP
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-header-column">
+                                        Valor Integral
+                                    </div>
+                                </div>
+
+                                <div class="mba-curso-investimento-item-row">
+                                    <div class="mba-curso-investimento-item-row-column" data-title="Para matrículas até 28/09/2018">
+                                        R$ 1.003,00*
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-row-column" data-title="Empresas Conveniadas/Ex-alunos FIAP">
+                                        R$ 891,00*
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-row-column" data-title="Valor Integral">
+                                        R$ 1.114,00*
+                                    </div>
+                                </div>
+                            </div>
+                                                                    
+                                                    <div class="mba-curso-investimento-item">
+                                <div class="mba-curso-investimento-item-header">
+                                    <div class="mba-curso-investimento-item-header-column">
+                                        Para matrículas<br>
+                                        até 28/09/2018
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-header-column">
+                                        Empresas Conveniadas<br>
+                                        Ex-alunos FIAP
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-header-column">
+                                        Valor Integral
+                                    </div>
+                                </div>
+
+                                <div class="mba-curso-investimento-item-row">
+                                    <div class="mba-curso-investimento-item-row-column" data-title="Para matrículas até 28/09/2018">
+                                        R$ 1.179,00*
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-row-column" data-title="Empresas Conveniadas/Ex-alunos FIAP">
+                                        R$ 1.048,00*
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-row-column" data-title="Valor Integral">
+                                        R$ 1.310,00*
+                                    </div>
+                                </div>
+                            </div>
+                                                                    
+                                                                    
+                                                    <div class="mba-curso-investimento-item">
+                                <div class="mba-curso-investimento-item-header">
+                                    <div class="mba-curso-investimento-item-header-column">
+                                        Para matrículas<br>
+                                        até 28/09/2018
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-header-column">
+                                        Empresas Conveniadas<br>
+                                        Ex-alunos FIAP
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-header-column">
+                                        Valor Integral
+                                    </div>
+                                </div>
+
+                                <div class="mba-curso-investimento-item-row">
+                                    <div class="mba-curso-investimento-item-row-column" data-title="Para matrículas até 28/09/2018">
+                                        R$ 1.179,00*
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-row-column" data-title="Empresas Conveniadas/Ex-alunos FIAP">
+                                        R$ 1.048,00*
+                                    </div>
+
+                                    <div class="mba-curso-investimento-item-row-column" data-title="Valor Integral">
+                                        R$ 1.310,00*
+                                    </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+
+                            <a href="//www2.fiap.com.br/static/ficha-inscricao-pos/?id=97&" class="mba-curso-investimento-btn " onclick="_gaq.push(['_trackEvent','MBA','Box Mensalidade','Inscreva-se Lightbox']);">
+                    Inscreva-se
+                </a>
+
+                            
+            <div class="mba-curso-investimento-notes">
+                <p>
+                    Taxa de inscrição, com desconto, para matrículas efetuadas até 3 dias após aprovação na entrevista individual: R$ 190,00.<br>
+                    Taxa de inscrição R$490,00. Pagamento da taxa de inscrição somente com cartão de crédito.
+                </p>
+
+                <p>
+                    * Valor para pagamento até o dia 5 de cada mês. Valores de investimento e opção de parcelamento em 24 vezes,<br>
+                    válidos para matrículas efetivadas em turmas com início no segundo semestre de 2018. Sujeito a alterações sem prévio aviso.
+                </p>
+
+                <p>
+                    ** Com a opção de pagamento em 24 meses, a FIAP permite ao aluno contar com a melhor formação acadêmica,<br>
+                    concluindo o investimento no MBA após o término do curso, que tem duração de aproximadamente 1 ano.
+                </p>
+                <p>
+                    Descontos não cumulativos.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="processo-de-admissao" class="mba-admissao">
+    <div class="wrapper">
+        <h1 class="mba-admissao-title">
+            Processo de <span class="mba-admissao-title-destaque">Admissão</span>
+        </h1>
+        <div class="mba-admissao-list-content">
+            <span class="mba-admissao-list-line-hover"></span>
+            <div class="mba-admissao-list">
+                <div class="mba-admissao-item">
+                    <h2 class="mba-admissao-subtitle">Pré-Requisitos</h2>
+                    <p class="mba-admissao-item-text">
+                        Formação superior<br class="br-desktop">
+                        completa, com colação<br class="br-desktop">
+                        de grau realizada,<br class="br-desktop">
+                        em cursos Tecnólogos,<br class="br-desktop">
+                        Bacharelados<br class="br-desktop">
+                        e Licenciaturas.
+                    </p>
+                    <div class="mba-admissao-item-bg">
+                        <span class="mba-admissao-item-bg-top"></span>
+                        <span class="mba-admissao-item-bg-right"></span>
+                        <span class="mba-admissao-item-bg-bottom"></span>
+                        <span class="mba-admissao-item-bg-left"></span>
+                    </div>
+                </div>
+
+                <div class="mba-admissao-item">
+                    <h2 class="mba-admissao-subtitle">Inscrição</h2>
+                    <p class="mba-admissao-item-text">
+                                                    <a href="//www2.fiap.com.br/static/ficha-inscricao-pos/?id=97&" class="mba-admissao-item-link" onclick="_gaq.push(['_trackEvent','MBA','Processo de Admissão','Inscreva-se Preencha']);">
+                                Preencha</a>
+                                                a ficha <br class="br-desktop">
+                        de inscrição on-line.
+                    </p>
+                    <div class="mba-admissao-item-bg">
+                        <span class="mba-admissao-item-bg-top"></span>
+                        <span class="mba-admissao-item-bg-right"></span>
+                        <span class="mba-admissao-item-bg-bottom"></span>
+                        <span class="mba-admissao-item-bg-left"></span>
+                    </div>
+                </div>
+
+                <div class="mba-admissao-item">
+                    <h2 class="mba-admissao-subtitle">Entrevista</h2>
+                    <p class="mba-admissao-item-text">
+                        A sua primeira experiência <br class="br-desktop">
+                        aqui é assim: você conhece<br class="br-desktop">
+                        melhor a FIAP e todo <br class="br-desktop">
+                        o nosso ecossistema <br class="br-desktop">
+                        de tecnologia e inovação.<br class="br-desktop">
+                        E a gente fica sabendo <br class="br-desktop">
+                        mais sobre você, sua <br class="br-desktop">
+                        trajetória profissional <br class="br-desktop">
+                        e expectativas.
+                    </p>
+
+                    <div class="mba-admissao-item-bg">
+                        <span class="mba-admissao-item-bg-top"></span>
+                        <span class="mba-admissao-item-bg-right"></span>
+                        <span class="mba-admissao-item-bg-bottom"></span>
+                        <span class="mba-admissao-item-bg-left"></span>
+                    </div>
+                </div>
+
+                <div class="mba-admissao-item">
+                    <h2 class="mba-admissao-subtitle">Matrícula</h2>
+                    <p class="mba-admissao-item-text">
+                        Os aprovados podem fazer <br class="br-desktop">
+                        a matrícula em qualquer <br class="br-desktop">
+                        uma de nossas unidades ou<br class="br-desktop">
+                        <a href="https://www2.fiap.com.br/programas/net/MatriculaOnline/matricula/" class="mba-admissao-item-link" onclick="_gaq.push(['_trackEvent','MBA','Processo de Admissão','Matricula Online']);">on-line</a>.
+                    </p>
+
+                    <div class="mba-admissao-item-bg">
+                        <span class="mba-admissao-item-bg-top"></span>
+                        <span class="mba-admissao-item-bg-right"></span>
+                        <span class="mba-admissao-item-bg-bottom"></span>
+                        <span class="mba-admissao-item-bg-left"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+    </div>
+</section>
+
+        <section id="coordenacao" class="mba-curso-corpo mba-curso-corpo-coordenacao">
+        <div class="wrapper">
+            <div class="mba-curso-corpo-columns">
+                <div class="mba-curso-corpo-column mba-curso-corpo-media">
+                    <img src="https://s3.amazonaws.com/wpfiap/wp-content/uploads/2018/07/Celso-Poderoso-2019.png" class="mba-curso-corpo-media-img">
+                </div>
+                <div class="mba-curso-corpo-column mba-curso-corpo-content">
+                    <h1 class="mba-curso-corpo-title">
+                        Coordenação
+                    </h1>
+
+                    <p class="mba-curso-corpo-subtitle">
+                        Celso Poderoso
+                    </p>
+
+                    <div class="mba-curso-corpo-media-mobile">
+                        <img src="https://s3.amazonaws.com/wpfiap/wp-content/uploads/2018/07/Celso-Poderoso-2019.png" class="mba-curso-corpo-media-img">
+                    </div>
+
+                    <div class="mba-curso-corpo-desc">
+                        <ul>
+ 	<li>Mestre em Tecnologia pelo Centro Paula Souza (FATEC-SP) - concentração em Grid Computing.</li>
+ 	<li>Pós-graduado em Sistemas da Informação pelo Centro Universitário Fundação Santo André.</li>
+ 	<li>Graduado em Ciências Econômicas pela Universidade de São Caetano do Sul.</li>
+ 	<li>Diretor de Serviços Profissionais na MicroStrategy Brasil.</li>
+ 	<li>18 anos como Docente e Coordenador em cursos de Pós-graduação (FIAP e Centro Universitário Fundação Santo André).</li>
+ 	<li>Autor do livro SQL Curso Prático e dos Guias de Referência Oracle PL/SQL (Novatec Editora).</li>
+ 	<li>29 anos de atuação na área de Business Intelligence, Desenvolvimento de Sistemas e Banco de Dados Oracle®.</li>
+</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="direcao" class="mba-curso-corpo mba-curso-corpo-direcao">
+        <div class="wrapper">
+            <div class="mba-curso-corpo-columns">
+                <div class="mba-curso-corpo-column mba-curso-corpo-content">
+                    <h1 class="mba-curso-corpo-title">
+                        Direção
+                    </h1>
+
+                    <div class="mba-curso-corpo-subtitle">
+                        EDUARDO ENDO
+                    </div>
+                    
+                    <div class="mba-curso-corpo-media-mobile">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/cursos/direcao/eduardo-endo.png" class="mba-curso-corpo-media-img js-lazyload">
+                    </div>
+
+                    <div class="mba-curso-corpo-desc">
+                       <ul>
+                            <li>Diretor acadêmico dos cursos de MBA da FIAP.</li>
+                            <li>Mestre em Tecnologia: Gestão Desenvolvimento e Formação.</li>
+                            <li>Pós-graduado em Objetos Distribuídos com Java.</li>
+                            <li>Graduado em Ciências da Computação.</li>
+                            <li>Diversos certificados na área de tecnologia (SUN, IBM, TOGAF).</li>
+                            <li>Experiência de 9 anos como docente, tendo atuado como coordenador e professor de Cursos de Graduação e de Pós-graduação.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mba-curso-corpo-column mba-curso-corpo-media">
+                    <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/cursos/direcao/eduardo-endo.png" class="mba-curso-corpo-media-img js-lazyload">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="videos" class="fiap-2018-future">
+    <div class="wrapper">
+        <h1 class="fiap-2018-future-title">
+            <span>Future-se</span>
+        </h1>
+
+        <div class="components-video">
+            <iframe class="js-video-autoplay" src="https://www.youtube.com/embed/6CtpaYVB-Rs?enablejsapi=1&autoplay=0&controls=1&rel=0&mute=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+    <section id="extensoes-internacionais" class="fiap-mba-extensoes js-lazyload">
+    <div class="wrapper">
+        <div class="mba-extensoes-parent-title">
+            <h1 class="fiap-mba-extensoes-title">
+                Extensões
+                <span class="mba-extensoes-title-internacionais">Internacionais</span><br class="br-desktop">
+            </h1>
+        </div>
+        <div class="fiap-mba-extensoes-subtitle">
+            Ao fazer um de nossos MBAs,<br class="br-desktop">
+            você pode viver novas experiências em Boston,<br> 
+            Nova York, Londres, Estocolmo,<br> 
+            Lisboa, Singapura ou São Paulo.
+        </div>
+
+        <div class="fiap-mba-extensoes-list">
+            <div class="fiap-mba-extensoes-item fiap-mba-extensoes-item-hyper-island">
+                <a href="https://www.fiap.com.br/mba/extensao-internacional/hyper-island/digital-acceleration/" onclick="_gaq.push(['_trackEvent','MBA','Extensão Internacional - Hyper Island','Vem com a gente']);">
+                    <div class="fiap-mba-extensoes-item-content">
+                        <h2 class="fiap-mba-extensoes-item-title">
+                            Master Class<br class="br-desktop">
+                            Digital Acceleration
+                        </h2>
+
+                        <p id="a" class="fiap-mba-extensoes-item-desc">
+                            Pensando a comunicação e o meio digital<br class="br-desktop">
+                            de uma forma disruptiva.
+                        </p>
+
+                        <svg class="fiap-mba-extensoes-item-logo fiap-mba-extensoes-item-logo-hyper" viewBox="0 0 128.9 17.2">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-hyper-island"></use>
+                        </svg>
+
+                        <p class="fiap-mba-extensoes-item-local">
+                            Singapura | Nova York<br>
+                            Estocolmo | Londres
+                        </p>
+
+                        <div class="fiap-mba-extensoes-item-btn">
+                            +
+                        </div>
+                    </div>
+
+
+                    <div class="fiap-mba-extensoes-item-hover">
+                        <div class="fiap-mba-extensoes-item-content">
+                            <h2 class="fiap-mba-extensoes-item-title fiap-mba-extensoes-item-title-hyper">
+                                Master Class<br class="br-desktop">
+                                Digital Acceleration
+                            </h2>
+
+                            <p id="a" class="fiap-mba-extensoes-item-desc">
+                                Quer explorar o mundo on-line? O programa<br class="br-desktop">
+                                Digital Acceleration, da Hyper Island, é o<br class="br-desktop">
+                                mais inovador de todos. E você ainda escolhe<br class="br-desktop">
+                                onde fazer sua extensão.
+                            </p>
+
+                            <svg class="fiap-mba-extensoes-item-logo fiap-mba-extensoes-item-logo-hyper" viewBox="0 0 128.9 17.2">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-hyper-island"></use>
+                            </svg>
+
+                            <p class="fiap-mba-extensoes-item-local">
+                                Singapura | Nova York<br>
+                                Estocolmo | Londres
+                            </p>
+
+                            <div class="fiap-mba-extensoes-item-btn">
+                                +
+                            </div>
+                            <p class="fiap-mba-extensoes-item-btn-saiba-mais">
+                                Saiba Mais
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="fiap-mba-extensoes-item fiap-mba-extensoes-item-nova">
+                <a href="https://www.fiap.com.br/mba/extensao-internacional/nova/effective-leadership-program/" onclick="_gaq.push(['_trackEvent','MBA','Extensão Internacional - Nova','Vem com a gente']);">
+                    <div class="fiap-mba-extensoes-item-content">
+                        <h2 class="fiap-mba-extensoes-item-title">
+                            Effective<br class="br-desktop">
+                            Leadership Program
+                        </h2>
+
+                        <p class="fiap-mba-extensoes-item-desc">
+                            Preparado para liderar<br class="br-desktop">
+                            a transformação digital das empresas?<br class="br-desktop">
+                        </p>
+
+                        <svg class="fiap-mba-extensoes-item-logo fiap-mba-extensoes-item-logo-nova" viewBox="0 0 105.4 36">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-nova-2018"></use>
+                        </svg>
+
+                        <p class="fiap-mba-extensoes-item-local">
+                            Lisboa
+                        </p>
+
+                        <div class="fiap-mba-extensoes-item-btn">
+                            +
+                        </div>
+                    </div>
+
+                    <div class="fiap-mba-extensoes-item-hover">
+                        <div class="fiap-mba-extensoes-item-content">
+                            <h2 class="fiap-mba-extensoes-item-title">
+                                Effective<br class="br-desktop">
+                                Leadership Program
+                            </h2>
+
+                            <p class="fiap-mba-extensoes-item-desc">
+                                Participe do Effective Leadership Program,<br class="br-desktop">
+                                da Nova School of Business & Economics, <br class="br-desktop">
+                                a melhor escola de Economia, Finanças e<br class="br-desktop">
+                                Gestão de Portugal.
+                            </p>
+
+                            <svg class="fiap-mba-extensoes-item-logo fiap-mba-extensoes-item-logo-nova" viewBox="0 0 105.4 36">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-nova-2018"></use>
+                            </svg>
+
+                            <p class="fiap-mba-extensoes-item-local">
+                                Lisboa
+                            </p>
+
+                            <div class="fiap-mba-extensoes-item-btn fiap-mba-extensoes-item-btn-nova-hover">
+                                +
+                            </div>
+                            <p class="fiap-mba-extensoes-item-btn-saiba-mais">
+                                Saiba Mais
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="fiap-mba-extensoes-item fiap-mba-extensoes-item-babson">
+                <a href="https://www.fiap.com.br/mba/extensao-internacional/babson/the-entrepreneurship-program/" onclick="_gaq.push(['_trackEvent','MBA','Extensão Internacional - Babson','Vem com a gente']);">
+                    <div class="fiap-mba-extensoes-item-content">
+                        <h2 class="fiap-mba-extensoes-item-title fiap-mba-extensoes-item-title-babson">
+                            The Entrepreneurship<br class="br-desktop">
+                            Program
+                        </h2>
+
+                        <p class="fiap-mba-extensoes-item-desc">
+                            Você empreendendo em qualquer <br class="br-desktop">
+                            lugar do mundo.
+                        </p>
+
+                        <svg class="fiap-mba-extensoes-item-logo fiap-mba-extensoes-item-logo-babson" viewBox="0 0 154 48.6">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-babson-2018"></use>
+                        </svg>
+
+                        <p class="fiap-mba-extensoes-item-local">
+                            Boston
+                        </p>
+
+                        <div class="fiap-mba-extensoes-item-btn">
+                            +
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
+
+                    <div class="fiap-mba-extensoes-item-hover">
+                        <div class="fiap-mba-extensoes-item-content">
+                            <h2 class="fiap-mba-extensoes-item-title fiap-mba-extensoes-item-title-babson">
+                                The Entrepreneurship<br class="br-desktop">
+                                Program
+                            </h2>
+
+                            <p class="fiap-mba-extensoes-item-desc">
+                                Escolha um curso de imersão em um dos<br class="br-desktop">
+                                melhores programas de empreendedorismo<br class="br-desktop">
+                                do mercado, o Entrepreneurship Program<br class="br-desktop">
+                                da Babson College.
+                            </p>
+
+                            <svg class="fiap-mba-extensoes-item-logo fiap-mba-extensoes-item-logo-babson" viewBox="0 0 154 48.6">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-babson-2018"></use>
+                            </svg>
+
+                            <p class="fiap-mba-extensoes-item-local">
+                                Boston
+                            </p>
+
+                            <div class="fiap-mba-extensoes-item-btn">
+                                +
+                            </div>
+                            <p class="fiap-mba-extensoes-item-btn-saiba-mais">
+                                Saiba Mais
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="disrupcao" class="fiap-2018-disrupcao">
+    <div class="wrapper">
+        <h1 class="fiap-2018-disrupcao-title">
+            Disrupção
+        </h1>
+    </div>
+    <div class="wrapper-midia">
+        <div class="fiap-2018-disrupcao-figure">
+            <img src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/disrupcao/background-2018.jpg" alt="Analogia a disrupção">
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="fiap-2018-disrupcao-columns">
+            <div class="fiap-2018-disrupcao-column">
+                <img src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/disrupcao/singularity-2018.png" alt="Logo Singularity">
+            </div>
+            <div class="fiap-2018-disrupcao-column">
+                <p class="fiap-2018-disrupcao-description">
+                    Pensar o novo aproximou a gente do que há de mais<br class="br-desktop">
+                    disruptivo no ensino de tecnologia.
+                </p>
+                <p class="fiap-2018-disrupcao-description">
+                    Somos a primeira parceira acadêmica mundial<br class="br-desktop">
+                    da Singularity, uma universidade inovadora que tem como<br class="br-desktop">
+                    objetivo formar líderes que busquem soluções para<br class="br-desktop">
+                    os desafios da humanidade.<br class="br-desktop">
+                </p>
+                <p class="fiap-2018-disrupcao-description">
+                    Patrocinada por empresas como Google, ePlanet Ventures,<br class="br-desktop">
+                    Autodesk e Steelcase, a SU tem seu campus dentro<br class="br-desktop">
+                    da NASA. E um programa que engloba as tecnologias<br class="br-desktop">
+                    exponenciais, suas interconexões e o impacto de tudo<br class="br-desktop">
+                    isso nas mudanças que vêm por aí.
+                </p>
+                <p class="fiap-2018-disrupcao-description">
+                    Uma parceria que permite à FIAP estar sempre<br class="br-desktop">
+                    conectada à inovação, antecipando o futuro e oferecendo<br class="br-desktop">
+                    novas experiências aos alunos.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="startup-one-2018" class="mba-startup-2018">
+        <div class="wrapper">
+        <div class="mba-startup-2018-content">
+            <div class="mba-startup-2018-content-title">
+                <h1 class="mba-startup-2018-title">Startup<span class="text-magenta">one</span></h1>
+
+                <p class="mba-startup-2018-subtitle">
+                    O projeto final do MBA
+                </p>
+            </div>
+
+            <div class="mba-startup-2018-content-video">
+                <div class="mba-startup-2018-media js-video-play" data-video="https://www.youtube.com/embed/GBxbhnoam7Y?autoplay=1&rel=0&mute=1">
+                    <img data-src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/shared/startup-one-2018/video.jpg" alt="Startup One" title="Startup One" class="mba-startup-2018-media-img js-lazyload">
+
+                    <div class="mba-startup-2018-media-play">PLAY</div>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+
+        <div class="mba-startup-2018-columns">
+            <div class="mba-startup-2018-column">
+                <p class="mba-startup-2018-descricao">
+                    DEIXAMOS O TCC DE LADO.<br>
+                    AQUI VOCÊ CRIA SUA STARTUP.
+                </p>
+            </div>
+
+            <div class="mba-startup-2018-column">
+                <div class="mba-startup-2018-text-content">
+                    <p class="mba-startup-2018-text">
+                        É um programa que promove o empreendedorismo, a inovação<br class="br-desktop">
+                        e o networking. Aqui você deixa o TCC de lado e cria sua própria startup.<br class="br-desktop">
+                        Porque a gente entende que pensar o novo é assim: buscar soluções<br class="br-desktop">
+                        inovadoras para problemas reais.
+
+                    </p>
+
+                    <p class="mba-startup-2018-text">
+                        Você também vai contar com a parceria da FIAP para implementar<br class="br-desktop">
+                        sua ideia, até mesmo depois de terminar seu curso: labs de inovação,<br class="br-desktop">
+                        mentorias, networking e acesso às melhores empresas do mercado.
+                    </p>
+
+                    <p class="mba-startup-2018-text-title">
+                        A Premiação
+                    </p>
+
+                    <p class="mba-startup-2018-text">
+                        A startup que mais se destacar em cada temporada é premiada com um<br class="br-desktop">
+                        curso de empreendedorismo na Babson College, em Boston. Assim,<br class="br-desktop">
+                        os integrantes vão ter a oportunidade de viver novas experiências em uma<br class="br-desktop">
+                        das melhores escolas de empreendedorismo do mundo.
+                    </p>
+
+                    <p class="mba-startup-2018-text">
+                        Todas as ideias participantes do TOP 10 também podem ser aceleradas<br class="br-desktop">
+                        nas nossas empresas parceiras: Acelera Startup FIESP, Oracle Startup<br class="br-desktop">
+                        Cloud Accelerator e SAP Startup Focus.
+                    </p>
+
+
+                    <p class="mba-startup-2018-text-title">
+                        Uma ideia que virou referência mundial
+                    </p>
+
+                    <p class="mba-startup-2018-text">
+                        A FIAP foi convidada para apresentar no <a href="#sxsw-2018" class="js-scroll">South by Southwest 2018</a> o case<br class="br-desktop">
+                        do Startup One. A história de um programa transformador. E de como usar<br class="br-desktop">
+                        o poder da tecnologia para construir um futuro melhor.
+                    </p>
+                    <p class="mba-startup-2018-text">
+                        • Mais de 2.000 startups criadas.<br>
+                        • Mais de 100 alunos já participaram do Entrepreneurship Program, da Babson College.
+                    </p>
+
+                    <a href="https://www.fiap.com.br/mba/startupone/" class="mba-startup-2018-content-button">
+                        <div class="mba-startup-2018-btn-saiba-mais"></div>
+                    </a>
+                    <a href="https://www.fiap.com.br/mba/startupone/" class="mba-startup-2018-content-button">
+                        Saiba Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <div id="premios-e-reconhecimentos" class="fiap-2018-premios">
+    <section id="mec-e-reconhecimentos" class="fiap-2018-mec">
+    <div class="wrapper">
+        <h1 class="fiap-2018-mec-title">
+            Prêmios
+            <span>E Reconhecimento</span>
+        </h1>
+        <div class="fiap-2018-mec-groups">
+            <div class="fiap-2018-mec-item fiap-2018-mec-item-excelencia">
+                <div class="fiap-2018-mec-item-column-left">
+                    <div class="fiap-2018-mec-item-conceito fiap-2018-mec-item-conceito-magenta">
+                        conceito
+                    </div>
+                    <div class="fiap-2018-mec-item-title-number fiap-2018-mec-item-title-number-magenta">
+                        4<span class="fiap-2018-mec-item-title-hifen"></span>5
+                    </div>
+                </div>
+                <div class="fiap-2018-mec-item-column-right">
+                    <div class="fiap-2018-mec-item-title fiap-2018-mec-item-title-magenta">
+                        grupo<br class="br-desktop">
+                        de excelência<br class="br-desktop">
+                        do mec
+                    </div>
+                    <div class="fiap-2018-mec-item-list">
+                        <div class="fiap-2018-mec-item-list-left">
+                            <p class="fiap-2018-mec-item-list-fiap">FIAP</p>
+                            <p>FGV</p>
+                            <p>INSPER</p>
+                            <p>ITA</p>
+                        </div>
+                        <div class="fiap-2018-mec-item-list-right">
+                            <p>PUC</p>
+                            <p>UNESP</p>
+                            <p>UNICAMP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fiap-2018-mec-item">
+                <div class="fiap-2018-mec-item-column-left">
+                    <div class="fiap-2018-mec-item-conceito">
+                        conceito
+                    </div>
+                    <div class="fiap-2018-mec-item-title-number fiap-2018-mec-item-title-number-regular">
+                        3
+                    </div>
+                </div>
+                <div class="fiap-2018-mec-item-column-right">
+                    <div class="fiap-2018-mec-item-title">
+                        regular
+                    </div>
+                    <div class="fiap-2018-mec-item-list">
+                        <div class="fiap-2018-mec-item-list-left">
+                            <p>FMU</p>
+                            <p>SENAC</p>
+                            <p>ESPM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fiap-2018-mec-item">
+                <div class="fiap-2018-mec-item-column-left">
+                    <div class="fiap-2018-mec-item-conceito">
+                        conceito
+                    </div>
+                    <div class="fiap-2018-mec-item-title-number fiap-2018-mec-item-title-number-inadequado">
+                        1<span class="fiap-2018-mec-item-title-hifen"></span>2
+                    </div>
+                </div>
+                <div class="fiap-2018-mec-item-column-right">
+                    <div class="fiap-2018-mec-item-title">
+                        inadequado
+                    </div>
+                    <div class="fiap-2018-mec-item-list fiap-2018-mec-item-list-blur">
+                        <div class="fiap-2018-mec-item-list-left">
+                            <p>ABCEF</p>
+                            <p>EDEC</p>
+                            <p>KHIJ</p>
+                            <p>ABCDEF</p>
+                            <p>EDC</p>
+                            <p>KFGIJ</p>
+                        </div>
+                        <div class="fiap-2018-mec-item-list-right">
+                            <p>EDFEC</p>
+                            <p>HIJ</p>
+                            <p>FGH</p>
+                            <p>EDFEC</p>
+                            <p>KFGHIJ</p>
+                            <p>FGH</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    <section class="fiap-2018-enade">
+    <div class="wrapper">
+        <h1 class="fiap-2018-enade-title">
+            Resultado do
+            <span>Último enade</span>
+        </h1>
+
+        <div class="fiap-2018-enade-row">
+            <div class="fiap-2018-enade-col-side">
+                <div class="fiap-2018-enade-box left">
+                    <div class="fiap-2018-enade-nota">
+                        <h2 class="fiap-2018-enade-nota-title">Melhor de <span>SP</span></h2>
+                        <h3 class="fiap-2018-enade-nota-subtitle">Nota máxima</h3>
+                    </div>
+                    <h2 class="fiap-2018-enade-box-title">Sistemas<br>de informação</h2>
+                    <h3 class="fiap-2018-enade-box-subtitle">Software Engineering<br>& Artificial Intelligence</h3>
+                </div>
+
+                <div class="fiap-2018-enade-box left">
+                    <div class="fiap-2018-enade-nota">
+                        <h2 class="fiap-2018-enade-nota-title">Melhor de <span>SP</span></h2>
+                        <h3 class="fiap-2018-enade-nota-subtitle">Nota máxima</h3>
+                    </div>
+                    <h2 class="fiap-2018-enade-box-title">Administração</h2>
+                    <h3 class="fiap-2018-enade-box-subtitle">Inovation and Digital Transformation</h3>
+                </div>
+            </div>
+
+            <div class="fiap-2018-enade-col-center">
+                <div class="fiap-2018-enade-box center">
+                    <div class="fiap-2018-enade-nota">
+                        <h2 class="fiap-2018-enade-nota-title">Melhores do <span>Brasil</span></h2>
+                                            </div>
+                    <h2 class="fiap-2018-enade-box-title-engenharia">
+                        Engenharia<br class="br-desktop">
+                        de computação
+                    </h2>
+                </div>
+            </div>
+
+            <div class="fiap-2018-enade-col-side">
+                <div class="fiap-2018-enade-box right">
+                    <div class="fiap-2018-enade-nota fiap-2018-enade-nota">
+                        <h2 class="fiap-2018-enade-nota-title">Melhor de <span>SP</span></h2>
+                        <h3 class="fiap-2018-enade-nota-subtitle">Conceito do MEC</h3>
+                    </div>
+                    <h2 class="fiap-2018-enade-box-title">Análise e desenvolvimento de sistemas</h2>
+                </div>
+                <div class="fiap-2018-enade-box right">
+                    <div class="fiap-2018-enade-nota fiap-2018-enade-nota">
+                        <h2 class="fiap-2018-enade-nota-title">Melhor de <span>SP</span></h2>
+                    </div>
+                    <h2 class="fiap-2018-enade-box-title">Redes de computadores</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <section class="fiap-2018-artigos">
+    <div class="wrapper">
+        <div class="fiap-2018-artigos-list">
+            <div class="fiap-2018-artigos-item fiap-2018-artigos-item-voce">
+                <div class="fiap-2018-artigos-number">
+                    1
+                </div>
+
+                <div class="fiap-2018-artigos-item-wrapper">
+                    <div class="fiap-2018-artigos-media">
+                        <img data-src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/premios-e-reconhecimentos/artigos/voce-sa-2018.png" alt="Você S/A" title="Logotipo Você S/A" class="fiap-2018-artigos-media-img js-lazyload">
+                    </div>
+
+                    <h2 class="fiap-2018-artigos-title">
+                        Eleita por 9 anos<br class="br-desktop">
+                        consecutivos<br class="br-desktop">
+                        melhores MBAs<br class="br-desktop">
+                        do Brasil
+                    </h2>
+
+                    <p class="fiap-2018-artigos-desc">
+                        Os melhores MBAs:<br class="br-desktop">
+                        em todas as edições<br class="br-desktop">
+                        do ranking publicado pela<br class="br-desktop">
+                        revista VOCÊ S/A, a FIAP<br class="br-desktop">
+                        está entre as melhores<br class="br-desktop">
+                        instituições de ensino<br class="br-desktop">
+                        brasileiras.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fiap-2018-artigos-item fiap-2018-artigos-item-veja">
+                <div class="fiap-2018-artigos-number">
+                    2
+                </div>
+
+                <div class="fiap-2018-artigos-item-wrapper">
+                    <div class="fiap-2018-artigos-media">
+                        <img data-src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/premios-e-reconhecimentos/artigos/veja-sao-paulo-2018.png" alt="Veja São Paulo" title="Logotipo Veja São Paulo" class="fiap-2018-artigos-media-img js-lazyload">
+                    </div>
+
+                    <h2 class="fiap-2018-artigos-title">
+                        MBA da FIAP<br class="br-desktop">
+                        recebe destaque<br class="br-desktop">
+                        na Veja São Paulo
+                    </h2>
+
+                    <p class="fiap-2018-artigos-desc">
+                        Destaque na Veja SP<br class="br-desktop">
+                        entre os "Cinco MBAs<br class="br-desktop">
+                        mais bem-conceituados"<br class="br-desktop">
+                        do mercado.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fiap-2018-artigos-list">
+            <div class="fiap-2018-artigos-item fiap-2018-artigos-item-spark">
+                <div class="fiap-2018-artigos-number">
+                    3
+                </div>
+
+                <div class="fiap-2018-artigos-item-wrapper">
+                    <div class="fiap-2018-artigos-media">
+                        <img data-src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/premios-e-reconhecimentos/artigos/spark-awards-2018.png" alt="Spark Awards" title="Logotipo Spark Awards" class="fiap-2018-artigos-media-img js-lazyload">
+                    </div>
+
+                    <h2 class="fiap-2018-artigos-title">
+                        Eleito pela<br class="br-desktop">
+                        Microsoft o melhor<br class="br-desktop">
+                        co-working<br class="br-desktop">
+                        do Brasil
+                    </h2>
+
+                    <p class="fiap-2018-artigos-desc">
+                        Iniciativa da Microsoft<br class="br-desktop">
+                        que prestigia os nomes<br class="br-desktop">
+                        mais influentes do cenário<br class="br-desktop">
+                        do empreendedorismo<br class="br-desktop">
+                        digital brasileiro.
+                    </p>
+                </div>
+
+                <span class="fiap-2018-artigos-bg">
+                    <span class="fiap-2018-artigos-bg-top"></span>
+                    <span class="fiap-2018-artigos-bg-right"></span>
+                    <span class="fiap-2018-artigos-bg-bottom"></span>
+                    <span class="fiap-2018-artigos-bg-left"></span>
+                </span>
+            </div>
+        </div>
+
+        <div class="fiap-2018-artigos-list">
+            <div class="fiap-2018-artigos-item fiap-2018-artigos-item-info">
+                <div class="fiap-2018-artigos-number">
+                    4
+                </div>
+
+                <div class="fiap-2018-artigos-item-wrapper">
+                    <div class="fiap-2018-artigos-media">
+                        <img data-src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/premios-e-reconhecimentos/artigos/info-2018.png" alt="INFO" title="Logotipo INFO" class="fiap-2018-artigos-media-img js-lazyload">
+                    </div>
+
+                    <h2 class="fiap-2018-artigos-title">
+                        Parte da elite<br class="br-desktop">
+                        da tecnologia<br class="br-desktop">
+                        brasileira
+                    </h2>
+
+                    <p class="fiap-2018-artigos-desc">
+                        A revista INFO publicou<br class="br-desktop">
+                        o ranking dos melhores<br class="br-desktop">
+                        cursos de computação e<br class="br-desktop">
+                        a FIAP é uma das melhores<br class="br-desktop">
+                        faculdades do Brasil.
+                    </p>
+                </div>
+
+                <span class="fiap-2018-artigos-bg">
+                    <span class="fiap-2018-artigos-bg-top"></span>
+                    <span class="fiap-2018-artigos-bg-right"></span>
+                    <span class="fiap-2018-artigos-bg-bottom"></span>
+                    <span class="fiap-2018-artigos-bg-left"></span>
+                </span>
+            </div>
+
+            <div class="fiap-2018-artigos-item fiap-2018-artigos-item-guia">
+                <div class="fiap-2018-artigos-number">
+                    5
+                </div>
+
+                <div class="fiap-2018-artigos-item-wrapper">
+                    <div class="fiap-2018-artigos-media">
+                        <img data-src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/premios-e-reconhecimentos/artigos/guia-do-estudante-2018.png" alt="Guia do Estudante" title="Logotipo Guia do Estudante" class="fiap-2018-artigos-media-img js-lazyload">
+                    </div>
+
+                    <h2 class="fiap-2018-artigos-title">
+                        Entre as melhores<br class="br-desktop">
+                        faculdades do país
+                    </h2>
+
+                    <p class="fiap-2018-artigos-desc">
+                        Pela 6ª vez consecutiva,<br class="br-desktop">
+                        o Guia do Estudante,<br class="br-desktop">
+                        da Editora Abril, destaca<br class="br-desktop">
+                        a FIAP como uma das<br class="br-desktop">
+                        melhores faculdades<br class="br-desktop">
+                        do país.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+    <section id="fotos" class="mba-fotos components-fotos">
+    <h1 class="mba-fotos-title">Fotos</h1>
+
+    <div class="components-gallery mba-fotos-gallery">
+        <div class="components-gallery-options">
+            <h2 class="components-gallery-options-slider">Slider</h2> 
+            <h2 class="components-gallery-options-mosaico">Galeria</h2> 
+        </div>
+
+        <div class="components-gallery-mosaico components-mosaico">
+            <div class="components-mosaico-wrapper">
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/01.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/02.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/03.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/04.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/05.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/06.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/07.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/08.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/09.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/10.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/11.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/12.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/13.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/14.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/15.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/16.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/17.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/18.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/19.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/20.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/21.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/22.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/23.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                                    <div class="components-mosaico-item">
+                        <img data-srcset="https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/24.jpg"
+                            class="components-mosaico-image js-lazyload">
+                    </div>
+                            </div>
+
+            <nav class="components-mosaico-navigation">
+                <button class="components-mosaico-prev">
+                    Anterior
+                </button>
+                <div class="components-mosaico-dots"></div>
+                <button class="components-mosaico-next">
+                    Próximo
+                </button>
+            </nav>       
+        </div>
+
+        <div class="components-gallery-slider components-slider">
+            <div class="components-slider-wrapper">
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/01.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/01.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/02.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/02.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/03.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/03.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/04.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/04.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/05.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/05.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/06.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/06.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/07.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/07.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/08.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/08.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/09.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/09.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/10.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/10.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/11.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/11.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/12.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/12.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/13.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/13.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/14.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/14.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/15.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/15.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/16.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/16.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/17.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/17.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/18.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/18.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/19.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/19.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/20.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/20.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/21.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/21.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/22.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/22.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/23.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/23.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                                    <div class="components-slider-item">
+                        <img data-srcset="
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/small/24.jpg 500w,
+                        https://www.fiap.com.br/wp-content/themes/fiap2016/images/mba/home/fotos/large/24.jpg 800w"
+                            class="components-slider-image js-lazyload">
+                    </div>
+                            </div>
+
+            <nav class="components-slider-navigation">
+                <button class="components-slider-navigation-prev">
+                    Anterior
+                </button>
+
+                <button class="components-slider-navigation-next">
+                    Próximo
+                </button>
+            </nav>
+
+            <div class="components-slider-navigation-count"></div>
+        </div>
+    </div>
+</section>
+            <section id="unidades" class="fiap-2018-unidades">
+    <div class="wrapper">
+        <h1 class="fiap-2018-unidades-title">
+            Unidades
+        </h1>
+
+        <div class="fiap-2018-unidades-list">
+            <div class="fiap-2018-unidades-item">
+                <div class="fiap-2018-unidades-media">
+                    <img data-src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/unidades/aclimacao.jpg" alt="Unidade Aclimação" title="Imagem Unidade Aclimação" class="fiap-2018-unidades-img js-lazyload">
+
+                                    </div>
+
+                <div class="fiap-2018-unidades-content">
+                    <h2 class="fiap-2018-unidades-subtitle">
+                        Aclimação
+                    </h2>
+
+                    <p class="fiap-2018-unidades-desc">
+                        Av. Lins de Vasconcelos,<br>
+                        1222 e 1264<br>
+                    </p>
+
+                    <a href="https://goo.gl/rCBL3o" target="_blank" class="fiap-2018-unidades-btn">
+                        Ver Mapa
+                    </a>
+
+                    <a class="fiap-2018-unidades-btn-close">
+                        Fechar
+                    </a>
+                </div>
+            </div>
+
+            <div class="fiap-2018-unidades-item">
+                <div class="fiap-2018-unidades-media">
+                    <img data-src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/unidades/paulista.jpg" alt="Unidade Paulista" title="Imagem Unidade Paulista" class="fiap-2018-unidades-img js-lazyload">
+                </div>
+
+                <div class="fiap-2018-unidades-content">
+                    <h2 class="fiap-2018-unidades-subtitle">
+                        Paulista
+                    </h2>
+
+                    <p class="fiap-2018-unidades-desc">
+                        Av. Paulista, 1106 –<br>
+                        6º e 7º andar<br>
+                    </p>
+
+                    <a href="https://goo.gl/qoLYsT" target="_blank" class="fiap-2018-unidades-btn">
+                        Ver Mapa
+                    </a>
+
+                    <a class="fiap-2018-unidades-btn-close">
+                        Fechar
+                    </a>
+                </div>
+            </div>
+
+            <div class="fiap-2018-unidades-item">
+                <div class="fiap-2018-unidades-media">
+                    <img data-src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/unidades/vila-olimpia.jpg" alt="Unidade Vila Olímpia" title="Imagem Unidade Vila Olímpia" class="fiap-2018-unidades-img js-lazyload">
+                </div>
+
+                <div class="fiap-2018-unidades-content">
+                    <h2 class="fiap-2018-unidades-subtitle">
+                        Vila Olímpia
+                    </h2>
+
+                    <p class="fiap-2018-unidades-desc">
+                        Rua Olimpíadas, 186<br>
+                        &nbsp; 
+                    </p>
+
+                    <a href="https://goo.gl/7EAVx7" target="_blank" class="fiap-2018-unidades-btn">
+                        Ver Mapa
+                    </a>
+
+                    <a class="fiap-2018-unidades-btn-close">
+                        Fechar
+                    </a>
+                </div>
+            </div>
+
+            <div class="fiap-2018-unidades-item">
+                <div class="fiap-2018-unidades-media">
+                    <img data-src="https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/institucional/unidades/alphaville.jpg" alt="Unidade Alphaville" title="Imagem Unidade Alphaville" class="fiap-2018-unidades-img js-lazyload">
+                </div>
+
+                <div class="fiap-2018-unidades-content">
+                    <h2 class="fiap-2018-unidades-subtitle">
+                        Alphaville
+                    </h2>
+
+                    <p class="fiap-2018-unidades-desc">
+                        Alameda Araguaia, 1142 - Bloco 4<br>
+                        <br class="br-desktop">
+                    </p>
+
+                    <a href="https://goo.gl/Mykb6g" target="_blank" class="fiap-2018-unidades-btn">
+                        Ver Mapa
+                    </a>
+
+                    <a class="fiap-2018-unidades-btn-close">
+                        Fechar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="mapa" class="fiap-2018-mapa">
+
+        </div>
+    </div>
+</section>
+
+
+    </div>
+
+    <footer class="fiap-2018-footer background-gradient">
+    <div class="wrapper">
+        <div class="fiap-2018-footer-columns">
+            <div class="fiap-2018-footer-column">
+                <div class="fiap-2018-footer-section">
+                    <a href="https://www.fiap.com.br" class="fiap-2018-footer-logo">
+                        <svg class="fiap-2018-footer-logo-icon" viewBox="0 0 574.206 155.976"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-fiap"></use></svg>
+                    </a>
+                </div>
+
+                <div class="fiap-2018-footer-section">
+                    <span class="fiap-2018-footer-title">Siga-nos</span>
+
+                    <ul class="fiap-2018-footer-social">
+                        <li class="fiap-2018-footer-social-item">
+                            <a href="http://www.facebook.com/fiap/" target="_blank" class="fiap-2018-footer-social-link">
+                                <svg class="fiap-2018-footer-social-icon" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-facebook"></use></svg>
+                            </a>
+                        </li>
+                        <li class="fiap-2018-footer-social-item">
+                            <a href="http://www.twitter.com/fiap/" target="_blank" class="fiap-2018-footer-social-link">
+                                <svg class="fiap-2018-footer-social-icon" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-twitter"></use></svg>
+                            </a>
+                        </li>
+                        <li class="fiap-2018-footer-social-item">
+                            <a href="http://www.youtube.com/tvfiap/" target="_blank" class="fiap-2018-footer-social-link">
+                                <svg class="fiap-2018-footer-social-icon" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-youtube"></use></svg>
+                            </a>
+                        </li>
+                        <li class="fiap-2018-footer-social-item">
+                            <a href="https://www.instagram.com/fiapoficial/" target="_blank" class="fiap-2018-footer-social-link">
+                                <svg class="fiap-2018-footer-social-icon" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-instagram"></use></svg>
+                            </a>
+                        </li>
+                        <li class="fiap-2018-footer-social-item">
+                            <a href="https://www.linkedin.com/company/fiap/" target="_blank" class="fiap-2018-footer-social-link">
+                                <svg class="fiap-2018-footer-social-icon" viewBox="0 0 512 512"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-social-linkedin"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="fiap-2018-footer-section">
+                    <a href="tel:+551133858010" class="fiap-2018-footer-link">11 3385-8010</a>
+                    <br>
+                    <br>
+                    <strong class="text-roboto-bold">FIAP 2018.</strong>
+                    <br>
+                    Todos os direitos reservados.
+                </div>
+            </div>
+
+            <div class="fiap-2018-footer-column">
+                <span class="fiap-2018-footer-title">A FIAP</span>
+
+                <ul class="fiap-2018-footer-list">
+                    <li class="fiap-2018-footer-item">
+                        <a href="https://www.fiap.com.br/institucional/#a-fiap" class="fiap-2018-footer-link">A FIAP</a>
+                    </li>
+                    <li class="fiap-2018-footer-item">
+                        <a href="https://www.fiap.com.br/institucional/#disrupcao" class="fiap-2018-footer-link">Disrupção</a>
+                    </li>
+                    <li class="fiap-2018-footer-item">
+                        <a href="https://www.fiap.com.br/institucional/#fotos" class="fiap-2018-footer-link">Fotos</a>
+                    </li>
+                    <li class="fiap-2018-footer-item">
+                        <a href="https://www.fiap.com.br/institucional/#videos" class="fiap-2018-footer-link">Vídeos</a>
+                    </li>
+                    <li class="fiap-2018-footer-item">
+                        <a href="https://www.fiap.com.br/institucional/#premios-e-reconhecimentos" class="fiap-2018-footer-link">Prêmios e Reconhecimentos</a>
+                    </li>
+                    <li class="fiap-2018-footer-item">
+                        <a href="https://www.fiap.com.br/institucional/#parcerias-estrategicas" class="fiap-2018-footer-link">Parcerias Estratégicas</a>
+                    </li>
+                    <li class="fiap-2018-footer-item">
+                        <a href="https://www.fiap.com.br/institucional/#hub" class="fiap-2018-footer-link">HUB FIAP</a>
+                    </li>
+                    <li class="fiap-2018-footer-item">
+                        <a href="https://www.fiap.com.br/institucional/#unidades" class="fiap-2018-footer-link">Unidades</a>
+                    </li>
+                </ul>
+
+                <div class="fiap-2018-footer-section">
+                    <span class="fiap-2018-footer-title">Links Úteis</span>
+
+                    <ul class="fiap-2018-footer-list">
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/fale-conosco/" class="fiap-2018-footer-link">Fale Conosco</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/trabalhe-conosco/" class="fiap-2018-footer-link">Trabalhe Conosco</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fiap-2018-footer-column">
+                <div class="fiap-2018-footer-section">
+                    <span class="fiap-2018-footer-title">HUB FIAP</span>
+
+                    <ul class="fiap-2018-footer-list">
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/mba/" class="fiap-2018-footer-link">MBA</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/online/" class="fiap-2018-footer-link">MBA On-line</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/graduacao/" class="fiap-2018-footer-link">Graduação</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/online/" class="fiap-2018-footer-link">Graduação On-line</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/shift/" class="fiap-2018-footer-link">SHIFT</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/pronatec/" class="fiap-2018-footer-link">PRONATEC</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/fiapx/" class="fiap-2018-footer-link">FIAP X</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="http://www.maratonadeaplicativos.com.br/" class="fiap-2018-footer-link">Maratona de Aplicativos</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/calltoinnovation/" class="fiap-2018-footer-link">Call to Innovation</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/ihelp/workshop-do-bem/" class="fiap-2018-footer-link">Workshop do Bem</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/colegio/" class="fiap-2018-footer-link">FIAP School</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fiap-2018-footer-column">
+
+                <div class="fiap-2018-footer-section">
+                    <span class="fiap-2018-footer-title">Unidades</span>
+
+                    <ul class="fiap-2018-footer-list">
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/institucional/#unidades" class="fiap-2018-footer-link">Aclimação</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/institucional/#unidades" class="fiap-2018-footer-link">Paulista</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/institucional/#unidades" class="fiap-2018-footer-link">Vila Olímpia</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/institucional/#unidades" class="fiap-2018-footer-link">Alphaville</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fiap-2018-footer-section">
+                    <span class="fiap-2018-footer-title">Mídia</span>
+
+                    <ul class="fiap-2018-footer-list">
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/noticias/" class="fiap-2018-footer-link">Notícias</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/imprensa/" class="fiap-2018-footer-link">Imprensa</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/acontece/fiap-na-china/" class="fiap-2018-footer-link">FIAP na China</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/acontece/fiap-no-vale-do-silicio/" class="fiap-2018-footer-link">FIAP no Vale do Silício</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/acontece/fiap-no-sxsw-2018/" class="fiap-2018-footer-link">FIAP no SxSW 2018</a>
+                        </li>
+                        <li class="fiap-2018-footer-item">
+                            <a href="https://www.fiap.com.br/acontece/next-fiap-festival//" class="fiap-2018-footer-link">NEXT FIAP Festival</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+    window.APP = window.APP || {}
+
+    APP.URL = 'https://www.fiap.com.br'
+    APP.THEME = 'https://www.fiap.com.br/wp-content/themes/fiap2016'
+
+            APP.PRELOAD = ["https:\/\/www.fiap.com.br\/wp-content\/themes\/fiap2016\/images\/fiap\/mba\/curso\/header\/bdt.jpg"]
+    </script>
+
+    
+    
+    
+
+    
+
+    
+
+    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBaqHjIq_L-hpidL5f0yaiUKRNrRaYDHpA&#038;ver=4.9.8'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://www.fiap.com.br/wp-content/themes/fiap2016/scripts/mba/bundle.js?ver=a22ac5150142515bbeedf85fbd739598'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/2.0.2/lazysizes.min.js?ver=4.9.8'></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1618 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#F4792C">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#F4792C">
+  <title>Melhor Gradua&ccedil;&atilde;o em Ci&ecirc;ncia de Dados</title>
+      <meta name="description" content="Gradua&ccedil;&atilde;o em Ci&ecirc;ncia de Dados">
+    <link rel="stylesheet" href="//cdn03.masterstudies.com//css/ks_bootstrap.css"/>
+
+            
+  <meta name="google-signin-client_id" content="577423134153-bgnr07kp09cqa02rlic0gth4301n4cs2.apps.googleusercontent.com">
+      <link rel="stylesheet" href="//cdn01.masterstudies.com//css/main.1537268635.css"/>
+    <link rel="stylesheet" href="//cdn02.masterstudies.com//css/sprites/sprites.css"/>
+  <link rel="stylesheet" href="//cdn03.masterstudies.com//sprites/css/sprite_combined.css">
+  
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+
+    <script>
+        googletag.cmd.push(function() {
+                        googletag.defineSlot('/5803363/toefl_subject_specific_pages', [[120, 240], [120, 600], [160, 600]], 'toefl_subject_specific_pages')
+                .addService(googletag.pubads());
+
+                        googletag.defineSlot('/5803363/listing_data_science', [[120, 240], [120, 600], [160, 600]], 'listing_data_science')
+                .addService(googletag.pubads()).setTargeting("Degree", "Bachelorstudies | Bachelor");
+
+                        googletag.defineSlot('/5803363/listing_data_science', [[120, 240], [120, 600], [160, 600]], 'listing_data_science_2')
+                .addService(googletag.pubads()).setTargeting("Degree", "Bachelorstudies | Bachelor");
+
+                        googletag.defineSlot('/5803363/listing_data_science', [[120, 240], [120, 600], [160, 600]], 'listing_data_science_3')
+                .addService(googletag.pubads()).setTargeting("Degree", "Bachelorstudies | Bachelor");
+
+                                    googletag.defineSlot('/5803363/listing_data_science', [300, 250], 'mobile_listing_data_science').addService(googletag.pubads()).setTargeting("DegreeMobile", "Bachelorstudies | Bachelor");
+                        googletag.pubads().enableSingleRequest();
+            googletag.pubads().collapseEmptyDivs();
+            googletag.enableServices();
+        });
+    </script>
+  
+  <script type="text/javascript">
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      
+              
+      ga('create', 'UA-29734347-33', {
+          'cookieDomain': 'none'           , allowLinker: true
+              });
+
+      
+      ga('send', 'pageview');
+
+             // Tracking
+        
+              
+      ga('create', 'UA-29734347-32', {
+          'cookieDomain': 'auto'           , allowLinker: true
+                  , name: 't2'
+              });
+
+      
+      ga('t2.send', 'pageview');
+
+             // Tracking
+                </script>
+
+      <link rel="canonical" href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/" />
+              <link rel="alternate" hreflang="pt" href="https://www.estudosdebacharel.com/Gradua%C3%A7%C3%A3o/Ci%C3%AAncia-de-Dados/" />
+          <link rel="alternate" hreflang="pt-BR" href="https://www.bachelorstudies.com.br/Gradua%C3%A7%C3%A3o/Ci%C3%AAncia-de-Dados/" />
+          <link rel="alternate" hreflang="pt-PT" href="https://www.bachelorstudies.pt/Gradua%C3%A7%C3%A3o/Ci%C3%AAncia-de-Dados/" />
+      
+  
+    
+
+    </head>
+<body class=" ">
+<!--header-->
+<!--first navbav-->
+
+
+ <nav class="navbar navbar-default topnav hidden-xs" role="navigation" >
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-12">
+        <div class="first-nav ">
+          
+          <div class="navbar-header">
+
+            <span ><ul class="partner-sites nav navbar-nav navbar-left"></ul></span>
+            <!-- landing -->
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav pull-right buttons-navbar flip">
+
+              <li class="dropdown">
+                                <button class="dropdown-toggle btn btn-default navbar-btn btn-sm navbar-languages"
+                                                  data-uri-id="{&quot;mode&quot;:&quot;all&quot;,&quot;idType&quot;:3,&quot;idSector&quot;:&quot;15612&quot;,&quot;section&quot;:&quot;listing&quot;}"
+                                                data-loaded="false"
+                        data-toggle="dropdown" type="button">
+                  <div class="flag-icon-16 br site-language-flag pull-left"></div>
+
+                  Portugu&ecirc;s (Brazil)
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                                      <li class="language-loader">
+                      <div class="text-center text-muted padding-10">
+                        <i class="fa fa-spinner fa-pulse fa-2x"   ></i>
+                      </div>
+                    </li>
+                                  </ul>
+              </li>
+
+                                                <a href="https://www.studentshub.com" class="btn btn-default navbar-btn btn-sm">Login para alunos</a>
+                
+                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li class="hidden-sm">
+                  <p class="navbar-btn ">
+                                        <a href="/account/create-new/" class="btn btn-contrast btn-sm ">
+                      Inscreva-se gratuitamente <span class="caret-right"></span>
+                    </a>
+                  </p>
+                </li>
+                          </ul>
+          </div>
+          <!--/.navbar-collapse -->
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+ 
+<!-- for image, search and second navbar-->
+<div class="container second_nav">
+  <div class="row header-logo">
+    <div class="col-sm-8">
+      <a href="https://www.bachelorstudies.com.br/">
+        <img src="//cdn02.masterstudies.com/img/logo/Gradua&ccedil;&atilde;o-ms-pt-BR.png" alt="Melhores Cursos e Programas de Gradua&ccedil;&atilde;o 2018/2019 - Mais de {number:programs} Programas de Gradua&ccedil;&atilde;o em todo o Mundo" height="50" />
+      </a>
+    </div>
+                  <div class="col-sm-4 hidden-xs no-padding">
+          <form method="GET" action="/search/" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Pesquisa" name="q">
+              <div class="input-group-btn">
+                <button class="btn btn-contrast" type="submit"><i class="fa fa-search"   ></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+          
+  </div>
+
+  <div class="pull-right" id="tagline">
+          <h1>Gradua&ccedil;&otilde;es em Ci&ecirc;ncia de Dados</h1>
+      </div>
+
+
+      <nav class="navbar navbar-default navbar-inverse" role="navigation" >
+      <div class="container">
+        <div class="navbar-header visible-xs visible-sm">
+          <button type="button" class="expand-nav pull-right collapsed" data-toggle="collapse" data-target="#degree-nav" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-bars fa-2x"   ></i>
+          </button>
+                      <button type="button" class="expand-nav pull-right collapsed visible-xs" data-toggle="collapse" data-target="#search-nav" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle search</span>
+            <i class="fa fa-search fa-2x"   ></i>
+          </button>
+            
+
+          <div class="xs-nav-entries visible-xs">
+                          <a class="pull-left" href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/">Gradua&ccedil;&otilde;es</a>
+            
+          </div>
+          <div class="xs-nav-entries visible-sm pipe">
+                          <a class="pull-left" href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/">Gradua&ccedil;&otilde;es</a>
+                          <a class="pull-left" href="https://www.bachelorstudies.com.br/BSc/">Gradua&ccedil;&atilde;o em Ci&ecirc;ncias</a>
+            
+          </div>
+
+        </div>
+
+                  <div class="navbar-collapse collapse search-nav visible-xs visible-sm" id="search-nav">
+            <ul class="nav navbar-nav">
+              <li class="search-xs">
+                <form method="GET" action="/search/" role="search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <div class="input-group-btn">
+                      <button class="btn btn-contrast" type="submit"><i class="fa fa-search"   ></i></button>
+                    </div>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </div>
+        
+        <div class="navbar-collapse collapse" id="degree-nav">
+
+          <ul class="nav navbar-nav pipe">
+                                          <li class="hidden-xs hidden-sm">
+                  <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/">Graduações</a>
+                </li>
+                                                        <li class=" hidden-sm">
+                  <a href="https://www.bachelorstudies.com.br/BSc/">Graduação em Ciências</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.bachelorstudies.com.br/BA/">Graduação em Humanas</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.bachelorstudies.com.br/BBA/">Administração de Empresas</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.onlinestudies.com.br/Gradua&ccedil;&atilde;o/">Graduações Online</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.bachelorstudies.com.br/universidades/">Universidades por país</a>
+                </li>
+                                    </ul>
+
+          <ul class="nav navbar-nav visible-xs">
+
+            <li>
+              <a href="https://www.studentshub.com"> Student sign in</a>
+            </li>
+            <li>
+              <a href="/account/create-new/">Inscreva-se gratuitamente</a>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle navbar-languages"
+                                  data-uri-id="{&quot;mode&quot;:&quot;all&quot;,&quot;idType&quot;:3,&quot;idSector&quot;:&quot;15612&quot;,&quot;section&quot;:&quot;listing&quot;}"
+                                  data-loaded="false"
+                 data-toggle="dropdown">
+                Idiomas <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                                  <li class="language-loader">
+                    <div class="text-center text-muted padding-10">
+                      <i class="fa fa-spinner fa-pulse fa-2x"   ></i>
+                    </div>
+                  </li>
+                              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Diplomas <span class="caret"></span></a>
+              <ul class="dropdown-menu partner-sites-mobile"></ul>
+            </li>
+          </ul>
+
+
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </nav>
+  
+</div>
+
+<!-- end image, search and second navbar-->
+
+
+    <script type="application/ld+json">
+
+        [{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em An\u00e1lise de Dados","duration":"P4Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em An\u00e1lise de Dados-EUA-Worcester","address":{"@type":"PostalAddress","addressCountry":"EUA","addressLocality":"Worcester"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-in-Data-Analytics\/Estados-Unidos\/Assumption-College\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-in-Data-Analytics\/Estados-Unidos\/Assumption-College\/"},"organizer":{"@type":"CollegeOrUniversity","name":"Assumption College","description":"At Assumption, we are committed to exploring with great gusto the relationship between faith and reason. By participating in this 2,000-year-old-tradition, today\u2019s students join generations of scientists, artists, writers, and philosophers who have engaged in a search for truth across disciplines.","address":[{"@type":"PostalAddress","name":"","postalCode":"01609","addressLocality":"Worcester","addressCountry":"EUA","streetAddress":"Salisbury Street,500"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Estados-Unidos\/Assumption-College\/"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em An\u00e1lise de Dados","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em An\u00e1lise de Dados-EUA-Delaware","address":{"@type":"PostalAddress","addressCountry":"EUA","addressLocality":"Delaware"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-in-Data-Analytics\/Estados-Unidos\/Ohio-Wesleyan-University\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-in-Data-Analytics\/Estados-Unidos\/Ohio-Wesleyan-University\/","price":"58190","priceCurrency":"USD"},"organizer":{"@type":"CollegeOrUniversity","name":"Ohio Wesleyan University","description":"Ohio Wesleyan University is a community of people who have an insatiable appetite for life and learning. We are passionate and eager to make connections with the world around us and the world within. Why? Because connecting disparate ideas, perspectives, and experiences fuels innovation and discovery. Our 200-acre campus offers endless opportunities to explore. Pursue them all. Dream up new ideas. Seize mind-blowing and future-shaping opportunities. Fully experience the richness and connectedness of a liberal arts education.","address":[{"@type":"PostalAddress","name":"","postalCode":"43015","addressLocality":"Delaware","addressCountry":"EUA","streetAddress":"South Sandusky Street,61"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Estados-Unidos\/Ohio-Wesleyan-University\/"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em Ci\u00eancia de Dados","duration":"P3Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em Ci\u00eancia de Dados-Austr\u00e1lia-Sydney","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Sydney"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Data-Science\/Austr\u00e1lia\/S-P-Jain-School-of-Global-Management-Singapore\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Data-Science\/Austr\u00e1lia\/S-P-Jain-School-of-Global-Management-Singapore\/","price":"63000","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"S P Jain School of Global Management Singapore","description":"SP Jain is accredited by the Tertiary Education Quality and Standards Agency (TEQSA), Australia. At the end of the program, students are conferred with an Australian degree. This greatly enhances the international acceptance of the degree, thereby giving impetus to higher education and careers, globally.\r\n","address":[{"@type":"PostalAddress","name":"","url":"http:\/\/www.spjain.org\/campuses-singapore.aspx","telephone":"+ 65 62704748              ","postalCode":"119579 ","addressLocality":"Singapore","addressCountry":"Cingapura"},{"@type":"PostalAddress","name":"","addressLocality":"Sydney","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Cingapura\/S-P-Jain-School-of-Global-Management-Singapore\/"},"startDate":"2019-01"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em Ci\u00eancia de Dados e Engenharia do Conhecimento","duration":"P3Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em Ci\u00eancia de Dados e Engenharia do Conhecimento-Holanda-Maastricht","address":{"@type":"PostalAddress","addressCountry":"Holanda","addressLocality":"Maastricht"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-in-Data-Science-and-Knowledge-Engineering\/Holanda\/MU-DKE\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-in-Data-Science-and-Knowledge-Engineering\/Holanda\/MU-DKE\/","price":"2060","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"Maastricht University, Department of Data Science and Knowledge Engineering","description":"The <em><strong>Knowledge Engineering<\/strong><\/em> bachelor\u2019s and master\u2019s programmes are designed around the Project-Centred Learning (PCL) teaching method. The PCL educational model is small-scale and student-oriented. You work in small groups on complex and challenging projects that require you to develop a variety of skills such as writing and presentation skills and working in a team. The skills you learn are an important preparation for your future career.","telephone":"+31 43 388 3455","address":[{"@type":"PostalAddress","name":"Maastricht University Department of Knowledge Engineering","url":"http:\/\/www.maastrichtuniversity.nl\/web\/Schools\/DKE.htm","telephone":"+31 43 388 3455 ","postalCode":"6200 MD","addressLocality":"Maastricht","addressCountry":"Holanda","streetAddress":"Maastricht University\r\nDepartment of Data Science and Knowledge Engineering\r\nP.O. Box 616\r\n\r\n\r\n"}],"mainEntityOfPage":"http:\/\/www.maastrichtuniversity.nl\/web\/Schools\/DKE.htm","url":"http:\/\/www.maastrichtuniversity.nl\/web\/Schools\/DKE.htm","logo":"http:\/\/cdn03.masterstudies.com\/gfx\/logo\/863\/1485456034\/MU-DKE.png"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em an\u00e1lise de dados","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em an\u00e1lise de dados-EUA-Grand Rapids","address":{"@type":"PostalAddress","addressCountry":"EUA","addressLocality":"Grand Rapids"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-in-Data-Analytics\/Estados-Unidos\/Aquinas-College\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-in-Data-Analytics\/Estados-Unidos\/Aquinas-College\/"},"organizer":{"@type":"CollegeOrUniversity","name":"Aquinas College","description":"Aquinas College, an inclusive educational community rooted in the Catholic and Dominican tradition, provides a liberal arts education with a global perspective, emphasizes career preparation focused on leadership and service to others, and fosters a commitment to lifelong learning dedicated to the pursuit of truth and the common good.","telephone":"+1 (616) 632-8900","address":[{"@type":"PostalAddress","name":"","telephone":"undefined              ","postalCode":"49506-1801","addressLocality":"Grand Rapids","addressCountry":"EUA","streetAddress":"1700 Fulton St. E \r\n"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Estados-Unidos\/Aquinas-College\/"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)","duration":"P3Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)-Austr\u00e1lia-Toowoomba","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Toowoomba"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","price":"20000","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Southern Queensland (USQ)","description":"Are you thinking about studying in Australia? The University of Southern Queensland (USQ) prides itself on providing the best support possible to help you reach your study and career goals. USQ students enjoy small class-sizes, collaborative learning spaces, and a suite of support services to enhance your study experience. With students from more than 80 countries and internationally accredited degrees and programs, you can choose to study on campus, external or online.","telephone":"+61 746 315 543","address":[{"@type":"PostalAddress","name":"University of Southern Queensland","url":"http:\/\/www.usq.edu.au\/international","telephone":"+61 74631 5543                ","postalCode":"4350","addressLocality":"Toowoomba","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Toowoomba\r\nWest St\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4300","addressLocality":"Springfield","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Springfield\r\nSinnathamby Boulevard\r\n\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4305","addressLocality":"Brisbane","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Ipswich\r\n11 Salisbury Road"},{"@type":"PostalAddress","name":"","telephone":"undefined                 ","addressLocality":"Australia Online","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Austr\u00e1lia\/USQ-Australia\/"},"startDate":"2019-02-25"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)","duration":"P3Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)-Austr\u00e1lia-Toowoomba","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Toowoomba"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","price":"20000","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Southern Queensland (USQ)","description":"Are you thinking about studying in Australia? The University of Southern Queensland (USQ) prides itself on providing the best support possible to help you reach your study and career goals. USQ students enjoy small class-sizes, collaborative learning spaces, and a suite of support services to enhance your study experience. With students from more than 80 countries and internationally accredited degrees and programs, you can choose to study on campus, external or online.","telephone":"+61 746 315 543","address":[{"@type":"PostalAddress","name":"University of Southern Queensland","url":"http:\/\/www.usq.edu.au\/international","telephone":"+61 74631 5543                ","postalCode":"4350","addressLocality":"Toowoomba","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Toowoomba\r\nWest St\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4300","addressLocality":"Springfield","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Springfield\r\nSinnathamby Boulevard\r\n\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4305","addressLocality":"Brisbane","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Ipswich\r\n11 Salisbury Road"},{"@type":"PostalAddress","name":"","telephone":"undefined                 ","addressLocality":"Australia Online","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Austr\u00e1lia\/USQ-Australia\/"},"startDate":"2019-07-15"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)","duration":"P3Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)-Austr\u00e1lia-Springfield","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Springfield"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","price":"20000","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Southern Queensland (USQ)","description":"Are you thinking about studying in Australia? The University of Southern Queensland (USQ) prides itself on providing the best support possible to help you reach your study and career goals. USQ students enjoy small class-sizes, collaborative learning spaces, and a suite of support services to enhance your study experience. With students from more than 80 countries and internationally accredited degrees and programs, you can choose to study on campus, external or online.","telephone":"+61 746 315 543","address":[{"@type":"PostalAddress","name":"University of Southern Queensland","url":"http:\/\/www.usq.edu.au\/international","telephone":"+61 74631 5543                ","postalCode":"4350","addressLocality":"Toowoomba","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Toowoomba\r\nWest St\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4300","addressLocality":"Springfield","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Springfield\r\nSinnathamby Boulevard\r\n\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4305","addressLocality":"Brisbane","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Ipswich\r\n11 Salisbury Road"},{"@type":"PostalAddress","name":"","telephone":"undefined                 ","addressLocality":"Australia Online","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Austr\u00e1lia\/USQ-Australia\/"},"startDate":"2019-02-25"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)","duration":"P3Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)-Austr\u00e1lia-Springfield","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Springfield"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","price":"20000","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Southern Queensland (USQ)","description":"Are you thinking about studying in Australia? The University of Southern Queensland (USQ) prides itself on providing the best support possible to help you reach your study and career goals. USQ students enjoy small class-sizes, collaborative learning spaces, and a suite of support services to enhance your study experience. With students from more than 80 countries and internationally accredited degrees and programs, you can choose to study on campus, external or online.","telephone":"+61 746 315 543","address":[{"@type":"PostalAddress","name":"University of Southern Queensland","url":"http:\/\/www.usq.edu.au\/international","telephone":"+61 74631 5543                ","postalCode":"4350","addressLocality":"Toowoomba","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Toowoomba\r\nWest St\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4300","addressLocality":"Springfield","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Springfield\r\nSinnathamby Boulevard\r\n\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4305","addressLocality":"Brisbane","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Ipswich\r\n11 Salisbury Road"},{"@type":"PostalAddress","name":"","telephone":"undefined                 ","addressLocality":"Australia Online","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Austr\u00e1lia\/USQ-Australia\/"},"startDate":"2019-07-15"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)","duration":"P3Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)-Austr\u00e1lia-Australia Online","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Australia Online"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","price":"20000","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Southern Queensland (USQ)","description":"Are you thinking about studying in Australia? The University of Southern Queensland (USQ) prides itself on providing the best support possible to help you reach your study and career goals. USQ students enjoy small class-sizes, collaborative learning spaces, and a suite of support services to enhance your study experience. With students from more than 80 countries and internationally accredited degrees and programs, you can choose to study on campus, external or online.","telephone":"+61 746 315 543","address":[{"@type":"PostalAddress","name":"University of Southern Queensland","url":"http:\/\/www.usq.edu.au\/international","telephone":"+61 74631 5543                ","postalCode":"4350","addressLocality":"Toowoomba","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Toowoomba\r\nWest St\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4300","addressLocality":"Springfield","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Springfield\r\nSinnathamby Boulevard\r\n\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4305","addressLocality":"Brisbane","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Ipswich\r\n11 Salisbury Road"},{"@type":"PostalAddress","name":"","telephone":"undefined                 ","addressLocality":"Australia Online","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Austr\u00e1lia\/USQ-Australia\/"},"startDate":"2018-11-19"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)","duration":"P3Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)-Austr\u00e1lia-Australia Online","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Australia Online"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","price":"20000","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Southern Queensland (USQ)","description":"Are you thinking about studying in Australia? The University of Southern Queensland (USQ) prides itself on providing the best support possible to help you reach your study and career goals. USQ students enjoy small class-sizes, collaborative learning spaces, and a suite of support services to enhance your study experience. With students from more than 80 countries and internationally accredited degrees and programs, you can choose to study on campus, external or online.","telephone":"+61 746 315 543","address":[{"@type":"PostalAddress","name":"University of Southern Queensland","url":"http:\/\/www.usq.edu.au\/international","telephone":"+61 74631 5543                ","postalCode":"4350","addressLocality":"Toowoomba","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Toowoomba\r\nWest St\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4300","addressLocality":"Springfield","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Springfield\r\nSinnathamby Boulevard\r\n\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4305","addressLocality":"Brisbane","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Ipswich\r\n11 Salisbury Road"},{"@type":"PostalAddress","name":"","telephone":"undefined                 ","addressLocality":"Australia Online","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Austr\u00e1lia\/USQ-Australia\/"},"startDate":"2019-02-25"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)","duration":"P3Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em Informa\u00e7\u00e3o e Tecnologia (Data Analytics)-Austr\u00e1lia-Australia Online","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Australia Online"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-of-Information-and-Technology-(Data-Analytics)\/Austr\u00e1lia\/USQ-Australia\/","price":"20000","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Southern Queensland (USQ)","description":"Are you thinking about studying in Australia? The University of Southern Queensland (USQ) prides itself on providing the best support possible to help you reach your study and career goals. USQ students enjoy small class-sizes, collaborative learning spaces, and a suite of support services to enhance your study experience. With students from more than 80 countries and internationally accredited degrees and programs, you can choose to study on campus, external or online.","telephone":"+61 746 315 543","address":[{"@type":"PostalAddress","name":"University of Southern Queensland","url":"http:\/\/www.usq.edu.au\/international","telephone":"+61 74631 5543                ","postalCode":"4350","addressLocality":"Toowoomba","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Toowoomba\r\nWest St\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4300","addressLocality":"Springfield","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Springfield\r\nSinnathamby Boulevard\r\n\r\n"},{"@type":"PostalAddress","name":"","postalCode":"4305","addressLocality":"Brisbane","addressCountry":"Austr\u00e1lia","streetAddress":"USQ Ipswich\r\n11 Salisbury Road"},{"@type":"PostalAddress","name":"","telephone":"undefined                 ","addressLocality":"Australia Online","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Austr\u00e1lia\/USQ-Australia\/"},"startDate":"2019-07-15"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gradua\u00e7\u00e3o em An\u00e1lise de Dados","duration":"P3Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gradua\u00e7\u00e3o em An\u00e1lise de Dados-It\u00e1lia-Santa Maria Capua Vetere","address":{"@type":"PostalAddress","addressCountry":"It\u00e1lia","addressLocality":"Santa Maria Capua Vetere"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-Degree-in-Data-Analytics\/It\u00e1lia\/University-of-Campania-Luigi-Vanvitelli\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/Bachelor-Degree-in-Data-Analytics\/It\u00e1lia\/University-of-Campania-Luigi-Vanvitelli\/"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Campania \"Luigi Vanvitelli\"","description":"The University of Campania \"Luigi Vanvitelli\" was established in 1991 (Decree MURST, 25 March) with the aim of relieving the overcrowded conditions of the major Neapolitan university known as the \u201cFederico II\u201d. ","address":[{"@type":"PostalAddress","name":"University of Campania \"Luigi Vanvitelli\"","url":"http:\/\/unicampania.it\/","telephone":"+39 0823 274803               ","postalCode":"81100","addressLocality":"Santa Maria Capua Vetere","addressCountry":"It\u00e1lia","streetAddress":"Viale Beneduce n. 10\r\n"}],"mainEntityOfPage":"http:\/\/unicampania.it\/","url":"http:\/\/unicampania.it\/","logo":"http:\/\/cdn01.masterstudies.com\/gfx\/logo\/10612\/1499944837\/University-of-Campania-Luigi-Vanvitelli.png"},"startDate":"2018-10"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"International Bachelor Modelling and Data Science for a changing World","location":{"@type":"Place","name":"International Bachelor Modelling and Data Science for a changing World-Fran\u00e7a-Paris","address":{"@type":"PostalAddress","addressCountry":"Fran\u00e7a","addressLocality":"Paris"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.bachelorstudies.com.br\/International-Bachelor-Modelling-and-Data-Science-for-a-changing-World\/Fran\u00e7a\/University-Paris-Seine\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/International-Bachelor-Modelling-and-Data-Science-for-a-changing-World\/Fran\u00e7a\/University-Paris-Seine\/","price":"5000","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"University Paris Seine","description":"The Consortium Paris Seine is the result of the July 2013 national law concerning French higher education and research. The aim of this law is to co-ordinate training offers and research strategies of higher education institutions in a given territory by pooling resources between universities, schools, and research institutions in order to constitute a major hub of higher education research and innovation. Consortium Paris Seine is one of 26 hubs of this 3 kind in France, and brings together 15 higher education institutions. It has legal status and acts as an incubator of inter-institutional projects.","address":[{"@type":"PostalAddress","name":"","url":"https:\/\/www.u-cergy.fr\/en\/international-office\/international-bachelor-ygrec.html","postalCode":"95011","addressLocality":"Paris","addressCountry":"Fran\u00e7a","streetAddress":"33 boulevard du Port\nCergy-Pontoise"}],"mainEntityOfPage":"https:\/\/www.u-cergy.fr\/en\/international-office\/international-bachelor-ygrec.html","url":"https:\/\/www.u-cergy.fr\/en\/international-office\/international-bachelor-ygrec.html","logo":"http:\/\/cdn03.masterstudies.com\/gfx\/logo\/12256\/1520524706\/University-Paris-Seine.png"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Sistemas de Informa\u00e7\u00e3o de Gradua\u00e7\u00e3o","location":{"@type":"Place","name":"Sistemas de Informa\u00e7\u00e3o de Gradua\u00e7\u00e3o-Cazaquist\u00e3o-Almaty","address":{"@type":"PostalAddress","addressCountry":"Cazaquist\u00e3o","addressLocality":"Almaty"}},"inLanguage":[{"@type":"Language","name":"Russian"}],"url":"https:\/\/www.bachelorstudies.com.br\/\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435-\u0441\u0438\u0441\u0442\u0435\u043c\u044b-\u0411\u0430\u043a\u0430\u043b\u0430\u0432\u0440\u0438\u0430\u0442\/Cazaquist\u00e3o\/\u041d\u0430\u0440\u0445\u043e\u0437-\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\/","offers":{"@type":"Offer","url":"https:\/\/www.bachelorstudies.com.br\/\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435-\u0441\u0438\u0441\u0442\u0435\u043c\u044b-\u0411\u0430\u043a\u0430\u043b\u0430\u0432\u0440\u0438\u0430\u0442\/Cazaquist\u00e3o\/\u041d\u0430\u0440\u0445\u043e\u0437-\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\/"},"organizer":{"@type":"CollegeOrUniversity","name":"\u041d\u0430\u0440\u0445\u043e\u0437 \u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442","description":"\u0422\u043e\u043b\u044c\u043a\u043e \u0443 \u043d\u0430\u0441 \u043f\u043e\u043b\u0443\u0432\u0435\u043a\u043e\u0432\u043e\u0439 \u043e\u043f\u044b\u0442 \u043e\u0431\u0443\u0447\u0435\u043d\u0438\u044f \u0432\u044b\u0441\u043e\u043a\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u044b\u0445 \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0441\u0442\u043e\u0432 \u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0441\u043e\u0447\u0435\u0442\u0430\u0435\u0442\u0441\u044f \u0441 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u043c\u0438 \u0438 \u0438\u043d\u043d\u043e\u0432\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u043c\u0438 \u043c\u0435\u0442\u043e\u0434\u0430\u043c\u0438 \u043f\u0440\u0435\u043f\u043e\u0434\u0430\u0432\u0430\u043d\u0438\u044f.","address":[{"@type":"PostalAddress","streetAddress":"Zhandosov Street 55","addressLocality":"Almaty","postalCode":"050035","addressCountry":"Cazaquist\u00e3o"}],"mainEntityOfPage":"https:\/\/www.bachelorstudies.com.br\/universidades\/Cazaquist\u00e3o\/\u041d\u0430\u0440\u0445\u043e\u0437-\u0423\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\/"},"startDate":"2018-09"}]
+
+    </script>
+
+
+    <div class="container listing-page">
+        <div class="row margin-top-5 main-breadcrumb">
+  <div class="col-sm-12">
+
+          <div class="pull-right flip">
+          <div class="hidden-xs addthis-container blue">
+  <div class="pull-right">
+    <a data-toggle="modal" class="addthis-modal-link" href="#linkToUsModal">
+     Link para esta p&aacute;gina
+    </a>
+  </div>
+
+  <div class="addthis_toolbox">
+    <i class="fa fa-spinner fa-pulse loading-add-this"   ></i>
+    <div class="custom_images">
+      <!--<a class="addthis_button_facebook addthis-button"><img src="//cdn01.masterstudies.com/img_new/addthis_facebook_blue.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+      <a class="addthis_button_twitter addthis-button"><img src="//cdn02.masterstudies.com/img_new/addthis_twitter_blue.png" width="18" height="18" border="0" alt="Share to Twitter" /></a>-->
+        <a class="addthis_button_facebook addthis-button"><img src="//cdn03.masterstudies.com/img_new/FB-f-Logo__blue_144_official.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+        <a class="addthis_button_twitter addthis-button"><img src="//cdn02.masterstudies.com/img_new/Twitter_Logo_Blue_official.png" width="32" height="32" border="0" alt="Share to Twitter" /></a>
+        <a class="addthis_button_more addthis-button"><img src="//cdn02.masterstudies.com/img_new/addthis_more_blue.png" width="18" height="18" border="0" alt="More..." /></a>
+      <a class="addthis_counter addthis_bubble_style"></a>
+    </div>
+  </div>
+</div>
+
+      </div>
+    
+    
+    <div class="hidden-xs">
+              <ul class="breadcrumb">
+
+                      <li>
+                              <a href="/Gradua&ccedil;&atilde;o/">Gradua&ccedil;&atilde;o</a>
+                                          </li>
+                      <li>
+                              Ci&ecirc;ncia de Dados
+                                          </li>
+                  </ul>
+          </div>
+  </div>
+</div>
+
+
+
+
+<script type="application/ld+json">
+   {"@context":"http:\/\/schema.org\/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"\/Gradua\u00e7\u00e3o\/","name":"Gradua\u00e7\u00e3o"}},{"@type":"ListItem","position":2,"item":{"name":"Ci\u00eancia de Dados"}}]}
+</script>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <header class="margin-bottom-10 col-sm-12">
+                        <h1 class="main-heading">Gradua&ccedil;&atilde;o em Ci&ecirc;ncia de Dados 2018/2019</h1>
+                    </header>
+
+
+                </div>
+
+                <div class="row introduction">
+                    
+                    <div class="col-sm-8 col-lg-9 listingText">
+                        <p>Uma graduação é dada aos estudantes que preenchem os requisitos necessários cobrados pelas universidades ou faculdades que frequentam. Tais requisitos incluem de três a sete anos para convergir em um determinado assunto, geralmente referido como foco ou ênfase.</p><p>Graduação em Ciência de Dados</p>
+                    </div>
+
+
+                    <div class="col-sm-4 col-lg-3 image hidden-xs">
+                                            </div>
+                </div>
+                <div class="row read_more hide usedColor">
+                    <div class="col-sm-12">
+                        <i class="fa fa-fa fa-chevron-down"   ></i> Ler Mais
+                    </div>
+                </div>
+
+
+                                                                                            </div>
+        </div>
+    </div>
+        <div class="container listing-page">
+
+        <div class="row">
+            <h4 class="col-sm-12 hidden-xs"><b><span>9</span> Resultados em Ciência de Dados
+</b></h4>
+        </div>
+
+        <div class="row">
+            <div class="hidden-xs col-sm-3 col-lg-2">
+                                    <div class="nav-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <a class="nav-accordion-heading" role="tab" id="heading-nav-degrees" data-toggle="collapse" data-parent="#accordion" href="#collapse-nav-degrees" aria-expanded="true" aria-controls="collapse-nav-degrees">
+            Diplomas
+            <span class="pull-right">
+        <i class="fa fa-chevron-up"   ></i>
+                <i class="fa fa-chevron-down"   ></i>
+      </span>
+        </a>
+        <div id="collapse-nav-degrees" class="nav-accordion-content collapse in" role="tabpanel" aria-labelledby="heading-nav-degrees">
+            <div class="padding-10">
+                                    <a data-cookie="search_cross_degree" data-value="all" class="js-filter-setting label label-nav-default label-block" data-idType="all"
+                                              data-reload="true"
+                                                >
+                        Tudo (14)
+                    </a>
+                                    <a data-cookie="search_cross_degree" data-value="3" class="js-filter-setting label label-nav-active label-block" data-idType="3"
+                                           >
+                        Gradua&ccedil;&otilde;es (9)
+                    </a>
+                                    <a data-cookie="search_cross_degree" data-value="71" class="js-filter-setting label label-nav-default label-block" data-idType="71"
+                                              href="https://www.bachelorstudies.com.br/BSc/Ci&ecirc;ncia-de-Dados/"
+                                           >
+                        Gradua&ccedil;&atilde;o em Ci&ecirc;ncias (6)
+                    </a>
+                            </div>
+        </div>
+    
+
+
+
+    <a class="nav-accordion-heading" role="tab" id="heading-nav-location" data-toggle="collapse" data-parent="#accordion" href="#collapse-nav-location" aria-expanded="true" aria-controls="collapse-nav-location">
+        Localiza&ccedil;&atilde;o
+        <span class="pull-right">
+      <i class="fa fa-chevron-up"   ></i>
+            <i class="fa fa-chevron-down"   ></i>
+    </span>
+    </a>
+    <div id="collapse-nav-location" class="nav-accordion-content collapse in" role="tabpanel" aria-labelledby="heading-nav-location">
+        <div class="padding-10">
+            
+                            <div class="btn-group margin-bottom-5">
+                    <button type="button" class="btn btn-default btn-block btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        Selecionar Pa&iacute;s <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu max-height-300 dropdown-searchable" role="menu">
+                        
+                                                    <li>
+                                <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Austr&aacute;lia/">Austr&aacute;lia</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Cazaquist&atilde;o/">Cazaquist&atilde;o</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Estados-Unidos/">EUA</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Fran&ccedil;a/">Fran&ccedil;a</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Holanda/">Holanda</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/It&aacute;lia/">It&aacute;lia</a>
+                            </li>
+                                            </ul>
+                </div>
+            
+                            
+                
+                                    </div>
+    </div>
+
+            <a class="nav-accordion-heading" role="tab" id="heading-nav-type" data-toggle="collapse" data-parent="#accordion" href="#collapse-nav-type" aria-expanded="true" aria-controls="collapse-nav-type">
+            Tipo de estudo
+            <span class="pull-right">
+      <i class="fa fa-chevron-up"   ></i>
+                <i class="fa fa-chevron-down"   ></i>
+    </span>
+        </a>
+        <div id="collapse-nav-type" class="nav-accordion-content collapse in " role="tabpanel" aria-labelledby="heading-nav-type">
+            <div class="padding-10">
+                                                            <a data-cookie="search_mode" data-value="all" class="js-filter-setting checkboxes" href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/">
+            <span class="checkbox-holder">
+              <i class="fa fa-check check-mark active"></i>
+            </span>
+                            Tudo
+                        </a>
+                                            <a data-cookie="search_mode" data-value="campus" class="js-filter-setting checkboxes" href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/">
+            <span class="checkbox-holder">
+              <i class="fa fa-check check-mark "></i>
+            </span>
+                            C&acirc;mpus
+                        </a>
+                                            <a data-cookie="search_mode" data-value="online" class="js-filter-setting checkboxes" href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/">
+            <span class="checkbox-holder">
+              <i class="fa fa-check check-mark "></i>
+            </span>
+                            Online
+                        </a>
+                                            <a data-cookie="search_mode" data-value="distance" class="js-filter-setting checkboxes" href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Ensino-&agrave;-dist&acirc;ncia/">
+            <span class="checkbox-holder">
+              <i class="fa fa-check check-mark "></i>
+            </span>
+                            Ensino &agrave; dist&acirc;ncia
+                        </a>
+                                                </div>
+        </div>
+    
+        <a class="nav-accordion-heading" role="tab" id="heading-nav-pace" data-toggle="collapse" data-parent="#accordion" href="#collapse-nav-pace" aria-expanded="true" aria-controls="collapse-nav-pace">
+        Ritmo
+        <span class="pull-right">
+      <i class="fa fa-chevron-up"   ></i>
+            <i class="fa fa-chevron-down"   ></i>
+    </span>
+    </a>
+    <div id="collapse-nav-pace" class="nav-accordion-content collapse in" role="tabpanel" aria-labelledby="heading-nav-pace">
+        <div class="padding-10">
+                            <a data-cookie="search_intensity" data-value="all" class="js-filter-setting checkboxes" href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/">
+          <span class="checkbox-holder">
+            <i class="fa fa-check check-mark active"></i>
+          </span>
+                    Tudo
+                </a>
+                            <a data-cookie="search_intensity" data-value="full_time" class="js-filter-setting checkboxes" href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/">
+          <span class="checkbox-holder">
+            <i class="fa fa-check check-mark "></i>
+          </span>
+                    Per&iacute;odo integral
+                </a>
+                            <a data-cookie="search_intensity" data-value="part_time" class="js-filter-setting checkboxes" href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Meio-Per&iacute;odo/">
+          <span class="checkbox-holder">
+            <i class="fa fa-check check-mark "></i>
+          </span>
+                    Meio Per&iacute;odo
+                </a>
+                    </div>
+    </div>
+    
+</div>                
+                <div class="text-left">
+                    <div class="dfp_ads hidden-xs">
+                        <div id='toefl_subject_specific_pages'
+           style='padding-bottom:25px; text-align: center;'>
+          <script>
+              googletag.cmd.push(
+                  function() {
+                      googletag.display('toefl_subject_specific_pages');
+                  });
+          </script>
+      </div>
+                  <div id='listing_data_science'
+           style='padding-bottom:25px; text-align: center;'>
+          <script>
+              googletag.cmd.push(
+                  function() {
+                      googletag.display('listing_data_science');
+                  });
+          </script>
+      </div>
+                  <div id='listing_data_science_2'
+           style='padding-bottom:25px; text-align: center;'>
+          <script>
+              googletag.cmd.push(
+                  function() {
+                      googletag.display('listing_data_science_2');
+                  });
+          </script>
+      </div>
+                  <div id='listing_data_science_3'
+           style='padding-bottom:25px; text-align: center;'>
+          <script>
+              googletag.cmd.push(
+                  function() {
+                      googletag.display('listing_data_science_3');
+                  });
+          </script>
+      </div>
+      </div>
+                  </div>
+
+            </div>
+            <div class="col-sm-9 col-lg-10">
+
+
+                                    <div class="row navigation-box-container">
+                        <div class="col-sm-12">
+                            <h4 class="visible-xs is-filter-toggle clearfix"><b><span>9</span> Resultados em Ciência de Dados
+</b>
+                                <small class="pull-right usedColor"><i class="fa fa-filter"   ></i>
+                                    Filter <i class="fa fa-chevron-up filter-opened"   ></i><i class="fa fa-chevron-down filter-closed"   ></i></small>
+                            </h4>
+                        </div>
+                        <div class="col-sm-12" style="position:relative;">
+
+                <div style="position:absolute;right:15px;top:-20px;line-height:2em;color:#777;" class="hidden-xs text-right">
+              Outras op&ccedil;&otilde;es dentro desta &aacute;rea de estudos
+              <div>
+                                                              <a class="usedColor" style="font-weight: bold;font-size:0.95em;" href="https://www.onlinestudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/">Online <i style="font-size:0.8em;" class="fa fa-external-link" aria-hidden="true"></i></a>
+                                                                  |
+                                            <a class="usedColor" style="font-weight: bold;font-size:0.95em;" href="https://www.academiccourses.com.br/Cursos/Ci&ecirc;ncia-de-Dados/">Cursos <i style="font-size:0.8em;" class="fa fa-external-link" aria-hidden="true"></i></a>
+                                                                  |
+                                            <a class="usedColor" style="font-weight: bold;font-size:0.95em;" href="https://www.academiccourses.com.br/Programa-Pathway/Ci&ecirc;ncia-de-Dados/">Programas Pathway <i style="font-size:0.8em;" class="fa fa-external-link" aria-hidden="true"></i></a>
+                                                                  |
+                                            <a class="usedColor" style="font-weight: bold;font-size:0.95em;" href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/">Mestrados <i style="font-size:0.8em;" class="fa fa-external-link" aria-hidden="true"></i></a>
+                                </div>
+          </div>
+      
+    <ul class="nav nav-tabs tab-shadow hidden-xs">
+      <li class="active">
+        <a>Programas</a>
+      </li>
+                  <li>
+             <a class="usedColor" style="color: #f4792c;" href="https://www.onlinestudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/">
+                 Online
+             </a>
+         </li>
+                           </ul>
+
+    <div class="navigation-box">
+
+      
+
+
+      <div class="is-filter-setting-container">
+                  <h2 class="is-sub-filter-toggle">
+            <i class="fa fa-chevron-up filter-opened"   ></i>
+            <i class="fa fa-chevron-down filter-closed"   ></i>
+            Ci&ecirc;ncia de Dados
+          </h2>
+
+          <div class="filter-setting">
+            <ol class="breadcrumb">
+                                                <li><a href="/Gradua&ccedil;&atilde;o/">Gradua&ccedil;&atilde;o</a></li>
+                                                                <li><a href="">Ci&ecirc;ncia de Dados</a></li>
+                                          </ol>
+          </div>
+        
+                  <div class="filter-setting">
+            <ul class="multicolumn list-unstyled">
+                              <li><a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/An&aacute;lise-de-Dados/">An&aacute;lise de Dados</a></li>
+                          </ul>
+          </div>
+        
+              </div>
+
+
+
+      <div class="row visible-xs">
+        <div class="col-sm-8 search-options-left ">
+          <div class="is-filter-setting-container">
+                          <h2 class="is-sub-filter-toggle">
+                <i class="fa fa-chevron-up filter-opened"   ></i>
+                <i class="fa fa-chevron-down filter-closed"   ></i>
+                                                                                                              Gradua&ccedil;&otilde;es
+                                                            
+                            </h2>
+
+              <div class="filter-setting">
+                <h3 class="hidden-xs">Gradua&ccedil;&atilde;o</h3>
+                                  <a data-cookie="search_cross_degree" data-value="all" class="js-filter-setting label label-default" data-idType="all"
+                                            data-reload="true"
+                                           >
+                    Tudo (14)
+                  </a>
+                                  <a data-cookie="search_cross_degree" data-value="3" class="js-filter-setting label label-primary" data-idType="3"
+                                           >
+                    Gradua&ccedil;&otilde;es (9)
+                  </a>
+                                  <a data-cookie="search_cross_degree" data-value="71" class="js-filter-setting label label-default" data-idType="71"
+                                           href="https://www.bachelorstudies.com.br/BSc/Ci&ecirc;ncia-de-Dados/"
+                                           >
+                    Gradua&ccedil;&atilde;o em Ci&ecirc;ncias (6)
+                  </a>
+                              </div>
+                      </div>
+        </div>
+
+        <div class="col-sm-4 search-options-right">
+          <div class="is-filter-setting-container">
+            <h2 class="is-sub-filter-toggle">
+              <i class="fa fa-chevron-up filter-opened"   ></i>
+              <i class="fa fa-chevron-down filter-closed"   ></i>
+                              Location
+                          </h2>
+
+
+            <div class="filter-setting">
+              <h3 class="hidden-xs">Location</h3>
+
+              
+                              <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Selecionar Pa&iacute;s <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu max-height-300 dropdown-searchable" role="menu">
+                    
+                                          <li>
+                        <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Austr&aacute;lia/">
+                          Austr&aacute;lia
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Cazaquist&atilde;o/">
+                          Cazaquist&atilde;o
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Estados-Unidos/">
+                          EUA
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Fran&ccedil;a/">
+                          Fran&ccedil;a
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/Holanda/">
+                          Holanda
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.bachelorstudies.com.br/Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/It&aacute;lia/">
+                          It&aacute;lia
+                        </a>
+                      </li>
+                                      </ul>
+                </div>
+                            
+                            
+              
+                                        </div>
+          </div>
+        </div>
+      
+                      <div class="col-sm-8 search-options-left">
+          <div class="is-filter-setting-container">
+            <h2 class="is-sub-filter-toggle">
+              <i class="fa fa-chevron-up filter-opened"   ></i>
+              <i class="fa fa-chevron-down filter-closed"   ></i>
+                                                                                                      Tudo
+                                                                                                                                                      
+              
+            </h2>
+
+            <div class="filter-setting">
+              <h3 class="hidden-xs">Study type</h3>
+                              
+                  <a data-cookie="search_mode" data-value="all" class="js-filter-setting label label-primary" href="https://www.bachelorstudies.com.br/Graduação/Ciência-de-Dados/">
+                    Tudo
+                  </a>
+                
+                  <a data-cookie="search_mode" data-value="campus" class="js-filter-setting label label-default" href="https://www.bachelorstudies.com.br/Graduação/Ciência-de-Dados/">
+                    C&acirc;mpus
+                  </a>
+                
+                  <a data-cookie="search_mode" data-value="online" class="js-filter-setting label label-default" href="https://www.bachelorstudies.com.br/Graduação/Ciência-de-Dados/">
+                    Online
+                  </a>
+                
+                  <a data-cookie="search_mode" data-value="distance" class="js-filter-setting label label-default" href="https://www.bachelorstudies.com.br/Graduação/Ciência-de-Dados/Ensino-à-distância/">
+                    Ensino &agrave; dist&acirc;ncia
+                  </a>
+                                          </div>
+          </div>
+        </div>
+                <div class="col-sm-4 search-options-right">
+          <div class="is-filter-setting-container">
+            <h2 class="is-sub-filter-toggle">
+              <i class="fa fa-chevron-up filter-opened"   ></i>
+              <i class="fa fa-chevron-down filter-closed"   ></i>
+                                                                                Tudo
+                                                                                          
+                          </h2>
+
+            <div class="filter-setting">
+              <h3 class="hidden-xs">Pace</h3>
+              
+                <a data-cookie="search_intensity" data-value="all" class="js-filter-setting label label-primary" href="https://www.bachelorstudies.com.br/Graduação/Ciência-de-Dados/">Tudo</a>
+              
+                <a data-cookie="search_intensity" data-value="full_time" class="js-filter-setting label label-default" href="https://www.bachelorstudies.com.br/Graduação/Ciência-de-Dados/">Per&iacute;odo integral</a>
+              
+                <a data-cookie="search_intensity" data-value="part_time" class="js-filter-setting label label-default" href="https://www.bachelorstudies.com.br/Graduação/Ciência-de-Dados/Meio-Período/">Meio Per&iacute;odo</a>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                    </div>
+                
+
+                
+                    
+                        <div class="row">
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="Assumption College" alt="Assumption College" src="//cdn03.masterstudies.com/gfx/emblem/11555/1537129928/Large/Assumption-College.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.bachelorstudies.com/Bachelor-in-Data-Analytics/USA/Assumption-College/">
+                        <span >Gradua&ccedil;&atilde;o em An&aacute;lise de Dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Assumption College</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">4&nbsp;</span>
+                      <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">EUA</span>
+                      <span class="label label-default-master ">Worcester</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">Os dados são a matéria-prima básica do século XXI. A indústria, o governo e as ONGs podem agora saber mais sobre nós do que nunca na história da humanidade: o que compramos, o que lemos, o que fazemos. Mas, todos esses dados devem primeiro ser processados ​​em informações para responder à grande questão: o que tudo isso significa?
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                <p>Os dados são a matéria-prima básica do século XXI. A indústria, o governo e as ONGs podem agora saber mais sobre nós do que nunca na história da humanidade: o que compramos, o que lemos, o que fazemos. Mas, todos esses dados devem primeiro ser processados ​​em informações para responder à grande questão: o que tudo isso significa ?</p><p>Avanços na tecnologia de computadores criaram uma explosão na aquisição e armazenamento de grandes quantidades de dados de todas as classes sociais. Essa mudança repentina criou a necessidade de graduados treinados em matemática e computação que possam analisar esses dados e fazer recomendações com base nessas investigações.</p>...
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.bachelorstudies.com/Bachelor-in-Data-Analytics/USA/Assumption-College/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.bachelorstudies.com.br/Bachelor-in-Data-Analytics/Estados-Unidos/Assumption-College/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="Ohio Wesleyan University" alt="Ohio Wesleyan University" src="//cdn03.masterstudies.com/gfx/emblem/11462/1535359718/Large/Ohio-Wesleyan-University.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.bachelorstudies.com/Bachelor-in-Data-Analytics/USA/Ohio-Wesleyan-University/">
+                        <span >Gradua&ccedil;&atilde;o em An&aacute;lise de Dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Ohio Wesleyan University</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">EUA</span>
+                      <span class="label label-default-master ">Delaware</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">A análise de dados é uma profissão em rápido crescimento em uma ampla gama de áreas, incluindo finanças, saúde, seguros, pesquisa biomédica, ciência da computação, marketing e muitas outras áreas.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Bacharel em Análise de Dados<p>A análise de dados é uma profissão em rápido crescimento em uma ampla gama de áreas, incluindo finanças, saúde, seguros, pesquisa biomédica, ciência da computação, marketing e muitas outras áreas. Os especialistas em análise de dados rapidamente se tornam valiosos por sua capacidade de processar grandes quantidades de dados, detectar tendências significativas e fazer insights que orientam decisões importantes.</p>Sobre o major<p>Este grande combina estudo em matemática e ciência da computação com uma base sólida nas artes liberais. Em sua palestra TED sobre desafios na interpretação de big data, a analista de dados Susan Etlinger disse: "O que precisamos fazer é gastar um pouco mais de tempo em coisas como humanidades e sociologia, e ciências sociais, retórica, filosofia, ética, porque nos dão contexto que é tão importante para o big data, e porque nos ajudam a nos tornarmos melhores pensadores críticos "....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.bachelorstudies.com/Bachelor-in-Data-Analytics/USA/Ohio-Wesleyan-University/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.bachelorstudies.com.br/Bachelor-in-Data-Analytics/Estados-Unidos/Ohio-Wesleyan-University/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="S P Jain School of Global Management Singapore" alt="S P Jain School of Global Management Singapore" src="//cdn03.masterstudies.com/gfx/emblem/5610/1485456985/Large/S-P-Jain-School-of-Global-Management-Singapore.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.bachelorstudies.com/Bachelor-of-Data-Science/Australia/S-P-Jain-School-of-Global-Management-Singapore/">
+                        <span >Gradua&ccedil;&atilde;o em Ci&ecirc;ncia de Dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >S P Jain School of Global Management Singapore</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">3&nbsp;</span>
+                      <span class="label label-default-master ">August 2019</span>
+                      <span class="label label-default-master ">Austrália</span>
+                      <span class="label label-default-master ">Sydney</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">90% dos dados no mundo hoje foram criados apenas nos últimos dois anos.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                visão geral do programa<p>90% dos dados no mundo hoje foram criados apenas nos últimos dois anos. Alguns estimam que a produção de dados será 44 vezes maior em 2020 do que há alguns anos. Outros estimam que aproximadamente 2,5 quintilhões de bytes de dados estão sendo gerados todos os dias. A demanda global por ciência de dados e conhecimento de computação supera a oferta, com previsões de uma grande escassez de analistas por pelo menos os próximos 10 anos. Para graduados em Ciência de Dados, isso apresenta uma oportunidade de emprego de alto potencial.</p><p>O Bacharel em Ciência de Dados da SP Jain (BDS) é um curso de três anos destinado a preparar graduados que podem conduzir investigações orientadas por dados e realizar análises visuais e avançadas, adquirindo e gerenciando dados de todos os tipos. Através deste curso, os graduados irão desenvolver uma compreensão aprofundada da ciência de dados e as técnicas de análise de dados quantitativos e qualitativos para chegar a soluções. Eles serão capazes de identificar padrões, prever tendências e analisar dados de setores como manufatura, bancos e finanças, varejo e saúde....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.bachelorstudies.com/Bachelor-of-Data-Science/Australia/S-P-Jain-School-of-Global-Management-Singapore/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.bachelorstudies.com.br/Bachelor-of-Data-Science/Austrália/S-P-Jain-School-of-Global-Management-Singapore/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                             <div class="dfp_ads visible-xs">
+                  <div id='mobile_listing_data_science'>
+          <script>
+              googletag.cmd.push(function() { googletag.display('mobile_listing_data_science'); });
+          </script>
+      </div>
+      </div>
+                                   <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="Maastricht University, Department of Data Science and Knowledge Engineering" alt="Maastricht University, Department of Data Science and Knowledge Engineering" src="//cdn03.masterstudies.com/gfx/emblem/796/1485456998/Large/MU-DKE.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.bachelorstudies.com/Bachelor-in-Data-Science-and-Knowledge-Engineering/Netherlands/MU-DKE/">
+                        <span >Gradua&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e Engenharia do Conhecimento</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Maastricht University, Department of Data Science and Knowledge Engineering</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">3&nbsp;</span>
+                      <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">Holanda</span>
+                      <span class="label label-default-master ">Maastricht</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">O conhecimento é central para a sociedade moderna. Os chips inteligentes ajudam as empresas a rastrear produtos e gerenciar suprimentos e estoques. Novos dispositivos de comunicação de alta tecnologia, como telefones celulares, instrumentos de navegação e câmeras digitais, são bastante aprimorados pelo software inteligente e pela engenharia médica e biológica. Os médicos chegam rapidamente a diagnósticos precisos. Como estudante de Ciência de Dados e Engenharia do Conhecimento, você estudará métodos para abordar novos desafios nessas áreas importantes. Você vai gerar novos conhecimentos reunindo e solicitando informações valiosas usando matemática e técnicas de computação inteligentes. O conhecimento que você adquirirá pode, por sua vez, ser usado para tomar decisões ou resolver problemas de maneira eficiente.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Por que esse programa?<p>O conhecimento é central para a sociedade moderna. Os chips inteligentes ajudam as empresas a rastrear produtos e gerenciar suprimentos e estoques. Novos dispositivos de comunicação de alta tecnologia, como telefones celulares, instrumentos de navegação e câmeras digitais, são bastante aprimorados pelo software inteligente e pela engenharia médica e biológica. Os médicos chegam rapidamente a diagnósticos precisos.</p><p>Como estudante de Ciência de Dados e Engenharia do Conhecimento, você estudará métodos para abordar novos desafios nessas áreas importantes. Você vai gerar novos conhecimentos reunindo e solicitando informações valiosas usando matemática e técnicas de computação inteligentes. O conhecimento que você adquirirá pode, por sua vez, ser usado para tomar decisões ou resolver problemas de maneira eficiente....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.bachelorstudies.com/Bachelor-in-Data-Science-and-Knowledge-Engineering/Netherlands/MU-DKE/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.bachelorstudies.com.br/Bachelor-in-Data-Science-and-Knowledge-Engineering/Holanda/MU-DKE/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="Aquinas College" alt="Aquinas College" src="//cdn02.masterstudies.com/gfx/logo/9598/1487716207/Aquinas-College.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.bachelorstudies.com/Bachelor-in-Data-Analytics/USA/Aquinas-College/">
+                        <span >Gradua&ccedil;&atilde;o em an&aacute;lise de dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Aquinas College</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">EUA</span>
+                      <span class="label label-default-master ">Grand Rapids</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">A partir do outono de 2017, o Aquinas College oferecerá um grande e menor no Data Analytics, um campo de rápido crescimento que prepara os alunos para processar e apresentar dados em um mundo cada vez mais baseado em dados. 
+
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                <p>A partir do outono de 2017, o Aquinas College oferecerá uma Maior e menor em Data Analytics, Um campo de rápido crescimento que prepara os alunos para processar e apresentar dados em um mundo cada vez mais orientado a dados. </p>
+<p>Graduados com este maior ou menor poderão usar técnicas matemáticas e estatísticas, combinadas com programação e aplicativos de software para detectar tendências e outros comportamentos, e apresentar a análise para um entendimento mais amplo.  Este é um campo interdisciplinar que combina estatística, matemática, programação de computadores, tecnologia da informação e administração de empresas.</p>
+<p>Avanços em tecnologia, como smartphones, redes sociais e comércio eletrônico, nos últimos cinco anos foram acompanhados por uma explosão de dados.  Alguns especialistas estimam que mais de 90% dos dados do mundo foram criados durante este período.  ...
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.bachelorstudies.com/Bachelor-in-Data-Analytics/USA/Aquinas-College/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.bachelorstudies.com.br/Bachelor-in-Data-Analytics/Estados-Unidos/Aquinas-College/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="2">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="University of Southern Queensland (USQ)" alt="University of Southern Queensland (USQ)" src="//cdn04.masterstudies.com/gfx/emblem/3770/1485456975/Large/USQ-Australia.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.bachelorstudies.com/Bachelor-of-Information-and-Technology-(Data-Analytics)/Australia/USQ-Australia/">
+                        <span >Gradua&ccedil;&atilde;o em Informa&ccedil;&atilde;o e Tecnologia (Data Analytics)</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >University of Southern Queensland (USQ)</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Online</span>
+                     <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">Meio Período</span>
+                      <span class="label label-default-master ">3&nbsp;</span>
+                      <span class="label label-default-master ">February 2019</span>
+                      <span class="label label-default-master hide ">Austrália</span>
+                      <span class="label label-default-master hide ">Toowoomba</span>
+                      <span class="label label-default-master hide ">Springfield</span>
+                      <span class="label label-default-master hide ">Australia Online</span>
+        
+  
+      <span class="labels-more" data-lesslabel="Menos" id="+4 mais">
+      +4 mais
+    </span>
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">Com constantes avanços em tecnologia, velocidade da internet e mídias sociais, os profissionais estão enfrentando o desafio de capturar, armazenar, transferir e organizar grandes quantidades de dados. O Bacharelado em Tecnologia da Informação e Tecnologia da USQ (Data Analytics) fornecerá habilidades interdisciplinares para capturar, processar e interpretar grandes volumes de dados e comunicar as informações valiosas ao público-alvo.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Aprenda a capturar e transformar Big Data<p>Com constantes avanços em tecnologia, velocidade da internet e mídias sociais, os profissionais estão enfrentando o desafio de capturar, armazenar, transferir e organizar grandes quantidades de dados. O Bacharelado em Tecnologia da Informação e Tecnologia da USQ (Data Analytics) fornecerá habilidades interdisciplinares para capturar, processar e interpretar grandes volumes de dados e comunicar as informações valiosas ao público-alvo.</p><p>Você explorará computação, estatística, data mining, sistemas de informação, gerenciamento de dados, classificação e apresentação, bem como solução de problemas, gerenciamento de projetos, trabalho em equipe, comunicação e ética....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.bachelorstudies.com/Bachelor-of-Information-and-Technology-(Data-Analytics)/Australia/USQ-Australia/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.bachelorstudies.com.br/Bachelor-of-Information-and-Technology-(Data-Analytics)/Austrália/USQ-Australia/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="University of Campania &quot;Luigi Vanvitelli&quot;" alt="University of Campania &quot;Luigi Vanvitelli&quot;" src="//cdn01.masterstudies.com/gfx/emblem/9657/1499949721/Large/University-of-Campania-Luigi-Vanvitelli.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.bachelorstudies.com/Bachelor-Degree-in-Data-Analytics/Italy/University-of-Campania-Luigi-Vanvitelli/">
+                        <span >Gradua&ccedil;&atilde;o em An&aacute;lise de Dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >University of Campania &quot;Luigi Vanvitelli&quot;</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">3&nbsp;</span>
+                      <span class="label label-default-master ">October 2018</span>
+                      <span class="label label-default-master ">Itália</span>
+                      <span class="label label-default-master ">Santa Maria Capua Vetere</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">Você deve se inscrever no programa porque vai dominar as habilidades necessárias para estabelecer uma carreira bem sucedida na Data Science. Você aprenderá como analisar dados e comunicar percepções usando ferramentas poderosas como Python, R, SAS e SQL.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Torne-se um analista de dados<p>Prepare-se para uma carreira em ciência de dados. Aprenda as habilidades e ferramentas para descobrir insights, comunicar descobertas críticas e criar soluções baseadas em dados.</p>Por que devo solicitar o grau de bacharel em analista de dados?<p>Você deve se inscrever no programa porque vai dominar as habilidades necessárias para estabelecer uma carreira bem sucedida na Data Science. Você aprenderá como analisar dados e comunicar percepções usando ferramentas poderosas como Python, R, SAS e SQL. Ter essas habilidades irá qualificá-lo para um papel como Analista de Dados. A demanda por profissionais qualificados com habilidades avançadas relacionadas a dados nunca foi tão grande, pois a análise de dados rapidamente se torna uma prioridade para as organizações. Nosso currículo foi desenvolvido em conjunto com parceiros públicos e privados para garantir que os alunos dominem as ferramentas mais avançadas, e nossos alunos estarão prontos para o trabalho pelo tempo que completarem seu currículo. Este é o programa de estudo perfeito para quem quer se tornar um analista de dados ou planeja a próxima mudança de carreira em campos focados em dados....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.bachelorstudies.com/Bachelor-Degree-in-Data-Analytics/Italy/University-of-Campania-Luigi-Vanvitelli/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.bachelorstudies.com.br/Bachelor-Degree-in-Data-Analytics/Itália/University-of-Campania-Luigi-Vanvitelli/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="University Paris Seine" alt="University Paris Seine" src="//cdn03.masterstudies.com/gfx/logo/12256/1520524706/Large/University-Paris-Seine.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.bachelorstudies.com.br/International-Bachelor-Modelling-and-Data-Science-for-a-changing-World/Fran&ccedil;a/University-Paris-Seine/">
+                        <span >International Bachelor Modelling and Data Science for a changing World</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >University Paris Seine</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">4&nbsp;</span>
+                      <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">França</span>
+                      <span class="label label-default-master ">Paris</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">Data science, cybersecurity, economic and financial engineering, artificial intelligence,
+quantum technologies… are all great challenges which companies face today
+and which require new and sharp skills.
+University Paris Seine has developed a four-year high standard programme which
+meets with the demands of today’s changing world: the International Bachelor Y.
+The Bachelor course is taught exclusively in English, which shapes students for new
+fields of expertise as well as for their future career.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                <p>Data science, cybersecurity, economic and financial engineering, artificial intelligence, quantum technologies… are all great challenges which companies face today and which require new and sharp skills.</p>
+<p>University Paris Seine has developed a four-year high standard programme which meets the demands of today’s changing world: the International Bachelor Y.</p>
+<p>The Bachelor course is taught exclusively in English, which shapes students for new fields of expertise as well as for their future career.</p>
+A four-year programme which is progressive, customized and open
+<p>Basic lessons are dominant during the first two years of the course in order to build solid scientific foundations. You are also free to select diving deeper modules corresponding to your career plan. Years three and four focus on the modules which are in line with your choices. Conferences and workshops touch on major contemporary issues so as to deepen knowledge and apprehend the world and its complexity....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.bachelorstudies.com.br/International-Bachelor-Modelling-and-Data-Science-for-a-changing-World/Fran&ccedil;a/University-Paris-Seine/" class="btn btn-primary-master ">Ler Mais</a>
+
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="Нархоз Университет" alt="Нархоз Университет" src="//cdn03.masterstudies.com/gfx/emblem/11327/1531841361/Large/Нархоз-Университет.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.bachelorstudies.ru/Информационные-системы-Бакалавриат/Kazahstan/Нархоз-Университет/">
+                        <span >Sistemas de Informa&ccedil;&atilde;o de Gradua&ccedil;&atilde;o</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Нархоз Университет</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">Cazaquistão</span>
+                      <span class="label label-default-master ">Almaty</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">Especialistas deste perfil estão em demanda no setor de TI, estruturas comerciais, mídia, transporte e empresas de logística. Graduados do trabalho de direção como administradores de sistemas, engenheiros, especialistas em redes internas e externas. Sua principal tarefa é garantir o uso mais efetivo da tecnologia da informação nas empresas.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                <p>Sistemas de Informação (Data Science)</p><p>Especialistas deste perfil estão em demanda no setor de TI, estruturas comerciais, mídia, transporte e empresas de logística. Graduados do trabalho de direção como administradores de sistemas, engenheiros, especialistas em redes internas e externas. Sua principal tarefa é garantir o uso mais efetivo da tecnologia da informação nas empresas.
+As principais disciplinas educacionais incluem os conceitos básicos de sistemas de informação, a arquitetura de sistemas de computadores, bancos de dados, redes de computadores e tecnologias de nuvem, o design de sistemas de informação, sistemas operacionais modernos, ferramentas de processamento de dados multimídia, desenvolvimento de aplicativos móveis, tecnologias de programação, gerenciamento de dados.Custo:  Departamento de tempo integral: 800.000 tenge por ano
+Uma consulta detalhada pode ser obtida no escritório de admissões das 09:00 às 18:00 durante a semana e aos sábados das 09:00 às 15:00, na ul. Zhandosova, 55
+Você tem alguma pergunta? Ligue para nós agora!  7 (727) 346 64 64 - Central de Atendimento ...
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.bachelorstudies.ru/Информационные-системы-Бакалавриат/Kazahstan/Нархоз-Университет/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.bachelorstudies.com.br/Информационные-системы-Бакалавриат/Cazaquistão/Нархоз-Университет/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                    </div>
+                    
+                    <div class="row listing-pagination "><ul class="pagination"></ul></div><br />
+                            </div>
+
+
+        </div>
+    </div>
+
+<div class="container">
+  <div class="row">
+    <footer class="page-footer clearfix">
+      <div class="col-sm-12">
+        <div class="row">
+
+          <div class="brand col-sm-12">
+            <h2 class="usedColor">BACHELORSTUDIES.COM.BR</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
+
+            <div class="footer-social pull-right">
+              <div class="hidden-xs addthis-container white">
+  <div class="pull-right">
+    <a data-toggle="modal" class="addthis-modal-link" href="#linkToUsModal">
+     Link para esta p&aacute;gina
+    </a>
+  </div>
+
+  <div class="addthis_toolbox">
+    <i class="fa fa-spinner fa-pulse loading-add-this"   ></i>
+    <div class="custom_images">
+      <!--<a class="addthis_button_facebook addthis-button"><img src="//cdn02.masterstudies.com/img_new/addthis_facebook_white.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+      <a class="addthis_button_twitter addthis-button"><img src="//cdn03.masterstudies.com/img_new/addthis_twitter_white.png" width="18" height="18" border="0" alt="Share to Twitter" /></a>-->
+        <a class="addthis_button_facebook addthis-button"><img src="//cdn03.masterstudies.com/img_new/FB-f-Logo__blue_144_official.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+        <a class="addthis_button_twitter addthis-button"><img src="//cdn02.masterstudies.com/img_new/Twitter_Logo_Blue_official.png" width="32" height="32" border="0" alt="Share to Twitter" /></a>
+        <a class="addthis_button_more addthis-button"><img src="//cdn03.masterstudies.com/img_new/addthis_more_white.png" width="18" height="18" border="0" alt="More..." /></a>
+      <a class="addthis_counter addthis_bubble_style"></a>
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div class="footer-links">
+                              <a href="https://www.bachelorstudies.com.br/Schools_and_Universities/Contate-nos.html">Fale conosco</a>
+                              <a href="https://www.keystoneacademic.com.br/">Keystone Academic Solutions</a>
+                              <a href="https://www.bachelorstudies.com.br/Schools_and_Universities/Termos-e-Condi&ccedil;&otilde;es.html">Termos e condi&ccedil;&otilde;es de uso</a>
+                              <a href="https://www.bachelorstudies.com.br/Schools_and_Universities/Pol&iacute;tica-de-privacidade.html">Privacidade</a>
+                              <a href="/sitemap/">Mapa do Site</a>
+                              <a href="https://br.studenttests.com/">StudentTests</a>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="linkToUsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Link to and share "Melhor Gradua&ccedil;&atilde;o em Ci&ecirc;ncia de Dados"</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="radio">
+              <label>
+                <input type="radio" name="link_to_us_url" class="link_to_us_url" checked data-title="Bachelorstudies.com.br - Melhor Gradua&ccedil;&atilde;o em Ci&ecirc;ncia de Dados" data-url="https://www.bachelorstudies.com.br/Gradua%C3%A7%C3%A3o/Ci%C3%AAncia-de-Dados/">
+                Link to this page
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="link_to_us_url" class="link_to_us_url" data-title="Bachelorstudies.com.br" data-url="https://www.bachelorstudies.com.br/">
+                Link to Bachelorstudies.com.br start page
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="link_to_us_url_input">Paste link in email or IM:</label>
+              <input type="text" id="link_to_us_url_input" class="form-control link_to_us_plain_link">
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <img src="//cdn02.masterstudies.com/img/logo/Gradua&ccedil;&atilde;o-ms-pt-BR.png" class="link-to-us-image">
+
+            
+            <div class="pull-right">
+
+              <label class="radio">
+                <input type="radio" name="link_to_us_image" class="link-to-us-image-radio" checked data-alt="Bachelorstudies.com.br" data-image="//cdn02.masterstudies.com/img/logo/Gradua&ccedil;&atilde;o-ms-pt-BR.png">
+                Bachelorstudies.com.br logo
+              </label>
+
+              
+              <label class="radio">
+                <input type="radio" name="link_to_us_image" class="link-to-us-image-radio" data-image="">
+                No image
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <label for="link_to_us_textarea">HTML-code:</label>
+            <textarea name="" id="link_to_us_textarea" class="form-control link-to-us-html" rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
+
+
+<script src="//cdn04.masterstudies.com/js/application.1537268635.js"></script>
+<script src="//cdn04.masterstudies.com/js/randexp/randexp.min.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBikK5pARri5jnUcBnqAFDIUWrLp3eTLUk"></script>
+
+
+    <script type="text/javascript">
+        $(function ($) {
+
+            $('.is-filter-toggle').on('click', function () {
+                $(this).closest('.navigation-box-container').toggleClass('open');
+            });
+
+            $('.is-sub-filter-toggle').on('click', function () {
+                $(this).closest('.is-filter-setting-container').toggleClass('open');
+            });
+
+
+            if ($('.listingText').height() >= 270 && !$('.listingText').hasClass("toggleText")) {
+                $('.listingText').addClass('toggleText');
+                $('.read_more').removeClass('hide');
+            }
+
+            $(".read_more").click(function () {
+                if ($('.listingText').hasClass("toggleText")) {
+                    $('.listingText').removeClass('toggleText');
+                    $(".read_more").html('<i class="fa fa-chevron-up"></i> Ler Menos');
+
+                } else {
+                    $('.listingText').addClass('toggleText');
+                    $(".read_more").html('<i class="fa fa-chevron-down"></i> Ler Mais');
+                }
+            });
+
+
+            
+            $('.form-search').appendTo($('#place-search-form-here'));
+            $('.form-search').removeClass('pull-right');
+            $('.form-search').removeClass('span7');
+            $('.form-search').addClass('span15');
+
+            
+            $('.toogle_lesstext_lead').appendTo($('.toogle_lesstext_lead').siblings('p').last());
+
+            jQuery('.grid').find('a').click(function (event) {
+
+                event.preventDefault();
+                //$(this).unbind('click');
+
+                params = {
+                    action: 'count_search_listing_click',
+                    json: $(this).parents('[data-track-click]').attr('data-track-click'),
+                    num: '',
+                    r: Math.ceil(100 * Math.random())
+                };
+
+                var link = $(this);
+
+                jQuery.ajax({
+                    url: '/ajax_handler.php',
+                    dataType: 'html',
+                    type: 'GET',
+                    data: params,
+                    success: function () {
+                        if (jQuery(link).attr('href')) window.location.href = jQuery(link).attr('href');
+                    },
+                    error: function () {
+                        if (jQuery(link).attr('href')) window.location.href = jQuery(link).attr('href');
+                    }
+                });
+
+                return false;
+            });
+
+
+        });
+    </script>
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        var $partner_sites = [];
+        var $partner_sites_mobile = [];
+
+                $partner_sites.push($('<li><a class="navbar-brand active" href="https://www.bachelorstudies.com.br/">Gradua&ccedil;&atilde;o</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.bachelorstudies.com.br/">Gradua&ccedil;&atilde;o</a></li>'));
+
+                                    $partner_sites.push($('<li><a class="navbar-brand " href="https://www.masterstudies.com.br/">Mestrado</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.masterstudies.com.br/">Mestrado</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.phdstudies.com.br/">Doutorado</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.phdstudies.com.br/">Doutorado</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.lawstudies.com.br/">Direito</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.lawstudies.com.br/">Direito</a></li>'));
+                                                                              $partner_sites.push($('<li><a class="navbar-brand " href="https://www.mbastudies.com.br/">MBA</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.mbastudies.com.br/">MBA</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.healthcarestudies.com.br/">Sa&uacute;de</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.healthcarestudies.com.br/">Sa&uacute;de</a></li>'));
+                                                            $partner_sites.push($('<li><a class="navbar-brand " href="https://www.academiccourses.com.br/">Cursos</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.academiccourses.com.br/">Cursos</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.onlinestudies.com.br/">Online</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.onlinestudies.com.br/">Online</a></li>'));
+                        $('.partner-sites').first().append($partner_sites);
+        $('.partner-sites-mobile').first().append($partner_sites_mobile);
+
+
+      
+      
+    });
+</script>
+
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bb510f4a41","applicationID":"7303044","transactionName":"YQdQbRRSCxZYBUdQV1hNZ0sPHAwLXQNLF0heEg==","queueTime":0,"applicationTime":284,"atts":"TUBTG1xIGBg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

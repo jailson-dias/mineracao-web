@@ -1,0 +1,587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" prefix="og: http://ogp.me/ns#" >
+<head profile="http://gmpg.org/xfn/11">
+
+<!-- Optimizely is not recommended to use with GTM (https://help.optimizely.com/Integrate_Other_Platforms/Implementing_Optimizely_with_a_tag_manager/Implement_Optimizely_with_Google_Tag_Manager) -->
+<script src="https://cdn.optimizely.com/js/106384132.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta http-equiv="cache-control" content="public; max-age=86400" />
+<title>  Saiba como aumentar as vendas online através do blog corporativo - Blog do Agendor</title>
+<meta property="fb:app_id" content="217685634922690" />
+<!-- leave this for stats -->
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.agendor.com.br/blog/como-aumentar-as-vendas-online/" />
+<meta property="og:title" content="Saiba como aumentar as vendas online através do blog corporativo" />
+
+
+<link rel="stylesheet" href="/blog/statics/css/unified.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/blog/wp-content/themes/agendor/style.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" href="/blog/statics/css/footer.css?v=2" type="text/css" media="screen" />
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' type='text/css'>
+
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://www.agendor.com.br/blog/feed/" />
+<link rel="alternate" type="text/xml" title="RSS .92" href="https://www.agendor.com.br/blog/feed/rss/" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="https://www.agendor.com.br/blog/feed/atom/" />
+<link rel="shortcut icon" href="/blog/statics/images/icones/favicon.ico" />
+
+
+<!-- All in One SEO Pack 2.4.6.1 by Michael Torbert of Semper Fi Web Design[-1,-1] -->
+<meta name="description"  content="Algumas estratégias no blog da sua empresa podem ser o empurrão que faltava para aumentar as suas vendas! Um blog corporativo pode ter um excelente tráfego, mas como transformar esses leitores do blog em clientes e como aumentar as vendas online? Essa é uma pergunta que muitos se fazem, afinal, como sabemos, o blog" />
+
+<meta name="keywords"  content="conteúdo,dicas de vendas,estratégia de vendas" />
+
+<!-- /all in one seo pack -->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Blog do Agendor &raquo; Saiba como aumentar as vendas online através do blog corporativo" href="https://www.agendor.com.br/blog/como-aumentar-as-vendas-online/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.agendor.com.br\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='tve_style_family_tve_flt-css'  href='https://www.agendor.com.br/blog/wp-content/plugins/thrive-leads/tcb/editor/css/thrive_flat.css?ver=2.0.28' type='text/css' media='all' />
+<link rel='stylesheet' id='tve_leads_forms-css'  href='//www.agendor.com.br/blog/wp-content/plugins/thrive-leads/editor-layouts/css/frontend.css?ver=2.0.29' type='text/css' media='all' />
+<link rel='stylesheet' id='tcf_704ae08d2dd56009853058123c9a8bc7-css'  href='//fonts.googleapis.com/css?family=Lato%3A400%2C700%2C400italic&#038;ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='tve-leads-font-9062833c9baa57b288ba47a7993dc1c0-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C600%2C700&#038;ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='tve-leads-two_set-css'  href='//www.agendor.com.br/blog/wp-content/plugins/thrive-leads/editor-templates/_form_css/two_set.css?ver=2.0.29' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.agendor.com.br/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.agendor.com.br/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.agendor.com.br/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.agendor.com.br/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.agendor.com.br/blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Como o CRM pode dobrar seus resultados de vendas?' href='https://www.agendor.com.br/blog/crm-dobrar-resultados-de-vendas/' />
+<link rel='next' title='Como elaborar um plano de vendas para empresa' href='https://www.agendor.com.br/blog/como-elaborar-plano-vendas-empresa/' />
+<meta name="generator" content="WordPress 4.9.4" />
+<link rel="canonical" href="https://www.agendor.com.br/blog/como-aumentar-as-vendas-online/" />
+<link rel='shortlink' href='https://www.agendor.com.br/blog/?p=13463' />
+<link rel="alternate" type="application/json+oembed" href="https://www.agendor.com.br/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.agendor.com.br%2Fblog%2Fcomo-aumentar-as-vendas-online%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.agendor.com.br/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.agendor.com.br%2Fblog%2Fcomo-aumentar-as-vendas-online%2F&#038;format=xml" />
+<style type="text/css">#tve_editor .ttfm1{font-family: 'Lato' !important;font-weight: 400 !important;}.ttfm1 input, .ttfm1 select, .ttfm1 textarea, .ttfm1 button {font-family: 'Lato' !important;font-weight: 400 !important;}#tve_editor .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong{font-weight: 700 !important;}.ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong input, .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong select, .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong textarea, .ttfm1.bold_text,.ttfm1 .bold_text,.ttfm1 b,.ttfm1 strong button {font-weight: 700 !important;}</style></head>
+
+
+<body id='blog' class='bgBrancoNoised'>
+
+
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K28PBN"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-K28PBN');</script>
+	<!-- End Google Tag Manager -->
+
+<!--FACEBOOK SDK FOR LIKES BOX AND COMMENTS-->
+<div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '217685634922690',
+    xfbml      : true,
+    version    : 'v2.6'
+  });
+};
+
+(function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/pt_BR/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="menuPrincipal">
+	<div class='inner'>
+    <ul class='menuPrincipal-conheca ttUpper'>
+			<li><a href='/conheca-o-agendor/' class='ptb5 plr10 br3 bg092445' title='O que &eacute; o Agendor?'>O que &eacute; o Agendor?</a></li>
+    </ul>
+		<a href='/blog/' class='logoAgendor'>
+			<h2 class='hidden'>CRM Online Agendor - Um sistema de CRM Online focado no controle comercial para equipes de vendas!</h2>
+			<span>Blog</span>
+		</a>
+		<div class='clear'></div>
+	</div>
+</div><!--menuPrincipal-->
+
+<div id='categorias'>
+	<div class='inner'>
+		<a href='/blog/' class='btn-agendor azul mini mr20'>&laquo; In&iacute;cio</a>
+		
+		<a href='/blog/categorias/estrategias-de-vendas/' class='categoria' title='Estrat&eacute;gias de vendas'>Estrat&eacute;gias de vendas</a>
+		<a href='/blog/categorias/ferramentas-de-vendas-e-crm/' class='categoria' title='Ferramentas de vendas e CRM'>Ferramentas</a>
+		<a href='/blog/categorias/produtividade-em-vendas/' class='categoria' title='Produtividade em vendas'>Produtividade</a>
+		<a href='/blog/categorias/novas-ideias/' class='categoria' title='Novas ideias'>Novas ideias</a>
+		<a href='/blog/categorias/dicas-de-crm/' class='categoria' title='Dicas de CRM'>Dicas de CRM</a>
+		<a href='/blog/categorias/cases-de-crm/' class='categoria' title='Cases de CRM'>Cases de CRM</a>
+		<a href='/blog/categorias/atualizacoes-do-agendor/' class='categoria' title='Atualiza&ccedil;&otilde;es do Agendor'>Atualiza&ccedil;&otilde;es do Agendor</a>
+
+		
+	</div>
+</div>
+
+<div id="wrapper">
+
+<div id="content">
+			
+				<div class="post" id="post-13463">
+					<h1 class="fs36">
+						<a href="https://www.agendor.com.br/blog/como-aumentar-as-vendas-online/" rel="bookmark" title="Saiba como aumentar as vendas online através do blog corporativo">Saiba como aumentar as vendas online através do blog corporativo</a>
+					</h1>
+					<small class="autor">
+						<a href="https://plus.google.com/109595691685776797604?rel=author" target="_blank">
+							<img src="https://s3-sa-east-1.amazonaws.com/agendor-materiais/autores/gustavo-paulillo.gif">
+						</a>
+						Escrito por<br /><a href="http://www.linkedin.com/in/gpaulillo" target="_blank">Gustavo Paulillo</a>
+					</small>
+
+					<div class="postShares br5 dinPostShares">
+						<div class="g-plusone" data-size="tall" data-href="https://www.agendor.com.br/blog/como-aumentar-as-vendas-online/"></div>
+						<div class="fb-like mtb20" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" data-href="https://www.agendor.com.br/blog/como-aumentar-as-vendas-online/"></div>
+						<a href="http://twitter.com/share" class="twitter-share-button" data-url="https://www.agendor.com.br/blog/como-aumentar-as-vendas-online/" data-count="vertical" data-text="Saiba como aumentar as vendas online através do blog corporativo" data-via="agendor" ></a>
+						<script type="IN/Share" data-counter="top" data-url="https://www.agendor.com.br/blog/como-aumentar-as-vendas-online/"></script>
+					</div>
+
+					<div class="entry">
+						<h3>Algumas estratégias no blog da sua empresa podem ser o empurrão que faltava para aumentar as suas vendas!</h3>
+<p>Um <strong>blog corporativo</strong> pode ter um excelente tráfego, mas como transformar esses leitores do blog em clientes e como <strong>aumentar as vendas</strong> online?</p>
+<p>Essa é uma pergunta que muitos se fazem, afinal, como sabemos, o blog corporativo pode sim ser um canal muito <strong>rentável</strong>.</p>
+<p>Por isso, hoje você vai conferir<strong> 8 métodos</strong> que podem ser utilizados para <strong>aumentar os índices de vendas</strong> através de blogs corporativos e potencializar o seu negócio!</p>
+<p><span id="more-13463"></span></p>
+<h3>#1. Utilize o Hellobar em seu blog</h3>
+<p>A Hellobar trata-se de uma<strong> barra com uma mensagem de boas-vindas</strong> para os seus leitores.</p>
+<p>Essa barra permanece na tela mesmo quando seus leitores rolam o conteúdo e você pode personalizá-la com a mensagem que quiser e a cor que quiser, tudo para torná-la mais atraente aos seus leitores.</p>
+<p>Como ela ajuda a aumentar as vendas online?</p>
+<p>Simples, a Hellobar permite que você coloque um <strong>link para redirecionar</strong> seus visitantes para uma página de destino ou para a sua homepage, sendo muito útil para impulsionar suas vendas pela internet!</p>
+<h3>#2. Preencha os espaços vazios com banners</h3>
+<p>Sabe aquele <strong>espaço vazio</strong> que fica no canto do seu blog? Que tal preenchê-lo com <strong>anúncios interessantes</strong> aos seus visitantes?</p>
+<p>Os<strong> banners</strong> são uma maneira bem simples de atrair tráfego para uma página de destino ou para sua homepage, onde você estará ofertando seu produto ou serviço!</p>
+<h3>#3. Faça ofertas ao longo de seus textos</h3>
+<p>Antes é preciso entender que o blog não é um lugar para fazer vendas, o blog é um lugar para <strong>escrever para os seus leitores</strong>. No entanto, o conteúdo do blog serve para atrair potenciais clientes que estejam interessados em seus produtos ou serviço.</p>
+<p>Os textos, é claro, não devem ser pura propaganda, afinal não é isso o que os leitores vêm procurar em um blog.</p>
+<p>Os <strong>leitores</strong> estão sempre em busca de alguma <strong>solução para os seus problemas</strong>, de alguma dica para suprir suas necessidades e informar o seu leitor é fundamental.</p>
+<p>No entanto, por que não ajudá-lo e aproveitar para ofertar o seu produto que é ideal para suprir a necessidade do seu leitor?</p>
+<div id="attachment_13471" style="max-width: 1034px" class="wp-caption aligncenter"><a href="http://agendor-blog-uploads.s3-sa-east-1.amazonaws.com/2015/10/02173211/vendas-online.jpg"><img class="size-full wp-image-13471" alt="O blog é um lugar para escrever para os seus leitores" src="http://agendor-blog-uploads.s3-sa-east-1.amazonaws.com/2015/10/02173211/vendas-online.jpg" width="1024" height="715" srcset="https://s3-sa-east-1.amazonaws.com/agendor-blog-uploads/2015/10/02173211/vendas-online.jpg 1024w, https://s3-sa-east-1.amazonaws.com/agendor-blog-uploads/2015/10/02173211/vendas-online-300x209.jpg 300w, https://s3-sa-east-1.amazonaws.com/agendor-blog-uploads/2015/10/02173211/vendas-online-600x418.jpg 600w" sizes="(max-width: 1024px) 100vw, 1024px" /></a><p class="wp-caption-text">O blog é um lugar para escrever para os seus leitores</p></div>
+<h3>#4. Colete os e-mails dos seus visitantes</h3>
+<p>Uma maneira muito importante de aumentar as vendas online é a <strong>coleta de e-mails</strong>, pois assim que coletado o e-mail, você pode adicioná-lo à sua lista de contatos para ofertar produtos e serviços — quanto mais e-mails você tiver em sua lista, melhor.</p>
+<p>Por isso use em seu blog <strong>pop-ups de coleta</strong> de e-mails e deixe na barra lateral, antes dos comentários, um convite para que seus visitantes assinem a <strong>newsletter</strong>.</p>
+<p>Claro que coletar e-mails não é assim tão fácil, para tornar essa tarefa mais simples, tente <strong>oferecer alguma coisa em troca</strong> para seus visitantes. Muitos blogs oferecem e-books, por exemplo, em troca do e-mail do visitante.</p>
+<h3>#5. Atraia cada vez mais tráfego</h3>
+<p>Para vender bem online é preciso contar com muito tráfego no seu blog, pois lembre-se que apenas uma parte desse tráfego é que se converterá em clientes — é o que conhecemos como “<a title="Vender mais com funil de vendas" href="http://www.agendor.com.br/blog/vender-mais-online-com-funil-de-vendas/" target="_blank">funil de vendas</a>”.</p>
+<p>E como atrair cada vez mais tráfego? Para começar, livre-se do tom corporativo exagerado e aposte em um tom mais <strong>amigável</strong> que faça com que seu leitor se sinta mais à vontade.</p>
+<p>Afinal sua missão aqui é <strong>ajudar no prospect do seu blog</strong> e do seu negócio. Já parou para reparar como as grandes empresas como as Casas Bahia, o Ponto Frio e o Magazine Luiza estão abordando um tom mais amigável ultimamente?</p>
+<p>Então, faça como as grandes empresas se quiser descobrir como aumentar as vendas online!</p>
+<p>Para atrair mais tráfego e fazer os leitores pararem realmente para ler o seu conteúdo invista em<strong> títulos atraentes.</strong></p>
+<p>Afinal a internet é cheia de conteúdo competindo com o seu e, além disso, sabemos que as pessoas que estão online geralmente estão fazendo outras coisas além de navegar no seu blog, por isso é fundamental conseguir chamar e <strong>prender a atenção do seu leitor</strong>.</p>
+<p>Deixe claro em cada título qual é o<strong> benefício oferecido</strong> ao leitor por ler aquele conteúdo ou então apele para a curiosidade de seus leitores.</p>
+<h3>#6. Capture leads</h3>
+<p>Blogs que trabalham com a <strong>geração de leads</strong> podem dobrar e até mesmo triplicar facilmente o seu número de contatos coletados quando decidem alavancar o tráfego.</p>
+<p>Existem vários <strong>serviços</strong> que permitem <strong>capturar e-mails</strong> e contatos, além disso você também pode configurar páginas de destino para redirecionar o tráfego de uma maneira que seja vantajosa para o seu blog e para as vendas.</p>
+<h3>#7. Conheça os seus leitores e clientes em potencial</h3>
+<p>Sabe o que acontece quando você atira sem mirar em algum alvo? Você acaba gastando um monte de munição sem acertar nada.</p>
+<p>O mesmo acontece no mundo dos negócios: se você não direcionar o seu conteúdo e a sua propaganda para um público-alvo, provavelmente gastará muito mais em publicidade e acabará tendo um retorno pequeno e desproporcional ao investimento.</p>
+<p>Por isso, é extremamente importante <strong>conhecer o seu público-alvo</strong> e direcionar seu conteúdo para esse público.</p>
+<p>Por isso defina quem é a sua <strong>persona compradora</strong>, tente identificar quem é o seu <a title="perfil de consumidor ideal" href="http://www.agendor.com.br/blog/perfil-de-consumidor-ideal/" target="_blank">cliente ideal</a>, o que seu cliente procura, quais são as suas necessidades e procure lhe oferecer o conteúdo com a solução para essa persona.</p>
+<h3>#8. Conclua com chamadas de ação (CTAs)</h3>
+<p>Uma boa conclusão não é aquela mais bem aplaudida, mas sim aquela que gera alguma ação, por isso procure sempre <strong>fazer uso de chamadas de ação</strong> ao concluir um texto no seu blog corporativo.</p>
+<p>Depois que seus leitores já receberam as dicas que eles queriam, eles estão muito mais aptos ouvir uma sugestão e a executar alguma ação, que pode ser o preenchimento de algum<strong> formulário</strong>, fornecer seu endereço de e-mail e até mesmo realizar uma compra!</p>
+<p>Por isso, aproveite o poder dessas chamadas de ação (<strong>Calls to Action</strong>, ou CTAs) e não dispense seu uso no final dos artigos no seu blog corporativo!</p>
+<p>Então, quais métodos você utiliza em seu blog para aumentar as vendas online? Deixe seu comentário e compartilhe suas sugestões e dúvidas!</p>
+<span id="tve_leads_end_content" style="display: block; visibility: hidden; border: 1px solid transparent;"></span>
+					</div>
+				
+		
+<div class='bgAzulNoised br5 p20 '>
+	<img src='/blog/statics/images/funil-de-vendas-animado.gif' alt='Funil de Vendas do Agendor' class='fl mr20' />
+	<span class='ffHelveticaLightCond cfff shadow333 fs18 mb20 db '>Coloque em pr&aacute;tica essas dicas com nossa plataforma de aprimoramento em vendas</span>
+  
+    
+    <a href='/cadastro/?pid=101' class='btn-agendor verde small'>
+      Teste por 14 dias gr&aacute;tis!
+    </a>
+    
+
+	<div class='clear-left'></div>
+</div>
+		
+
+			<p class="info">
+				<a href="https://www.agendor.com.br/blog/categorias/estrategias-de-vendas/" rel="category tag">Estratégias de vendas</a>				 &bull; <a href="https://www.agendor.com.br/blog/tags/conteudo/" rel="tag">Conteúdo</a> &bull; <a href="https://www.agendor.com.br/blog/tags/dicas-de-vendas-2/" rel="tag">Dicas de Vendas</a> &bull; <a href="https://www.agendor.com.br/blog/tags/estrategia-de-vendas/" rel="tag">Estratégia de Vendas</a>			</p>
+
+
+			<div class='separador center'>
+				<hr class='l0'>
+				<div class='imgMiniBonecoAgendor center'></div>
+				<hr class='r0'>
+			</div>
+
+
+			
+<!--Facebook comments plugin -->
+<div class="fb-comments" data-width="100%" data-href="https://www.agendor.com.br/blog/como-aumentar-as-vendas-online/" data-numposts="10" data-colorscheme="light"></div>
+
+
+
+<!-- You can start editing here. -->
+
+
+
+
+			
+				<h5 class='ttUpper mb10 mt70'>Artigos relacionados</h5>
+				<div class='relatedPosts inline mb70'>
+				<div class="relatedThumb" id="sub-post-26306">
+						<a rel="external" href="https://www.agendor.com.br/blog/prospeccao-novos-clientes/" alt="Prospecção de novos clientes: uma arte cheia de técnicas">
+							<img width="180" height="180" src="https://s3-sa-east-1.amazonaws.com/agendor-blog-uploads/2017/09/28093144/prospeccao-novos-clientes-180x180.jpg" class="attachment-post-bottom-thumb size-post-bottom-thumb wp-post-image" alt="Prospecção de novos clientes" srcset="https://s3-sa-east-1.amazonaws.com/agendor-blog-uploads/2017/09/28093144/prospeccao-novos-clientes-180x180.jpg 180w, https://s3-sa-east-1.amazonaws.com/agendor-blog-uploads/2017/09/28093144/prospeccao-novos-clientes-150x150.jpg 150w" sizes="(max-width: 180px) 100vw, 180px" />							Prospecção de novos clientes: uma arte cheia de técnicas						</a>
+					</div><div class="relatedThumb" id="sub-post-10378">
+						<a rel="external" href="https://www.agendor.com.br/blog/o-que-e-pre-vendas/" alt="O que é pré-venda e como melhorar seus resultados nesse processo">
+							<img width="180" height="180" src="https://www.agendor.com.br/blog/wp-content/uploads/2015/03/pre-venda-180x180.jpg" class="attachment-post-bottom-thumb size-post-bottom-thumb wp-post-image" alt="o que é pré-venda" srcset="https://www.agendor.com.br/blog/wp-content/uploads/2015/03/pre-venda-180x180.jpg 180w, https://www.agendor.com.br/blog/wp-content/uploads/2015/03/pre-venda-150x150.jpg 150w" sizes="(max-width: 180px) 100vw, 180px" />							O que é pré-venda e como melhorar seus resultados nesse processo						</a>
+					</div><div class="relatedThumb" id="sub-post-10126">
+						<a rel="external" href="https://www.agendor.com.br/blog/como-fazer-um-influenciador-vender-para-um-decisor-final-para-voce/" alt="Como fazer um influenciador vender para um decisor final para você?">
+							<img width="180" height="180" src="https://www.agendor.com.br/blog/wp-content/uploads/2015/03/vender-para-o-decisor-180x180.png" class="attachment-post-bottom-thumb size-post-bottom-thumb wp-post-image" alt="Como fazer um influenciador vender para um decisor final para você?" srcset="https://www.agendor.com.br/blog/wp-content/uploads/2015/03/vender-para-o-decisor-180x180.png 180w, https://www.agendor.com.br/blog/wp-content/uploads/2015/03/vender-para-o-decisor-150x150.png 150w" sizes="(max-width: 180px) 100vw, 180px" />							Como fazer um influenciador vender para um decisor final para você?						</a>
+					</div><div class='clear'></div></div>
+		</div>
+
+	</div>
+
+<div id="sidebar">
+
+	
+	<form method="get" class="mb50" id="searchform" action="https://www.agendor.com.br/blog/" >
+		<div>
+			<!--label for="s">Search for:</label-->
+			<input type="text" id="searchinput" placeholder="Procurando algo?" value="" name="s" id="s" />
+			<input type="submit" id="searchsubmit" class="btn-agendor mini azul" value="Buscar" />
+		</div>
+	</form>
+	
+	<div id='assine' class='mb50'>
+		<blockquote class='p10 mb30'>
+			Junte-se a milhares de gestores, vendedores e empreendedores que est&atilde;o aumentando suas vendas.
+			<div class='arrow'></div>
+		</blockquote>
+		<form action='javascript:void(0);' class='br5' id='formAssinar'>
+			<h5 class='cfff ttUpper fs16'>Receba dicas de vendas</h5>
+			<p class='caaa fs14 lh21 mb15'>Segredos e dicas pr&aacute;ticas para voc&ecirc; vender muito mais.</p>
+			<input type='text' spelcheck='false' name='nome' placeholder='Seu nome' value='' class='formNome'>
+			<input type='text' spelcheck='false' name='email' placeholder='Seu e-mail' value='' class='formEmail'>
+			<input type='submit' class='btn-agendor amarelo ttUpper small btnAssinar' value='Receber dicas'>
+		</form>
+	</div>
+
+
+	<h5 class='ttUpper mb10'>Sobre o blog</h5>
+	<p class='lh21 fs14 c666 shadowfff mb50'>
+		Seja bem vindo(a)! No Blog do Agendor n&oacute;s falamos sobre a arte de vender, com qualidade de vida e produtividade. Esperamos que aproveite!
+	</p>
+
+	<h5 class='ttUpper mb10'>Nosso Twitter</h5>
+	<a href="https://twitter.com/agendor" class="twitter-follow-button mb50" data-show-count="false" data-size="large">Follow @agendor</a>
+
+	<h5 class='ttUpper mb10'>Nosso Facebook</h5>
+	<div class="fb-like-box mb50" data-href="http://www.facebook.com/agendor" data-width="240" data-height="378" data-show-faces="true" data-stream="false" data-header="false"></div>
+
+
+	<a href='/materiais/' target='_blank' id='mainBanner' class='db mb50' >
+		<img src='/blog/statics/images/banner-materiais-blog.jpg' alt='Materiais gratuitos sobre vendas' class='br5'>
+	</a>
+
+
+	
+			<h5 class='ttUpper mb10'>Artigos relacionados</h5>
+			<div class='relatedPosts'>
+			<div class="relatedThumb">
+					<a rel="external" href="https://www.agendor.com.br/blog/checklist-de-vendas/" alt="Checklist de vendas: como melhorar a performance da sua equipe de vendas em 9 dias">
+						<img width="240" height="130" src="https://s3-sa-east-1.amazonaws.com/agendor-blog-uploads/2015/08/17002041/gestao-de-equipe-de-vendas-240x130.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="checklist de vendas" />						Checklist de vendas: como melhorar a performance da sua equipe de vendas em 9 dias					</a>
+				</div><div class="relatedThumb">
+					<a rel="external" href="https://www.agendor.com.br/blog/4-dicas-para-abrir-mais-oportunidades-de-negocios/" alt="4 dicas para abrir mais oportunidades de negócios">
+						<img width="240" height="130" src="https://www.agendor.com.br/blog/wp-content/uploads/2013/10/proposta-negocio-confusa-240x130.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Sua proposta de negócio não pode ficar confusa para o cliente." />						4 dicas para abrir mais oportunidades de negócios					</a>
+				</div><div class="relatedThumb">
+					<a rel="external" href="https://www.agendor.com.br/blog/evolucao-das-vendas/" alt="Você já se preparou para as consequências da evolução das vendas?">
+						<img width="240" height="130" src="https://www.agendor.com.br/blog/wp-content/uploads/2014/12/sales-funnel-240x130.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="evolução das vendas" />						Você já se preparou para as consequências da evolução das vendas?					</a>
+				</div></div><div class='clear'></div>	
+	
+</div>
+
+    <!--GOOGLE +1 BUTTON-->
+    <script type="text/javascript">
+      window.___gcfg = {lang: 'pt-BR'};
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
+    <!--TWITTER TWEET BOX-->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div><!--wrapper-->
+
+
+<div class='clear'></div>
+
+<section id="experimente">
+  <div class="super-container">
+    <div class="container">
+      <div class="experimente__celulares"></div>
+      <h2><strong>Venda com todo seu potencial</strong>!</h2>
+      <a href="/cadastro/?pid=101" class="button button-laranja">Experimente por 14 dias grátis</a>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="container">
+    <div class="col">
+      <a href="/" class="logo"><img src="//d21j5ovjf0w5a9.cloudfront.net/wp-content/themes/agendor/img/logo-agendor.png" alt=""></a>
+      <p>O Agendor é uma plataforma de aprimoramento em vendas que ajuda milhares de vendedores a alcançarem todo o seu potencial.</p>
+    </div>
+
+    <div class="col">
+      <nav class="menu-agendor-rodape-container">
+        <h3>Agendor</h3>
+        <ul id = "menu-agendor-rodape" class = "">
+          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/funcionalidades/">Funcionalidades</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/planos-precos/">Planos</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/clientes/">Clientes</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/fale-conosco/">Fale conosco</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="//parceiros.agendor.com.br/consultores/">Consultores</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/seguranca/">Segurança</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/sobre-nos/">Sobre nós</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/cadastro/?pid=101">Experimente por 14 dias grátis</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://agendor.recruiterbox.com/">Trabalhe conosco</a></li>
+        </ul>
+      </nav>
+      <br>
+      <nav class="menu-agendor-rodape-container">
+        <h3>CRM Grátis</h3>
+        <ul id = "menu-agendor-rodape-gratuidades" class = "">
+          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/crm-gratis-startups/">Grátis para Startups</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/crm-gratis-ongs/">Grátis para Ongs</a></li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/crm-gratis-empresas-juniores/">Grátis para Empresas Juniores</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="col">
+      <nav class="menu-sou-cliente-rodape-container">
+        <h3>Sou Cliente</h3>
+        <ul id = "menu-sou-cliente-rodape">
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/entrar">Entrar</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/duvidas">Ajuda</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://agendor.uservoice.com">Mesa de Ideias</a></li>
+        </ul>
+      </nav>
+      <nav class="menu-materiais-rodape-container">
+        <h3>Conteúdo</h3>
+        <ul id = "menu-materiais-rodape">
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/blog/">Blog</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/materiais/#e-books">E-books</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/materiais/#apresentacoes">Apresentações</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/materiais/#beneficios-do-agendor-para-vendas">Benefícios do Agendor</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="//materiais.agendor.com.br/diagnostico-vendas">Diagnóstico de vendas</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="col">
+      <h3>Vamos Conversar</h3>
+      <div class="tel">
+        <span>Ligue para nós</span>
+        (11) 4858-9932<br />
+        (11) 3181-8470
+      </div>
+      <nav id="social-nav" class="menu-redes-sociais-rodape-container">
+        <h3>Siga o Agendor</h3>
+        <ul id = "menu-redes-sociais-rodape" class = "">
+          <li class="menu-item"><a target="_blank" href="//facebook.com/agendor"><i class="fa fa-facebook iFacebook"></i></a></li>
+          <li class="menu-item"><a target="_blank" href="//twitter.com/agendor"><i class="fa fa-twitter iTwitter"></i></a></li>
+          <li class="menu-item"><a target="_blank" href="https://plus.google.com/u/0/104964935724837172461/"><i class="fa fa-google-plus iGooglePlus"></i></a></li>
+          <li class="menu-item"><a target="_blank" href="//www.youtube.com/user/AgendorTube/"><i class="fa fa-youtube iYouTube"></i></a></li>
+          <li class="menu-item"><a target="_blank" href="//www.linkedin.com/company/2243293"><i class="fa fa-linkedin iLinkedIn"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="download">
+      Download para Android e iOS. É grátis!
+      <a href="https://itunes.apple.com/br/app/agendor-crm/id804767405?l=pt&ls=1&mt=8" target="_blank" class="app-store"></a>
+      <a href="https://play.google.com/store/apps/details?id=br.com.agendor" target="_blank" class="play-store"></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copy">
+      ® 2018. Agendor <a href="/termos-uso">Termos de uso</a> <a href="/politicas-privacidade">Política de privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<!--LINKEDIN SHARE-->
+<script type="text/javascript" src="//platform.linkedin.com/in.js"></script>
+
+<script type="text/javascript" src="/blog/statics/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/blog/statics/js/util.min.js"></script>
+<script type="text/javascript" src="/blog/statics/js/Assinante.min.js" charset="UTF-8"></script>
+
+<script type='text/javascript'>
+
+var isMobile = false;
+
+jQuery(document).ready(function(){
+
+  jQuery(".categorias-menu").on("click", function(){
+    jQuery(".categorias-wrapper").toggle();
+  });
+
+  if (jQuery('#assine').length>0 && !isMobile) {
+
+    var currentScrollTop = 0;
+    var sidebarHeight = 0;
+    var moved = false;
+    var aboveExperimente = true;
+    var belowSidebar = false;
+    var sidebarOffSet = jQuery('#sidebar').offset();
+    var experimenteOffSet = jQuery('#experimente').offset();
+    var boxOffSetInit = jQuery('#assine').offset();
+    var boxPosInit = jQuery('#assine').position();
+    var boxHeight = jQuery('#assine').height();
+    var boxPos = {top:'60px'};
+    var maxTop = experimenteOffSet.top-boxHeight*2;
+
+    var dpsOffSetInit = jQuery('.dinPostShares').offset();
+    var dpsHeight = jQuery('.dinPostShares').position();
+
+    jQuery(window).scroll(function () {
+      currentScrollTop = jQuery(window).scrollTop();
+      sidebarHeight = parseInt(jQuery('#sidebar').height())+parseInt(jQuery('#sidebar').css('paddingTop'));
+      aboveExperimente = (currentScrollTop+boxHeight*2<experimenteOffSet.top);
+      belowSidebar = (currentScrollTop>sidebarHeight+boxHeight);
+
+      if(belowSidebar&&!moved&&aboveExperimente){
+        jQuery('#assine').css({'position':'fixed','top':boxPos.top,'left':sidebarOffSet.left+'px','display':'none'});
+        jQuery('#assine').fadeIn(1000);
+        moved = true;
+      } else if(!belowSidebar&&moved){
+        jQuery('#assine').fadeOut(function(){
+          jQuery('#assine').css({'position':'absolute','top':boxPosInit.top+'px','left':boxPosInit.left+'px'});
+          jQuery('#assine').show();
+        });
+        moved = false;
+      } else if(!aboveExperimente&&moved){
+        jQuery('#assine').css({'position':'absolute','top':maxTop+'px','left':boxPosInit.left+'px','display':'block'});
+        moved = false;
+      }
+
+      //REDES
+      if(jQuery('.dinPostShares').length>0){
+        if(currentScrollTop>dpsOffSetInit.top&&aboveExperimente){
+          jQuery('.dinPostShares').css({'position':'fixed','top':boxPos.top,'left':dpsOffSetInit.left+'px'});
+        } else if(currentScrollTop<dpsOffSetInit.top){
+          jQuery('.dinPostShares').css({'position':'absolute','top':dpsHeight.top+'px','left':dpsHeight.left+'px'});
+        } else if(!aboveExperimente){
+          jQuery('.dinPostShares').css({'position':'absolute','top':maxTop+'px','left':dpsHeight.left+'px'});
+        }
+      }
+    });
+  }
+
+});
+</script>
+
+<div class="tl-states-root tl-anim-zoom_in"><div  class="tl-style" id="tve_two_set" data-state="42">
+        <div class="tve_two_set_v6 tve_post_lightbox tve-leads-lightbox">
+        <div style="visibility: hidden; position: fixed; left: -9000px" class="tl-lb-target tve-leads-track-lightbox-42" data-s-state=""><div class="tve_p_lb_overlay" style="opacity:0.6" data-tve-custom-colour="94269908"></div><div data-anim="zoom_in" class="tve_p_lb_content tve-tl-anim tl-anim-zoom_in bSe cnt tve_brdr_none" style="max-width:560px"><div class="tve_p_lb_inner" id="tve-p-scroller" style=""><article><style type="text/css" class="tve_custom_style">[data-tve-custom-colour="94269908"] { background-color: rgb(0, 0, 0) !important; }[data-tve-custom-colour="57932686"]:hover { border-color: rgb(249, 209, 27) !important; background-color: rgb(249, 209, 27) !important; }[data-tve-custom-colour="57932686"] { border-color: rgb(255, 186, 28) !important; color: rgb(255, 255, 255) !important; text-shadow: rgba(0, 0, 0, 0) 0px 1px 0px !important; box-shadow: rgba(0, 0, 0, 0) 0px 3px 3px 1px !important; background-color: rgb(255, 186, 28) !important; }[data-tve-custom-colour="71639499"]:hover { border-color: rgb(221, 221, 221) !important; }[data-tve-custom-colour="32207616"]:hover { border-color: rgb(221, 221, 221) !important; }[data-tve-custom-colour="71639499"] { border-color: rgb(221, 221, 221) !important; }[data-tve-custom-colour="32207616"] { border-color: rgb(221, 221, 221) !important; }[data-tve-custom-colour="59897041"] { background-color: rgb(209, 209, 209) !important; color: rgb(255, 255, 255) !important; border-color: rgb(255, 255, 255) !important; }@media (min-width: 300px){[data-css="tve-u-157c3d6b413"] { max-width: 50%; }[data-css="tve-u-157c3d6b403"] { max-width: 50%; }}</style><div class="tve-leads-conversion-object" data-tl-type="lightbox"><div class="tve_flt"><div id="tve_editor" class="tve_shortcode_editor"><div class="tve_p_lb_control tve_editor_main_content tve_content_save"><h3 class="tve_p_center bold_text ttfm1" style="color: rgb(51, 51, 51); font-size: 28px; margin-top: 0px; margin-bottom: 0px; line-height: 42px;" data-unit="px">
+<span class="ttfm1"><span class="bold_text"><span class="tve_custom_font_size  italic_text" style="font-size: 28px;"></span><span class="tve_custom_font_size" style="font-size: 28px;"><span class="italic_text"></span>As 4 regras de ouro da negociação<span class="italic_text"></span></span><span class="tve_custom_font_size  italic_text" style="font-size: 28px;"></span></span></span></h3><p class="ttfm1 italic_text tve_p_center" data-unit="px" style="line-height: 21px; margin-top: 0px !important; margin-bottom: 0px !important;"><font color="#aaaaaa">Você encara a negociação como uma disputa?<br>A vitória está em como você encara essa situação.</font></p>
+<div class="thrv_wrapper tcb-flex-row tcb--cols--2 tcb-resized tve-flex-center" style="margin-bottom: 20px !important; margin-left: 0px !important; margin-top: 15px !important;"><div class="tcb-flex-col tve_empty_dropzone" data-css="tve-u-157c3d6b403"><div style="width: 234px; margin-top: 0px !important; margin-bottom: 0px !important;" class="thrv_wrapper tve_image_caption aligncenter">
+<span class="tve_image_frame">
+<img class="tve_image" alt="" style="width: 234px;" src="http://agendor-blog-uploads.s3-sa-east-1.amazonaws.com/2016/10/30200642/capa-as-4-regras-ouro-negociacao.png" width="234" height="140">
+</span>
+</div></div><div class="tcb-flex-col tve_empty_dropzone" data-css="tve-u-157c3d6b413"><p class="ttfm1 bold_text" style="color: rgb(119, 119, 119); font-size: 16px; margin-top: 0px !important; margin-bottom: 10px !important;">Preencha e baixe grátis:</p><div data-tve-style="1" class="thrv_wrapper thrv_lead_generation tve_clearfix tve_green thrv_lead_generation_vertical tve_3 tve_rightBtn" data-inputs-count="3" style="margin-top: 0px !important; margin-bottom: 0px;" data-tve-version="1">
+<div style="display: none;" class="thrv_lead_generation_code"></div>
+<input type="hidden" class="tve-lg-err-msg" value="{&quot;email&quot;:&quot;Informe um email válido&quot;,&quot;phone&quot;:&quot;Informe um telefone válido&quot;,&quot;required&quot;:&quot;Nome e email são obrigatórios&quot;}">
+<div class="thrv_lead_generation_container tve_clearfix">
+<div class="tve_lead_generated_inputs_container tve_clearfix">
+<div class="tve_lead_fields_overlay"></div>
+<div class="tve_lg_input_container  tve_lg_3 tve_lg_input">
+<input type="hidden" name="identificador" value="as-4-regras-de-ouro-da-negociacao">
+<input type="hidden" name="redirectTo" value="http://web.agendor.com.br/confirmacao/materiais/as-4-regras-de-ouro-da-negociacao?e=pdf">
+<input type="text" name="name" value="" data-required="1" data-validation="none" data-placeholder="Nome" placeholder="Nome" style="border-width: 1px; margin-bottom: 7px !important; padding: 5px !important; font-size: 14px !important;" data-tve-custom-colour="32207616">
+</div>
+<div class="tve_lg_input_container tve_lg_3 tve_lg_input">
+<input type="text" name="email" value="" data-required="1" data-validation="email" data-placeholder="Email" placeholder="Email" style="border-width: 1px; margin-bottom: 7px !important; padding: 5px !important; font-size: 14px !important;" data-tve-custom-colour="71639499">
+</div>
+<div class="tve_lg_input_container tve_submit_container tve_lg_3 tve_lg_submit">
+<button type="Submit" style="font-size: 14px; border-width: 0px; margin-bottom: 0px !important; padding: 12px 0px !important; margin-top: 7px !important;" class="ttfm1 tve_brdr_none" data-tve-custom-colour="57932686">BAIXAR EBOOK GRÁTIS</button>
+</div>
+</div>
+</div>
+</div></div></div></div></div></div></div></article></div><a href="javascript:void(0)" class="tve_p_lb_close tve_brdr_none" style="" data-tve-custom-colour="59897041" title="Close">x</a></div></div></div></div></div><script type='text/javascript'>
+/* <![CDATA[ */
+var tve_frontend_options = {"is_editor_page":"","page_events":[],"is_single":"1","ajaxurl":"https:\/\/www.agendor.com.br\/blog\/wp-admin\/admin-ajax.php","social_fb_app_id":"","dash_url":"https:\/\/www.agendor.com.br\/blog\/wp-content\/plugins\/thrive-leads\/thrive-dashboard","translations":{"Copy":"Copy"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.agendor.com.br/blog/wp-content/plugins/thrive-leads/tcb/editor/js/dist/frontend.min.js?ver=2.0.28'></script>
+<script type='text/javascript' src='//www.agendor.com.br/blog/wp-content/plugins/thrive-leads/js/frontend.min.js?ver=2.0.29'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tve_dash_front = {"ajaxurl":"https:\/\/www.agendor.com.br\/blog\/wp-admin\/admin-ajax.php","force_ajax_send":"","is_crawler":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.agendor.com.br/blog/wp-content/plugins/thrive-leads/thrive-dashboard/js/dist/frontend.min.js?ver=2.0.31'></script>
+<script type='text/javascript' src='https://www.agendor.com.br/blog/wp-includes/js/wp-embed.min.js?ver=4.9.4'></script>
+<script type="text/javascript">/*<![CDATA[*/if ( !window.TL_Const ) {var TL_Const={"security":"9eb86d2619","ajax_url":"https:\/\/www.agendor.com.br\/blog\/wp-admin\/admin-ajax.php","forms":{"lightbox":{"_key":"42","trigger":"exit_intent","trigger_config":{"m":""},"form_type_id":21941,"main_group_id":21940,"active_test_id":""}},"action_conversion":"tve_leads_ajax_conversion","action_impression":"tve_leads_ajax_impression","ajax_load":0,"main_group_id":21940,"display_options":{"allowed_post_types":[],"flag_url_match":false},"custom_post_data":[],"current_screen":{"screen_type":4,"screen_id":13463},"ignored_fields":["email","_captcha_size","_captcha_theme","_captcha_type","_submit_option","_use_captcha","g-recaptcha-response","__tcb_lg_fc","__tcb_lg_msg","_state","_form_type","_error_message_option","_back_url","_submit_option","url","_asset_group","_asset_option","mailchimp_optin"]};} else {ThriveGlobal.$j.extend(true, TL_Const, {"security":"9eb86d2619","ajax_url":"https:\/\/www.agendor.com.br\/blog\/wp-admin\/admin-ajax.php","forms":{"lightbox":{"_key":"42","trigger":"exit_intent","trigger_config":{"m":""},"form_type_id":21941,"main_group_id":21940,"active_test_id":""}},"action_conversion":"tve_leads_ajax_conversion","action_impression":"tve_leads_ajax_impression","ajax_load":0,"main_group_id":21940,"display_options":{"allowed_post_types":[],"flag_url_match":false},"custom_post_data":[],"current_screen":{"screen_type":4,"screen_id":13463},"ignored_fields":["email","_captcha_size","_captcha_theme","_captcha_type","_submit_option","_use_captcha","g-recaptcha-response","__tcb_lg_fc","__tcb_lg_msg","_state","_form_type","_error_message_option","_back_url","_submit_option","url","_asset_group","_asset_option","mailchimp_optin"]})} /*]]> */</script><script type="text/javascript">var TL_Front = TL_Front || {}; TL_Front.impressions_data = TL_Front.impressions_data || {};TL_Front.impressions_data.lightbox = {"group_id":21940,"form_type_id":21941,"variation_key":"42","active_test_id":0,"output_js":true};</script><script type="text/javascript">
+	(function ($) {
+	var event_data = {"form_id":"tve-leads-track-lightbox-42","form_type":"lightbox"};
+	event_data.source = 'exit_intent';
+			/* Chrome has a stupid bug in which it triggers almost simultaneously "mouseenter" "mouseleave" "mouseenter" if the following applies:
+	 - at page load, the cursor is outside the html element
+	 - the user moves the cursor over the html element
+	 */
+	var chrome_fix_id = 0,
+	me = function (e) { /* mouse enter */
+	clearTimeout(chrome_fix_id);
+	},
+	ml = function (e) {
+
+	if (e.clientY <= config.s) {
+	chrome_fix_id = setTimeout(function () {
+	ThriveGlobal.$j(TL_Front).trigger('showform.thriveleads', event_data);
+	c();
+	}, 50);
+	}
+	},
+	c = function () { // cancel
+	$(document).off('mouseenter.exit_intent mouseleave.exit_intent');
+	},
+	config = { // we can adjust this and the code below to allow users to tweak settings
+	s: 20 // sensitivity
+	};
+	$(function () {
+	$(document).on('mouseleave.exit_intent', ml)
+	.on('mouseenter.exit_intent', me);
+
+	});
+		})
+(ThriveGlobal.$j);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"521e4d70fd","applicationID":"100145945","transactionName":"Zl0BZhMAXhZUB0dRW18XIEcSFV8IGjdaVlNdXUMfQTFfFkE=","queueTime":0,"applicationTime":510,"atts":"ShoWEFsaTUkXBRECT0xF","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

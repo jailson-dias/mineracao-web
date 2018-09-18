@@ -1,0 +1,1244 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#F4792C">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#F4792C">
+  <title>Mestrado em Economia e Neg&oacute;cios - Especializa&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e An&aacute;lise de Marketing, Rotterdam, Reino dos Pa&iacute;ses Baixos 2018/2019</title>
+      <meta name="description" content="Mestrado em Economia e Neg&oacute;cios - Especializa&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e An&aacute;lise de Marketing at Erasmus School of Economics - Erasmus University Rotterdam  , . Consiga todas as informa&ccedil;&otilde;es sobre as escolas aqui. Entre em contato com o escrit&oacute;rio de admiss&atilde;o com um clique.">
+    <link rel="stylesheet" href="//cdn03.masterstudies.com//css/ks_bootstrap.css"/>
+
+                  <meta property="og:title" content="Mestrado em Economia e Neg&oacute;cios - Especializa&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e An&aacute;lise de Marketing, Rotterdam, Reino dos Pa&iacute;ses Baixos 2018/2019" />
+    
+          <meta property="og:image" content="https://static01.masterstudies.com/elementcache/cover/63/63372_cover.jpg" />
+    
+    <meta property="og:url" content="https://www.master-mestrado.com/universidades/Holanda/Erasmus-School-of-Economics-Erasmus-University-Rotterdam/" />
+
+          <meta property="og:description" content="Mestrado em Economia e Neg&oacute;cios - Especializa&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e An&aacute;lise de Marketing at Erasmus School of Economics - Erasmus University Rotterdam  , . Consiga todas as informa&ccedil;&otilde;es sobre as escolas aqui. Entre em contato com o escrit&oacute;rio de admiss&atilde;o com um clique." />
+          
+  <meta name="google-signin-client_id" content="577423134153-bgnr07kp09cqa02rlic0gth4301n4cs2.apps.googleusercontent.com">
+      <link rel="stylesheet" href="//cdn01.masterstudies.com//css/main.1537268635.css"/>
+    <link rel="stylesheet" href="//cdn02.masterstudies.com//css/sprites/sprites.css"/>
+  <link rel="stylesheet" href="//cdn03.masterstudies.com//sprites/css/sprite_combined.css">
+  
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+
+    <script>
+        googletag.cmd.push(function() {
+                        googletag.defineSlot('/5803363/toefl_university_program_pages', [[120, 240], [120, 600], [160, 600]], 'toefl_university_program_pages')
+                .addService(googletag.pubads());
+
+                        googletag.defineSlot('/5803363/gre_university_program_pages', [[120, 240], [120, 600], [160, 600]], 'gre_university_program_pages')
+                .addService(googletag.pubads());
+
+                                    googletag.pubads().enableSingleRequest();
+            googletag.pubads().collapseEmptyDivs();
+            googletag.enableServices();
+        });
+    </script>
+  
+  <script type="text/javascript">
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      
+              
+      ga('create', 'UA-3779280-55', {
+          'cookieDomain': 'none'           , allowLinker: true
+              });
+
+      
+      ga('send', 'pageview');
+
+             // Tracking
+        
+              
+      ga('create', 'UA-3779280-45', {
+          'cookieDomain': 'auto'           , allowLinker: true
+                  , name: 't2'
+              });
+
+      
+      ga('t2.send', 'pageview');
+
+             // Tracking
+                </script>
+
+      <link rel="canonical" href="https://www.master-mestrado.com/Mestrado-em-Economia-e-Neg&oacute;cios-Especializa&ccedil;&atilde;o-em-Ci&ecirc;ncia-de-Dados-e-An&aacute;lise-de-Marketing/Holanda/Erasmus-School-of-Economics-Erasmus-University-Rotterdam/" />
+              <link rel="alternate" hreflang="pt" href="https://www.master-mestrado.com/Mestrado-em-Economia-e-Neg%C3%B3cios-Especializa%C3%A7%C3%A3o-em-Ci%C3%AAncia-de-Dados-e-An%C3%A1lise-de-Marketing/Holanda/Erasmus-School-of-Economics-Erasmus-University-Rotterdam/" />
+          <link rel="alternate" hreflang="pt-BR" href="https://www.masterstudies.com.br/Mestrado-em-Economia-e-Neg%C3%B3cios-Especializa%C3%A7%C3%A3o-em-Ci%C3%AAncia-de-Dados-e-An%C3%A1lise-de-Marketing/Holanda/Erasmus-School-of-Economics-Erasmus-University-Rotterdam/" />
+          <link rel="alternate" hreflang="pt-PT" href="https://www.masterstudies.pt/Mestrado-em-Economia-e-Neg%C3%B3cios-Especializa%C3%A7%C3%A3o-em-Ci%C3%AAncia-de-Dados-e-An%C3%A1lise-de-Marketing/Holanda/Erasmus-School-of-Economics-Erasmus-University-Rotterdam/" />
+      
+      <link rel="amphtml" href="https://www.master-mestrado.com/Mestrado-em-Economia-e-Neg&oacute;cios-Especializa&ccedil;&atilde;o-em-Ci&ecirc;ncia-de-Dados-e-An&aacute;lise-de-Marketing/Holanda/Erasmus-School-of-Economics-Erasmus-University-Rotterdam/amp/" />
+  
+    
+
+        <script src="https://cdn.logrocket.com/LogRocket.min.js"></script>
+  </head>
+<body class=" ">
+<!--header-->
+<!--first navbav-->
+
+
+ <nav class="navbar navbar-default topnav hidden-xs" role="navigation" >
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-12">
+        <div class="first-nav ">
+          
+          <div class="navbar-header">
+
+            <span ><ul class="partner-sites nav navbar-nav navbar-left"></ul></span>
+            <!-- landing -->
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav pull-right buttons-navbar flip">
+
+              <li class="dropdown">
+                                <button class="dropdown-toggle btn btn-default navbar-btn btn-sm navbar-languages"
+                                                  data-uri-id="{&quot;idProduct&quot;:&quot;103565&quot;,&quot;section&quot;:&quot;program&quot;}"
+                                                data-loaded="false"
+                        data-toggle="dropdown" type="button">
+                  <div class="flag-icon-16 pt site-language-flag pull-left"></div>
+
+                  Portugu&ecirc;s
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                                      <li class="language-loader">
+                      <div class="text-center text-muted padding-10">
+                        <i class="fa fa-spinner fa-pulse fa-2x"   ></i>
+                      </div>
+                    </li>
+                                  </ul>
+              </li>
+
+                                                <a href="https://www.studentshub.com" class="btn btn-default navbar-btn btn-sm">Login para alunos</a>
+                
+                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li class="hidden-sm">
+                  <p class="navbar-btn ">
+                                        <a href="/account/create-new/" class="btn btn-contrast btn-sm ">
+                      Inscreva-se gr&aacute;tis <span class="caret-right"></span>
+                    </a>
+                  </p>
+                </li>
+                          </ul>
+          </div>
+          <!--/.navbar-collapse -->
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+ 
+<!-- for image, search and second navbar-->
+<div class="container second_nav">
+  <div class="row header-logo">
+    <div class="col-sm-8">
+      <a href="https://www.master-mestrado.com/">
+        <img src="//cdn01.masterstudies.com/img/logo/Mestrado-ms-pt.png" alt="Melhores Mestrados e Cursos de Mestrado 2018/2019" height="50" />
+      </a>
+    </div>
+                  <div class="col-sm-4 hidden-xs no-padding">
+          <form method="GET" action="/search/" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Pesquisa" name="q">
+              <div class="input-group-btn">
+                <button class="btn btn-contrast" type="submit"><i class="fa fa-search"   ></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+          
+  </div>
+
+  <div class="pull-right" id="tagline">
+      </div>
+
+
+      <nav class="navbar navbar-default navbar-inverse" role="navigation" >
+      <div class="container">
+        <div class="navbar-header visible-xs visible-sm">
+          <button type="button" class="expand-nav pull-right collapsed" data-toggle="collapse" data-target="#degree-nav" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-bars fa-2x"   ></i>
+          </button>
+                      <button type="button" class="expand-nav pull-right collapsed visible-xs" data-toggle="collapse" data-target="#search-nav" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle search</span>
+            <i class="fa fa-search fa-2x"   ></i>
+          </button>
+            
+
+          <div class="xs-nav-entries visible-xs">
+                          <a class="pull-left" href="https://www.master-mestrado.com/MSc/">Mestrado em Ci&ecirc;ncias (MSc)</a>
+            
+          </div>
+          <div class="xs-nav-entries visible-sm pipe">
+                          <a class="pull-left" href="https://www.master-mestrado.com/MSc/">Mestrado em Ci&ecirc;ncias (MSc)</a>
+                          <a class="pull-left" href="https://www.master-mestrado.com/Mestrado/">Mestrados</a>
+            
+          </div>
+
+        </div>
+
+                  <div class="navbar-collapse collapse search-nav visible-xs visible-sm" id="search-nav">
+            <ul class="nav navbar-nav">
+              <li class="search-xs">
+                <form method="GET" action="/search/" role="search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <div class="input-group-btn">
+                      <button class="btn btn-contrast" type="submit"><i class="fa fa-search"   ></i></button>
+                    </div>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </div>
+        
+        <div class="navbar-collapse collapse" id="degree-nav">
+
+          <ul class="nav navbar-nav pipe">
+                                          <li class="hidden-xs hidden-sm">
+                  <a href="https://www.master-mestrado.com/MSc/">Mestrado em Ciências (MSc)</a>
+                </li>
+                                                        <li class=" hidden-sm">
+                  <a href="https://www.master-mestrado.com/Mestrado/">Mestrados</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.master-mestrado.com/MA/">Mestrado em Humanidades (MA)</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.cursos-universitarios.com/Cursos/">Cursos</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.graduacao-online.com/Mestrado/">Cursos graduados online</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.master-mestrado.com/universidades/">Universidades</a>
+                </li>
+                                    </ul>
+
+          <ul class="nav navbar-nav visible-xs">
+
+            <li>
+              <a href="https://www.studentshub.com"> Student sign in</a>
+            </li>
+            <li>
+              <a href="/account/create-new/">Inscreva-se gr&aacute;tis</a>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle navbar-languages"
+                                  data-uri-id="{&quot;idProduct&quot;:&quot;103565&quot;,&quot;section&quot;:&quot;program&quot;}"
+                                  data-loaded="false"
+                 data-toggle="dropdown">
+                L&iacute;nguas <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                                  <li class="language-loader">
+                    <div class="text-center text-muted padding-10">
+                      <i class="fa fa-spinner fa-pulse fa-2x"   ></i>
+                    </div>
+                  </li>
+                              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Graus <span class="caret"></span></a>
+              <ul class="dropdown-menu partner-sites-mobile"></ul>
+            </li>
+          </ul>
+
+
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </nav>
+  
+</div>
+
+<!-- end image, search and second navbar-->
+
+
+    <script type="application/ld+json">
+
+        [{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em Economia e Neg\u00f3cios - Especializa\u00e7\u00e3o em Ci\u00eancia de Dados e An\u00e1lise de Marketing","duration":"P1Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em Economia e Neg\u00f3cios - Especializa\u00e7\u00e3o em Ci\u00eancia de Dados e An\u00e1lise de Marketing-Reino dos Pa\u00edses Baixos-Rotterdam","address":{"@type":"PostalAddress","addressCountry":"Reino dos Pa\u00edses Baixos","addressLocality":"Rotterdam"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.master-mestrado.com\/Mestrado-em-Economia-e-Neg\u00f3cios-Especializa\u00e7\u00e3o-em-Ci\u00eancia-de-Dados-e-An\u00e1lise-de-Marketing\/Holanda\/Erasmus-School-of-Economics-Erasmus-University-Rotterdam\/","offers":{"@type":"Offer","url":"https:\/\/www.master-mestrado.com\/Mestrado-em-Economia-e-Neg\u00f3cios-Especializa\u00e7\u00e3o-em-Ci\u00eancia-de-Dados-e-An\u00e1lise-de-Marketing\/Holanda\/Erasmus-School-of-Economics-Erasmus-University-Rotterdam\/","price":"2060","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"Erasmus School of Economics - Erasmus University Rotterdam","description":"Based in Rotterdam, the economic and logistics centre of Europe, Erasmus School of Economics has provided excellent education and produced excellent research for over a century. Many successful careers have started here. Graduates of Erasmus School of Economics are ideally equipped for success in the business community, government positions and research anywhere in the world.","telephone":"(+31) 10 - 408 13 80","address":[{"@type":"PostalAddress","name":"Erasmus School of Economics","telephone":"+31 10 408 1380              ","postalCode":"3062PA","addressLocality":"Rotterdam","addressCountry":"Reino dos Pa\u00edses Baixos","streetAddress":"Erasmus School of Economics\r\nP.O. Box 1738"}],"mainEntityOfPage":"http:\/\/www.ese.eur.nl\/","url":"http:\/\/www.ese.eur.nl\/","logo":"http:\/\/cdn03.masterstudies.com\/gfx\/logo\/8684\/1485456035\/Erasmus-School-of-Economics-Erasmus-University-Rotterdam.png"},"startDate":"2018-09"}]
+
+    </script>
+
+    
+        <div class="container">
+        <div class="row margin-top-5 main-breadcrumb">
+  <div class="col-sm-12">
+
+          <div class="pull-right flip">
+          <div class="hidden-xs addthis-container blue">
+  <div class="pull-right">
+    <a data-toggle="modal" class="addthis-modal-link" href="#linkToUsModal">
+     Link para esta p&aacute;gina
+    </a>
+  </div>
+
+  <div class="addthis_toolbox">
+    <i class="fa fa-spinner fa-pulse loading-add-this"   ></i>
+    <div class="custom_images">
+      <!--<a class="addthis_button_facebook addthis-button"><img src="//cdn01.masterstudies.com/img_new/addthis_facebook_blue.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+      <a class="addthis_button_twitter addthis-button"><img src="//cdn02.masterstudies.com/img_new/addthis_twitter_blue.png" width="18" height="18" border="0" alt="Share to Twitter" /></a>-->
+        <a class="addthis_button_facebook addthis-button"><img src="//cdn03.masterstudies.com/img_new/FB-f-Logo__blue_144_official.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+        <a class="addthis_button_twitter addthis-button"><img src="//cdn02.masterstudies.com/img_new/Twitter_Logo_Blue_official.png" width="32" height="32" border="0" alt="Share to Twitter" /></a>
+        <a class="addthis_button_more addthis-button"><img src="//cdn02.masterstudies.com/img_new/addthis_more_blue.png" width="18" height="18" border="0" alt="More..." /></a>
+      <a class="addthis_counter addthis_bubble_style"></a>
+    </div>
+  </div>
+</div>
+
+      </div>
+    
+    
+    <div class="hidden-xs">
+              <ul class="breadcrumb">
+
+                      <li>
+                              <a href="https://www.master-mestrado.com/MSc/">Mestrado em Ci&ecirc;ncias (MSc)</a>
+                                          </li>
+                      <li>
+                              <a href="https://www.master-mestrado.com/MSc/Ci&ecirc;ncia-da-computa&ccedil;&atilde;o/">Ci&ecirc;ncia da computa&ccedil;&atilde;o</a>
+                                          </li>
+                      <li>
+                              Mestrado em Economia e Neg&oacute;cios - Especializa&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e An&aacute;lise de Marketing
+                                          </li>
+                  </ul>
+          </div>
+  </div>
+</div>
+
+
+
+
+<script type="application/ld+json">
+   {"@context":"http:\/\/schema.org\/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.master-mestrado.com\/MSc\/","name":"Mestrado em Ci\u00eancias (MSc)"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.master-mestrado.com\/MSc\/Ci\u00eancia-da-computa\u00e7\u00e3o\/","name":"Ci\u00eancia da computa\u00e7\u00e3o"}},{"@type":"ListItem","position":3,"item":{"name":"Mestrado em Economia e Neg\u00f3cios - Especializa\u00e7\u00e3o em Ci\u00eancia de Dados e An\u00e1lise de Marketing"}}]}
+</script>        <div class="row visible-xs">
+  <div class="col-sm-12 js-goto-leadform-container margin-bottom-10">
+    <a href="#lead-form" class="btn btn-success btn-block is-goto-leadform">
+      Pe&ccedil;a informa&ccedil;&atilde;o gr&aacute;tis de Erasmus School of Economics - Erasmus University Rotterdam
+    </a>
+  </div>
+</div>
+
+
+                
+
+    <!--logo and name of college-->
+        <header class="logo-heading">
+  <div class="row school-ident-container">
+    <div class="col-sm-12 school-ident">
+              <div class="school-logo">
+
+          <div class="logo-container">
+                          <img class="img-responsive" title="Erasmus School of Economics - Erasmus University Rotterdam" alt="Erasmus School of Economics - Erasmus University Rotterdam" src="//cdn03.masterstudies.com/gfx/logo/8684/1485456035/Erasmus-School-of-Economics-Erasmus-University-Rotterdam.png" />
+                      </div>
+        </div>
+      
+      <div class="headings">
+        <h1 class="main-heading">Mestrado em Economia e Negócios - Especialização em Ciência de Dados e Análise de Marketing</h1>
+                  <h2 class="secondary-heading" >Erasmus School of Economics - Erasmus University Rotterdam</h2>
+              </div>
+    </div>
+  </div>
+                          <div class="row cover-photo-container hidden-xs fp" style="width:calc(100% + 30px);height:290px;background-image:url('https://static01.masterstudies.com/elementcache/cover/63/63372_cover.jpg');background-size:cover;background-position:50% 50%;"></div>
+            
+</header>
+
+
+
+
+        <div class="row">
+            <div class="col-sm-7">
+            <ul class="nav nav-tabs tab-shadow content-tabs hidden-xs hidden-sm">
+      <li class="active ">
+      <a href="#program" data-toggle="tab">
+        Descri&ccedil;&atilde;o do Programa
+      </a>
+    </li>
+      <li class=" ">
+      <a href="#duration" data-toggle="tab">
+        Dura&ccedil;&atilde;o e Pre&ccedil;o
+      </a>
+    </li>
+      <li class=" ">
+      <a href="#faq" data-toggle="tab">
+        Perguntas Frequentes/Respostas
+      </a>
+    </li>
+  </ul>
+            <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="program">
+
+                        <div class="visible-xs visible-sm custom-accordion">Descri&ccedil;&atilde;o do Programa</div>
+                        <div class="content">
+
+                                                            <p>
+                                    <a href="https://www.masterstudies.com/MSc-in-Economics-and-Business-Specialisation-in-Data-Science-and-Marketing-Analytics/Netherlands/Erasmus-School-of-Economics-Erasmus-University-Rotterdam/" class="btn btn-success">
+                                        Leia a descri&ccedil;&atilde;o oficial
+                                        <i class="fa fa-arrow-right"   ></i>
+                                    </a>
+                                </p>
+                            
+                            
+                            <header class="program-header">
+                                <h2 >Mestrado em Economia e Neg&oacute;cios - Especializa&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e An&aacute;lise de Marketing</h2>
+                                <p>
+                                    <a   href="https://www.master-mestrado.com/universidades/Holanda/Erasmus-School-of-Economics-Erasmus-University-Rotterdam/">
+                                        Erasmus School of Economics - Erasmus University Rotterdam
+                                    </a>
+                                </p>
+                            </header>
+
+                            
+                            
+
+                            <div class="margin-top-20 product-description">
+                                
+<h2><strong>Mestrado em Economia e Neg&oacute;cios - Especializa&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e An&aacute;lise de Marketing</strong></h2><p><strong>Teoria e pr&aacute;tica da ci&ecirc;ncia da computa&ccedil;&atilde;o, marketing, economia e estat&iacute;stica</strong></p>
+<p>Empresas e organiza&ccedil;&otilde;es modernas est&atilde;o cada vez mais envolvidas na coleta e processamento de grandes quantidades de dados de clientes e opera&ccedil;&otilde;es. Os dados (grandes) resultantes s&atilde;o cada vez mais vistos como um recurso importante para as empresas. No programa Data Science e Marketing Analytics, os alunos concentram-se nas ferramentas e habilidades necess&aacute;rias para analisar esses (grandes) dados em empresas modernas e transform&aacute;-los em insights significativos.</p>
+<p>Em particular, Data Science e Marketing Analytics combina teoria e pr&aacute;tica da ci&ecirc;ncia da computa&ccedil;&atilde;o, marketing, economia e estat&iacute;stica, de tal forma que o potencial do Big Data pode ser explorado com sucesso para criar maior valor para os consumidores e empresas.</p>
+<p><strong>Carreiras</strong></p>
+<p>A ci&ecirc;ncia de dados foi apelidada de a carreira mais sexy do s&eacute;culo 21, de acordo com a Harvard Business Review. Dada a crescente conscientiza&ccedil;&atilde;o das possibilidades de explorar a ci&ecirc;ncia de dados para an&aacute;lise de marketing nos neg&oacute;cios, espera-se que as habilidades de ci&ecirc;ncia de dados adquiridas durante o programa Data Science e Marketing Analytics forne&ccedil;am aos graduados excelentes perspectivas de emprego. De acordo com Trevor Hastie, o professor de estat&iacute;stica da Universidade de Stanford, John A. Overdeck, tudo &eacute; bastante &oacute;bvio: &ldquo;O Big Data est&aacute; em toda parte - impulsiona a pesquisa na web, publicidade na web e finan&ccedil;as quantitativas, para citar algumas ind&uacute;strias. A ci&ecirc;ncia de dados desempenha um papel fundamental nesta nova economia. Com a sua forte hist&oacute;ria na modelagem de dados, a Erasmus School of Economics est&aacute; preparada para treinar uma nova gera&ccedil;&atilde;o de cientistas de dados. &rdquo;</p>
+<p>Portanto, espera-se que os graduados em Data Science e Marketing Analytics tenham muitas oportunidades de trabalho em v&aacute;rios setores da economia, como varejo (online), servi&ccedil;os financeiros, consultoria e sa&uacute;de. Por exemplo, muitas empresas e organiza&ccedil;&otilde;es est&atilde;o configurando ou expandindo as unidades de an&aacute;lise de neg&oacute;cios / an&aacute;lise de clientes / an&aacute;lise de marketing. A combina&ccedil;&atilde;o de conhecimento de marketing e econ&ocirc;mico com habilidades em ci&ecirc;ncia de dados ser&aacute; de grande valor para nossos graduados e para as empresas que os contratam.</p>
+<p><em><strong>&ldquo;Muitas grandes empresas usam t&eacute;cnicas de aprendizado de m&aacute;quina para reconhecer padr&otilde;es e prever. Este assunto me preparou para aplicar as t&eacute;cnicas aprendidas na pr&aacute;tica. &rdquo;</strong></em></p><h2>Curr&iacute;culo</h2><p><strong>A&ccedil;&otilde;es iguais de cursos de Data Science e Marketing</strong></p>
+<p>O curr&iacute;culo da especializa&ccedil;&atilde;o em mestrado Data Science e Marketing Analytics consiste em partes aproximadamente iguais dos cursos de ci&ecirc;ncia de dados e marketing.</p>
+<p><strong>Bloco 1</strong></p>
+<p>O programa come&ccedil;a com o curso &ldquo;Introdu&ccedil;&atilde;o &agrave; programa&ccedil;&atilde;o&rdquo; e o curso &ldquo;Business analytics&rdquo;. Estes dois cursos s&atilde;o complementados pelo curso &ldquo;Tomada de Decis&atilde;o de Marketing Estrat&eacute;gico&rdquo; para introduzir t&eacute;cnicas estat&iacute;sticas comumente usadas em Marketing.</p>
+<p><strong>Bloco 2</strong></p>
+<p>No segundo bloco, os estudantes fazem o semin&aacute;rio Data Science. Neste semin&aacute;rio, a metodologia de aprendizado de m&aacute;quina de &uacute;ltima gera&ccedil;&atilde;o &eacute; apresentada junto com as habilidades essenciais de prepara&ccedil;&atilde;o e coleta de dados para conduzir an&aacute;lises valiosas. O semin&aacute;rio coloca uma forte &ecirc;nfase na aplica&ccedil;&atilde;o dos m&eacute;todos em 'R' em vez de se concentrar na teoria estat&iacute;stica subjacente. Os alunos devem participar ativamente do semin&aacute;rio por meio de apresenta&ccedil;&otilde;es, relat&oacute;rios escritos, discuss&otilde;es em grupo e projetos aplicados, nos quais as t&eacute;cnicas de aprendizado de m&aacute;quina s&atilde;o aplicadas a casos do mundo real. A participa&ccedil;&atilde;o bem-sucedida no semin&aacute;rio permite que os alunos coletem e processem estruturas de dados complexas selecionando e executando as ferramentas apropriadas.</p>
+<p><strong>Bloco 3</strong></p>
+<p>No terceiro bloco, os alunos escolhem, dependendo de suas metas e prefer&ecirc;ncias pessoais, um semin&aacute;rio de marketing focado em an&aacute;lise de clientes, gerenciamento de relacionamento com o cliente, din&acirc;mica do canal do consumidor ou gerenciamento e transporte da cadeia de suprimentos.</p>
+<p><strong>Bloco 4: Teses e disciplinas eletivas</strong></p>
+<p>No bloco quatro, os alunos come&ccedil;am a trabalhar em suas teses enquanto completam um curso eletivo em marketing ou economia e um curso final de ci&ecirc;ncia de dados: &ldquo;Marketing avan&ccedil;ado e an&aacute;lise de m&iacute;dia&rdquo;. Neste curso, &eacute; apresentada uma vis&atilde;o geral dos mais recentes e avan&ccedil;ados m&eacute;todos de aprendizado de m&aacute;quina, com &ecirc;nfase na previs&atilde;o de marketing (como vendas, comunica&ccedil;&otilde;es, uso etc.). Mais uma vez, o foco neste curso ser&aacute; a aplica&ccedil;&atilde;o e n&atilde;o o rigor matem&aacute;tico / estat&iacute;stico.<br><br><br></p>
+<p><div class="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/uOEV4c-pxTU" width="560" height="315" class="embed-responsive-item"></iframe></div> <div class="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/pb0p4TFfh18" width="560" height="315" class="embed-responsive-item"></iframe></div></p><h2>Custo</h2><ul><li>&euro; 2.060 estudantes da EEA / UE *</li>
+<li>&euro; 14.700 estudantes n&atilde;o pertencentes ao EEE / UE **</li></ul><p>* Esta &eacute; a taxa de matr&iacute;cula legal para estudantes holandeses, estudantes de outro pa&iacute;s dentro da &Aacute;rea Econ&ocirc;mica Europ&eacute;ia (EEA), Uni&atilde;o Europ&eacute;ia (UE), Su&iacute;&ccedil;a e Suriname, que satisfa&ccedil;am as condi&ccedil;&otilde;es estatut&aacute;rias.</p>
+<p>** Esta &eacute; a taxa de matr&iacute;cula institucional para os estudantes para os quais a taxa de anuidade estatut&aacute;ria n&atilde;o se aplica. Voc&ecirc; tem que pagar a taxa institucional se voc&ecirc;:</p><ul><li>n&atilde;o tem nacionalidade da UE, do EEE, da Su&iacute;&ccedil;a ou do Suriname.</li>
+<li>Terminei um programa holand&ecirc;s e quero seguir outro programa no mesmo n&iacute;vel.</li></ul>
+
+
+
+
+                                <div class="teaching-language">
+    <h5 class="usedColor"><b> Esta escola oferece programas em:</b></h5>
+
+    <ul class="list-unstyled">
+
+              <li>
+          <div class="flag-icon-16 us"></div>
+                      <div class="flag-icon-16 gb"></div>
+          
+          Ingl&ecirc;s
+        </li>
+          </ul>
+  </div>
+
+                                
+
+                                                                                                                                
+
+                            </div>
+
+
+
+                            
+                            
+
+
+                                                            <br />
+                                <br />
+                                <span class="muted" itemprop="dateModified" content="2018-09-05">&Uacute;ltima actualiza&ccedil;&atilde;o September 5, 2018</span>
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+
+
+
+                    <div id="duration" class="tab-pane fade" >
+                        <div class="visible-xs visible-sm custom-accordion">Dura&ccedil;&atilde;o e Pre&ccedil;o</div>
+                        <div class="content">
+                            <div class="row duration">
+    
+    <div class="col-sm-12 duration_title">
+        Este curso &eacute; <span class="usedColor">            No campus
+            </span>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-3 duration-fact-box">
+        <div class="duration_box">
+            <img src="//cdn04.masterstudies.com//img/startdate.png" alt="Start Date"/>
+            <div class="duration_box_title">Data inicial</div>
+            <div class="duration_box_text">Set. 2018<br /></div>
+        </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-3 duration-fact-box">
+        <div class="duration_box">
+            <img src="//cdn02.masterstudies.com//img/duration.png" alt="Duration"/>
+            <div class="duration_box_title">Duração</div>
+            <div class="duration_box_text">1&#160;ano</div>
+                                        <div class="duration_box_text">Tempo integral</div>
+                    </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-3 duration-fact-box">
+        <div class="duration_box">
+            <img src="//cdn03.masterstudies.com//img/price.png" alt="Price"/>
+            <div class="duration_box_title">Preço</div>
+            <div class="duration_box_text">
+                2,060 EUR
+                                <br>Estudantes do EEE / UE; € 14.700 estudantes não pertencentes ao EEE / UE.
+                            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-3 duration-fact-box">
+        <div class="duration_box">
+            <img src="//cdn04.masterstudies.com//img/info.png" alt="Information"/>
+            <div class="duration_box_title">Deadline</div>
+            <div class="duration_box_text"><a href="javascript:void(0)" class="send-question-to-form" data-idfaq="2">Contactar Escola</a><br />1 August for ESE students</div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+
+
+        <ul class="nav nav-tabs tab-shadow content-tabs hidden-xs hidden-sm">
+            <li class="active">
+                <a href="#locations" data-toggle="tab">Locations</a>
+            </li>
+            <li class="">
+                <a href="#dates" data-toggle="tab">Dates</a>
+            </li>
+        </ul>
+
+                <div class="tab-content">
+            <div class="tab-pane fade in active" id="locations">
+                <div class="visible-xs visible-sm custom-accordion">Locations</div>
+                <div class="content">
+                                                                                                                            <table class="table program-facts locations" id="locations-0">
+                                <tbody>
+                                <tr class="odd">
+                                    <td colspan="2"><i class="fa fa-plus-square first-expand fa-lg show-details usedColor"   ></i><a href="https://www.master-mestrado.com/MSc/Estudos-de-Marketing/Holanda/">Reino dos Países Baixos</a>
+                                        -  <a href="https://www.master-mestrado.com/MSc/Estudos-de-Marketing/Holanda/Rotterdam/">Rotterdam</a>,  <a href="https://www.master-mestrado.com/MSc/Estudos-de-Marketing/Holanda//">South Holland</a> </td>
+                                </tr>
+                                                                    <tr class="parent hide_rows" id="0">
+                                        <td colspan="2"
+                                            class="indented"><i class="fa fa-plus-square fa-lg show-details usedColor"   ></i>Data inicial
+                                            :
+                                            <span class="boldness">Set. 2018</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hide_rows child-0 hide_text">
+                                        <td width="50%" class="borderless nested_indented">
+                                            <b>Prazo de inscrição</b></td>
+                                        <td class="borderless"><a href="javascript:void(0)" class="send-question-to-form" data-idfaq="2">Contactar Escola</a><br />1 August for ESE students</td>
+                                    </tr>
+                                    <tr class="hide_rows child-0 hide_text">
+                                        <td width="50%" class="borderless nested_indented">
+                                            <b>Data de conclusão</b>
+                                        </td>
+                                        <td class="borderless"><a href="javascript:void(0)" class="send-question-to-form" data-idfaq="24">Contactar Escola</a></td>
+                                    </tr>
+                                                                                                    </tbody>
+                            </table>
+                                                                                        </div>
+            </div>
+
+            <div id="dates" class="tab-pane fade">
+                <div class="visible-xs visible-sm custom-accordion">Dates</div>
+                <div class="content">
+                                                                                                <table class="table program-facts dates" id="dates-0">
+                                <tbody>
+                                <tr class="odd">
+                                    <td colspan="2"><i class="fa fa-plus-square first-expand fa-lg show-details usedColor"   ></i> Set. 2018 </td>
+                                </tr>
+                                                                                                        <tr class="hide_rows parent" id="0">
+                                        <td colspan="2"
+                                            class=" indented"><i class="fa fa-plus-square fa-lg show-details usedColor"   ></i> <a href="https://www.master-mestrado.com/MSc/Estudos-de-Marketing/Holanda/">Reino dos Países Baixos</a>
+                                            - <a href="https://www.master-mestrado.com/MSc/Estudos-de-Marketing/Holanda/Rotterdam/">Rotterdam</a>,  <a href="https://www.master-mestrado.com/MSc/Estudos-de-Marketing/Holanda//">South Holland</a></td>
+                                    </tr>
+                                    
+                                        <tr class="hide_rows child-0 hide_text  ">
+                                            <td class="borderless nested_indented">
+                                                <b>Prazo de inscrição</b>
+                                            </td>
+                                            <td class="borderless" colspan="2"><a href="javascript:void(0)" class="send-question-to-form" data-idfaq="2">Contactar Escola</a><br />1 August for ESE students</td>
+                                        </tr>
+                                        <tr class="under_dates child-0 hide_text ">
+                                            <td class="borderless nested_indented ">
+                                                <b>Data de conclusão</b></td>
+                                            <td class="borderless" colspan="2"><a href="javascript:void(0)" class="send-question-to-form" data-idfaq="24">Contactar Escola</a></td>
+                                        </tr>
+                                        <tr class="under_dates child-0 hide_text ">
+                                            <td class="borderless" colspan="3"></td>
+                                        </tr>
+                                                                                                                                        </tbody>
+                            </table>
+                                                                                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+
+
+                                            <div id="faq" class="tab-pane fade hidden-xs" >
+                            <div class="visible-xs visible-sm custom-accordion">Perguntas Frequentes/Respostas</div>
+                            <div class="content">
+                                
+
+                                                                                                            <h4 class="margin-top-20 margin-bottom-5">General Information</h4>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="Can you send me more information about this program? "
+                                                      data-idFaq="1"
+                                                      style="color:#3272af;cursor:pointer;">
+                          Can you send me more information about this program? 
+                        </span>
+                                            
+                                            <br/>
+                                        
+
+                                                                                                                                                <h4 class="margin-top-20 margin-bottom-5">Program Dates</h4>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="When is the application deadline for this program? "
+                                                      data-idFaq="2"
+                                                      style="color:#3272af;cursor:pointer;">
+                          When is the application deadline for this program? 
+                        </span>
+                                            
+                                            <br/>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="What is the start date for this program? "
+                                                      data-idFaq="23"
+                                                      style="color:#3272af;cursor:pointer;">
+                          What is the start date for this program? 
+                        </span>
+                                            
+                                            <br/>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="What is the end date for this program? "
+                                                      data-idFaq="24"
+                                                      style="color:#3272af;cursor:pointer;">
+                          What is the end date for this program? 
+                        </span>
+                                            
+                                            <br/>
+                                        
+
+                                                                                                                                                <h4 class="margin-top-20 margin-bottom-5">Fees &amp; Prices</h4>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="How much does this program cost? "
+                                                      data-idFaq="3"
+                                                      style="color:#3272af;cursor:pointer;">
+                          How much does this program cost? 
+                        </span>
+                                            
+                                            <br/>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="Can I pay for this program in installments? "
+                                                      data-idFaq="4"
+                                                      style="color:#3272af;cursor:pointer;">
+                          Can I pay for this program in installments? 
+                        </span>
+                                            
+                                            <br/>
+                                        
+
+                                                                                                                                                <h4 class="margin-top-20 margin-bottom-5">Program Type &amp; Duration</h4>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="Is this program available online? "
+                                                      data-idFaq="5"
+                                                      style="color:#3272af;cursor:pointer;">
+                          Is this program available online? 
+                        </span>
+                                            
+                                            <br/>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="What is the duration of this program? "
+                                                      data-idFaq="6"
+                                                      style="color:#3272af;cursor:pointer;">
+                          What is the duration of this program? 
+                        </span>
+                                            
+                                            <br/>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="Is this program offered part-time or full-time? "
+                                                      data-idFaq="8"
+                                                      style="color:#3272af;cursor:pointer;">
+                          Is this program offered part-time or full-time? 
+                        </span>
+                                            
+                                            <br/>
+                                        
+
+                                                                                                                                                <h4 class="margin-top-20 margin-bottom-5">Study Place</h4>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="Where is this school located? "
+                                                      data-idFaq="9"
+                                                      style="color:#3272af;cursor:pointer;">
+                          Where is this school located? 
+                        </span>
+                                            
+                                            <br/>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="Where is the campus located? "
+                                                      data-idFaq="10"
+                                                      style="color:#3272af;cursor:pointer;">
+                          Where is the campus located? 
+                        </span>
+                                            
+                                            <br/>
+                                        
+
+                                                                                                                                                <h4 class="margin-top-20 margin-bottom-5">Funding</h4>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="What other funding options do you have for this program? "
+                                                      data-idFaq="12"
+                                                      style="color:#3272af;cursor:pointer;">
+                          What other funding options do you have for this program? 
+                        </span>
+                                            
+                                            <br/>
+                                        
+
+                                                                                                                                                                                                                    <h4 class="margin-top-20 margin-bottom-5">How to Apply</h4>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="What documents are required to apply to this program? "
+                                                      data-idFaq="14"
+                                                      style="color:#3272af;cursor:pointer;">
+                          What documents are required to apply to this program? 
+                        </span>
+                                            
+                                            <br/>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="What is the admission process for this program? "
+                                                      data-idFaq="15"
+                                                      style="color:#3272af;cursor:pointer;">
+                          What is the admission process for this program? 
+                        </span>
+                                            
+                                            <br/>
+                                        
+
+                                                                                                                                                <h4 class="margin-top-20 margin-bottom-5">Language</h4>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="In what language is this program taught? "
+                                                      data-idFaq="16"
+                                                      style="color:#3272af;cursor:pointer;">
+                          In what language is this program taught? 
+                        </span>
+                                            
+                                            <br/>
+                                        
+
+                                                                                                                                                                                                                    <h4 class="margin-top-20 margin-bottom-5">Other</h4>
+                                                                                                                                    <span class="send-question-to-form"
+                                                      data-question="Other"
+                                                      data-idFaq="20"
+                                                      style="color:#3272af;cursor:pointer;">
+                          Other
+                        </span>
+                                            
+                                            <br/>
+                                        
+
+                                                                                                </div>
+                        </div>
+                    
+                    
+                <!-- todo: change date to template -->
+                                    </div>
+            </div>
+            <div class="col-sm-5 form-container">
+                                <div class="lead-form affix-lead-form" id="div_lead_form_container">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+<div class="container">
+  <div class="row">
+    <footer class="page-footer clearfix">
+      <div class="col-sm-12">
+        <div class="row">
+
+          <div class="brand col-sm-12">
+            <h2 class="usedColor">MASTER-MESTRADO.COM</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
+
+            <div class="footer-social pull-right">
+              <div class="hidden-xs addthis-container white">
+  <div class="pull-right">
+    <a data-toggle="modal" class="addthis-modal-link" href="#linkToUsModal">
+     Link para esta p&aacute;gina
+    </a>
+  </div>
+
+  <div class="addthis_toolbox">
+    <i class="fa fa-spinner fa-pulse loading-add-this"   ></i>
+    <div class="custom_images">
+      <!--<a class="addthis_button_facebook addthis-button"><img src="//cdn02.masterstudies.com/img_new/addthis_facebook_white.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+      <a class="addthis_button_twitter addthis-button"><img src="//cdn03.masterstudies.com/img_new/addthis_twitter_white.png" width="18" height="18" border="0" alt="Share to Twitter" /></a>-->
+        <a class="addthis_button_facebook addthis-button"><img src="//cdn03.masterstudies.com/img_new/FB-f-Logo__blue_144_official.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+        <a class="addthis_button_twitter addthis-button"><img src="//cdn02.masterstudies.com/img_new/Twitter_Logo_Blue_official.png" width="32" height="32" border="0" alt="Share to Twitter" /></a>
+        <a class="addthis_button_more addthis-button"><img src="//cdn03.masterstudies.com/img_new/addthis_more_white.png" width="18" height="18" border="0" alt="More..." /></a>
+      <a class="addthis_counter addthis_bubble_style"></a>
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div class="footer-links">
+                              <a href="https://www.master-mestrado.com/Schools_and_Universities/Contate-nos.html">Contacte-nos</a>
+                              <a href="http://www.keystoneacademic.com/">Keystone Academic Solutions</a>
+                              <a href="https://www.master-mestrado.com/Schools_and_Universities/Termos-e-Condi&ccedil;&otilde;es.html">Termos e Condi&ccedil;&otilde;es </a>
+                              <a href="https://www.master-mestrado.com/Schools_and_Universities/Pol&iacute;tica-de-privacidade.html">Privacy</a>
+                              <a href="/sitemap/">Sitemap</a>
+                              <a href="https://www.studenttests.pt/">StudentTests</a>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="linkToUsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Link to and share "Mestrado em Economia e Neg&oacute;cios - Especializa&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e An&aacute;lise de Marketing, Rotterdam, Reino dos Pa&iacute;ses Baixos 2018/2019"</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="radio">
+              <label>
+                <input type="radio" name="link_to_us_url" class="link_to_us_url" checked data-title="Master-mestrado.com - Mestrado em Economia e Neg&oacute;cios - Especializa&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e An&aacute;lise de Marketing, Rotterdam, Reino dos Pa&iacute;ses Baixos 2018/2019" data-url="https://www.master-mestrado.com/Mestrado-em-Economia-e-Neg%C3%B3cios-Especializa%C3%A7%C3%A3o-em-Ci%C3%AAncia-de-Dados-e-An%C3%A1lise-de-Marketing/Holanda/Erasmus-School-of-Economics-Erasmus-University-Rotterdam/">
+                Link to this page
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="link_to_us_url" class="link_to_us_url" data-title="Master-mestrado.com" data-url="https://www.master-mestrado.com/">
+                Link to Master-mestrado.com start page
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="link_to_us_url_input">Paste link in email or IM:</label>
+              <input type="text" id="link_to_us_url_input" class="form-control link_to_us_plain_link">
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <img src="//cdn01.masterstudies.com/img/logo/Mestrado-ms-pt.png" class="link-to-us-image">
+
+                          <img src="//cdn03.masterstudies.com/gfx/logo/8684/1485456035/Erasmus-School-of-Economics-Erasmus-University-Rotterdam.png" class="link-to-us-image unselected">
+            
+            <div class="pull-right">
+
+              <label class="radio">
+                <input type="radio" name="link_to_us_image" class="link-to-us-image-radio" checked data-alt="Master-mestrado.com" data-image="//cdn01.masterstudies.com/img/logo/Mestrado-ms-pt.png">
+                Master-mestrado.com logo
+              </label>
+
+                              <label class="radio">
+                  <input type="radio" name="link_to_us_image" class="link-to-us-image-radio" data-alt="Master-mestrado.com - Mestrado em Economia e Neg&oacute;cios - Especializa&ccedil;&atilde;o em Ci&ecirc;ncia de Dados e An&aacute;lise de Marketing, Rotterdam, Reino dos Pa&iacute;ses Baixos 2018/2019" data-image="//cdn03.masterstudies.com/gfx/logo/8684/1485456035/Erasmus-School-of-Economics-Erasmus-University-Rotterdam.png">
+                  Page image
+                </label>
+              
+              <label class="radio">
+                <input type="radio" name="link_to_us_image" class="link-to-us-image-radio" data-image="">
+                No image
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <label for="link_to_us_textarea">HTML-code:</label>
+            <textarea name="" id="link_to_us_textarea" class="form-control link-to-us-html" rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+
+
+<script src="//cdn04.masterstudies.com/js/application.1537268635.js"></script>
+<script src="//cdn04.masterstudies.com/js/randexp/randexp.min.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBikK5pARri5jnUcBnqAFDIUWrLp3eTLUk"></script>
+
+
+    <script src = "https://plus.google.com/js/client:platform.js" async defer></script>
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+        api_key:   77xscru7juspas
+        onLoad:    onLinkedInLoad
+    </script>
+    <script>
+
+        //Google Sign In
+        function onSuccess(googleUser) {
+            gapi.client.load('plus', 'v1', apiClientLoaded);
+            //console.log(googleUser);
+            $('#firstname').val(googleUser.getBasicProfile().getGivenName());
+            $('#lastname').val(googleUser.getBasicProfile().getFamilyName());
+            $('#mail').val(googleUser.getBasicProfile().getEmail());
+        }
+        function onFailure(error) {
+            console.log(error);
+        }
+
+        //Sign in Google +
+        function apiClientLoaded() {
+            gapi.client.plus.people.get({userId: 'me'}).execute(handleEmailResponse);
+        }
+
+        function handleEmailResponse(resp) {
+            //console.log(resp);
+            if (resp.gender === 'female') {
+                $('#gender option[value=Female]').prop('selected', 'selected').change();
+            }
+            if (resp.gender === 'male') {
+                $('#gender option[value=Male]').prop('selected', 'selected').change();
+            }
+        }
+
+
+        //Facebook
+        // This is called with the results from from FB.getLoginStatus().
+        function statusChangeCallback(response) {
+            if (response.status === 'connected') {
+                testAPI();
+            }
+        }
+
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+    </script>
+
+        <script>
+        function onLinkedInLoad() {
+            $('a[id*=li_ui_li_gen_]').html('<img src="/img_new/Sign-In-LinkedIn.png" height="27" width="27" border="0" />');
+            $('.linkedIn').css("visibility","visible");
+            IN.Event.on(IN, "auth", getProfileData);
+        }
+
+        function onLinkedInSuccess(response) {
+            $('#firstname').val(response.firstName);
+            $('#lastname').val(response.lastName);
+            $('#mail').val(response.emailAddress);
+        }
+
+        function onError(error) {
+            console.log(error);
+        }
+
+        // Use the API call wrapper to request the member's basic profile data
+        function getProfileData() {
+            IN.API.Raw("/people/~:(id,firstName,lastName,emailAddress)").result(onLinkedInSuccess).error(onError);
+        }
+        function linkedInSignOut() {
+            IN.User.logout(callbackFunction, callbackScope);
+        }
+    </script>
+    <script type="text/javascript">
+
+        $(function () {
+            jQuery('#SignIn').hide();
+//      a($('h1.productTitle'));
+//      $( ".provider-logo" ).on('load', function() {
+//        a($('h1.productTitle'));
+//      });
+
+            $(' tr.hide_rows').css('display', 'none');
+            $('table').on("click", "i.first-expand", function () {
+                var idTable = $(this).parents('table').attr('id');
+                if ($(this).hasClass( "fa-plus-square" )){
+                    $('#'+idTable+' tr.hide_rows').css('display', '');
+                }else{
+                    $('#'+idTable+' tr.hide_rows').css('display', 'none');
+                }
+                $(this).toggleClass("fa-plus-square  fa-minus-square");
+
+
+            });
+
+
+            $('tr.parent td').on("click", "i", function () {
+                var idTable = $(this).parents('table').attr('id');
+                $(this).toggleClass("fa-plus-square  fa-minus-square");
+                var idOfParent = $(this).parents('tr').attr('id');
+//        if ($(this).parents('tr').hasClass("odd")) {
+//          $('#'+idTable+' tr.child-' + idOfParent).css('background-color', '#F9F9F9');
+//        } else {
+//          $('#'+idTable+' tr.child-' + idOfParent).css('background-color', '#FFFFFF');
+//        }
+                $('#'+idTable+' tr.child-' + idOfParent).toggle();
+
+            });
+        });
+
+
+
+
+        // Universal Popupover Outside Click Close Method :)
+        jQuery(document).mouseup(function(e){
+            var popocontainer = jQuery(".popover");
+            if (popocontainer.has(e.target).length === 0){
+                jQuery('.popover').toggleClass('in').remove();
+            }
+        });
+
+
+
+        /* <![CDATA[ */
+
+        
+                //    var illegal_chars = {'name' : 'Cyrillic', 'range': create_range(1040, 64) };
+        
+        // todo: redo with css animations
+        //    function blinkingTitle(count,blink) {
+        //      count = parseInt(count);
+        //      if(blink == 'true') {
+        //        document.getElementById('comment').style.backgroundColor='#FFF3CA';
+        //      } else {
+        //        document.getElementById('comment').style.backgroundColor='#ffffff';
+        //      }
+        //      --count;
+        //
+        //      if (count > 0) {
+        //        if (blink == 'true') var_blink = 'false'; else var_blink = 'true';
+        //        blinkTimer = setTimeout("blinkingTitle('"+count+"','"+var_blink+"')", 400);
+        //      }
+        //    }
+
+        $(function () {
+
+//      $('.send-question-to-form').click(function () {
+//        $('#comment').val($(this).attr('data-question'));
+//        $('#form-idFaq').val($(this).attr('data-idFaq'));
+//        $('#comment').closest('.control-group').prependTo('#part_one').find('.form_box').first();
+//        blinkingTitle(10,'true');
+//      });
+
+            $('.to_lead_form').click(function (e) {
+                e.preventDefault();
+                $('#lead_form :input:first').focus();
+            });
+
+            $('.req').on('click', function() {
+                var $this = $(this);
+                $('#comment').removeClass('flashing').val($this.attr('data-q')).addClass('flashing');
+//        blinkingTitle(10,'true');
+            });
+
+
+        });
+
+        var hidden_step_2_elements = null;
+
+        function get_lead_form(idProduct) {
+
+            
+                params = {
+                action : 'get_lead_form',
+                p : idProduct,
+                responsive : true,
+                include_mode : 'full',
+                                r : '27ac'
+            };
+
+            jQuery.ajax({
+                url: '/ajax_handler.php',
+                dataType: 'html',
+                type: 'GET',
+                data:params,
+                success: function (response) {
+                    document.getElementById('div_lead_form_container').innerHTML=response;
+
+                    if (response) {
+                        jQuery('#SignIn').appendTo('#lead-form');
+                        jQuery('#SignIn').show();
+                    }
+
+                    jQuery('.lead-form').css('position', 'relative');
+                    jQuery('#div_lead_form_container').height($('#lead-form').height()); //fix affix flickering
+                    jQuery('.form-container').height($('#lead-form').height()); //fix affix flickering
+                                        jQuery.getScript('/js/lead_form_2012.js',function() {
+                        if (jQuery('#idCountry').val() > 0 && $('#phone-prefix').val() == '') {
+                            jQuery('#idCountry').change(); // Update phone prefix
+                        }
+                    });
+                    
+                                            $f = jQuery('#grid_form').remove();
+                    $f.find('*').attr('style', '').end().insertBefore('#provider_img_container .clearer');
+                    jQuery('.js-languages-multiple').select2();
+                }
+            });
+
+        }
+
+        function isZip(s) {
+            //reZip = new RegExp(/(^\d{5}$)|(^\d{5}-\d{4}$)/);
+            reZip = new RegExp(/(^\d{5}$)/);
+            if (!reZip.test(s)) {
+                alert("Zip Code Is Not Valid");
+                return false;
+            }
+            return true;
+        }
+
+        function check_postal_code() {
+            if (document.getElementById('idCountry').options[document.getElementById('idCountry').selectedIndex].value == 223) {
+                reZip = new RegExp(/(^\d{5}$)/);
+                if (!reZip.test(document.getElementById('postal_code').value)) {
+                    alert("Zip Code Is Not Valid");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+
+        
+        function AddToOptionList(OptionList, OptionValue, OptionText) {
+            // Add option to the bottom of the list
+            OptionList[OptionList.length] = new Option(OptionText, OptionValue);
+        }
+
+        function ClearOptions(OptionList) {
+            // Always clear an option list from the last entry to the first
+            for (x = OptionList.length; x >= 0; x = x - 1) {
+                OptionList[x] = null;
+            }
+        }
+
+        
+        
+        get_lead_form(103565);
+
+        
+        /* ]]> */
+    </script>
+
+
+
+
+
+
+    
+
+
+
+<script type="text/javascript">
+    $(function () {
+        var $partner_sites = [];
+        var $partner_sites_mobile = [];
+
+                $partner_sites.push($('<li><a class="navbar-brand active" href="https://www.master-mestrado.com/">Master</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.master-mestrado.com/">Master</a></li>'));
+
+                                                                  $partner_sites.push($('<li><a class="navbar-brand " href="https://www.estudosdedoutorado.com/">PhD</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.estudosdedoutorado.com/">PhD</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.mestradoemdireito.com/">Law</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.mestradoemdireito.com/">Law</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.estudosdebacharel.com/">Licenciatura</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.estudosdebacharel.com/">Licenciatura</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.estudosdenegocio.com/">MBA</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.estudosdenegocio.com/">MBA</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.estudosdesaude.com/">Healthcare</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.estudosdesaude.com/">Healthcare</a></li>'));
+                                                            $partner_sites.push($('<li><a class="navbar-brand " href="https://www.cursos-universitarios.com/">CursosUniversitarios</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.cursos-universitarios.com/">CursosUniversitarios</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.graduacao-online.com/">Online</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.graduacao-online.com/">Online</a></li>'));
+                        $('.partner-sites').first().append($partner_sites);
+        $('.partner-sites-mobile').first().append($partner_sites_mobile);
+
+
+      
+      
+    });
+</script>
+
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bb510f4a41","applicationID":"7303044","transactionName":"YQdQbRRSCxZYBUdQV1hNZ0sPHAwLXQNLF0heEg==","queueTime":0,"applicationTime":106,"atts":"TUBTG1xIGBg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

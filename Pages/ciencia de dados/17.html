@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR" prefix="og: http://ogp.me/ns#" class="no-js no-svg">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<title>A diferença entre ciência de dados e análise de dados | Blog Cetax</title>
+
+<!-- Google Tag Manager for WordPress by DuracellTomi -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];//]]>	
+</script>
+<!-- End Google Tag Manager for WordPress by DuracellTomi -->
+<!-- This site is optimized with the Yoast SEO plugin v8.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Se a ciência dos dados é a casa que contém as ferramentas e os métodos, a análise de dados é uma sala específica naquela casa."/>
+<link rel="canonical" href="https://www.cetax.com.br/blog/ciencia-de-dados-e-analise-de-dados/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A diferença entre ciência de dados e análise de dados | Blog Cetax" />
+<meta property="og:description" content="Se a ciência dos dados é a casa que contém as ferramentas e os métodos, a análise de dados é uma sala específica naquela casa." />
+<meta property="og:url" content="https://www.cetax.com.br/blog/ciencia-de-dados-e-analise-de-dados/" />
+<meta property="og:site_name" content="Blog Cetax" />
+<meta property="article:publisher" content="https://www.facebook.com/CetaxConsultoria/" />
+<meta property="article:author" content="https://www.facebook.com/CetaxConsultoria/" />
+<meta property="article:section" content="Artigos de Data Science" />
+<meta property="og:image" content="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/data-science-x-data-analytics.fw_.png" />
+<meta property="og:image:secure_url" content="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/data-science-x-data-analytics.fw_.png" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1080" />
+<meta property="og:image:alt" content="ciência de dados e análise de dados" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Se a ciência dos dados é a casa que contém as ferramentas e os métodos, a análise de dados é uma sala específica naquela casa." />
+<meta name="twitter:title" content="A diferença entre ciência de dados e análise de dados | Blog Cetax" />
+<meta name="twitter:site" content="@CursosdeBI" />
+<meta name="twitter:image" content="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/data-science-x-data-analytics.fw_.png" />
+<meta name="twitter:creator" content="@CursosdeBI" />
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.cetax.com.br\/blog\/","name":"In\u00edcio"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.cetax.com.br\/blog\/","name":"Blog Cetax"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.cetax.com.br\/blog\/artigos-de-data-science\/","name":"Artigos de Data Science"}},{"@type":"ListItem","position":4,"item":{"@id":"https:\/\/www.cetax.com.br\/blog\/ciencia-de-dados-e-analise-de-dados\/","name":"A diferen\u00e7a entre ci\u00eancia de dados e an\u00e1lise de dados"}}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed para Blog Cetax &raquo;" href="https://www.cetax.com.br/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Blog Cetax &raquo;" href="https://www.cetax.com.br/blog/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Blog Cetax &raquo; A diferença entre ciência de dados e análise de dados" href="https://www.cetax.com.br/blog/ciencia-de-dados-e-analise-de-dados/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.cetax.com.br\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='megamenu-wp-css'  href='https://www.cetax.com.br/blog/wp-content/plugins/easymega/style.css?ver=4.9.8' type='text/css' media='all' />
+<style id='megamenu-wp-inline-css' type='text/css'>
+.megamenu-wp-desktop #megamenu-wp-page .megamenu-wp .mega-item .mega-content li.mega-content-li { margin-top: 0px; }
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='https://www.cetax.com.br/blog/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.0.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mks_shortcodes_simple_line_icons-css'  href='https://www.cetax.com.br/blog/wp-content/plugins/meks-flexible-shortcodes/css/simple-line/simple-line-icons.css?ver=1.3.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='mks_shortcodes_css-css'  href='https://www.cetax.com.br/blog/wp-content/plugins/meks-flexible-shortcodes/css/style.css?ver=1.3.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-date-remover-css'  href='https://www.cetax.com.br/blog/wp-content/plugins/wp-date-remover/public/css/wp-date-remover-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='typology-fonts-css'  href='https://fonts.googleapis.com/css?family=ABeeZee%3A400%7CJosefin+Sans%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='typology-main-css'  href='https://www.cetax.com.br/blog/wp-content/themes/typology/assets/css/min.css?ver=1.0' type='text/css' media='all' />
+<style id='typology-main-inline-css' type='text/css'>
+body,blockquote:before, q:before{font-family: 'ABeeZee';font-weight: 400;}body,.typology-action-button .sub-menu{color:#444444;}body{background:#f8f8f8;font-size: 1.6em;}.typology-fake-bg{background:#f8f8f8;}.typology-sidebar,.typology-section{background:#ffffff;}h1, h2, h3, h4, h5, h6,.h1, .h2, .h3, .h4, .h5, .h6,.submit,.mks_read_more a,input[type="submit"],a.mks_button,.cover-letter,.post-letter,.typology-pagination a,.typology-pagination span,.comment-author .fn,.post-date-month,.typology-button-social,.mks_autor_link_wrap a,.entry-pre-title,.typology-button{font-family: 'Josefin Sans';font-weight: 700;}.typology-header .typology-nav{font-family: 'Josefin Sans';font-weight: 700;}.typology-cover .entry-title,.typology-cover h1 { font-size: 6.4rem;}h1, .h1 {font-size: 4.8rem;}h2, .h2 {font-size: 3.5rem;}h3, .h3 {font-size: 2.8rem;}h4, .h4 {font-size: 2.3rem;}h5, .h5,.typology-layout-c.post-image-on .entry-title {font-size: 1.8rem;}h6, .h6 {font-size: 1.5rem;}.widget{font-size: 1.4rem;}.typology-header .typology-nav a{font-size: 1.3rem;}.typology-layout-b .post-date-hidden,.meta-item{font-size: 1.3rem;}.post-letter {font-size: 26rem;}.cover-letter {font-size: 60rem;}.typology-button,.submit{text-transform: uppercase;}h1, h2, h3, h4, h5, h6,.h1, .h2, .h3, .h4, .h5, .h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,.post-date-month{color:#333333;}.typology-single-sticky a{color:#444444;}.entry-title a:hover,.typology-single-sticky a:hover{color:#27a2f4;}.bypostauthor .comment-author:before,#cancel-comment-reply-link:after{background:#27a2f4;}a,.widget .textwidget a,.typology-layout-b .post-date-hidden{color: #27a2f4;}.typology-header{height:110px;}.typology-header-sticky-on .typology-header{background:#27a2f4;}.site-title a,.typology-site-description{color: #ffffff;}.typology-header .typology-nav,.typology-header .typology-nav > li > a{color: #ffffff;}.typology-header .typology-nav .sub-menu a{ color:#444444;}.typology-header .typology-nav .sub-menu a:hover{color: #27a2f4;}.typology-action-button .sub-menu ul a:before{background: #27a2f4;}.sub-menu .current-menu-item a{color:#27a2f4;}.dot,.typology-header .typology-nav .sub-menu{background:#ffffff;}.typology-header .typology-main-navigation .sub-menu .current-menu-ancestor > a,.typology-header .typology-main-navigation .sub-menu .current-menu-item > a{color: #27a2f4;}.typology-header-wide .slot-l{left: 35px;}.typology-header-wide .slot-r{right: 35px;}.meta-item,.meta-item span,.meta-item a,.comment-metadata a{color: #888888;}.comment-meta .url,.meta-item a:hover{color:#333333;}.typology-post:after,.section-title:after,.typology-pagination:before{background:rgba(51,51,51,0.2);}.typology-layout-b .post-date-day,.typology-outline-nav li a:hover,.style-timeline .post-date-day{color:#27a2f4;}.typology-layout-b .post-date:after,blockquote:before,q:before{background:#27a2f4;}.typology-sticky-c,.typology-sticky-to-top span,.sticky-author-date{color: #888888;}.typology-outline-nav li a{color: #444444;}.typology-post.typology-layout-b:before{background:rgba(68,68,68,0.1);}.submit,.mks_read_more a,input[type="submit"],a.mks_button,.typology-button,.submit,.typology-button-social,.widget .mks_autor_link_wrap a,.widget .mks_read_more a{color:#ffffff;background: #27a2f4;border:1px solid #27a2f4;}.button-invert{color:#27a2f4;background:transparent;}.widget .mks_autor_link_wrap a:hover,.widget .mks_read_more a:hover{color:#ffffff;}.typology-cover{min-height: 240px;}.typology-cover-empty{height:209px;min-height:209px;}.typology-fake-bg .typology-section:first-child {top: -99px;}.typology-flat .typology-cover-empty{height:110px;}.typology-flat .typology-cover{min-height:110px;}.typology-cover-empty,.typology-cover-item,.typology-header-sticky{background:#28a9ff;}.typology-cover-overlay:after{background: rgba(40,169,255,1.0);}.typology-sidebar-header{background:#27a2f4;}.typology-cover,.typology-cover .entry-title,.typology-cover .entry-title a,.typology-cover .meta-item,.typology-cover .meta-item span,.typology-cover .meta-item a,.typology-cover h1,.typology-cover h2,.typology-cover h3{color: #ffffff;}.typology-cover .typology-button{color: #28a9ff;background:#ffffff;border:1px solid #ffffff;}.typology-cover .button-invert{color: #ffffff;background: transparent;}.typology-cover-slider .owl-dots .owl-dot span{background:#ffffff;}.typology-outline-nav li:before,.widget ul li:before{background:#27a2f4;}.widget a{color:#444444;}.widget a:hover,.widget_calendar table tbody td a,.entry-tags a:hover{color:#27a2f4;}.widget_calendar table tbody td a:hover,.widget table td,.entry-tags a{color:#444444;}.widget table,.widget table td,.widget_calendar table thead th,table,td, th{border-color: rgba(68,68,68,0.3);}.widget ul li,.widget .recentcomments{color:#444444;}.widget .post-date{color:#888888;}#today{background:rgba(68,68,68,0.1);}.typology-pagination .current, .typology-pagination .infinite-scroll a, .typology-pagination .load-more a, .typology-pagination .nav-links .next, .typology-pagination .nav-links .prev, .typology-pagination .next a, .typology-pagination .prev a{color: #ffffff;background:#333333;}.typology-pagination a, .typology-pagination span{color: #333333;border:1px solid #333333;}.typology-footer{background:#f8f8f8;color:#aaaaaa;}.typology-footer h1,.typology-footer h2,.typology-footer h3,.typology-footer h4,.typology-footer h5,.typology-footer h6{color:#aaaaaa;}.typology-count{background: #27a2f4;}.typology-footer a, .typology-footer .widget .textwidget a{color: #888888;}input[type="text"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="date"], input[type="password"], textarea, select{border-color:rgba(68,68,68,0.2);}blockquote:after, blockquote:before, q:after, q:before{-webkit-box-shadow: 0 0 0 10px #ffffff;box-shadow: 0 0 0 10px #ffffff;}.site-title{text-transform: uppercase;}.typology-nav{text-transform: uppercase;}h1, h2, h3, h4, h5, h6{text-transform: uppercase;}.section-title{text-transform: uppercase;}.widget-title{text-transform: uppercase;}
+</style>
+<link rel='stylesheet' id='meks-ads-widget-css'  href='https://www.cetax.com.br/blog/wp-content/plugins/meks-easy-ads-widget/css/style.css?ver=2.0.4' type='text/css' media='all' />
+<link rel='stylesheet' id='meks-author-widget-css'  href='https://www.cetax.com.br/blog/wp-content/plugins/meks-smart-author-widget/css/style.css?ver=1.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='meks-social-widget-css'  href='https://www.cetax.com.br/blog/wp-content/plugins/meks-smart-social-widget/css/style.css?ver=1.3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='meks-themeforest-widget-css'  href='https://www.cetax.com.br/blog/wp-content/plugins/meks-themeforest-smart-widget/css/style.css?ver=1.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.cetax.com.br/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.cetax.com.br/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.cetax.com.br/blog/wp-content/plugins/meks-flexible-shortcodes/js/main.js?ver=1.3.1'></script>
+<script type='text/javascript' src='https://www.cetax.com.br/blog/wp-content/plugins/wp-date-remover/public/js/wp-date-remover-public.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://www.cetax.com.br/blog/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.8.1'></script>
+<link rel='https://api.w.org/' href='https://www.cetax.com.br/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.cetax.com.br/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.cetax.com.br/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.8" />
+<link rel='shortlink' href='https://www.cetax.com.br/blog/?p=25249' />
+<link rel="alternate" type="application/json+oembed" href="https://www.cetax.com.br/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cetax.com.br%2Fblog%2Fciencia-de-dados-e-analise-de-dados%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.cetax.com.br/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cetax.com.br%2Fblog%2Fciencia-de-dados-e-analise-de-dados%2F&#038;format=xml" />
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//www.cetax.com.br/blog/?wordfence_lh=1&hid=383A3B03491548DC014F70D24D58900F');
+</script>
+<!-- Google Tag Manager for WordPress by DuracellTomi -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	dataLayer.push({"pagePostType":"post","pagePostType2":"single-post","pageCategory":["artigos-de-data-science"],"pagePostAuthor":"Cetax"});//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PPVNJ2K');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by DuracellTomi -->		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		      <meta name="onesignal" content="wordpress-plugin"/>
+          <link rel="manifest"
+            href="https://www.cetax.com.br/blog/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/manifest.json.php?gcm_sender_id="/>
+          <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>    <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://www.cetax.com.br/blog");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '948a25b9-357a-4de4-a3ef-04ca59c084ef';
+oneSignal_options['autoRegister'] = false;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "Bem-vindo(a)!";
+oneSignal_options['welcomeNotification']['message'] = "Agora você será ficará bem informado.";
+oneSignal_options['welcomeNotification']['url'] = "www.cetax.com.br/blog";
+oneSignal_options['path'] = "https://www.cetax.com.br/blog/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.570f8921-edd7-49b2-93d5-7301d9209087";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['promptOptions']['exampleNotificationTitleDesktop'] = 'Olá. Tem post novo!';
+oneSignal_options['promptOptions']['exampleNotificationMessageDesktop'] = 'Olá. Tem post novo!';
+oneSignal_options['promptOptions']['exampleNotificationTitleMobile'] = 'Olá. Tem post novo!';
+oneSignal_options['promptOptions']['exampleNotificationMessageMobile'] = 'Olá. Tem post novo!';
+oneSignal_options['promptOptions']['exampleNotificationCaption'] = 'Olá. Tem post novo!';
+oneSignal_options['promptOptions']['acceptButtonText'] = 'Continue';
+oneSignal_options['promptOptions']['cancelButtonText'] = 'Não, obrigado';
+oneSignal_options['promptOptions']['siteName'] = 'https://www.cetax.com.br/blog';
+oneSignal_options['promptOptions']['autoAcceptTitle'] = 'Clique em permitir';
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-right';
+oneSignal_options['notifyButton']['theme'] = 'inverse';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['prenotify'] = true;
+oneSignal_options['notifyButton']['showCredit'] = true;
+oneSignal_options['notifyButton']['text'] = {};
+oneSignal_options['notifyButton']['text']['message.prenotify'] = 'Clique para receber novos posts';
+oneSignal_options['notifyButton']['text']['tip.state.unsubscribed'] = 'Receba novos posts';
+oneSignal_options['notifyButton']['text']['tip.state.subscribed'] = 'Bem-vindo(a)! Agora você será ficará bem informado.';
+oneSignal_options['notifyButton']['text']['tip.state.blocked'] = 'Você está bloqueado para não receber mais novos posts.';
+oneSignal_options['notifyButton']['text']['message.action.subscribed'] = 'Agradecemos sua inscrição. ;)';
+oneSignal_options['notifyButton']['text']['message.action.resubscribed'] = 'Bem-vindo(a)! Agora você será ficará bem informado.';
+oneSignal_options['notifyButton']['text']['message.action.unsubscribed'] = 'Até mais. Você foi descadastrado.';
+oneSignal_options['notifyButton']['text']['dialog.main.title'] = 'Receba novos artigos, materiais, dicas e informações. ;)';
+oneSignal_options['notifyButton']['text']['dialog.main.button.subscribe'] = 'Cancelar inscrição';
+oneSignal_options['notifyButton']['text']['dialog.main.button.unsubscribe'] = 'Cancelar inscrição';
+oneSignal_options['notifyButton']['text']['dialog.blocked.title'] = 'Notificação bloqueada';
+oneSignal_options['notifyButton']['text']['dialog.blocked.message'] = 'Siga estas instruções para permitir notificações';
+              oneSignal_options['autoRegister'] = false;
+              OneSignal.showHttpPrompt();
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+
+		<style type="text/css" id="wp-custom-css">
+			.cursos-bi {
+    background: rgba(255, 213, 9, 0.96);
+}		</style>
+		</head>
+
+	<body class="post-template-default single single-post postid-25249 single-format-standard typology-header-wide">
+
+		<header id="typology-header" class="typology-header">
+			<div class="container">
+					<div class="slot-l">
+	<div class="typology-site-branding">
+	
+	<span class="site-title h4"><a href="https://www.cetax.com.br/blog/" rel="home"><img class="typology-logo" src="https://www.cetax.com.br/blog/wp-content/uploads/2017/10/logocetax1.fw_.png" alt="Blog Cetax"></a></span>	
+</div>
+	
+</div>
+
+<div class="slot-r">
+				<ul id="menu-menu" class="typology-nav typology-main-navigation"><li id="menu-item-25263" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25263"><a href="https://www.cetax.com.br/blog/artigos-de-bi/">BUSINESS INTELLIGENCE</a></li>
+<li id="menu-item-24930" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-24930"><a href="https://www.cetax.com.br/blog/artigos-de-big-data/">BIG DATA</a>
+<ul class="sub-menu">
+	<li id="menu-item-24932" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24932"><a href="https://www.cetax.com.br/blog/artigos-de-big-data/artigos-de-hadoop/">HADOOP</a></li>
+</ul>
+</li>
+<li id="menu-item-24933" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-24933"><a href="https://www.cetax.com.br/blog/artigos-de-data-science/">DATA SCIENCE</a></li>
+<li id="menu-item-24929" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24929"><a href="https://www.cetax.com.br/blog/noticias/">Notícias do mercado</a></li>
+<li id="menu-item-25752" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25752"><a href="https://www.cetax.com.br/blog/tutorial/">Tutorial</a></li>
+<li id="menu-item-24934" class="cursos-bi menu-item menu-item-type-custom menu-item-object-custom menu-item-24934"><a target="_blank" href="https://www.cetax.com.br/cursos-de-bi">CURSOS DE BI</a></li>
+</ul>			
+	<ul class="typology-nav ">
+	<li class="typology-action-button">
+		<span class="typology-action-sidebar">
+			<i class="fa fa-bars"></i>
+		</span>
+	</li>
+</ul></div>			</div>
+		</header>
+	
+			
+				<div id="typology-cover" class="typology-cover ">
+					<div class="typology-cover-item typology-cover-single ">
+
+		<div class="cover-item-container">
+		    <header class="entry-header">
+		        <h1 class="entry-title">A diferença entre ciência de dados e análise de dados</h1>		         
+	                <div class="entry-meta"><div class="meta-item meta-author">por: <span class="vcard author"><span class="fn"><a href="https://www.cetax.com.br/blog/author/cetax/">Cetax</a></span></span></div><div class="meta-item meta-category">em: <a href="https://www.cetax.com.br/blog/artigos-de-data-science/" rel="category tag">Artigos de Data Science</a></div><div class="meta-item meta-date"><span class="updated"></span></div><div class="meta-item meta-rtime">4 Minutos de leitura</div></div>
+	            		    </header>
+		    		</div>
+
+		
+	</div>
+
+		</div>
+		<div class="typology-fake-bg">
+			<div class="typology-section">
+
+				<div class="section-content">
+    <article id="post-25249" class="typology-post typology-single-post post-25249 post type-post status-publish format-standard has-post-thumbnail hentry category-artigos-de-data-science">
+
+                
+        <div class="entry-content clearfix">
+
+                            <img width="1920" height="1080" src="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/data-science-x-data-analytics.fw_.png" class="attachment-typology-a size-typology-a wp-post-image" alt="ciência de dados e análise de dados" srcset="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/data-science-x-data-analytics.fw_.png 1920w, https://www.cetax.com.br/blog/wp-content/uploads/2017/12/data-science-x-data-analytics.fw_-300x169.png 300w, https://www.cetax.com.br/blog/wp-content/uploads/2017/12/data-science-x-data-analytics.fw_-768x432.png 768w, https://www.cetax.com.br/blog/wp-content/uploads/2017/12/data-science-x-data-analytics.fw_-1024x576.png 1024w" sizes="(max-width: 1920px) 100vw, 1920px" />            
+            <h2><strong>Ciência de dados e análise de dados</strong></h2>
+<p>As pessoas que trabalham no campo tecnológico ou outras áreas relacionadas provavelmente ouvem esses termos o tempo todo, muitas vezes de forma intercambiável. No entanto, embora possam parecer semelhantes, os termos são geralmente bastante diferentes e têm implicações diferentes para as empresas. Saber usar os termos corretamente pode ter um grande impacto na forma como um negócio é executado, especialmente porque a quantidade de dados disponíveis cresce e se torna uma parte maior da nossa vida diária.</p>
+<h3></h3>
+<h3><strong>Ciência dos dados / Data science</strong></h3>
+<p>Tal como a ciência é um termo extensivo que inclui uma série de especialidades e ênfases, a <a href="https://www.cetax.com.br/blog/data-science/">ciência dos dados</a> é um termo amplo para uma variedade de modelos e métodos para obter informações. Sob o guarda-chuva da ciência dos dados, estão métodos de científicos, matemáticos, estatísticos e outras ferramentas que são usadas para analisar e manipular dados. Se é uma ferramenta ou processo feito para analise de dados, para ou obter algum tipo de informação, provavelmente se enquadra na ciência dos dados.</p>
+<p>A prática da ciência dos dados se resume a conectar informações e pontos de dados para encontrar conexões que possam ser úteis para o negócio. A ciência dos dados aprofunda o mundo do desconhecido tentando encontrar novos padrões e insights. Em vez de verificar uma hipótese, como o que normalmente é feito com a análise de dados, a ciência dos dados tenta construir conexões e planejar o futuro. A ciência dos dados geralmente move uma organização do inquérito para os insights, fornecendo uma nova perspectiva nos dados e como está tudo conectado que anteriormente não era visto ou conhecido.</p>
+<h3></h3>
+<h3><strong>Análise de dados | Data analytics</strong></h3>
+<p>Se a ciência dos dados é a casa que contém as ferramentas e os métodos, a <a href="https://www.cetax.com.br/blog/o-que-e-analytics/">análise de dados</a> é uma sala específica naquela casa. É relacionado e similar à ciência dos dados, mas mais específico e concentrado. A análise de dados geralmente é mais focada do que a ciência dos dados porque ao invés de apenas procurar conexões entre dados, os analistas de dados têm um objetivo específico ao considerar que eles estão ordenando dados para procurar formas de suporte. A análise de dados é muitas vezes automatizada para fornecer informações sobre certas áreas.</p>
+<p>A análise de dados envolve o penteamento de dados para encontrar nuggets de grandeza que podem ser usados ​​para ajudar a alcançar os objetivos de uma organização. Essencialmente, a análise classifica dados em coisas que as organizações sabem ou sabem que não conhecem e podem ser usadas para medir eventos no passado, no presente ou no futuro. A análise de dados geralmente move dados de insights para impactar conectando tendências e padrões com os verdadeiros objetivos da empresa e tende a ser um pouco mais focado em negócios e estratégias.</p>
+<h4><strong>Por que isso importa?</strong></h4>
+<p>As diferenças aparentemente nuançadas entre ciência de dados e análise de dados podem realmente ter um grande impacto em uma empresa. Para começar, os cientistas de dados e os analistas de dados desempenham diferentes funções e, muitas vezes, têm diferentes origens, por isso, poder usar os termos corretamente ajuda as empresas a contratar as pessoas certas para as tarefas que eles têm em mente. A análise de dados e a ciência dos dados podem ser usadas para encontrar coisas diferentes e, embora ambas sejam úteis para as empresas, ambas não serão usadas em todas as situações. A análise de dados é frequentemente utilizada em indústrias como cuidados de saúde, jogos e viagens, enquanto a ciência dos dados é comum nas pesquisas na Internet e na publicidade digital.</p>
+<p>A ciência dos dados também está desempenhando um papel crescente e muito importante no desenvolvimento da inteligência artificial e da aprendizagem por máquinas. Muitas empresas estão se voltando para sistemas que permitem que eles usem computadores para peneirar grandes quantidades de dados, como em sistemas flash corporativos, usando algoritmos para encontrar as conexões que ajudarão suas organizações a atingir seus objetivos. O aprendizado de máquinas tem imenso potencial em várias indústrias e, sem dúvida, desempenhará um papel importante na forma como as empresas são executadas no futuro. Por isso, é vital que as organizações e os funcionários saibam a diferença entre ciência de dados e análise de dados e o papel que cada disciplina desempenha.</p>
+<p>Embora as diferenças existam, a ciência dos dados e a análise de dados são partes importantes do futuro do trabalho e dos dados. Ambos os termos devem ser abraçados por empresas que querem liderar o caminho para a mudança tecnológica e com sucesso a compreensão dos dados que fazem suas organizações funcionarem.</p>
+
+                        
+            
+        </div>
+
+        	
+	
+		<div class="typology-social-icons">
+							<a href="javascript:void(0);" class="typology-facebook typology-share-item hover-on" data-url="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cetax.com.br%2Fblog%2Fciencia-de-dados-e-analise-de-dados%2F&amp;t=A+diferen%C3%A7a+entre+ci%C3%AAncia+de+dados+e+an%C3%A1lise+de+dados"><i class="fa fa-facebook"></i></a>							<a href="javascript:void(0);" class="typology-twitter typology-share-item hover-on" data-url="http://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.cetax.com.br%2Fblog%2Fciencia-de-dados-e-analise-de-dados%2F&amp;text=A+diferen%C3%A7a+entre+ci%C3%AAncia+de+dados+e+an%C3%A1lise+de+dados"><i class="fa fa-twitter"></i></a>							<a href="javascript:void(0);"  class="typology-reddit typology-share-item hover-on" data-url="http://www.reddit.com/submit?url=https%3A%2F%2Fwww.cetax.com.br%2Fblog%2Fciencia-de-dados-e-analise-de-dados%2F&amp;title=A+diferen%C3%A7a+entre+ci%C3%AAncia+de+dados+e+an%C3%A1lise+de+dados"><i class="fa fa-reddit-alien"></i></a>							<a href="mailto:?subject=A+diferen%C3%A7a+entre+ci%C3%AAncia+de+dados+e+an%C3%A1lise+de+dados&amp;body=https%3A%2F%2Fwww.cetax.com.br%2Fblog%2Fciencia-de-dados-e-analise-de-dados%2F" class="typology-mailto hover-on"><i class="fa fa-envelope-o"></i></a>							<a href="javascript:void(0);"  class="typology-gplus typology-share-item hover-on" data-url="https://plus.google.com/share?url=https%3A%2F%2Fwww.cetax.com.br%2Fblog%2Fciencia-de-dados-e-analise-de-dados%2F"><i class="fa fa-google-plus"></i></a>							<a href="javascript:void(0);"  class="typology-linkedin typology-share-item hover-on" data-url="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.cetax.com.br/blog/ciencia-de-dados-e-analise-de-dados/&amp;title=A diferença entre ciência de dados e análise de dados"><i class="fa fa-linkedin"></i></a>					</div>
+
+	
+    </article>
+</div>
+				
+	<div class="section-head"><h3 class="section-title h6">Sobre o autor</h3></div>		
+	<div class="section-content typology-author">
+			
+		<div class="container">
+
+			<div class="col-lg-2">
+				<img alt='' src='https://secure.gravatar.com/avatar/fa1ae6ac80a49d74aad3a1de3338522d?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/fa1ae6ac80a49d74aad3a1de3338522d?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' />			</div>
+
+			<div class="col-lg-10">
+
+				<h5 class="typology-author-box-title">Cetax</h5>
+				<div class="typology-author-desc">
+					<p>Somos uma consultoria de Business Intelligence e Data Warehousing que atua desde 2000, guiando as empresas a transformar seus dados em valiosas informações que transformam os seus negócios.</p>
+				</div>
+
+				<div class="typology-author-links">
+					<a class="typology-button-social hover-on" href="https://www.cetax.com.br/blog/author/cetax/">Ver todos os posts</a><a href="http://www.cetax.com.br" target="_blank" class="typology-icon-social hover-on fa fa-link"></a><a href="https://www.facebook.com/CetaxConsultoria/" target="_blank" class="typology-icon-social hover-on fa fa-facebook"></a>				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+				
+	
+				
+				
+		<div class="section-head"><h3 class="section-title h6">Comentar</h3></div>
+		<div id="comments" class="section-content typology-comments">
+
+				<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/ciencia-de-dados-e-analise-de-dados/#respond" style="display:none;">Cancelar resposta</a></small></h3>			<form action="https://www.cetax.com.br/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-form-comment"><label for="comment">Comente</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p><p class="comment-form-author"><label for="author">Nome<span class="required"> *</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email<span class="required"> *</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">site</label><input id="url" name="url" type="text" value="" size="30" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Comentar " /> <input type='hidden' name='comment_post_ID' value='25249' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+				
+			
+		</div>
+
+
+			</div>
+
+		
+	
+	
+		<div class="typology-section typology-section-related">
+
+			<div class="section-head"><h3 class="section-title h6">Leia mais</h3></div>
+			
+			<div class="section-content section-content-b">
+
+				<div class="typology-posts">
+
+											<article class="typology-post typology-layout-b post-24917 post type-post status-publish format-standard has-post-thumbnail hentry category-artigos-de-bi category-artigos-de-big-data category-artigos-de-data-science tag-analytics tag-bi tag-big-data tag-business-intelligence tag-ciencia-de-dados tag-data-warehouse tag-dw">
+
+    <header class="entry-header">
+        <div class="post-date-hidden"></div>
+        <h2 class="entry-title"><a href="https://www.cetax.com.br/blog/diferenca-bi-dw-data-science-big-data/">Diferença entre Business Intelligence, Data Warehouse, Data Science e Big Data</a></h2>          
+            <div class="entry-meta"><div class="meta-item meta-author">por: <span class="vcard author"><span class="fn"><a href="https://www.cetax.com.br/blog/author/douglas-godoi/">Douglas Godoi</a></span></span></div><div class="meta-item meta-rtime">11 Minutos de leitura</div></div>
+                        <div class="post-date">
+                    </div>
+    </header>
+
+    <div class="entry-content">
+                    <a href="https://www.cetax.com.br/blog/diferenca-bi-dw-data-science-big-data/" class="typology-featured-image"><img width="921" height="500" src="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/DIFERENÇA-ENTRE-BUSINESS-INTELLIGENCE-DATA-WAREHOUSE-DATA-SCIENCE-E-BIG-DATA.png" class="attachment-typology-b size-typology-b wp-post-image" alt="DIFERENÇA ENTRE BUSINESS INTELLIGENCE, DATA WAREHOUSE, DATA SCIENCE E BIG DATA" srcset="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/DIFERENÇA-ENTRE-BUSINESS-INTELLIGENCE-DATA-WAREHOUSE-DATA-SCIENCE-E-BIG-DATA.png 921w, https://www.cetax.com.br/blog/wp-content/uploads/2017/12/DIFERENÇA-ENTRE-BUSINESS-INTELLIGENCE-DATA-WAREHOUSE-DATA-SCIENCE-E-BIG-DATA-300x163.png 300w, https://www.cetax.com.br/blog/wp-content/uploads/2017/12/DIFERENÇA-ENTRE-BUSINESS-INTELLIGENCE-DATA-WAREHOUSE-DATA-SCIENCE-E-BIG-DATA-768x417.png 768w" sizes="(max-width: 921px) 100vw, 921px" /></a>
+                            <p>Business Intelligence, Data Warehouse, Data Science &amp; Big Data Pode parecer um pouco confuso compreender qual o papel de cada peça, e saber como montá-las num quebra-cabeça que faça sentido. Mas, na verdade, compreender os conceitos de Business Intelligence, Data Warehouse, Data Science e Big Data, fica mais claro quando entendemos quatro palavrinhas e como elas podem trabalhar juntas. &nbsp;...</p>
+            </div>
+    
+</article>											<article class="typology-post typology-layout-b post-25274 post type-post status-publish format-standard has-post-thumbnail hentry category-artigos-de-bi category-artigos-de-big-data category-artigos-de-data-science tag-analise-de-dados tag-analytics tag-bi tag-big-data tag-business-intelligence tag-data-analytics tag-data-mining tag-mineracao-de-dados">
+
+    <header class="entry-header">
+        <div class="post-date-hidden"></div>
+        <h2 class="entry-title"><a href="https://www.cetax.com.br/blog/business-intelligence-vs-analytics-vs-big-data-vs-data-mining/">Definição de Business Intelligence, Analytics, Big Data e Data Mining</a></h2>          
+            <div class="entry-meta"><div class="meta-item meta-author">por: <span class="vcard author"><span class="fn"><a href="https://www.cetax.com.br/blog/author/cetax/">Cetax</a></span></span></div><div class="meta-item meta-rtime">5 Minutos de leitura</div><div class="meta-item meta-comments"><a href="https://www.cetax.com.br/blog/business-intelligence-vs-analytics-vs-big-data-vs-data-mining/#respond">Comentar</a></div></div>
+                        <div class="post-date">
+                    </div>
+    </header>
+
+    <div class="entry-content">
+                    <a href="https://www.cetax.com.br/blog/business-intelligence-vs-analytics-vs-big-data-vs-data-mining/" class="typology-featured-image"><img width="876" height="425" src="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/Definição-de-Business-Intelligence-Analytics-Big-Data-e-Data-Mining.jpg" class="attachment-typology-b size-typology-b wp-post-image" alt="" srcset="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/Definição-de-Business-Intelligence-Analytics-Big-Data-e-Data-Mining.jpg 876w, https://www.cetax.com.br/blog/wp-content/uploads/2017/12/Definição-de-Business-Intelligence-Analytics-Big-Data-e-Data-Mining-300x146.jpg 300w, https://www.cetax.com.br/blog/wp-content/uploads/2017/12/Definição-de-Business-Intelligence-Analytics-Big-Data-e-Data-Mining-768x373.jpg 768w" sizes="(max-width: 876px) 100vw, 876px" /></a>
+                            <p>A paisagem da tecnologia empresarial mudou tão rápido ultimamente que, se você virar sua cabeça por um momento e depois voltar, você pode não reconhecer o que está vendo. Os avanços nos mercados de software mobile e serviços em nuvem, nos últimos anos, abriram o caminho para um tipo de relacionamento totalmente novo entre TI e perfis ligados a negócios. Um resultado dessa mudança rápida é que as...</p>
+            </div>
+    
+</article>											<article class="typology-post typology-layout-b post-25270 post type-post status-publish format-standard has-post-thumbnail hentry category-artigos-de-big-data category-artigos-de-data-science tag-analista-big-data tag-analista-de-dados tag-analytics tag-aprendizagem-de-maquina tag-big-data tag-cientista-de-dados tag-data-analytics tag-data-science tag-machine-learning">
+
+    <header class="entry-header">
+        <div class="post-date-hidden"></div>
+        <h2 class="entry-title"><a href="https://www.cetax.com.br/blog/data-science-vs-big-data-vs-data-analytics/">Diferença entre Data Science, Big Data &#038; Data Analytics</a></h2>          
+            <div class="entry-meta"><div class="meta-item meta-author">por: <span class="vcard author"><span class="fn"><a href="https://www.cetax.com.br/blog/author/cetax/">Cetax</a></span></span></div><div class="meta-item meta-rtime">6 Minutos de leitura</div><div class="meta-item meta-comments"><a href="https://www.cetax.com.br/blog/data-science-vs-big-data-vs-data-analytics/#respond">Comentar</a></div></div>
+                        <div class="post-date">
+                    </div>
+    </header>
+
+    <div class="entry-content">
+                    <a href="https://www.cetax.com.br/blog/data-science-vs-big-data-vs-data-analytics/" class="typology-featured-image"><img width="1280" height="720" src="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/big-data-data-science-data-analytics.jpg" class="attachment-typology-b size-typology-b wp-post-image" alt="" srcset="https://www.cetax.com.br/blog/wp-content/uploads/2017/12/big-data-data-science-data-analytics.jpg 1280w, https://www.cetax.com.br/blog/wp-content/uploads/2017/12/big-data-data-science-data-analytics-300x169.jpg 300w, https://www.cetax.com.br/blog/wp-content/uploads/2017/12/big-data-data-science-data-analytics-768x432.jpg 768w, https://www.cetax.com.br/blog/wp-content/uploads/2017/12/big-data-data-science-data-analytics-1024x576.jpg 1024w" sizes="(max-width: 1280px) 100vw, 1280px" /></a>
+                            <p>Os dados estão em toda parte. Na verdade, a quantidade de dados digitais que existe está crescendo rapidamente &#8211; de fato, mais de 2,7 zettabytes de dados existem no universo digital de hoje, e isso deverá crescer para 180 zettabytes em 2025. Todos esses dados &#8211; da suas fotos até as finanças da bolsa de valores &#8211; começaram a ser analisados ​​para obter insights que podem ajudar...</p>
+            </div>
+    
+</article>											<article class="typology-post typology-layout-b post-24639 post type-post status-publish format-standard has-post-thumbnail hentry category-artigos-de-data-science category-artigos-de-machine-learning">
+
+    <header class="entry-header">
+        <div class="post-date-hidden"></div>
+        <h2 class="entry-title"><a href="https://www.cetax.com.br/blog/0-algoritmos-de-aprendizagem-de-maquina-que-os-engenheiros-precisam-de-conhecer/">10 Algoritmos de Aprendizagem de Máquina que os engenheiros precisam conhecer</a></h2>          
+            <div class="entry-meta"><div class="meta-item meta-author">por: <span class="vcard author"><span class="fn"><a href="https://www.cetax.com.br/blog/author/sara-filipa/">Sara Filipa</a></span></span></div><div class="meta-item meta-rtime">9 Minutos de leitura</div></div>
+                        <div class="post-date">
+                    </div>
+    </header>
+
+    <div class="entry-content">
+                    <a href="https://www.cetax.com.br/blog/0-algoritmos-de-aprendizagem-de-maquina-que-os-engenheiros-precisam-de-conhecer/" class="typology-featured-image"><img width="1040" height="508" src="https://www.cetax.com.br/blog/wp-content/uploads/2017/10/Image-uploaded-from-iOS-1.jpg" class="attachment-typology-b size-typology-b wp-post-image" alt="Algoritmos de Aprendizagem de Máquina" srcset="https://www.cetax.com.br/blog/wp-content/uploads/2017/10/Image-uploaded-from-iOS-1.jpg 1040w, https://www.cetax.com.br/blog/wp-content/uploads/2017/10/Image-uploaded-from-iOS-1-300x147.jpg 300w, https://www.cetax.com.br/blog/wp-content/uploads/2017/10/Image-uploaded-from-iOS-1-768x375.jpg 768w, https://www.cetax.com.br/blog/wp-content/uploads/2017/10/Image-uploaded-from-iOS-1-1024x500.jpg 1024w" sizes="(max-width: 1040px) 100vw, 1040px" /></a>
+                            <p>Não há dúvida de que o sub-campo da aprendizagem mecânica/inteligência artificial ganhou cada vez mais popularidade nos últimos dois anos. Como Big Data é a tendência mais quente na indústria de tecnologia neste momento, a aprendizagem de máquinas é incrivelmente poderosa para fazer previsões ou sugestões calculadas com base em grandes quantidades de dados. Alguns dos exemplos mais comuns de...</p>
+            </div>
+    
+</article>									
+				</div>
+			</div>
+		
+		</div>
+
+	
+	
+
+	
+
+	<div id="typology-single-sticky" class="typology-single-sticky">
+		
+		<div class="typology-sticky-content meta">
+			
+<div class="typology-flex-center">
+	<div class="typology-sticky-author typology-sticky-l">
+		<img alt='' src='https://secure.gravatar.com/avatar/fa1ae6ac80a49d74aad3a1de3338522d?s=50&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/fa1ae6ac80a49d74aad3a1de3338522d?s=100&#038;d=mm&#038;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' />		<span class="sticky-author-title">
+			<a href="https://www.cetax.com.br/blog/author/cetax/">por: Cetax</a> 
+			<span class="sticky-author-date"></span>
+		</span>
+	</div>
+	<div class="typology-sticky-c">
+		
+	</div>
+
+	<div class="typology-sticky-comments typology-sticky-r">
+							<a href="https://www.cetax.com.br/blog/ciencia-de-dados-e-analise-de-dados/#respond"><i class="fa fa-comments-o"></i>Comentar</a>			</div>
+
+</div>
+		</div>
+
+		<div class="typology-sticky-content prev-next">
+			<nav class="typology-prev-next-nav typology-flex-center">
+	
+	
+<div class="typology-prev-link typology-sticky-l">	
+				
+			<a href="https://www.cetax.com.br/blog/data-science-vs-big-data-vs-data-analytics/">
+				<span class="typology-pn-ico"><i class="fa fa fa-chevron-left"></i></span>
+				<span class="typology-pn-link">Diferença entre Data Science, Big Data &#038; Data Analytics</span>
+			</a>
+	</div>
+	
+	<a href="javascript: void(0);" class="typology-sticky-to-top typology-sticky-c">
+			<span class="typology-top-ico"><i class="fa fa fa-chevron-up"></i></span>
+			<span class="typology-top-link">To Top</span>
+	</a>
+
+<div class="typology-next-link typology-sticky-r">	
+		
+			<a href="https://www.cetax.com.br/blog/0-algoritmos-de-aprendizagem-de-maquina-que-os-engenheiros-precisam-de-conhecer/">
+				<span class="typology-pn-ico"><i class="fa fa fa-chevron-right"></i></span>
+				<span class="typology-pn-link">10 Algoritmos de Aprendizagem de Máquina que os engenheiros precisam conhecer</span>
+			</a>
+			</div>
+</nav>
+
+		</div>
+	</div>
+
+
+			<footer id="typology-footer" class="typology-footer">
+
+				<div class="container">
+					
+											<div class="col-lg-4"><div id="text-2" class="widget clearfix widget_text">			<div class="textwidget"><div style="text-align: center">
+<img style="width: 111px; margin-bottom: 10px" src="https://cetax.com.br/blog/wp-content/uploads/2017/10/logo-cetax-1.png" alt="Cetax Consultoria"/>
+<p>Blog | Cetax Consultoria e Treinamentos</a> <br/> Todos os Direitos Reservados.</p>
+</div></div>
+		</div></div>
+					
+									</div>
+
+			</footer>
+
+		</div>
+
+		<div class="typology-sidebar">
+	<div class="typology-sidebar-header">
+		<div class="typology-sidebar-header-wrapper">
+			<div class="typology-site-branding">
+	
+	<span class="site-title h4"><a href="https://www.cetax.com.br/blog/" rel="home"><img class="typology-logo" src="https://www.cetax.com.br/blog/wp-content/uploads/2017/10/logocetax1.fw_.png" alt="Blog Cetax"></a></span>	
+</div>
+			<span class="typology-sidebar-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+		</div>
+	</div>
+
+	<div class="widget typology-responsive-menu">
+					<ul id="menu-menu-1" class="typology-nav typology-main-navigation"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25263"><a href="https://www.cetax.com.br/blog/artigos-de-bi/">BUSINESS INTELLIGENCE</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-24930"><a href="https://www.cetax.com.br/blog/artigos-de-big-data/">BIG DATA</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24932"><a href="https://www.cetax.com.br/blog/artigos-de-big-data/artigos-de-hadoop/">HADOOP</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-24933"><a href="https://www.cetax.com.br/blog/artigos-de-data-science/">DATA SCIENCE</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24929"><a href="https://www.cetax.com.br/blog/noticias/">Notícias do mercado</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25752"><a href="https://www.cetax.com.br/blog/tutorial/">Tutorial</a></li>
+<li class="cursos-bi menu-item menu-item-type-custom menu-item-object-custom menu-item-24934"><a target="_blank" href="https://www.cetax.com.br/cursos-de-bi">CURSOS DE BI</a></li>
+</ul>		</div>
+
+							<div id="search-2" class="widget clearfix widget_search"><form class="typology-search-form" action="https://www.cetax.com.br/blog/" method="get">
+	<input name="s" type="text" value="" placeholder="Digite aqui para pesquisar" />
+	<button type="submit" class="typology-button typology-button-search typology-icon-button">Pesquisa</button> 
+	</form></div>		<div id="recent-posts-2" class="widget clearfix widget_recent_entries">		<h4 class="widget-title h5">Posts recentes</h4>		<ul>
+											<li>
+					<a href="https://www.cetax.com.br/blog/instalando-power-bi-desktop/">Power BI Desktop &#8211; Instalando a Ferramenta</a>
+									</li>
+											<li>
+					<a href="https://www.cetax.com.br/blog/tutorial-pyspark-e-mllib/">Tutorial Pyspark e MLlib</a>
+									</li>
+											<li>
+					<a href="https://www.cetax.com.br/blog/como-criar-seu-primeiro-dataflow-com-apache-nifi/">Como criar seu primeiro DataFlow com Apache NiFi</a>
+									</li>
+											<li>
+					<a href="https://www.cetax.com.br/blog/hbase-criando-e-persistindo-valores-via-phoenix/">HBase &#8211; Criando e persistindo valores via Phoenix</a>
+									</li>
+											<li>
+					<a href="https://www.cetax.com.br/blog/incorporacao-de-documentos-com-vetores-de-paragrafos/">Incorporação de documentos com vetores de parágrafos</a>
+									</li>
+					</ul>
+		</div><div id="recent-comments-2" class="widget clearfix widget_recent_comments"><h4 class="widget-title h5">Comentários</h4><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='http://crbtech.in/DBA/apache-nifi-overview/' rel='external nofollow' class='url'>amar</a></span> em <a href="https://www.cetax.com.br/blog/como-criar-seu-primeiro-dataflow-com-apache-nifi/#comment-41">Como criar seu primeiro DataFlow com Apache NiFi</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://www.cetax.com.br/business-intelligence-bi/' rel='external nofollow' class='url'>Business Intelligence - BI, o que é ? | Blog Cetax Consultoria de BI</a></span> em <a href="https://www.cetax.com.br/blog/quem-e-ralph-kimball/#comment-27">Quem é Ralph Kimball?</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://www.cetax.com.br/big-data/' rel='external nofollow' class='url'>Saiba o que é Big Data | Blog Cetax Consultoria de BI</a></span> em <a href="https://www.cetax.com.br/blog/tudo-sobre-o-apache-cassandra/#comment-35">Tudo sobre o Apache Cassandra</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://www.cetax.com.br/big-data/' rel='external nofollow' class='url'>Saiba o que é Big Data | Blog Cetax Consultoria de BI</a></span> em <a href="https://www.cetax.com.br/blog/apache-hadoop/#comment-32">Apache Hadoop: O que é, conceito e definição</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://www.cetax.com.br/aula-de-introducao-analista-de-bi-microsoft/' rel='external nofollow' class='url'>Formação Analista de BI Microsoft | Cetax</a></span> em <a href="https://www.cetax.com.br/blog/dw-data-warehousing/#comment-31">Data Warehousing DW</a></li></ul></div><div id="archives-2" class="widget clearfix widget_archive"><h4 class="widget-title h5">Arquivos</h4>		<ul>
+			<li><a href='https://www.cetax.com.br/blog/2018/09/'>setembro 2018</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2018/03/'>março 2018</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2017/12/'>dezembro 2017</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2017/11/'>novembro 2017</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2017/10/'>outubro 2017</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2017/07/'>julho 2017</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2017/01/'>janeiro 2017</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2016/12/'>dezembro 2016</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2016/11/'>novembro 2016</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2016/10/'>outubro 2016</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2016/09/'>setembro 2016</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2016/08/'>agosto 2016</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2016/07/'>julho 2016</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2016/06/'>junho 2016</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2016/05/'>maio 2016</a></li>
+	<li><a href='https://www.cetax.com.br/blog/2016/04/'>abril 2016</a></li>
+		</ul>
+		</div><div id="categories-2" class="widget clearfix widget_categories"><h4 class="widget-title h5">Categorias</h4>		<ul>
+	<li class="cat-item cat-item-120"><a href="https://www.cetax.com.br/blog/artigos-de-bi/" >Artigos de BI</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="https://www.cetax.com.br/blog/artigos-de-big-data/" >Artigos de Big Data</a>
+</li>
+	<li class="cat-item cat-item-102"><a href="https://www.cetax.com.br/blog/artigos-de-data-science/" >Artigos de Data Science</a>
+</li>
+	<li class="cat-item cat-item-108"><a href="https://www.cetax.com.br/blog/artigos-de-bi/artigos-de-data-warehouse/" >Artigos de Data Warehouse</a>
+</li>
+	<li class="cat-item cat-item-121"><a href="https://www.cetax.com.br/blog/artigos-de-bi/etl/" >Artigos de ETL</a>
+</li>
+	<li class="cat-item cat-item-48"><a href="https://www.cetax.com.br/blog/artigos-de-big-data/artigos-de-hadoop/" >Artigos de Hadoop</a>
+</li>
+	<li class="cat-item cat-item-114"><a href="https://www.cetax.com.br/blog/artigos-de-data-science/artigos-de-inteligencia-artificial/" >Artigos de Inteligência Artificial</a>
+</li>
+	<li class="cat-item cat-item-105"><a href="https://www.cetax.com.br/blog/artigos-de-data-science/artigos-de-machine-learning/" >Artigos de Machine Learning</a>
+</li>
+	<li class="cat-item cat-item-111"><a href="https://www.cetax.com.br/blog/artigos-de-bi/artigos-de-modelagem-de-dados/" >Artigos de Modelagem de Dados</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="https://www.cetax.com.br/blog/tecnicas/" >Dicas e Técnicas</a>
+</li>
+	<li class="cat-item cat-item-66"><a href="https://www.cetax.com.br/blog/downloads/" >Downloads</a>
+</li>
+	<li class="cat-item cat-item-142"><a href="https://www.cetax.com.br/blog/tutorial/hadoop/" >Hadoop</a>
+</li>
+	<li class="cat-item cat-item-133"><a href="https://www.cetax.com.br/blog/linguagem-de-programacao/" >Linguagem de Programação</a>
+</li>
+	<li class="cat-item cat-item-45"><a href="https://www.cetax.com.br/blog/noticias/" >Notícias do mercado</a>
+</li>
+	<li class="cat-item cat-item-157"><a href="https://www.cetax.com.br/blog/power-bi/" >Power BI</a>
+</li>
+	<li class="cat-item cat-item-140"><a href="https://www.cetax.com.br/blog/tutorial/" >Tutorial</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.cetax.com.br/blog/uncategorized/" >Uncategorized</a>
+</li>
+		</ul>
+</div><div id="meta-2" class="widget clearfix widget_meta"><h4 class="widget-title h5">Meta</h4>			<ul>
+						<li><a rel="nofollow" href="https://www.cetax.com.br/blog/wp-login.php">Acessar</a></li>
+			<li><a href="https://www.cetax.com.br/blog/feed/">Posts <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://www.cetax.com.br/blog/comments/feed/"><abbr title="em inglês: Really Simple Syndication">RSS</abbr> dos comentários</a></li>
+			<li><a href="https://br.wordpress.org/" title="Desenvolvido com WordPress, uma plataforma semântica de vanguarda para publicação pessoal.">WordPress.org</a></li>			</ul>
+			</div>			
+</div>
+
+<div class="typology-sidebar-overlay"></div>		
+				<script type="text/javascript">
+							jQuery("#post-25249 .entry-meta .date").css("display","none");
+					jQuery("#post-25249 .entry-date").css("display","none");
+					jQuery("#post-25249 .posted-on").css("display","none");
+							jQuery("#post-24917 .entry-meta .date").css("display","none");
+					jQuery("#post-24917 .entry-date").css("display","none");
+					jQuery("#post-24917 .posted-on").css("display","none");
+							jQuery("#post-25274 .entry-meta .date").css("display","none");
+					jQuery("#post-25274 .entry-date").css("display","none");
+					jQuery("#post-25274 .posted-on").css("display","none");
+							jQuery("#post-25270 .entry-meta .date").css("display","none");
+					jQuery("#post-25270 .entry-date").css("display","none");
+					jQuery("#post-25270 .posted-on").css("display","none");
+							jQuery("#post-24639 .entry-meta .date").css("display","none");
+					jQuery("#post-24639 .entry-date").css("display","none");
+					jQuery("#post-24639 .posted-on").css("display","none");
+				</script>
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPVNJ2K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script type='text/javascript'>
+/* <![CDATA[ */
+var MegamenuWp = {"ajax_url":"https:\/\/www.cetax.com.br\/blog\/wp-admin\/admin-ajax.php","loading_icon":"<div class=\"mega-spinner\"><div class=\"uil-squares-css\" style=\"transform:scale(0.4);\"><div><div><\/div><\/div><div><div><\/div><\/div><div><div><\/div><\/div><div><div><\/div><\/div><div><div><\/div><\/div><div><div><\/div><\/div><div><div><\/div><\/div><div><div><\/div><\/div><\/div><\/div>","theme_support":{"mobile_mod":720,"disable_auto_css":0,"disable_css":0,"parent_level":0,"content_right":0,"content_left":0,"margin_top":0,"animation":"","child_li":"","ul_css":"","li_css":""},"mega_parent_level":"0","mega_content_left":"0","mega_content_right":"0","animation":"shift-up"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cetax.com.br/blog/wp-content/plugins/easymega/assets/js/megamenu-wp.js?ver=1.0.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.cetax.com.br\/blog\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Verifique se voc\u00ea n\u00e3o \u00e9 um rob\u00f4."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cetax.com.br/blog/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.4'></script>
+<script type='text/javascript' src='https://www.cetax.com.br/blog/wp-includes/js/comment-reply.min.js?ver=4.9.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var typology_js_settings = {"rtl_mode":"","header_sticky":"1","logo":"https:\/\/www.cetax.com.br\/blog\/wp-content\/uploads\/2017\/10\/logocetax1.fw_.png","logo_retina":"https:\/\/www.cetax.com.br\/blog\/wp-content\/uploads\/2017\/10\/logocetax2.fw_.png","use_gallery":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cetax.com.br/blog/wp-content/themes/typology/assets/js/min.js?ver=1.0'></script>
+<script type='text/javascript' src='https://www.cetax.com.br/blog/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+
+	</body>
+</html>

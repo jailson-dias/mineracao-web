@@ -1,0 +1,414 @@
+
+
+    
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valor Econômico | Eleições 2018  - Propostas dos presidenciais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Eleições 2018">
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://www.valor.com.br/eleicoes-2018/propostas">
+    <meta property="og:title" content="Eleições 2018">
+    <meta property="og:Site_name" content="Valor Econômico">
+    <meta property="og:Description" content="Eleições 2018">
+    <meta property="og:image" content="https://www.valor.com.br/sites/default/files/especial_valor/eleicoes_2018.png">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="487">
+    <meta property="og:image:height" content="255">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@valor_economico" />
+    <meta name="twitter:title" content="Eleições 2018" />
+    <meta name="twitter:description" content="Eleições 2018" />
+    <meta name="twitter:image:src" content="https://www.valor.com.br/sites/default/files/especial_valor/eleicoes_2018.png"/>
+    
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="/sites/all/modules/custom/valor_eleicoes2018/modules/pesquisas_eleitorais_2018/css/materializeNew.css"/>
+    <link rel="stylesheet" href="/sites/all/modules/custom/valor_especiais/modules/especial_dicionario/fonts/style-icon.css"/>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="/sites/all/modules/custom/valor_eleicoes2018/modules/pesquisas_eleitorais_2018/css/style.css"/>
+    
+
+    <script type="text/javascript" src="/sites/all/modules/custom/valor_eleicoes2016/modules/pesquisas_eleirorais_2016/js/jquery.animateNumber.min.js"></script>
+    <script type="text/javascript" src="/sites/all/modules/custom/valor_especial15anos/js/highcharts.js"></script>
+    <script type="text/javascript" src="/sites/all/modules/custom/valor_eleicoes2018/modules/pesquisas_eleitorais_2018/js/jquery.waypoints.min.js"></script>
+       
+    
+ 				<script type='text/javascript' src='/sites/all/themes/basic/js/advertisement.js' ></script>
+
+     				<script type='text/javascript' src='/sites/all/modules/custom/valor_analytics/js/AdBlockDetection/adblockDetectorWithGA.js'></script>
+ 				<script type='text/javascript' src='/sites/all/modules/custom/valor_analytics/js/AdBlockDetection/scriptForGA.js'></script>
+    <script type="text/javascript" src="/sites/all/modules/custom/valor_analytics/js/analytics_functions.js"></script>
+    <script type="text/javascript" src="/sites/all/modules/custom/valor_analytics/js/valor_analytics.js"></script>
+
+    <link rel="stylesheet" href="/sites/all/modules/custom/valor_globo/css/barra-globocom.min.css"/>
+    <script type="text/javascript" src="/sites/all/modules/custom/valor_globo/js/barra_globo.js"></script>
+
+    <script type="text/javascript" charset="utf-8" async defer>
+    
+	</script>
+</head>
+<body>
+                <script type="text/javascript">
+//        verifica se o usuário é um assinante
+        assinante = ($.cookie('Xt0aE3mT_u') && $.cookie('Xt0aE3mT_u').indexOf('55feb')) == 0 ? 1 : 0
+
+//        verifica se o usuário esta logado
+        logado = $.cookie('Xt0aE3mT_u') && $.cookie('Xt0aE3mT_u').length > 0 ? 1 : 0
+
+//        verifica se é uma publicidade nativa
+        publ_nativa = $('body').hasClass('type-conteudo_patrocinado') ? 1 : 0;
+		
+//        verifica se é matéria fechada		
+		materia_fechada = $('body').hasClass('noticia-fechada') ? 1 : 0;
+
+            var utag_data = {
+                produto: "Valor",
+                tipo_pagina: "Array",
+                id_conteudo: "",
+                editoria: "eleicoes-2018/propostas",
+                tags: [],
+                suplemento: "",
+                publ_nativa: publ_nativa,
+                publieditorial: "0",
+                newsletter: "",
+                origem: "",
+                assinante: assinante,
+                logado: logado,
+                materia_fechada: materia_fechada,
+                pageLevelTargeting: {"ognCluster":[]}
+            }
+        </script>
+
+        <!-- Loading script synchronously -->
+       <script type="text/javascript" src="https://tags.tiqcdn.com/utag/globo/valor/prod/utag.js"></script>
+        
+        <!-- Script para funcionamento do banner fixo-->
+    <script type="text/javascript">
+        var bannerTopVisivel = false;
+        googletag.cmd.push(function() {
+        if ($('body').hasClass("version-mobile")) { //tratamento para banner fixo no mobile
+           googletag.pubads().addEventListener('impressionViewable', function(event) {
+           if (event.slot.getSlotElementId() == "pub-fullbanner") {
+              if (!event.isEmpty) {
+                bannerTopVisivel = true;
+                bannerAdsTealiumMobileFloat();
+              };
+           }
+         });
+        } else { //tratamento para banner fixo desktop
+            googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+                if (event.slot.getSlotElementId() == "pub-superbanner") {
+                    if (!event.isEmpty) {
+                      bannerAdsTealiumFloat();
+                    };
+               }
+            });
+            
+             /*
+             verifica o tamanho da div da publicidade intext para corrigir problemas
+             de espaços em branco adicionados pelos scripts de publicidade
+            */
+            if ($("body").hasClass("type-noticia") || $("body").hasClass("type-noticia_impresso")) {
+                setInterval(function() {
+                    if ($("#pub-inread, #Publicidade_Intext").next().height() > 0){
+                        $(" #pub-inread, #Publicidade_Intext").next().addClass("margin-intext");
+                    } else {
+                        $("#pub-inread, #Publicidade_Intext").next().removeClass("margin-intext");
+                    }
+                },100);
+            }
+        }
+        });
+    </script>
+        
+		<!-- Google Tag Manager -->
+		<noscript>
+			<iframe src="//www.googletagmanager.com/ns.html?id=GTM-TX6LSD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+
+		<script>
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-TX6LSD');
+		</script>
+		<!-- End Google Tag Manager -->
+	<section class="bg-bar-logo">
+    <div class="container">
+        <div class="row" style="margin-bottom: 6px;">
+          <div class="col xl12 m12 s12">
+            <div class="cont-int header-valor">
+                <a href="/" title="Home">
+                    <svg class="logo-valor-svg" version="1.1" id="Layer_2" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"    width="174px" height="60px" viewBox="0 0 174 60" style="enable-background:new 0 0 174 60;" xml:space="preserve">
+                        <path id="nome1" d="M48.683,5.271c0.284-0.776,0.606-1.259,1.563-1.259h4.553c0.117,0,0.214-0.096,0.214-0.215V2.396     c0-0.119-0.097-0.216-0.214-0.216H40.726c-0.118,0-0.213,0.097-0.213,0.216v1.401c0,0.119,0.096,0.215,0.213,0.215h5.527    c0.491,0,0.831,0.254,0.831,0.595c0,0.167-0.074,0.537-0.169,0.798l-14.53,39.236h-0.207L17.498,4.547  c-0.027-0.074-0.034-0.151-0.034-0.198c0-0.154,0.083-0.265,0.304-0.265h6.05c0.118-0.001,0.213-0.095,0.213-0.213V2.396    c0-0.119-0.095-0.216-0.213-0.216H0.213C0.096,2.18,0,2.277,0,2.396v1.477C0,3.99,0.096,4.085,0.213,4.085h5.024    c0.298,0,0.469,0.204,0.561,0.454l21.021,54.652c0.037,0.102,0.166,0.203,0.283,0.203h1.452c0.117,0,0.237-0.083,0.282-0.203    L48.683,5.271z M145.736,21.895c0-0.119-0.096-0.215-0.213-0.215h-6.345c-0.118,0-0.213-0.097-0.213-0.215v-1.553   c0-0.117,0.096-0.215,0.213-0.215h10.451c1.677,0,3.811-0.016,4.766-0.016c0.184,0,0.291,0.133,0.291,0.293l0.012,8.24h0.227    c1.83-4.544,5.676-8.672,11.653-8.672c5.609,0,7.424,3.502,7.424,6.97c0,3.791-1.622,5.605-5.249,5.605 c-3.094,0-4.808-1.846-4.808-4.914c0-2.063,0.593-3.475,0.593-4.556c0-0.583-0.501-0.818-1.102-0.818   c-2.104,0-4.208,2.457-5.811,4.714c-1.396,1.874-2.707,5.514-2.707,11.09V57.36c0,0.118,0.096,0.215,0.213,0.215h6.089  c0.118,0,0.214,0.097,0.214,0.214v1.49c0,0.117-0.096,0.215-0.214,0.215h-22.036c-0.118,0-0.214-0.098-0.214-0.215v-1.49    c0-0.117,0.096-0.214,0.214-0.214h6.338c0.118,0,0.213-0.097,0.213-0.215V21.895z M128.648,39.9c0-10.89-1.804-15.619-4.307-17.474  c-1.102-0.807-3.056-1.291-4.76-1.291c-1.703,0-3.656,0.484-4.758,1.291c-2.504,1.854-4.307,6.584-4.307,17.474 c0,10.888,1.803,15.364,4.307,17.22c1.102,0.807,3.056,1.29,4.758,1.29c1.704,0,3.658-0.483,4.76-1.29  C126.845,55.265,128.648,50.788,128.648,39.9z M119.582,60c-11.591,0-19.562-7.895-19.562-20.1c0-12.206,8.014-20.354,19.562-20.354 c11.549,0,19.563,8.133,19.563,20.354C139.145,52.119,131.174,60,119.582,60z M66.176,36.027c-1.454,0.503-4.527,1.311-7.224,1.955  c-4.563,1.209-6.128,3.652-6.128,10.584c0,5.48,1.934,9.117,5.252,9.117c5.392,0,8.1-4.722,8.1-8.809V36.027z M94.561,57.424    c0,0.118,0.096,0.215,0.212,0.215h6.322c0.118,0,0.214,0.096,0.214,0.215v1.365c0,0.117-0.096,0.215-0.214,0.215l-26.766,0.002  c-6.072,0-7.646-2.795-7.983-4.98h-0.253c-1.607,3.16-5.298,5.513-10.068,5.513c-7.259,0-13.428-3.78-13.428-11.518 c0-5.398,3.438-9.647,13.848-11.604c2.479-0.465,5.597-1.278,7.352-1.766c2.188-0.61,2.339-0.995,2.339-1.988v-3.679    c0-5.855-2.227-8.274-7.308-8.274c-2.626,0-4.295,0.755-4.295,3.022c0,1.693,0.238,3.128,0.238,4.499c0,2.579-1.595,4.372-4.8,4.372 c-3.204,0-4.909-2.182-4.909-4.395c0-6.528,7.392-9.077,14.131-9.077c12.713,0,16.587,4.451,16.587,14.661v18.231   c0,4.335,1.67,5.2,4.881,5.2h4.074c0.117,0,0.212-0.097,0.212-0.215V4.229c0-0.118-0.096-0.215-0.212-0.215h-5.37   c-0.117,0-0.213-0.097-0.213-0.215V2.325c0-0.118,0.096-0.215,0.213-0.215h10.223c1.677,0,3.728,0.007,4.682,0.007  c0.185,0,0.291,0.134,0.291,0.293V57.424z"/>
+                        <path id="nome2" d="M105.641,9.993V8.977h-3.715V6.372h2.856V5.502h-2.856V3.184h3.572V2.17h-4.715v7.822H105.641z    M111.213,7.675l-1.142-0.29c-0.141,1.159-0.573,1.739-1.433,1.739c-1.141,0-1.711-1.159-1.711-2.752V5.791 c0-1.591,0.57-2.749,1.711-2.749c0.717,0,1.146,0.576,1.433,1.59l1.142-0.288c-0.285-1.302-1.142-2.314-2.572-2.314 c-1.856,0-2.856,1.448-2.856,3.909v0.287c0,2.463,1,3.768,2.718,3.768C110.071,9.993,110.928,9.123,111.213,7.675 M116.072,6.37 c0,1.595-0.432,2.753-1.574,2.753c-1.139,0-1.571-1.159-1.571-2.753V5.791c0-1.736,0.433-2.75,1.571-2.75   c1.144,0,1.574,1.016,1.574,2.75V6.37z M117.356,6.229V5.938c0-2.461-1.001-3.909-2.858-3.909c-1.712,0-2.858,1.448-2.858,3.909 v0.29c0,2.46,1.146,3.763,2.858,3.763C116.355,9.993,117.356,8.688,117.356,6.229 M123.644,9.993V2.17h-1.146v5.794l-2.856-5.794    h-1.426v7.822h1.141V4.055h0.145l2.857,5.938H123.644z M128.93,6.37c0,1.595-0.431,2.75-1.573,2.75c-1.143,0-1.572-1.155-1.572-2.75 V5.793c0-1.74,0.429-2.753,1.572-2.753c1.144,0,1.573,1.014,1.573,2.753V6.37z M130.211,6.229V5.938c0-2.461-1.14-3.912-2.853-3.912 c-1.714,0-2.856,1.449-2.856,3.912v0.29c0,2.46,1.143,3.763,2.856,3.763C129.071,9.993,130.211,8.688,130.211,6.229 M129.071,1.737  L127.786,0h-0.856l-1.286,1.737h0.57l1.145-1.014l1.142,1.014H129.071z M138.641,9.993V2.17h-1.855l-1.858,6.227L133.07,2.17h-2 v7.822h1.143V3.476l2.001,6.517h1.286l2.001-6.517v6.517H138.641z M142.926,9.993V9.412h-1.141V2.75h1.141V2.17H139.5v0.58h1.141    v6.662H139.5v0.581H142.926z M148.785,7.675l-1.141-0.29c-0.144,1.159-0.572,1.739-1.431,1.739c-1.141,0-1.57-1.159-1.57-2.752  V5.791c0-1.591,0.43-2.749,1.57-2.749c0.857,0,1.143,0.576,1.431,1.59l1.141-0.288c-0.283-1.302-1.001-2.314-2.57-2.314 c-1.715,0-2.861,1.448-2.861,3.909v0.287c0,2.463,1.146,3.768,2.861,3.768C147.644,9.993,148.502,9.123,148.785,7.675 M153.788,6.37 c0,1.595-0.575,2.753-1.717,2.753c-1.002,0-1.571-1.159-1.571-2.753V5.791c0-1.736,0.569-2.75,1.571-2.75   c1.142,0,1.717,1.016,1.717,2.75V6.37z M155.071,6.229V5.938c0-2.461-1.143-3.909-3-3.909c-1.714,0-2.855,1.448-2.855,3.909v0.29    c0,2.46,1.142,3.763,2.855,3.763C153.928,9.993,155.071,8.688,155.071,6.229"/>
+                    </svg>    
+                </a>
+                <a class="waves-effect waves-light btn assine">Assine o Valor</a>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row rw-nav">
+            <div class="col s12 m4 xl3">
+                <a href="/eleicoes-2018/propostas" title="Eleições 2018 - Propostas dos presidenciáveis"><img class="logo-eleicoes" src="/sites/all/modules/custom/valor_eleicoes2018/modules/pesquisas_eleitorais_2018/img/logo-eleicoes-2018.png" alt="Eleições 2018"></a>
+                <div class="fixed-action-btn hide-on-tablet hide-on-desk">
+				  <a class="btn-floating btn-medium">
+				    <i class="medium material-icons">share</i>
+				  </a>
+				  <ul>
+				    <li><a href="https://api.whatsapp.com/send?text=www.valor.com.br/eleicoes-2018/propostas" target="_blank" class="btn-floating"><i class="icon-whatsapp share-zap ic-color"></i></a></li>
+				    <li><a href="https://www.facebook.com/sharer/sharer.php?u=www.valor.com.br/eleicoes-2018/propostas" target="_blank" class="btn-floating"><i class="icon-facebook share-1 ic-color"></i></a></li>
+				    <li><a href="https://twitter.com/home?status=www.valor.com.br/eleicoes-2018/propostas" target="_blank" class="btn-floating"><i class="icon-twitter share-2 ic-color"></i></a></li>
+				    <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=www.valor.com.br/eleicoes-2018/propostas&title=Elei%C3%A7%C3%B5es%202018&summary=&source=" target="_blank" class="btn-floating"><i class="icon-linkedin2 share-4 ic-color"></i></a></li>
+				    <li><a href="mailto:?&subject=Eleições 2018&body=www.valor.com.br/eleicoes-2018/propostas" target="_blank" class="btn-floating"><i class="icon-mail share-5 ic-color"></i></a></li>
+				  </ul>
+				</div>
+            </div>
+            <div class="col m2 xl3"></div>
+            <div class="col s12 m6 xl4 bg-f9 bd-ce">
+                            </div>
+            <div class="col s12 m12 xl2 cont-shares">
+                <div class="cont-int">
+                    <div class="shares">
+                        <a href="https://api.whatsapp.com/send?text=www.valor.com.br/eleicoes-2018/propostas" target="_blank"><span class="btns-share share-zap icon-whatsapp"></span></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=www.valor.com.br/eleicoes-2018/propostas" target="_blank"><span class="btns-share share-1 icon-facebook"></span></a>
+                        <a href="https://twitter.com/home?status=www.valor.com.br/eleicoes-2018/propostas" target="_blank"><span class="btns-share share-2 icon-twitter"></span></a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=www.valor.com.br/eleicoes-2018/propostas&title=Elei%C3%A7%C3%B5es%202018&summary=&source=" target="_blank"><span class="btns-share share-4 icon-linkedin2"></span></a>
+                        <a href="mailto:?&subject=Eleições 2018&body=www.valor.com.br/eleicoes-2018/propostas" target="_blank"><span class="btns-share share-5 icon-mail"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>	
+</section>
+<section class="row-verde">
+	<div class="container p-verde p-verde-p bg-f2">
+		<div class="row">
+			<div class="col s12 xl3 snow-fall-logo">
+				<img class="logo-eleicoes-n" src="/sites/all/modules/custom/valor_eleicoes2018/modules/pesquisas_eleitorais_2018/img/logo-eleicoes-n-2018.png" alt="Eleições 2018">
+			</div>
+			<div class="col s12 xl12 snow-fall-titulo">
+				<h1 class="titulo-1"><span>Propostas dos presidenciáveis</span></h1>
+			</div>
+			<div class="col s12 xl3"></div>
+		</div>
+		<div class="row h-row">
+			<div class="col xl6">
+				<p class="p-txt">Selecione um tema e compare as propostas e ideias dos candidatos ou selecione até <span class="ate-tres">três</span><span class="ate-dois">dois</span> presidenciáveis para comparar</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="row-cinza">
+	<div class="container bg-f9">
+		<div class="row mB-row">
+			<div class="col s12 m8 xl6">
+				<div class="cl-selects input-field col s6 m6 hide-on-mobile">
+					<select id="select-candidatos">
+						<option value="" disabled selected>Propostas por candidato</option>
+						<option value='13'>Alvaro Dias</option>
+<option value='19'>Cabo Daciolo</option>
+<option value='1'>Ciro Gomes</option>
+<option value='7'>Fernando Haddad</option>
+<option value='3'>Geraldo Alckmin</option>
+<option value='15'>Guilherme Boulos</option>
+<option value='11'>Henrique Meirelles</option>
+<option value='5'>Jair Bolsonaro</option>
+<option value='17'>João Amoêdo</option>
+<option value='27'>João Goulart Filho</option>
+<option value='25'>José Maria Eymael</option>
+<option value='9'>Marina Silva</option>
+<option value='23'>Vera Lucia</option>
+					</select>
+					<label>Candidatos</label>
+				</div>
+				<div class="cl-selects input-field col s6 m6 hide-on-mobile">
+					<select id="select-temas">
+						<option value="" disabled selected>Propostas por tema</option>
+						<option value='1'>Economia</option>
+<option value='23'>Política Fiscal</option>
+<option value='25'>Privatização</option>
+<option value='5'>Previdência</option>
+<option value='3'>Segurança</option>
+<option value='7'>Saúde</option>
+<option value='9'>Educação</option>
+<option value='11'>Meio Ambiente</option>
+<option value='13'>Programas sociais</option>
+<option value='15'>Política Externa</option>
+<option value='17'>Reforma política</option>
+<option value='27'>Reforma do Estado</option>
+<option value='19'>Judiciário</option>
+<option value='31'>Agronegócio</option>
+					</select>
+					<label>Temas</label>
+				</div>
+				<div class="cl-selects input-field col s6 m6 hide-on-desk hide-on-tablet">
+					<select id="select-candidatos">
+						<option value="" disabled selected>Selecione</option>
+						<option value='13'>Alvaro Dias</option>
+<option value='19'>Cabo Daciolo</option>
+<option value='1'>Ciro Gomes</option>
+<option value='7'>Fernando Haddad</option>
+<option value='3'>Geraldo Alckmin</option>
+<option value='15'>Guilherme Boulos</option>
+<option value='11'>Henrique Meirelles</option>
+<option value='5'>Jair Bolsonaro</option>
+<option value='17'>João Amoêdo</option>
+<option value='27'>João Goulart Filho</option>
+<option value='25'>José Maria Eymael</option>
+<option value='9'>Marina Silva</option>
+<option value='23'>Vera Lucia</option>
+					</select>
+					<label>Propostas por candidato</label>
+				</div>
+				<div class="cl-selects input-field col s6 m6 hide-on-desk hide-on-tablet">
+					<select id="select-temas">
+						<option value="" disabled selected>Selecione</option>
+						<option value='1'>Economia</option>
+<option value='23'>Política Fiscal</option>
+<option value='25'>Privatização</option>
+<option value='5'>Previdência</option>
+<option value='3'>Segurança</option>
+<option value='7'>Saúde</option>
+<option value='9'>Educação</option>
+<option value='11'>Meio Ambiente</option>
+<option value='13'>Programas sociais</option>
+<option value='15'>Política Externa</option>
+<option value='17'>Reforma política</option>
+<option value='27'>Reforma do Estado</option>
+<option value='19'>Judiciário</option>
+<option value='31'>Agronegócio</option>
+					</select>
+					<label>Propostas por tema</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col xl12">
+				<h2 class="titulo-2">Candidatos à Presidência</h2>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="sec-cards">
+	<div class="container">
+		<div class="row"><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-1' class='f-candidato'><div class="img-cand img-barra cor-bg-alvarodias"></div></div><div id='nome-cand-1' class='n-candidato'><p>Alvaro Dias <span>PODE</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/13" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-1' class='enable' data-value='cand-1' data-id='13'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-2' class='f-candidato'><div class="img-cand img-barra cor-bg-cabodaciolo"></div></div><div id='nome-cand-2' class='n-candidato'><p>Cabo Daciolo <span>PATRI</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/19" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-2' class='enable' data-value='cand-2' data-id='19'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-3' class='f-candidato'><div class="img-cand img-barra cor-bg-cirogomes"></div></div><div id='nome-cand-3' class='n-candidato'><p>Ciro Gomes <span>PDT</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/1" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-3' class='enable' data-value='cand-3' data-id='1'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div></div><div class="row"><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-4' class='f-candidato'><div class="img-cand img-barra cor-bg-fernandohaddad"></div></div><div id='nome-cand-4' class='n-candidato'><p>Fernando Haddad <span>PT</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/7" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-4' class='enable' data-value='cand-4' data-id='7'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-5' class='f-candidato'><div class="img-cand img-barra cor-bg-geraldoalckmin"></div></div><div id='nome-cand-5' class='n-candidato'><p>Geraldo Alckmin <span>PSDB</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/3" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-5' class='enable' data-value='cand-5' data-id='3'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-6' class='f-candidato'><div class="img-cand img-barra cor-bg-guilhermeboulos"></div></div><div id='nome-cand-6' class='n-candidato'><p>Guilherme Boulos <span>PSOL</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/15" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-6' class='enable' data-value='cand-6' data-id='15'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div></div><div class="row"><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-7' class='f-candidato'><div class="img-cand img-barra cor-bg-henriquemeirelles"></div></div><div id='nome-cand-7' class='n-candidato'><p>Henrique Meirelles <span>MDB</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/11" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-7' class='enable' data-value='cand-7' data-id='11'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-8' class='f-candidato'><div class="img-cand img-barra cor-bg-jairbolsonaro"></div></div><div id='nome-cand-8' class='n-candidato'><p>Jair Bolsonaro <span>PSL</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/5" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-8' class='enable' data-value='cand-8' data-id='5'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-9' class='f-candidato'><div class="img-cand img-barra cor-bg-joaoamoedo"></div></div><div id='nome-cand-9' class='n-candidato'><p>João Amoêdo <span>NOVO</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/17" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-9' class='enable' data-value='cand-9' data-id='17'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div></div><div class="row"><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-10' class='f-candidato'><div class="img-cand img-barra cor-bg-joaogoulartfilho"></div></div><div id='nome-cand-10' class='n-candidato'><p>João Goulart Filho <span>PPL</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/27" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-10' class='enable' data-value='cand-10' data-id='27'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-11' class='f-candidato'><div class="img-cand img-barra cor-bg-josemariaeymael"></div></div><div id='nome-cand-11' class='n-candidato'><p>José Maria Eymael <span>DC</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/25" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-11' class='enable' data-value='cand-11' data-id='25'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-12' class='f-candidato'><div class="img-cand img-barra cor-bg-marinasilva"></div></div><div id='nome-cand-12' class='n-candidato'><p>Marina Silva <span>REDE</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/9" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-12' class='enable' data-value='cand-12' data-id='9'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div></div><div class="row"><div class="col s12 m4 xl4"><div class="card-candidato" data-class="disable"><div id='img-cand-13' class='f-candidato'><div class="img-cand img-barra cor-bg-veralucia"></div></div><div id='nome-cand-13' class='n-candidato'><p>Vera Lucia <span>PSTU</span></p></div><div class="btn-candidato"><a href="/eleicoes-2018/propostas/candidato/23" class="waves-effect waves-teal btn-small">Ver Proposta</a></div><div class="ck-candidato"><p><label id='lbl-cand-13' class='enable' data-value='cand-13' data-id='23'><input type="checkbox" class="r-this"/><span class="r-this">Compare</span></label></p></div></div></div></div>	</div>
+</section>
+<section>
+	<div class="container nota-rodape-home">
+		<div class="row">
+			<div class="col s12 m12 xl12 obs-footer"></div>
+			<div class="col s12 xl3 hide-on-mobile"></div>
+			<div class="col s12 xl6 txt-nota-rodape">
+				<p>Os candidatos estão dispostos em ordem alfabética. As propostas listadas foram coletadas em entrevistas, debates, sabatinas e no programa de governo registrado no Tribunal Superior Eleitoral. Ao longo da campanha, serão incluídos mais projetos apresentados pelos presidenciáveis.</p>
+				<p class="stl-nota-r-2p"><b>Última atualização em 17-09-2018 as 12:23:06</b></p>
+		    	<p class="stl-nota-r-3p">Créditos</p>
+		    	<p class="stl-nota-r-4p">Textos: <b>CRISTIANE AGOSTINE e DENISE NEUMANN</b></p>
+				<p class="stl-nota-r-5p">Design e desenvolvimento: <b>ANTONIO MATIAS e VALMIR JR.</b></p>
+			</div>
+			<div class="col s12 xl3 hide-on-mobile"></div>
+		</div>
+	</div>
+</section>
+<section class="barra-footer-comparar">
+	<div class="container">
+		<div class="row">
+			<div class="col s2 m2 xl2 bx-comp bx1-m-comp">
+				<div id="bx-comp-cand-1" class="bx-int-comp bx-int-comp-disable"></div>
+			</div>
+			<div class="col s2 m2 xl2 bx-comp bx2-m-comp">
+				<div id="bx-comp-cand-2" class="bx-int-comp bx-int-comp-disable"></div>
+			</div>
+			<div class="col s1 m1 xl2 bx-comp hide-on-mobile hide-on-tablet">
+				<div id="bx-comp-cand-3" class="bx-int-comp bx-int-comp-disable"></div>
+			</div>
+			<div class="col s5 m4 xl3 bx-comp filtro-select">
+			    <select id="selectFiltroTemas" multiple>
+			      <option value="all" disabled  selected >Todos</option>
+			      	<option value='1' >Economia</option>
+<option value='23' >Política Fiscal</option>
+<option value='25' >Privatização</option>
+<option value='5' >Previdência</option>
+<option value='3' >Segurança</option>
+<option value='7' >Saúde</option>
+<option value='9' >Educação</option>
+<option value='11' >Meio Ambiente</option>
+<option value='13' >Programas sociais</option>
+<option value='15' >Política Externa</option>
+<option value='17' >Reforma política</option>
+<option value='27' >Reforma do Estado</option>
+<option value='19' >Judiciário</option>
+<option value='31' >Agronegócio</option>
+			    </select>
+			    <label>Filtrar por:</label>
+			</div>
+			<div class="col s3 m4 xl3 bx-comp bx4-m-comp">
+				<div class="btns-comp">
+					<a class="waves-effect waves-light btn-small btn-compare" disabled>Compare</a>
+					<a class="btn-cancelar-comp">Cancelar</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m12 xl12">
+						<div class="footer-bars f-bar-1">
+							<a href="/" target="_blank">
+								<svg version="1.1" id="Layer_2" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"	 width="174px" height="60px" viewBox="0 0 174 60" style="enable-background:new 0 0 174 60;" xml:space="preserve">
+									<path id="nome1" style="fill:#fff" d="M48.683,5.271c0.284-0.776,0.606-1.259,1.563-1.259h4.553c0.117,0,0.214-0.096,0.214-0.215V2.396 	c0-0.119-0.097-0.216-0.214-0.216H40.726c-0.118,0-0.213,0.097-0.213,0.216v1.401c0,0.119,0.096,0.215,0.213,0.215h5.527 	c0.491,0,0.831,0.254,0.831,0.595c0,0.167-0.074,0.537-0.169,0.798l-14.53,39.236h-0.207L17.498,4.547 	c-0.027-0.074-0.034-0.151-0.034-0.198c0-0.154,0.083-0.265,0.304-0.265h6.05c0.118-0.001,0.213-0.095,0.213-0.213V2.396 	c0-0.119-0.095-0.216-0.213-0.216H0.213C0.096,2.18,0,2.277,0,2.396v1.477C0,3.99,0.096,4.085,0.213,4.085h5.024	c0.298,0,0.469,0.204,0.561,0.454l21.021,54.652c0.037,0.102,0.166,0.203,0.283,0.203h1.452c0.117,0,0.237-0.083,0.282-0.203	L48.683,5.271z M145.736,21.895c0-0.119-0.096-0.215-0.213-0.215h-6.345c-0.118,0-0.213-0.097-0.213-0.215v-1.553	c0-0.117,0.096-0.215,0.213-0.215h10.451c1.677,0,3.811-0.016,4.766-0.016c0.184,0,0.291,0.133,0.291,0.293l0.012,8.24h0.227	c1.83-4.544,5.676-8.672,11.653-8.672c5.609,0,7.424,3.502,7.424,6.97c0,3.791-1.622,5.605-5.249,5.605	c-3.094,0-4.808-1.846-4.808-4.914c0-2.063,0.593-3.475,0.593-4.556c0-0.583-0.501-0.818-1.102-0.818	c-2.104,0-4.208,2.457-5.811,4.714c-1.396,1.874-2.707,5.514-2.707,11.09V57.36c0,0.118,0.096,0.215,0.213,0.215h6.089	c0.118,0,0.214,0.097,0.214,0.214v1.49c0,0.117-0.096,0.215-0.214,0.215h-22.036c-0.118,0-0.214-0.098-0.214-0.215v-1.49	c0-0.117,0.096-0.214,0.214-0.214h6.338c0.118,0,0.213-0.097,0.213-0.215V21.895z M128.648,39.9c0-10.89-1.804-15.619-4.307-17.474	c-1.102-0.807-3.056-1.291-4.76-1.291c-1.703,0-3.656,0.484-4.758,1.291c-2.504,1.854-4.307,6.584-4.307,17.474	c0,10.888,1.803,15.364,4.307,17.22c1.102,0.807,3.056,1.29,4.758,1.29c1.704,0,3.658-0.483,4.76-1.29	C126.845,55.265,128.648,50.788,128.648,39.9z M119.582,60c-11.591,0-19.562-7.895-19.562-20.1c0-12.206,8.014-20.354,19.562-20.354	c11.549,0,19.563,8.133,19.563,20.354C139.145,52.119,131.174,60,119.582,60z M66.176,36.027c-1.454,0.503-4.527,1.311-7.224,1.955	c-4.563,1.209-6.128,3.652-6.128,10.584c0,5.48,1.934,9.117,5.252,9.117c5.392,0,8.1-4.722,8.1-8.809V36.027z M94.561,57.424	c0,0.118,0.096,0.215,0.212,0.215h6.322c0.118,0,0.214,0.096,0.214,0.215v1.365c0,0.117-0.096,0.215-0.214,0.215l-26.766,0.002	c-6.072,0-7.646-2.795-7.983-4.98h-0.253c-1.607,3.16-5.298,5.513-10.068,5.513c-7.259,0-13.428-3.78-13.428-11.518	c0-5.398,3.438-9.647,13.848-11.604c2.479-0.465,5.597-1.278,7.352-1.766c2.188-0.61,2.339-0.995,2.339-1.988v-3.679	c0-5.855-2.227-8.274-7.308-8.274c-2.626,0-4.295,0.755-4.295,3.022c0,1.693,0.238,3.128,0.238,4.499c0,2.579-1.595,4.372-4.8,4.372	c-3.204,0-4.909-2.182-4.909-4.395c0-6.528,7.392-9.077,14.131-9.077c12.713,0,16.587,4.451,16.587,14.661v18.231	c0,4.335,1.67,5.2,4.881,5.2h4.074c0.117,0,0.212-0.097,0.212-0.215V4.229c0-0.118-0.096-0.215-0.212-0.215h-5.37	c-0.117,0-0.213-0.097-0.213-0.215V2.325c0-0.118,0.096-0.215,0.213-0.215h10.223c1.677,0,3.728,0.007,4.682,0.007	c0.185,0,0.291,0.134,0.291,0.293V57.424z"/>
+									<path id="nome2" style="fill:#fff" d="M105.641,9.993V8.977h-3.715V6.372h2.856V5.502h-2.856V3.184h3.572V2.17h-4.715v7.822H105.641z	 M111.213,7.675l-1.142-0.29c-0.141,1.159-0.573,1.739-1.433,1.739c-1.141,0-1.711-1.159-1.711-2.752V5.791	c0-1.591,0.57-2.749,1.711-2.749c0.717,0,1.146,0.576,1.433,1.59l1.142-0.288c-0.285-1.302-1.142-2.314-2.572-2.314	c-1.856,0-2.856,1.448-2.856,3.909v0.287c0,2.463,1,3.768,2.718,3.768C110.071,9.993,110.928,9.123,111.213,7.675 M116.072,6.37	c0,1.595-0.432,2.753-1.574,2.753c-1.139,0-1.571-1.159-1.571-2.753V5.791c0-1.736,0.433-2.75,1.571-2.75	c1.144,0,1.574,1.016,1.574,2.75V6.37z M117.356,6.229V5.938c0-2.461-1.001-3.909-2.858-3.909c-1.712,0-2.858,1.448-2.858,3.909	v0.29c0,2.46,1.146,3.763,2.858,3.763C116.355,9.993,117.356,8.688,117.356,6.229 M123.644,9.993V2.17h-1.146v5.794l-2.856-5.794	h-1.426v7.822h1.141V4.055h0.145l2.857,5.938H123.644z M128.93,6.37c0,1.595-0.431,2.75-1.573,2.75c-1.143,0-1.572-1.155-1.572-2.75	V5.793c0-1.74,0.429-2.753,1.572-2.753c1.144,0,1.573,1.014,1.573,2.753V6.37z M130.211,6.229V5.938c0-2.461-1.14-3.912-2.853-3.912	c-1.714,0-2.856,1.449-2.856,3.912v0.29c0,2.46,1.143,3.763,2.856,3.763C129.071,9.993,130.211,8.688,130.211,6.229 M129.071,1.737	L127.786,0h-0.856l-1.286,1.737h0.57l1.145-1.014l1.142,1.014H129.071z M138.641,9.993V2.17h-1.855l-1.858,6.227L133.07,2.17h-2	v7.822h1.143V3.476l2.001,6.517h1.286l2.001-6.517v6.517H138.641z M142.926,9.993V9.412h-1.141V2.75h1.141V2.17H139.5v0.58h1.141	v6.662H139.5v0.581H142.926z M148.785,7.675l-1.141-0.29c-0.144,1.159-0.572,1.739-1.431,1.739c-1.141,0-1.57-1.159-1.57-2.752	V5.791c0-1.591,0.43-2.749,1.57-2.749c0.857,0,1.143,0.576,1.431,1.59l1.141-0.288c-0.283-1.302-1.001-2.314-2.57-2.314	c-1.715,0-2.861,1.448-2.861,3.909v0.287c0,2.463,1.146,3.768,2.861,3.768C147.644,9.993,148.502,9.123,148.785,7.675 M153.788,6.37	c0,1.595-0.575,2.753-1.717,2.753c-1.002,0-1.571-1.159-1.571-2.753V5.791c0-1.736,0.569-2.75,1.571-2.75	c1.142,0,1.717,1.016,1.717,2.75V6.37z M155.071,6.229V5.938c0-2.461-1.143-3.909-3-3.909c-1.714,0-2.855,1.448-2.855,3.909v0.29	c0,2.46,1.142,3.763,2.855,3.763C153.928,9.993,155.071,8.688,155.071,6.229"/>
+								</svg>
+							</a>
+							<p>Globo Notícias</p>
+						</div>
+						<div class="footer-bars f-bar-2">
+							<p>© Valor Econômico S.A. Todos os direitos reservados.</p>
+							<ul class="displ-none">
+								<li><a href="/" target="_blank">Valor.com.br</a></li>
+								<li><a href="https://midiakit.valor.com.br/" target="_blank">Anuncie conosco</a></li>
+								<li><a id="bt-assine" href="https://assinaturas.valor.com.br/?CodRepresentante=1970607&utm_source=site&utm_medium=referral&utm_campaign=especial" target="_blank">Assine o Valor</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="/sites/all/modules/custom/valor_eleicoes2018/modules/pesquisas_eleitorais_2018/js/app.js" defer ></script>
+		<script type="text/javascript" charset="utf-8" async defer>
+					</script>
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a6fe38e1a5","applicationID":"85258796","transactionName":"YlQDMBAAWBZSVUNdCVseIAcWCFkLHEZFWxZaQhUFET4EVQIOaFcHR0MEAwM=","queueTime":0,"applicationTime":1411,"atts":"ThMARlgaSxg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+
+
+
+
+

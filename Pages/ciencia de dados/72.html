@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="pt-BR" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="pt-BR" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="pt-BR" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="pt-BR" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<link rel="pingback" href="http://somostera.com/blog/xmlrpc.php" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+<title>Qual a diferença entre Engenharia, Análise e Ciência de Dados? | Tera</title>
+                        <script>
+                            /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+                            if ( typeof WebFontConfig === "undefined" ) {
+                                WebFontConfig = new Object();
+                            }
+                            WebFontConfig['google'] = {families: ['Open+Sans:300,400,600,700,800,300italic,400italic,600italic,700italic,800italic', 'Kadwa:400,700']};
+
+                            (function() {
+                                var wf = document.createElement( 'script' );
+                                wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+                                wf.type = 'text/javascript';
+                                wf.async = 'true';
+                                var s = document.getElementsByTagName( 'script' )[0];
+                                s.parentNode.insertBefore( wf, s );
+                            })();
+                        </script>
+                                                <script>
+                            /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+                            if ( typeof WebFontConfig === "undefined" ) {
+                                WebFontConfig = new Object();
+                            }
+                            WebFontConfig['google'] = {families: ['Abel:400']};
+
+                            (function() {
+                                var wf = document.createElement( 'script' );
+                                wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+                                wf.type = 'text/javascript';
+                                wf.async = 'true';
+                                var s = document.getElementsByTagName( 'script' )[0];
+                                s.parentNode.insertBefore( wf, s );
+                            })();
+                        </script>
+                        
+<!-- Google Tag Manager for WordPress by DuracellTomi -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];//]]>	
+</script>
+<!-- End Google Tag Manager for WordPress by DuracellTomi -->
+<!-- This site is optimized with the Yoast SEO plugin v5.3.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Três papéis distintos e que se completam: entenda as responsabilidades e atividades de engenheiros, analistas e cientistas de dados"/>
+<link rel="canonical" href="http://somostera.com/blog/engenharia-analise-ciencia-de-dados/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Qual a diferença entre Engenharia, Análise e Ciência de Dados? | Tera" />
+<meta property="og:description" content="Três papéis distintos e que se completam: entenda as responsabilidades e atividades de engenheiros, analistas e cientistas de dados" />
+<meta property="og:url" content="http://somostera.com/blog/engenharia-analise-ciencia-de-dados/" />
+<meta property="og:site_name" content="Tera Blog" />
+<meta property="article:section" content="Data Science" />
+<meta property="article:published_time" content="2018-08-21T15:27:42+00:00" />
+<meta property="article:modified_time" content="2018-08-24T23:45:30+00:00" />
+<meta property="og:updated_time" content="2018-08-24T23:45:30+00:00" />
+<meta property="og:image" content="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-7.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="800" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Três papéis distintos e que se completam: entenda as responsabilidades e atividades de engenheiros, analistas e cientistas de dados" />
+<meta name="twitter:title" content="Qual a diferença entre Engenharia, Análise e Ciência de Dados? | Tera" />
+<meta name="twitter:image" content="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-7.jpg" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/somostera.com\/blog\/","name":"Tera Blog","potentialAction":{"@type":"SearchAction","target":"http:\/\/somostera.com\/blog\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed para Tera Blog &raquo;" href="http://somostera.com/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Tera Blog &raquo;" href="http://somostera.com/blog/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Tera Blog &raquo; Qual a diferença entre Engenharia, Análise e Ciência de Dados?" href="http://somostera.com/blog/engenharia-analise-ciencia-de-dados/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/somostera.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='sb_bar-css'  href='http://somostera.com/blog/wp-content/plugins/swifty-bar/public/assets/css/sb-bar-public.css?ver=1.2.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wpemfb-lightbox-css'  href='http://somostera.com/blog/wp-content/plugins/wp-embed-facebook/lib/lightbox2/css/lightbox.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='reading_default_style-css'  href='http://somostera.com/blog/wp-content/themes/reading/style.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='prettyPhoto-css'  href='http://somostera.com/blog/wp-content/themes/reading/styles/prettyPhoto.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://somostera.com/blog/wp-content/themes/reading/styles/font-awesome.min.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='reading_mobile-css'  href='http://somostera.com/blog/wp-content/themes/reading/style-mobile.css?ver=4.6.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://somostera.com/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var admin_urls = {"admin_ajax":"http:\/\/somostera.com\/blog\/wp-admin\/admin-ajax.php","post_id":"976","postNonce":"98bb790d06"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-content/plugins/swifty-bar/public/assets/js/sb-bar-public.js?ver=1.2.6'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-content/plugins/wp-embed-facebook/lib/lightbox2/js/lightbox.min.js?ver=1.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WEF = {"local":"pt_BR","version":"v2.7","fb_id":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-content/plugins/wp-embed-facebook/lib/js/fb.min.js?ver=1.1'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.8.1'></script>
+<link rel='https://api.w.org/' href='http://somostera.com/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://somostera.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://somostera.com/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.6.1" />
+<link rel='shortlink' href='http://somostera.com/blog/?p=976' />
+<link rel="alternate" type="application/json+oembed" href="http://somostera.com/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsomostera.com%2Fblog%2Fengenharia-analise-ciencia-de-dados%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://somostera.com/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsomostera.com%2Fblog%2Fengenharia-analise-ciencia-de-dados%2F&#038;format=xml" />
+<script data-cfasync="false" src="//load.sumome.com/" data-sumo-platform="wordpress" data-sumo-site-id="44da070027e539006746f2005ce71500a65ddf008b5fd5005a402200e20a3200" async></script>
+<!-- Google Tag Manager for WordPress by DuracellTomi -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	var google_tag_params = {"pagePostType":"post","pagePostType2":"single-post","pageCategory":["data-science"],"pagePostAuthor":"Kaique Paes"};
+	dataLayer.push({"visitorLoginState":"logged-out","pagePostType":"post","pagePostType2":"single-post","pageCategory":["data-science"],"pagePostAuthor":"Kaique Paes","google_tag_params":window.google_tag_params});//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K3CSJNF');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by DuracellTomi --><!-- Themnific Styling -->
+<style type="text/css">
+
+	.blogger .format-quote{background-color: #00a9f0 !important}
+
+	.menu-item-has-children>a::after,
+	.mega2>a::after{border-color: #333333 transparent transparent;}
+
+	.nav>li>ul:after{border-color:#333333 transparent}
+
+	.woocommerce #content div.product .woocommerce-tabs ul.tabs{border-color: #efefef !important}
+</style>
+		<style type="text/css">#footer{
+	display: none;
+}
+</style>
+		<link rel="icon" href="http://somostera.com/blog/wp-content/uploads/sites/2/2016/10/cropped-fav-32x32.png" sizes="32x32" />
+<link rel="icon" href="http://somostera.com/blog/wp-content/uploads/sites/2/2016/10/cropped-fav-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://somostera.com/blog/wp-content/uploads/sites/2/2016/10/cropped-fav-180x180.png" />
+<meta name="msapplication-TileImage" content="http://somostera.com/blog/wp-content/uploads/sites/2/2016/10/cropped-fav-270x270.png" />
+<style type="text/css" title="dynamic-css" class="options-output">body{font-family:Verdana, Geneva, sans-serif;line-height:20px;font-weight:normal;font-style:normal;color:#000;font-size:14px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading body,{opacity: 0;}.ie.wf-loading body,{visibility: hidden;}body,.taggs a{background-color:#f2f2f2;}.ghost,.post-previous,.post-next,.nav-previous a,a.page-numbers,.page-numbers.dots,.page-link a span,.mc4wp-form,.widgetable ul.menu>li>a{background-color:#ffffff;}a,#sidebar h4 a{color:#0a0000;}a:hover,#sidebar h4 a:hover{color:#6d6d6d;}a:active,#sidebar h4 a:active{color:#0a0000;}.entry p a,.additional a,.post-pagination .page-link>span{color:#00a9f0;}.p-border,.meta,.taggs a,ul.social-menu li a,h3#reply-title,.single .entry>p:first-child,.tagcloud a,#portfolio-filter a,.page-numbers,input,textarea,select,.products,.nav_item a,.tp_recent_tweets ul li,.coco-social ul.coco-social-buttons li a,.hrline,.hrlineB,.mc4wp-form,.widgetable ul.menu>li>a{border-color:#efefef;}.hrline,.hrlineB{background-color:#efefef;}#sidebar,#sidebar h2,#sidebar h3,.post-pagination span{color:#000000;}#sidebar a,.meta.taggs a{color:#000000;}.nav li>a,ul.social-menu li a{font-family:"Open Sans";line-height:15px;font-weight:400;font-style:normal;color:#dbdbdb;font-size:12px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading .nav li>a,ul.social-menu li a,{opacity: 0;}.ie.wf-loading .nav li>a,ul.social-menu li a,{visibility: hidden;}#header,#header.trasparent-header.scrolled{background-color:#111;}#header h1 a,.header-right,.header-right a,#titles h2{color:#eeeeee;}#header h1 a:hover,#header .nav a:hover {color:#ffffff;}li.current-menu-item>a{border-color:#ffffff;}li.current-menu-item>a,#titles h2,.curtain a,.curtain .searchform .s{color:#ffffff;}.nav li ul{background-color:#222222;}.nav li ul li>a{color:#cccccc;}.nav li>ul,.nav li ul li>a,.nav li ul ul{border-color:#333333;}#titles{width:300px;}#titles{margin-top:30px;margin-bottom:20px;}#navigation,.header-right{margin-top:27px;margin-bottom:20px;}#footer,#footer input{font-family:Verdana, Geneva, sans-serif;line-height:16px;font-weight:normal;font-style:normal;color:#0a0a0a;font-size:12px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading #footer,#footer input,{opacity: 0;}.ie.wf-loading #footer,#footer input,{visibility: hidden;}#footer,#footer .searchform input.s,.blogger>div.sticky,.sticky>.ghost{background-color:#fff;}#footer a,#footer h2,#footer .bottom-menu li a,#footer h3,#footer #serinfo-nav li a,#footer .meta,#footer .meta a,#footer .searchform input.s,.sticky,.sticky p,.sticky a,.sticky .meta,.sticky .meta a{color:#000000;}#footer a:hover,.sticky a:hover{color:#00a9f0;}.footer-top,#footer .foocol,#copyright,#footer .tagcloud a,#footer .tp_recent_tweets ul li,#footer .p-border,.sticky .p-border,#footer .searchform input.s,#footer input,#footer ul.social-menu li a{border-color:#000000;}h1{font-family:Verdana, Geneva, sans-serif;line-height:16px;font-weight:700;font-style:normal;color:#000;font-size:16px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h1,{opacity: 0;}.ie.wf-loading h1,{visibility: hidden;}.flexinside h2,h2.archiv{font-family:Verdana, Geneva, sans-serif;line-height:55px;font-weight:700;font-style:normal;color:#222;font-size:52px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading .flexinside h2,h2.archiv,{opacity: 0;}.ie.wf-loading .flexinside h2,h2.archiv,{visibility: hidden;}h1.entry-title,.imglarge h2{font-family:Verdana, Geneva, sans-serif;line-height:44px;font-weight:700;font-style:normal;color:#222;font-size:40px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h1.entry-title,.imglarge h2,{opacity: 0;}.ie.wf-loading h1.entry-title,.imglarge h2,{visibility: hidden;}h2,blockquote,.flexcarousel .flexinside h2{font-family:Kadwa;line-height:35px;font-weight:700;font-style:normal;color:#222;font-size:30px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h2,blockquote,.flexcarousel .flexinside h2,{opacity: 0;}.ie.wf-loading h2,blockquote,.flexcarousel .flexinside h2,{visibility: hidden;}h3,.comment-author cite,.authorpage,p.teaser,h2.widget,.about-widget h2{font-family:Verdana, Geneva, sans-serif;line-height:20px;font-weight:normal;font-style:normal;color:#222;font-size:16px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h3,.comment-author cite,.authorpage,p.teaser,h2.widget,.about-widget h2,{opacity: 0;}.ie.wf-loading h3,.comment-author cite,.authorpage,p.teaser,h2.widget,.about-widget h2,{visibility: hidden;}h4,.mc4wp-form input{font-family:Verdana, Geneva, sans-serif;line-height:18px;font-weight:normal;font-style:normal;color:#000;font-size:12px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h4,.mc4wp-form input,{opacity: 0;}.ie.wf-loading h4,.mc4wp-form input,{visibility: hidden;}h5,.widgetable ul.menu>li>a,.bottomnav h2,#serinfo-nav li a,a.mainbutton,h5.review-title,.nav-previous a,.wrapper .wp-review-show-total,.meta_more,#content .topic a, #content .reply a,#respond .form-submit input,.post-pagination,p.meta.cat a{font-family:Verdana, Geneva, sans-serif;line-height:15px;font-weight:normal;font-style:normal;color:#222;font-size:12px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h5,.widgetable ul.menu>li>a,.bottomnav h2,#serinfo-nav li a,a.mainbutton,h5.review-title,.nav-previous a,.wrapper .wp-review-show-total,.meta_more,#content .topic a, #content .reply a,#respond .form-submit input,.post-pagination,p.meta.cat a,{opacity: 0;}.ie.wf-loading h5,.widgetable ul.menu>li>a,.bottomnav h2,#serinfo-nav li a,a.mainbutton,h5.review-title,.nav-previous a,.wrapper .wp-review-show-total,.meta_more,#content .topic a, #content .reply a,#respond .form-submit input,.post-pagination,p.meta.cat a,{visibility: hidden;}h6{font-family:Verdana, Geneva, sans-serif;line-height:25px;font-weight:normal;font-style:normal;color:#222;font-size:14px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h6,{opacity: 0;}.ie.wf-loading h6,{visibility: hidden;}.meta,.meta a,.tmnf_tagline{font-family:Verdana, Geneva, sans-serif;line-height:20px;font-weight:normal;font-style:normal;color:#606060;font-size:14px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading .meta,.meta a,.tmnf_tagline,{opacity: 0;}.ie.wf-loading .meta,.meta a,.tmnf_tagline,{visibility: hidden;}a.searchSubmit,.ribbon,#sidebar ul.menu>li.current-menu-item>a,.nav-previous a:hover,#respond #submit,.flex-direction-nav a,li.current a,.page-numbers.current,a.mainbutton,.blogger .format-quote,.products li .button.add_to_cart_button,.wrapper .wp-review-show-total,a.mainbutton,.tmnf_icon,#submit,#comments .navigation a,.tagssingle a,.contact-form .submit,.wpcf7-submit,a.comment-reply-link,ul.social-menu li a:hover,.nav>li>a:hover:before,.nav>li.current-menu-item>a:before,.nav>li.current-menu-item>a:after{background-color:#00a9f0;}.products li .button.add_to_cart_button,ul.social-menu li a:hover,h2.widget span,.meta_more a{border-color:#00a9f0;}.meta_more a{color:#00a9f0;}a.searchSubmit,.ribbon,.ribbon a,input.ribbon,#footer .ribbon,p.meta.cat a,#content .reply a,.meta.cat,#sidebar ul.menu>li.current-menu-item>a,.entry a.ribbon,.ribbon blockquote,.format-quote blockquote p,.format-quote p.teaser,#hometab li.current a,#respond #submit,.nav-previous a:hover,.flex-direction-nav a,#footer a.mainbutton,a.mainbutton,.tmnf_icon,.blogger .format-quote,.blogger .format-quote a,.products li .button.add_to_cart_button,a.mainbutton,#submit,#comments .navigation a,.tagssingle a,.contact-form .submit,.wpcf7-submit,a.comment-reply-link,.wrapper .wp-review-show-total,#footer #hometab li.current a,ul.social-menu li a:hover,#header ul.social-menu li a:hover,#footer ul.social-menu li a:hover,.page-numbers.current{color:#000000;}a.searchSubmit:hover,.ribbon:hover,a.mainbutton:hover,.entry a.ribbon:hover,.meta_more a:hover{background-color:#000000;}.meta_more a:hover{border-color:#000000;}#header a.searchSubmit:hover,#footer a.mainbutton:hover,.ribbon:hover,.ribbon:hover a,.ribbon a:hover,.menu-post p.meta.cat:hover,.menu-post .meta.cat:hover a,.entry a.ribbon:hover,a.mainbutton:hover,.post.format-quote:hover blockquote p,.post.format-quote:hover i,#mainhead a.searchSubmit,.meta_more a:hover{color:#ffffff;}.imgwrap,.mainflex,.post-nav-image,.entryhead,.page-head,.about-inner,.tmnf_hero{background-color:#111111;}.flexinside,h2.archiv,.tmnf_hero .authorpage,.tmnf_hero h1,.tmnf_hero p,.tmnf_hero a,.flexinside a,.flexinside p,.flexinside p a,.imglarge .entryhead h2 a,#sidebar .about-inner h2,.about-inner .meta,#sidebar a.mainbutton{color:#ffffff;}</style><style type="text/css" title="dynamic-css" class="options-output">.site-title{color:#000000;}.site-header{border-top:3px solid #1e73be;border-bottom:3px solid #1e73be;border-left:3px solid #1e73be;border-right:3px solid #1e73be;}.site-header{border-top:3px solid #1e73be;border-bottom:3px solid #1e73be;border-left:3px solid #1e73be;border-right:3px solid #1e73be;}.site-header{margin-top:1px;margin-right:2px;margin-bottom:3px;margin-left:4px;}h2.site-description, .entry-title{font-family:Abel;line-height:40px;font-weight:normal;font-style:700;color:#333;font-size:33px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h2.site-description, .entry-title,{opacity: 0;}.ie.wf-loading h2.site-description, .entry-title,{visibility: hidden;}</style><link rel="icon" type="image/png" href="http://somostera.com/wp-content/uploads/2017/07/TERA.170717.LogoIcone-200x200.png">
+<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/8841b9f4-aab7-4d90-a059-8215aed40d83-loader.js"></script>
+</head>
+
+     
+<body class="single single-post postid-976 single-format-standard">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3CSJNF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><div class="wrapper coltwo upper">
+        
+    <div id="header" class="tranz trasparent-header" itemscope itemtype="http://schema.org/WPHeader">
+    
+        <div class="container">
+        
+            <div class="clearfix"></div>
+            
+            <div id="titles" class="tranz2">
+                
+                                                        
+                            <a class="logo" href="http://somostera.com/blog/">
+                            
+                                <img class="tranz" src="http://somostera.com/blog/wp-content/uploads/sites/2/2017/09/tera-logo.png" alt="Tera Blog"/>
+                                    
+                            </a>
+                            
+                    	
+                
+                	
+        
+                            
+            </div><!-- end #titles  -->
+            
+            <div class="header-right tranz">
+            
+                <span>|</span>
+                <a class="searchOpen" href="#" ><i class="fa fa-search"></i></a>
+                
+            </div>
+        
+            <a id="navtrigger" class="ribbon" href="#"><i class="fa fa-bars"></i></a>
+            
+            <nav id="navigation" class="tranz" itemscope itemtype="http://schema.org/SiteNavigationElement"> 
+            
+                <ul id="main-nav" class="nav tmnf_custom_activated"><li id="menu-item-1110" class="btn-bootcamps menu-item menu-item-type-custom menu-item-object-custom menu-item-1110"><a href="http://somostera.com/cursos/">Bootcamps</a></li>
+<li id="menu-item-1111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1111"><a href="http://somostera.com/sobre/">Sobre</a></li>
+<li id="menu-item-1112" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1112"><a href="http://somostera.com/mentores/">Experts</a></li>
+<li id="menu-item-1113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1113"><a href="http://somostera.com/blog">Blog</a></li>
+<li id="menu-item-1114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1114"><a href="http://somostera.com/#contato">Contato</a></li>
+</ul>
+                
+            </nav>
+            
+            <div class="clearfix"></div>
+        
+        </div><!-- end .container  -->
+    
+    </div><!-- end #header  -->
+  
+    
+<div itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage"  content=""  itemType="https://schema.org/WebPage" itemid="http://somostera.com/blog/engenharia-analise-ciencia-de-dados/"/>
+
+   
+<div class="postbar postbarRight ">
+    
+    	<div class="tmnf_hero"  itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+
+		                        <img width="1180" height="570" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-7-1180x570.jpg" class="standard grayscale grayscale-fade wp-post-image" alt="Homem sentado em frente a um notebook e duas telas de computador com códigos de programação" />                            
+        <div class="tmnf_heroinside">
+                    
+            
+            <h1 class="entry-title" itemprop="headline"><span itemprop="name">Qual a diferença entre Engenharia, Análise e Ciência de Dados?</span></h1>
+                    
+            <p class="teaser">Três papéis distintos e que se completam: entenda as responsabilidades e atividades de engenheiros, analistas e cientistas de dados</p>
+
+
+                
+	<p class="meta date tranz post-date "> 
+        08/21/2018    </p>
+        
+	<p class="meta counter ">
+    <span class="views">
+    <!-- mfunc reading_post_views($post_id); --><!-- /mfunc -->
+	Views: 741    </span>
+    </p>
+        
+	<p class="meta author tranz "> 
+        <img alt='' src='http://0.gravatar.com/avatar/6ff2394c139f22156c46d979372b08f4?s=37&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6ff2394c139f22156c46d979372b08f4?s=74&amp;d=mm&amp;r=g 2x' class='avatar avatar-37 photo' height='37' width='37' /><span>Written by: <a href="http://somostera.com/blog/author/kaiquepoliveira/" title="Posts de Kaique Paes" rel="author">Kaique Paes</a></span>    </p>
+    
+            
+        </div>
+        
+    </div>
+
+
+<div class="container">
+
+        <div id="content" class="eightcol first">
+            
+            
+<div class="normal tranz ghost p-border post-976 post type-post status-publish format-standard has-post-thumbnail hentry category-data-science">
+
+    <div class="entryhead" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+        
+            
+    </div><!-- end .entryhead -->
+ 
+              
+    <div class="clearfix"></div>
+    
+    <div class="item_inn tranz p-border">
+    
+        <div class="meta-single p-border ">
+        
+			    
+	<p class="meta cat tranz ribbon ">
+		<a href="http://somostera.com/blog/category/data-science/" rel="category tag">Data Science</a>    </p>
+                
+        </div>
+        
+        <div class="clearfix"></div>
+                             
+        <div class="entry" itemprop="text">
+              
+            <div id="fb-root"></div>
+<div class="ttr_start"></div><p>Quem diria que o seriado a que você assiste, o sapato que você compra e <a href="http://somostera.com/blog/o-que-uma-lata-de-coca-cola-pode-ensinar-sobre-big-data-e-inteligencia-artificial/" target="_blank">até o sabor de Coca-Cola que você bebe</a> seriam um dia desenvolvidos e recomendados com base em um monte de números sem lógica inicial aparente?</p>
+<p>Os dados são hoje o norte de muitas empresas na hora de tomar decisões quanto aos seus produtos e campanhas. Mas, para que os 2,5 quintilhões de bytes processados façam algum sentido, precisamos de certos profissionais especializados.</p>
+<p>É aqui que entram o engenheiro de dados, o analista de dados e o cientista de dados: os heróis responsáveis por traduzir isso tudo (uma bala para quem tiver na ponta da língua quantos zeros há em 2,5 quintilhões) e que precisam aguentar ser confundidos o tempo todo.</p>
+<p>Sim, às vezes até as empresas se referem a seus papéis erroneamente. Por isso, aqui, vamos esclarecê-los de uma vez por todas.</p>
+<p><img class="aligncenter size-full wp-image-983" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-1.jpg" alt="Homem de costas utilizando códigos de programação" width="1200" height="800" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-1.jpg 1200w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-1-300x200.jpg 300w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-1-768x512.jpg 768w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-1-1024x683.jpg 1024w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-1-272x182.jpg 272w" sizes="(max-width: 1200px) 100vw, 1200px" /></p>
+<h2><b>O mercado</b></h2>
+<p>As profissões são jovens, mas já mostraram o impacto que podem causar. Nos EUA, aproximadamente 40% das empresas possuem pelo menos um especialista em dados. Não por acaso, em 2012 a Harvard Business Review elegeu a Ciência de Dados como a área mais sexy do século 21 para se trabalhar.</p>
+<p>Em terras brasileiras, o crescimento começou mesmo em 2017 e há uma alta procura por esses experts no mercado. Isso se reflete também nos salários: <a href="https://www.lovemondays.com.br/salarios/cargo/salario-cientista-de-dados" target="_blank">segundo a Love Mondays</a>, cientistas de dados, por exemplo, ganham em média R$ 9.328 por mês. Esse valor chega a mais que dobrar para um cargo sênior.</p>
+<p>Negócios usam engenheiros, analistas e cientistas de dados para diferentes propósitos. Isso inclui extrapolar dados de clientes para gerar conclusões e recomendar decisões, usar dados para identificar pontos de desenvolvimento e compreender performances abaixo do esperado, encontrar padrões e até realizar predições. Qualquer que seja o motivo, cada um dos três tem sua contribuição distinta.</p>
+<h2><b>Engenheiro de dados</b></h2>
+<p><img class="aligncenter size-full wp-image-984" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-4.jpg" alt="Mãos mexendo em um notebook prata" width="1200" height="800" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-4.jpg 1200w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-4-300x200.jpg 300w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-4-768x512.jpg 768w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-4-1024x683.jpg 1024w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-4-272x182.jpg 272w" sizes="(max-width: 1200px) 100vw, 1200px" /></p>
+<p>Quando se tem dados em alta escala, é o engenheiro que reúne e prepara o que precisa ser analisado e trabalhado — inclusive corrigindo erros, sejam de humanos ou de máquinas.</p>
+<p>Seu papel é formatar dados para que tudo possa ser utilizado sem estresse: ele está conectado ao desenvolvimento e manutenção de arquiteturas que facilitam as tarefas desempenhadas por outros profissionais de dados.</p>
+<p><b>Como agrega valor:</b> constrói e otimiza sistemas que permitem que cientistas e analistas de dados realizem seu trabalho.</p>
+<p><b>Responsabilidades:</b> garantir que dados sejam devidamente recebidos, apurados, transformados, armazenados e que estejam acessíveis a outros.</p>
+<p><b>Atividades comuns:</b> construção e gerenciamento de pipeline de dados, manutenção de bases de dados, construção de APIs para consumo de dados, constante monitoramento e teste de sistemas.</p>
+<h2><b>Analista de dados</b></h2>
+<p><img class="aligncenter size-full wp-image-986" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-5.jpg" alt="Notebook com códigos de programação" width="1200" height="800" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-5.jpg 1200w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-5-300x200.jpg 300w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-5-768x512.jpg 768w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-5-1024x683.jpg 1024w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-5-272x182.jpg 272w" sizes="(max-width: 1200px) 100vw, 1200px" /></p>
+<p>Um analista de dados carrega o potencial de transformar um negócio comum em um negócio orientado por dados. Como um profissional de marketing pode usá-los para lançar sua próxima campanha? Como um representante de vendas pode identificar melhor em que grupo demográfico mirar? Como um CEO pode apontar os motivos pelos quais houve crescimento?</p>
+<p>Por isso, analistas são também comunicadores, além de técnicos. Muitas vezes, aliás, eles fazem a ponte entre times de dados e diversas outras equipes, eliminando a possibilidade de embasar passos estratégicos em “eu acho que&#8230;” e substituindo-os por “evidências mostram…”</p>
+<p><b>Como agrega valor:</b> analisa os dados, responde questões de negócio e comunica os resultados para ajudar na tomada de decisões.</p>
+<p><b>Responsabilidades:</b> acompanhar progresso e otimizar o foco dos demais times.</p>
+<p><b>Atividades comuns:</b> limpeza de dados, análise, estatística e visualização de dados.</p>
+<h2><b>Cientista de dados</b></h2>
+<p><img class="aligncenter size-full wp-image-987" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2.jpg" alt="Computador com gráficos" width="1200" height="800" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2.jpg 1200w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2-300x200.jpg 300w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2-768x512.jpg 768w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2-1024x683.jpg 1024w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2-272x182.jpg 272w" sizes="(max-width: 1200px) 100vw, 1200px" /></p>
+<p>Os cientistas de dados trazem uma outra abordagem para as dores e as delícias de compreender dados. Isto é, se um analista foca principalmente e entender os dados de uma perspectiva de passado e presente, o cientista de dados é aquele que olha para frente — não só prevendo o futuro, como gerando novas perguntas.</p>
+<p>Portanto, além de criar algoritmos e lidar com um volume grande de dados, também se espera deles que tenham a capacidade de interpretar seus achados e inferir conclusões. Suas habilidades precisam ser avassaladoras não só do lado técnico: eles devem ser perspicazes também quanto à estratégia de negócios, fazendo com que os dados contem uma história coerente que sirva às necessidades da empresa.</p>
+<p><b>Como agrega valor:</b>produz predições confiáveis para guiar o futuro do negócio.</p>
+<p><b>Responsabilidades:</b> encontrar padrões precisos, aplicar estatística avançada e modelos de <i>machine learning</i> para responder (e levantar outras) questões-chave de negócios.</p>
+<p><b>Atividades comuns:</b> cálculo de modelos estatísticos e matemáticos para realização e validação de análises complexas, criação de algoritmos preditivos, teste e melhoria constante de modelos de <i>machine learning</i>, visualização de dados.</p>
+<h2><b>Melhores juntos</b></h2>
+<p>Especialmente em empresas que processam grandes quantidades de dados, colaboradores dos três papéis trabalham em conjunto.</p>
+<p>Por causa do engenheiro e sua atuação no back-end, os dados que chegam bagunçados se tornam facilmente utilizáveis quando precisarem ser acessados. Sem ele, o analista e o cientista teriam que ocupar um tempo desproporcional em coleta e organização, muito provavelmente atingindo resultados inferiores e sem poder se preocupar com o médio-longo prazo.</p>
+<p>Então, o analista pode extrair um agrupamento de dados, utilizando ferramentas desenvolvidas pelo engenheiro, para começar a identificar tendências e analisar comportamentos. Por conta disso, times não-técnicos têm uma compreensão mais aprofundada do que estão fazendo e dosar onde podem ser mais cautelosos ou agressivos.</p>
+<p>Finalmente, o cientista usará essas análises para incrementar a pesquisa e adicionar ainda mais possibilidades a esses achados. Utilizando sua expertise altamente técnica, ele trará perspectivas de futuro e, eventualmente, proporá novos estudos a serem realizados pelo time de dados, iniciando um novo ciclo.</p>
+<p>Independentemente do caminho a ser seguido, a carreira de um especialista de dados está em constante evolução. Novas surgem, outras se reinventam, a procura aumenta e o aprendizado não pode parar.</p>
+<p>Se alguma delas — e principalmente a de ciências de dados — te interessou, vale a pena conhecer o bootcamp em <a href="http://somostera.com/cursos/data-science-for-business/" target="_blank"> Data Science &amp; Machine Learning for Business da Tera</a>. Essa é uma formação desenhada para aplicar sua curiosidade nata a conhecimentos em tecnologia, negócios e análise de dados para identificar e resolver problemas no mundo de dados. Criado lado a lado com alguns dos melhores <i>data scientists</i> do mercado, o curso leva os alunos por uma jornada de mais de 130 horas de conhecimento com dados e problemas reais de negócios reais.</p>
+<div class="ttr_end"></div><div class="post-pagination"></div>            
+            <div class="clearfix"></div>
+            
+        </div><!-- end .entry -->
+        
+            
+  
+    
+        <div class="postad">
+        
+            <a target="_blank"  href="http://somostera.com/cursos/data-science-for-business/"><img src="http://somostera.com/blog/wp-content/uploads/sites/2/2017/09/CTA-TERA-BLOG-DSCBC.jpg" alt="" /></a>
+            
+        </div>
+        
+<div class="postinfo p-border">    
+
+        <p class="modified small cntr meta" itemprop="dateModified" >Last modified: 08/24/2018</p>
+	<div id="post-nav">
+            <div class="post-previous tranz">
+            <a class="post-nav-image" href="http://somostera.com/blog/engenharia-para-data-science/"><img width="150" height="150" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/Tera-blog-data-science-engenheiro-2-150x150.jpg" class="grayscale grayscale-fade wp-post-image" alt="Mesa de escritório om porta caneta, caderno e um notebook" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/Tera-blog-data-science-engenheiro-2-150x150.jpg 150w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/Tera-blog-data-science-engenheiro-2-640x640.jpg 640w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/Tera-blog-data-science-engenheiro-2-50x50.jpg 50w" sizes="(max-width: 150px) 100vw, 150px" /><span class="arrow"><i class="fa fa-chevron-left"></i>
+</span></a>
+            <a class="post-nav-text ghost boxshadow" href="http://somostera.com/blog/engenharia-para-data-science/">Previous Story:<br/> <strong>Como evoluir de Engenharia de Software para Ciência de Dados</strong></a>
+        </div>
+            <div class="post-next tranz">
+            <a class="post-nav-image" href="http://somostera.com/blog/machine-learning-marketing/"><img width="150" height="150" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2-150x150.jpg" class="grayscale grayscale-fade wp-post-image" alt="machine learning na tela do computador" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2-150x150.jpg 150w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2-640x640.jpg 640w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2-50x50.jpg 50w" sizes="(max-width: 150px) 100vw, 150px" /><span class="arrow"><i class="fa fa-chevron-right"></i>
+</span></a>
+            <a class="post-nav-text ghost tranz boxshadow" href="http://somostera.com/blog/machine-learning-marketing/">Next Story:<br/> <strong>Live Master Class | Como aplicar Machine Learning para tomar decisões de Marketing?</strong></a>
+        </div>
+    </div><div class="clearfix"></div>        <div class="postauthor vcard author p-border rad"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3 class="additional">About the Author / <span class="fn" itemprop="name"><a href="http://somostera.com/blog/author/kaiquepoliveira/" title="Posts de Kaique Paes" rel="author">Kaique Paes</a></span></h3>
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+				<img alt='' src='http://0.gravatar.com/avatar/6ff2394c139f22156c46d979372b08f4?s=80&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6ff2394c139f22156c46d979372b08f4?s=160&amp;d=mm&amp;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' />            </div>
+            
+ 			<div class="authordesc">Kaique é Content Marketer na Tera. Trabalha com Design e Conteúdo desde 2014, atuou em revistas do setor de Arquitetura e Design e migrou para a área de Tecnologia. Ama viajar para recarregar as baterias e é um leitor voraz, atua na Tera para reinventar a educação adulta no país e suprir o skill gap do mercado.</div>
+            
+            <div class="authoricons">
+                <p>
+                    <a href="" class="hidd" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="" class="hidd" target="_blank" ><i class="fa fa-twitter"></i></a>
+                    <a href="?rel=author" class="hidd" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    <a href="" class="hidd" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    <a href="" class="hidd" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="" class="hidd" target="_blank" ><i class="fa fa-linkedin"></i></a>
+                    <a href="" itemprop="url" class="hidd" target="_blank"><i class="fa fa-link"></i></a>
+                </p>
+            </div>
+            
+		</div>
+		<div class="clearfix"></div>			<h3 class="additional">You might also like</h3>
+            <ul class="related">
+				
+					</ul>
+		<div class="clearfix"></div>            
+</div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+
+<div id="comments" class="comments-area">
+
+	
+	
+					<div id="respond" class="comment-respond">
+			<h2 id="reply-title" class="comment-reply-title">Deixe uma resposta <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/engenharia-analise-ciencia-de-dados/#respond" style="display:none;">Cancelar resposta</a></small></h2>				<form action="http://somostera.com/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					<p class="comment-notes"><span id="email-notes">O seu endereço de e-mail não será publicado.</span> Campos obrigatórios são marcados com <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comentário</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Nome <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">E-mail <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Site</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publicar comentário" /> <input type='hidden' name='comment_post_ID' value='976' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>				</form>
+					</div><!-- #respond -->
+		
+</div><!-- .comments-area -->
+        
+	</div><!-- end .item_inn -->
+      
+</div>               
+        </div><!-- end #content -->
+    
+        	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border ghost">
+    
+                <form class="searchform" method="get" action="http://somostera.com/blog/">
+<input type="text" name="s" class="s ghost p-border tranz" size="30" value="Search..." onfocus="if (this.value = '') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}" />
+<button class='searchSubmit ribbon' ><i class="fa fa-search"></i></button>
+</form>        
+        
+		
+        	<div id="hometab" class="">
+            
+                <ul id="serinfo-nav">
+                
+                        <li class="li01"><a href="#serpane0"><i class="fa fa-fire"></i> Popular</a></li>
+                        <li class="li02"><a href="#serpane1"><i class="fa fa-clock-o"></i> Latest</a></li>
+                
+                </ul>
+                
+                <ul id="serinfo">
+                
+                
+                        <li id="serpane0">
+                                                            <div class="tab-post p-border ghost">
+
+	    
+        <div class="imgwrap">
+        
+            <a href="http://somostera.com/blog/o-que-uma-porta-ensina-sobre-design/" title="O que uma porta ensina sobre design" >
+            
+              <img width="50" height="50" src="http://somostera.com/blog/wp-content/uploads/sites/2/2017/06/Screen-Shot-2017-06-27-at-19.37.04-50x50.png" class="grayscale grayscale-fade wp-post-image" alt="screen-shot-2017-06-27-at-19-37-04" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2017/06/Screen-Shot-2017-06-27-at-19.37.04-50x50.png 50w, http://somostera.com/blog/wp-content/uploads/sites/2/2017/06/Screen-Shot-2017-06-27-at-19.37.04-150x150.png 150w, http://somostera.com/blog/wp-content/uploads/sites/2/2017/06/Screen-Shot-2017-06-27-at-19.37.04-640x640.png 640w" sizes="(max-width: 50px) 100vw, 50px" />              
+            </a>
+        
+        </div>
+         
+            
+    <h4><a href="http://somostera.com/blog/o-que-uma-porta-ensina-sobre-design/" title="O que uma porta ensina sobre design">O que uma porta ensina sobre design</a></h4>
+    
+	    
+	<p class="meta date tranz post-date "> 
+        07/12/2017    </p>
+    
+</div>                                                            <div class="tab-post p-border ghost">
+
+	    
+        <div class="imgwrap">
+        
+            <a href="http://somostera.com/blog/o-que-faz-um-product-manager/" title="Você sabe o que faz um Product Manager?" >
+            
+              <img width="50" height="50" src="http://somostera.com/blog/wp-content/uploads/sites/2/2016/10/101576653-Steve-jobs-illustration.1910x1000-50x50.jpg" class="grayscale grayscale-fade wp-post-image" alt="101576653-steve-jobs-illustration-1910x1000" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2016/10/101576653-Steve-jobs-illustration.1910x1000-50x50.jpg 50w, http://somostera.com/blog/wp-content/uploads/sites/2/2016/10/101576653-Steve-jobs-illustration.1910x1000-150x150.jpg 150w, http://somostera.com/blog/wp-content/uploads/sites/2/2016/10/101576653-Steve-jobs-illustration.1910x1000-640x640.jpg 640w" sizes="(max-width: 50px) 100vw, 50px" />              
+            </a>
+        
+        </div>
+         
+            
+    <h4><a href="http://somostera.com/blog/o-que-faz-um-product-manager/" title="Você sabe o que faz um Product Manager?">Você sabe o que faz um Product Manager?</a></h4>
+    
+	    
+	<p class="meta date tranz post-date "> 
+        10/11/2016    </p>
+    
+</div>                                                            <div class="tab-post p-border ghost">
+
+	    
+        <div class="imgwrap">
+        
+            <a href="http://somostera.com/blog/5-coisas-que-aprendemos-com-o-nubank/" title="5 coisas  que aprendemos com o Nubank sobre design e experiência" >
+            
+              <img width="50" height="50" src="http://somostera.com/blog/wp-content/uploads/sites/2/2017/03/guilherme_nu_3-50x50.jpg" class="grayscale grayscale-fade wp-post-image" alt="guilherme_nu_3" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2017/03/guilherme_nu_3-50x50.jpg 50w, http://somostera.com/blog/wp-content/uploads/sites/2/2017/03/guilherme_nu_3-150x150.jpg 150w, http://somostera.com/blog/wp-content/uploads/sites/2/2017/03/guilherme_nu_3-640x640.jpg 640w" sizes="(max-width: 50px) 100vw, 50px" />              
+            </a>
+        
+        </div>
+         
+            
+    <h4><a href="http://somostera.com/blog/5-coisas-que-aprendemos-com-o-nubank/" title="5 coisas  que aprendemos com o Nubank sobre design e experiência">5 coisas  que aprendemos com o Nubank sobre design e experiência</a></h4>
+    
+	    
+	<p class="meta date tranz post-date "> 
+        03/12/2017    </p>
+    
+</div>                                                            <div class="tab-post p-border ghost">
+
+	    
+        <div class="imgwrap">
+        
+            <a href="http://somostera.com/blog/como-google-airbnb-e-spotify-contratam-ux-designers/" title="Como Google, Airbnb e Spotify contratam UX Designers" >
+            
+              <img width="50" height="50" src="http://somostera.com/blog/wp-content/uploads/sites/2/2017/11/airbnb-design-blog-destaque1-2-50x50.jpg" class="grayscale grayscale-fade wp-post-image" alt="Airbnb | Sundance
+
+Photo by Bryan Derballa" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2017/11/airbnb-design-blog-destaque1-2-50x50.jpg 50w, http://somostera.com/blog/wp-content/uploads/sites/2/2017/11/airbnb-design-blog-destaque1-2-150x150.jpg 150w" sizes="(max-width: 50px) 100vw, 50px" />              
+            </a>
+        
+        </div>
+         
+            
+    <h4><a href="http://somostera.com/blog/como-google-airbnb-e-spotify-contratam-ux-designers/" title="Como Google, Airbnb e Spotify contratam UX Designers">Como Google, Airbnb e Spotify contratam UX Designers</a></h4>
+    
+	    
+	<p class="meta date tranz post-date "> 
+        11/21/2017    </p>
+    
+</div>                                                    </li>
+                
+                        <li id="serpane1">	
+                            	
+                                <div class="tab-post p-border ghost">
+
+	    
+        <div class="imgwrap">
+        
+            <a href="http://somostera.com/blog/pm-vs-po-segundo-cagan/" title="Qual a diferença entre Product Managers e Product Owners, segundo Marty Cagan" >
+            
+              <img width="50" height="50" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/07/marty_cagan_tera_digital_product_leadership-1-50x50.jpg" class="grayscale grayscale-fade wp-post-image" alt="marty_cagan_tera_digital_product_leadership" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2018/07/marty_cagan_tera_digital_product_leadership-1-50x50.jpg 50w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/07/marty_cagan_tera_digital_product_leadership-1-150x150.jpg 150w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/07/marty_cagan_tera_digital_product_leadership-1-640x640.jpg 640w" sizes="(max-width: 50px) 100vw, 50px" />              
+            </a>
+        
+        </div>
+         
+            
+    <h4><a href="http://somostera.com/blog/pm-vs-po-segundo-cagan/" title="Qual a diferença entre Product Managers e Product Owners, segundo Marty Cagan">Qual a diferença entre Product Managers e Product Owners, segundo Marty Cagan</a></h4>
+    
+	    
+	<p class="meta date tranz post-date "> 
+        09/18/2018    </p>
+    
+</div>                            	
+                                <div class="tab-post p-border ghost">
+
+	    
+        <div class="imgwrap">
+        
+            <a href="http://somostera.com/blog/netflix-e-ciencia-de-dados/" title="Como a Netflix utiliza a Ciência de Dados" >
+            
+              <img width="50" height="50" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-NETFLIX-CIENCIA-DE-DADOS-2-1-50x50.jpg" class="grayscale grayscale-fade wp-post-image" alt="tela de um notebook com netflix aberto" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-NETFLIX-CIENCIA-DE-DADOS-2-1-50x50.jpg 50w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-NETFLIX-CIENCIA-DE-DADOS-2-1-150x150.jpg 150w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-NETFLIX-CIENCIA-DE-DADOS-2-1-640x640.jpg 640w" sizes="(max-width: 50px) 100vw, 50px" />              
+            </a>
+        
+        </div>
+         
+            
+    <h4><a href="http://somostera.com/blog/netflix-e-ciencia-de-dados/" title="Como a Netflix utiliza a Ciência de Dados">Como a Netflix utiliza a Ciência de Dados</a></h4>
+    
+	    
+	<p class="meta date tranz post-date "> 
+        09/12/2018    </p>
+    
+</div>                            	
+                                <div class="tab-post p-border ghost">
+
+	    
+        <div class="imgwrap">
+        
+            <a href="http://somostera.com/blog/ux-design-como-montar-portfolio/" title="Live Master Class | Como montar meu portfólio em UX Design?" >
+            
+              <img width="50" height="50" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-COMO-MONTAR-PORTFOLIO-50x50.jpg" class="grayscale grayscale-fade wp-post-image" alt="tera-blog-como-montar-portfolio" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-COMO-MONTAR-PORTFOLIO-50x50.jpg 50w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-COMO-MONTAR-PORTFOLIO-150x150.jpg 150w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-COMO-MONTAR-PORTFOLIO-640x640.jpg 640w" sizes="(max-width: 50px) 100vw, 50px" />              
+            </a>
+        
+        </div>
+         
+            
+    <h4><a href="http://somostera.com/blog/ux-design-como-montar-portfolio/" title="Live Master Class | Como montar meu portfólio em UX Design?">Live Master Class | Como montar meu portfólio em UX Design?</a></h4>
+    
+	    
+	<p class="meta date tranz post-date "> 
+        09/12/2018    </p>
+    
+</div>                            	
+                                <div class="tab-post p-border ghost">
+
+	    
+        <div class="imgwrap">
+        
+            <a href="http://somostera.com/blog/toda-empresa-precisa-growth/" title="Por que toda empresa precisa de um profissional de Growth Marketing" >
+            
+              <img width="50" height="50" src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-MARKETING-IMPORTANCIA-1-50x50.jpg" class="grayscale grayscale-fade wp-post-image" alt="pessoa apontando para um papel com uma caneta" srcset="http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-MARKETING-IMPORTANCIA-1-50x50.jpg 50w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-MARKETING-IMPORTANCIA-1-150x150.jpg 150w, http://somostera.com/blog/wp-content/uploads/sites/2/2018/09/TERA-BLOG-MARKETING-IMPORTANCIA-1-640x640.jpg 640w" sizes="(max-width: 50px) 100vw, 50px" />              
+            </a>
+        
+        </div>
+         
+            
+    <h4><a href="http://somostera.com/blog/toda-empresa-precisa-growth/" title="Por que toda empresa precisa de um profissional de Growth Marketing">Por que toda empresa precisa de um profissional de Growth Marketing</a></h4>
+    
+	    
+	<p class="meta date tranz post-date "> 
+        09/11/2018    </p>
+    
+</div>                            	                        </li>
+                
+                </ul>
+            
+            </div>
+            <div style="clear: both;"></div> 
+
+
+
+
+
+		<h2 class="widget"><span>Categorias</span></h2>		<ul>
+	<li class="cat-item cat-item-26"><a href="http://somostera.com/blog/category/carreira/" >Carreira</a> (23)
+</li>
+	<li class="cat-item cat-item-14"><a href="http://somostera.com/blog/category/data-science/" >Data Science</a> (12)
+</li>
+	<li class="cat-item cat-item-21"><a href="http://somostera.com/blog/category/marketing/" >Marketing</a> (13)
+</li>
+	<li class="cat-item cat-item-2"><a href="http://somostera.com/blog/category/negocios/" >Negócios</a> (8)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://somostera.com/blog/category/produto/" >Produto</a> (14)
+</li>
+	<li class="cat-item cat-item-16"><a href="http://somostera.com/blog/category/programacao/" >Programação</a> (1)
+</li>
+	<li class="cat-item cat-item-15"><a href="http://somostera.com/blog/category/ux-design/" >UX &amp; Design</a> (23)
+</li>
+		</ul>
+<h2 class="widget"><span>Arquivos</span></h2>		<ul>
+			<li><a href='http://somostera.com/blog/2018/09/'>setembro 2018</a></li>
+	<li><a href='http://somostera.com/blog/2018/08/'>agosto 2018</a></li>
+	<li><a href='http://somostera.com/blog/2018/07/'>julho 2018</a></li>
+	<li><a href='http://somostera.com/blog/2018/06/'>junho 2018</a></li>
+	<li><a href='http://somostera.com/blog/2018/05/'>maio 2018</a></li>
+	<li><a href='http://somostera.com/blog/2018/04/'>abril 2018</a></li>
+	<li><a href='http://somostera.com/blog/2018/03/'>março 2018</a></li>
+	<li><a href='http://somostera.com/blog/2018/02/'>fevereiro 2018</a></li>
+	<li><a href='http://somostera.com/blog/2018/01/'>janeiro 2018</a></li>
+	<li><a href='http://somostera.com/blog/2017/12/'>dezembro 2017</a></li>
+	<li><a href='http://somostera.com/blog/2017/11/'>novembro 2017</a></li>
+	<li><a href='http://somostera.com/blog/2017/10/'>outubro 2017</a></li>
+	<li><a href='http://somostera.com/blog/2017/09/'>setembro 2017</a></li>
+	<li><a href='http://somostera.com/blog/2017/08/'>agosto 2017</a></li>
+	<li><a href='http://somostera.com/blog/2017/07/'>julho 2017</a></li>
+	<li><a href='http://somostera.com/blog/2017/06/'>junho 2017</a></li>
+	<li><a href='http://somostera.com/blog/2017/05/'>maio 2017</a></li>
+	<li><a href='http://somostera.com/blog/2017/04/'>abril 2017</a></li>
+	<li><a href='http://somostera.com/blog/2017/03/'>março 2017</a></li>
+	<li><a href='http://somostera.com/blog/2017/01/'>janeiro 2017</a></li>
+	<li><a href='http://somostera.com/blog/2016/10/'>outubro 2016</a></li>
+		</ul>
+		<h2 class="widget"><span>Tags</span></h2><div class="tagcloud"><a href='http://somostera.com/blog/tag/aplicativo/' class='tag-link-5 tag-link-position-1' title='2 tópicos' style='font-size: 11.876923076923pt;'>aplicativo</a>
+<a href='http://somostera.com/blog/tag/apps/' class='tag-link-3 tag-link-position-2' title='1 tópico' style='font-size: 8pt;'>apps</a>
+<a href='http://somostera.com/blog/tag/arthur-debert/' class='tag-link-40 tag-link-position-3' title='1 tópico' style='font-size: 8pt;'>arthur debert</a>
+<a href='http://somostera.com/blog/tag/big-data/' class='tag-link-35 tag-link-position-4' title='1 tópico' style='font-size: 8pt;'>big data</a>
+<a href='http://somostera.com/blog/tag/carreira/' class='tag-link-17 tag-link-position-5' title='8 tópicos' style='font-size: 22pt;'>Carreira</a>
+<a href='http://somostera.com/blog/tag/customer-experience/' class='tag-link-36 tag-link-position-6' title='2 tópicos' style='font-size: 11.876923076923pt;'>customer experience</a>
+<a href='http://somostera.com/blog/tag/data-science/' class='tag-link-33 tag-link-position-7' title='4 tópicos' style='font-size: 16.615384615385pt;'>data science</a>
+<a href='http://somostera.com/blog/tag/design/' class='tag-link-24 tag-link-position-8' title='4 tópicos' style='font-size: 16.615384615385pt;'>design</a>
+<a href='http://somostera.com/blog/tag/digital-product/' class='tag-link-42 tag-link-position-9' title='2 tópicos' style='font-size: 11.876923076923pt;'>digital product</a>
+<a href='http://somostera.com/blog/tag/ebook/' class='tag-link-52 tag-link-position-10' title='1 tópico' style='font-size: 8pt;'>ebook</a>
+<a href='http://somostera.com/blog/tag/empreendedorismo/' class='tag-link-9 tag-link-position-11' title='1 tópico' style='font-size: 8pt;'>empreendedorismo</a>
+<a href='http://somostera.com/blog/tag/empregos/' class='tag-link-18 tag-link-position-12' title='4 tópicos' style='font-size: 16.615384615385pt;'>Empregos</a>
+<a href='http://somostera.com/blog/tag/experience/' class='tag-link-31 tag-link-position-13' title='1 tópico' style='font-size: 8pt;'>experience</a>
+<a href='http://somostera.com/blog/tag/growth/' class='tag-link-48 tag-link-position-14' title='2 tópicos' style='font-size: 11.876923076923pt;'>Growth</a>
+<a href='http://somostera.com/blog/tag/growth-marketing/' class='tag-link-47 tag-link-position-15' title='1 tópico' style='font-size: 8pt;'>growth marketing</a>
+<a href='http://somostera.com/blog/tag/inteligencia-artificial/' class='tag-link-34 tag-link-position-16' title='1 tópico' style='font-size: 8pt;'>inteligência artificial</a>
+<a href='http://somostera.com/blog/tag/interacao/' class='tag-link-45 tag-link-position-17' title='1 tópico' style='font-size: 8pt;'>Interação</a>
+<a href='http://somostera.com/blog/tag/isa/' class='tag-link-43 tag-link-position-18' title='1 tópico' style='font-size: 8pt;'>ISA</a>
+<a href='http://somostera.com/blog/tag/live/' class='tag-link-50 tag-link-position-19' title='1 tópico' style='font-size: 8pt;'>live</a>
+<a href='http://somostera.com/blog/tag/loggi/' class='tag-link-39 tag-link-position-20' title='1 tópico' style='font-size: 8pt;'>loggi</a>
+<a href='http://somostera.com/blog/tag/logistica/' class='tag-link-41 tag-link-position-21' title='1 tópico' style='font-size: 8pt;'>logistica</a>
+<a href='http://somostera.com/blog/tag/marketing/' class='tag-link-49 tag-link-position-22' title='2 tópicos' style='font-size: 11.876923076923pt;'>Marketing</a>
+<a href='http://somostera.com/blog/tag/marketing-digital/' class='tag-link-25 tag-link-position-23' title='1 tópico' style='font-size: 8pt;'>marketing digital</a>
+<a href='http://somostera.com/blog/tag/masterclass/' class='tag-link-51 tag-link-position-24' title='1 tópico' style='font-size: 8pt;'>masterclass</a>
+<a href='http://somostera.com/blog/tag/mobile/' class='tag-link-6 tag-link-position-25' title='1 tópico' style='font-size: 8pt;'>mobile</a>
+<a href='http://somostera.com/blog/tag/negocios/' class='tag-link-20 tag-link-position-26' title='2 tópicos' style='font-size: 11.876923076923pt;'>negócios</a>
+<a href='http://somostera.com/blog/tag/product-camp/' class='tag-link-38 tag-link-position-27' title='1 tópico' style='font-size: 8pt;'>product camp</a>
+<a href='http://somostera.com/blog/tag/product-manager/' class='tag-link-28 tag-link-position-28' title='5 tópicos' style='font-size: 18.338461538462pt;'>Product Manager</a>
+<a href='http://somostera.com/blog/tag/produto/' class='tag-link-27 tag-link-position-29' title='4 tópicos' style='font-size: 16.615384615385pt;'>Produto</a>
+<a href='http://somostera.com/blog/tag/startup/' class='tag-link-22 tag-link-position-30' title='1 tópico' style='font-size: 8pt;'>startup</a>
+<a href='http://somostera.com/blog/tag/startups/' class='tag-link-19 tag-link-position-31' title='1 tópico' style='font-size: 8pt;'>startups</a>
+<a href='http://somostera.com/blog/tag/tecnologia/' class='tag-link-4 tag-link-position-32' title='2 tópicos' style='font-size: 11.876923076923pt;'>tecnologia</a>
+<a href='http://somostera.com/blog/tag/tendencias/' class='tag-link-53 tag-link-position-33' title='1 tópico' style='font-size: 8pt;'>tendencias</a>
+<a href='http://somostera.com/blog/tag/transformacao/' class='tag-link-54 tag-link-position-34' title='1 tópico' style='font-size: 8pt;'>transformação</a>
+<a href='http://somostera.com/blog/tag/user-experience-design/' class='tag-link-30 tag-link-position-35' title='4 tópicos' style='font-size: 16.615384615385pt;'>user experience design</a>
+<a href='http://somostera.com/blog/tag/usuario/' class='tag-link-46 tag-link-position-36' title='1 tópico' style='font-size: 8pt;'>Usuário</a>
+<a href='http://somostera.com/blog/tag/ux/' class='tag-link-23 tag-link-position-37' title='7 tópicos' style='font-size: 20.923076923077pt;'>ux</a>
+<a href='http://somostera.com/blog/tag/uxdesign/' class='tag-link-29 tag-link-position-38' title='3 tópicos' style='font-size: 14.461538461538pt;'>uxdesign</a>
+<a href='http://somostera.com/blog/tag/ux-design/' class='tag-link-44 tag-link-position-39' title='3 tópicos' style='font-size: 14.461538461538pt;'>UX Design</a></div>
+			<script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+    	<div class="twinsbox">
+		<h2 class="widget"><span>Siga no Facebook</span></h2>        
+        <div class="fb-page" data-href="https://www.facebook.com/Teraskills/" data-hide-cover="false" data-show-facepile="true" data-show-posts="false" data-width="300"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/Teraskills/">Facebook</a></blockquote></div></div>
+        
+				</div>
+        <div class="clearfix"></div>
+		            
+            </div>
+            
+		        
+    	        
+    </div><!-- #sidebar -->    
+    </div><!-- end .postbar -->
+    
+</div> 
+
+        
+           
+
+
+</div><!-- /.container -->
+
+    <div id="footer">
+    
+        <div class="container woocommerce"> 
+        
+                
+     
+    
+    	    
+            <div class="foocol first"> 
+            
+                                                
+            </div>
+        
+                
+        
+                
+        
+                
+        
+                
+    
+                
+        </div>
+        
+        <div class="clearfix"></div>
+
+		            
+        <div id="copyright">
+            
+        	<div class="container"> 
+            
+                <div class="footer-logo">
+        
+					                
+                    <p></p>                    
+                </div>
+                
+                                
+                <div class="clearfix"></div>
+                      
+            </div> 
+        
+        </div>
+            
+    </div><!-- /#footer  -->
+    
+</div><!-- /.wrapper  -->
+
+<div id="curtain" class="tranz">
+	
+	<form class="searchform" method="get" action="http://somostera.com/blog/">
+<input type="text" name="s" class="s ghost p-border tranz" size="30" value="Search..." onfocus="if (this.value = '') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}" />
+<button class='searchSubmit ribbon' ><i class="fa fa-search"></i></button>
+</form>    
+    <a class='curtainclose rad' href="#" ><i class="fa fa-times"></i></a>
+    
+</div>
+    
+<div class="scrollTo_top ribbon" style="display: block">
+
+    <a title="Scroll to top" class="rad" href="#">
+    
+    	<i class="fa fa-chevron-up"></i> 
+        
+    </a>
+    
+</div>
+<script data-cfasync="false">
+  document.onreadystatechange = function () {
+    if (document.readyState == "complete") {
+      var logout_link = document.querySelectorAll('a[href*="wp-login.php?action=logout"]');
+      if (logout_link) {
+        for(var i=0; i < logout_link.length; i++) {
+          logout_link[i].addEventListener( "click", function() {
+            Intercom('shutdown');
+          });
+        }
+      }
+    }
+  };
+</script>
+<script data-cfasync="false">
+  window.intercomSettings = {"app_id":""};
+</script>
+<script data-cfasync="false">(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>	<!-- Swifty Bar by WPGens www.wpgens.com -->
+	<div id="sb_super_bar" class="red">
+
+		
+		<div class="sbprogress-container"><span class="sbprogress-bar"></span></div>
+		
+
+		<div id="sb_main_bar">
+
+			<div class="sb_text-size">
+									<a href="http://somostera.com/blog/category/data-science/">Data Science</a>
+							</div>
+
+			<div class="sb_post-data">
+				<h2>
+					Qual a diferença entre Engenharia, Análise e Ciência de Dados?				</h2>
+									<span class="sb_author">by Kaique Paes</span>
+												<span class="sb_ttr">tempo de leitura: 5 min</span>
+							</div>
+
+			<div class="sb_prev-next-posts">
+													<a href="http://somostera.com/blog/machine-learning-marketing/"><i class="sbicn-right-open-1"></i></a>
+					<div class="sb_next_post">
+						<div class="sb_next_post_image">
+														 <img src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/tera-blog-ciencia-dados-2-205x155.jpg" alt=""> 						</div>
+						<div class="sb_next_post_info">
+							<span class="sb_title">
+								<span class="sb_category">
+									Data Science								</span>
+								<span class="sb_tcategory">
+									Live Master Class | Como aplicar Machine Learning …								</span>
+							</span>
+						</div>
+					</div>
+																	<a href="http://somostera.com/blog/engenharia-para-data-science/"><i class="sbicn-left-open-1"></i></a>
+					<div class="sb_next_post">
+						<div class="sb_next_post_image">
+														 <img src="http://somostera.com/blog/wp-content/uploads/sites/2/2018/08/Tera-blog-data-science-engenheiro-2-205x155.jpg" alt=""> 						</div>
+						<div class="sb_next_post_info">
+							<span class="sb_title">
+								<span class="sb_category">
+									Data Science								</span>
+								<span class="sb_tcategory">
+									Como evoluir de Engenharia de Software para Ciênc…								</span>
+							</span>
+						</div>
+					</div>
+							</div>
+
+						<ul class="sb_share ">
+							    <li class="sbfacebook">
+			    	<a href="#" title="Share on Facebook" class="sbsoc-fb" target="_blank"><i class="sbicn-facebook"></i>
+			    		<span>0</span>			    	</a>
+			    </li>
+			    			    <li class="sbtwitter">
+			    	<a href="#" data-via="" data-title="Qual a diferença entre Engenharia, Análise e Ciência de Dados?" title="Share on Twitter" class="sbsoc-tw" target="_blank" ><i class="sbicn-twitter"></i>
+			  
+					</a>
+				</li>
+			    			    <li class="sbgoogle-plus">
+			    	<a href="#" title="Share on Google Plus" class="sbsoc-gplus" target="_blank"><i class="sbicn-gplus"></i>
+			    		<span>0</span>					</a>
+				</li>
+			    			    <li class="sblinkedin">
+			    	<a href="#" title="Share on Linkedin" class="sbsoc-linked" target="_blank"><i class="sbicn-linkedin"></i>
+			    		<span>0</span>					</a>
+				</li>
+    			    			<li class="sbpinterest">
+    				<a href="#" title="Share on Pinterest" class="sbsoc-pint" target="_blank"><i class="sbicn-pinterest"></i>
+    					<span>0</span>    				</a>
+    			</li>
+							</ul>
+			
+						<div class="sb_actions">
+				<a class="sb_comment" href="#comments">0<i class="sbicn-comment"></i></a>
+			</div>
+			
+		</div>
+
+	</div>
+	<!-- Swifty Bar by WPGens www.wpgens.com -->
+
+
+<!-- Google Tag Manager (noscript) --><script type='text/javascript' src='http://somostera.com/blog/wp-content/plugins/wp-embed-facebook/lib/js/wpembedfb.min.js?ver=1.0'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-content/themes/reading/js/jquery.prettyPhoto.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-content/themes/reading/js/jquery-scrolltofixed-min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-content/themes/reading/js/ownScript.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-content/themes/reading/js/jquery.flexslider-min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-content/themes/reading/js/jquery.flexslider.start.main.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-includes/js/comment-reply.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-includes/js/wp-embed.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://somostera.com/blog/wp-content/themes/reading/js/tabs.js?ver=4.6.1'></script>
+
+</body>
+</html>

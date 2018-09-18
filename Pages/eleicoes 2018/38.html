@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQ8HV19aDBABV1NbBgEHVVQ="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+    <title>Eleições 2018 | Jovem Pan Online</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <link rel="profile" href="http://gmpg.org/xfn/11"/>
+    <link rel="pingback" href="https://jovempan.uol.com.br/xmlrpc.php"/>
+	<meta name="google-site-verification" content="9DpDuCwljQVBCVGteZphBsNsnjyA5ZqEnE3Lsvvo5Ao" />
+	<link rel="alternate" type="application/rss+xml" title="Feed para Jovem Pan Online &raquo;" href="https://jovempan.uol.com.br/feed" />
+	<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Jovem Pan Online &raquo;" href="https://jovempan.uol.com.br/comments/feed" />
+    <link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed de categoria para Jovem Pan Online &raquo; Eleições 2018" href="https://jovempan.uol.com.br/eleicoes-2018/feed" />
+<link rel='stylesheet' id='main_style-css'  href='/wp-content/themes/jovempan/assets/build/css/main.css?ver=022FC152962A102AE2918542D4BF93EDA42F4' type='text/css' media='all' />
+<link rel='stylesheet' id='sccss_style-css'  href='https://jovempan.uol.com.br/?sccss=1&#038;ver=4.9.8' type='text/css' media='all' />
+
+		<!-- SEO Meta Tags BEGIN -->
+		<meta name="description" content="Esportes, entretenimento, notícias e vídeos com credibilidade" />
+
+		<!-- para o Twitter Card -->
+		<meta name="twitter:card" value="summary">
+		<meta name="twitter:site" content="@portaljovempan">
+		<meta name="twitter:title" content="Eleições 2018 &#8211; Jovem Pan Online">
+		<meta name="twitter:description" content="Esportes, entretenimento, notícias e vídeos com credibilidade">
+		<meta name="twitter:image" content="//img.jovempan.uol.com.br/uploads/2018/04/logo-jovempan-black.png">
+		
+		<!-- para o sistema Open Graph -->
+		<meta property="og:title" content="Eleições 2018 &#8211; Jovem Pan Online" />
+		<meta property="og:type" content="object" />
+		<meta property="og:url" content="https://jovempan.uol.com.br/eleicoes-2018" />
+				<meta property="og:image" content="//img.jovempan.uol.com.br/uploads/2018/04/logo-jovempan-black.png" />
+		<meta property="og:image:width" content="478" />
+		<meta property="og:image:height" content="249" />
+		
+		<meta property="og:description" content="Esportes, entretenimento, notícias e vídeos com credibilidade" />
+		<meta property="og:site_name" content="Eleições 2018 &#8211; Jovem Pan Online" />
+		
+		<meta property="fb:admins" content="182364316471" />
+
+		<!-- SEO Meta Tags END -->
+    
+		<link rel="shortcut icon" type="image/x-icon" href="/wp-content/themes/jovempan/assets/build/images/favicon.ico?v2" />      <meta name="onesignal" content="wordpress-plugin"/>
+          <link rel="manifest"
+            href="/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/manifest.json.php?gcm_sender_id="/>
+          <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>    <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://jovempan.uol.com.br");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '0206f171-7854-4d85-80ac-28dd68106e79';
+oneSignal_options['autoRegister'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "Jovem Pan Online";
+oneSignal_options['welcomeNotification']['message'] = "Obrigado por inscrever";
+oneSignal_options['welcomeNotification']['url'] = "https://jovempan.uol.com.br";
+oneSignal_options['path'] = "/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.48c84a0b-cc60-468f-93c1-13b193c27b88";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['promptOptions']['actionMessage'] = 'Deseja ativar as notificações?';
+oneSignal_options['promptOptions']['exampleNotificationTitleDesktop'] = 'Este é um exemplo de notificação';
+oneSignal_options['promptOptions']['exampleNotificationMessageDesktop'] = 'As notificações aparecerão na sua área de trabalho';
+oneSignal_options['promptOptions']['exampleNotificationTitleMobile'] = 'Exemplo de notificação';
+oneSignal_options['promptOptions']['exampleNotificationMessageMobile'] = 'As notificações aparecerão no seu dispositivo';
+oneSignal_options['promptOptions']['exampleNotificationCaption'] = 'Você pode cancelar sua inscrição a qualquer momento.';
+oneSignal_options['promptOptions']['acceptButtonText'] = 'Continuar';
+oneSignal_options['promptOptions']['cancelButtonText'] = 'Não obrigado';
+oneSignal_options['promptOptions']['siteName'] = 'https://jovempan.com.br';
+oneSignal_options['promptOptions']['autoAcceptTitle'] = 'Click para aceitar';
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T7QL69Z');</script>
+    <!-- End Google Tag Manager -->
+    <script type="text/javascript">
+        window.SITE_MAIN_URL = "https://jovempan.uol.com.br";
+        window.SITE_THEME_URL = "/wp-content/themes/jovempan";
+    </script>
+    <!-- Hotjar Tracking Code for http://jovempan.com.br -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {hjid: 559594, hjsv: 5};
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = true;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <!-- /Hotjar -->
+    <!-- UOL -->
+    <script type="text/javascript">
+      (function () {
+          window.universal_variable = window.universal_variable || {};
+          window.universal_variable.dfp = window.universal_variable.dfp || {};
+          window.uolads = window.uolads || [];
+      })();
+    </script>
+    <script type="text/javascript" src="//tm.jsuol.com.br/uoltm.js?id=o3b8iw" async></script>﻿
+    <!-- /UOL -->
+    <script type="text/javascript">
+   /* Taboola */
+    window._taboola = window._taboola || [];
+  _taboola.push({category:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)) {
+        e.async = 1;
+        e.src = u;
+        e.id = i;
+        f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+        document.getElementsByTagName('script')[0],
+        '//cdn.taboola.com/libtrc/jovempan/loader.js',
+        'tb_loader_script');
+  if(window.performance && typeof window.performance.mark == 'function')
+  {window.performance.mark('tbl_ic');}
+</script>
+<!-- NEWSROOM SCRIPT -->
+<script>
+  window._newsroom = window._newsroom || [];
+
+  !function (e, f, u) {
+      e.async = 1;
+      e.src = u;
+      f.parentNode.insertBefore(e, f);
+  }(document.createElement('script'),
+          document.getElementsByTagName('script')[0], '//c2.taboola.com/nr/jovempan/newsroom.js');
+</script>
+<!-- END NEWSROOM SCRIPT -->
+</head>
+<body class="archive category category-eleicoes-2018 category-61223 gllr_jovempan.com.br">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7QL69Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="root"></div>
+<header id="main-header">
+    <nav class="navbar navbar-default navbar-top">
+        <div class="container">
+            <ul class="social list-inline">
+              <li class="ico-facebook no-ajax">
+                <a target="_blank" href="https://facebook.com/jovempannews/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li class="ico-youtube no-ajax">
+                <a target="_blank" href="https://www.youtube.com/user/portaljovempan/" title="Youtube"><i class="fab fa-youtube"></i></a>
+              </li>
+              <li class="ico-twitter no-ajax">
+                <a target="_blank" href="https://twitter.com/JovemPanNews/" title="Twitter"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="ico-instagram no-ajax">
+                <a target="_blank" href="https://www.instagram.com/radiojovempan/" title="Instagram"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li class="ico-instagram no-ajax">
+                <a target="_blank" href="https://flipboard.com/@JovemPan" title="Flipboard"><i class="fab fa-flipboard"></i></a>
+              </li>
+              <li class="ico-whatsapp no-ajax">
+                <a target="_blank" href="https://wa.me/5511931170620" title="Whatsapp"><i class="fab fa-whatsapp"></i> <span>(11) 93117-0620</span></a>
+              </li>
+            </ul>
+            <div class="search-form" data-headersearchbar="true"></div>
+            <div id="navbar-top" class="menu-menu-top-container"><ul id="menu-menu-top" class="nav navbar-nav pull-right"><li id="menu-item-621408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-621408" data-headerlink="tempo" ><a title="Tempo" href="https://jovempan.uol.com.br/tempo">Tempo</a></li>
+<li id="menu-item-567342" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-567342" data-headerlink="newsletter" ><a title="Newsletter" href="https://jovempan.uol.com.br/newsletter">Newsletter</a></li>
+<li id="menu-item-380748" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-380748" data-headerlink="ultimas" ><a title="Últimas Notícias" href="https://jovempan.uol.com.br/ultimas">Últimas Notícias</a></li>
+<li id="menu-item-409799" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-409799"><a title="Podcasts" href="/podcasts">Podcasts</a></li>
+<li id="menu-item-380719" class="no-ajax menu-item menu-item-type-custom menu-item-object-custom menu-item-380719" data-headerlink="" ><a title="JP FM" target="_blank" href="http://jovempanfm.uol.com.br/">JP FM</a></li>
+<li id="menu-item-434123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-434123" data-headerlink="jpnews" ><a title="JPNews" href="https://jovempan.uol.com.br/jpnews">JPNews</a></li>
+<li id="menu-item-402912" class="no-ajax menu-item menu-item-type-custom menu-item-object-custom menu-item-402912" data-headerlink="mitosefatos" ><a title="Mitos e Fatos" target="_blank" href="http://blog.jovempan.uol.com.br/mitosefatos">Mitos e Fatos</a></li>
+</ul></div>        </div>
+    </nav>
+    <nav class="header-bar">
+        <div class="container">
+            <a href="#" class="menu-link" data-toggle="dropdown">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#" class="close-menu" data-toggle="dropdown">×</a>
+            <div class="logo">
+                <a href="/">
+                    <img src="/wp-content/themes/jovempan/assets/build/images/logo-jovempan-black.png?v2"
+                         alt="Jovem Pan Online"
+                         title="Jovem Pan Online">
+                </a>
+            </div>
+            <div id="header-bar--menu-container" class="menu-menu-superior-container"><ul id="menu-menu-superior" class="header-bar--menu"><li id="menu-item-14516" class="noticias menu-item menu-item-type-taxonomy menu-item-object-category current-menu-ancestor current-menu-parent menu-item-has-children menu-item-14516 dropdown" data-headerlink="noticias" ><a title="Notícias" href="https://jovempan.uol.com.br/noticias" data-toggle="dropdown" class="dropdown-toggle disabled" aria-haspopup="true">Notícias <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-541588" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-541588"><a title="Eleições 2018" href="https://jovempan.uol.com.br/eleicoes-2018">Eleições 2018</a></li>
+	<li id="menu-item-498281" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-498281"><a title="Brasil" href="https://jovempan.uol.com.br/noticias/brasil">Brasil</a></li>
+	<li id="menu-item-498282" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-498282"><a title="Mundo" href="https://jovempan.uol.com.br/noticias/mundo">Mundo</a></li>
+	<li id="menu-item-498283" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-498283"><a title="Economia" href="https://jovempan.uol.com.br/noticias/economia">Economia</a></li>
+	<li id="menu-item-498284" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-498284"><a title="Política" href="https://jovempan.uol.com.br/noticias/politica">Política</a></li>
+	<li id="menu-item-604761" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-604761"><a title="Entenda" href="https://jovempan.uol.com.br/noticias/entenda">Entenda</a></li>
+</ul>
+</li>
+<li id="menu-item-14519" class="esportes menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-14519 dropdown" data-headerlink="esportes" ><a title="Esportes" href="https://jovempan.uol.com.br/esportes" data-toggle="dropdown" class="dropdown-toggle disabled" aria-haspopup="true">Esportes <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-498285" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-498285 dropdown"><a title="Futebol" href="https://jovempan.uol.com.br/esportes/futebol">Futebol</a>
+	<ul role="menu" class=" dropdown-menu">
+		<li id="menu-item-547222" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-547222"><a title="Corinthians" href="https://jovempan.uol.com.br/esportes/futebol/corinthians">Corinthians</a></li>
+		<li id="menu-item-547224" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-547224"><a title="Palmeiras" href="https://jovempan.uol.com.br/esportes/futebol/palmeiras">Palmeiras</a></li>
+		<li id="menu-item-547226" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-547226"><a title="São Paulo" href="https://jovempan.uol.com.br/esportes/futebol/sao-paulo-futebol">São Paulo</a></li>
+		<li id="menu-item-547228" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-547228"><a title="Santos" href="https://jovempan.uol.com.br/esportes/futebol/santos">Santos</a></li>
+	</ul>
+</li>
+	<li id="menu-item-498286" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-498286"><a title="Gols da Pan" href="https://jovempan.uol.com.br/esportes/gols-da-pan">Gols da Pan</a></li>
+	<li id="menu-item-498287" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-498287"><a title="Mais Esportes" href="https://jovempan.uol.com.br/esportes/outros-esportes">Mais Esportes</a></li>
+</ul>
+</li>
+<li id="menu-item-380544" class="entretenimento menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-380544 dropdown" data-headerlink="entretenimento" ><a title="Entretenimento" href="https://jovempan.uol.com.br/entretenimento" data-toggle="dropdown" class="dropdown-toggle disabled" aria-haspopup="true">Entretenimento <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-498288" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-498288"><a title="Famosos" href="https://jovempan.uol.com.br/entretenimento/famosos">Famosos</a></li>
+	<li id="menu-item-498289" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-498289"><a title="Música" href="https://jovempan.uol.com.br/entretenimento/musica">Música</a></li>
+	<li id="menu-item-498290" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-498290"><a title="TV e Cinema" href="https://jovempan.uol.com.br/entretenimento/tv-e-cinema">TV e Cinema</a></li>
+	<li id="menu-item-600981" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-600981"><a title="Games" href="https://jovempan.uol.com.br/entretenimento/zona-gamer">Games</a></li>
+</ul>
+</li>
+<li id="menu-item-409800" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-409800" data-headerlink="videos" ><a title="JP TV" href="https://jovempan.uol.com.br/videos">JP TV</a></li>
+<li id="menu-item-380545" class="opiniao menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-380545 dropdown" data-headerlink="opiniao-jovem-pan" ><a title="Opinião" href="https://jovempan.uol.com.br/opiniao-jovem-pan" data-toggle="dropdown" class="dropdown-toggle disabled" aria-haspopup="true">Opinião <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-380683" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380683"><a title="Augusto Nunes" href="https://jovempan.uol.com.br/opiniao-jovem-pan/comentaristas/augusto-nunes">Augusto Nunes</a></li>
+	<li id="menu-item-380685" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380685"><a title="Carlos Andreazza" href="https://jovempan.uol.com.br/opiniao-jovem-pan/comentaristas/carlos-andreazza">Carlos Andreazza</a></li>
+	<li id="menu-item-380686" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380686"><a title="Denise Campos de Toledo" href="https://jovempan.uol.com.br/opiniao-jovem-pan/comentaristas/denise-campos-de-toledo">Denise Campos de Toledo</a></li>
+	<li id="menu-item-425575" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-425575"><a title="Felipe Moura Brasil" href="https://jovempan.uol.com.br/opiniao-jovem-pan/comentaristas/felipe-moura-brasil">Felipe Moura Brasil</a></li>
+	<li id="menu-item-380687" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380687"><a title="Joseval Peixoto" href="https://jovempan.uol.com.br/opiniao-jovem-pan/comentaristas/joseval-peixoto">Joseval Peixoto</a></li>
+	<li id="menu-item-380688" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380688"><a title="Marcelo Madureira" href="https://jovempan.uol.com.br/opiniao-jovem-pan/comentaristas/marcelo-madureira">Marcelo Madureira</a></li>
+	<li id="menu-item-380689" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380689"><a title="Marco Antonio Villa" href="https://jovempan.uol.com.br/opiniao-jovem-pan/comentaristas/marco-antonio-villa">Marco Antonio Villa</a></li>
+	<li id="menu-item-590449" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-590449"><a title="Marcos Troyjo" href="https://jovempan.uol.com.br/opiniao-jovem-pan/comentaristas/marcos-troyjo">Marcos Troyjo</a></li>
+	<li id="menu-item-380691" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380691"><a title="Vera Magalhães" href="https://jovempan.uol.com.br/opiniao-jovem-pan/comentaristas/vera-magalhaes">Vera Magalhães</a></li>
+</ul>
+</li>
+<li id="menu-item-589067" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-589067 dropdown"><a title="Programas" href="#" data-toggle="dropdown" class="dropdown-toggle disabled" aria-haspopup="true">Programas <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-380677" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380677"><a title="Jornal da Manhã" href="https://jovempan.uol.com.br/programas/jornal-da-manha">Jornal da Manhã</a></li>
+	<li id="menu-item-380679" class="no-ajax menu-item menu-item-type-custom menu-item-object-custom menu-item-380679"><a title="Morning Show" target="_blank" href="http://jovempanfm.uol.com.br/morning-show/">Morning Show</a></li>
+	<li id="menu-item-497260" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-497260"><a title="Camisa 10" href="https://jovempan.uol.com.br/programas/camisa-10">Camisa 10</a></li>
+	<li id="menu-item-380680" class="no-ajax menu-item menu-item-type-custom menu-item-object-custom menu-item-380680"><a title="Pânico" target="_blank" href="http://jovempanfm.uol.com.br/panico/">Pânico</a></li>
+	<li id="menu-item-608043" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-608043"><a title="Jornal Jovem Pan" href="https://jovempan.uol.com.br/programas/jornal-jovem-pan">Jornal Jovem Pan</a></li>
+	<li id="menu-item-380678" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380678"><a title="Esporte em Discussão" href="https://jovempan.uol.com.br/programas/esporte-em-discussao">Esporte em Discussão</a></li>
+	<li id="menu-item-380681" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380681"><a title="3 em 1" href="https://jovempan.uol.com.br/programas/3-em-1">3 em 1</a></li>
+	<li id="menu-item-624054" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-624054"><a title="Os Pingos nos Is" href="https://jovempan.uol.com.br/videos/programas/os-pingos-nos-is">Os Pingos nos Is</a></li>
+</ul>
+</li>
+<li id="menu-item-622979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-622979" data-headerlink="blogs" ><a title="Blogs" href="https://jovempan.uol.com.br/blogs">Blogs</a></li>
+</ul></div>            <div class="live-button-wrapper">
+                <div class="live-button live-button--tre">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle disabled no-ajax">
+                        <span>Horário Eleitoral</span>
+                        <i class="fa fa-headphones"></i>
+                    </a>
+                    <ul role="menu" class=" dropdown-menu">
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                            <a href="#" class="dropdown-widget__link" data-playlink="true" data-playlink-type="audio" data-playlink-source="http://sh.upx.com.br:9250/stream" data-playlink-title="Horário Eleitoral - TRE">
+                                Streaming 1
+                            </a>
+                        </li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                            <a href="#" class="dropdown-widget__link" data-playlink="true" data-playlink-type="audio" data-playlink-source="http://sh.upx.com.br:9248/stream" data-playlink-title="Horário Eleitoral - TRE">
+                                Streaming 2
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="live-button">
+                    <a id="btn-aovivo" href="#" class="no-ajax" title="Ao Vivo" data-toggle="dropdown" class="dropdown-toggle disabled">
+                        <span class="desktop">Ouça ao vivo</span>
+                        <i class="fa fa-headphones"></i>
+                    </a>
+
+                    <ul role="menu" class=" dropdown-menu">
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                            <a href="#" class="dropdown-widget__link" data-playlink="true" data-playlink-type="live" data-playlink-source="jpam">
+                                JP AM
+                            </a>
+                        </li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                            <a href="#" class="dropdown-widget__link" data-playlink="true" data-playlink-type="live" data-playlink-source="jpfm">
+                                JP FM
+                            </a>
+                        </li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                            <a href="#" class="dropdown-widget__link" data-playlink="true" data-playlink-type="live" data-playlink-source="jpnews">
+                                JP News
+                            </a>
+                        </li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                            <a href="#" class="dropdown-widget__link" data-playlink="true" data-playlink-type="live" data-playlink-source="jpclassic">
+                                Classic Pan
+                            </a>
+                        </li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                            <a href="#" class="dropdown-widget__link" data-playlink="true" data-playlink-type="live" data-playlink-source="jpmpb">
+                                MPB
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="page-dataLayer"
+    data-title="Eleições 2018 | Jovem Pan Online"
+    data-pagetype="post"
+    data-contentcategory="Eleições 2018"data-contentauthor=""></div>
+  <main id="main-content">
+    <div class="bguol" id="bguol">
+      <div id="wrap">
+        <div id="main_content">
+                    <div class="clearfix text-center">
+            <div id="banner-topo">
+    <div data-banner="true" data-bannerId="banner-970x250-area" data-closeable="true" data-mobileBannerId="banner-320x50-area"></div>
+</div>          </div>
+          <div id="content" class="archive category category-eleicoes-2018 category-61223 container gllr_jovempan.com.br">
+  <div class="row">
+    
+    <div class="main col-md-8" role="main">
+    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+  <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" class="home" href="https://jovempan.uol.com.br" rel="nofollow">JovemPan Online</a></span> &gt; <span property="itemListElement" typeof="ListItem"><strong>Eleições 2018</strong></span></div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-9 col-md-9">
+          <h1 class="category__title">Eleições 2018</h1>
+        </div>
+      </div>
+      <section class="clearfix">
+        <div class="degrade-background">
+          <h2 class="category__title__h2">
+            <a href="/eleicoes-2018/presidenciais">Eleições para presidente</a>
+          </h2>
+        </div>
+          <article id="post-627388 1">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4">
+                      <a href="https://jovempan.uol.com.br/eleicoes-2018/presidenciais/pf-ainda-nao-descarta-coautoria-em-ataque-a-bolsonaro-diz-jungmann.html">
+                      <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/bolsonaro-1-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                      </a>
+                    </div>
+                    <div class="col-xs-8 col-md-8">
+                      <ul class="meta-info list-unstyled">
+                        <li>
+                          <span class="category label label-default eleicoes-2018">Presidenciais</span>
+                        </li>
+                        <li>
+                          <span class="date">18/09/2018 13h45</span>
+                        </li>
+                      </ul>
+                      <h4 class="post__title"><a href="https://jovempan.uol.com.br/eleicoes-2018/presidenciais/pf-ainda-nao-descarta-coautoria-em-ataque-a-bolsonaro-diz-jungmann.html">PF ainda não descarta coautoria em ataque a Bolsonaro, diz Jungmann</a></h4>
+                    </div>
+                  </div><!--/row-->
+                </article><!-- #post-## --><article id="post-627373 2">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4">
+                      <a href="https://jovempan.uol.com.br/eleicoes-2018/presidenciais/geraldo-alckmin-nega-possivel-debandada-de-aliados-de-sua-campanha.html">
+                      <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/geraldo-alckmin-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                      </a>
+                    </div>
+                    <div class="col-xs-8 col-md-8">
+                      <ul class="meta-info list-unstyled">
+                        <li>
+                          <span class="category label label-default eleicoes-2018">Presidenciais</span>
+                        </li>
+                        <li>
+                          <span class="date">18/09/2018 13h05</span>
+                        </li>
+                      </ul>
+                      <h4 class="post__title"><a href="https://jovempan.uol.com.br/eleicoes-2018/presidenciais/geraldo-alckmin-nega-possivel-debandada-de-aliados-de-sua-campanha.html">Geraldo Alckmin nega possível debandada de aliados de sua campanha</a></h4>
+                    </div>
+                  </div><!--/row-->
+                </article><!-- #post-## --><article id="post-627364 3">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4">
+                      <a href="https://jovempan.uol.com.br/eleicoes-2018/presidenciais/campanha-do-pt-investe-r-15-milhao-na-defesa-do-ex-presidente-lula.html">
+                      <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/lula-ricardo-stuckert-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                      </a>
+                    </div>
+                    <div class="col-xs-8 col-md-8">
+                      <ul class="meta-info list-unstyled">
+                        <li>
+                          <span class="category label label-default eleicoes-2018">Presidenciais</span>
+                        </li>
+                        <li>
+                          <span class="date">18/09/2018 12h52</span>
+                        </li>
+                      </ul>
+                      <h4 class="post__title"><a href="https://jovempan.uol.com.br/eleicoes-2018/presidenciais/campanha-do-pt-investe-r-15-milhao-na-defesa-do-ex-presidente-lula.html">Campanha do PT investe R$ 1,5 milhão na defesa do ex-presidente Lula</a></h4>
+                    </div>
+                  </div><!--/row-->
+                </article><!-- #post-## --><article id="post-627355 4">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4">
+                      <a href="https://jovempan.uol.com.br/eleicoes-2018/presidenciais/general-mourao-defende-urna-eletronica-com-voto-impresso.html">
+                      <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/general-mourao-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                      </a>
+                    </div>
+                    <div class="col-xs-8 col-md-8">
+                      <ul class="meta-info list-unstyled">
+                        <li>
+                          <span class="category label label-default eleicoes-2018">Presidenciais</span>
+                        </li>
+                        <li>
+                          <span class="date">18/09/2018 12h30</span>
+                        </li>
+                      </ul>
+                      <h4 class="post__title"><a href="https://jovempan.uol.com.br/eleicoes-2018/presidenciais/general-mourao-defende-urna-eletronica-com-voto-impresso.html">General Mourão defende urna eletrônica com voto impresso</a></h4>
+                    </div>
+                  </div><!--/row-->
+                </article><!-- #post-## --><article id="post-627286 5">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4">
+                      <a href="https://jovempan.uol.com.br/programas/jornal-da-manha/sonia-guajajara-fala-em-oportunismo-de-candidato-que-se-declara-indigena-se-reconheceu-depois-dos-40.html">
+                      <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/WhatsApp-Image-2018-09-18-at-09.38.00-300x170.jpeg" class="img-responsive wp-post-image" alt="" />  
+                      </a>
+                    </div>
+                    <div class="col-xs-8 col-md-8">
+                      <ul class="meta-info list-unstyled">
+                        <li>
+                          <span class="category label label-default programas">Jornal da Manhã</span>
+                        </li>
+                        <li>
+                          <span class="date">18/09/2018 10h25</span>
+                        </li>
+                      </ul>
+                      <h4 class="post__title"><a href="https://jovempan.uol.com.br/programas/jornal-da-manha/sonia-guajajara-fala-em-oportunismo-de-candidato-que-se-declara-indigena-se-reconheceu-depois-dos-40.html">Sonia Guajajara fala em &#8216;oportunismo&#8217; de candidato que se declara indígena: &#8216;Se reconheceu depois dos 40&#8217;</a></h4>
+                    </div>
+                  </div><!--/row-->
+                </article><!-- #post-## -->          <a class="pull-right link__more" href="/eleicoes-2018/presidenciais">Leia Mais</a>
+        </section>
+
+        <section class="clearfix">
+          <div class="degrade-background">
+            <h2 class="margin-small category__background">Eleições Estaduais</h2>
+          </div>
+          <div class="dots-background">
+                  <h3 class="category__title__h3">São Paulo</h3>
+                </div><article id="post-627356 1 61252">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-4">
+                        <a href="https://jovempan.uol.com.br/eleicoes-2018/sao-paulo/a-unica-coisa-que-o-doria-conseguiu-for-ser-condenado-diz-luiz-marinho.html">
+                        <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/FTA20180915193-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                        </a>
+                      </div>
+                      <div class="col-xs-8 col-md-8">
+                        <ul class="meta-info list-unstyled">
+                          <li>
+                            <span class="category label label-default eleicoes-2018">São Paulo</span>
+                          </li>
+                          <li>
+                            <span class="date">18/09/2018 12h40</span>
+                          </li>
+                        </ul>
+                        <h4 class="post__title"><a href="https://jovempan.uol.com.br/eleicoes-2018/sao-paulo/a-unica-coisa-que-o-doria-conseguiu-for-ser-condenado-diz-luiz-marinho.html">&#8216;A única coisa que o Doria conseguiu foi ser condenado&#8217;, diz Luiz Marinho</a></h4>
+                      </div>
+                    </div><!--/row-->
+                  </article><!-- #post-## --><article id="post-627185 2 61252">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-4">
+                        <a href="https://jovempan.uol.com.br/programas/jornal-da-manha/candidato-a-reeleicao-em-sp-franca-defende-investimento-em-ferrovias-ja-existentes.html">
+                        <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/márcio-frança-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                        </a>
+                      </div>
+                      <div class="col-xs-8 col-md-8">
+                        <ul class="meta-info list-unstyled">
+                          <li>
+                            <span class="category label label-default programas">Jornal da Manhã</span>
+                          </li>
+                          <li>
+                            <span class="date">18/09/2018 07h23</span>
+                          </li>
+                        </ul>
+                        <h4 class="post__title"><a href="https://jovempan.uol.com.br/programas/jornal-da-manha/candidato-a-reeleicao-em-sp-franca-defende-investimento-em-ferrovias-ja-existentes.html">Candidato à reeleição em SP, França defende investimento em linhas ferroviárias já existentes</a></h4>
+                      </div>
+                    </div><!--/row-->
+                  </article><!-- #post-## --><article id="post-627182 3 61252">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-4">
+                        <a href="https://jovempan.uol.com.br/programas/jornal-da-manha/doria-promete-seis-novos-centros-da-rede-lucy-montoro-em-sp.html">
+                        <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/03/1082077-vac_9791-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                        </a>
+                      </div>
+                      <div class="col-xs-8 col-md-8">
+                        <ul class="meta-info list-unstyled">
+                          <li>
+                            <span class="category label label-default programas">Jornal da Manhã</span>
+                          </li>
+                          <li>
+                            <span class="date">18/09/2018 07h16</span>
+                          </li>
+                        </ul>
+                        <h4 class="post__title"><a href="https://jovempan.uol.com.br/programas/jornal-da-manha/doria-promete-seis-novos-centros-da-rede-lucy-montoro-em-sp.html">Doria promete seis novos centros da rede Lucy Montoro em SP</a></h4>
+                      </div>
+                    </div><!--/row-->
+                  </article><!-- #post-## --><a class="pull-right link__more" href="https://jovempan.uol.com.br/eleicoes-2018/sao-paulo">Leia Mais</a><div class="dots-background">
+                  <h3 class="category__title__h3">Rio de Janeiro</h3>
+                </div><article id="post-627010 1 61247">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-4">
+                        <a href="https://jovempan.uol.com.br/eleicoes-2018/rio-de-janeiro/cabral-pede-desculpas-ao-filho-pelos-erros-que-cometeu-em-carta-redigida-da-prisao.html">
+                        <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/41991967_1024943917678696_4447244334982496256_n-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                        </a>
+                      </div>
+                      <div class="col-xs-8 col-md-8">
+                        <ul class="meta-info list-unstyled">
+                          <li>
+                            <span class="category label label-default eleicoes-2018">Rio de Janeiro</span>
+                          </li>
+                          <li>
+                            <span class="date">17/09/2018 15h26</span>
+                          </li>
+                        </ul>
+                        <h4 class="post__title"><a href="https://jovempan.uol.com.br/eleicoes-2018/rio-de-janeiro/cabral-pede-desculpas-ao-filho-pelos-erros-que-cometeu-em-carta-redigida-da-prisao.html">Cabral pede desculpas ao filho pelos &#8216;erros que cometeu&#8217; em carta redigida da prisão</a></h4>
+                      </div>
+                    </div><!--/row-->
+                  </article><!-- #post-## --><article id="post-626784 2 61247">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-4">
+                        <a href="https://jovempan.uol.com.br/programas/jornal-da-manha/tse-garante-candidatura-de-garotinho-ao-governo-do-rj.html">
+                        <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2017/12/IT_Anthony-Garotinho-preso-pela-PF-acusacao-compra-voto-eleicoes_00208152014-1-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                        </a>
+                      </div>
+                      <div class="col-xs-8 col-md-8">
+                        <ul class="meta-info list-unstyled">
+                          <li>
+                            <span class="category label label-default programas">Jornal da Manhã</span>
+                          </li>
+                          <li>
+                            <span class="date">17/09/2018 06h22</span>
+                          </li>
+                        </ul>
+                        <h4 class="post__title"><a href="https://jovempan.uol.com.br/programas/jornal-da-manha/tse-garante-candidatura-de-garotinho-ao-governo-do-rj.html">TSE garante candidatura de Garotinho ao governo do RJ</a></h4>
+                      </div>
+                    </div><!--/row-->
+                  </article><!-- #post-## --><article id="post-625111 3 61247">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-4">
+                        <a href="https://jovempan.uol.com.br/eleicoes-2018/rio-de-janeiro/ibope-rj-eduardo-paes-tem-23-e-romario-20-em-empate-tecnico.html">
+                        <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/08/romario-paes-garotinho-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                        </a>
+                      </div>
+                      <div class="col-xs-8 col-md-8">
+                        <ul class="meta-info list-unstyled">
+                          <li>
+                            <span class="category label label-default eleicoes-2018">Rio de Janeiro</span>
+                          </li>
+                          <li>
+                            <span class="date">11/09/2018 07h16</span>
+                          </li>
+                        </ul>
+                        <h4 class="post__title"><a href="https://jovempan.uol.com.br/eleicoes-2018/rio-de-janeiro/ibope-rj-eduardo-paes-tem-23-e-romario-20-em-empate-tecnico.html">Ibope/RJ: Eduardo Paes tem 23% e Romário, 20%, em empate técnico</a></h4>
+                      </div>
+                    </div><!--/row-->
+                  </article><!-- #post-## --><a class="pull-right link__more" href="https://jovempan.uol.com.br/eleicoes-2018/rio-de-janeiro">Leia Mais</a><div class="dots-background">
+                  <h3 class="category__title__h3">Minas Gerais</h3>
+                </div><article id="post-625506 1 61239">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-4">
+                        <a href="https://jovempan.uol.com.br/eleicoes-2018/minas-gerais/dilma-gasta-mais-que-oito-presidenciaveis-em-corrida-pelo-senado.html">
+                        <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2017/06/4123927413-dilma-rousseff-responde-senadores-no-processo-do-impeachment-no-senado-efe-2-300x170.jpg" class="img-responsive wp-post-image" alt="EFE/Cadu Gomes" srcset="//img.jovempan.uol.com.br/uploads/2017/06/4123927413-dilma-rousseff-responde-senadores-no-processo-do-impeachment-no-senado-efe-2-300x170.jpg 300w, //img.jovempan.uol.com.br/uploads/2017/06/4123927413-dilma-rousseff-responde-senadores-no-processo-do-impeachment-no-senado-efe-2-1280x720.jpg 1280w, //img.jovempan.uol.com.br/uploads/2017/06/4123927413-dilma-rousseff-responde-senadores-no-processo-do-impeachment-no-senado-efe-2-1024x576.jpg 1024w, //img.jovempan.uol.com.br/uploads/2017/06/4123927413-dilma-rousseff-responde-senadores-no-processo-do-impeachment-no-senado-efe-2-850x480.jpg 850w, //img.jovempan.uol.com.br/uploads/2017/06/4123927413-dilma-rousseff-responde-senadores-no-processo-do-impeachment-no-senado-efe-2-400x225.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" />  
+                        </a>
+                      </div>
+                      <div class="col-xs-8 col-md-8">
+                        <ul class="meta-info list-unstyled">
+                          <li>
+                            <span class="category label label-default eleicoes-2018">Minas Gerais</span>
+                          </li>
+                          <li>
+                            <span class="date">12/09/2018 09h11</span>
+                          </li>
+                        </ul>
+                        <h4 class="post__title"><a href="https://jovempan.uol.com.br/eleicoes-2018/minas-gerais/dilma-gasta-mais-que-oito-presidenciaveis-em-corrida-pelo-senado.html">Dilma gasta mais que oito presidenciáveis em corrida pelo Senado</a></h4>
+                      </div>
+                    </div><!--/row-->
+                  </article><!-- #post-## --><article id="post-621151 2 61239">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-4">
+                        <a href="https://jovempan.uol.com.br/eleicoes-2018/minas-gerais/dilma-aparece-em-primeiro-na-disputa-pelo-senado-em-mg-diz-ibope.html">
+                        <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2017/12/636483883265367929w-1-300x170.jpg" class="img-responsive wp-post-image" alt="" />  
+                        </a>
+                      </div>
+                      <div class="col-xs-8 col-md-8">
+                        <ul class="meta-info list-unstyled">
+                          <li>
+                            <span class="category label label-default eleicoes-2018">Minas Gerais</span>
+                          </li>
+                          <li>
+                            <span class="date">30/08/2018 08h52</span>
+                          </li>
+                        </ul>
+                        <h4 class="post__title"><a href="https://jovempan.uol.com.br/eleicoes-2018/minas-gerais/dilma-aparece-em-primeiro-na-disputa-pelo-senado-em-mg-diz-ibope.html">Dilma aparece em primeiro na disputa pelo Senado em MG, diz Ibope</a></h4>
+                      </div>
+                    </div><!--/row-->
+                  </article><!-- #post-## --><article id="post-620462 3 61239">
+                    <div class="row">
+                      <div class="col-xs-4 col-md-4">
+                        <a href="https://jovempan.uol.com.br/eleicoes-2018/minas-gerais/anastasia-recebe-quase-r-1-milhao-de-familia-de-deputado-mineiro-para-campanha.html">
+                        <img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2017/04/2455527416-relator-senador-antonio-anastasia-psdb-mg-pediu-que-dilma-seja-julgada-pelo-senado-e-viu-crime-de-re-3-300x170.jpg" class="img-responsive wp-post-image" alt="Geraldo Magela/Agência Senado" />  
+                        </a>
+                      </div>
+                      <div class="col-xs-8 col-md-8">
+                        <ul class="meta-info list-unstyled">
+                          <li>
+                            <span class="category label label-default eleicoes-2018">Minas Gerais</span>
+                          </li>
+                          <li>
+                            <span class="date">28/08/2018 12h39</span>
+                          </li>
+                        </ul>
+                        <h4 class="post__title"><a href="https://jovempan.uol.com.br/eleicoes-2018/minas-gerais/anastasia-recebe-quase-r-1-milhao-de-familia-de-deputado-mineiro-para-campanha.html">Anastasia recebe quase R$ 1 milhão de família de deputado mineiro para campanha</a></h4>
+                      </div>
+                    </div><!--/row-->
+                  </article><!-- #post-## --><a class="pull-right link__more" href="https://jovempan.uol.com.br/eleicoes-2018/minas-gerais">Leia Mais</a>        </section>
+        <section class="clearfix category__tags__section">
+          <div class="degrade-background">
+            <h2 class="category__background">Outros Estados</h2>
+          </div>
+          <a href="https://jovempan.uol.com.br/eleicoes-2018/tocantins" class="label label-primary category__tags">Tocantins</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/sergipe" class="label label-primary category__tags">Sergipe</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/santa-catarina" class="label label-primary category__tags">Santa Catarina</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/roraima" class="label label-primary category__tags">Roraima</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/rondonia" class="label label-primary category__tags">Rondônia</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/rio-grande-do-sul" class="label label-primary category__tags">Rio Grande do Sul</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/rio-grande-do-norte" class="label label-primary category__tags">Rio Grande do Norte</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/piaui" class="label label-primary category__tags">Piauí</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/pernambuco" class="label label-primary category__tags">Pernambuco</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/parana" class="label label-primary category__tags">Paraná</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/paraiba" class="label label-primary category__tags">Paraíba</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/para" class="label label-primary category__tags">Pará</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/mato-grosso-do-sul" class="label label-primary category__tags">Mato Grosso do Sul</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/mato-grosso" class="label label-primary category__tags">Mato Grosso</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/maranhao" class="label label-primary category__tags">Maranhão</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/goias" class="label label-primary category__tags">Goiás</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/espirito-santo" class="label label-primary category__tags">Espírito Santo</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/distrito-federal" class="label label-primary category__tags">Distrito Federal</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/ceara" class="label label-primary category__tags">Ceará</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/bahia" class="label label-primary category__tags">Bahia</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/amazonas" class="label label-primary category__tags">Amazonas</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/amapa" class="label label-primary category__tags">Amapá</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/alagoas" class="label label-primary category__tags">Alagoas</a> <a href="https://jovempan.uol.com.br/eleicoes-2018/acre" class="label label-primary category__tags">Acre</a>         </section>
+
+    </div><!--/main-->
+
+    <aside class="col-md-4 color" role="complementary">
+      <div class="sidebar">
+        <div id="sidebar_1" class="widget"><div data-banner="true" data-bannerId="banner-300x250-area"></div></div><div id="elections_tags" class="widget"></div><div id="sidebar_2" class="widget"><div data-banner="true" data-bannerId="banner-300x250-2-area"></div></div><div class="widget popular-posts last-posts programas jornal-da-manha"><p class="widget-title">Jornal da Manhã</p><div class="related_posts_rpw"><div class="row"><div class="col-xs-6 col-sm-6 col-md-12 related-item programas"><div class="row"><div class="col-xs-12 col-sm-6 col-md-6 rpw_main_image_wrap"><div class="related_posts_rpw_main_image"><a href="https://jovempan.uol.com.br/programas/jornal-da-manha/sonia-guajajara-fala-em-oportunismo-de-candidato-que-se-declara-indigena-se-reconheceu-depois-dos-40.html" rel="related" title="Sonia Guajajara fala em &#8216;oportunismo&#8217; de candidato que se declara indígena: &#8216;Se reconheceu depois dos 40&#8217;" class="video-thumb"><img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/WhatsApp-Image-2018-09-18-at-09.38.00-300x170.jpeg" class="rpw_image img-responsive wp-post-image" alt="Sonia Guajajara fala em &#8216;oportunismo&#8217; de candidato que se declara indígena: &#8216;Se reconheceu depois dos 40&#8217;" title="Sonia Guajajara fala em &#8216;oportunismo&#8217; de candidato que se declara indígena: &#8216;Se reconheceu depois dos 40&#8217;" /></a></div><!--/related_posts_rpw_main_image--></div><!--/col-sm-6 related_posts_rpw_main_image--><div class="col-sm-6 col-md-6 rpw_main_content_wrap"><div class="related_posts_rpw_main_content"><span class="category label label-default programas">Jornal da Manhã</span><p><a href="https://jovempan.uol.com.br/programas/jornal-da-manha/sonia-guajajara-fala-em-oportunismo-de-candidato-que-se-declara-indigena-se-reconheceu-depois-dos-40.html" rel="related" title="Sonia Guajajara fala em &#8216;oportunismo&#8217; de candidato que se declara indígena: &#8216;Se reconheceu depois dos 40&#8217;">Sonia Guajajara fala em &#8216;oportunismo&#8217; de candidato que se ...</a></p></div><!--/related_posts_rpw_main_content--></div><!--/col-sm-6 related_posts_rpw_main_content--></div><!--/row--></div><div class="col-xs-6 col-sm-6 col-md-12 related-item programas"><div class="row"><div class="col-xs-12 col-sm-6 col-md-6 rpw_main_image_wrap"><div class="related_posts_rpw_main_image"><a href="https://jovempan.uol.com.br/programas/jornal-da-manha/negar-direito-ao-territorio-e-genocidio-com-povos-indigenas-diz-sonia-guajajara-vice-de-boulos.html" rel="related" title="Negar direito ao território é genocídio com povos indígenas, diz Sonia Guajajara, vice de Boulos" class="video-thumb"><img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/WhatsApp-Image-2018-09-18-at-09.37.59-1-300x170.jpeg" class="rpw_image img-responsive wp-post-image" alt="Negar direito ao território é genocídio com povos indígenas, diz Sonia Guajajara, vice de Boulos" title="Negar direito ao território é genocídio com povos indígenas, diz Sonia Guajajara, vice de Boulos" /></a></div><!--/related_posts_rpw_main_image--></div><!--/col-sm-6 related_posts_rpw_main_image--><div class="col-sm-6 col-md-6 rpw_main_content_wrap"><div class="related_posts_rpw_main_content"><span class="category label label-default programas">Jornal da Manhã</span><p><a href="https://jovempan.uol.com.br/programas/jornal-da-manha/negar-direito-ao-territorio-e-genocidio-com-povos-indigenas-diz-sonia-guajajara-vice-de-boulos.html" rel="related" title="Negar direito ao território é genocídio com povos indígenas, diz Sonia Guajajara, vice de Boulos">Negar direito ao território é genocídio com povos indígenas, ...</a></p></div><!--/related_posts_rpw_main_content--></div><!--/col-sm-6 related_posts_rpw_main_content--></div><!--/row--></div><div class="col-xs-6 col-sm-6 col-md-12 related-item programas"><div class="row"><div class="col-xs-12 col-sm-6 col-md-6 rpw_main_image_wrap"><div class="related_posts_rpw_main_image"><a href="https://jovempan.uol.com.br/programas/jornal-da-manha/vice-de-boulos-diz-que-prisao-de-lula-e-politica-consideramos-injusta.html" rel="related" title="Vice de Boulos diz que prisão de Lula é política: &#8216;Consideramos injusta&#8217;" class="video-thumb"><img width="300" height="170" src="https://img.jovempan.uol.com.br/uploads/2018/09/WhatsApp-Image-2018-09-18-at-09.37.59-300x170.jpeg" class="rpw_image img-responsive wp-post-image" alt="Vice de Boulos diz que prisão de Lula é política: &#8216;Consideramos injusta&#8217;" title="Vice de Boulos diz que prisão de Lula é política: &#8216;Consideramos injusta&#8217;" /></a></div><!--/related_posts_rpw_main_image--></div><!--/col-sm-6 related_posts_rpw_main_image--><div class="col-sm-6 col-md-6 rpw_main_content_wrap"><div class="related_posts_rpw_main_content"><span class="category label label-default programas">Jornal da Manhã</span><p><a href="https://jovempan.uol.com.br/programas/jornal-da-manha/vice-de-boulos-diz-que-prisao-de-lula-e-politica-consideramos-injusta.html" rel="related" title="Vice de Boulos diz que prisão de Lula é política: &#8216;Consideramos injusta&#8217;">Vice de Boulos diz que prisão de Lula é ...</a></p></div><!--/related_posts_rpw_main_content--></div><!--/col-sm-6 related_posts_rpw_main_content--></div><!--/row--></div><div class="col-xs-12"><a href="https://jovempan.uol.com.br/programas/jornal-da-manha" class="pull-right link__more">Leia Mais</a></div></div><!--/row--></div><!--/related_posts_rpw--></div><div id="sidebar_vertical" class="widget"><div data-banner="true" data-bannerId="banner-300x250-3-area"></div></div>      </div><!--/sidebar-->
+    </aside>
+
+  </div><!--/row-->
+</div><!--/container-->
+<div class="clearfix text-center">
+  <div id="banner-leaderboard">
+    <div data-banner="true" data-bannerId="banner-728x90-area" data-mobileBannerId="banner-320x50-2-area"></div>
+</div></div>
+            </div><!--/main_content-->
+          </div><!--/wrap-->
+        </div><!--/bguol-->
+    </main>
+    <footer id="main-footer">
+      <section class="footer-menu clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+               <div id="footer-navbar" class="menu-menu-footer-container"><ul id="menu-menu-footer" class="footer-navbar-nav"><li id="menu-item-380549" class="menu-title noticias menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-380549"><a href="https://jovempan.uol.com.br/noticias">Notícias</a>
+<ul class="sub-menu">
+	<li id="menu-item-403565" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-403565"><a href="https://jovempan.uol.com.br/noticias/brasil">Brasil</a></li>
+	<li id="menu-item-403568" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-403568"><a href="https://jovempan.uol.com.br/noticias/economia">Economia</a></li>
+	<li id="menu-item-403567" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-403567"><a href="https://jovempan.uol.com.br/noticias/politica">Politica</a></li>
+	<li id="menu-item-406479" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-406479"><a href="https://jovempan.uol.com.br/noticias/mundo">Mundo</a></li>
+	<li id="menu-item-604768" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-604768"><a href="https://jovempan.uol.com.br/noticias/entenda">Entenda</a></li>
+</ul>
+</li>
+<li id="menu-item-380551" class="menu-title esportes menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-380551"><a href="https://jovempan.uol.com.br/esportes">Esportes</a>
+<ul class="sub-menu">
+	<li id="menu-item-403570" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-403570"><a href="https://jovempan.uol.com.br/esportes/futebol">Futebol</a></li>
+	<li id="menu-item-406478" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-406478"><a href="https://jovempan.uol.com.br/esportes/gols-da-pan">Gols da Pan</a></li>
+	<li id="menu-item-406477" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-406477"><a href="https://jovempan.uol.com.br/esportes/outros-esportes">Outros Esportes</a></li>
+</ul>
+</li>
+<li id="menu-item-380553" class="menu-title entretenimento menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-380553"><a href="https://jovempan.uol.com.br/entretenimento">Entretenimento</a>
+<ul class="sub-menu">
+	<li id="menu-item-406476" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-406476"><a href="https://jovempan.uol.com.br/entretenimento/famosos">Famosos</a></li>
+	<li id="menu-item-403574" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-403574"><a href="http://jovempanfm.uol.com.br/musica/">Música</a></li>
+	<li id="menu-item-403576" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-403576"><a href="https://jovempan.uol.com.br/entretenimento/tv-e-cinema">TV e Cinema</a></li>
+	<li id="menu-item-600988" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-600988"><a href="https://jovempan.uol.com.br/entretenimento/zona-gamer">Games</a></li>
+</ul>
+</li>
+<li id="menu-item-380555" class="menu-title menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-380555"><a href="https://jovempan.uol.com.br/programas">Programas</a>
+<ul class="sub-menu">
+	<li id="menu-item-403560" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-403560"><a href="https://jovempan.uol.com.br/programas/jornal-da-manha">Jornal da Manhã</a></li>
+	<li id="menu-item-405097" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-405097"><a href="http://jovempanfm.uol.com.br/morning-show/">Morning Show</a></li>
+	<li id="menu-item-415335" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-415335"><a></a></li>
+	<li id="menu-item-497265" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-497265"><a href="https://jovempan.uol.com.br/programas/camisa-10">Camisa 10</a></li>
+	<li id="menu-item-405098" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-405098"><a href="http://jovempanfm.uol.com.br/panico/">Pânico</a></li>
+	<li id="menu-item-607987" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-607987"><a href="https://jovempan.uol.com.br/programas/jornal-jovem-pan">Jornal Jovem Pan</a></li>
+	<li id="menu-item-403561" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-403561"><a href="https://jovempan.uol.com.br/programas/esporte-em-discussao">Esporte em Discussão</a></li>
+	<li id="menu-item-403559" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-403559"><a href="https://jovempan.uol.com.br/programas/3-em-1">3 em 1</a></li>
+</ul>
+</li>
+<li id="menu-item-417917" class="menu-title menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-417917"><a href="http://jp.com.br">Mais JP</a>
+<ul class="sub-menu">
+	<li id="menu-item-417918" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-417918"><a href="https://jovempan.uol.com.br/videos">JP TV</a></li>
+	<li id="menu-item-417926" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-417926"><a href="https://jovempan.uol.com.br/opiniao-jovem-pan">Opinião Jovem Pan</a></li>
+	<li id="menu-item-417919" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-417919"><a href="https://jovempan.uol.com.br/podcasts">Podcasts</a></li>
+	<li id="menu-item-417920" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-417920"><a href="http://jovempanmitosefatos.com.br">Mitos e Fatos</a></li>
+	<li id="menu-item-608103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608103"><a href="https://jovempan.uol.com.br/blogs">Blogs</a></li>
+	<li id="menu-item-417922" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-417922"><a href="http://jovempanfm.uol.com.br">JP FM</a></li>
+	<li id="menu-item-426992" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-426992"><a href="https://jovempan.uol.com.br/jovem-pan-ao-vivo">Ouça a Rádio Jovem Pan Ao Vivo</a></li>
+	<li id="menu-item-427321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-427321"><a href="https://jovempan.uol.com.br/programacao">Programação</a></li>
+	<li id="menu-item-434132" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-434132"><a href="https://jovempan.uol.com.br/jpnews">JPNews</a></li>
+</ul>
+</li>
+</ul></div>            </div>
+          </div>
+        </div><!--/container-->
+      </section><!--/footer-menu-->
+      <section class="footer-copyright clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-1 col-md-1">
+              <a href="https://jovempan.uol.com.br"><img src="/wp-content/themes/jovempan/assets/build/images/logo-jovempan-white.png?v2" alt="Jovem Pan Online" title="Jovem Pan Online" class="img-responsive logo-footer" /></a>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-10">
+              <div id="footer-navbar" class="menu-menu-footer-base-container"><ul id="menu-menu-footer-base" class="footer-navbar-nav"><li id="menu-item-380568" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-380568"><a href="https://jovempan.uol.com.br/sobre">Sobre</a></li>
+<li id="menu-item-380567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-380567"><a href="https://jovempan.uol.com.br/anuncie">Anuncie</a></li>
+<li id="menu-item-380569" class="no-ajax menu-item menu-item-type-custom menu-item-object-custom menu-item-380569"><a href="https://jovempan.uol.com.br/feed">Feed RSS</a></li>
+<li id="menu-item-402954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-402954"><a href="https://jovempan.uol.com.br/aplicativos">Aplicativos</a></li>
+<li id="menu-item-380566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-380566"><a href="https://jovempan.uol.com.br/fale-conosco">Fale Conosco</a></li>
+</ul></div>            </div>
+            <div class="col-xs-12 col-sm-1 col-md-1 no-ajax">
+              <a href="http://jmscomunicacao.com.br" target="_blank"><img src="/wp-content/themes/jovempan/assets/build/images/logo-jmscomunicacao-white.png" alt="JMS Comunicação" title="JMS Comunicação" class="logo-jms"></a>
+            </div>
+          </div><!--/row-->
+        </div><!--/container-->
+      </section><!--/footer-copyright-->
+      <section id="tag-footer" class="clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              Todos os direitos reservados - Portal Jovem Pan Online - Rádio Panamericana S/A<br>
+              Av. Paulista, 807 - 24º andar - Cerqueira César - São Paulo - SP<br>
+            </div>
+            <div class="col-md-6 col-contacts">
+              +55 11 2870-9700 - jovempanonline@jovempan.com.br<br>
+              Whatsapp: (11) 93117-0620<br>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script type='text/javascript' src='/wp-content/themes/jovempan/assets/build/js/main.js?ver=022FC152962A102AE2918542D4BF93EDA42F4'></script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script async src="//platform.instagram.com/en_US/embeds.js"></script>
+    <script async src="//cdn.flipboard.com/web/buttons/js/flbuttons.min.js" type="text/javascript"></script>
+    <div id="fb-root"></div>
+    <script async src="//connect.facebook.net/pt_BR/all.js#xfbml=1"></script>
+    <script type="text/javascript">
+      window._taboola = window._taboola || [];
+      _taboola.push({flush: true});
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '474441002974508');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=474441002974508&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ecab656503","applicationID":"132910030","transactionName":"YlUAZERYWktXVhVYVlsfI1NCUFtWGVYARVxSXxBJG1xYXV9WDlRKGAJSAQ4=","queueTime":0,"applicationTime":473,"atts":"ThIDEgxCSUU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

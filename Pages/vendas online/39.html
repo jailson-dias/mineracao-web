@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" ng-app="proposta" ng-controller="analyticsController">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" type="text/css" href="/public/common/styles/frameworks.css"/>
+    <link rel="stylesheet" href="/public/amil/styles/amil.css">
+    <script src="/public/common/js/lib/modernizr/modernizr.js"></script>
+
+    <base href="/" />
+
+    <title>Venda Online Amil</title>
+  </head>
+  <!--[if IE 9]>     <body class="ie9" id="vendaonline"> <![endif]-->
+  <!--[if !IE]><!--> <body id="vendaonline"> <!--<![endif]-->
+  <body>
+    <!-- Google Tag Manager -->
+    <span ng-if="envLoaded" ng-include="tagManagerAnalytics"></span>
+    <!-- End Google Tag Manager -->
+
+    <header role="banner" class="cabecalho" marca="amil" ng-controller="customHeaderController">
+      <div class="wrapper">
+        <h1 class="logo">
+          <a href="/" title="{{contexto.marca}}">
+            <img src="/public/amil/images/structure/logo-amil.png" alt="{{contexto.marca}}">
+          </a>
+        </h1>
+        <nav ng-show="!contexto.apresentarInfoUsuarioLogado && contexto.isHome">
+          <ul>
+            <li><a href="http://amil.com.br/portal/web/servicos/saude/rede-credenciada/amil/busca-avancada" target="_blank">Busca de rede</a></li>
+            <li><a ng-href="proposta/perguntas-frequentes">Perguntas frequentes</a></li>
+            <li><a class="proximo" ng-href="proposta/login" role="button" elm-width="3" analytics-on="click" analytics-category="Contratacao" analytics-label="acompanhamento">acompanhar solicitaÃ§Ã£o</a></li>
+          </ul>
+        </nav>
+        <div class="infos-planos" ng-show="!contexto.apresentarInfoUsuarioLogado && !contexto.isHome">
+          <ul>
+            <li ng-show="contexto.apresentarEndereco"><span>Local: </span>{{contexto.bairro}} - {{contexto.municipio}} - {{contexto.uf}}</li>
+            <li ng-show="contexto.apresentarTipoContratacao"><span>Tipo de contrataÃ§Ã£o:</span> {{contexto.contratacao}}</li>
+          </ul>
+          <ul>
+            <li ng-show="contexto.apresentarQuantidadePessoas"><span>NÂº de pessoas:</span> {{contexto.qtdPessoas}}</li>
+          </ul>
+        </div>
+        <div class="infos-planos logado" ng-show="contexto.apresentarInfoUsuarioLogado && !contexto.isHome">
+          <ul>
+            <li ng-show="contexto.planoEscolhido"><span>Plano Escolhido:</span> {{contexto.planoEscolhido}}</li>
+            <li ng-show="contexto.numeroSolicitacaoContratacao"><span>NÂº da SolicitaÃ§Ã£o de ContrataÃ§Ã£o:</span> {{contexto.numeroSolicitacaoContratacao}}</li>
+          </ul>
+        </div>
+        <div ng-show="contexto.apresentarInfoUsuarioLogado" class="usuario-logado">
+          <span>{{contexto.emailUsuario}}</span>
+          <a title="Sair da Ã¡rea logada" ng-click="sair()">Sair</a>
+        </div>
+      </div>
+    </header>
+
+    <noscript>
+      <h2>JavaScript desabilitado</h2>
+      <p>O JavaScript precisa ser ativado para que o site possa ser carregado.</p>
+
+      <style type="text/css">
+        .conteudo { display:none; }
+      </style>
+    </noscript>
+
+    <div class="wrapper conteudo" role="main">
+      <div ng-view></div>
+    </div>
+
+    <footer class="rodape" ng-controller="funcoesController">
+      <div class="wrapper">
+        <a class="logo-ans" href="http://www.ans.gov.br">ANS</a>
+        <a class="numero-ans" href="http://www.ans.gov.br">ANS Amil</a>
+        <p>CNPJ 29.309.127/0001-79</p>
+        <p>Copyright Â© 2007-<span ng-bind="anoAtual"></span> Amil AssistÃªncia MÃ©dica Internacional S/A. Todos os direitos reservados.</p>
+        <p>Rua Arquiteto Olavo Redig Campos, 105 â ChÃ¡cara Santo AntÃ´nio â SÃ£o Paulo - SP</p>
+        <p>Em caso de dÃºvida, procure seu Corretor ou ligue para a Central de Atendimento: 0800-608-3665 (disponÃ­vel de 08h Ã s 20h, de 2Âª a 6Âª feira).</p>
+        <p>InformaÃ§Ãµes de acesso: <span ng-bind="dataAcesso"></span> - <span ng-bind="clientIP" ></span></p>
+        <nav class="menu-footer">
+          <ul class="menu-institucional">
+            <li><a href="/politica-de-privacidade">PolÃ­tica de privacidade</a></li>
+            <li><a href="/termos-de-uso">Termo de uso</a></li>
+            <li><a href="/direito-de-arrependimento" >Direito de Arrependimento</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Static -->
+    <!-- Release: GMUD_34500  -->
+    <!-- Date: 2018-09-04T19:41:53.068Z -->
+    <!--  -->
+
+    <script src="/public/js/vendor.js"></script>
+    <script src="/public/js/application.js"></script>
+    <!-- Google Analytics -->
+    <span ng-if="envLoaded" ng-include="fileAnalytics"></span>
+    <!-- End Google Analytics -->
+  </body>
+</html>

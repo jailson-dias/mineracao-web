@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Cinema, quadrinhos, história, ciência, tecnologia, tudo embalado em podcasts, notícias e vídeos com uma espessa cobertura de bom humor.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O que é ciência de dados - Jovem Nerd</title>
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Web Application Manifest -->
+  <!-- <link rel="manifest" href="manifest.json"> -->
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Jovem Nerd">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Jovem Nerd">
+
+  <!-- Your styles -->
+  <script src="/cdn-cgi/apps/head/OqHJ3IFUVhsYx-6r7jn3YmELAFM.js"></script><link rel="stylesheet" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/styles/main.css?clear=b3c11d3af8f7f61d8df054703db04ee6">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/apple-touch-icon-57x57.png?v=xQQlkMx9YN">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/apple-touch-icon-60x60.png?v=xQQlkMx9YN">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/apple-touch-icon-72x72.png?v=xQQlkMx9YN">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/apple-touch-icon-76x76.png?v=xQQlkMx9YN">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/apple-touch-icon-114x114.png?v=xQQlkMx9YN">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/apple-touch-icon-120x120.png?v=xQQlkMx9YN">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/apple-touch-icon-144x144.png?v=xQQlkMx9YN">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/apple-touch-icon-152x152.png?v=xQQlkMx9YN">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/apple-touch-icon-180x180.png?v=xQQlkMx9YN">
+  <link rel="icon" type="image/png" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/favicon-32x32.png?v=xQQlkMx9YN" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/favicon-194x194.png?v=xQQlkMx9YN" sizes="194x194">
+  <link rel="icon" type="image/png" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/favicon-96x96.png?v=xQQlkMx9YN" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/android-chrome-192x192.png?v=xQQlkMx9YN" sizes="192x192">
+  <link rel="icon" type="image/png" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/favicon-16x16.png?v=xQQlkMx9YN" sizes="16x16">
+  <link rel="manifest" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/manifest.json?v=xQQlkMx9YN">
+  <link rel="mask-icon" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/safari-pinned-tab.svg?v=xQQlkMx9YN" color="#3CB4B4">
+  <link rel="shortcut icon" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/favicon.ico?v=xQQlkMx9YN">
+  <meta name="msapplication-TileColor" content="#1e1e22">
+  <meta name="msapplication-TileImage" content="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/favicons/mstile-144x144.png?v=xQQlkMx9YN">
+  <meta name="theme-color" content="#1e1e22">
+
+  <!-- Smart App Banner -->
+
+  <!-- <meta name="smartbanner:title" content="Jovem Nerd - Oficial">
+  <meta name="smartbanner:author" content="Jovem Nerd">
+  <meta name="smartbanner:price" content="OBTER">
+  <meta name="smartbanner:price-suffix-apple" content=" - Na App Store">
+  <meta name="smartbanner:price-suffix-google" content=" - Na Google Play">
+  <meta name="smartbanner:icon-apple" content="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/app-icon.png">
+  <meta name="smartbanner:icon-google" content="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/app-icon.png">
+  <meta name="smartbanner:button" content="VER">
+  <meta name="smartbanner:button-url-apple" content="itmss://itunes.apple.com/us/app/id1122679489">
+  <meta name="smartbanner:button-url-google" content="https://play.google.com/store/apps/details?id=com.jovemnerd.app">
+  <meta name="smartbanner:enabled-platforms" content="android,ios">
+  <meta name="smartbanner:hide-ttl" content="86400000"> -->
+  <!--<meta name="smartbanner:hide-ttl" content="2629746000">-->
+  <!--<meta name="smartbanner:hide-path" content="/">-->
+  <!-- <meta name="smartbanner:disable-positioning" content="true"> -->
+  <!-- Enable for all platforms -->
+  <!--<meta name="smartbanner:include-user-agent-regex" content=".*">-->
+  <!--<meta name="smartbanner:custom-design-modifier" content="ios">-->
+  <!-- <link rel="stylesheet" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/scripts/smartbanner.min.css">
+  <script src="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/scripts/smartbanner.js"></script>
+
+  <style>
+    .is-webview .smartbanner {
+      display: none;
+    }
+    .smartbanner {
+      top: -84px;
+    }
+    .smartbanner--ios .smartbanner__info {
+      color: #000;
+    }
+  </style> -->
+
+  <!-- /Smart App Banner -->
+
+  
+<!-- This site is optimized with the Yoast SEO plugin v7.5.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://jovemnerd.com.br/nerdologia/o-que-e-ciencia-de-dados/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="O que é ciência de dados - Jovem Nerd" />
+<meta property="og:description" content="No Nerdologia Tech de hoje vamos ver como usar o poder dos dados para prever o futuro." />
+<meta property="og:url" content="https://jovemnerd.com.br/nerdologia/o-que-e-ciencia-de-dados/" />
+<meta property="og:site_name" content="Jovem Nerd" />
+<meta property="article:publisher" content="https://www.facebook.com/jovemnerd" />
+<meta property="og:image" content="https://jovemnerd.com.br/wp-content/uploads/2018/07/vitrine-tech-23_B.jpg" />
+<meta property="og:image:secure_url" content="https://jovemnerd.com.br/wp-content/uploads/2018/07/vitrine-tech-23_B.jpg" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="863" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="No Nerdologia Tech de hoje vamos ver como usar o poder dos dados para prever o futuro." />
+<meta name="twitter:title" content="O que é ciência de dados - Jovem Nerd" />
+<meta name="twitter:site" content="@jovemnerd" />
+<meta name="twitter:image" content="https://jovemnerd.com.br/wp-content/uploads/2018/07/vitrine-tech-23_B.jpg" />
+<meta name="twitter:creator" content="@luizolh" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='dns-prefetch' href='//www.youtube.com' />
+<link rel='dns-prefetch' href='//www.google-analytics.com' />
+<link rel='dns-prefetch' href='//www.googletagservices.com' />
+<link rel='dns-prefetch' href='//www.googleadservices.com' />
+<link rel='dns-prefetch' href='//googleads.g.doubleclick.net' />
+<link rel='dns-prefetch' href='//www.facebook.com' />
+<link rel='dns-prefetch' href='//connect.facebook.net' />
+<link rel='dns-prefetch' href='//static.ak.facebook.com' />
+<link rel='dns-prefetch' href='//static.ak.fbcdn.net' />
+<link rel='dns-prefetch' href='//s-static.ak.facebook.com' />
+<link rel='dns-prefetch' href='//www.instagram.com' />
+<link rel='dns-prefetch' href='//twitter.com' />
+<link rel='dns-prefetch' href='//platform.twitter.com' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/jovemnerd.com.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.6"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='https://api.w.org/' href='https://jovemnerd.com.br/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://jovemnerd.com.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://jovemnerd.com.br/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.6" />
+<link rel='shortlink' href='https://jovemnerd.com.br/?p=306875' />
+<link rel="alternate" type="application/json+oembed" href="https://jovemnerd.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjovemnerd.com.br%2Fnerdologia%2Fo-que-e-ciencia-de-dados%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://jovemnerd.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjovemnerd.com.br%2Fnerdologia%2Fo-que-e-ciencia-de-dados%2F&#038;format=xml" />
+      <meta name="onesignal" content="wordpress-plugin"/>
+          <link rel="manifest"
+            href="https://jovemnerd.com.br/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/manifest.json.php?gcm_sender_id="/>
+          <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>    <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://jovemnerd.com.br");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '06755382-b0d5-4c5d-9b35-c062e5654a1f';
+oneSignal_options['autoRegister'] = true;
+oneSignal_options['httpPermissionRequest'] = { };
+oneSignal_options['httpPermissionRequest']['enable'] = true;
+oneSignal_options['httpPermissionRequest']['modalTitle'] = "Obrigado por se inscrever!";
+oneSignal_options['httpPermissionRequest']['modalMessage'] = "Você agora irá receber notificações de conteúdo relevantes do Jovem Nerd. Você pode desativá-las quando quiser.";
+oneSignal_options['httpPermissionRequest']['modalButtonText'] = "Fechar";
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "Jovem Nerd";
+oneSignal_options['welcomeNotification']['message'] = "Obrigado por se inscrever!";
+oneSignal_options['welcomeNotification']['url'] = "jovemnerd.com.br";
+oneSignal_options['path'] = "https://jovemnerd.com.br/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.5a2165c8-9d94-4308-bfd9-99a8484077b6";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['promptOptions']['actionMessage'] = 'Deseja receber notificações de conteúdos relevantes do Jovem Nerd?';
+oneSignal_options['promptOptions']['exampleNotificationTitleDesktop'] = 'SAIU! Novo trailer de Game of Thrones!';
+oneSignal_options['promptOptions']['exampleNotificationMessageDesktop'] = 'O inverno já chegou no trailer da sétima temporada!';
+oneSignal_options['promptOptions']['exampleNotificationTitleMobile'] = 'SAIU! Novo trailer de Game of Thrones!';
+oneSignal_options['promptOptions']['exampleNotificationMessageMobile'] = 'O inverno já chegou no trailer da sétima temporada!';
+oneSignal_options['promptOptions']['exampleNotificationCaption'] = '(você pode desativar as notificações quando quiser)';
+oneSignal_options['promptOptions']['acceptButtonText'] = 'Aceitar';
+oneSignal_options['promptOptions']['cancelButtonText'] = 'Não, obrigado';
+oneSignal_options['promptOptions']['siteName'] = 'https://jovmenerd.com.br';
+oneSignal_options['promptOptions']['autoAcceptTitle'] = 'Aceitar';
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+
+
+  
+  <script async="true" src="//www.googletagservices.com/tag/js/gpt.js"></script>
+  <script>
+    var SITE_URL = 'https://jovemnerd.com.br/wp-content/themes/jovemnerd';
+    var BASE_URL = 'https://jovemnerd.com.br';
+  </script>
+  <script>
+   // Load GPT
+   var googletag = googletag || {};
+   googletag.cmd = googletag.cmd || [];
+  </script>
+
+  <!-- Hotjar Tracking Coded -->
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:45317,hjsv:5};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- TailTarget Tag Manager TT-10372-1/CT-102 -->
+  <script>
+      (function(i) {
+      var ts = document.createElement('script');
+      ts.type = 'text/javascript';
+      ts.async = true;
+      ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ts, s);
+      })('TT-10372-1/CT-102');
+  </script>
+
+  <script>
+  var getTailTargetParam = function(a) {
+  var ttCookieName = "_ttdmp";
+  if (!window._ttprofilescache) {
+  window._ttprofilescache = {};
+  try {
+  var c = document.cookie.match('(^|;)\\s*' + ttCookieName + '\\s*=\\s*([^;]+)');
+  var d = c ? c.pop().split('|') : [];
+  for (var i = 0; i < d.length; i++) {
+  var kv = d[i].split(":");
+  if (kv[1] && kv[1].indexOf(",") > 0) {
+  window._ttprofilescache[kv[0]] = kv[1].split(",");
+  } else {
+  window._ttprofilescache[kv[0]] = kv[1];
+  }
+  }
+  } catch (e) {
+  }
+  }
+  return window._ttprofilescache[a] ? window._ttprofilescache[a] : 'na';
+  };
+  </script>
+
+  <!-- Chamada TailTarget DFP -->
+  <script>
+    googletag.cmd.push(function() {
+		window.googletag.pubads().setTargeting("ttLS", getTailTargetParam('LS'));
+		window.googletag.pubads().setTargeting("ttS", getTailTargetParam('S'));
+		window.googletag.pubads().setTargeting("ttT", getTailTargetParam('T'));
+		window.googletag.pubads().setTargeting("ttC", getTailTargetParam('C'));
+		window.googletag.pubads().setTargeting("ttU", getTailTargetParam('U'));
+		window.googletag.pubads().setTargeting("ttCA", getTailTargetParam('CA'));
+		window.googletag.pubads().setTargeting("ttE", getTailTargetParam('E'));
+		window.googletag.pubads().setTargeting("ttA", getTailTargetParam('A'));
+		window.googletag.pubads().setTargeting("ttG", getTailTargetParam('G'));
+	});
+  </script>
+
+
+  <!--
+  <script>
+    window['GoogleAnalyticsObject'] = 'ga';
+    window['ga'] = window['ga'] || function() {
+      (window['ga'].q = window['ga'].q || []).push(arguments)
+    };
+  </script>
+  -->
+
+  <script src="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/scripts/ads.js"></script>
+
+  <script defer src="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/scripts/vendor.js?clear=b82bbe61388f265cc98abc6d88c6f695"></script>
+  <script defer src="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/scripts/main.js?clear=b82bbe61388f265cc98abc6d88c6f695"></script>
+  <!-- <script type="text/javascript" src="http://192.168.15.5:8080/pixelwolf/banner/dist/smartbanner.js"></script> -->
+
+
+</head>
+<body class="videocast-template-default single single-videocast postid-306875 product-nerdologia">
+  <div id="fb-root" data-turbolinks-permanent></div>
+
+  <!-- Script Smart Banner -->
+
+  <script>
+      var onLoadHandlerForConflictTesting = function() {};
+      window.onload = onLoadHandlerForConflictTesting;
+  </script>
+
+  <!-- /Script Smart Banner -->
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1346430065395843',
+        version    : 'v2.8',
+        xfbml      : true
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <script>
+    if(window.location.search.split(/[\?|&]/).indexOf('webview=true') !== -1) document.body.classList.add('is-webview')
+  </script>
+  <div id='ad-insertion'>
+    <!--
+<style>
+	#ad-insertion {
+		position: absolute;
+		width: 100%;
+		z-index: 9999999999;
+	}
+	#ad-insertion .ad,
+	#ad-insertion .widget {
+		background-color: transparent;
+	}
+	#div-gpt-ad-22837869-intervention iframe[id^="google_ads_iframe_"] {		
+		width: 1285px;
+		height: 705px;		
+	}
+</style>
+
+<script>
+	window.addEventListener('click', function(){
+		document.querySelector('#ad-insertion').style.display = 'none';
+		document.querySelector('#ad-insertion').style.zIndex = 0;
+	});
+</script>
+-->
+
+<div id="div-gpt-ad-22837869-intervention"
+     class="gpt-ad ad"
+     data-gpt-path="/22837869/intervention"
+     data-gpt-dimensions="[1, 1]"
+     data-gpt-mapping="[
+        [[1300, 700], [1, 1]],
+        [[0, 0], []]
+     ]">
+</div>  </div>
+  
+      <div id='ad-wallpaper'>
+        
+<!--
+	<div id="div-gpt-ad-22837869-website_wallpaper_skin"
+	     class="gpt-ad ad"
+	     data-gpt-path="/22837869/website_wallpaper_skin"
+	     data-gpt-dimensions="[1, 1]"
+	     data-gpt-mapping="[
+	        [[1340, 1], [1, 1]],
+	        [[0, 0], []]
+	     ]">
+	</div>
+
+	<div class="video-background-container">
+		<button type="button" class="video-background__button" id="myBtn">
+			<span id="video-background__button-text">Ativar o som</span><i id="sound-icon" class="icon-volume-mute"></i>
+		</button>
+	</div>
+
+	-->	
+	<a href="https://open.spotify.com/show/22Wgt4ASeaw8mmoqAWNUn1" onclick="ga('send',{ hitType: 'event', eventCategory: 'BG Banner AD', eventAction: 'click', eventLabel: 'Nerdcast no Spotify' })" target="_blank">
+
+		<img width="0" height="0" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" onload="ga('send',{ hitType: 'event', eventCategory: 'BG Banner AD', eventAction: 'impression', eventLabel: 'Nerdcast no Spotify' })" />
+
+		<div id='ad-wallpaper-over'></div>
+		<div class="video-background">
+			<div class="video-foreground">
+				<div id="player-bg" class="mute"></div>
+			</div>
+		</div>
+		<div id='ad-wallpaper-over'></div>
+	</a>
+	<script>
+
+		var item = document.querySelector('.adform-adbox img')
+
+		// if ( window.innerWidth <= 1920 && window.innerWidth >= 1280) {
+			var itemLeft = -((1920 - window.innerWidth) / 2) + "px";
+			var outputString = '<style type="text/css">.adform-adbox img{left:'+itemLeft+';}</style>';
+			document.querySelector('body').innerHTML += outputString;
+		// }
+
+	</script>
+    -->
+
+      </div>
+
+        <script>
+      // window.runVideo = false;
+      // let tag = document.createElement('script');
+      // tag.src = "https://www.youtube.com/iframe_api";
+      // var firstScriptTag = document.getElementsByTagName('script')[0];
+      // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      // tag.onload = function(){
+      //
+      //   document.addEventListener("DOMContentLoaded", function(event) {
+      //
+      //     // teste
+      //     console.log("DOM completamente carregado e analisado");
+      //
+      //     window.setTimeout( () => {
+      //       window.initVideoBG();
+      //       window.runVideo = true;
+      //     }, 1000);
+      //
+      //   });
+
+        /*
+        window.setTimeout( () => {
+          window.initVideoBG();
+          window.runVideo = true;
+        }, 1000);
+
+      }
+        */
+    </script>
+
+      <style>
+      #ad-wallpaper .gpt-ad.ad {
+        width: 100% !important;height: 100% !important;position: fixed !important;top: 0 !important;left: 0 !important;
+      }
+      div[id^="google_ads_iframe"] {
+        width: 100% !important;
+      }
+        #ad-wallpaper{
+          height: 250px;
+        }
+
+        #ad-wallpaper::after{
+          height: calc(100% - 340px);
+          top: 340px;
+        }
+
+        #player-bg {
+          opacity: 1;
+        }
+
+        #ad-wallpaper iframe {
+          top: 25px !important;
+/*          width: 100%;
+          height: 100%;*/
+          width: 1920px; height: 100%; overflow: hidden
+        }
+
+        #ad-wallpaper-over {
+          width: 100%;
+          height: 1080px;
+          background: #000;
+          position: fixed;
+          top: 25px; right: 0; bottom: 0; left: 0;
+          background: url('https://jovemnerd.com.br/wp-content/uploads/2018/09/00_podcast_jovem_nerd_home.jpg') center no-repeat;
+        }
+        #sound-icon {
+          vertical-align: middle;
+          padding-left: 5px;
+        }
+        .video-background-container {
+          position: relative;
+          max-width: 1230px;
+          width: 100%;
+          height: 0;
+          margin: 0 auto;
+        }
+        .video-background__button {
+          position: absolute;
+          display: block;
+          top: 220px;
+          right: 0;
+          z-index: 1;
+          border: none;
+          background-color: transparent;
+          font-size: 14px;
+        }
+        .hidden {
+          display: none;
+        }
+        .video-background {
+          background: #000;
+          position: fixed;
+          top: 0; right: 0; bottom: 0; left: 0;
+          z-index: -99;
+        }
+        .video-foreground,
+        .video-background iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1920px;
+          height: 1080px;
+          pointer-events: none;
+        }
+        @media (min-aspect-ratio: 16/9) {
+          .video-foreground { height: 300%; top: -100%; }
+        }
+        @media (max-aspect-ratio: 16/9) {
+          .video-foreground { width: 300%; left: -100%; }
+        }
+      </style>
+            <header id="main-header" class="main-header attached" data-turbolinks-permanent>
+  <div class="container">
+    <a href="https://jovemnerd.com.br" class="branding">
+              <h3>Jovem Nerd</h3>
+          </a>
+    <a href="https://jovemnerd.com.br/nerdbunker/" class="branding logo-nerdbunker">
+      <h3>NerdBunker</h3>
+    </a>
+    <nav class="main-navigation" role="navigation">
+      <p class="screen-reader-text">Use a tecla J para acessar a lista de atalhos de qualquer lugar do site</p>
+      <button class="screen-reader-text skip-to-content">Pular para o conteúdo principal</button>
+      <ul>
+        <li class="main-navigation__item main-navigation__item__home"><a class="special-title special-title-nerdnews" href="https://jovemnerd.com.br/">Home</a></li>
+        <li class="main-navigation__item main-navigation__item__nerdnews"><a class="special-title special-title-nerdnews" href="https://jovemnerd.com.br/nerdbunker/">Nerd<span class="special-title-brand-color special-title-nerdnews__brand-color">Bunker</span></a></li>
+        <li class="main-navigation__item main-navigation__item__nerdcast"><a class="special-title special-title-nerdcast" href="https://jovemnerd.com.br/nerdcast/">Nerd<span class="special-title-brand-color special-title-nerdcast__brand-color">Cast</span></a></li>
+        <li class="main-navigation__item main-navigation__item__nerdoffice"><a class="special-title special-title-nerdoffice" href="https://jovemnerd.com.br/nerdoffice/">Nerd<span class="special-title-brand-color special-title-nerdoffice__brand-color">Office</span></a></li>
+        <li class="main-navigation__item main-navigation__item__nerdplayer"><a class="special-title special-title-nerdplayer" href="https://jovemnerd.com.br/nerdplayer/">Nerd<span class="special-title-brand-color special-title-nerdplayer__brand-color">Player</span></a></li>
+        <li class="main-navigation__item submenu">
+          <button data-toggle="collapse" data-parent="#navigation-dropdown" class="submenu-toggle"><span class="screen-reader-text">ver </span>Mais<span class="screen-reader-text"> itens</span></button>
+          <ul id="submenu-toggle" role="dialog" tabindex="0" >
+            <li class="submenu__item submenu__item__nerdnews"><a href="https://jovemnerd.com.br/nerdbunker/">NerdBunker</span></a></li>
+            <li class="submenu__item submenu__item__nerdcast"><a href="https://jovemnerd.com.br/nerdcast/">NerdCast</a></li>
+            <li class="submenu__item submenu__item__nerdoffice"><a href="https://jovemnerd.com.br/nerdoffice/">NerdOffice</a></li>
+            <li class="submenu__item submenu__item__nerdplayer"><a href="https://jovemnerd.com.br/nerdplayer/">NerdPlayer</a></li>
+            <li class="submenu__item submenu__item__nc-stories"><a href="https://jovemnerd.com.br/nc-stories/">NC Stories</a></li>
+            <li class="submenu__item submenu__item__nerdologia"><a href="https://jovemnerd.com.br/nerdologia/">Nerdologia</a></li>
+            <li class="submenu__item submenu__item__nerdvlog-360"><a href="https://jovemnerd.com.br/nerdvlog-360/">NerdVlog 360</a></li>
+            <li class="submenu__item submenu__item__nerdtour"><a href="https://jovemnerd.com.br/nerdtour/">Nerdtour</a></li>
+            <li class="submenu__item submenu__item__srk"><a href="https://jovemnerd.com.br/sr-k/">Sr. K</a></li>
+            <li class="submenu__item submenu__item__nerdstore"><a class="special-title" href="http://www.nerdstore.com.br/" target="_blank">Nerdstore</a></li>
+            <li class="submenu__item submenu__item__anuncie"><a href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/other/Jovem-Nerd_MK.pdf" target="_blank">Anuncie</a></li>
+            <li class="submenu__item submenu-search-form">
+              <form role="search" method="get" action="https://jovemnerd.com.br">
+                <label class="submenu-search-form__label" for="submenu-search-form"><span class="screen-reader-text">Buscar</span>
+                  <input name="s" id="submenu-search-input" class="submenu-search-form__search-input" type="search" placeholder="Buscar...">
+                  <button class="submenu-search-form__submit-button"><i aria-hidden="true" class="icon-search"></i><span class="screen-reader-text">Buscar</span></button>
+                </label>
+              </form>
+            </li>
+          </ul>
+        </li>
+        <li class="main-navigation__item main-navigation__item__nerdstore"><a class="special-title" href="http://www.nerdstore.com.br/" target="_blank">Nerdstore</a></li>
+        <li class="main-navigation__item main-navigation__item__anuncie"><a class="special-title" href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/other/Jovem-Nerd_MK.pdf" target="_blank">Anuncie</a></li>
+        <li class="main-navigation__item search-button"><button><i aria-hidden="true" class="icon-search"></i><span class="screen-reader-text">Busca</span></button></li>
+      </ul>
+      <form class="main-navigation-search-form" role="search" action="https://jovemnerd.com.br">
+        <label class="main-navigation-search-form__label" for="main-navigation-search-form"><span class="screen-reader-text">Buscar</span>
+          <input id="main-navigation-search-input" name="s" class="main-navigation-search-form__search-input" type="search" placeholder="Buscar...">
+          <button class="main-navigation-search-form__submit-button"><i aria-hidden="true" class="icon-search"></i></button>
+        </label>
+        <button class="main-navigation-search-form__cancel">cancelar <span class="screen-reader-text">busca</span><i aria-hidden="true" class="icon-close"></i></button>
+      </form>
+
+    </nav>
+  </div>
+</header>
+  
+  <div class="page-content">
+    <!-- single-videocast.html -->
+<article class="wrapper single-wideheader" data-videocast-url="https://jovemnerd.com.br/nerdologia/o-que-e-ciencia-de-dados/" >
+  <div class="container no-padding-on-mobile">
+    <div class="ad header-ad">
+      <div id="div-gpt-ad-22837869-jn_header_super"
+     class="gpt-ad"
+     data-gpt-path="/22837869/jn_header_super"
+     data-gpt-dimensions="[[300, 50], [970, 250], [728, 90], [320, 480], [970, 90]]"
+     data-gpt-mapping="[
+        [ [1082, 0], [[970, 250], [970, 90], [728, 90]] ],
+        [ [840, 0], [728, 90] ],
+        [ [320, 0], [320, 50] ],
+        [ [0, 0], [] ]
+     ]">
+</div>    </div>
+  </div>
+  <header class="entry-header">
+    <div class="container">
+      <div class="entry-header__info">
+                <h1 class="entry-title">
+          O que é ciência de dados
+        </h1>
+                <time class="entry-postedon">EP Tech 23 • 26 de julho de 2018</time>
+              </div>
+    </div>
+    <div class="entry-header-video">
+      <div class="entry-header-video__wrapper">
+        <div class="entry-header-video__embed" data-youtube="ykSILAQQu6o">
+          <iframe id="player1" width="560" height="315" src="https://www.youtube.com/embed/ykSILAQQu6o?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="content-sidebar-wrapper">
+      <section id="content" class="content">
+        <div class="entry">
+          <div class="entry-content">
+            <h3>ESTE NERDOLOGIA É UM OFERECIMENTO DA ALURA</h3>
+<ul>
+<li>Acesse e aproveite a promoção da Alura com o Nerdologia Tech: <a href="https://goo.gl/grZrTB" target="_blank" rel="noreferrer nofollow noopener">https://goo.gl/grZrTB</a></li>
+</ul>
+<h3>Carreira Alura</h3>
+<ul>
+<li>Data Science: <a href="https://bit.ly/2v6HjjL">https://bit.ly/2v6HjjL</a></li>
+</ul>
+<p>No Nerdologia Tech de hoje <span style="font-weight: 400;">vamos ver como usar o poder dos dados para prever o futuro.</span></p>
+<p>Apresentação:</p>
+<ul>
+<li>Átila Iamarino:<br />
+&#8211; <a href="http://www.twitter.com/oatila">http://www.twitter.com/oatila</a><br />
+&#8211; <a href="http://instagram.com/oatila">http://instagram.com/oatila</a></li>
+</ul>
+<p>Roteiro:</p>
+<ul>
+<li>Átila Iamarino: <a href="http://www.twitter.com/oatila">http://www.twitter.com/oatila</a></li>
+<li>Paulo Silveira: <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2Fpaulo_caelum&amp;h=1AQH-xty6" target="_blank" rel="nofollow noopener">https://twitter.com/paulo_caelum</a></li>
+</ul>
+<p>Edição e Arte:</p>
+<ul>
+<li>Estúdio 42 &#8211; <a href="http://www.estudio42.com.br">http://www.estudio42.com.br</a></li>
+</ul>
+<p>Apoio:</p>
+<ul>
+<li>Paloma Mieko &#8211; <a href="http://instagram.com/atilaepaloma">http://instagram.com/atilaepaloma</a></li>
+</ul>
+<h3>FONTES</h3>
+<ul>
+<li><span style="font-weight: 400;">Mangel, Marc, and Francisco J. Samaniego. &#8220;Abraham Wald&#8217;s work on aircraft survivability.&#8221; Journal of the American Statistical Association 79, no. 386 (1984): 259-267.</span></li>
+<li><span style="font-weight: 400;">Ellenberg, Jordan. How Not to Be Wrong: The Power of Mathematical Thinking. NY, NY: Penguin Books, pgs. 7-8 2015.</span></li>
+</ul>
+<h3>SAIBA MAIS</h3>
+<ul>
+<li><span style="font-weight: 400;">Como ouvir audiolivros: <a href="https://bit.ly/2ejtJEm">https://bit.ly/2ejtJEm</a></span></li>
+<li><span style="font-weight: 400;">Bibliografia do Nerdologia: <a href="https://bit.ly/1SUWXRP">https://bit.ly/1SUWXRP</a></span></li>
+<li>As 10 formações mais procuradas no LinkedIn: <a href="https://bit.ly/2D6xzfC">https://bit.ly/2D6xzfC</a></li>
+<li>Relatório da Glassdoor dos melhores empregos de 2018: <a href="https://bit.ly/2vdPLxA">https://bit.ly/2vdPLxA</a></li>
+<li>Explicações sobre Kepler e Newton em Para explicar o mundo: A descoberta da ciência moderna, por Steven Weinberg: <a href="http://amzn.to/2y00xdw">http://amzn.to/2y00xdw</a></li>
+</ul>
+<h3>ASSISTA TAMBÉM</h3>
+<ul>
+<li>Dilúvio de dados | Nerdologia: <a href="https://bit.ly/2LR51aU">https://bit.ly/2LR51aU</a></li>
+<li>Singularidade humana e Ghost in the Shell | Nerdologia: <a href="https://bit.ly/2LJIcJg">https://bit.ly/2LJIcJg</a></li>
+<li>Big Data | Nerdologia: <a href="https://bit.ly/2AfhQKQ">https://bit.ly/2AfhQKQ</a></li>
+</ul>
+<h3><strong>MATERIAL USADO</strong></h3>
+<ul>
+<li>VÍDEO CGI Data Visualization: <a href="https://bit.ly/2LmE1UC">https://bit.ly/2LmE1UC</a></li>
+<li>VÍDEO Data Science Animation: <a href="https://bit.ly/2A5GOfw">https://bit.ly/2A5GOfw</a></li>
+<li>VÍDEO Quants: Os alquimistas de Wall Street: <a href="https://bit.ly/1AZe1gI">https://bit.ly/1AZe1gI</a></li>
+<li>VÍDEO Keyboard cat: <a href="https://bit.ly/1eqY9Mu">https://bit.ly/1eqY9Mu</a></li>
+<li>Spitfire: <a href="https://bit.ly/1k65Bnb">https://bit.ly/1k65Bnb</a></li>
+<li>Estudo de Wald: <a href="https://bit.ly/2Aa3zyY">https://bit.ly/2Aa3zyY</a></li>
+<li>Kepler: <a href="https://bit.ly/1PIwjyt">https://bit.ly/1PIwjyt</a></li>
+<li>Newton: <a href="https://bit.ly/2HAR0fA">https://bit.ly/2HAR0fA</a></li>
+<li>GlaDOS por DragonLoverTori: <a href="https://bit.ly/2JTFNXy">https://bit.ly/2JTFNXy</a></li>
+<li>T800:<br />
+&#8211; <a href="https://bit.ly/2A9DwI3">https://bit.ly/2A9DwI3</a><br />
+&#8211; <a href="https://bit.ly/2mGS74k">https://bit.ly/2mGS74k</a></li>
+</ul>
+
+          </div>
+          <footer class="entry-footer">
+                          <nav class="entry-tags">
+                Leia mais sobre:&nbsp;<a href="https://jovemnerd.com.br/nerdbunker/tag/nerdologia-tech/">Nerdologia Tech</a>              </nav>
+              <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" class="cc-licenses" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+                        
+<nav class="entry-share">
+  <ul>
+    <li class="entry-share__item entry-share__item__facebook">
+      <button data-href="https://www.facebook.com/sharer/sharer.php?u=https://jovemnerd.com.br/nerdologia/o-que-e-ciencia-de-dados/"
+        onclick="window.open(this.dataset.href, 'facebook-share','width=580,height=296'); ga('send', { hitType: 'event', eventCategory: 'Nerdologia', eventAction: 'shared', eventLabel: 'Nerdologia, Facebook - O que é ciência de dados' }); return false;"
+      ><i class="icon-facebook"></i> Compartilhar</button>
+    </li><!--
+ --><li class="entry-share__item entry-share__item__twitter">
+      <button data-href="https://twitter.com/intent/tweet?text=O que é ciência de dados&amp;url=https://jovemnerd.com.br/nerdologia/o-que-e-ciencia-de-dados/"
+        onclick="window.open(this.dataset.href, 'twitter-share', 'width=550,height=235'); ga('send', { hitType: 'event', eventCategory: 'Nerdologia', eventAction: 'shared', eventLabel: 'Nerdologia, Twitter - O que é ciência de dados' }); return false;"><i class="icon-twitter"></i> Tweetar</button>
+    </li><!--
+ --><li class="entry-share__item entry-share__item__copy"><button class="copy-link" data-href="https://jovemnerd.com.br/nerdologia/o-que-e-ciencia-de-dados/" onclick="ga('send', { hitType: 'event', eventCategory: 'Nerdologia', eventAction: 'shared', eventLabel: 'Nerdologia Tech 23, CopyURL - O que é ciência de dados' })"><i class="icon-copy"></i> Copiar link</button></li>  </ul>
+</nav>
+              <section class="entry-related">
+                <h2 class="entry-related__title">Conteúdo relacionado</h2>
+                <div class="entry-wrap">
+                  <div class="entry-wrap" tabindex="0"
+      >
+
+
+  
+    <div class="entry-list">
+    
+    <!--
+  -->
+    <article class="entry-card entry-card__nerdologia" tabindex="0" aria-label="Machine Learning">
+      <div class="entry-card__content">
+      
+        
+
+  
+
+<h3 class="product-label">
+  
+    <a href="https://jovemnerd.com.br/nerdologia/machine-learning/">
+              Nerdologia
+                    Tech 24
+          </a>
+
+    
+<!--    
+    <time class="entry-card__postedon" data-relative-time datetime="2018-08-30T11:00:25-03:00">
+        <span class="screen-reader-text">Postado</span>30/08
+    </time>
+-->    
+
+    
+  </h3>
+        <h2 class="entry-card__content-title"><a href="https://jovemnerd.com.br/nerdologia/machine-learning/" onclick="ga('send', { hitType: 'event', eventCategory: 'Nerdologia', eventAction: 'related', eventLabel: '[Block 1] Nerdologia Tech 24 - Machine Learning' })">Machine Learning</a></h2>
+        <p class="entry-card__content-excerpt"><span class="screen-reader-text">Trecho:</span>No Nerdologia Tech de hoje, vamos ver como podemos fazer as máquinas aprenderem truques. <a href="https://jovemnerd.com.br/nerdologia/machine-learning/" class="screen-reader-text">Clique para continuar lendo</a></p>
+      </div>
+      <a href="https://jovemnerd.com.br/nerdologia/machine-learning/" class="entry-card__thumbnail" onclick="ga('send', { hitType: 'event', eventCategory: 'Nerdologia', eventAction: 'related', eventLabel: '[Block 1] Nerdologia Tech 24 - Machine Learning' })">
+                  <img data-dynsrc="
+          ['https://jovemnerd.com.br/wp-content/uploads/2018/08/vitrine-tech-24_B-760x428.jpg', 0, 'https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/placeholder4x3.gif'],
+          ['https://jovemnerd.com.br/wp-content/uploads/2018/08/vitrine-tech-24_B-760x428.jpg', 768, 'https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/placeholder16x9.gif']"
+          src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <noscript><img src="https://jovemnerd.com.br/wp-content/uploads/2018/08/vitrine-tech-24_B.jpg"></noscript>
+              </a>
+    </article>
+      </div>
+  </div>
+                </div>
+              </section>
+
+            <!-- <section id="disqus_thread" class="entry-comments" data-disqus-permalink="https://jovemnerd.com.br/nerdologia/o-que-e-ciencia-de-dados/" data-disqus-slug="o-que-e-ciencia-de-dados">
+  <p><button class="button button-primary button-large" onclick="ga('send', { hitType: 'event', eventCategory: 'Nerdologia', eventAction: 'comments', eventLabel: 'Nerdologia - O que é ciência de dados' })">Carregar os comentários</a></button>
+</section>
+ -->
+
+          </footer>
+
+        </div>
+      </section>
+      <aside class="sidebar">
+        <section class="ad-widget ad-widget--mobile widget">
+          <div id="div-gpt-ad-22837869-jn_content_arroba"
+     class="gpt-ad ad"
+     data-gpt-path="/22837869/jn_content_arroba"
+     data-gpt-dimensions="[300, 250]"
+     >
+</div>
+        </section>
+        <section class="nerdologia-widget widget">
+  <h2 class="widtget-title">O que é o <span class="brand-color">Nerdologia</span>?</h2>
+  <h3>Nerdologia é a primeira produção original da Amazing Pixel!</h3>
+
+Uma análise nerd, científica e histórica de diversos aspectos da cultura pop que nasceu em 2011 como um quadro do NerdOffice do Jovem Nerd. Agora, com a apresentação de Atila Iamarino nos episódios sobre Ciência e Filipe Figueiredo nos episódios de História, com direção de Alexandre Ottoni e Deive Pazos.
+</section>
+        <section class="ad-widget widget">
+	<div id="div-gpt-ad-22837869-jn_sidebar_halfpage"
+		 class="gpt-ad"
+		 data-gpt-path="/22837869/jn_sidebar_halfpage"
+		 data-gpt-dimensions="[[300, 250], [120, 600], [160, 600], [300, 600]]">
+	</div>
+</section>      </aside>
+    </div>
+  </div>
+</article>
+    <div id="test-ad"></div>
+
+  <!--
+  <div class="pip-video">
+    <iframe id="player2" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+  -->
+
+
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+  <!-- Background of PhotoSwipe.
+     It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+  <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+    <!-- Container that holds slides.
+      PhotoSwipe keeps only 3 of them in the DOM to save memory.
+      Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+
+      <div class="pswp__top-bar">
+
+        <!--  Controls are self-explanatory. Order can be changed. -->
+
+        <div class="pswp__counter"></div>
+
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+        <button class="pswp__button pswp__button--share" title="Share"></button>
+
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+          </div>
+
+      <button class="pswp__button pswp__button--arrow--left" title="Ver imagem anterior">
+        <span class="screen-reader-text">Ver imagem anterior</span>
+      </button>
+
+      <button class="pswp__button pswp__button--arrow--right" title="Ver próxima imagem">
+        <span class="screen-reader-text">Ver próxima imagem</span>
+      </button>
+
+      <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
+      </div>
+
+      </div>
+
+  </div>
+
+</div>
+      <footer id="main-footer" class="main-footer" data-turbolinks-permanent>
+  <div class="container">
+    <div class="site-map">
+      <div class="site-map-section site-map-section__about">
+        <h3 class="site-map-section__title">Sobre</h3>
+        <a href="/quem-somos/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Quem Somos Nerdologia O que é ciência de dados' })">Quem somos</a>
+        <a href="/fale-conosco/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Fale conosco Nerdologia O que é ciência de dados' })">Fale conosco</a>
+        <!-- <a href="/premios">Prêmios</a> -->
+        <!-- <a href="/eventos" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Eventos Nerdologia O que é ciência de dados' })">Eventos</a> -->
+        <a href="https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/other/Jovem-Nerd_MK.pdf" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Anuncie Nerdologia O que é ciência de dados' })">Anuncie</a>
+      </div>
+      <div class="site-map-section site-map-section__channels">
+        <h3 class="site-map-section__title">Programas</h3>
+        <a href="/nerdcast/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'NerdCast Nerdologia O que é ciência de dados' })">NerdCast</a>
+        <a href="/nerdoffice/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'NerdOffice Nerdologia O que é ciência de dados' })">NerdOffice</a>
+        <a href="/nerdplayer/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'NerdPlayer Nerdologia O que é ciência de dados' })">NerdPlayer</a>
+        <a href="/nc-stories/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'NC Stories Nerdologia O que é ciência de dados' })">NC Stories</a>
+        <a href="/nerdologia/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Nerdologia Nerdologia O que é ciência de dados' })">Nerdologia</a>
+        <a href="/nerdvlog-360/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'NerdVlog 360 Nerdologia O que é ciência de dados' })">NerdVlog 360</a>
+        <a href="/nerdtour/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Nerdtour Nerdologia O que é ciência de dados' })">Nerdtour</a>
+        <a href="/sr-k/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Sr. K Nerdologia O que é ciência de dados' })">Sr. K</a>
+      </div>
+      <div class="site-map-section site-map-section__nerdnews">
+        <h3 class="site-map-section__title">NerdBunker</h3>
+        <a href="/nerdbunker/categoria/games/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Games Nerdologia O que é ciência de dados' })">Games</a>
+        <a href="/nerdbunker/categoria/cinema/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Cinema Nerdologia O que é ciência de dados' })">Cinema</a>
+        <a href="/nerdbunker/categoria/series/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Séries Nerdologia O que é ciência de dados' })">Séries</a>
+        <a href="/nerdbunker/categoria/tech/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'e-Sports Nerdologia O que é ciência de dados' })">Tech</a>
+        <a href="/nerdbunker/categoria/e-sports/">e-Sports</a>
+        <a href="/nerdbunker/categoria/hqs-e-livros/" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'HQ's e Livros Nerdologia O que é ciência de dados' })">HQ’s e Livros</a>
+      </div>
+      <div class="site-map-section site-map-section__nerdstore">
+        <h3 class="site-map-section__title">Nerdstore</h3>
+        <a href="http://www.nerdstore.com.br/camisetas" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Camisetas Nerdologia O que é ciência de dados' })">Camisetas</a>
+        <a href="http://www.nerdstore.com.br/livros" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Livros Nerdologia O que é ciência de dados' })">Livros</a>
+        <a href="http://www.nerdstore.com.br/acessorios" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Acessórios Nerdologia O que é ciência de dados' })">Acessórios</a>
+        <a href="http://www.nerdstore.com.br/colecionaveis" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Colecionáveis Nerdologia O que é ciência de dados' })">Colecionáveis</a>
+        <a href="http://www.nerdstore.com.br/cozinha" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Cozinha Nerdologia O que é ciência de dados' })">Cozinha</a>
+        <a href="http://www.nerdstore.com.br/decoracao" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Decoração Nerdologia O que é ciência de dados' })">Decoração</a>
+        <a href="http://www.nerdstore.com.br/produtos-jovem-nerd" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Produtos JN Nerdologia O que é ciência de dados' })">Produtos JN</a>
+      </div>
+      <div class="site-map-section site-map-section__social">
+        <h3 class="site-map-section__title">Redes Sociais</h3>
+        <a href="https://facebook.com/jovemnerd" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Facebook Nerdologia O que é ciência de dados' })">Facebook</a>
+        <a href="https://twitter.com/jovemnerd" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Twitter - Jovem Nerd Nerdologia O que é ciência de dados' })">Twitter - Jovem Nerd</a>
+        <a href="https://twitter.com/azaghal" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Twitter - Azaghâl Nerdologia O que é ciência de dados' })">Twitter - Azaghâl</a>
+        <a href="https://www.instagram.com/jovemnerd/" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Instagram - Jovem Nerd Nerdologia O que é ciência de dados' })">Instagram - Jovem Nerd</a>
+        <a href="https://www.instagram.com/azaghal/" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Instagram - Azaghâl Nerdologia O que é ciência de dados' })">Instagram  - Azaghâl</a>
+        <a href="https://www.youtube.com/user/JovemNerd" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'YouTube Nerdologia O que é ciência de dados' })">YouTube</a>
+      </div>
+      <div class="site-map-section site-map-section__app-links">
+        <h3 class="site-map-section__title">App Jovem Nerd</h3>
+        <a href="http://bit.ly/jn-ios" target="_blank"  class="app-links__appstore" aria-label="Aplicativo para iPhone" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'AppStore Nerdologia O que é ciência de dados' })"><span class="screen-reader-text">Aplicativo para iPhone</span><img data-dynsrc="['https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/appstore.png']" alt="Baixar na App Store"></a>
+        <a href="http://bit.ly/jn-android" target="_blank"  class="app-links__playstore" aria-label="Aplicativo para Android" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'GooglePlay Nerdologia O que é ciência de dados' })"><span class="screen-reader-text">Aplicativo para Android</span><img data-dynsrc="['https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/playstore.png']" alt="Disponível no Google Play"></a>
+      </div>
+
+    </div>
+    <a href="https://jovemnerd.com.br/feedback/" class="report-link" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Reportar Erro Nerdologia O que é ciência de dados' })">Reportar Erro</a>
+    <div class="app-links">
+      <h3 class="app-links__title">App Jovem Nerd</h3>
+      <a href="http://bit.ly/jn-ios" target="_blank" class="app-links__appstore" aria-label="Aplicativo para iPhone"><span class="screen-reader-text">Aplicativo para iPhone</span><img data-dynsrc="['https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/appstore.png']" alt="Baixar na App Store"></a>
+      <a href="http://bit.ly/jn-android" target="_blank" class="app-links__playstore" aria-label="Aplicativo para Android"><span class="screen-reader-text">Aplicativo para Android</span><img data-dynsrc="['https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/playstore.png']" alt="Disponível no Google Play"></a>
+    </div>
+
+    <div class="partners">
+      <a class="partner" href="http://boo-box.com" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'BooBox Nerdologia O que é ciência de dados' })">
+        <h3>Vendas por</h3>
+        <img data-dynsrc="['https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/boobox.png']" alt="boo-box">
+      </a>
+      <a class="partner" href="http://pixelwolf.com.br" target="_blank" onclick="ga('send', { hitType: 'event', eventCategory: 'Footer', eventAction: 'item', eventLabel: 'Pixelwolf Nerdologia O que é ciência de dados' })">
+        <h3>Design e desenvolvimento por</h3>
+        <img data-dynsrc="['https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/pixelwolf.png']" alt="Pixelwolf">
+      </a>
+    </div>
+    <p class="copy">
+      © 2002-2016 Jovem Nerd | Pazos e Ottoni | <a href="/changelog">Versão 7.5 &Lambda;</a>
+      <br>
+      Todas as imagens de filmes, séries e etc são marcas registradas dos seus respectivos proprietários.
+    </p>
+  </div>
+</footer>
+
+    <section id="player" class="player" aria-hidden="true" data-turbolinks-permanent>
+  <div class="container">
+    <div class="player__primary-controllers">
+      <button class="player__primary-controllers__15s-back" data-player-ui="reced-fifteen-seconds"><i class="icon-15s-back"></i><span class="screen-reader-text">Voltar 15 segundos</span></button><!--
+   --><button class="player__primary-controllers__play-pause" data-player-ui="play-and-pause"><i class="icon-play"></i><span class="screen-reader-text">Play</span></button><!--
+   --><button class="player__primary-controllers__15s-forward" data-player-ui="advance-fifteen-seconds"><i class="icon-15s-forward"></i><span class="screen-reader-text">Avançar 15 segundos</span></button>
+    </div>
+    <div class="player__info">
+      <h3 class="player__info__title"><a href="#" data-player-ui="podcast-link"><span data-player-ui="status"></span><span class="screen-reader-text"> Você está ouvindo</span><span data-player-ui="title">--</span></a></h3>
+    </div>
+    <div class="player__secondary-controllers">
+      <button class="player-control__progress-toggle" data-player-ui="current-time-display">-:--:--</button>
+      <div class="player-control__progress-bar">
+        <input class="player-control__progress-bar__input" data-player-ui="progress-bar" type="range" value="0">
+        <span class="player-control__progress-bar__progress" data-player-ui="remaining-time-display">--:--:--</span>
+      </div>
+      <div class="player-control__volume">
+        <button class="player-control__volume-toggle"><i class="icon-volume"></i><span class="screen-reader-text">Volume</span></button>
+        <div class="player-control__volume-wrapper">
+          <i class="icon-volume-low"></i><input class="player-control__volume__input" min="0" max="1" step="0.05" data-player-ui="volume-bar" type="range"><i class="icon-volume"></i>
+        </div>
+      </div>
+      <button class="player-control__close">
+        <i class="icon-close2"></i>
+        <span class="screen-reader-text">Fechar player</span>
+      </button>
+    </div>
+  </div>
+</section>
+    <section id="shortcuts" class="shortcuts-panel" data-turbolinks-permanent>
+    <div class="shortcuts-panel__wrapper">
+        <h2 class="screen-reader-text" tabindex="0">Lista de atalhos</h2>
+        <h3>Acesso rápido</h3>
+        <ul class="shortcuts-panel__list">
+            <!--
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>J</strong> Abre e fecha lista de atalhos</li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>N</strong> <a href="/nerdbunker/">NerdBunker</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>C</strong> <a href="/nerdcast/">NerdCast</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>O</strong> <a href="/nerdoffice/">NerdOffice</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>P</strong> <a href="/nerdplayer/">NerdPlayer</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>M</strong> <a href="/mrg/">MRG</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>K</strong> <a href="/sr-k/">Sr. K</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>L</strong> <a href="/nerdologia/">Nerdologia</a></li>
+            -->
+
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>J</strong> Abre e fecha lista de atalhos</li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>N</strong> <a href="/nerdbunker/">NerdBunker</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>C</strong> <a href="/nerdcast/">NerdCast</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>O</strong> <a href="/nerdoffice/">NerdOffice</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>P</strong> <a href="/nerdplayer/">NerdPlayer</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>S</strong> <a href="/nc-stories/">NC Stories</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>L</strong> <a href="/nerdologia/">Nerdologia</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>V</strong> <a href="/nerdvlog-360/">NerdVlog 360</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>T</strong> <a href="/nerdtour/">NerdTour</a></li>
+            <li tabindex="0"><strong><span class="screen-reader-text">tecla </span>K</strong> <a href="/sr-k/">Sr.K</a></li>
+
+        </ul>
+        <h3>Controles do player</h3>
+        <ul>
+            <li tabindex="0"><strong>Espaço</strong> Play e Pause</li>
+            <li tabindex="0"><strong><span class="screen-reader-text">Flecha para frente</span><span aria-hidden="true">→</span></strong> Avança 15 segundos</li>
+            <li tabindex="0"><strong><span class="screen-reader-text">Flecha para trás</span><span aria-hidden="true">←</span></strong> Retrocede 15 segundos</li>
+        </ul>
+    </div>
+</section>
+    <!-- Google Remarketing Tag -->
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 868499142;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+  <div style="display:inline;">
+  <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/868499142/?guid=ON&amp;script=0"/>
+  </div>
+  </noscript>
+
+
+
+  <style>
+    .pip-video {
+      position: fixed;
+      bottom: 20px;
+      right: -560px;
+      background: #000;
+      width: 560px;
+      height: 315px;
+      z-index: 999;
+      transition: all .2s linear;
+    }
+
+    .pip2 span.close,
+    .pip-video span.close {
+        cursor: pointer;
+        background: rgba(0,0,0,0.8);
+        color: #fff;
+        padding: 10px 15px;
+        position: absolute;
+        top: -38px;
+        right: 0;
+    }
+  </style>
+
+  
+
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1537289007 -->

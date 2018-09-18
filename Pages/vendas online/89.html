@@ -1,0 +1,929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html
+xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt" prefix="og: http://ogp.me/ns#"><head><title>Termos e Condições de Vendas Online</title><meta
+http-equiv="X-UA-Compatible" content="IE=8" /><meta
+http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta
+property="og:image" content="//www.dipol.com.pl/images/logo/dipol_prev.jpg" /><link
+rel="search" type="application/opensearchdescription+xml" title="DIPOL - Wyszukaj towar" href="//www.dipol.com.pl/download/plugins/dipol-wyszukaj-towaru.xml" /><link
+rel="stylesheet" type="text/css" href="//www.dipol.pt/assets/css/filelist.css,form.css,hint.css,icons.css,lang-switch.css,pagination.css,prices.css,qtip.css,tables.css,tabs.css,template.css,jquery-ui-1.10.3.custom.min.css,slider-css.css,layerslider.css" />
+<!--[if lte IE 8]><link
+rel="stylesheet" type="text/css" href="//www.dipol.pt/assets/css/template.css" /><link
+rel="stylesheet" type="text/css" href="//www.dipol.pt/assets/css/slider-css.css" /><link
+rel="stylesheet" type="text/css" href="//www.dipol.pt/assets/css/layerslider.css" />
+<![endif]--><link
+rel="apple-touch-icon" href="//static.dipol.com.pl/images/pt/assets/template_imgs/touch-icon-57x57.png" /><link
+rel="apple-touch-icon" sizes="72x72" href="//static.dipol.com.pl/images/pt/assets/template_imgs/touch-icon-72x72.png" /><link
+rel="apple-touch-icon" sizes="114x114" href="//static.dipol.com.pl/images/pt/assets/template_imgs/touch-icon-114x114.png" /><link
+rel="apple-touch-icon" sizes="144x144" href="//static.dipol.com.pl/images/pt/assets/template_imgs/touch-icon-144x144.png" /><meta
+name="keywords" content="Termos e Condi&ccedil;&otilde;es de Vendas Online, Regulamentos, SHOPPING" /><meta
+name="description" content="Termos e Condi&ccedil;&otilde;es da Dipol e-Store" /> <script type="text/javascript" src="//www.dipol.pt/assets/js/jquery-1.8.3.min.js,jquery.qtip-1.0.0-rc3.min.js,jquery-ui-1.10.3.custom.min.js,jquery.smooth-scroll.min.js,jquery.json-2.4.min.js,jquery.validate.min.js"></script> <script type="text/javascript" src="//www.dipol.pt/assets/js/phpjs/php.js"></script> <script type="text/javascript">/*<![CDATA[*/var DIPOL={settings:{codelang:'pt',locale:'pt_PT.UTF-8',},tabs:function(){elem=$('#jQueryTabs');if(elem.doesExist()){elem.tabs({event:'click',collapsible:false,selected:'0',fx:{opacity:'none',duration:1,},}).tabs(1,false);elem.find('ul.tabs').show();}},};Object.toType=function(obj)
+{return({}).toString.call(obj).match(/\s([a-z|A-Z]+)/)[1].toLowerCase();};var strpos=function(haystack,needle,offset){var i=(haystack+'').indexOf(needle,(offset||0));return i===-1?false:i;};var validateEmail=function(email)
+{var re=/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;return re.test(email);};var validatePostcode=function(postcode)
+{var re=/^[0-9]{2}-[0-9]{3}$/;return re.test(postcode);};$.fn.doesExist=function(){return $(this).length>0;};$.fn.hint=function(message,css)
+{var top=$(this).offset().top,left=$(this).offset().left,right=$(this).offset().right,height=$(this).outerHeight(),width=$(this).outerWidth(),hint=$('#hint'),border=$('.border',hint),pointer=$('.pointer',border),distance=3;pointer.removeClass().addClass('pointer '+css);hint.find('span.content').html(message).end().removeClass().addClass(css).css({top:top-hint.outerHeight()-border.outerHeight()+height/4-distance,left:left+width*0.01,}).show().delay(3500).fadeOut();return true;};var ajax=function(ctrlName,input,callback,preCallback)
+{if(!preCallback)var preCallback=function(jqXHR,settings){return true;};var jqxhr=$.ajax({type:'POST',url:'/'+ctrlName,headers:{'Content-Type':'application/json; charset=UTF-8'},processData:false,dataType:'json',data:$.toJSON(input),success:function(response)
+{if(Object.toType(response)!=='object')
+return alert('Response not of Object type');var status=response.status,content=response.content,preCallback=response.preCallback,callback=response.callback,htmlObject=response.htmlObject,hasContent=(content!=null),hasCallback=(callback!=null);switch(status)
+{case 1:case 32:if(hasCallback&&!hasContent){if(preCallback!=null)$.globalEval(preCallback);$.globalEval(callback);}
+if(hasContent){$(htmlObject).hint(content,'success');if(hasCallback){if(preCallback!=null)$.globalEval(preCallback);$.globalEval(callback);}}
+$('input[type="password"]').val('');break;case 4:if(hasContent)$(htmlObject).hint(content,'failure');break;}},beforeSend:preCallback,});if(callback)jqxhr.done(callback);};var submitFieldset=function(fieldset,ctrlName,callback)
+{var lang='';$('#'+fieldset).find('input.error').removeClass('error');$('body').append('<form id="form-'+fieldset+'" class="hidden"></form>');var form=$('#form-'+fieldset);form.html($('#'+fieldset).clone());var err=0;$('#'+fieldset).find(':input').each(function(idx)
+{var that=$(this);if((!that.is('[readonly]')||!that.is('[disabled]'))&&!that.val()==false)
+{if(that.is('select'))form.find('select#'+that.attr('id')).val(that.val());}
+if(that.is('[required]')&&that.val()==false)
+{err++;}
+if(that.attr('name')=='email'){if(!validateEmail(that.val())){$('#'+fieldset).find('input[name="email"]').addClass('error');err++;}}
+if(that.attr('name')=='postcode'&&lang=='pl'){if(!validatePostcode(that.val())){$('#'+fieldset).find('input[name="postcode"]').addClass('error');err++;}}});if(err>0){form.remove();return false;}
+if(!callback)var callback=function(jqXHR,settings){if(ctrlName=='rodo'||ctrlName=='myaccount_address_default'||confirm('Tem a certeza?')){return true;}else{return false;};}
+ajax('ajax.php',{controler:ctrlName,data:form.find(':input').each(function(idx)
+{var that=$(this);if(that.val()==false)that.attr('disabled','disabled');}).serializeArray(),},false,callback);form.remove();};loadAddress=function(knaGIDNumer)
+{ajax('ajax.php',{controler:'myaccount_address',data:[{name:'knaGIDNumer',value:knaGIDNumer}]});};loadForm=function(kntGIDNumer)
+{ajax('ajax.php',{controler:'myaccount_address_create',data:[{name:'kntGIDNumer',value:kntGIDNumer}]},function(){if($('fieldset#address-details').children().length>0){$('fieldset#address-details').css({display:'block'});}});};setDefaultAddress=function(kntGIDNumer,knaGIDNumer)
+{ajax('ajax.php',{controler:'myaccount_address_default',data:[{name:'kntGIDNumer',value:kntGIDNumer},{name:'knaGIDNumer',value:knaGIDNumer}]});};$("a[rel^='lightbox']").children('img').each(function(i){if($(this).width()<2||$(this).height()<2){$(this).parent().removeAttr('rel');}});$(document).ready(function()
+{if(!/android|iphone|ipod|series60|symbian|windows ce|blackberry/i.test(navigator.userAgent)){jQuery(function($){if($.isFunction($.fn.slimbox)){$("a[rel^='lightbox']").slimbox({scaler:0.95},null,function(el){return(this==el)||((this.rel.length>8)&&(this.rel==el.rel));});}});}
+var anchor=document.location.hash.substring(1)||undefined;if(typeof anchor!=='undefined')
+{var tr=$('tr[id="'+anchor+'"]');tr.addClass('active');tr.find('td').each(function(index){$(this).addClass('highlight');});}
+$('#menu-languages').hover(function()
+{$('#menu-languages ul').css('display','block');},function()
+{$('#menu-languages ul').css('display','none');});if($.isFunction($.fn.layerSlider)){$('#layerslider').layerSlider({navButtons:false,navStartStop:false,skin:'v5',skinsPath:'/assets/css/layerslider/skins/',showCircleTimer:false,});}
+$('[id!="search_string"]').keypress(function(event){if(event.keyCode==10||event.keyCode==13)
+event.preventDefault();});$('#search_string').keypress(function(event){if(event.keyCode==10||event.keyCode==13)
+search();});$('form').on('click','button.confirm',function(e){var action=$(this).attr('name');var fieldset=$(this).closest('fieldset').attr('id');switch(action)
+{case'save':switch(fieldset)
+{case'data':submitFieldset(fieldset,'myaccount_data_save');break;case'address-details':submitFieldset(fieldset,'myaccount_address_save');break;}
+break;case'add':var kntGIDNumer=$(':input[name=kntGIDNumer]').val();loadForm(kntGIDNumer);break;case'delete':submitFieldset(fieldset,'myaccount_address_delete');break;case'default':var kntGIDNumer=$(':input[name=kntGIDNumer]').val();var knaGIDNumer=$(':input[name=address]').val();setDefaultAddress(kntGIDNumer,knaGIDNumer);break;};});$('#menu_left > ul > li > a.a_level_1').each(function(idx,el){$(this).removeAttr('href');$(this).css('cursor','default');});$('#track > div > a:first').removeAttr('href');var form=$('form.form');var form2=$('form[class$=validate] :input');form2.validation();form.submit(function()
+{return false;});$('fieldset#address-list').find('select').change(function()
+{var id=$(this).val();loadAddress(id);});if($('fieldset#address-details').children().length>0){$('fieldset#address-details').css({display:'block'});}
+$('body').append('<div id="ajaxBusy"><p><img src="//static.dipol.com.pl/images/pt/assets/template_imgs/ajax-loader.gif" /></p></div>');$('#ajaxBusy').css({display:"none",margin:"0px",marginLeft:"-27px",marginTop:"-27px",padding:"0px",position:"fixed",top:"50%",left:"50%",width:"54px;",height:"55px",});$(document).on('mouseover','a.qtip',function(e)
+{$(this).qtip({show:{ready:true},overwrite:false,content:$(this).attr('rel'),hide:{fixed:true},style:{name:'dark',color:'#000',background:'#fff',border:{color:'#ff9000',width:1,radius:2},tip:true,width:340,},position:{corner:{tooltip:'topMiddle',target:'bottomMiddle',}},});});});$(document).ajaxStart(function()
+{elem=$('#file-list');slider=$('#layerslider');if(!elem&&!slider){$('#ajaxBusy').show();}}).ajaxStop(function(){elem=$('#file-list');slider=$('#layerslider');if(!elem&&!slider){$('#ajaxBusy').hide();}});/*]]>*/</script><script type="text/javascript" src="//www.dipol.pt/assets/js/slimbox/slimbox2-autosize.js"></script> <link
+rel="stylesheet" href="//www.dipol.pt/assets/css/slimbox2-autosize.css" type="text/css" media="screen" /> <script type="text/javascript">/*<![CDATA[*/var xhr=null;if(window.XMLHttpRequest)
+{xhr=new XMLHttpRequest();}else{xhr=new ActiveXObject('Microsoft.XMLHTTP');}
+if(xhr==null){alert("Your browser doesn't support AJAX.");}
+function get(url)
+{xhr.open('GET',url,true);xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');xhr.onreadystatechange=function()
+{if(xhr.readyState==4)
+{var value=xhr.responseText;try{eval(value);}
+catch(e){}}};xhr.send(null);}
+function send(url,data)
+{xhr.open('POST',url,true);xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');xhr.onreadystatechange=function()
+{if(xhr.readyState==4)
+{var value=xhr.responseText;try{eval(value);}catch(e){alert(e);alert(value);}}}
+if(data)xhr.send(data);}
+function value(name,value)
+{var data=name+'='+encodeURIComponent(value);return data;}
+function values(vals)
+{var str='';var and='';for(var key in vals)
+{var value=vals[key];str+=and+key+'='+encodeURIComponent(value);and='&';}
+return str;}
+function controler(vobject)
+{return send('controler.php',values(vobject));}
+function fileUpload(form_parent,action_url,id)
+{var iframe=document.createElement('iframe');iframe.setAttribute('id','upload_iframe_'+id);iframe.setAttribute('name','upload_iframe_'+id);iframe.setAttribute('width','0');iframe.setAttribute('height','0');iframe.setAttribute('border','0');iframe.setAttribute('style','width: 0; height: 0; border: none;');form_parent.parentNode.appendChild(iframe);window.frames['upload_iframe_'+id].name='upload_iframe_'+id;iframeId=document.getElementById('upload_iframe_'+id);var eventHandler=function()
+{if(iframeId.detachEvent){iframeId.detachEvent('onload',eventHandler);}else{iframeId.removeEventListener('load',eventHandler,false);}
+if(iframeId.contentDocument){content=iframeId.contentDocument.body.innerHTML;}else{if(iframeId.contentWindow){content=iframeId.contentWindow.document.body.innerHTML;}else{if(iframeId.document){content=iframeId.document.body.innerHTML;}}}
+try{eval(content);}catch(e){alert(e);}
+setTimeout('iframeId.parentNode.removeChild ( iframeId );',1000);if(id){if(document.getElementById('uploader'))
+document.getElementById('uploader').style.display='none';}}
+if(iframeId.addEventListener)
+iframeId.addEventListener('load',eventHandler,true);if(iframeId.attachEvent)
+iframeId.attachEvent('onload',eventHandler);form_parent.setAttribute('target','upload_iframe_'+id);form_parent.setAttribute('action',action_url);form_parent.setAttribute('method','post');form_parent.setAttribute('enctype','multipart/form-data');form_parent.setAttribute('encoding','multipart/form-data');form_parent.submit();if(document.getElementById('uploader'))
+document.getElementById('uploader').style.display='block';return(true);}
+function form(element,element_submit)
+{var data='';if(typeof(element)!='object'){element=document.getElementById(element);}
+var id=element.id;var elements=element.getElementsByTagName('input');var subelement=null;for(i=0;i<elements.length;i++)
+{subelement=elements[i];var val='';var prefix='';if(subelement.type=='text')val=subelement.value;if(subelement.type=='password')val=subelement.value;if(subelement.type=='checkbox')val=subelement.checked;if(subelement.type=='radio')val=subelement.checked;if(subelement.type=='file')val=subelement.value;if(subelement.type=='hidden')val=subelement.value;if(subelement.type=='hidden')prefix='_';data+=prefix+subelement.id+'='+encodeURIComponent(val)+'&';}
+elements=element.getElementsByTagName('select');for(i=0;i<elements.length;i++)
+{subelement=elements[i];if(subelement.type=='select-one')val=subelement.value;data+=subelement.id+'='+encodeURIComponent(val)+'&';}
+elements=element.getElementsByTagName('textarea');for(i=0;i<elements.length;i++)
+{subelement=elements[i];if(subelement.type=='textarea'&&(subelement.id.indexOf('fckeditor')==0||subelement.id.indexOf('fckeditor')==1)){val=FCKeditorAPI.GetInstance(subelement.id).GetHTML();}else{if(subelement.type=='textarea')
+{val=subelement.value;}}
+data+=subelement.id+'='+encodeURIComponent(val)+'&';}
+data+='form='+id+'&';if(element_submit)data+='submit='+element_submit.id+'&';return(data);}
+function _form(element,pointer)
+{var data='';if(typeof(element)!='object'){element=document.getElementById(element);}
+var name=element.name;var id=element.id;var elements=element.getElementsByTagName('input');var subelement=null;for(i=0;i<elements.length;i++)
+{subelement=elements[i];var val='';var prefix='';if(subelement.type=='text')val=subelement.value;if(subelement.type=='password')val=subelement.value;if(subelement.type=='checkbox')val=subelement.checked;if(subelement.type=='radio')val=subelement.checked;if(subelement.type=='hidden')val=subelement.value;if(subelement.type=='hidden')prefix='_';data+=prefix+(subelement.id==''?subelement.name:subelement.id)+'='+encodeURIComponent(val)+'&';}
+elements=element.getElementsByTagName('select');for(i=0;i<elements.length;i++)
+{subelement=elements[i];if(subelement.type=='select-one')val=subelement.value;data+=(subelement.id==''?subelement.name:subelement.id)+'='+encodeURIComponent(val)+'&';}
+elements=element.getElementsByTagName('textarea');for(i=0;i<elements.length;i++)
+{subelement=elements[i];if(subelement.type=='textarea')
+{val=subelement.value;}
+data+=(subelement.id==''?subelement.name:subelement.id)+'='+encodeURIComponent(val)+'&';}
+data+='form='+id+'&';if(pointer)data+='submit='+pointer.id+'&';return data;}
+function submit(pointer)
+{if(pointer){var element=pointer;var n=0;while(1){element=element.parentNode;if(element.className=='form')break;n++;if(n>10)return(false);}
+var elements=element.getElementsByTagName('form');form_element=null;for(var i=0;i<elements.length;i++)
+{form_element=elements[i];}
+send('controler.php',form(element,pointer));if(form_element){fileUpload(form_element,'controler.php','1');}
+return false;}}
+function _submit(pointer)
+{if(pointer){var element=pointer;var n=0;while(1){element=element.parentNode;if(element.className=='form')break;n++;if(n>10)return(false);}
+var elements=element.getElementsByTagName('form');form_element=null;for(var i=0;i<elements.length;i++)
+{form_element=elements[i];}
+send('controler.php',_form(element,pointer));return false;}}
+function submit_exacly(element_submit)
+{if(element_submit){var element=element_submit;var n=0;var elements=element.getElementsByTagName('form');form_element=null;for(var i=0;i<elements.length;i++)
+{form_element=elements[i];}
+send('controler.php',form(element,element_submit));if(form_element){fileUpload(form_element,'controler.php','1');}}}
+function in_array(what,where)
+{var a=false;for(var i=0;i<where.length;i++)
+{if(what==where[i]){a=true;break;}}
+return a;}
+function form_show_and_hide(element,elements_to_show)
+{var n=0;while(1){element=element.parentNode;if(element.className=='form'||(element.id&&element.id.indexOf('group')==0))break;n++;if(n>11)return(false);}
+var elements=element.getElementsByTagName('div');for(i=0;i<elements.length;i++)
+{if(elements[i].lang=='none'){var div_element=elements[i];if(!in_array(div_element.id,elements_to_show)){div_element.style.display='none';}else{div_element.style.display='block';}}}}
+function form_show_or_hide(elements,mode)
+{for(i=0;i<elements.length;i++)
+{var div_element=document.getElementById(elements[i]);if(mode==true){div_element.style.display='block';}else{div_element.style.display='none';}}}
+function form_readonly(element)
+{var element=document.getElementById(element);var elements=element.getElementsByTagName('input');for(i=0;i<elements.length;i++)
+{if(elements[i].type=='text'){elements[i].readOnly='readonly';elements[i].style.backgroundColor='#ededed';}}}
+function form_readwrite(element)
+{var element=document.getElementById(element);var elements=element.getElementsByTagName('input');for(i=0;i<elements.length;i++)
+{elements[i].readOnly='';elements[i].style.backgroundColor='';}}
+FormActiveElement=null;function form_detect_active()
+{var elements=document.getElementsByTagName('input');for(i=0;i<elements.length;i++)
+{elements[i].onfocus=new Function('FormActiveElement=this;');}}
+function redirect(url)
+{window.location=url;}
+function go(url,time)
+{setTimeout("redirect ( '"+url+"');",time);}
+var categoryActive=null;var categorySubActive=null;var categoryShow=null;var elementActive=null;var prefix_id='menu_main_';function menuOver(element)
+{element.style.backgroundImage="url('//static.dipol.com.pl/images/pt/assets/template_imgs/button_1_a.jpg')";var subelement=element.parentNode.id.split('li_').join('ul_');categoryShow=setTimeout(" menuShow ( '"+subelement+"' );",50);elementActive=null;}
+function menuOut(element)
+{clearTimeout(categoryShow);var subelement=element.parentNode.id.split('li_').join('ul_');element.style.backgroundImage='';categoryActive=null;setTimeout("menuHide ( '"+subelement+"' );",50);}
+function menuOverSub(element)
+{if(elementActive==null){element.style.backgroundImage="url('//static.dipol.com.pl/images/pt/assets/template_imgs/button_1_a.jpg')";var subelement=element.parentNode.parentNode.id;document.getElementById(subelement).style.visibility='visible';categorySubActive=subelement;categoryActive=null;}}
+function menuOutSub(element)
+{element.style.backgroundImage='';categorySubActive=null;var subelement=element.parentNode.parentNode.id;if(elementActive==null){setTimeout("menuHide ( '"+subelement+"' );",350);}else{setTimeout("menuHide ( '"+subelement+"' );",350);}}
+function menuShow(subelement)
+{document.getElementById(subelement).style.visibility='visible';categoryActive=subelement;categorySubActive=null;}
+function menuHide(subelement)
+{if(categorySubActive!=subelement&&categoryActive!=subelement){document.getElementById(subelement).style.visibility='hidden';categoryActive=null;categorySubActive=null;}}
+function menuClick(element)
+{return false;}
+function menuClick2(element)
+{return false;}
+function menuClickSub(element)
+{elementActive=element;return true;}
+function menuActivate(id)
+{var elements=document.getElementById(id).getElementsByTagName('a');for(i=0;i<elements.length;i++)
+{if(elements[i].className=='a_level_1'||elements[i].className=='a_level_1 selected'){elements[i].onmouseover=function(){menuOver(this);}
+elements[i].onmouseout=function(){menuOut(this);}
+elements[i].onclick=function(){return menuClick2(this);}}
+if(elements[i].className=='a_level_2'||elements[i].className=='a_level_2 selected'){elements[i].onmouseover=function(){menuOverSub(this);}
+elements[i].onmouseout=function(){menuOutSub(this);}
+elements[i].onclick=function(){return menuClickSub(this);}}}}
+function menuFlash(id)
+{var element=document.getElementById(id);element.style.backgroundImage="url('//static.dipol.com.pl/images/pt/assets/template_imgs/button_1_a.jpg')";}
+function menuBlack(id)
+{var element=document.getElementById(id);element.style.backgroundImage='';}
+function menuEffect(id)
+{var elements=document.getElementById(id).getElementsByTagName('a');var n=0;for(i=0;i<elements.length;i++)
+{n++;if(elements[i].className=='a_level_1'||elements[i].className=='a_level_1 selected'){var id=elements[i].id;setTimeout("menuFlash ( '"+id+"' );",(500+(n*5)));setTimeout("menuBlack ( '"+id+"' );",(500+((n*5)+50)));}}
+elementActive=null;}
+var listElementActive=null;var listDelay=false;function listOver(element)
+{element.style.backgroundColor='#000';element.style.color='#fff';listElementActive=element;}
+function listOut(element)
+{element.style.backgroundColor='';element.style.color='';setTimeout("if ( listElementActive == null ) { document.getElementById ( 'search_list_menu' ).style.visibility = 'hidden'; }",1000);listElementActive=null;}
+function listClick(element)
+{document.getElementById('search_list_node').value=element.id.split('a_node_').join('');var Category=element.innerHTML;if(element.className=='a_level_2'){var parentCategory=element.parentNode.parentNode.parentNode.getElementsByTagName('a')[0].innerHTML;parentCategory+=' &raquo; ';}else{var parentCategory='';}
+document.getElementById('search_list_current').innerHTML=parentCategory+Category;listElementActive=null;document.getElementById('search_list_menu').style.visibility='hidden';return false;}
+function listActivate(id)
+{var elements=document.getElementById(id).getElementsByTagName('a');for(i=0;i<elements.length;i++)
+{elements[i].onmouseover=function(){listOver(this);}
+elements[i].onmouseout=function(){listOut(this);}
+elements[i].onclick=function(){return listClick(this);}}
+document.getElementById('search_list_current').onclick=function()
+{if(listElementActive==false){document.getElementById('search_list_menu').style.visibility='visible';listElementActive=true;}else{if(listDelay==false){}}}
+document.getElementById('search_list_current').onclick=function()
+{if(listElementActive!=true){listElementActive=true;listDelay=true;setTimeout("if ( listElementActive == true ) { document.getElementById ( 'search_list_menu' ).style.visibility = 'visible'; listDelay = false; }",120);}else{setTimeout("if ( listElementActive == null ) { document.getElementById ( 'search_list_menu' ).style.visibility = 'hidden'; }",10);listElementActive=null;}}
+document.getElementById('search_list_current').onmouseout=function()
+{setTimeout("if ( listElementActive == null ) { document.getElementById ( 'search_list_menu' ).style.visibility = 'hidden'; }",1000);listElementActive=null;}}
+function search()
+{var value=document.getElementById('search_list_node').value;if(value>0){send('controler.php',form('search'));}else{document.getElementById('search_list_menu').style.visibility='visible';}}
+function add_cart(element,id,idx,suffix)
+{vobject=new Object();vobject.controler='cart';suffix=(suffix===undefined)?idx:suffix+'_'+idx;elem=id+'_'+suffix;var hidden=document.getElementById('hidden_'+elem);var qty=document.getElementById('qty_'+elem);var type=document.getElementById('type_'+id)||document.getElementById('type_'+elem);vobject.id=id;vobject.suffix=suffix;vobject.hidden=(hidden!==null)?hidden.value:false;vobject.qty=qty.value||false;if(type)
+vobject.type=type.value==''?false:type.value;controler(vobject);}
+function favorite_change(element,id,action)
+{if(action=='del'||action=='purge')
+{if(!confirm('Tem a certeza?'))return false;}
+vobject=new Object();vobject.controler='favorite';vobject.id=id;vobject.action=action;controler(vobject);}
+function add_watchdog(element,id,suffix)
+{vobject=new Object();vobject.controler='watchdog';vobject.id=id;if(suffix!==undefined)vobject.suffix=suffix;controler(vobject);}
+function add_order(element,id)
+{vobject=new Object();vobject.controler='order';vobject.id=id;controler(vobject);}
+$(document).ready(function(){loadFiles=function(code){url='/get_files.php?code='+code;$('div#jQueryTabs div#file-list div#files').load(url,function(){$('table.file-list > tbody > tr').find("td[data-mimetype!='']").each(function(idx){var that=$(this);var mimetype=that.attr('data-mimetype');var filepath=that.attr('data-filepath');if(mimetype!==undefined&&filepath!==undefined){type=mimetype.split('/')[1];if(type=='pdf'){icon='/images/22x22_pdf.png';}else if(strpos(filepath,'_DWG')!==false){icon='/images/22x22_dwg.png';}else{icon='/images/22x22_install.png';}
+that.append('<a href="http://down.dipol.com.pl/'+filepath+'" target="_blank"><img src="'+icon+'" /></a>');that.removeAttr('data-mimetype').removeAttr('data-filepath');}});elem=$('table.file-list');if(elem.length==0){$(this).append('<div class="nofiles"><strong>Sem ficheiros</strong></div>');}
+$(DIPOL.tabs);});}
+loadFiles('m240'.replace(/^T([A-R]+[0-9]{4}.*)/,'$1'));});function changeBanner(n){if(elem=document.getElementById('banner_main_subarea')){elem.innerHTML='';}
+vobject=new Object();vobject.controler='banners';vobject.n=n;controler(vobject);}
+window.onload=function()
+{menuActivate('menu_main');listActivate('search_list');form_detect_active();}
+function toggleState(id)
+{$('#'+id).toggle();return false;}/*]]>*/</script> <script src='https://www.google.com/recaptcha/api.js'></script></head><body><div
+id="hint">
+<span
+class="content"></span><div
+class="border"><div
+class="pointer"></div></div></div><div
+id="page" class="page"><div
+class="top"><div
+class="top_0">
+<!--[if lte IE 7]><div
+id="menu-languages" onmouseover="this.style.height = 180px" onmouseout="this.style.height = 14px"><![endif]--><div
+id="menu-languages"><div
+id="lang-pt" class="current"><div
+class="lang-name">Português</div><div
+id="arrow"></div></div><ul><li
+id="lang-pl"><a
+href="//www.dipol.com.pl/regulamin_sprzedazy_wysylkowej_firmy_dipol_m240.htm">Polski</a></li><li
+id="lang-en"><a
+href="//www.dipolnet.com/terms_and_conditions_of_online_sales_in_dipol_m240.htm">English</a></li><li
+id="lang-cz"><a
+href="//www.dipolnet.cz/obchodni_podminky_m240.htm">Česky</a></li><li
+id="lang-de"><a
+href="http://www.dipolnet.de/">Deutsch</a></li><li
+id="lang-ie"><a
+href="http://www.dipol.ie/">Irish</a></li><li
+id="lang-hu"><a
+href="//www.ostelsat.hu/a_dipol_hungaria_kft_eladasi_es_kuldesi_szabalyzata_m240.htm">Magyar</a></li><li
+id="lang-ro"><a
+href="//www.dipolnet.ro/termeni_si_conditii_de_vanzare_si_retur_m240.htm">Română</a></li><li
+id="lang-sk"><a
+href="//www.dipol.sk/zmluvne_podmienky_internetoveho_obchodu_www_dipol_sk_m240.htm">Slovenský</a></li></ul></div><div
+id="login_info"><strong>Não esta registado</strong></div><div
+id="menu_user" class="menu_user"><div
+id="links" class="partner"><div
+style="float: right;"><ul
+id="ul_node_2706" class="ul_level_1"><li
+id="li_node_2708" class="li_level_1"><a
+id="a_node_2708" class="a_level_1" href="//www.dipol.pt/aceder,login.htm" >Aceder</a></li><li
+id="li_node_2710" class="li_level_1"><a
+id="a_node_2710" class="a_level_1" href="//www.dipol.pt/favoritos,favorite.htm" >Favoritos</a></li><li
+id="li_node_2709" class="li_level_1"><a
+id="a_node_2709" class="a_level_1" href="//www.dipol.pt/carrinho,cart_main.htm" >Carrinho</a></li><li
+id="li_node_5017" class="li_level_1"><a
+id="a_node_5017" class="a_level_1" href="//www.dipol.pt/a_minha_conta,myaccount.htm" >A minha conta</a></li></ul></div></div><div
+id="channels"><ul><li><a
+class="channel" href="//youtube.com/user/dipolpt" title="YouTube	"><img
+src="//static.dipol.com.pl/images/pt/assets/template_imgs/logo_youtube.jpg" alt="YouTube<sup>TM</sup>" /></a></li></ul></div></div></div><div
+class="top_1"><div
+id="menu_main" class="menu_main"><ul
+id="menu_main_ul_node_4344" class="ul_level_1"><li
+id="menu_main_li_node_5363" class="li_level_1"><a
+id="menu_main_a_node_5363" class="a_level_1" href="//www.dipol.pt/oferta-tv-sat,5363.htm" >TV/SAT</a><ul
+id="menu_main_ul_node_5363" class="ul_level_2"><li
+id="menu_main_li_node_4351" class="li_level_2"><a
+id="menu_main_a_node_4351" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-antenas-tv,4351.htm" >Antenas TV</a></li><li
+id="menu_main_li_node_4346" class="li_level_2"><a
+id="menu_main_a_node_4346" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-antenas-radio,4346.htm" >Antenas Radio</a></li><li
+id="menu_main_li_node_4358" class="li_level_2"><a
+id="menu_main_a_node_4358" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-pratos-sat,4358.htm" >Pratos SAT</a></li><li
+id="menu_main_li_node_4399" class="li_level_2"><a
+id="menu_main_a_node_4399" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-lnbs,4399.htm" >LNBs</a></li><li
+id="menu_main_li_node_4424" class="li_level_2"><a
+id="menu_main_a_node_4424" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-multiswitches,4424.htm" >Multiswitches</a></li><li
+id="menu_main_li_node_4390" class="li_level_2"><a
+id="menu_main_a_node_4390" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-amplificadores,4390.htm" >Amplificadores</a></li><li
+id="menu_main_li_node_6547" class="li_level_2"><a
+id="menu_main_a_node_6547" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-transmissao-fibra-optica,6547.htm" >Transmissão Fibra óptica</a></li><li
+id="menu_main_li_node_6316" class="li_level_2"><a
+id="menu_main_a_node_6316" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-receptores,6316.htm" >Receptores</a></li><li
+id="menu_main_li_node_4434" class="li_level_2"><a
+id="menu_main_a_node_4434" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-moduladores,4434.htm" >Moduladores</a></li><li
+id="menu_main_li_node_5502" class="li_level_2"><a
+id="menu_main_a_node_5502" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-transmissores,5502.htm" >Transmissores</a></li><li
+id="menu_main_li_node_4752" class="li_level_2"><a
+id="menu_main_a_node_4752" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-solucoes-hdmi,4752.htm" >Soluções HDMI</a></li><li
+id="menu_main_li_node_4418" class="li_level_2"><a
+id="menu_main_a_node_4418" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-headends,4418.htm" >Headends</a></li><li
+id="menu_main_li_node_5480" class="li_level_2"><a
+id="menu_main_a_node_5480" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-cabos,5480.htm" >Cabos</a></li><li
+id="menu_main_li_node_4439" class="li_level_2"><a
+id="menu_main_a_node_4439" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-tomadas-tv-fm,4439.htm" >Tomadas TV/FM</a></li><li
+id="menu_main_li_node_5494" class="li_level_2"><a
+id="menu_main_a_node_5494" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-componentes-instalacao,5494.htm" >Componentes Instalação</a></li><li
+id="menu_main_li_node_4453" class="li_level_2"><a
+id="menu_main_a_node_4453" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-conectores,4453.htm" >Conectores</a></li><li
+id="menu_main_li_node_4625" class="li_level_2"><a
+id="menu_main_a_node_4625" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-medidores,4625.htm" >Medidores</a></li><li
+id="menu_main_li_node_5525" class="li_level_2"><a
+id="menu_main_a_node_5525" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-ferramentas,5525.htm" >Ferramentas</a></li><li
+id="menu_main_li_node_6478" class="li_level_2"><a
+id="menu_main_a_node_6478" class="a_level_2" href="//www.dipol.pt/oferta-tv-sat-acessorios-instalacao,6478.htm" >Acessórios Instalação</a></li></ul></li><li
+id="menu_main_li_node_5423" class="li_level_1"><a
+id="menu_main_a_node_5423" class="a_level_1" href="//www.dipol.pt/oferta-sistemas-celulares,5423.htm" >Sistemas Celulares</a><ul
+id="menu_main_ul_node_5423" class="ul_level_2"><li
+id="menu_main_li_node_4378" class="li_level_2"><a
+id="menu_main_a_node_4378" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-celulares-antenas-gsm-3g-lte,4378.htm" >Antenas GSM, 3G, LTE</a></li><li
+id="menu_main_li_node_4382" class="li_level_2"><a
+id="menu_main_a_node_4382" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-celulares-antenas-cdma,4382.htm" >Antenas CDMA</a></li><li
+id="menu_main_li_node_4383" class="li_level_2"><a
+id="menu_main_a_node_4383" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-celulares-repetidores-gsm,4383.htm" >Repetidores GSM</a></li><li
+id="menu_main_li_node_5436" class="li_level_2"><a
+id="menu_main_a_node_5436" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-celulares-cabos,5436.htm" >Cabos</a></li><li
+id="menu_main_li_node_6489" class="li_level_2"><a
+id="menu_main_a_node_6489" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-celulares-conectores,6489.htm" >Conectores</a></li><li
+id="menu_main_li_node_5329" class="li_level_2"><a
+id="menu_main_a_node_5329" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-celulares-adaptadores-conectores,5329.htm" >Adaptadores Conectores</a></li><li
+id="menu_main_li_node_5330" class="li_level_2"><a
+id="menu_main_a_node_5330" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-celulares-cabos-pre-feitos,5330.htm" >Cabos Pré-Feitos</a></li><li
+id="menu_main_li_node_5334" class="li_level_2"><a
+id="menu_main_a_node_5334" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-celulares-ferramentas,5334.htm" >Ferramentas</a></li><li
+id="menu_main_li_node_6504" class="li_level_2"><a
+id="menu_main_a_node_6504" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-celulares-acessorios-instalacao,6504.htm" >Acessórios Instalação</a></li></ul></li><li
+id="menu_main_li_node_5146" class="li_level_1"><a
+id="menu_main_a_node_5146" class="a_level_1" href="//www.dipol.pt/oferta-cctv-ip,5146.htm" >CCTV & IP</a><ul
+id="menu_main_ul_node_5146" class="ul_level_2"><li
+id="menu_main_li_node_6644" class="li_level_2"><a
+id="menu_main_a_node_6644" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-promocoes-hikvision,6644.htm" >Promoções Hikvision</a></li><li
+id="menu_main_li_node_5158" class="li_level_2"><a
+id="menu_main_a_node_5158" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-camaras-ip,5158.htm" >Câmaras IP</a></li><li
+id="menu_main_li_node_6570" class="li_level_2"><a
+id="menu_main_a_node_6570" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-camaras-hd-tvi,6570.htm" >Câmaras HD-TVI</a></li><li
+id="menu_main_li_node_5253" class="li_level_2"><a
+id="menu_main_a_node_5253" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-nvrs-ip,5253.htm" >NVRs IP</a></li><li
+id="menu_main_li_node_6571" class="li_level_2"><a
+id="menu_main_a_node_6571" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-gravadores-hd-tvi,6571.htm" >Gravadores HD-TVI</a></li><li
+id="menu_main_li_node_5788" class="li_level_2"><a
+id="menu_main_a_node_5788" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-dvrs-hibridos,5788.htm" >DVRs Híbridos</a></li><li
+id="menu_main_li_node_5202" class="li_level_2"><a
+id="menu_main_a_node_5202" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-mobile-dvrs,5202.htm" >Mobile DVRs	</a></li><li
+id="menu_main_li_node_6586" class="li_level_2"><a
+id="menu_main_a_node_6586" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-sistema-video,6586.htm" >Sistema Video</a></li><li
+id="menu_main_li_node_5178" class="li_level_2"><a
+id="menu_main_a_node_5178" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-alimentacao,5178.htm" >Alimentação</a></li><li
+id="menu_main_li_node_6164" class="li_level_2"><a
+id="menu_main_a_node_6164" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-cabos,6164.htm" >Cabos</a></li><li
+id="menu_main_li_node_5170" class="li_level_2"><a
+id="menu_main_a_node_5170" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-lentes,5170.htm" >Lentes</a></li><li
+id="menu_main_li_node_5190" class="li_level_2"><a
+id="menu_main_a_node_5190" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-housings-suportes,5190.htm" >Housings & Suportes</a></li><li
+id="menu_main_li_node_4714" class="li_level_2"><a
+id="menu_main_a_node_4714" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-conversores-media,4714.htm" >Conversores Media</a></li><li
+id="menu_main_li_node_5194" class="li_level_2"><a
+id="menu_main_a_node_5194" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-iluminadores-iv,5194.htm" >Iluminadores IV</a></li><li
+id="menu_main_li_node_4715" class="li_level_2"><a
+id="menu_main_a_node_4715" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-conversores-video,4715.htm" >Conversores Video</a></li><li
+id="menu_main_li_node_5199" class="li_level_2"><a
+id="menu_main_a_node_5199" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-monitores,5199.htm" >Monitores</a></li><li
+id="menu_main_li_node_5222" class="li_level_2"><a
+id="menu_main_a_node_5222" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-armazenamento-media,5222.htm" >Armazenamento Media</a></li><li
+id="menu_main_li_node_5225" class="li_level_2"><a
+id="menu_main_a_node_5225" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-componentes-instalacao,5225.htm" >Componentes Instalação</a></li><li
+id="menu_main_li_node_6585" class="li_level_2"><a
+id="menu_main_a_node_6585" class="a_level_2" href="//www.dipol.pt/oferta-cctv-ip-dispositivos-medicao,6585.htm" >Dispositivos Medição</a></li></ul></li><li
+id="menu_main_li_node_5292" class="li_level_1"><a
+id="menu_main_a_node_5292" class="a_level_1" href="//www.dipol.pt/oferta-lan-wlan,5292.htm" >LAN & WLAN</a><ul
+id="menu_main_ul_node_5292" class="ul_level_2"><li
+id="menu_main_li_node_5293" class="li_level_2"><a
+id="menu_main_a_node_5293" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-access-points-exteriores,5293.htm" >Access Points Exteriores</a></li><li
+id="menu_main_li_node_5296" class="li_level_2"><a
+id="menu_main_a_node_5296" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-access-points-interiores,5296.htm" >Access Points Interiores</a></li><li
+id="menu_main_li_node_5300" class="li_level_2"><a
+id="menu_main_a_node_5300" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-routers-com-wifi,5300.htm" >Routers com WiFi</a></li><li
+id="menu_main_li_node_5355" class="li_level_2"><a
+id="menu_main_a_node_5355" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-routers-lan,5355.htm" >Routers LAN</a></li><li
+id="menu_main_li_node_5306" class="li_level_2"><a
+id="menu_main_a_node_5306" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-adaptad--placas-rede,5306.htm" >Adaptad./Placas Rede</a></li><li
+id="menu_main_li_node_5310" class="li_level_2"><a
+id="menu_main_a_node_5310" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-switches,5310.htm" >Switches</a></li><li
+id="menu_main_li_node_5317" class="li_level_2"><a
+id="menu_main_a_node_5317" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-modulos-sfp,5317.htm" >Modulos SFP</a></li><li
+id="menu_main_li_node_5320" class="li_level_2"><a
+id="menu_main_a_node_5320" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-adaptadores-rede,5320.htm" >Adaptadores Rede</a></li><li
+id="menu_main_li_node_5323" class="li_level_2"><a
+id="menu_main_a_node_5323" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-antenas,5323.htm" >Antenas</a></li><li
+id="menu_main_li_node_6477" class="li_level_2"><a
+id="menu_main_a_node_6477" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-cabos,6477.htm" >Cabos</a></li><li
+id="menu_main_li_node_5346" class="li_level_2"><a
+id="menu_main_a_node_5346" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-conectores,5346.htm" >Conectores</a></li><li
+id="menu_main_li_node_6491" class="li_level_2"><a
+id="menu_main_a_node_6491" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-acessorios-wllan,6491.htm" >Acessórios WLLAN</a></li><li
+id="menu_main_li_node_5335" class="li_level_2"><a
+id="menu_main_a_node_5335" class="a_level_2" href="//www.dipol.pt/oferta-lan-wlan-acessorios-lan,5335.htm" >Acessórios LAN</a></li></ul></li><li
+id="menu_main_li_node_4713" class="li_level_1"><a
+id="menu_main_a_node_4713" class="a_level_1" href="//www.dipol.pt/oferta-fibra-optica,4713.htm" >Fibra Óptica</a><ul
+id="menu_main_ul_node_4713" class="ul_level_2"><li
+id="menu_main_li_node_6732" class="li_level_2"><a
+id="menu_main_a_node_6732" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-fusao,6732.htm" >Fusão</a></li><li
+id="menu_main_li_node_4915" class="li_level_2"><a
+id="menu_main_a_node_4915" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-medicoes,4915.htm" >Medições</a></li><li
+id="menu_main_li_node_4910" class="li_level_2"><a
+id="menu_main_a_node_4910" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-emendas-fibra,4910.htm" >Emendas Fibra</a></li><li
+id="menu_main_li_node_5039" class="li_level_2"><a
+id="menu_main_a_node_5039" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-cabos,5039.htm" >Cabos</a></li><li
+id="menu_main_li_node_6175" class="li_level_2"><a
+id="menu_main_a_node_6175" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-cabos-facil-acesso,6175.htm" >Cabos fácil acesso</a></li><li
+id="menu_main_li_node_6180" class="li_level_2"><a
+id="menu_main_a_node_6180" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-caixas-distribuicao,6180.htm" >Caixas Distribuição</a></li><li
+id="menu_main_li_node_4717" class="li_level_2"><a
+id="menu_main_a_node_4717" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-patchcords-e-pigtails,4717.htm" >Patchcords e Pigtails</a></li><li
+id="menu_main_li_node_6186" class="li_level_2"><a
+id="menu_main_a_node_6186" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-adaptadores,6186.htm" >Adaptadores</a></li><li
+id="menu_main_li_node_4714" class="li_level_2"><a
+id="menu_main_a_node_4714" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-conversores-media,4714.htm" >Conversores Media</a></li><li
+id="menu_main_li_node_4715" class="li_level_2"><a
+id="menu_main_a_node_4715" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-conversores-video,4715.htm" >Conversores Video</a></li><li
+id="menu_main_li_node_4894" class="li_level_2"><a
+id="menu_main_a_node_4894" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-modulos-sfp,4894.htm" >Modulos SFP</a></li><li
+id="menu_main_li_node_6193" class="li_level_2"><a
+id="menu_main_a_node_6193" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-distribuicao-sinal-tv,6193.htm" >Distribuição Sinal TV</a></li><li
+id="menu_main_li_node_6189" class="li_level_2"><a
+id="menu_main_a_node_6189" class="a_level_2" href="//www.dipol.pt/oferta-fibra-optica-acessorios-instalacao,6189.htm" >Acessórios Instalação</a></li></ul></li><li
+id="menu_main_li_node_5453" class="li_level_1"><a
+id="menu_main_a_node_5453" class="a_level_1" href="//www.dipol.pt/oferta-edificios-inteligentes,5453.htm" >Edificios Inteligentes</a><ul
+id="menu_main_ul_node_5453" class="ul_level_2"><li
+id="menu_main_li_node_6800" class="li_level_2"><a
+id="menu_main_a_node_6800" class="a_level_2" href="//www.dipol.pt/oferta-edificios-inteligentes-video-porteiros,6800.htm" >Video Porteiros</a></li><li
+id="menu_main_li_node_6645" class="li_level_2"><a
+id="menu_main_a_node_6645" class="a_level_2" href="//www.dipol.pt/oferta-edificios-inteligentes-f-wave,6645.htm" >F&Wave</a></li><li
+id="menu_main_li_node_6479" class="li_level_2"><a
+id="menu_main_a_node_6479" class="a_level_2" href="//www.dipol.pt/oferta-edificios-inteligentes-exta-free,6479.htm" >EXTA FREE</a></li><li
+id="menu_main_li_node_6617" class="li_level_2"><a
+id="menu_main_a_node_6617" class="a_level_2" href="//www.dipol.pt/oferta-edificios-inteligentes-disp-sinalizacao,6617.htm" >Disp. sinalização</a></li></ul></li><li
+id="menu_main_li_node_6459" class="li_level_1"><a
+id="menu_main_a_node_6459" class="a_level_1" href="//www.dipol.pt/oferta-sistemas-alarme,6459.htm" >Sistemas Alarme</a><ul
+id="menu_main_ul_node_6459" class="ul_level_2"><li
+id="menu_main_li_node_6790" class="li_level_2"><a
+id="menu_main_a_node_6790" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-alarme-pyronix,6790.htm" >PYRONIX</a></li><li
+id="menu_main_li_node_6465" class="li_level_2"><a
+id="menu_main_a_node_6465" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-alarme-sensores,6465.htm" >Sensores</a></li><li
+id="menu_main_li_node_6437" class="li_level_2"><a
+id="menu_main_a_node_6437" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-alarme-caixas,6437.htm" >Caixas</a></li><li
+id="menu_main_li_node_6438" class="li_level_2"><a
+id="menu_main_a_node_6438" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-alarme-acessorios,6438.htm" >Acessórios</a></li><li
+id="menu_main_li_node_6470" class="li_level_2"><a
+id="menu_main_a_node_6470" class="a_level_2" href="//www.dipol.pt/oferta-sistemas-alarme-cabos,6470.htm" >Cabos</a></li></ul></li><li
+id="menu_main_li_node_5728" class="li_level_1"><a
+id="menu_main_a_node_5728" class="a_level_1" href="//www.dipol.pt/oferta-componentes-assemblagem,5728.htm" >Componentes Assemblagem</a><ul
+id="menu_main_ul_node_5728" class="ul_level_2"><li
+id="menu_main_li_node_4591" class="li_level_2"><a
+id="menu_main_a_node_4591" class="a_level_2" href="//www.dipol.pt/oferta-componentes-assemblagem-mastros,4591.htm" >Mastros</a></li><li
+id="menu_main_li_node_4600" class="li_level_2"><a
+id="menu_main_a_node_4600" class="a_level_2" href="//www.dipol.pt/oferta-componentes-assemblagem-bracos-mastros,4600.htm" >Braços Mastros</a></li><li
+id="menu_main_li_node_4604" class="li_level_2"><a
+id="menu_main_a_node_4604" class="a_level_2" href="//www.dipol.pt/oferta-componentes-assemblagem-suportes-antena-pratos,4604.htm" >Suportes Antena/Pratos</a></li><li
+id="menu_main_li_node_6639" class="li_level_2"><a
+id="menu_main_a_node_6639" class="a_level_2" href="//www.dipol.pt/oferta-componentes-assemblagem-bracadeiras-aereas-cabo,6639.htm" >Braçadeiras Aéreas Cabo</a></li><li
+id="menu_main_li_node_4618" class="li_level_2"><a
+id="menu_main_a_node_4618" class="a_level_2" href="//www.dipol.pt/oferta-componentes-assemblagem-caixas,4618.htm" >Caixas</a></li><li
+id="menu_main_li_node_5766" class="li_level_2"><a
+id="menu_main_a_node_5766" class="a_level_2" href="//www.dipol.pt/oferta-componentes-assemblagem-suportes-tv-antena,5766.htm" >Suportes TV & Antena</a></li><li
+id="menu_main_li_node_5772" class="li_level_2"><a
+id="menu_main_a_node_5772" class="a_level_2" href="//www.dipol.pt/oferta-componentes-assemblagem-acessorios-instalacao,5772.htm" >Acessórios Instalação</a></li></ul></li><li
+id="menu_main_li_node_5121" class="li_level_1"><a
+id="menu_main_a_node_5121" class="a_level_1" href="//www.dipol.pt/oferta-bastidores-rack,5121.htm" >Bastidores RACK</a><ul
+id="menu_main_ul_node_5121" class="ul_level_2"><li
+id="menu_main_li_node_5122" class="li_level_2"><a
+id="menu_main_a_node_5122" class="a_level_2" href="//www.dipol.pt/oferta-bastidores-rack-bastidores-pe,5122.htm" >Bastidores Pé</a></li><li
+id="menu_main_li_node_5125" class="li_level_2"><a
+id="menu_main_a_node_5125" class="a_level_2" href="//www.dipol.pt/oferta-bastidores-rack-bastidores-servidor,5125.htm" >Bastidores Servidor</a></li><li
+id="menu_main_li_node_5128" class="li_level_2"><a
+id="menu_main_a_node_5128" class="a_level_2" href="//www.dipol.pt/oferta-bastidores-rack-bastidores-parede,5128.htm" >Bastidores Parede</a></li><li
+id="menu_main_li_node_5139" class="li_level_2"><a
+id="menu_main_a_node_5139" class="a_level_2" href="//www.dipol.pt/oferta-bastidores-rack-bastidores-dupla-seccao,5139.htm" >Bastidores Dupla-Secção</a></li><li
+id="menu_main_li_node_5145" class="li_level_2"><a
+id="menu_main_a_node_5145" class="a_level_2" href="//www.dipol.pt/oferta-bastidores-rack-calha-rack,5145.htm" >Calha RACK</a></li><li
+id="menu_main_li_node_5133" class="li_level_2"><a
+id="menu_main_a_node_5133" class="a_level_2" href="//www.dipol.pt/oferta-bastidores-rack-acessorios,5133.htm" >Acessórios</a></li></ul></li></ul></div></div><a
+href="//www.dipol.pt/" class="top_2_l"></a><div
+class="top_2_m"><div
+id="banner_main_area" style="position: relative;"><div
+id="banner_main_subarea">
+<a
+href="//www.dipol.pt/bib532.htm"><img
+src="//static.dipol.com.pl/images/banners_top/banner_top_87.jpg" alt="Banner top" /></a></div><div
+id="banner_main_nav"><div
+id="banner_main_nav_buttons">
+<img
+onclick="changeBanner ( '5' );" src="//static.dipol.com.pl/images/assets/template_imgs/banner_top_previous.gif" alt="Previous" />
+<img
+onclick="changeBanner ( '1' );" src="//static.dipol.com.pl/images/assets/template_imgs/banner_top_next.gif" alt="Next" /></div><div
+id="banner_text"><span
+class="banner_text">Mais rapido com antena LTE!</span></div></div></div><div
+class="banner_triangle"></div></div><div
+class="top_2_r"><div
+style="height: 173px;"><div
+id="side_cart_mini" side_cart_mini_show >
+<a
+class="side_cart_mini_header_3" href="//www.dipol.pt/cart_main.htm">MEU CARRINHO</a><div
+id="cart_mini_recent" class="hidden" style="color:black;">
+Valor total do seu carrinho:<div
+id="side_cart_mini_sum"></div>
+Recentemente adicionado:<div
+id="side_cart_mini_name" ><a
+href=""></a></div></div><div
+id="cart_mini_empty" class="side_element_white_cart_mini_empty">O meu Carrinho está vazio</div><div
+id="side_cart_mini_go_to_cart"><a
+href="//www.dipol.pt/cart_main.htm">VERIFICAR</a></div></div></div><div
+class="menu_1"><div
+id="menu_company" class="menu_company"><ul
+id="ul_node_2707" class="ul_level_1"><li
+id="li_node_2713" class="li_level_1"><a
+id="a_node_2713" class="a_level_1" href="//www.dipol.pt/empresa,m110.htm" >EMPRESA</a></li><li
+id="li_node_2712" class="li_level_1"><a
+id="a_node_2712" class="a_level_1" href="//www.dipol.pt/contacto,m300.htm" >CONTACTO</a></li></ul></div></div></div><div
+class="top_3"><div
+id="search" class="search">
+<input
+type="text" class="search_string" name="search_string" id="search_string" /><div
+id="search_list" class="search_list"><div
+id="search_list_current" class="search_list_current">Produtos</div><div
+id="search_list_menu" class="search_list_menu" style="visibility: hidden;"><ul
+id="ul_node_1" class="ul_level_1"><li
+id="li_node_4344" class="li_level_1"><a
+id="a_node_4344" class="a_level_1" href="//www.dipol.pt/oferta,4344.htm" >Produtos</a></li><li
+id="li_node_4675" class="li_level_1"><a
+id="a_node_4675" class="a_level_1" href="//www.dipol.pt/biblioteca,4675" >BIBLIOTECA</a></li><li
+id="li_node_4744" class="li_level_1"><a
+id="a_node_4744" class="a_level_1" href="http://newsletter.dipol.pt/info-newsletter-arquivo-newsletters,4744.htm" >Newsletter</a></li><li
+id="li_node_4315" class="li_level_1"><a
+id="a_node_4315" class="a_level_1" href="//www.dipol.pt/fabricantes,4315.htm" >Fabricante</a></li></ul></div></div><div
+class="search_button" onclick="search( );">Procurar</div>
+<input
+type="hidden" id="search_list_node" value="4344" style="display: none;" />
+<input
+type="hidden" id="controler" value="search" style="display: none;" /></div><div
+id="track" class="track" style="position: relative;"><a
+href="//www.dipol.pt/" style="display: block; position: absolute; top: 3px; left: 15px; width: 20px; height: 20px; background-image: url('//static.dipol.com.pl/images/pt/assets/template_imgs/home.gif');"></a><div
+style="position: absolute; left: 35px; top: 6px;">
+&nbsp;&raquo;&nbsp; <a
+style="cursor: default;">SHOPPING</a> &nbsp;&raquo;&nbsp; <a
+href="//www.dipol.pt/regulamentos,m240.htm">Regulamentos</a></div></div></div></div><div
+class="main"><div
+class="main_sub"><div
+class="main_area_2"><div
+class="left"><div
+class="left_1__2"></div><div
+class="left_2__2"><div
+id="menu_left" class="menu_left"><ul
+id="menu_left_ul_node_3807" class="ul_level_1"><li
+id="menu_left_li_node_3808" class="li_level_1"><a
+id="menu_left_a_node_3808" class="a_level_1" href="//www.dipol.pt/cooperacao,3808.htm" >COOPERAÇÃO</a><ul
+id="menu_left_ul_node_3808" class="ul_level_2"><li
+id="menu_left_li_node_3809" class="li_level_2"><a
+id="menu_left_a_node_3809" class="a_level_2" href="//www.dipol.pt/distribuicao,partners_register.htm" >Distribuição</a></li></ul></li><li
+id="menu_left_li_node_3810" class="li_level_1"><a
+id="menu_left_a_node_3810" class="a_level_1" href="//www.dipol.pt/shopping,3810.htm" >SHOPPING</a><ul
+id="menu_left_ul_node_3810" class="ul_level_2"><li
+id="menu_left_li_node_3811" class="li_level_2"><a
+id="menu_left_a_node_3811" class="a_level_2" href="//www.dipol.pt/novos_produtos,items-news.htm" >Novos Produtos</a></li><li
+id="menu_left_li_node_3812" class="li_level_2"><a
+id="menu_left_a_node_3812" class="a_level_2" href="//www.dipol.pt/ofertas_especiais,offers.htm" >Ofertas Especiais</a></li><li
+id="menu_left_li_node_3814" class="li_level_2"><a
+id="menu_left_a_node_3814" class="a_level_2" href="//www.dipol.pt/catalogo_pdf,m630.htm" >Catálogo PDF</a></li><li
+id="menu_left_li_node_3815" class="li_level_2"><a
+id="menu_left_a_node_3815" class="a_level_2" href="//www.dipol.pt/tabela_precos,m640.htm" >Tabela Preços</a></li><li
+id="menu_left_li_node_3816" class="li_level_2"><a
+id="menu_left_a_node_3816" class="a_level_2" href="//www.dipol.pt/como_comprar_,m230.htm" >Como comprar?</a></li><li
+id="menu_left_li_node_4796" class="li_level_2"><a
+id="menu_left_a_node_4796" class="a_level_2" href="//www.dipol.pt/regulamentos,m240.htm" >Regulamentos</a></li></ul></li><li
+id="menu_left_li_node_3818" class="li_level_1"><a
+id="menu_left_a_node_3818" class="a_level_1" href="//www.dipol.pt/suporte,3818.htm" >SUPORTE</a><ul
+id="menu_left_ul_node_3818" class="ul_level_2"><li
+id="menu_left_li_node_3819" class="li_level_2"><a
+id="menu_left_a_node_3819" class="a_level_2" href="//www.dipol.pt/biblioteca_de_noticias,documents-library_news.htm" >Biblioteca de Noticias</a></li><li
+id="menu_left_li_node_3820" class="li_level_2"><a
+id="menu_left_a_node_3820" class="a_level_2" href="//www.dipol.pt/biblioteca,library.htm" >Biblioteca</a></li><li
+id="menu_left_li_node_3834" class="li_level_2"><a
+id="menu_left_a_node_3834" class="a_level_2" href="//www.dipol.pt/newsletter,newsletter.htm" >Newsletter</a></li><li
+id="menu_left_li_node_3821" class="li_level_2"><a
+id="menu_left_a_node_3821" class="a_level_2" href="//www.dipol.pt/instalacao,installation_register.htm" >Instalação</a></li><li
+id="menu_left_li_node_4737" class="li_level_2"><a
+id="menu_left_a_node_4737" class="a_level_2" href="//www.dipol.pt/diagramas,schematy.htm" >Diagramas</a></li><li
+id="menu_left_li_node_4812" class="li_level_2"><a
+id="menu_left_a_node_4812" class="a_level_2" href="//www.dipol.pt/satnet,satnet.htm" >SatNet</a></li></ul></li></ul></div><div
+id="menu_producer" class="menu_producer"><div
+class="menu_producer_element_a" style="cursor: default;">
+FABRICANTES</div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/m160.htm" alt=" ... todas as marcas"> ... todas as marcas</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/alcad--producer,search" alt="ALCAD">ALCAD</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/cabelcon--producer,search" alt="CABELCON">CABELCON</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/camset--producer,search" alt="CAMSET">CAMSET</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/dipolnet--producer,search" alt="DIPOLNET">DIPOLNET</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/draka--producer,search" alt="DRAKA">DRAKA</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/extafree--producer,search" alt="EXTA FREE">EXTA FREE</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/hikvision--producer,search" alt="HIKVISION">HIKVISION</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/master--producer,search" alt="MASTER">MASTER</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/mikrotik--producer,search" alt="MIKROTIK">MIKROTIK</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/n-cam_hd--producer,search" alt="N-CAM HD">N-CAM HD</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/netset--producer,search" alt="NETSET">NETSET</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/pyronix--producer,search" alt="PYRONIX">PYRONIX</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/signal--producer,search" alt="SiGNAL">SiGNAL</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/signalfire--producer,search" alt="SIGNAL FIRE">SIGNAL FIRE</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/sunell--producer,search" alt="SUNELL">SUNELL</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/terra--producer,search" alt="TERRA">TERRA</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/tp-link--producer,search" alt="TP-LINK">TP-LINK</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/trans-data--producer,search" alt="TRANS-DATA">TRANS-DATA</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/trilan--producer,search" alt="TRILAN">TRILAN</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/triset--producer,search" alt="TRISET">TRISET</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/ubiquiti--producer,search" alt="UBIQUITI">UBIQUITI</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/ultimode--producer,search" alt="ULTIMODE">ULTIMODE</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/ultipower--producer,search" alt="ULTIPOWER">ULTIPOWER</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/v-cam_hd--producer,search" alt="V-CAM HD">V-CAM HD</a></div><div
+class="menu_producer_element_b">
+<a
+style="display: block; padding-top: 5px; color: #000;" href="//www.dipol.pt/vimtag--producer,search" alt="VIMTAG">VIMTAG</a></div></div></div><div
+class="left_3"></div></div><div
+class="center_2"><div
+id="track_module" class="track_module"><div
+class="track_module_top"></div><div
+class="track_module_r" style="height: 30px"><div
+class="track_module_info"><div
+class="track_module_info_h1"><h1 style="display: inline; color:#774c19; font-size: 14px; fontweight:bold; margin:0; padding:0;">SHOPPING</h1></div><div
+class="track_module_info_h2"><h1 style="display: inline; color:#636363; font-size: 14px; fontweight:bold; margin:0; padding:0;">Regulamentos</h1></div><div
+style="position: absolute; width: 239px; height: 49px; top: -10px; left: 344px; background-image: url('//static.dipol.com.pl/images/pt/assets/template_imgs/subgroup_info.gif')"></div></div><div
+class="items_categories" style="position: relative; top: 35px; left: -35px;"></div></div><div
+class="track_module_bottom"></div></div><div
+style="height: 5px; font-size: 5px;"></div><div
+class="module legend"><ul
+class="actions"><li><a
+class="print" title="Print" rel="nofollow" onclick="javascript:window.open('document-print-m240.htm','Printing','width=700,height=500,toolbar=no,location=no,scrollbars=yes,resize=no'); return false;" href="document-print-m240.htm"></a></li></ul></div><div
+style="font-weight: bold; text-align: center; font-size: 20px; color: #0d3566; margin-top: 10px; position: relative; clear: both;">Termos e Condições de Vendas Online</div><div
+class="document" style="margin-top: 24px;"><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><span
+class="header3">Ao colocar uma encomenda garante que tem 18 anos ou mais e concorda com os termos e condições abaixo descritos:</span></div></div><div
+style="font-size: 15px; height:15px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; ">Proprietário da loja:<br
+/><br
+/>DIPOL - SKUA Technology Lda<br
+/><br
+/>e-mail: office@dipol.pt<br
+/>internet: www.dipol.pt<br
+/>NIF No: PT 508 525 934<br
+/>Número de Conta Bancária- (apenas EUR):<br
+/>- NIB: PT 0036 0390 99103921131 87,<br
+/><br
+/>Braga, Portugal<br
+/></div></div><div
+style="font-size: 30px; height:30px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><span
+class="header3">Todos os preços são de retalho, com imposto.</span> <span
+class="header3">O valor mínimo de encomenda é de 150 euros (geral).</span><br
+/><br
+/><span
+style="font-weight: bold;">1. Colocando uma encomenda.</span><br
+/><br
+/>1.1.<br
+/>O cliente colocando uma encomenda na nossa loja virtual é tratada com Internet Store Warehouse por Dipol sede em Braga.<br
+/><br
+/>1.2.<br
+/>Como usar a nossa e-Store é descrito no menu <span
+style="font-weight: bold;">Ajuda</span> no link <a
+href="//www.dipolnet.com/m230.htm">Como comprar?</a>.<br
+/></div></div><div
+style="font-size: 30px; height:30px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><br
+/></div></div><div
+style="font-size: 30px; height:30px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><span
+style="font-weight: bold;">2. Completar a encomenta.</span><br
+/><br
+/>2.1.<br
+/>Após receber a encomenda, iniciamos imediatamente o processo. Informamos o Cliente sobre o estado da mesma por e-mail. Adicionalmente, todos os Clientes podem verificar o processo da encomenda no <a
+href="//www.dipol.pt">DIPOL website</a> no link de <a
+href="//www.dipol.pt/myaccount.htm">A minha conta</a>.<br
+/><br
+/>2.2.<br
+/>No caso de "Pre-pagamento" (adiantamento de pagamento), o Cliente deve transferir a quantia imediatamente após receber a confirmação por e-mail da mesma. Para finalizar a encomenda, o Cliente pode abrir e salvar o ficheiro da <span
+style="font-weight: bold;">factura pro-forma</span>, na qual inclui os detalhes de pagamento. O ficheiro pode também ser aberto no link <a
+href="//www.dipol.pt/myaccount.htm">A minha conta</a>.<br
+/>Para prosseguir a encomenda, temos que obter a confirmação da transferência do valor total na nossa conta bancária. Esperamos até 3 dias úteis de trabalho desde a data de colocação da encomenda. Se o pagamento não for recebido na totalidade neste período, a encomenda será cancelada.<br
+/><br
+/></div></div><div
+style="font-size: 30px; height:30px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><span
+style="font-weight: bold;">3. Cancelar uma encomenda.</span><br
+/><br
+/>3.1.<br
+/>É possível cancelar uma encomenda se for na sua fase inicial. Para o fazer, o Cliente deve contactar-nos para o +351 965 740 661, de Segunda a Sexta entre as 9:00-18:30 CET.<br
+/><br
+/>3.2.<br
+/>Se a encomenda já foi processada e enviada, não pode cancelá-la.<br
+/><br
+/>3,3.<br
+/>Cada pedido é válido por 8 dias. No caso da opção "Pré-pagamento", as ordens pendentes que não foram pagos serão automaticamente cancelados após este período. O mesmo se aplica à opção "auto-recolha".<br
+/></div></div><div
+style="font-size: 30px; height:30px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><span
+style="font-weight: bold;">4. Tempo de processamento de uma encomenda.</span><br
+/><br
+/>4.1.<br
+/>Fazemos o possível para completar as encomendas o mais rapidamente possível, mas não trabalhamos ao Sábado e Domingo, pelo que será processada no próximo dia útil de trabalho, p.e. Segunda. <br
+/><br
+/>4.2.<br
+/>Os produtos da encomenda serão enviados 48 horas após a confirmação total da encomenda.<br
+/></div></div><div
+style="font-size: 30px; height:30px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><span
+style="font-weight: bold;">5. O modo de entrega e os custos de transporte.</span><br
+/><br
+/>5.1.<br
+/>Apenas utilizamos serviços de despacho fiáveis. O tempo de transporte pode variar entre 2 e 7 dias.<br
+/><br
+/>5.2.<br
+/>Produtos de tamanho não-standard (i.e. mastros maiores do que 2.5 m, algumas antenas TV) que não podem ser despachadas, estão marcadas no website com um icone "Cruz por cima de um camião" e uma nota de "Apenas para recolha no Armazém". Ao encomendar estes itens o Cliente declara desde logo a recolha dos mesmos no Armazém da DIPOL em Cracóvia.<br
+/><br
+/>5.3.<br
+/>Os custos de transporte são calculados após a encomenda ser colocada. O Cliente será informado por e-mail no prazo máximo de dois dias úteis de trabalho. Processamos a encomenda após o Cliente aprovar a transacção.<br
+/></div></div><div
+style="font-size: 30px; height:30px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><span
+style="font-weight: bold;">6. Reclamações.</span><br
+/><br
+/>6.1.<br
+/>Todos os itens no nosso catalogo têm garantia do fornecedor. <br
+/><br
+/>6.2.<br
+/>Se, logo após a entrega do produto, este conter defeito, pedimos ao Cliente que nos ligue +351 965 740 661. Veja <a
+href="//www.dipol.pt/m250.htm">Politica de devoluções e reclamações </a>.<br
+/><br
+/>6.3.<br
+/>Quando a reclamação é justificada, substituímos o produto por um novo e suportamos o transporte ou efectuamos a devolução do pagamento se a substituição for impossível por nossa parte. Por favos inclua o seu número de conta bancária juntamente com a reclamação. <br
+/></div></div><div
+style="font-size: 30px; height:30px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><span
+style="font-weight: bold;">7. Devoluções.</span><br
+/><br
+/>7.1.<br
+/>O Cliente tem o direito de devolver os produtos adquiridos da DIPOL, até 14 dias desde a data de entrega, sem que seja necessário justificação.<br
+/><br
+/>7.2.<br
+/>Aceitamos a devolução, desde que os produtos não tenham sido usados e estão na sua caixa original, damos o direito a abrir os items e verificar de vão de encontro ás suas expectativas.<br
+/><br
+/>7.3.<br
+/>Aceitamos devoluções de pessoas individuais, desde que as mercadorias não tenham sinais de uso resultante que exceda o direito dos clientes descritos no item 7.2., sejam colocados de volta nas suas embalagens originais, intactas, e adicionalmente embaladas.<br
+/><br
+/>7.4.<br
+/>Os produtos devolvidos devem ser enviados a nós depois do preenchimento da RMA (contactar previamente os nossos serviços) com os custos ao encargo do Cliente, com a factura original ou factura/recibo a dinheiro e garantias (se foram incluídas). Veja <a
+href="//www.dipol.pt/m250.htm">Politica de devoluções e reclamações</a>.<br
+/></div></div><div
+style="font-size: 30px; height:30px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><span
+style="font-weight: bold;">8. Politica Privacidade.</span><br
+/><br
+/>8.1.<br
+/>O administrador de dados, incluindo os dados pessoais de cada cliente, é o proprietário da e-Store.<br
+/><br
+/>8.2<br
+/>Informações completas sobre o processamento de dados são fornecidas no documento <a
+href="//www.dipol.pt/m290.htm">Política de Privacidade</a><br
+/></div></div><div
+style="font-size: 30px; height:30px;"></div><div
+style="margin: auto; width: 100%; "><div
+style=" text-align: justify; "><span
+style="font-weight: bold;">9. Documentos em formato eletrônico</span><br
+/><br
+/>9.1.<br
+/>Na secção <a
+href="//www.dipol.pt/myaccount.htm">Minha Conta</a> seção, o Cliente tem acesso aos seus pedidos e faturas pró-forma e IVA na forma de arquivos PDF.<br
+/><br
+/>9.2.<br
+/>Todas as faturas pro-forma e de IVA emitidas em formato eletrônico pela DIPOL estão com a assinatura qualificada da empresa emitida pela Certum Level IV CA.<br
+/><br
+/>9.3.<br
+/>Os clientes podem instalar em seus computadores o certificado emitido pela Certum Certification Authority para a empresa DIPOL e verificar a autenticidade dos documentos com a assinatura.<br
+/>O procedimento de instalação é descrito na <a
+href="//www.dipol.pt/certificate01.htm">Instalação de certificado para página documentos</a>.<br
+/></div></div></div><div
+style="height: 24px; clear: both;">&nbsp;</div></div><div
+class="right"><div
+class="header_3">NOVOS TÍTULOS</div><div
+class="side_block"><div
+class="side_element"><div
+class="side_element_arrow">&raquo;</div><div
+class="side_element_text"><a
+href="//www.dipol.pt/bib937">DIPOL na ENERGETAB, Set. 11-13, 2018</a></div></div><div
+class="side_element"><div
+class="side_element_arrow">&raquo;</div><div
+class="side_element_text"><a
+href="//www.dipol.pt/bib341">Designing FM/TV and SAT TV distribution systems in multi-dwelling units</a></div></div><div
+class="side_element"><div
+class="side_element_arrow">&raquo;</div><div
+class="side_element_text"><a
+href="//www.dipol.pt/bib534">Cabos de par trançado - categorias, blindagem, aplicações</a></div></div><div
+class="side_element"><div
+class="side_element_arrow">&raquo;</div><div
+class="side_element_text"><a
+href="//www.dipol.pt/bib936">DIPOL na SECUREX Feira Internacional de Segurança, Abril 23-26, 2018</a></div></div><div
+class="side_element" style="text-align: center;"><a
+href="-library_news">Mais títulos &raquo;</a></div></div><div
+class="header_3">PARA SABER MAIS</div><div
+class="side_block"><div
+class="side_element"><div
+class="side_element_arrow">&raquo;</div><div
+class="side_element_text"><a
+href="//www.dipol.pt/bib338">Regulação de produtos de construção (CPR) - novos requisitos para cabos</a></div></div><div
+class="side_element_notice"><a
+href="//www.dipol.pt/bib338"> O Regulamento dos Produtos de Construção (RPC) é REGULAMENTO (UE) No 305/2011 DO PARLAMENTO EUROPEU E DO CONSELHO de 9 de Março de 2011 que estabelece condições...<span
+style="font-weight: bold;"> mais &raquo;</span></a></div><div
+class="side_element"><div
+class="side_element_arrow">&raquo;</div><div
+class="side_element_text"><a
+href="//www.dipol.pt/bib339">Multiswitches de cabo único -TERRA dSCR (sistema cabo único)</a></div></div><div
+class="side_element_notice"><a
+href="//www.dipol.pt/bib339"> Os multiswitches legados operam na faixa de 950 a 2150 MHz e, juntamente com um Quatro LNB, permitem a distribuição da programação por satélite DVB-S/S2,...<span
+style="font-weight: bold;"> mais &raquo;</span></a></div><div
+class="side_element"><div
+class="side_element_arrow">&raquo;</div><div
+class="side_element_text"><a
+href="//www.dipol.pt/bib533">Acesso sem fios à Internet nas escolas com base em dispositivos TP-Link</a></div></div><div
+class="side_element_notice"><a
+href="//www.dipol.pt/bib533"> A rede sem fionuma escola deve fornecer acesso à Internet em todo o prédio da escola e oferecer largura de banda suficiente para o uso confortável de serviços de...<span
+style="font-weight: bold;"> mais &raquo;</span></a></div></div></div><div
+style="clear: both; font-size: 0px; height: 0px;"></div></div><div
+class="main_area_bottom">&nbsp;</div><div
+class="bottom"><div
+style="width: 986px; height: 50px; text-align: center; clear: both; position: relative; top: 10px; margin-left: -40px;">
+<a
+href="//www.dipol.pt/m240">Regulamentos</a>
+<a
+href="//www.dipol.pt/m250">| Reclamações</a>
+<a
+href="//www.dipol.com.pl/down/">| Download</a>
+<a
+href="//www.dipol.pt/cookies.htm">| Cookies</a>
+<a
+href="//www.dipol.pt/m290">| Política de Privacidade </a><div><a
+href="http://www.ultimode.com.pl/" class="footer1">światłowód</a>
+<a
+href="http://www.dipol.ie/" class="footer1">tv brackets</a>
+<a
+href="//www.dipolnet.ro/" class="footer1">hdmi</a>
+<a
+href="//www.dipol.sk/" class="footer1">zosilňovač dvb-t</a>
+<a
+href="//www.dipol.pt/" class="footer1">modulador</a>
+<a
+href="//www.dipolnet.com/" class="footer1">multiswitch</a>
+<a
+href="//www.dipolnet.cz/" class="footer1">koaxiální kabel</a>
+<a
+href="http://www.antennak.hu/" class="footer1">router beállítása</a></div><a
+href="//www.dipol.pt/copyright" style="display: block; color: #9c9c9c; margin-top: 5px;">Todos os direitos reservados SKUA Tech &copy; 1996-2018 DIPOL sp.j.</a></div></div><div
+class="line_2">&nbsp;</div></div></div></div> <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-652368-13']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();</script> </body></html>

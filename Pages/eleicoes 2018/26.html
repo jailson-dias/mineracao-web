@@ -1,0 +1,1536 @@
+<!doctype html>
+<html xml:lang="pt-br" lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script src="/cdn-cgi/apps/head/qigL_kIbc1jN6ue6T-U0zkw4Gi4.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ad8b0d4e94","applicationID":"126059610","transactionName":"NgBSYxYEXBdWABVfWw9KfWEnSncIUgoCWVESVwAGXCZdCkMRDlpYBBcffgoBVxw=","queueTime":0,"applicationTime":45,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Rádio Itatiaia - A Rádio de Minas " />
+<meta name="description" content="A Rádio de Minas. Tudo sobre o futebol mineiro, política, economia e informações de todo o Estado. A Itatiaia dá notícia de tudo.
+" />
+<meta name="resource-type" content="document" />
+<meta name="content-language" content="pt-br" />
+<meta name="revisit" content="1 day" />
+<meta name="ICBM" content="-20.8341668,-45.51577" />
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="DC.title" content="Eleições 2018 - Rádio Itatiaia | A Rádio de Minas" />
+<meta property="og:title" content="Eleições 2018 - Rádio Itatiaia | A Rádio de Minas" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Editoria especial sobre as Eleições 2018." />
+<meta property="og:image" content=" ~/images/ico-facebook.jpg" />
+<meta property="og:url" content="http://www.itatiaia.com.br/eleicoes-2018" />
+<title>Eleições 2018 - Rádio Itatiaia | A Rádio de Minas</title>
+<meta property="fb:app_id" content="215909845518383" />
+
+<script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T6B7RPX');
+    </script>
+
+
+
+
+<script id="navegg" src="https://tag.navdmp.com/tm46204.js"></script>
+
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/images/touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/images/touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/images/touch-icon-iphone-retina.png" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link href="/Content/css-application?v=EaK-F32T5kh1be-MbuwIdn41Iyp0IwmcuNEiHRT-c_w1" rel="stylesheet" />
+<script data-cfasync='false' src='/bundles/jquery?v=EEZBCVzQe1TpkEUeLfjEm53wpuqSSXGjiXFWAVaewp81'></script>
+<style>
+        @media (max-width:799px) {
+            .margem-topo {
+                height: 130px;
+            }
+        }
+        @media (min-width:800px) {
+            .margem-topo {
+                height: 320px;
+            }
+        }
+    </style>
+<!--[if lt IE 9]>
+        <script src="~/scripts/html5shiv.js"></script>
+    <![endif]-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<style>
+        .mini-articles.eleicoes-audios-list {
+            margin: 60px -10px !important;
+        }
+        .mini-articles.eleicoes-audios-list li {
+            width: 25%;
+            padding: 0 10px;
+        }
+        @media (max-width: 960px) {
+            .mini-articles.eleicoes-audios-list li {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+<script type="text/javascript" src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body class="home-page">
+<div id="margem-topo" class="margem-topo"></div>
+<script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-12157365-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+<div id="fb-root"></div>
+<script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=545713468800917";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+<noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6B7RPX"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+
+
+<header class="main-header" role="banner">
+<div class="top-bar">
+<div class="center clearfix">
+<form class="search-block" enctype="application/x-www-form-urlencoded" action="/busca" method="get">
+<input type="text" placeholder="Buscar" list="item" class="text-search" name="busca" maxlength="150" id="buscar">
+
+<datalist id="item">
+<option value="Notícias">
+<option value="Promoções">
+<option value="Esportes">
+<option value="Podcast">
+<option value="Política">
+</datalist>
+<button class="bt-submit" id="btn-busca-all">
+<i class="fa fa-search" aria-hidden="true"></i>
+</button>
+</form>
+<nav class="socials-top fix-top">
+<a href="https://www.youtube.com/channel/UC9T0ZAarQHL4cJGFzORVsFg" class="icons" target="_blank" title="Siga nossa página no Youtube">
+<i class="fab fa-youtube"></i>
+</a>
+<a href="https://www.instagram.com/itatiaiaoficial/" class="icons" target="_blank" title="Siga nossa página no Instagram">
+<i class="fab fa-instagram"></i>
+</a>
+<a href="https://www.facebook.com/radioitatiaia/?fref=ts" class="icons" target="_blank" title="Curta nossa página no Facebook">
+<i class="fa fa-facebook"></i>
+</a>
+<a href="https://twitter.com/radioitatiaia?lang=pt" class="icons" target="_blank" title="Siga-nos no Twitter">
+<i class="fa fa-twitter"></i>
+</a>
+</nav>
+<small class="info-timer">
+<img class="icone-clima-branco" width="30">
+<strong id="texto-previsao"></strong>
+| Belo Horizonte, 18 de setembro de 2018
+</small>
+<div class="submenu" id="submenu">
+<div class="content">
+<div class="column">
+<ul class="list-categories">
+<li data-submenu="radio" class="link-black">
+<span>A Rádio</span>
+<i class="fa fa-angle-right"></i>
+</li>
+<li class="link-red" data-submenu="esportes">
+<span>Esportes</span>
+<i class="fa fa-angle-right"></i>
+</li>
+<li class="link-red" data-submenu="noticias">
+<span>Editorias</span>
+<i class="fa fa-angle-right"></i>
+</li>
+<li class="link-red" data-submenu="audios">
+<span>Central de áudios</span>
+<i class="fa fa-angle-right"></i>
+</li>
+<li class="link-black">
+<a href="/colunistas">Colunistas</a>
+</li>
+<li class="link-black">
+<a href="/sobre/radio-itatiaia">Quem Somos</a>
+</li>
+<li class="link-black">
+<a href="/contato">Fale Conosco</a>
+</li>
+</ul>
+</div>
+<div class="second-column">
+<span class="bt-return">Voltar</span>
+<nav class="list-side" data-link="esportes">
+<div class="section-equips">
+<h4 class="mini-title">Times</h4>
+<a href="/futebol/america">
+<img src="/images/thumb_america-mineiro.png" alt="América">
+</a>
+<a href="/futebol/atletico">
+<img src="/images/thumb_galo-logo.png" alt="Atlético">
+</a>
+<a href="/futebol/cruzeiro">
+<img src="/images/thumb_cruzeiro-logo-01.png" alt="Cruzeiro">
+</a>
+<a href="/futebol/brasil">
+<img src="/images/thumb_brasil-logo-brasil.png" alt="Seleção Brasileira">
+</a>
+</div>
+<h4 class="mini-title">Notícias</h4>
+<a href="/editoria/esporte">Últimas notícias</a>
+<h4 class="mini-title">Campeonatos</h4>
+<a href="/futebol/campeonato/campeonato-brasileiro-serie-a">Campeonato Brasileiro S&#233;rie A</a>
+<a href="/futebol/campeonato/campeonato-brasileiro-serie-b">Campeonato Brasileiro S&#233;rie B</a>
+<a href="/futebol/campeonato/campeonato-mineiro">Campeonato Mineiro</a>
+<a href="/futebol/campeonato/copa-do-brasil">Copa do Brasil</a>
+<a href="/itatiaianacopa">Copa do Mundo</a>
+<a href="/futebol/campeonato/copa-libertadores">Copa Libertadores</a>
+<a href="/Campeonatos/SulAmericana">Copa Sul-Americana</a>
+<a href="/futebol/campeonato/eliminatorias-da-copa">Eliminat&#243;rias da Copa</a>
+<a href="/futebol/campeonato/primeira-liga">Primeira Liga</a>
+</nav>
+<nav class="list-side" data-link="radio">
+<a href="/programacao">Programação</a>
+<a href="/sobre/midia-kit">Midia Kit</a>
+<a href="http://www.itatiaia.com.br/copaitatiaia" target="_blank">Copa Itatiaia</a>
+<a href="/sobre/trofeu-guara">Troféu Guará</a>
+</nav>
+<nav class="list-side" data-link="noticias">
+<a href="/editoria/cidades">Cidades</a>
+<a href="/eleicoes-2018">Eleições 2018</a>
+<a href="/editoria/entretenimento">Entretenimento</a>
+<a href="/editoria/noticias">Mais not&#237;cias</a>
+<a href="/editoria/politica">Pol&#237;tica</a>
+<a href="/editoria/seu-bolso">Seu Bolso</a>
+<a href="/editoria/viver-bem">Viver Bem</a>
+</nav>
+<nav class="list-side" data-link="audios">
+<a href="/central-de-audio/home">Central de Áudios</a>
+<a href="/central-de-audio/podcast">Podcast</a>
+<a href="/central-de-audio/40/boa-tarde">Boa Tarde</a>
+<a href="/central-de-audio/14/cafe-com-enem">Caf&#233; com Enem</a>
+<a href="/central-de-audio/6/comentarios">Coment&#225;rios</a>
+<a href="/central-de-audio/11/conversa-de-redacao">Conversa de Reda&#231;&#227;o</a>
+<a href="/central-de-audio/45/eleicoes-2018">Elei&#231;&#245;es 2018</a>
+<a href="/central-de-audio/9/especiais">Especiais</a>
+<a href="/central-de-audio/4/esporte">Esporte</a>
+<a href="/central-de-audio/44/fora-dos-trilhos">Fora dos Trilhos</a>
+<a href="/central-de-audio/5/gols">Gols</a>
+<a href="/central-de-audio/7/horoscopo">Hor&#243;scopo</a>
+<a href="/central-de-audio/39/itatiaia-viver-bem">Itatiaia Viver Bem</a>
+<a href="/central-de-audio/3/jornalismo">Jornalismo</a>
+<a href="/central-de-audio/41/noite-livre">Noite Livre</a>
+<a href="/central-de-audio/12/observatorio-feminino">Observat&#243;rio Feminino</a>
+<a href="/central-de-audio/13/palavra-aberta">Palavra Aberta</a>
+<a href="/central-de-audio/16/palavra-livre">Palavra Livre</a>
+<a href="/central-de-audio/17/radio-vivo">R&#225;dio Vivo</a>
+<a href="/central-de-audio/42/sabado-retro">S&#225;bado Retr&#244;</a>
+</nav>
+</div>
+</div>
+
+</div>
+<div id="header-2017" class="left" style="padding-top: 9px;">
+<button class="bt-menu">Menu</button>
+<a href="/envie-sua-denuncia" class="link">Enviar Denúncia</a>
+</div>
+<a href="/" class="main-logo">
+<img src="/images/Logo_Itatiaia_Radio_Branco.png" alt="Itatiaia 610 am - 95,7 fm" class="logo-1">
+<img src="/images/logo-b.png" alt="Itatiaia 610 am - 95,7 fm" class="logo-2">
+</a>
+</div>
+</div>
+<style>
+    .ouca-ao-vivo {
+        font-size: 22px;
+        text-transform: uppercase;
+        position: absolute;
+        left: 65px;
+        line-height: 42px;
+        font-style: italic;
+    }
+
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 75px;
+        width: 75px;
+        color: white;
+        border-radius: 20px;
+        background-color: #cccccc;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+
+        .play-button i {
+            font-size: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #ad1111;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+    .audio-range {
+        margin-left: 620px;
+        vertical-align: middle;
+        margin-top: -31px;
+    }
+
+    .texto-programa {
+        float: right;
+        font-size: 20px;
+        margin-right: 30px;
+        font-weight: bold;
+        vertical-align: middle;
+        margin-top: -29px;
+    }
+
+    .choice-station {
+        margin-left: calc(40% - 155px);
+    }
+
+    @media (max-width: 1024px) {
+        .choice-station {
+            /*margin-left: 70px;*/
+        }
+
+        .audio-range {
+            margin-left: calc(100% - 394px)
+        }
+
+        .main-header .top-bar .info-timer {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+
+        #audio-range {
+            width: 150px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .texto-programa {
+            float: right;
+            font-size: 1.2em;
+            margin-right: 0px;
+            margin-top: -23px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        .audio-range {
+            margin-left: 400px;
+            margin-top: -8px;
+        }
+
+        .play-button {
+            height: 50px;
+            width: 50px;
+        }
+
+            .play-button i {
+                font-size: 20px;
+            }
+
+        .choice-station {
+            right: 498px;
+            bottom: -9px;
+        }
+
+        .ouca-ao-vivo {
+            font-size: 1.2em;
+            left: 65px;
+            line-height: 26px;
+        }
+
+        #header-2017 {
+            padding-top: 50px !important;
+            top: -25px;
+            position: relative;
+        }
+
+        .choice-station .stations {
+            top: 100%;
+            bottom: auto;
+        }
+
+        .submenu {
+            top: 100%;
+        }
+
+        .fa-spinner .fa-pulse {
+            top: 29%;
+            left: 23%;
+        }
+    }
+
+    @media(max-width:768px){
+        .ouca-ao-vivo {
+            display: none
+        }
+    }
+
+    @media(max-width: 670px) {
+        .choice-station {
+            left: 0;
+            margin-left: 20px;
+        }
+    }
+
+    @media(max-width: 640px) {
+        .texto-programa {
+            display: none;
+        }
+
+        .audio-range {
+            margin-left: 70%;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .main-header .top-bar .link {
+            display: none;
+        }
+
+        .audio-range, .img-live, .texto-programa {
+            display: none;
+        }
+
+        .play-button {
+            left: 9%;
+        }
+
+        .choice-station {
+            right: 9px;
+            bottom: -20px;
+        }
+
+        .main-header .medium-bar {
+            padding: 30px 0;
+        }
+
+        .ouca-ao-vivo {
+            font-size: 1.5em;
+            left: 85px;
+            line-height: 5px;
+        }
+
+        .fa-spinner .fa-pulse {
+            top: 29%;
+            left: 23%;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .ouca-ao-vivo {
+            left: 69px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .ouca-ao-vivo {
+            left: 61px;
+        }
+    }
+
+    @media (max-width: 926px) {
+        .ouca-ao-vivo {
+            left: 20px;
+        }
+    }
+
+    @media (max-width: 940px) {
+        .texto-programa {
+            margin-right: 0;
+        }
+
+        .audio-range {
+            margin-left: calc(100% - 357px);
+        }
+    }
+
+    @media (max-width: 850px) {
+
+        #audio-range{
+            width: 100px;
+        } 
+        .audio-range {
+            margin-left: calc(100% - 300px);
+        }
+    }
+
+    @media(max-width: 800px) {
+        .main-header .medium-bar {
+            padding: 20px 0;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .audio-range {
+            margin-left: calc(100% - 260px);
+        }
+    }
+
+    @media(max-width: 640px) {
+        .audio-range {
+            display: none;
+        }
+
+        .main-header .medium-bar {
+            padding: 25.5px 0;
+        }
+
+        .choice-station{
+            left: initial;
+            right: 0;
+            margin-right: 20px;
+        }
+    }
+
+    @media(max-width: 425px){
+        .ouca-ao-vivo {
+            display: block;
+            left: 70px;
+        }
+    }
+
+    #volume {
+        color: #ad1111;
+        cursor: pointer;
+    }
+
+    #audio-range {
+            outline: none;
+            height: 6px;
+            background-color: #cccccc;
+            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ad1111), color-stop(100%, #ad1111));
+            background-image: -webkit-linear-gradient(#ad1111, #ad1111);
+            background-image: -moz-linear-gradient(#ad1111, #ad1111);
+            background-image: -o-linear-gradient(#ad1111, #ad1111);
+            background-image: linear-gradient(#ad1111, #ad1111);
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+    #audio-range::-webkit-slider-runnable-track {
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        -webkit-appearance: none;
+    }
+
+    #audio-range::-moz-range-track {
+        box-shadow: none;
+        border: none;
+        background: transparent;
+    }
+
+    #audio-range::-moz-focus-outer {
+        border: 0;
+    }
+
+    #audio-range::-webkit-slider-thumb {
+        width: 14px;
+        height: 14px;
+        border: 0;
+        background: #fff;
+        border-radius: 100%;
+        box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+        -webkit-appearance: none;
+    }
+
+    #audio-range::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+        border: 0;
+        background: #fff;
+        border-radius: 100%;
+        box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+    }
+
+    .choice-station .stations .rdoLink {
+        display: block;
+        padding: 15px 15px;
+        font-size: 13px;
+        font-weight: bold;
+        color: black;
+        position: relative;
+        -webkit-transition: background 0.2s ease;
+        transition: background 0.2s ease;
+    }
+
+    .choice-station .stations .rdoLink:hover {
+        background: #640000;
+        color: white;
+    }
+
+    .lds-spinner {
+        position: relative;
+    }
+
+    .fa-pulse {
+        top: 22% !important;
+        left: 16% !important;
+    }
+</style>
+<script async src="https://use.fontawesome.com/ac367eb9dd.js"></script>
+<div class="medium-bar">
+<div class="center clearfix">
+<img src="/images/radio-live.gif" style="vertical-align: middle;" class="img-live" />
+<b class="ouca-ao-vivo">ouça ao vivo</b>
+<div class="choice-station">
+<header class="title">
+<b id="selectedRadio">OUÇA AGORA</b>
+</header>
+<nav class="stations">
+<ul id="radioList">
+<li class="rdoLink" id="belo-horizonte"><b></b>Belo Horizonte</li>
+<li class="rdoLink" id="juiz-de-fora"><b></b>Juiz de Fora</li>
+<li class="rdoLink" id="montes-claros"><b></b>Montes Claros</li>
+<li class="rdoLink" id="varginha"><b></b>Varginha</li>
+</ul>
+</nav>
+</div>
+<input type="hidden" name="radio-name" value="belo-horizonte" id="radio-name" />
+<div class="lds-css ng-scope">
+<div class="lds-spinner" style="width:100%;height:100%"></div>
+</div>
+<div id="play-button" class="play-button" onclick="playMusic()">
+<i class="fa"></i>
+</div>
+<div class="audio-range">
+<input type="range" id="audio-range" class="audio-range1" min="0" max="1" step="0.01">
+<i id="volume" class="fa" style="font-size: 22px;" onclick="muteButton()"></i>
+</div>
+<a href="/Programacao">
+<div class="texto-programa">
+<div id="idProgramacao" style="display:none;"></div>
+<div id="nomeProgramacao"></div>
+<div id="horarioProgramacao"></div>
+<input type="hidden" id="inicioProgramacao" value="" />
+<input type="hidden" id="fimProgramacao" value="" />
+</div>
+</a>
+</div>
+</div>
+<script>
+    var win;
+    $(document).ready(function () {
+
+        ///////////////////// Início - Programação do Player /////////////////////
+
+        //Executa a função para exibir os dados da programação ao carregar a página
+        atualizaProgramacao();
+        //Roda de 1 em 1 minuto no client side verificando o horário
+        setInterval(verificaHorario, 500);
+
+        //Função para atualizar a programação do Player
+        function atualizaProgramacao() {
+            $.ajax({
+                type: "GET",
+                url: "http://138.97.105.171/Home/ProgramacaoRadioMenu",
+
+                success: function (data) {
+
+                    $.each(data, function (k, v) {
+                        $('#idProgramacao').html(v[0]['Id']);
+                        $('#nomeProgramacao').html(v[0]['Nome']);
+                        $('#horarioProgramacao').html(v[0]['Horario'] + ' - ' + v[0]['FimHorario']);
+
+                        $('#inicioProgramacao').prop('value', v[0]['Horario']);
+                        $('#fimProgramacao').prop('value', v[0]['FimHorario']);
+
+                        localStorage.setItem('idProgramacao', document.getElementById("idProgramacao").innerHTML);
+                        localStorage.setItem('nomeProgramacao', document.getElementById("nomeProgramacao").innerHTML);
+                        localStorage.setItem('horarioProgramacao', document.getElementById("horarioProgramacao").innerHTML);
+                        localStorage.setItem('inicioProgramacao', $('#inicioProgramacao').val());
+                        localStorage.setItem('fimProgramacao', $('#fimProgramacao').val());
+                    });
+                }
+            });
+        }
+
+        //Função para verificar o horário da programação
+        function verificaHorario() {
+            var timeStamp = Date.parse("2018-09-18 13:31:37");
+            var horarioServidor = new Date(timeStamp);
+
+            var diaAtual = 18;
+            var mesAtual = 9;
+            var anoAtual = 2018;
+            var inicioProgramacaoAtual = new Date(Date.parse(anoAtual + '-' + mesAtual + '-' + diaAtual + ' ' + $('#inicioProgramacao').val() + ':00'));
+            var fimProgramacaoAtual = new Date(Date.parse(anoAtual + '-' + mesAtual + '-' + diaAtual + ' ' + $('#fimProgramacao').val() + ':00'));
+
+            if (fimProgramacaoAtual <= horarioServidor)
+            {
+                atualizaProgramacao();
+            }
+        }
+
+        ///////////////////// Fim - Programação do Player /////////////////////
+
+        if (localStorage.volume == undefined) {
+            localStorage.setItem('volume', 0.5);
+        } else {
+            localStorage.setItem('volume', localStorage.volume);
+        }
+        $('#audio-range').val(localStorage.volume);
+
+        if (localStorage.abrirPopup == undefined) {
+            localStorage.setItem('abrirPopup', 0);
+        }
+
+        if (localStorage.radioId == undefined) {
+            localStorage.setItem('radioId', 'belo-horizonte');
+        } else {
+            var nomeRadio = $('#' + localStorage.radioId).html();
+            $('#selectedRadio').html(nomeRadio);
+        }
+
+        if (localStorage.status == undefined) {
+            localStorage.setItem('status', 0);
+        }
+
+        if (localStorage.mute == undefined) {
+            localStorage.setItem('mute', '0');
+        }
+
+        if (localStorage.mute == 0) {
+            $('#volume').addClass('fa-volume-up').removeClass('fa-volume-off');
+        } else {
+            $('#volume').removeClass('fa-volume-up').addClass('fa-volume-off');
+        }
+
+        if (localStorage.status == 1) {
+            $('#play-button i').toggleClass('fa-pause');
+        } else {
+            $('#play-button i').toggleClass('fa-play');
+        }
+
+
+        var audio = $('#player');
+        audio[0].load();
+        var playButton = $('#play-button');
+        var volumeButton = $('#volume');
+        console.log(audio);
+        console.log(playButton);
+        console.log(playButton.find('.fa'));
+        var sliderAudio = $('#audio-range');
+
+
+        $('#audio-range').on('input', function (e) {
+            var min = e.target.min,
+                max = e.target.max,
+                val = e.target.value;
+
+            $(e.target).css({'backgroundSize': (val - min) * 100 / (max - min) + '% 100%'});
+        }).trigger('input');
+
+            $('#radioList li').on("click", function () {
+                    var radio = $(this);
+                    if (radio !== undefined && radio != null && radio[0] !== null && radio[0] !== undefined) {
+                $('#selectedRadio').text(radio.text());
+                $.ajax({
+                            url: "/Home/RadioJsonAsync?chave=" + radio[0].id,
+                    type: "GET",
+                    success: function (data) {
+                                console.log(data.data);
+                                console.log(data.data.Stream1);
+                        $('#source1').attr('src', data.data.Stream1);
+                        $('#source2').attr('src', data.data.Stream2);
+                        $('#source1').attr('type', data.data.Stream1.endsWith(".aac") ? "audio/aac" : "audio/mpeg");
+                        $('#source2').attr('type', data.data.Stream2.endsWith(".aac") ? "audio/aac" : "audio/mpeg");
+
+                                //console.log($('#source1'));
+                                //console.log($('#source1'));
+                                //console.log(audio);
+                                $('#radio-name').val(radio[0].id);
+                                localStorage.setItem('radioId', radio[0].id);
+
+                                //if (localStorage.abrirPopup == 0) {
+                                //    playMusic(radio[0].id);
+                                //}
+
+
+                            }
+                        });
+                    }
+            });
+
+            sliderAudio.on('input', function () {
+
+                localStorage.setItem('mute', '0');
+                $('#volume').addClass('fa-volume-up').removeClass('fa-volume-off');
+                $('#player').prop('muted', false);
+
+                $('#player')[0].volume = this.value;
+                if (win && !win.closed) {
+                    win.$('#player')[0].volume = $('#player')[0].volume;
+                }
+
+                console.log($('#player')[0].volume);
+                porcentagem = $('#player')[0].volume;
+                localStorage.setItem('volume', porcentagem);
+                $('#audio-range').attr('style', 'background-size:' + porcentagem * 100 + '% 100%');
+
+                if (win) {
+                    if (win.$('#player')[0].volume == 0 && $('#player')[0].volume == 0) {
+                        $('#volume').removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
+                        win.$('#volume').removeClass('fa fa-volume-up').addClass('fa fa-volume-off');
+                    }
+                    else {
+                        $('#volume').removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
+                        win.$('#volume').removeClass('fa fa-volume-off').addClass('fa fa-volume-up');
+                    }
+                }
+            });
+
+    });
+
+    function secToStr(secNum) {
+        secNum = Math.floor(secNum);
+        var horas = Math.floor(secNum / 3600);
+        var minutos = Math.floor((secNum - (horas * 3600)) / 60);
+        var segundos = secNum - (horas * 3600) - (minutos * 60);
+
+        if (horas < 10) horas = "0" + horas;
+        if (minutos < 10) minutos = "0" + minutos;
+        if (segundos < 10) segundos = "0" + segundos;
+
+        var tempo = horas + ':' + minutos + ':' + segundos;
+
+        return tempo;
+    }
+
+
+    function playMusic(musica) {
+
+        if (musica == null || musica == undefined) {
+            musica = localStorage.radioId;
+
+            var nomeRadio = $('#' + localStorage.radioId).html();
+            $('#selectedRadio').html(nomeRadio);
+        }
+
+        $('#play-button i').toggleClass('fa-play');
+        $('#play-button i').toggleClass('fa-pause');
+
+        if (localStorage.status == 0) {
+            localStorage.setItem('status', '1');
+        } else {
+            localStorage.setItem('status', '0');
+        }
+
+        var left = (screen.width / 3);
+        var top = (screen.height / 3);
+        var popWidth = screen.width;
+        var popHeight = 600;
+        var popTop = top - popHeight / 3;
+        var popLeft = left - popWidth / 3;
+        if (win && !win.closed) {
+            if (localStorage.abrirPopup == 0) {
+                localStorage.setItem('abrirPopup', '1');
+            }
+        } else {
+            win = window.open('/Home/Player?chave=' + musica, 'PlayerPopUpItatiaia', 'height=' + popHeight + ',width=' + popWidth + ',resizeable=0, top=' + popTop + ', left=' + popLeft);
+            localStorage.setItem('abrirPopup', '1');
+            popUpMonitoramento();
+        }
+
+        return false;
+    }
+
+    function muteButton() {
+        if (localStorage.mute == 0) {
+            localStorage.setItem('mute', '1');
+            $('#volume').removeClass('fa-volume-up').addClass('fa-volume-off');
+        } else {
+            localStorage.setItem('mute', '0');
+            $('#volume').addClass('fa-volume-up').removeClass('fa-volume-off');
+        }
+    }
+
+    window.addEventListener('storage', function (e) {
+
+        console.log(e);
+
+        if (e.key == 'status') {
+            $('#play-button i').toggleClass('fa-play');
+            $('#play-button i').toggleClass('fa-pause');
+        }
+
+        if (e.key == 'volume') {
+            $('#audio-range').val(e.newValue);
+            $('#audio-range').attr('style', 'background-size:' + e.newValue * 100 + '% 100%');
+
+            if (e.newValue == 0) {
+                $('#volume').removeClass('fa-volume-up').addClass('fa-volume-off');
+            } else {
+                $('#volume').addClass('fa-volume-up').removeClass('fa-volume-off');
+            }
+        }
+
+        if (e.key == 'mute') {
+            if (e.newValue == 0) {
+                $('#volume').addClass('fa-volume-up').removeClass('fa-volume-off');
+            } else {
+                $('#volume').removeClass('fa-volume-up').addClass('fa-volume-off');
+            }
+        }
+
+        if (e.key == 'radioId') {
+            $.ajax({
+                url: "/Home/RadioJsonAsync?chave=" + localStorage.radioId,
+                type: "GET",
+                success: function (data) {
+                    console.log(data.data);
+                    console.log(data.data.Stream1);
+                    $('#selectedRadio').text(data.data.Titulo);
+                    //playMusic(localStorage.radioId);
+                }
+            });
+        }
+
+        if (localStorage.abrirPopup == 0) {
+            $('#play-button i').addClass('fa-play').removeClass('fa-pause');
+        }
+
+    });
+
+    function popUpMonitoramento() {
+        var popUpTick = setInterval(function () {
+            if (win.closed) {
+                localStorage.setItem('abrirPopup', 0);
+                localStorage.setItem('status', 0);
+                localStorage.setItem('volume', 0.5);
+                localStorage.setItem('mute', 0);
+
+                $('#play-button i').addClass('fa-play').removeClass('fa-pause');
+
+                if (localStorage.abrirPopup == 0) {
+                    $('#botaoPlayPausePopup i').addClass('fa-play').removeClass('fa-pause');
+                }
+
+                clearInterval(popUpTick);
+                console.log('PopUp fechada!');
+            }
+        }, 500);
+    }
+
+    $(document).on('input', '#audio-range', function () {
+        localStorage.setItem('volume', $(this).val());
+    });
+
+</script>
+<div class="navigation-bottom">
+<button class="button" id="nav-bottom">
+<i class="fa fa-caret-square-o-down"></i>
+<span>Especiais</span>
+</button>
+<nav class="center">
+<a class="eleicoes-2018-menu-button menu-eleicoes-2018" href="/eleicoes-2018"><i class="fa fa-address-card"></i><p>&nbsp;Eleições 2018</p></a>
+<span>Reportagens Especiais:</span>
+<a href="/reportagem-especial/T2/oracao-do-dia">Ora&#231;&#227;o do Dia</a>
+<a href="/reportagem-especial/T2/monitoramento-itatiaia">Monitoramento Itatiaia</a>
+<a href="/editoria/seu-bolso"><p class="seu-bolso">Canal Seu Bolso</p></a>
+<a href="/editoria/viver-bem"><p class="seu-bolso">Canal Viver Bem</p></a>
+</nav>
+</div>
+</header>
+<div class="page-header-eleicoes index-page-header">
+<div class="center">
+<div class='publicidade-banner-topo'><div class='random-content'><a href="http://itatiaia.com.br/reportagem-especial/T2/monitoramento-itatiaia" target='_blank' onclick='clickBanner(4285)'><img class='promotional-banner ' data-cliente='Eleições 2018 - Monitoramento' data-comercial='Aparece no topo da página' data-dimensao='970x150' src='/Admin/Conteudo/Banners/970x150/Banner_3.png' alt='Eleições 2018 - Monitoramento' data-banner-id='4285' /></a></div></div>
+<h1 class="page-title">Eleições 2018</h1>
+<div class="nav-intern clearfix nav-sep">
+<nav class="breadcumb"><a href="/">Home</a><span>Eleições 2018</span></nav>
+<div class="buttons">
+<a class="bt-back" href="javascript:window.history.go(-1)"> <i class="fa fa-angle-left"></i> Voltar</a> Texto: <button class="more bt-resize">+</button> <button class="bt-resize minus">-</button>
+</div>
+</div>
+<section class="featured-noticies" role="main" id="normal">
+<article class="hero">
+<a href="/eleicoes-2018/noticia/tse-suspende-propaganda-com-mensagem-de-lula">
+<figure style="background-image: url(/Admin/Conteudo/noticias/111150/744x500/fernandohaddad18-09-.jpg)" alt="" title="" class="pic"></figure>
+<div class="content">
+<h4 class="cat">Confunde eleitores</h4>
+<h3 class="title">TSE suspende propaganda com mensagem de Lula em apoio a Fernando Haddad</h3>
+</div>
+</a>
+<a href="/eleicoes-2018/noticia/candidatos-nao-dao-relevancia-a-questao-indus">
+<figure style="background-image: url(/Admin/Conteudo/noticias/111100/744x500/industriaswd2219217-.jpg)" alt="" title="" class="pic"></figure>
+<div class="content">
+<h4 class="cat">Entrevista</h4>
+<h3 class="title">'Candidatos não dão relevância à questão industrial', diz presidente do IEDI</h3>
+</div>
+</a>
+<a href="/eleicoes-2018/noticia/estao-com-medo-da-nossa-forca-diz-membro-de-m">
+<figure style="background-image: url(/Admin/Conteudo/noticias/111162/744x500/ele-nao-mulheres-con.jpg)" alt="" title="" class="pic"></figure>
+<div class="content">
+<h4 class="cat">Redes sociais</h4>
+<h3 class="title">'Estão com medo da nossa força', diz membro de 'Mulheres contra Bolsonaro' sobre hackers</h3>
+</div>
+</a>
+</article>
+<article>
+<a href="/eleicoes-2018/noticia/posturas-politicas-de-esportistas-provocam-re">
+<figure style="background-image: url(/Admin/Conteudo/noticias/111152/744x500/urna18-09-2018_08-59.jpg)" alt="" title="" class="pic"></figure>
+<div class="content">
+<h4 class="cat">Elei&#231;&#227;o no esporte </h4>
+<h3 class="title">Posições políticas de jogadores e torcida provocam reações de clubes e entidades </h3>
+</div>
+</a>
+</article>
+<article>
+<a href="/eleicoes-2018/noticia/ibope-dilma-segue-a-frente-e-viana-em-segundo">
+<figure style="background-image: url(/Admin/Conteudo/noticias/111140/744x500/dilma17-09-2018_19-5.jpg)" alt="" title="" class="pic"></figure>
+<div class="content">
+<h4 class="cat">Duas vagas em disputa</h4>
+<h3 class="title">Dilma segue à frente, e Carlos Viana em segundo em intenção de votos para o Senado</h3>
+</div>
+</a>
+</article>
+</section>
+</div>
+</div>
+<div class="center home-wrapper-eleicoes">
+<div class="alert-eleicoes">
+<div class="info">
+<p class="label-tag">ATENÇÃO:</p>
+<p class="title">Acompanhe em tempo real as últimas informações sobre as Eleições 2018.</p>
+</div>
+<button class="button-eleicoes-alert" onclick="window.location.replace('/eleicoes-2018/cadastro')">
+<i class="far fa-bell"></i>
+<p>Lembre-se de mim</p>
+</button>
+</div>
+<div class="row-df-eleicoes">
+<div class="content-with-sidebar-eleicoes">
+<p class="title-news-area-eleicoes">Últimas Notícias</p>
+<div class="small-list-eleicoes flex-wrap">
+<a href="/eleicoes-2018/noticia/posturas-politicas-de-esportistas-provocam-re" class="item">
+<p class="tag-eleicoes">Eleição no esporte </p>
+<p class="title">Posturas políticas de esportistas provocam reações de clubes e entidades</p>
+</a>
+<a href="/eleicoes-2018/noticia/divtse-define-urna-eletronica-e-confirma-13-c" class="item">
+<p class="tag-eleicoes">Registros aceitos</p>
+<p class="title">TSE define urna eletrônica e confirma 13 candidatos à Presidência</p>
+</a>
+<a href="/eleicoes-2018/noticia/para-alckmin-fala-de-bolsonaro-e-tentativa-de" class="item">
+<p class="tag-eleicoes">Resposta</p>
+<p class="title">Para Geraldo Alckmin, fala de Bolsonaro é tentativa de justificar 'derrota antecipada'</p>
+</a>
+<a href="/eleicoes-2018/noticia/lula-seria-ouvido-mas-quem-assina-lei-e-o-pre" class="item">
+<p class="tag-eleicoes">'Interlocutor permanente'</p>
+<p class="title">Lula seria ouvido, mas quem assina lei é o presidente da República, afirma Fernando Haddad</p>
+</a>
+<a href="/eleicoes-2018/noticia/ctnmda-bolsonaro-lidera-com-282-seguido-por-h" class="item">
+<p class="tag-eleicoes">Pesquisa eleitoral</p>
+<p class="title">CNT/MDA: Bolsonaro lidera com 28,2%, seguido por Haddad (17,6%) e Ciro (10,8%)</p>
+</a>
+<a href="/eleicoes-2018/noticia/boas-ideias-sao-de-todos-diz-ciro-sobre-propo" class="item">
+<p class="tag-eleicoes">'Dívida Zero'</p>
+<p class="title">Boas ideias são de todos, diz Ciro sobre proposta de Haddad&nbsp; para limpar nomes de endividados</p>
+</a>
+</div>
+<a href="/eleicoes-2018/noticias" class="more-link-eleicoes">Mais notícias sobre as <strong>eleições 2018</strong> <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+</div>
+<div class="sidebar-eleicoes">
+<div class="box-sidebar-eleicoes pesquisas-box">
+<p class="label-title-box">Pesquisas Eleitorais</p>
+<a href="/eleicoes-2018/noticia/ibope-dilma-segue-a-frente-e-viana-em-segundo" class="item">
+<p class="title">Dilma segue à frente, e Viana em segundo em intenção de votos para o Senado, mostra Ibope</p>
+</a>
+<a href="/eleicoes-2018/noticia/anastasia-sobe-e-tem-33-das-intencoes-de-voto" class="item">
+<p class="title">Anastasia sobe e tem 33% das intenções de voto; Pimentel aparece com 22%</p>
+</a>
+<a href="/eleicoes-2018/noticia/pesquisa-datafolha-bolsonaro-segue-liderando" class="item">
+<p class="title">Bolsonaro segue liderando, seguido por Ciro; diferença de Marina, Alckmin e Haddad é de 1%&nbsp;</p>
+</a>
+<a href="/eleicoes-2018/noticia/bolsonaro-mantem-lideranca-ciro-sobe-e-empata" class="item">
+<p class="title">Bolsonaro mantém liderança; Ciro sobe e empata com Marina, diz Ibope</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="video-wrapper-eleicoes">
+<div class="center">
+<p class="title-tag-video">Vídeos</p>
+<div class="row-videos-eleicao">
+<a href="https://www.youtube.com/embed/-7TMGJY_Zn8?autoplay=1" data-fancybox-type="iframe" class="featured-video fa fa-play fancybox" style="background-image: url(https://img.youtube.com/vi/-7TMGJY_Zn8/hqdefault.jpg); background-size: contain;">
+<div class="info">
+<p class="tag-label">Brasileiros no exterior podem votar nas Eleições 2018</p>
+<p class="title">Saiba como</p>
+</div>
+</a>
+<div class="video-list-wrapper">
+<a href="https://www.youtube.com/embed/FLhzy_9pUnk?autoplay=1" data-fancybox-type="iframe" class="item fancybox">
+<div class="image fa fa-play" style="background-image: url(https://img.youtube.com/vi/FLhzy_9pUnk/hqdefault.jpg); background-size: contain;"></div>
+<div class="info">
+<p class="tag-label">A desinformação pode ser desastrosa</p>
+<p class="title">Democracia é verdade</p>
+</div>
+</a>
+<a href="https://www.youtube.com/embed/Z4S-YpuYHk4?autoplay=1" data-fancybox-type="iframe" class="item fancybox">
+<div class="image fa fa-play" style="background-image: url(https://img.youtube.com/vi/Z4S-YpuYHk4/hqdefault.jpg); background-size: contain;"></div>
+<div class="info">
+<p class="tag-label">Quando começam as propagandas eleitorais?</p>
+<p class="title">O TRE informa...</p>
+</div>
+</a>
+<a href="https://www.youtube.com/embed/oByEgAxQgX8?autoplay=1" data-fancybox-type="iframe" class="item fancybox">
+<div class="image fa fa-play" style="background-image: url(https://img.youtube.com/vi/oByEgAxQgX8/hqdefault.jpg); background-size: contain;"></div>
+<div class="info">
+<p class="tag-label">E agora? Quais os próximos passos?</p>
+<p class="title">O TRE esclarece</p>
+</div>
+</a>
+</div>
+</div>
+<a href="/eleicoes-2018/videos" class="more-link-eleicoes">Mais vídeos sobre as <strong>eleições 2018</strong> <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="wrapper-general center">
+<header class="audios-title">
+<p class="title">Últimos áudios</p>
+<a href="/central-de-audio/45/eleicoes-2018" class="button">Mais ÁUDIOS</a>
+</header>
+<ul class="mini-articles eleicoes-audios-list clearfix">
+<li>
+<article>
+<div class="info">
+<h4 class="tag-area">Elei&#231;&#245;es 2018 - <small>14/09/2018</small></h4>
+<h3 class="title-normal">Vice de Ciro, Kátia Abreu defende caráter de Dilma e analisa 'PEC do Veneno'&nbsp;</h3>
+</div>
+<div class="podcast-box">
+<select name="" id="">
+<option>Itatiaia</option>
+</select>
+<div class="podcast-item flex">
+<button class="fa button fa-play-circle"></button>
+<div class="player-audio clearfix">
+<div class="playbar"><div class="progress"></div></div>
+<audio preload="none">
+<source src="/Admin/conteudo/noticias/110982/audio/katia-abreu---editad.mp3" type="audio/mpeg">
+</audio>
+ </div>
+<div class="timer-play">
+<span class="rolling">00:00</span>
+<span class="full-time">00:00</span>
+</div>
+<div style="margin: 0 0 0 5px">
+<a href="/Admin/conteudo/noticias/110982/audio/katia-abreu---editad.mp3" target="_blank" style="padding:0; margin:0;">
+<img src="/images/download.png" />
+</a>
+</div>
+</div>
+</div>
+</article>
+</li>
+<li>
+<article>
+<div class="info">
+<h4 class="tag-area">Elei&#231;&#245;es 2018 - <small>14/09/2018</small></h4>
+<h3 class="title-normal">Quinze deputados mineiros estão no ranking dos que ferem direitos trabalhistas e socioambientais</h3>
+</div>
+<div class="podcast-box">
+<select name="" id="">
+<option> Rural&#244;metro</option>
+</select>
+<div class="podcast-item flex">
+<button class="fa button fa-play-circle"></button>
+<div class="player-audio clearfix">
+<div class="playbar"><div class="progress"></div></div>
+<audio preload="none">
+<source src="/Admin/conteudo/noticias/110974/audio/17---alessandra-e-ed.mp3" type="audio/mpeg">
+</audio>
+</div>
+<div class="timer-play">
+<span class="rolling">00:00</span>
+<span class="full-time">00:00</span>
+</div>
+<div style="margin: 0 0 0 5px">
+<a href="/Admin/conteudo/noticias/110974/audio/17---alessandra-e-ed.mp3" target="_blank" style="padding:0; margin:0;">
+<img src="/images/download.png" />
+</a>
+</div>
+</div>
+</div>
+</article>
+</li>
+<li>
+<article>
+<div class="info">
+<h4 class="tag-area">Elei&#231;&#245;es 2018 - <small>13/09/2018</small></h4>
+<h3 class="title-normal">Carlos Lindenberg - 13/09/2018</h3>
+</div>
+<div class="podcast-box">
+<select name="" id="">
+<option>A cirurgia de Bolsonaro</option>
+</select>
+<div class="podcast-item flex">
+<button class="fa button fa-play-circle"></button>
+<div class="player-audio clearfix">
+<div class="playbar"><div class="progress"></div></div>
+<audio preload="none">
+<source src="/Admin/conteudo/audios/31649/19---comentario-x-li.mp3" type="audio/mpeg">
+</audio>
+</div>
+<div class="timer-play">
+<span class="rolling">00:00</span>
+<span class="full-time">00:00</span>
+</div>
+<div style="margin: 0 0 0 5px">
+<a href="/Admin/conteudo/audios/31649/19---comentario-x-li.mp3" target="_blank" style="padding:0; margin:0;">
+<img src="/images/download.png" />
+</a>
+</div>
+</div>
+</div>
+</article>
+</li>
+<li>
+<article>
+<div class="info">
+<h4 class="tag-area">Elei&#231;&#245;es 2018 - <small>11/09/2018</small></h4>
+<h3 class="title-normal">Carlos Lindenberg - 11/09/2018</h3>
+</div>
+<div class="podcast-box">
+<select name="" id="">
+<option>Nova pesquisa para presidente</option>
+</select>
+<div class="podcast-item flex">
+<button class="fa button fa-play-circle"></button>
+<div class="player-audio clearfix">
+<div class="playbar"><div class="progress"></div></div>
+<audio preload="none">
+<source src="/Admin/conteudo/audios/31566/28---carlos-lindenbe.mp3" type="audio/mpeg">
+</audio>
+</div>
+<div class="timer-play">
+<span class="rolling">00:00</span>
+<span class="full-time">00:00</span>
+</div>
+<div style="margin: 0 0 0 5px">
+<a href="/Admin/conteudo/audios/31566/28---carlos-lindenbe.mp3" target="_blank" style="padding:0; margin:0;">
+<img src="/images/download.png" />
+</a>
+</div>
+</div>
+</div>
+</article>
+</li>
+</ul>
+</div>
+<div class="flag-eleicoes-wrapper">
+<div class="center df-wrapper">
+<div class="candidatos-wrapper-home">
+<p class="tag-label">Você conhece os candidatos das</p>
+<p class="title-tag">Eleições 2018?</p>
+<p class="desc-candidatos-eleicoes">São milhares de postulantes às vagas de Presidente, Governador, Senador, Deputado Federal e Deputado Estadual. Saiba quais as opções para cada cargo em disputa e as situações e históricos dos candidatos.</p>
+<p class="label-candidatos-eleicoes">Conheça os Candidatos</p>
+<a href="/eleicoes-2018/candidatos?cargo=DEPUTADO%20FEDERAL" class="link-candidatos-eleicoes">Deputado Federal <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+<a href="/eleicoes-2018/candidatos?cargo=DEPUTADO%20ESTADUAL" class="link-candidatos-eleicoes">Deputado Estadual <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+<a href="/eleicoes-2018/candidatos?cargo=SENADOR" class="link-candidatos-eleicoes">Senador <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+<a href="/eleicoes-2018/candidatos?cargo=GOVERNADOR" class="link-candidatos-eleicoes">Governador <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+<a href="/eleicoes-2018/candidatos?cargo=PRESIDENTE" class="link-candidatos-eleicoes">Presidente <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+</div>
+<div class="fake-news-wrapper">
+<p class="title-area-fake">FAKENEWS</p>
+<div class="list-fake-news">
+ <a href="/eleicoes-2018/noticia/divdivdivtatuagens-de-che-guevara-e-lenin-em" class="item">
+<p class="category-fake">Alterado digitalmente </p>
+<p class="title"><div><div><div>Tatuagens de Che Guevara e Lenin em Manuela D'Ávila, vice de Haddad, são falsas</div></div></div></p>
+</a>
+<a href="/eleicoes-2018/noticia/grupo-de-facebook-mulheres-unidas-contra-bols" class="item">
+<p class="category-fake">Acusação de farsa </p>
+<p class="title">Grupo de Facebook "Mulheres unidas contra Bolsonaro" é recente e foi criado com esse nome</p>
+</a>
+<a href="/eleicoes-2018/noticia/meme-mistura-frases-ditas-por-ciro-gomes-com" class="item">
+<p class="category-fake">Declarações polêmicas </p>
+<p class="title">Meme mistura frases ditas por Ciro Gomes com outras sem registro ou fora de contexto</p>
+</a>
+<a href="/eleicoes-2018/noticia/carro-nao-foi-danificado-por-militantes-por-t" class="item">
+<p class="category-fake">Vídeo viralizou </p>
+<p class="title">Carro não foi danificado por militantes por ter adesivo de Bolsonaro</p>
+</a>
+</div>
+<a href="/eleicoes-2018/fake-news" class="more-link-eleicoes white">Mais Fakenews das <strong>eleições 2018</strong> <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="voce-nas-eleicoes-wrapper center">
+<div class="box-voce-eleicoes">
+<p class="title-tag">Você nas Eleições 2018</p>
+<p>A cada ano eleitoral uma novidade surge na vida dos eleitores. Já são quase 20 anos de Urna Eletrônica e ela ainda está em evolução. E a biometria? Será que os documentos para votar ainda são os mesmos? Saiba qual o seu papel nas Eleições 2018 e como exercer sua cidadania sem burocracias no dia da votação. Tudo o que você precisa saber para se preparar com antecedência e estar por dentro dos direitos e deveres dos cidadãos está aqui.</p>
+<div class="list-links">
+<a href="/eleicoes-2018/o-que-preciso-para-votar">
+<i class="fa fa-list-ul"></i>
+<div><p>O que preciso para votar?</p></div>
+</a>
+<a href="/Eleicoes2018/QuemPodeVotar">
+<i class="fas fa-user-check"></i>
+<div><p>Quem pode votar?</p></div>
+</a>
+<a href="http://www.tre-mg.jus.br/eleitor/situacao-eleitoral/situacao-eleitoral" target="_blank">
+<i class="fas fa-clipboard-check"></i>
+<div><p>Consulte sua situação eleitoral</p></div>
+</a>
+<a href="http://www.tre-mg.jus.br/eleitor/titulo-e-local-de-votacao/titulo-e-local-de-votacao" target="_blank">
+<i class="fas fa-map-marker-alt"></i>
+<div><p>Título e Local de Votação</p></div>
+</a>
+</div>
+</div>
+</div>
+<section class="widgets-social">
+<div class="center">
+<header>
+<h2>#ItatiaiaNasRedes</h2>
+<div class="links">
+<span>Siga-nos</span>
+<a href="https://www.facebook.com/radioitatiaia/?fref=ts" class="icons" target="_blank" title="Curta nossa página no Facebook">
+<i class="fa fa-facebook"></i>
+</a>
+<a href="https://twitter.com/radioitatiaia?lang=pt" class="icons" target="_blank" title="Siga-nos no Twitter">
+<i class="fa fa-twitter"></i>
+</a>
+</div>
+</header>
+<div class="box clearfix">
+<div class="content-articles-social">
+<div class="wrapper" id="twitter-post">
+<article class="block ins">
+<a href="https://www.instagram.com/p/Bn35jxXDMMG/" target="_blank" style="background-image: url(https://scontent.cdninstagram.com/vp/040dc1486f7f9b9a19e8a9731c6ceb7d/5C2B04E0/t51.2885-15/e35/s320x320/41408045_299702237303102_8935372031871955098_n.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;">
+</a>
+<a href="https://www.instagram.com/p/Bn2Bu90jPAX/" target="_blank" style="background-image: url(https://scontent.cdninstagram.com/vp/1f51c6b81e895d36c47229cdf4d6a66f/5BA25590/t51.2885-15/e35/s320x320/40696860_1074599829377564_3762635809389494357_n.jpg);background-repeat: no-repeat;background-position: center;background-size: cover;">
+</a>
+</article>
+<article class="block tw">
+<h2>RadioItatiaia</h2>
+<p>&#201; HOJE!
+O Boteco do Vinile vem a&#237;!
+O Itatiaia R&#225;dio Bar, que sempre foi refer&#234;ncia para os amantes do Esporte, ap… https://t.co/SUKYWOr5D6</p>
+<a href="" target="_blank">Acessar Link</a>
+</article>
+</div>
+<div class="wrapper" id="fb-post">
+<article class="block fb">
+<h2>RadioItatiaia</h2>
+<p>Produtor do FICC 2018 (Festival Internacional de Cerveja e Cultura) fala, no Chamada Geral, sobre o evento que ser&#225; realizado no Mineir&#227;o nos dias 29 e 30 deste m&#234;s:</p>
+<a href="https://www.facebook.com/radioitatiaia/videos/2177218369232507/" target="_blank">Acessar Link</a>
+</article>
+<article class="block fb">
+<h2>RadioItatiaia</h2>
+<p>&#201; HOJE!
+O Boteco do Vinile vem a&#237;!
+O Itatiaia R&#225;dio Bar, que sempre foi refer&#234;ncia para os amantes do Esporte, apresentar&#225; uma noite de muita
+com&#233;dia e chopp gelado.
+Vamos...</p>
+<a href="https://www.facebook.com/252618518084219/posts/2179353152077403/" target="_blank">Acessar Link</a>
+</article>
+</div>
+</div>
+<article class="featured-box" id="fb-big">
+<a href="https://www.facebook.com/radioitatiaia/videos/2177218369232507/" target="_blank">
+<img src="https://scontent.xx.fbcdn.net/v/t15.0-10/40379519_2177218519232492_8490419203319267328_n.jpg?_nc_cat=0&amp;oh=abd3443efaa45fee5be32cc7f9663b79&amp;oe=5C1E2A72" alt="Produtor do FICC 2018 (Festival Internacional de Cerveja e Cultura) fala, no Chamada Geral, sobre o evento que ser&#225; realizado no Mineir&#227;o nos dias 29 e 30 deste m&#234;s:" width="313" height="314" title="Produtor do FICC 2018 (Festival Internacional de Cerveja e Cultura) fala, no Chamada Geral, sobre o evento que ser&#225; realizado no Mineir&#227;o nos dias 29 e 30 deste m&#234;s:">
+</a>
+</article>
+</div>
+</div>
+</section>
+<div class="footer-fixed">
+<nav class="socials-top footer-social">
+<a href="https://www.facebook.com/radioitatiaia/?fref=ts" class="icons" target="_blank" title="Curta nossa página no Facebook">
+<i class="fa fa-facebook"></i>
+</a>
+<a href="https://twitter.com/radioitatiaia?lang=pt" class="icons" target="_blank" title="Siga-nos no Twitter">
+<i class="fa fa-twitter"></i>
+</a>
+<div class="choice-station">
+<header class="title">
+<i class="fa fa-play-circle"></i>
+<b>OUÇA AO VIVO</b>
+</header>
+<nav class="stations">
+<a href="javascript:popStream('belo-horizonte');">Belo Horizonte</a>
+<a href="javascript:popStream('juiz-de-fora');">Juiz de Fora</a>
+<a href="javascript:popStream('montes-claros');">Montes Claros</a>
+<a href="javascript:popStream('varginha');">Varginha</a>
+</nav>
+</div>
+</nav>
+</div>
+<footer class="main-footer" role="contentinfo">
+<div class="wrapper">
+<div class="center clearfix">
+<div class="info">
+<a href="/">
+<img src="/images/logo-bottom.png" alt="Radio Itatiaia">
+</a>
+<address>Rua Itatiaia, 117, Bonfim - Belo Horizonte, MG <br />Tel.: (31) 2105-3588 - Fax: (31) 2105-3613 </address>
+</div>
+<nav class="links">
+<a href="https://www.youtube.com/channel/UC9T0ZAarQHL4cJGFzORVsFg" class="icons fab fa-youtube" target="_blank" title="Siga nossa página no Youtube">
+</a>
+<a href="https://www.instagram.com/itatiaiaoficial/" class="icons fab fa-instagram" target="_blank" title="Siga nossa página no Instagram">
+</a>
+<a href="https://www.facebook.com/radioitatiaia/?fref=ts" class="icons fa fa-facebook" target="_blank" title="Curta nossa página no Facebook"></a>
+<a href="https://twitter.com/radioitatiaia?lang=pt" class="icons fa fa-twitter" target="_blank" title="Siga-nos no Twitter">
+</a>
+<div class="button-expandmap">
+Expandir mapa do site <i class="fa fa-angle-down"></i>
+</div>
+</nav>
+</div>
+<nav class="site-map">
+<div class="center">
+<div class="row-grid clearfix">
+<nav class="grid-2">
+<a href="/editoria/esporte">Últimas notícias</a>
+<a href="/noticias/jornalismo">Notícias</a>
+<a href="/editoria/politica">Política</a>
+<a href="/editoria/cidade">Cidades</a>
+<a href="/editoria/entretenimento">Entretenimento</a>
+</nav>
+<nav class="grid-2">
+<a href="/envie-sua-denuncia">Ouvinte no Ar</a>
+<a href="/colunistas">Colunistas</a>
+<a href="#">Promoções</a>
+<a href="/central-de-audio/home">Podcast</a>
+</nav>
+<nav class="grid-4">
+<span>Reportagens Especiais</span>
+<div class="clearfix">
+<div class="boxs-half">
+<a href="/reportagem-especial/T2/oracao-do-dia" class="mini">Ora&#231;&#227;o do Dia</a>
+<a href="/reportagem-especial/T4/ferrovias" class="mini">Fora dos trilhos</a>
+<a href="/reportagem-especial/T2/batalha-contra-as-drogas" class="mini">Batalha contra as drogas</a>
+<a href="/reportagem-especial/T2/monitoramento-itatiaia" class="mini">Monitoramento Itatiaia</a>
+</div>
+<div class="boxs-half">
+<a href="/reportagem-especial/T1/expedicao-rio-das-velhas1" class="mini">Expedi&#231;&#227;o Rio das Velhas</a>
+</div>
+</div>
+</nav>
+<nav class="grid-4">
+<span>A Rádio Itatiaia</span>
+<div class="clearfix">
+<div class="boxs-half">
+<a href="/programacao">Programação</a>
+<a href="/sobre/radio-itatiaia">Quem Somos</a>
+<a href="/sobre/midia-kit">Mídia Kit</a>
+<a href="/sobre/copa-itatiaia">Copa Itatiaia</a>
+</div>
+<div class="boxs-half">
+<a href="/contato">Fale Conosco</a>
+<a href="/Bastidores/Fotos">Bastidores da Redação</a>
+<a href="/sobre/trofeu-guara">Troféu Guará</a>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</nav>
+</div>
+<div class="bottom">
+<div class="center clearfix">
+<nav>
+<a href="/contato">Fale Conosco</a>
+<a href="/sobre/midia-kit">MídiaKit</a>
+</nav>
+<a href="http://www.am4.com.br" target="_blank">
+<img src="/images/am4.png" alt="Desenvolvido por AM4">
+</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
+<script data-cfasync='false' src='/bundles/scripts?v=SvryhpJeGrUsPK7pyLRbpmFY9Nojkk2gAYk-gjms1NU1'></script>
+<script src="/scripts/jquery.fancybox.js"></script>
+<script>
+        </script>
+<script>
+            $('.featured-noticies article.hero').slick({
+                arrows: true,
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                infinity: true,
+                nextArrow: '<div class="fa fa-angle-right"></div>',
+                prevArrow: '<div class="fa fa-angle-left"></div>'
+            });
+        </script>
+<script>
+    //var overiFrame = -1;
+    //$('.banner-iframe iframe').hover(function () {
+    //    overiFrame = $(this).closest('.banner').attr('bannerid');
+    //}, function () {
+    //    overiFrame = -1;
+    //});
+    //$(window).blur(function () {
+    //    if (overiFrame !== -1)
+    //        $('.banner-iframe').click();
+    //    setTimeout(function () { window.focus(); }, 0);
+    //});
+
+    $(document).ready(function () {
+        streaming('/LiveStreaming/LiveAtual')
+        busca('');
+        previsaoTempo('/Tempo/Previsao');
+        //previsaoSidebar('/Tempo/Sidebar');
+        layout();
+		
+		var lbc = $('.box-columnists .dots li').length;
+        var activebc = 1;
+        var ibc = setInterval(function(){
+          let activebc = $('.box-columnists .dots li').index($('.box-columnists .dots .on')) + 1;
+          if (activebc >= lbc) {
+            activebc = 1;
+          } else {
+            activebc++;
+          }
+          $('.box-columnists .dots li:nth-child(' + activebc + ')').click();
+        }, 8000);
+    });
+</script>

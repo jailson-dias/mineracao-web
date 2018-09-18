@@ -1,0 +1,627 @@
+<!doctype html>
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"  xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1718601-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<meta name="verify-v1" content="l71Nt/nOAUelv8hlDPKa4yGmlQX0e9oRNFUW+TRqCsc=" />
+    <meta charset="charset=iso-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9" />
+   <!--<title>Ciência Viva - Agência Nacional para a Cultura Científica</title>-->
+   
+<TITLE>Café de Ciência na Assembleia da República </TITLE>
+
+    <link rel="stylesheet" href="/cssnovo/foundation.css" />
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
+	 <script src="/jsnovo/detectmobile.js"></script>
+	<script type="text/javascript">
+		mobile  = Detect();
+	
+		if (mobile!="desktop")
+		{
+			//<![CDATA[
+			if(document.createStyleSheet) {
+			  document.createStyleSheet('/cssnovo/foundation_mobile.css');
+			}
+			else {
+			  var styles = "@import url('/cssnovo/foundation_mobile.css ');";
+			  var newSS=document.createElement('link');
+			  newSS.rel='stylesheet';
+			  newSS.href='data:text/css,'+escape(styles);
+			  document.getElementsByTagName("head")[0].appendChild(newSS);
+			}
+			//]]>
+		}
+	
+	/*! A fix for the iOS orientationchange zoom bug. Script by @scottjehl, rebound by @wilto.MIT License.*/(function(m){if(!(/iPhone|iPad|iPod/.test(navigator.platform)&&navigator.userAgent.indexOf("AppleWebKit")>-1)){return}var l=m.document;if(!l.querySelector){return}var n=l.querySelector("meta[name=viewport]"),a=n&&n.getAttribute("content"),k=a+",maximum-scale=1",d=a+",maximum-scale=10",g=true,j,i,h,c;if(!n){return}function f(){n.setAttribute("content",d);g=true}function b(){n.setAttribute("content",k);g=false}function e(o){c=o.accelerationIncludingGravity;j=Math.abs(c.x);i=Math.abs(c.y);h=Math.abs(c.z);if(!m.orientation&&(j>7||((h>6&&i<8||h<8&&i>6)&&j>5))){if(g){b()}}else{if(!g){f()}}}m.addEventListener("orientationchange",f,false);m.addEventListener("devicemotion",e,false)})(this);
+		/*	if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+			var viewportmeta = document.querySelector('meta[name="viewport"]');
+			if (viewportmeta) {
+				viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
+				document.body.addEventListener('gesturestart', function () {
+					viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+				}, false);
+			}
+		}*/
+		
+		window.addEventListener('orientationchange', function() {
+    if (window.orientation == 0 || window.orientation == 180) {
+        // Reset scroll position if in portrait mode.
+        window.scrollTo(0, 0);
+    }
+}, false);
+
+	</script>
+    <script src="/jsnovo/vendor/modernizr.js"></script>
+	
+	  <script src="/jsnovo/vendor/jquery.js"></script>
+	  <script src="/jsnovo/foundation/foundation.js"></script>
+	  <script src="/jsnovo/foundation/foundation.topbar.js"></script>
+	  <script src="/jsnovo/foundation/foundation.abide.js"></script>
+	  <!-- Other JS plugins can be included here -->
+
+	  <script>
+		$(document).foundation();
+		
+		function count_ajax2(id, url)
+		{
+			$.ajax({
+						type: "GET",
+							url: "http://www.cienciaviva.pt/urltracker_ajax.asp",
+							async: true,
+							data: "id_urltrack="+id,
+							success: function(data)
+		  			{
+		  				if (url!="")
+		  				{
+		  					window.open(url, "_self");
+		  				}
+					}
+				});
+		}
+
+	  </script>
+	  
+  </head>
+<body>
+  
+    <div class="row hide-on-print  " >
+      <div class="large-12">
+		 <div class="three-up">
+		
+			 <a href="javascript:void(0)" onclick="count_ajax2('56', 'http://www.pavconhecimento.pt')" class="item"><div class="toptxt1 topmargin" ><span class="vertical-align-txt">PAVILHÃO DO CONHECIMENTO</span></div></a>
+			 <a href="javascript:void(0)" onclick="count_ajax2('55', 'http://www.cienciaviva.pt')" class="item"><div class="toptxt2 topmargin"><span class="vertical-align-txt" >CIÊNCIA VIVA</span></div></a>
+			 <a href="javascript:void(0)" onclick="count_ajax2('57', 'http://www.cienciaviva.pt/centroscv/rede')" class="item"><div class="toptxt1 topmargin"><span class="vertical-align-txt">REDE CENTROS CIÊNCIA VIVA</span></div></a>
+			<br><br>
+			
+			<!-- 
+			 <a href="#" class="item"><div class="toptxt1">PAVILHÃO DO CONHECIMENTO</div></a>
+			 <a href="#" class="item"><div class="toptxt2 padding-top-menu">CIÊNCIA VIVA</div></a>
+			 <a href="#" class="item"><div class="toptxt1">REDE CENTROS CIÊNCIA VIVA</div></a>
+			-->
+			<!-- <a href="#" class="item"><img class="toplogo" src="/img/topbuttonpav.png" border=0></a><a href="#" class="item"><img class="toplogo" src="/img/topbuttoncv.png" border=0></a><a href="#" class="item"><img class="toplogo" src="/img/topbuttonrede.png" border=0></a>-->
+		 </div>
+      </div>
+    </div>
+	<div style="clear:both;"></div>
+    <div class="idiomas_active" style="display:none;">		
+						<div class="idiomas"><a href="/divulgacao/cafe/dados.asp/index.asp?accao=changelang&lang=pt">PT</a> | <a href="/divulgacao/cafe/dados.asp/index.asp?accao=changelang&lang=en">EN</a></div>		
+	</div>
+	<div style="clear:both;"></div>		
+
+    <div class="row " style="margin-top:26px;margin-bottom:20px;">
+      <div class="large-12 columns">
+	        <div class="row" >
+			
+			<nav class="top-bar menu-smart hide-on-print " data-topbar>
+			  <ul class="title-area">
+				<li class="name">
+					<a href="#"></a>
+				</li>
+				 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			  </ul>
+			  <section class="top-bar-section">
+				<!-- Right Nav Section -->
+				<ul class="left menuprincipal">
+				
+				
+						
+							    <li><a class="padding-active"   href="/">Home</a></a></li>
+									<li class="has-dropdown">
+										<a class="padding-top"  style="padding-bottom:0px;border-bottom: 3px solid #1d3e75;"   href="#">Iniciativas</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="/semanact/">Semana C&T</a></li>
+											<li><a class="padding-drops" href="/estagios/">Ciência Viva no Laboratório</a></li>
+											<li><a class="padding-drops" href="/veraocv/">Ciência Viva no Verão</a></li>
+											<li><a class="padding-drops" href="/divulgacao/">Divulgação</a></li>
+											<!--<li><a class="padding-drops" href="/redeclubes/">Rede de Clubes Ciência Viva</a></li>-->
+											<li><a class="padding-drops" href="/conferenciadenatal/">Conferências de Natal</a></li>
+										</ul>
+									</li>	
+									<li class="has-dropdown">
+										<a class="padding-top"   href="#">Concursos</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="/EscolherCiencia/">Escolher Ciência - Projetos</a></li>
+											<li><a class="padding-drops" href="/paisciencia/">Pais com a Ciência - Projetos</a></li>
+											<li><a class="padding-drops" href="/apoio/mediaciencia/">Ciência nos Media</a></li>
+											<li><a class="padding-drops" href="/integra/">Integra</a></li>
+										</ul>
+									</li>
+									 <li>
+										<a class="padding-top"   href="/projectos/">Projetos</a>
+										<!--<ul class="dropdown">
+											<li><a class="padding-drops" href="/projectos/">Em Curso</a></li>
+											<li><a class="padding-drops" href="/projectos/concluidos/index.asp">Concluídos</a></li>
+											<li><a class="padding-drops" href="/arquivo/">Arquivo de Recursos</a></li>
+											
+											
+										</ul>-->
+									</li>							
+									<li><a class="padding-top" href="http://escola.cienciaviva.pt/" target="_blank">Escola Ciência Viva</a></li>	
+									<!--<li><a class="padding-top" href="/projectoscv/">Áreas Temáticas</a></li>								-->
+									<!--<li><a class="padding-top"   href="/agenda/">Agenda</a></li>
+									<li><a class="padding-top"   href="/cv/contactos.asp">Contactos</a></li>-->
+									
+									<li><a class="padding-top" href="http://www.cienciaviva.pt/editais" target="_blank">Bolsas</a></li>	
+									<!--<li><a class="padding-top" href="/projectoscv/">Áreas Temáticas</a></li>								-->
+									<!--<li><a class="padding-top"   href="/agenda/">Agenda</a></li>
+									<li><a class="padding-top"   href="/cv/contactos.asp">Contactos</a></li>-->
+									
+									
+									
+									
+									<li class="has-dropdown">
+										<a class="padding-top"   href="/comunicacaoeimagem/">Imprensa</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="/comunicacaoeimagem/">Comunicação e Imagem</a></li>
+											<li><a class="padding-drops" href="/cienciaviva/comunicados/">Comunicados de Imprensa</a></li>
+											<li><a class="padding-drops" href="/imprensa/index.asp?accao=showcatalogo&id_media_catalogo=31">A Ciência Viva nos Media</a></li>											
+										</ul>
+									</li>
+									
+									<li class="has-dropdown">
+										<a class="padding-top"   href="#">Sobre</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="http://www.cienciaviva.pt/historia/">História da Ciência Viva (1996-2016)</a></li>	
+											<li><a class="padding-drops" href="http://arquivo.cienciaviva.pt" target="_blank">Arquivo Ciência Viva</a></li>
+											<li><a class="padding-drops" href="/cienciaviva/agencia.asp">A Ciência Viva</a></li>
+											<li><a class="padding-drops" href="/cienciaviva/sustentabilidade.asp">Sustentabilidade e Responsabilidade Social</a></li>
+										</ul>
+									</li>
+									
+									<li><a class="padding-top" href="/divulgacao/cafe/dados.asp/index.asp?accao=changelang&lang=en">English Version</a></li>	
+									
+	
+				
+				</ul> 
+			  </section>
+			</nav>
+			
+			
+	        	<div class="large-2 medium-2 columns">
+	        	
+	        	
+	        	
+	        	<a class="left" href="/"><img src="/img/logotipocv2015.png" border=0 style="max-width:220px;min-width:220px;" class="logocv"></a>
+	        	
+	        	
+	        	
+	        	
+	        
+	        	
+					
+	    	   	</div>
+	        	<div class="large-2 medium-2 columns" style="float:right;">
+					<div class="right">
+						<div style="clear:both;"></div>
+									<div class="idiomas"><a href="/divulgacao/cafe/dados.asp?accao=changelang&lang=pt">PT</a> | <a href="/divulgacao/cafe/dados.asp?accao=changelang&lang=en">EN</a></div>
+						<div style="clear:both;"></div>
+						<div class="pesquisa">						
+						 <form method=get action="https://www.google.com/search" id="formsearch">
+							<input type=hidden name="as_sitesearch" value="cienciaviva.pt" ID="Hidden1">
+							<input type=hidden name="ct" value="cienciavivai" ID="Hidden2">     
+							<input type="hidden" name="config" value="htdig-cienciaviva" ID="Hidden3">
+							<div style="width:215px;">
+							<a style="top: 2px;position: relative;float: none;" href="http://www.facebook.com/pages/Lisbon-Portugal/Pavilhao-do-Conhecimento-Ciencia-Viva/229181021737#!/pages/Lisbon-Portugal/Pavilhao-do-Conhecimento-Ciencia-Viva/229181021737?v=wall&viewas=0" target="_blank"><img style="margin-right:10px;" src="/img/facebookicon.png"></a>
+							<a style="top: 2px;position: relative;float: none;" href="http://twitter.com/cienciaviva" target="_blank"><img src="/img/twittericon.png"></a>
+							<input type="text" placeholder="Pesquisar" class="pesquisainput" style="width:160px;margin:0px;float:right;" ID="q" NAME="q"></div>
+							<!--<span class="pesqlupa"><img src="/img/lupapesq.png"></span>-->
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+      </div>
+    </div>
+
+
+	<div class="row " >
+		<div class="large-12 columns">		
+			<nav class="top-bar menu-bottom hide-on-print " data-topbar>
+			  <ul class="title-area">
+				<li class="name">
+					<a href="#"></a>
+				</li>
+				 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			  </ul>
+			  <section class="top-bar-section">
+				<!-- Right Nav Section -->
+				<ul class="left menuprincipal">
+				
+				
+						
+							    <li><a class="padding-active"   href="/">Home</a></a></li>
+									<li class="has-dropdown">
+										<a class="padding-top"  style="padding-bottom:0px;border-bottom: 3px solid #1d3e75;"   href="#">Iniciativas</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="/semanact/">Semana C&T</a></li>
+											<li><a class="padding-drops" href="/estagios/">Ciência Viva no Laboratório</a></li>
+											<li><a class="padding-drops" href="/veraocv/">Ciência Viva no Verão</a></li>
+											<li><a class="padding-drops" href="/divulgacao/">Divulgação</a></li>
+											<!--<li><a class="padding-drops" href="/redeclubes/">Rede de Clubes Ciência Viva</a></li>-->
+											<li><a class="padding-drops" href="/conferenciadenatal/">Conferências de Natal</a></li>
+										</ul>
+									</li>	
+									<li class="has-dropdown">
+										<a class="padding-top"   href="#">Concursos</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="/EscolherCiencia/">Escolher Ciência - Projetos</a></li>
+											<li><a class="padding-drops" href="/paisciencia/">Pais com a Ciência - Projetos</a></li>
+											<li><a class="padding-drops" href="/apoio/mediaciencia/">Ciência nos Media</a></li>
+											<li><a class="padding-drops" href="/integra/">Integra</a></li>
+										</ul>
+									</li>
+									 <li>
+										<a class="padding-top"   href="/projectos/">Projetos</a>
+										<!--<ul class="dropdown">
+											<li><a class="padding-drops" href="/projectos/">Em Curso</a></li>
+											<li><a class="padding-drops" href="/projectos/concluidos/index.asp">Concluídos</a></li>
+											<li><a class="padding-drops" href="/arquivo/">Arquivo de Recursos</a></li>
+											
+											
+										</ul>-->
+									</li>							
+									<li><a class="padding-top" href="http://escola.cienciaviva.pt/" target="_blank">Escola Ciência Viva</a></li>	
+									<!--<li><a class="padding-top" href="/projectoscv/">Áreas Temáticas</a></li>								-->
+									<!--<li><a class="padding-top"   href="/agenda/">Agenda</a></li>
+									<li><a class="padding-top"   href="/cv/contactos.asp">Contactos</a></li>-->
+									
+									<li><a class="padding-top" href="http://www.cienciaviva.pt/editais" target="_blank">Bolsas</a></li>	
+									<!--<li><a class="padding-top" href="/projectoscv/">Áreas Temáticas</a></li>								-->
+									<!--<li><a class="padding-top"   href="/agenda/">Agenda</a></li>
+									<li><a class="padding-top"   href="/cv/contactos.asp">Contactos</a></li>-->
+									
+									
+									
+									
+									<li class="has-dropdown">
+										<a class="padding-top"   href="/comunicacaoeimagem/">Imprensa</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="/comunicacaoeimagem/">Comunicação e Imagem</a></li>
+											<li><a class="padding-drops" href="/cienciaviva/comunicados/">Comunicados de Imprensa</a></li>
+											<li><a class="padding-drops" href="/imprensa/index.asp?accao=showcatalogo&id_media_catalogo=31">A Ciência Viva nos Media</a></li>											
+										</ul>
+									</li>
+									
+									<li class="has-dropdown">
+										<a class="padding-top"   href="#">Sobre</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="http://www.cienciaviva.pt/historia/">História da Ciência Viva (1996-2016)</a></li>	
+											<li><a class="padding-drops" href="http://arquivo.cienciaviva.pt" target="_blank">Arquivo Ciência Viva</a></li>
+											<li><a class="padding-drops" href="/cienciaviva/agencia.asp">A Ciência Viva</a></li>
+											<li><a class="padding-drops" href="/cienciaviva/sustentabilidade.asp">Sustentabilidade e Responsabilidade Social</a></li>
+										</ul>
+									</li>
+									
+									<li><a class="padding-top" href="/divulgacao/cafe/dados.asp/index.asp?accao=changelang&lang=en">English Version</a></li>	
+									
+	
+				
+				<!-- <li class="active"><a class="padding-active" href="/">Home</a></a></li>
+									<li class="has-dropdown">
+										<a class="padding-top" href="#">Iniciativas</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="/semanact/">Semana C&T</a></li>
+											<li><a class="padding-drops" href="/estagios/">Ciência Viva no Laboratório</a></li>
+											<li><a class="padding-drops" href="/veraocv/">Ciência Viva no Verão</a></li>
+											<li><a class="padding-drops" href="/divulgacao/">Divulgação</a></li>
+										</ul>
+									</li>	
+									<li class="has-dropdown">
+										<a class="padding-top" href="#">Concursos</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="/EscolherCiencia/">Escolher Ciência - Projetos</a></li>
+											<li><a class="padding-drops" href="/paisciencia/">Pais com a Ciência - Projetos</a></li>
+											<li><a class="padding-drops" href="/mediaciencia/">Ciência nos Media</a></li>
+										</ul>
+									</li>
+									 <li class="has-dropdown">
+										<a class="padding-top" href="#">Projetos</a>
+										<ul class="dropdown">
+											<li><a class="padding-drops" href="/projectos/">Em curso</a></li>
+											<li><a class="padding-drops" href="/projectos/concluidos/index.asp">Concluídos</a></li>
+											<li><a class="padding-drops" href="/arquivo/">Arquivo de Recursos</a></li>
+										
+											<!--<li><a class="padding-drops" href="/projinternacionais/projectos/">Projetos Internacionais</a></li>
+										</ul>
+									</li>							
+									<!--<li><a class="padding-top" href="/projectoscv/">Áreas Temáticas</a></li>								
+									<li><a class="padding-top" href="http://escola.cienciaviva.pt/" target="_blank">Escola CV</a></li>	
+									<li><a class="padding-top" href="/agenda/">Agenda</a></li>	
+									<li><a class="padding-top" href="/cv/contactos.asp">Contactos</a></li>
+									<li><a class="padding-top" href="/divulgacao/cafe/dados.asp/index.asp?accao=changelang&lang=en">English Version</a></li>	-->
+				</ul> 
+			  </section>
+			</nav>
+		</div>	
+	</div>
+	<script>
+	function showlayer(id_layer)
+		{
+			document.getElementById("layerbox_"+id_layer).style.opacity=0.95;
+			document.getElementById("vertical-align-txt_"+id_layer).style.display="none";
+			document.getElementById("caption-overlay_"+id_layer).style.display="none";		
+		}
+		function hidelayer(id_layer)
+		{
+			document.getElementById("layerbox_"+id_layer).style.opacity=0;
+			document.getElementById("vertical-align-txt_"+id_layer).style.display="block";
+			document.getElementById("caption-overlay_"+id_layer).style.display="block";		
+		}
+	</script>  
+  
+	
+	
+
+
+  	<div class="row marginbottom_20 margintop_20 destaques_row " >
+
+  	
+  	
+  	<h1>Café de Ciência na Assembleia da República</h1>
+  	
+  	
+								<!-- inicio do menu -->
+
+									
+									
+         <!-- Inicio de conteudo --><p><img src="/img/upload/cafe_de_ciencia_2018-04-11-banner_CV.png" alt="" width="801" height="201" /></p>
+<p class="subtitulo_pagina">O Destino dos dados | 11 de Abril | 18.00 | Assembleia da Rep&uacute;blica</p>
+<p>&nbsp;</p>
+<p><span class="subtitulo">V&iacute;deos da Sess&atilde;o</span></p>
+<p><iframe src="https://player.vimeo.com/video/264616050" frameborder="0" width="384" height="216"></iframe> <iframe src="https://player.vimeo.com/video/264616094" frameborder="0" width="384" height="216"></iframe> <br /> <br /> <iframe src="https://player.vimeo.com/video/264616129" frameborder="0" width="384" height="216"></iframe> <iframe src="https://player.vimeo.com/video/264616160" frameborder="0" width="384" height="216"></iframe> <br /> <br /> <iframe src="https://player.vimeo.com/video/264616201" frameborder="0" width="384" height="216"></iframe> <iframe src="https://player.vimeo.com/video/264616469" frameborder="0" width="384" height="216"></iframe></p>
+<p>&nbsp;</p>
+<p><strong>Privacidade <span style="font-size: medium;">.</span>&nbsp;&Eacute;tica <span style="font-size: large;">.</span> Seguran&ccedil;a <span style="font-size: large;">.</span> Controlo <span style="font-size: large;">.</span> Acesso aberto</strong></p>
+<div class="&rdquo;container&rdquo;">
+<p>A quantidade e a variedade de dados pessoais t&ecirc;m vindo a crescer de forma quase descontrolada, e nos mais variados dom&iacute;nios.&nbsp;</p>
+<p>S&atilde;o dados sobre o nosso sal&aacute;rio, as nossas contas e movimentos banc&aacute;rios, o que compramos e onde, os nossos investimentos e poupan&ccedil;as. S&atilde;o dados de sa&uacute;de, como o historial de doen&ccedil;as, consultas m&eacute;dicas, suscetibilidades e vulnerabilidades, e incluem dados espec&iacute;ficos do nosso genoma, assim como o dos nossos ascendentes, descendentes e familiares mais distantes. Mas tamb&eacute;m s&atilde;o sobre as nossas viagens e os nossos contactos, a nossa resid&ecirc;ncia e locais de trabalho, os nossos amigos, colegas, associa&ccedil;&otilde;es, clubes desportivos ou simpatias pol&iacute;ticas.&nbsp;</p>
+<p>Hoje, sem nos apercebermos, os smartphones conseguem transmitir dados sens&iacute;veis sobre os nossos c&oacute;digos pessoais em diferentes contextos, al&eacute;m dos nossos movimentos, e at&eacute; comportamentos suspeitos, com alto n&iacute;vel de fidelidade.</p>
+<p><strong>A quem pertencem esses dados?</strong><span class="subtitulo">&nbsp;&nbsp;</span><strong>Quem controla e protege o seu acesso?&nbsp;&nbsp;</strong><strong>Quais os fins da sua utiliza&ccedil;&atilde;o e quem lucra com a sua divulga&ccedil;&atilde;o?</strong></p>
+<p>S&atilde;o temas atual&iacute;ssimos e que merecem debate e discuss&atilde;o. Se em &aacute;reas como a seguran&ccedil;a e a sa&uacute;de p&uacute;blica muitos destes dados s&atilde;o extremamente &uacute;teis e importantes, o acesso aos mesmos tem de ser cuidadosamente protegido para impedir o seu abuso indiscriminado.&nbsp;</p>
+<p>Neste dom&iacute;nio, a ci&ecirc;ncia e a tecnologia t&ecirc;m avan&ccedil;ado muito rapidamente. Mas perante o novo paradigma da &ldquo;ci&ecirc;ncia aberta&rdquo; &ndash; e mesmo da governa&ccedil;&atilde;o aberta &ndash; &eacute; evidente que continuamos fr&aacute;geis no que respeita &agrave; necessidade de mecanismos robustos de prote&ccedil;&atilde;o de direitos individuais e de &eacute;tica profissional que t&ecirc;m ainda um longo caminho a percorrer. &nbsp; &nbsp;</p>
+<p><span>Nesta edi&ccedil;&atilde;o convidamos cientistas, deputados, especialistas de organiza&ccedil;&otilde;es n&atilde;o-governamentais e de institui&ccedil;&otilde;es p&uacute;blicas para debater os desafios da protec&ccedil;&atilde;o de dados.</span></p>
+<p>O Caf&eacute; de Ci&ecirc;ncia no Parlamento promove o debate entre investigadores, membros da Assembleia da Rep&uacute;blica, comunidade cient&iacute;fica e empres&aacute;rios, numa iniciativa conjunta da Ci&ecirc;ncia Viva e da <a href="http://www.parlamento.pt/sites/COM/XIIILeg/8CEC/Paginas/Default.aspx" target="_blank">Comiss&atilde;o Parlamentar de Educa&ccedil;&atilde;o e Ci&ecirc;ncia</a>.</p>
+<p><span>Esta iniciativa, que iniciou em 2005, contribui para promover o di&aacute;logo e criar uma rede de contactos entre os participantes, fortalecendo assim as liga&ccedil;&otilde;es entre a decis&atilde;o politica e o conhecimento cient&iacute;fico.</span></p>
+<p>&nbsp;</p>
+<h2><span style="font-size: medium;">Participantes <a href="http://www.cienciaviva.pt/divulgacao/cafe/participantes2018dados.asp" target="_blank">(+)</a></span></h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<p class="subtitulo"><br />Documentos e Websites&nbsp;</p>
+<p><a href="https://www.cnpd.pt/bin/legis/nacional/LPD.pdf" target="_blank">Lei da Protec&ccedil;&atilde;o de Dados</a></p>
+<p><a href="https://www.cnpd.pt/bin/rgpd/10_Medidas_para_preparar_RGPD_CNPD.pdf" target="_blank">Regulamento Geral de Prote&ccedil;&atilde;o de Dados&nbsp;(10 medidas)</a></p>
+<p><a href="https://www.cnpd.pt/bin/rgpd/rgpd.htm" target="_blank">Comiss&atilde;o Nacional de Protec&ccedil;&atilde;o de Dados</a></p>
+<p><a href="https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-privacy/index_pt.htm" target="_blank">Protec&ccedil;&atilde;o de Dados e Privacidade ao abrigo da regras da UE</a></p>
+<p><a href="/img/upload/276_12%20de%20abril%20de%202018_Braga_Sessao%20de%20Abertura%20das%20Jornadas%20FCCN.pptx" target="_blank">Que Hist&oacute;ria para o futuro digital?</a>&nbsp;- <strong>Maria Fernanda Rollo, Secret&aacute;ria de Estado da Ci&ecirc;ncia, Tecnologia e Ensino Superior</strong></p>
+<p>&nbsp;</p>
+<p><span class="subtitulo">Imprensa</span></p>
+<p><a href="https://www.publico.pt/2018/03/20/tecnologia/opiniao/quem-controla-os-nossos-dados-1807206" target="_blank">Quem controla os nossos dados</a> <em>P&uacute;blico</em></p>
+<p><a href="https://www.dn.pt/lusa/interior/novas-regras-de-protecao-de-dados-podem-criar-novo-mercado-em-ebulicao-9170189.html" target="_blank">Novas regras de prote&ccedil;&atilde;o de dados podem criar novo mercado em ebuli&ccedil;&atilde;o</a><em>&nbsp;Di&aacute;rio de Not&iacute;cias</em></p>
+<p><a href="https://www.jornaldenegocios.pt/negocios-iniciativas/detalhe/a_saude_em_tempos_de_big_data" target="_blank">A sa&uacute;de em tempos de big data</a>&nbsp;<em>Jornal de Neg&oacute;cios</em></p>
+<p><a href="https://www.jornaldenegocios.pt/negocios-iniciativas/portugal-digital-awards/detalhe/big-data-o-grande-desafio-e-extrair-valor-dos-dados">Big Data: O grande desafio &eacute; "extrair valor" dos dados</a>&nbsp;<em>Jornal de Neg&oacute;cios</em></p>
+<p><a href="https://www.tsf.pt/sociedade/ciencia-e-tecnologia/interior/facebook-sob-criticas-por-brecha-na-seguranca-que-expos-milhoes-de-utilizadores-9199663.html%20" target="_blank">Facebook debaixo de fogo. Dados de 50 milh&otilde;es de utilizadores ficaram expostos</a> TSF</p>
+<p><a href="https://observador.pt/opiniao/privacidade-de-dados-pessoais-uma-necessidade-nao-uma-obrigacao/" target="_blank">Privacidade de Dados Pessoais: uma necessidade? N&atilde;o, uma obriga&ccedil;&atilde;o!</a>&nbsp;<em>Observador</em></p>
+<p><a href="https://www.publico.pt/2018/02/15/tecnologia/noticia/facebook-precisa-de-novas-autorizacoes-para-usar-dados-das-pessoas-na-europa-1803219" target="_blank">Facebook precisa de novas autoriza&ccedil;&otilde;es para usar dados dos utilizadores na UE</a>&nbsp;<em>P&uacute;blico</em></p>
+<p><a href="https://www.publico.pt/2018/02/28/tecnologia/noticia/portugueses-pediram-ao-google-para-esconder-mais-de-17-mil-paginas-da-internet-1804799%20" target="_blank">Portugueses pediram ao Google para remover mais de 17 mil links</a>&nbsp;<em>P&uacute;blico</em></p>
+<p><a href="https://www.publico.pt/2018/02/07/sociedade/opiniao/2018-ano-da-privacidade-1802079%20%20Portugueses%20pediram%20ao%20Google%20para%20remover%20mais%20de%2017%20mil%20links" target="_blank">2018: ano da privacidade?</a>&nbsp;<em>P&uacute;blico</em></p>
+<p><a href="https://www.theguardian.com/commentisfree/2018/mar/28/all-the-data-facebook-google-has-on-you-privacy" target="_blank">Are you Ready? This is all the data Facebook and Google have on you</a>&nbsp;<em>The Guardian</em></p>
+<p>&nbsp;</p>
+<p><span>&nbsp;</span>&nbsp;</p>
+<p><span class="subtitulo">Edi&ccedil;&otilde;es Anteriores</span><br /><a href="http://www.cienciaviva.pt/divulgacao/cafe/cidades.asp" target="_blank">Maio de 2017</a> |&nbsp;<a href="http://www.cienciaviva.pt/divulgacao/cafe/alimentacao.asp" target="_blank">Dez 2016</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/saude.asp" target="_blank">Abril 2016</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/biotecnologia.asp" target="_blank">Abril 2015</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/ar.asp" target="_blank">Out 2014</a><span>|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/cerebro.asp">Mar&ccedil;o 2014</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/2013agua.asp">Nov 2013</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/2013espaco.asp">Abril de 2013</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/2012higgs.asp">Out 2012</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/2012geo.asp">Abril 2012</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/2011.asp">2011</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/2010.asp">2010</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/2009.asp">2009</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/2008.asp">2008</a><span>&nbsp;|&nbsp;</span><a href="http://www.cienciaviva.pt/divulgacao/cafe/2007.asp">2007</a><span>&nbsp;| 2005&nbsp;</span></p>
+<p><a href="http://www.cienciaviva.pt/divulgacao/cafe/home.asp"><br />Voltar</a>&nbsp;</p>
+<p><img src="/img/upload/cafe_de_ciencia_2018-04-11-banner_CV_rodape.png" alt="" width="801" height="103" /></p>		
+	</div> <!-- end banner div -->
+</div> <!-- end conteudo div -->
+
+
+
+<footer>
+			<div class="row " >
+
+				<div class="small-12 medium-3 large-3 columns hide-on-print">
+					<h4>PROJECTOS</h4>
+					 <p><a href="http://www.cienciaviva.pt/rioacima/">Por este rio acima</a></p> <p><a href="">SISCODE - Science through CODEsign (2018-2021)</a></p> <p><a href="/projectos/OSOS">OSOS - Open Schools for Open Societies (2017-2020)</a></p> <p><a href="/projectos/STEM">STEM School Label (2017-2020)</a></p> <p><a href="">FIT4RRI - Fostering Improved Training Tools for Responsible Research & Innovation (2017-2020)</a></p> <p><a href="expand.asp">Expand - Residências Arte, Ciência e Tecnologia (2018/2019)</a></p> <p><a href="/projectos/erc">ERC=ScienceSquared (2015-2019)</a></p> <p><a href="/projectos/educo2cean">EduCO2cean (2016-2018)</a></p> <p><a href="http://noitedosinvestigadores.pt">Foresight - Noite Europeia dos Investigadores (2016-2017)</a></p> <p><a href="/esero/home/">ESERO Portugal (2016-2017)</a></p> <p><a href="/projectos/seachange">Sea Change (2015-2018)</a></p> <p><a href="/projectos/sparks.asp">Sparks (2015-2018)</a></p> <p><a href="/projectos/aora">Aliança para a Investigação do Atlântico  CSA (2015-2020)</a></p> <p><a href="http://www.space-awareness.org/pt/">Space Awareness (2015-2018)</a></p> <p><a href="/projectos/syn">Synenergene (2013-2017)</a></p> <p><a href="/oceano">Conhecer o Oceano</a></p> <p><a href="http://www.cienciaviva.pt/projectos/worldbiotechtour/">World Biotech Tour (2015-2017)</a></p>				
+					
+				</div>
+
+				<div class="small-12 medium-3 large-3 columns hide-on-print">
+					<!--
+					<h4 style="mobtopmargin">SITES</h4>
+					<p><a href="http://imprensaregional.cienciaviva.pt" targe="_blank">Imprensa Regional</a></p>
+					<p><a href="http://www.cvtv.pt">Vídeos Ciência Viva</a></p>
+					<p><a href="http://darwin2009.cienciaviva.pt/home/" target="_blank">Darwin</a></p>
+					<p><a href="http://pedronunes.cienciaviva.pt/home/" target="_blank">Pedro Nunes</a></p>
+					<p><a href="/latlong/anterior/gps.asp" target="_blank">GPS Latitude Longitude</a></p>
+					<p><a href="http://www.alphagalileo.org" target="_blank">AlphaGalileo</a></p>
+					<p><a href="/oficinaweb/projectosweb/">Sites de projectos CV VI</a></p>-->
+							
+				
+					<h4 class="mobtopmargin">INICIATIVAS</h4>
+					<div style="clear:both;"></div>
+					<p><a href="/veraocv/">Ciência Viva no Verão</a></p>
+					<p><a href="/estagios/">Ocupação Científica dos Jovens</a></p>
+					<p><a href="/semanact/">Semana C&T </a></p>
+					<p><a href="/divulgacao/cafe/home.asp">Café de Ciência</a></p>
+					<p><a href="http://escola.cienciaviva.pt" target="_blank">Escola Ciência Viva</a></p>
+					<p><a href="/forum/">Fórum Ciência Viva</a></p>
+					
+					
+					<h4  style="margin-top:15px;">MEDIDAS DE APOIO</h4>
+					<p><a href="/EscolherCiencia/">Escolher Ciência</a></p>
+					<p><a href="/paisciencia/">Pais com a Ciência</a></p>
+					<p><a href="/apoio/mediaciencia/">Ciência nos Média</a></p>
+					<p><a href="/integra/">Integra</a></p>
+					
+					
+					<h4 style="margin-top:30px;">SITES</h4>
+					<p><a href="http://www.circuitoscienciaviva.pt" targe="_blank">Circuitos Ciência Viva</a></p>
+					<p><a href="http://imprensaregional.cienciaviva.pt" targe="_blank">Imprensa Regional</a></p>
+					<p><a href="http://videos.pavconhecimento.pt/home/">Vídeos Ciência Viva</a></p>
+					<p><a href="http://darwin2009.cienciaviva.pt/home/" target="_blank">Darwin</a></p>
+					<p><a href="http://pedronunes.cienciaviva.pt/home/" target="_blank">Pedro Nunes</a></p>
+					<p><a href="/latlong/anterior/gps.asp" target="_blank">GPS Latitude Longitude</a></p>					
+					<p><a href="/oficinaweb/projectosweb/">Sites de projectos CV VI</a></p>
+					<p><a href="/peluches/home/">Pelucia Diversus</a></p>
+					<p><a href="/oceano/">Conhecer o Oceano</a></p>				
+					
+					
+					
+				</div>
+
+				<div class="small-12 medium-3 large-3 columns hide-on-print">
+					<h4 class="mobtopmargin">SOBRE</h4>
+					<div style="clear:both;"></div>
+					<p><a href="/cienciaviva/agencia.asp">Agência Ciência Viva</a></p>
+					<p><a href="/cienciaviva/missao.asp">Missão</a></p>
+					<p><a href="/cienciaviva/sustentabilidade.asp">Sustentabilidade e Responsabilidade Social</a></p>
+					<p><a href="/cienciaviva/valores.asp">Valores</a></p>
+					<p><a href="/cienciaviva/visao.asp">Visão</a></p>	
+					<p><a href="/cienciaviva/assoc.asp">Associados</a></p>
+					<p><a href="/cv/equipa.asp">Equipa</a></p>
+					<p><a href="/cv/logotipo.asp">Logotipo - Download</a></p>
+					<p><a href="/projinternacionais/">Parceiros Internacionais</a></p>
+					<p><a href="/comunicacaoeimagem/">Imprensa</a></p>
+					<p><a href="/centroscv/rede/regulamento.asp">Regulamento - Rede de Centros Ciência Viva</a></p>
+					<p><a href="/cv/privacidade.asp">Politica de Privacidade</a></p>
+					
+					<h4 style="margin-top:30px;">CONTACTOS</h4>
+					<p><a href="/rede/enviaremail.asp?id_endereco=10">Correio electrónico</a></p>
+					<p><a href="/cv/privacidade.asp">Politica de Privacidade</a></p>
+					<p>Tel: (+351) 21 898 50 20</p>
+					<p>Fax: (+351) 21 898 50 55</p>
+					<p>Pavilhão do Conhecimento - Centro Ciência Viva<br>Largo José Mariano Gago n.º1<br>Parque das Nações<br> 1990-073 Lisboa, Portugal</p>
+				
+				</div>
+
+				<div class="small-12 medium-3 large-3 columns hide-on-print">
+					<div class="newsposition">				
+						<h4 class="newsfloat">NEWSLETTER</h4>
+						<div style="clear:both;"></div>
+							<div class="newsletter">
+								<form id="formnewsletter" action="/mlist/mlist2.asp">
+									<input type="text" placeholder="Nome" required class="newsletterinput" ID="nome" NAME="nome">
+										<small class="error" style="display:none;">Deve inserir o seu nome.</small>
+									<input type="email" placeholder="Email" required class="newsletterinput newsletterinputbg" ID="email" NAME="email">
+										<small class="error" id="email_error" style="display:none;">Um email válido deve ser inserido.</small>
+									<div style="clear:both;"></div>
+									<input type="checkbox" required value="1" id="politicaprivacidade" name="politicaprivacidade"> 
+									<span style="font-size:12px;">Concordo com a <a href="/cv/privacidade.asp" target="_blank" style="color:#008cba;">politica de privacidade e de tratamento de dados pessoais</a></span><br>
+									<small class="error" id="privacidade_error" style="display:none;">Deve concordar com a politica de privacidade para completar o registo.</small>
+									<div style="clear:both;"></div>
+									<button class="newsletterbutton" ID="newsletter_email" NAME="Submit1">Inscreva-se</button>
+								</form>								
+							</div>
+						<div style="clear:both;"></div>
+						<h4 class="followfloat" style="margin-top:30px;">SIGA-NOS</h4>
+						<div style="clear:both;"></div>
+						<div class="icons" style="margin-bottom:10px;">
+							<a href="http://www.facebook.com/pages/Lisbon-Portugal/Pavilhao-do-Conhecimento-Ciencia-Viva/229181021737#!/pages/Lisbon-Portugal/Pavilhao-do-Conhecimento-Ciencia-Viva/229181021737?v=wall&viewas=0" target="_blank"><img style="margin-right:10px;" src="/img/facebookicon.png"></a><a href="http://twitter.com/cienciaviva" target="_blank"><img src="/img/twittericon.png"></a>
+						</div>
+					</div>
+					<script>
+					$('.newsletter')
+					  .on('invalid.fndtn.abide', function () {
+						var invalid_fields = $(this).find('[data-invalid]');
+						console.log(invalid_fields);
+					  })
+					  .on('valid.fndtn.abide', function () {
+						console.log('valid!');
+					  });
+
+					 	 function validateEmail(email) {
+							  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+							  return re.test(email);
+							}
+
+						function validate() {
+
+						  document.getElementById("email_error").style.display='none';
+						  document.getElementById("privacidade_error").style.display='none';
+
+						  var email = $("#email").val();
+						  //alert(document.getElementById("politicaprivacidade").checked);
+						  if($("#politicaprivacidade").is(':checked'))
+						   {
+							  if (validateEmail(email)) {
+							  	//alert("vou inserir");
+							 	document.getElementById("formnewsletter").submit();
+							  } else {
+							  	//alert("nao vou inserir");
+							   	document.getElementById("email_error").style.display='block';
+							  }
+							}
+							else
+							{
+							   document.getElementById("privacidade_error").style.display='block';
+							}
+						    return false;
+						}
+
+						$("#newsletter_email").bind("click", validate);
+					</script>
+					
+				</div>
+				
+			</div> <!-- END ROW -->
+			<div style="clear:both;"></div>	
+			<section class="full-width copyright-section">
+				<div class="row" >
+					<div class="small-12 columns copy">
+						<b>© Ciência Viva 1996-2018</b>
+					</div> <!-- END 12 COLUMNS -->
+				</div> <!-- END ROW -->
+			</section>
+		</footer>
+   
+ 
+   
+ <script src="/jsnovo/vendor/jquery.js"></script>
+    <script src="/jsnovo/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/veraocv/galeria/js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="/veraocv/galeria/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="/veraocv/galeria/js/jquery.elastislide.js"></script>
+		<!--<script type="text/javascript" src="/veraocv/galeria/js/gallery.js"></script>-->
+
+<!--
+<a href="/cv/acesso.asp"><img src="//img/acesso.gif" alt="S&iacute;mbolo de acessibilidade &agrave; web" border="0"></a> <a href="/cv/acesso.asp">[D]</a>-->
+
+
+</body>
+</html>

@@ -1,0 +1,804 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="PT">
+<head>
+  <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"fa45dcf839","applicationID":"3278270","transactionName":"dl8KQUReDl4AEE1dX1lZClAZXhRXFxQLV0Y=","queueTime":1,"applicationTime":15,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch preconnect" href="https://cdn.shopify.com" /><link rel="dns-prefetch preconnect" href="https://v.shopify.com" /><link rel="dns-prefetch preconnect" href="https://www.google-analytics.com" /><link rel="dns-prefetch preconnect" href="https://stats.g.doubleclick.net" /><link rel="dns-prefetch preconnect" href="https://cm.g.doubleclick.net" /><link rel="dns-prefetch preconnect" href="https://bat.bing.com" /><link rel="dns-prefetch preconnect" href="https://www.facebook.com" /><link rel="dns-prefetch preconnect" href="https://connect.facebook.net" /><link rel="dns-prefetch preconnect" href="https://js.hs-scripts.com" /><link rel="dns-prefetch preconnect" href="https://js.hs-analytics.net" /><link rel="dns-prefetch preconnect" href="https://upx.provenpixel.com" /><link rel="dns-prefetch preconnect" href="https://ck.provenpixel.com" />
+
+
+    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://cdn.shopify.com/shopify-marketing_assets/static/ShopifySans--regular.woff2" /><link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://cdn.shopify.com/shopify-marketing_assets/static/ShopifySans--bold.woff2" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.shopify.com/shopify-marketing_assets/static/shopify-favicon.png" />
+
+  <title>Vender na internet - Criar loja virtual - Teste grátis</title>
+
+  <meta name="description" content="A Shopify tem tudo que você precisa para começar a vender na internet. Crie uma loja virtual com a plataforma de e-commerce da Shopify.
+" />
+  <link rel="canonical" href="https://pt.shopify.com/online">
+
+  
+
+    <link rel="stylesheet" media="screen" href="https://cdn.shopify.com/assets2/application-1de3766d0d00d7d08bbc0c596bf741facf79d0941b29484f772f317095137e87.css" />
+  
+
+  <link rel="stylesheet" media="screen" href="https://cdn.shopify.com/assets2/manifests/en_online-e2ae0b4edb231eac7c79f33f1d38dc8a508439286c89623107087672515246e2.css" />
+
+    <script src="https://cdn.shopify.com/static/javascripts/vendor/bugsnag.v4.7.2.min.js" crossorigin></script>
+<script>
+function isNotShopifyDomain(report) {
+  var shopifyTest = /:\/\/(?![^\/]*shopify)/;
+
+  return shopifyTest.test(report.stacktrace || '');
+}
+
+window.bugsnagClient = bugsnag({
+  apiKey: '60139b6e163bd4168eaeb409f6e80e98',
+  beforeSend: function (report) {
+    return isNotShopifyDomain(report) ? false : report;
+  },
+  notifyReleaseStages: ['production', 'staging'],
+  releaseStage: 'production',
+});
+</script>
+
+
+  <meta property="fb:app_id" content="847460188612391" />
+
+  <meta property="fb:pages" content="20409006880" />
+
+
+    <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shopify" />
+  <meta property="og:title" content="Vender na internet - Criar loja virtual - Teste grátis" />
+  <meta property="og:description" content="A Shopify tem tudo que você precisa para começar a vender na internet. Crie uma loja virtual com a plataforma de e-commerce da Shopify.
+" />
+  <meta property="og:image" content="https://cdn.shopify.com/assets2/global/share-image-generic-d2563f395d49fb044880feba53ab22b1a7d01fe62c7943a397e58f69f60fa206.png" />
+  <meta property="og:url" content="https://pt.shopify.com/online" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:site" content="@Shopify" />
+  <meta property="twitter:account_id" content="17136315" />
+  <meta property="twitter:title" content="Vender na internet - Criar loja virtual - Teste grátis" />
+  <meta property="twitter:description" content="A Shopify tem tudo que você precisa para começar a vender na internet. Crie uma loja virtual com a plataforma de e-commerce da Shopify.
+" />
+  <meta property="twitter:image" content="https://cdn.shopify.com/assets2/global/share-image-generic-d2563f395d49fb044880feba53ab22b1a7d01fe62c7943a397e58f69f60fa206.png" />
+
+<link href="https://plus.google.com/+shopify" rel="publisher">
+
+<meta name="p:domain_verify" content="4a145e8be049c554412444892ab424de">
+
+  <meta name="google-site-verification" content="Qu2Oloy2MEBgLgnmmmCTQ-0TuRH40OIOx63D8L8MbYQ" />
+<meta name="verify-a" content="c56c27a8f68c6ddcafdf">
+
+  <meta name="msvalidate.01" content="EFEFA28DCF5F7763704E02A2093FD0FD" />
+
+
+<script id="TrekkieScript" type="text/javascript">
+  (function(){
+    var config = {
+      'Trekkie': {
+        'appName': 'brochure',
+        'defaultAttributes': {
+          'locale': 'pt-BR'
+        }
+      },
+      'Optimizely': {},
+      'Clickstream': {
+        'appName': 'brochure',
+        'instantFlush': true
+      },
+      'Performance': {
+        'navigationTimingApiMeasurementsEnabled': true,
+        'navigationTimingApiMeasurementsSampleRate': 0.01
+      },
+      'Session Attribution': {}
+    };
+    var trekkie_version = '2016.11.03.1';
+    var analytics = window.analytics = window.analytics || [];
+    if (analytics.integrations) {
+      return;
+    }
+    analytics.methods = [
+      'identify',
+      'page',
+      'ready',
+      'track',
+      'trackForm',
+      'trackLink'
+    ];
+    analytics.factory = function(method) {
+      return function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift(method);
+        analytics.push(args);
+        return analytics;
+      };
+    };
+    for (var i = 0; i < analytics.methods.length; i++) {
+      var key = analytics.methods[i];
+      analytics[key] = analytics.factory(key);
+    }
+    analytics.load = function(config) {
+      analytics.config = config;
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.onerror = function(e) { (new Image()).src = 'https://v.shopify.com/internal_errors/track?error=trekkie_load'; };
+      script.async = true;
+      script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.' + config.Trekkie.appName + '.min.js?v=' + trekkie_version;
+      var first = document.getElementsByTagName('script')[0];
+      first.parentNode.insertBefore(script, first);
+    };
+    analytics.load(config);
+    analytics.page();
+  })();
+</script>
+
+<script id="GoogleAnalyticsScript" type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','_gaUTracker');
+
+  var _gaUTrackerOptions = {};
+
+  analytics.ready(function() {
+    _gaUTrackerOptions.clientId = analytics.user().traits().uniqToken;
+    _gaUTracker('create', 'UA-82702-49', _gaUTrackerOptions);
+    _gaUTracker('set', 'transport', 'beacon');
+    _gaUTracker('require', 'displayfeatures');
+    _gaUTracker('send', 'pageview');
+
+    _gaUTrackerOptions.name = '_other';
+    _gaUTracker('create', 'UA-82702-3', _gaUTrackerOptions);
+    _gaUTracker('_other.set', 'transport', 'beacon');
+    _gaUTracker('_other.require', 'displayfeatures');
+    _gaUTracker('_other.send', 'pageview');
+  });
+
+  window._gaq = window._gaq || [];
+</script>
+
+
+<script type="text/javascript">
+    var optimizelyBuckets = (function () {
+      var key = 'optimizelyBuckets';
+      var splat = document.cookie.split(/;\s*/);
+      for (var i = 0; i < splat.length; i++) {
+        var ps = splat[i].split('=');
+        var k = decodeURIComponent(ps[0]);
+        if (k === key) {
+          return decodeURIComponent(ps[1]);
+        }
+      }
+      return undefined;
+    })();
+</script>
+
+
+  <link rel="alternate" hreflang="es" href="https://es.shopify.com/online" />
+<link rel="alternate" hreflang="fr-CA" href="https://fr.shopify.ca/site-de-vente-en-ligne" />
+<link rel="alternate" hreflang="fr" href="https://fr.shopify.com/site-de-vente-en-ligne" />
+<link rel="alternate" hreflang="pt-BR" href="https://pt.shopify.com/online" />
+<link rel="alternate" hreflang="en-RU" href="https://ru.shopify.com/online" />
+<link rel="alternate" hreflang="en-CA" href="https://www.shopify.ca/online" />
+<link rel="alternate" hreflang="en-ID" href="https://www.shopify.co.id/online" />
+<link rel="alternate" hreflang="en-NZ" href="https://www.shopify.co.nz/online" />
+<link rel="alternate" hreflang="en-GB" href="https://www.shopify.co.uk/online" />
+<link rel="alternate" hreflang="en-ZA" href="https://www.shopify.co.za/online" />
+<link rel="alternate" hreflang="en" href="https://www.shopify.com/online" />
+<link rel="alternate" hreflang="en-AU" href="https://www.shopify.com.au/online" />
+<link rel="alternate" hreflang="es-CO" href="https://www.shopify.com.co/online" />
+<link rel="alternate" hreflang="es-MX" href="https://www.shopify.com.mx/online" />
+<link rel="alternate" hreflang="en-NG" href="https://www.shopify.com.ng/online" />
+<link rel="alternate" hreflang="en-PH" href="https://www.shopify.com.ph/online" />
+<link rel="alternate" hreflang="en-SG" href="https://www.shopify.com.sg/online" />
+<link rel="alternate" hreflang="es-ES" href="https://www.shopify.es/online" />
+<link rel="alternate" hreflang="de-DE" href="https://www.shopify.de/onlineshop-erstellen" />
+<link rel="alternate" hreflang="en-IE" href="https://www.shopify.ie/online" />
+<link rel="alternate" hreflang="en-IN" href="https://www.shopify.in/online" />
+<link rel="alternate" hreflang="en-MY" href="https://www.shopify.my/online" />
+<link rel="alternate" hreflang="it" href="https://it.shopify.com/online" />
+<link rel="alternate" hreflang="ja-JP" href="https://www.shopify.jp/online" />
+<link rel="alternate" hreflang="en-HK" href="https://www.shopify.hk/online" />
+
+</head>
+
+<body class="page--online-overview">
+  <div id="GlobalIconSymbols" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="social-facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M15.6 30V19.4h5V15h-5v-3.1c0-1 .6-1.9 1.3-1.9h3.8V5.6h-3.8c-3.1 0-5.6 2.8-5.6 6.3V15H7.5v4.4h3.8v10.1C4.8 27.9 0 22 0 15 0 6.7 6.7 0 15 0s15 6.7 15 15c0 8.1-6.4 14.7-14.4 15z"/></svg>
+</symbol><symbol id="social-twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M30 15c0 8.3-6.7 15-15 15S0 23.3 0 15 6.7 0 15 0s15 6.7 15 15zm-3.7-5.5c-.8.3-1.6.6-2.5.7.9-.5 1.5-1.4 1.8-2.4-.8.5-1.7.8-2.7 1-.8-.8-1.9-1.4-3.1-1.4-2.4 0-4.2 1.9-4.2 4.3 0 .3 0 .7.1 1-3.5-.2-6.7-1.9-8.8-4.5-.3.7-.6 1.4-.6 2.2 0 1.5.7 2.8 1.9 3.5-.7 0-1.4-.2-1.9-.5 0 2.1 1.5 3.8 3.4 4.2-.3.1-.7.1-1.1.1-.3 0-.6 0-.8-.1.5 1.7 2.1 2.8 4 2.9-1.5 1.1-3.3 1.9-5.3 1.9-.3 0-.7 0-1-.1 1.9 1.2 4.1 1.9 6.5 1.9 7.8 0 12.1-6.5 12.1-12.1v-.6c.9-.4 1.6-1.2 2.2-2z"/></svg>
+</symbol><symbol id="social-youtube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M30 15c0 8.3-6.7 15-15 15S0 23.3 0 15 6.7 0 15 0s15 6.7 15 15zm-5.6 0c0-6.9 0-6.9-9.4-6.9s-9.4 0-9.4 6.9 0 6.9 9.4 6.9 9.4 0 9.4-6.9zm-11.9-3.7l6.3 3.8-6.3 3.8v-7.6z"/></svg>
+</symbol><symbol id="social-instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M15 30C6.7 30 0 23.3 0 15c0-1.1.1-2.1.3-3.1h7.2c-.4 1-.6 2-.6 3.1 0 4.5 3.6 8.1 8.1 8.1s8.1-3.6 8.1-8.1c0-1.1-.2-2.2-.6-3.1h7.2c.2 1 .3 2 .3 3.1 0 8.3-6.7 15-15 15zm5.9-20.6c-1.5-1.5-3.6-2.5-5.9-2.5s-4.4 1-5.9 2.5h-8C3.3 3.9 8.7 0 15 0s11.7 3.9 13.9 9.4h-8zm-.3 5.6c0 3.1-2.5 5.6-5.6 5.6-3.1 0-5.6-2.5-5.6-5.6 0-3.1 2.5-5.6 5.6-5.6 3.1 0 5.6 2.5 5.6 5.6z"/></svg>
+</symbol><symbol id="social-linkedin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M30 15c0 8.3-6.7 15-15 15S0 23.3 0 15 6.7 0 15 0s15 6.7 15 15zM11.3 7.8c0-1.2-1-2.2-2.5-2.2s-2.5.9-2.5 2.2c0 1.2 1 2.2 2.5 2.2s2.5-1 2.5-2.2zm-.7 4.1H6.9v10.6h3.8V11.9zm13.8 5c0-3.4-1.7-5.6-4.4-5.6-1.5 0-2.6.9-3.1 2.3l-.1-1.6H13c0 .4.1 2.5.1 2.5v8.1h3.8V17c0-1.5.7-2.5 1.8-2.5s1.9.6 1.9 2.5v5.6h3.8v-5.7z"/></svg>
+</symbol><symbol id="social-pinterest"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M15 30c-1.5 0-2.9-.2-4.3-.6.6-.9 1.2-2 1.5-3.2.2-.7 1-4.1 1-4.1.5 1 2 1.9 3.7 1.9 4.8 0 8.1-4.4 8.1-10.3 0-4.4-3.8-8.6-9.5-8.6-7.1-.1-10.6 5-10.6 9.3 0 2.6 1 4.9 3.1 5.7.3.1.7 0 .8-.4.1-.2.2-.9.3-1.2.1-.4 0-.5-.2-.8-.6-.7-1-1.6-1-3 0-3.8 2.8-7.2 7.4-7.2 4 0 6.2 2.5 6.2 5.8 0 4.3-1.9 8-4.8 8-1.6 0-2.7-1.3-2.4-2.9.5-1.9 1.3-4 1.3-5.3 0-1.2-.7-2.3-2-2.3-1.6 0-2.9 1.7-2.9 3.9 0 1.4.5 2.4.5 2.4S9.5 24 9.3 25.3c-.3 1.1-.4 2.4-.3 3.5-5.3-2.4-9-7.7-9-13.8C0 6.7 6.7 0 15 0s15 6.7 15 15-6.7 15-15 15z"/></svg>
+</symbol><symbol id="social-plus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M6.3 22.5c-1.4 0-2.7.3-3.9.8C.9 20.8 0 18.1 0 15v-.8c.8 2.6 3 4.4 6.3 4.4h.8c-.2.5-.4 1-.4 1.6 0 .9.5 1.7 1.1 2.4-.5-.1-1-.1-1.5-.1zM15 0C9 0 3.9 3.5 1.4 8.5 2.8 7.1 4.9 6 7.1 6h8.5l-1.9 1.4H11c1.8.7 2.7 2.7 2.7 4.9 0 1.8-.9 3.4-2.4 4.5-1.4 1-1.6 1.5-1.6 2.5 0 .8 1.4 2.1 2.2 2.7 2.3 1.6 3 3 3 5.5 0 .9-.3 1.7-.7 2.5h.6c8.3 0 15-6.7 15-15S23.3 0 15 0zM2.8 12.3c-.4-2.8 1-5.1 3.2-5s4.3 2.4 4.6 5.3c.4 2.8-1.1 5.2-3.3 5.1-2-.1-4.1-2.5-4.5-5.4zm10.1 15.5c0 .7-.1 1.3-.4 1.9-3.7-.7-6.9-2.6-9.2-5.4 1.1-.7 2.5-1 4-1 .8 0 1.4.1 2.1.4 1.8 1.2 3 1.9 3.4 3.3 0 .3.1.6.1.8zm9.5-16.5v3.8h-1.9v-3.8h-3.8V9.4h3.8V5.6h1.9v3.8h3.8v1.9h-3.8z"/></svg>
+</symbol><symbol id="social-snapchat"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-234 36 30 30"><path d="M-219 36c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm9.6 20c-.1.3-.6.7-2.5.9-.1 0-.2.2-.3.6 0 .1-.1.3-.1.4 0 .1-.1.2-.3.2-.1 0-.2 0-.4-.1-.3-.1-.7-.1-1.1-.1-.3 0-.5 0-.8.1-.5.1-1 .4-1.5.8-.7.5-1.4 1-2.6 1h-.2c-1.1 0-1.9-.5-2.6-1-.5-.3-1-.7-1.5-.8-.3 0-.5-.1-.8-.1-.5 0-.8.1-1.1.1-.2 0-.3.1-.4.1-.1 0-.2 0-.3-.2 0-.2-.1-.3-.1-.4-.1-.4-.1-.6-.3-.6-1.8-.3-2.3-.7-2.5-.9v-.1c0-.1.1-.2.2-.2 2.8-.5 4-3.3 4.1-3.4.2-.3.2-.6.1-.9-.2-.5-.8-.7-1.2-.8-.1 0-.2-.1-.3-.1-.8-.3-.9-.7-.9-.8.1-.3.4-.5.8-.5h.2c.4.2.7.3 1 .3.4 0 .6-.2.6-.2v-.6c-.1-1.3-.2-3 .2-3.9 1.3-2.8 3.9-3 4.7-3h.3c.8 0 3.5.2 4.7 3 .4.9.3 2.6.2 3.9v.6s.2.2.5.2.6-.1.9-.3c.1 0 .2-.1.3-.1.1 0 .2 0 .3.1.3.1.5.3.5.5s-.1.5-.9.8c-.1 0-.2.1-.3.1-.4.1-1 .3-1.2.8-.1.2-.1.5.1.9.1.1 1.3 3 4.1 3.4.1 0 .2.1.2.2.3 0 .3.1.2.1z"/></svg>
+</symbol><symbol id="globe-simple"><svg xmlns="http://www.w3.org/2000/svg" viewBox="197.3 314.6 90.6 90.6"><path d="M287.9 359.9c0 25-20.2 45.3-45.3 45.3s-45.3-20.2-45.3-45.3 20.2-45.3 45.3-45.3 45.3 20.3 45.3 45.3zm-22.7 13.2c0-7.3-5.9-13.2-13.2-13.2h-7.5c-5.7 0-9.4-2.8-9.4-6.6 0-2.6 2.1-4.7 4.7-4.7 3.8 0 3.9 3.8 6.6 3.8 2.1 0 3.8-1.7 3.8-3.8 0-3.7-1.8-5.6-3.6-7.3 1-2 3.5-7.2 3.6-14.8 0-.9-.6-1.8-1.6-1.9-2-.3-4-.5-6-.5-15.9.5-26.4 8.1-26.4 20.7 0 11.3 9.4 20.7 20.7 20.7h.3c-.2.9-.3 1.9-.3 2.8 0 5.8 4 10.7 9.4 11.9v13.5c0 1 .8 1.9 1.9 1.9 5.7.2 17-9.3 17-22.5z"/></svg></symbol><symbol id="nav-arrow-down"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 5"><path d="M0,0l5,5l5-5H0z"/></svg>
+</symbol><symbol id="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44"><path d="M39.196 43.3L1.154 5.256l3.89-3.89 38.04 38.043z"/><path d="M.54 39.413L38.58 1.37l3.89 3.89L4.428 43.302z"/></svg></symbol><symbol id="polaris/mobile-hamburger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M19 11H1c-.552 0-1-.447-1-1s.448-1 1-1h18c.552 0 1 .447 1 1s-.448 1-1 1zm0-7H1c-.552 0-1-.447-1-1s.448-1 1-1h18c.552 0 1 .447 1 1s-.448 1-1 1zm0 14H1c-.552 0-1-.447-1-1s.448-1 1-1h18c.552 0 1 .447 1 1s-.448 1-1 1z"/></svg>
+</symbol><symbol id="shopify-full-color-black"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 608 173.7"><path fill="#95BF47" d="M130.6 33c-.1-.9-.9-1.3-1.5-1.4-.6-.1-13.7-1-13.7-1s-9.1-9-10-10c-1-1-2.9-.7-3.7-.5-.1 0-2 .6-5.1 1.6C93.7 13 88.3 5 78.9 5h-.8c-2.7-3.5-6-5.1-8.8-5.1C47.4 0 37 27.3 33.7 41.2c-8.5 2.6-14.5 4.5-15.3 4.7-4.7 1.5-4.9 1.6-5.5 6.1C12.4 55.5 0 151.5 0 151.5l96.7 18.1 52.4-11.3c0-.1-18.4-124.4-18.5-125.3zm-39.3-9.6c-2.4.8-5.2 1.6-8.2 2.5v-1.8c0-5.4-.8-9.8-2-13.2 4.9.7 8.2 6.2 10.2 12.5zM75.2 12c1.3 3.4 2.2 8.2 2.2 14.7v.9c-5.3 1.6-11.1 3.4-16.9 5.2 3.3-12.4 9.4-18.5 14.7-20.8zm-6.5-6.1c.9 0 1.9.3 2.8.9-7 3.3-14.5 11.6-17.7 28.2-4.6 1.4-9.2 2.8-13.4 4.1C44.2 26.5 53 5.9 68.7 5.9z"/><path fill="#5E8E3E" d="M129.1 31.6c-.6-.1-13.7-1-13.7-1s-9.1-9-10-10c-.4-.4-.9-.6-1.4-.6l-7.3 149.6 52.4-11.3S130.7 33.9 130.6 33.1c-.1-.9-.9-1.4-1.5-1.5z"/><path fill="#FFF" d="M78.9 60.6l-6.5 19.2s-5.7-3-12.6-3c-10.2 0-10.7 6.4-10.7 8 0 8.8 22.9 12.1 22.9 32.7 0 16.2-10.3 26.6-24.1 26.6-16.6 0-25.1-10.3-25.1-10.3l4.4-14.7s8.7 7.5 16.1 7.5c4.8 0 6.8-3.8 6.8-6.6 0-11.5-18.8-12-18.8-30.8C31.3 73.4 42.7 58 65.6 58c9 .1 13.3 2.6 13.3 2.6z"/><path d="M210.2 96.6c-5.2-2.8-7.9-5.2-7.9-8.5 0-4.2 3.7-6.9 9.6-6.9 6.8 0 12.8 2.8 12.8 2.8l4.8-14.6s-4.4-3.4-17.3-3.4c-18 0-30.5 10.3-30.5 24.8 0 8.2 5.8 14.5 13.6 19 6.3 3.6 8.5 6.1 8.5 9.9 0 3.9-3.1 7-9 7-8.7 0-16.9-4.5-16.9-4.5l-5.1 14.6s7.6 5.1 20.3 5.1c18.5 0 31.8-9.1 31.8-25.5.1-8.9-6.6-15.1-14.7-19.8zM284 65.9c-9.1 0-16.3 4.3-21.8 10.9l-.3-.1 7.9-41.4h-20.6l-20 105.3h20.6l6.9-36c2.7-13.6 9.7-22 16.3-22 4.6 0 6.4 3.1 6.4 7.6 0 2.8-.3 6.3-.9 9.1l-7.8 41.2h20.6l8.1-42.6c.9-4.5 1.5-9.9 1.5-13.4-.1-11.6-6.2-18.6-16.9-18.6zm63.4 0c-24.8 0-41.2 22.4-41.2 47.3 0 16 9.9 28.8 28.4 28.8 24.3 0 40.8-21.8 40.8-47.3 0-14.8-8.7-28.8-28-28.8zm-10.1 60.3c-7 0-10-6-10-13.4 0-11.8 6.1-31.1 17.3-31.1 7.3 0 9.7 6.3 9.7 12.4 0 12.7-6.1 32.1-17 32.1zm90.8-60.3c-13.9 0-21.8 12.2-21.8 12.2h-.3l1.2-11H389c-.9 7.5-2.5 18.8-4.2 27.3l-14.3 75.4H391l5.7-30.5h.4s4.2 2.7 12.1 2.7c24.2 0 40-24.8 40-49.9.1-13.8-6.1-26.2-21.1-26.2zm-19.7 60.6c-5.4 0-8.5-3-8.5-3l3.4-19.3c2.4-12.8 9.1-21.4 16.3-21.4 6.3 0 8.2 5.8 8.2 11.3 0 13.4-7.9 32.4-19.4 32.4zm70.3-90.2c-6.6 0-11.8 5.2-11.8 11.9 0 6.1 3.9 10.3 9.7 10.3h.3c6.4 0 11.9-4.3 12.1-11.9 0-6-4-10.3-10.3-10.3zm-28.8 104.2h20.6l14-73h-20.7m73.1-.1h-14.3l.7-3.4c1.2-7 5.4-13.3 12.2-13.3 3.7 0 6.6 1 6.6 1l4-16.1s-3.6-1.8-11.2-1.8c-7.3 0-14.6 2.1-20.2 6.9-7 6-10.3 14.6-11.9 23.3l-.6 3.4h-9.6l-3 15.5h9.6l-10.9 57.6H509l10.9-57.6h14.2l2.8-15.5zm49.6.1s-12.9 32.5-18.7 50.2h-.3c-.4-5.7-5.1-50.2-5.1-50.2h-21.7l12.4 67c.3 1.5.1 2.4-.4 3.4-2.4 4.6-6.4 9.1-11.2 12.4-3.9 2.8-8.2 4.6-11.6 5.8l5.7 17.5c4.2-.9 12.8-4.3 20.2-11.2 9.4-8.8 18.1-22.4 27-40.9l25.2-54h-21.5z"/></svg></symbol><symbol id="polaris/cancel"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M11.414 10l6.293-6.293c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L10 8.586 3.707 2.293c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L8.586 10l-6.293 6.293c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L10 11.414l6.293 6.293c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L11.414 10z"/></svg>
+</symbol></svg></div>
+  
+<div class="signup-form-wrapper signup--hidden " data-define="{form_0: new SignupForm(this)}">
+  <form class="marketing-form signup-form stateful-form " novalidate="novalidate" autocomplete="off" data-namespace="form_0" data-hidden-fields-namespace="hiddenFields_0" data-bind-event-submit="form_0.handleSubmit(this, event)" action="https://app.shopify.com/services/signup/setup" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+
+
+    <div data-define="{ email0:
+  new StatefulField(
+    &#39;email&#39;,
+    form_0,
+    this,
+    {
+      required: true,
+      validate: true,
+      live: false,
+      showHint: true,
+      showError: true
+    },
+    {},
+    &#39;form_0&#39;
+  )}
+" class="stateful-field email "><div data-context="email0"><label data-bind-class="{&#39;js-has-error&#39;: state.error,&#39;js-is-filled&#39;: state.filled || state.value.length &gt; 0,&#39;js-has-hint&#39;: !state.error &amp;&amp; state.hint}" class="marketing-input-wrapper"><span class="marketing-label marketing-label--in-field marketing-label--floating">E-mail</span><input placeholder="E-mail" name="signup[email]" type="email" autocomplete="off" data-bind="state.value" data-bind-event-blur="ShopifyMarketing.context.form_0.handleFieldBlur(ShopifyMarketing.context.email0)" data-bind-event-keyup="ShopifyMarketing.context.form_0.handleFieldKeyup(event, ShopifyMarketing.context.email0)" class="marketing-input marketing-input--floating" id="0_signup_email" /><span class="marketing-form__messages"><span class="suggest hide" data-bind-unsafe-html="displayHint()" data-bind-show="!state.error &amp;&amp; state.hint"></span><span class="error hide" data-bind="displayError()" data-bind-show="state.error == true"></span></span></label></div></div>
+    <div data-define="{ password0:
+  new StatefulField(
+    &#39;password&#39;,
+    form_0,
+    this,
+    {
+      required: true,
+      validate: true,
+      live: false,
+      showHint: false,
+      showError: true
+    },
+    {},
+    &#39;form_0&#39;
+  )}
+" class="stateful-field password "><div data-context="password0"><label data-bind-class="{&#39;js-has-error&#39;: state.error,&#39;js-is-filled&#39;: state.filled || state.value.length &gt; 0,&#39;js-has-hint&#39;: !state.error &amp;&amp; state.hint}" class="marketing-input-wrapper"><span class="marketing-label marketing-label--in-field marketing-label--floating">Senha</span><input placeholder="Senha" name="signup[password]" type="password" autocomplete="off" data-bind="state.value" data-bind-event-blur="ShopifyMarketing.context.form_0.handleFieldBlur(ShopifyMarketing.context.password0)" data-bind-event-keyup="null" class="marketing-input marketing-input--floating" id="0_signup_password" /><span class="marketing-form__messages"><span class="suggest hide" data-bind-unsafe-html="displayHint()" data-bind-show="!state.error &amp;&amp; state.hint"></span><span class="error hide" data-bind="displayError()" data-bind-show="state.error == true"></span></span></label></div></div>
+
+  <div data-define="{ shop_name0:
+  new StatefulField(
+    &#39;shop_name&#39;,
+    form_0,
+    this,
+    {
+      required: true,
+      validate: true,
+      live: true,
+      showHint: false,
+      showError: true
+    },
+    {},
+    &#39;form_0&#39;
+  )}
+" class="stateful-field shop_name "><div data-context="shop_name0"><label data-bind-class="{
+          &#39;js-has-error&#39;: state.error == true,
+          &#39;js-is-pending&#39;: state.pending == true,
+          &#39;js-is-focused&#39;: state.focus == true,
+          &#39;js-has-detail&#39;: state.error &amp;&amp; state.errors.existingAdmin,
+          &#39;js-is-filled&#39;: state.filled == true || state.value.length &gt; 0,
+        }" class="marketing-input-wrapper shop_name"><span class="marketing-label marketing-label--in-field marketing-label--floating">Nome da sua loja</span><input placeholder="Nome da sua loja" name="signup[shop_name]" type="text" autocomplete="off" data-bind="state.value" data-bind-event-blur="ShopifyMarketing.context.form_0.handleFieldBlur(ShopifyMarketing.context.shop_name0)" data-bind-event-keyup="ShopifyMarketing.context.form_0.handleFieldKeyup(event, ShopifyMarketing.context.shop_name0)" class="marketing-input marketing-input--floating" id="0_signup_shop_name" /><span class="marketing-form__messages"><span class="suggest hide" data-bind-unsafe-html="displayHint()" data-bind-show="!state.error &amp;&amp; state.hint"></span><span class="error hide" data-bind="displayError()" data-bind-show="state.error == true &amp;&amp; state.pending == false" data-bind-unsafe-html="displayError()"></span></span></label></div></div>
+
+  <div data-define="{hiddenFields_0: new HiddenFields({
+      source:        &quot;&quot;,
+      source_url:    &quot;&quot;,
+      signup_code:   &quot;&quot;,
+      signup_types:  [],
+      theme:         &quot;&quot;,
+      selected_app:  &quot;&quot;,
+      selected_plan: &quot;&quot;
+    }, this)}">
+
+    <div data-context="hiddenFields_0">
+      <input type="hidden" name="ref"             value="">
+      <input type="hidden" name="language"        value="pt">
+      <input type="hidden" name="country"         value="com">
+      <input type="hidden" name="locale"          value="pt-BR">
+      <input type="hidden" name="_y"              data-bind="fields.y">
+      <input type="hidden" name="forwarded_host"  data-bind="fields.forwarded_host">
+      <input type="hidden" name="ssid"            data-bind="fields.ssid">
+      <input type="hidden" name="source"          data-bind="fields.source">
+      <input type="hidden" name="source_url"      data-bind="fields.source_url">
+      <input type="hidden" name="signup_code"     data-bind="fields.signup_code">
+
+
+      <input type="hidden" name="signup_types[]" data-bind-disabled="fields.signup_types" data-bind="fields.signup_type">
+
+      <input type="hidden" name="extra[selected_theme]" data-bind="fields.theme">
+      <input type="hidden" name="extra[selected_app]" data-bind="fields.selected_app">
+      <input type="hidden" name="extra[selected_plan]" data-bind="fields.selected_plan">
+    </div>
+
+  </div>
+
+  <div class="">
+    <button class="marketing-button marketing-form__button " name="button" namespace="0" data-bind-disabled="form_0.pending == true" type="submit">Crie a sua loja</button>
+  </div>
+</form>
+</div>
+
+    <!--[if lte IE 9]>
+  <section class="announcement js-announcement" data-announcement-id="unsupported_browser" role="region" aria-label="Anúncio"><p class="announcement__content">O navegador que você está usando não é compatível com a Shopify.
+ <a class="announcement__link body-link body-link--reverse" href="http://browsehappy.com/">Atualize o seu navegador</a></p><button name="button" type="button" class="announcement__close js-announcement__close" aria-label="Anúncio próximo"><svg class="icon announcement__icon icon" aria-hidden="true" focusable="false"> <use xlink:href="#close" /> </svg></button></section>
+<![endif]-->
+
+
+    
+  
+  
+<header id="SiteNavContainer">
+  <div class="marketing-nav-wrapper">
+    
+<a class="in-page-link skip-to-main visuallyhidden focusable" data-ga-event="Main Nav" data-ga-action="Skip to content" data-trekkie-event="Main Nav" data-trekkie-action="Skip to content" data-trekkie-id="Main Nav Skip to content" href="#Main">Pular para o conteúdo</a>
+
+<nav
+  class="marketing-nav marketing-nav__primary"
+  id="ShopifyMainNav"
+  itemscope="itemscope"
+  itemtype="https://schema.org/SiteNavigationElement"
+  aria-label="Navegação principal">
+  
+        <button type="button" class="marketing-nav__hamburger hide--expanded-nav js-drawer-open-right"
+          aria-controls="NavDrawer" aria-expanded="false">
+            <svg class="icon" aria-labelledby="icon-polaris/mobile-hamburger-12-title" role="img"><title id="icon-polaris/mobile-hamburger-12-title">Abrir navegação principal</title> <use xlink:href="#polaris/mobile-hamburger" /> </svg>
+        </button>
+
+      <div class="marketing-nav__logo ">
+        <a href="/" class="marketing-nav__logo__shopify" data-ga-event="Main Nav" data-ga-action="Logo" data-trekkie-event="Main Nav" data-trekkie-action="Logo" data-trekkie-id="Main Nav Logo">
+
+          <svg class="icon" aria-labelledby="icon-shopify-full-color-black-13-title" role="img"><title id="icon-shopify-full-color-black-13-title">Início</title> <use xlink:href="#shopify-full-color-black" /> </svg>
+</a>      </div>
+
+      <ul class="marketing-nav__items display--expanded-nav">
+        <li><div class="popover-wrapper js-popover" data-position="bottom" data-toggle-only-on-click="false"><button type="button" class="popover-trigger marketing-nav__item marketing-nav__item--primary marketing-nav__item--active" itemprop="name" data-ga-event="Main Nav" data-ga-action="Ways to sell" data-trekkie-event="Main Nav" data-trekkie-action="Ways to sell" data-trekkie-id="Main Nav Ways to sell">Formas de vender<svg class="icon marketing-nav__arrow" aria-hidden="true" focusable="false"> <use xlink:href="#nav-arrow-down" /> </svg></button><div class="popover"><ul class="popover-content"><li><a href="/online" class="marketing-nav__item marketing-nav__item--child marketing-nav__item--active" itemprop="name" aria-current="page" data-ga-event="Main Nav" data-ga-action="Online store" data-trekkie-event="Main Nav" data-trekkie-action="Online store" data-trekkie-id="Main Nav Online store">Loja virtual </a></li><li><a href="/pdv" class="marketing-nav__item marketing-nav__item--child" itemprop="name" data-ga-event="Main Nav" data-ga-action="Point of sale" data-trekkie-event="Main Nav" data-trekkie-action="Point of sale" data-trekkie-id="Main Nav Point of sale">Ponto de venda </a></li><li><a href="/pdv/varejo" class="marketing-nav__item marketing-nav__item--child" itemprop="name" data-ga-event="Main Nav" data-ga-action="Retail Package" data-trekkie-event="Main Nav" data-trekkie-action="Retail Package" data-trekkie-id="Main Nav Retail Package">Pacote de varejo </a></li><li><a href="/botao-de-compra" class="marketing-nav__item marketing-nav__item--child" itemprop="name" data-ga-event="Main Nav" data-ga-action="Buy button" data-trekkie-event="Main Nav" data-trekkie-action="Buy button" data-trekkie-id="Main Nav Buy button">Botão comprar </a></li><li><a href="/facebook" class="marketing-nav__item marketing-nav__item--child" itemprop="name" data-ga-event="Main Nav" data-ga-action="Facebook" data-trekkie-event="Main Nav" data-trekkie-action="Facebook" data-trekkie-id="Main Nav Facebook">Loja no Facebook </a></li><li><a href="/messenger" class="marketing-nav__item marketing-nav__item--child" itemprop="name" data-ga-event="Main Nav" data-ga-action="Messenger" data-trekkie-event="Main Nav" data-trekkie-action="Messenger" data-trekkie-id="Main Nav Messenger">Facebook Messenger </a></li><li><a href="/plus" class="marketing-nav__item marketing-nav__item--child" itemprop="name" target="_blank" data-ga-event="Main Nav" data-ga-action="Plus" data-trekkie-event="Main Nav" data-trekkie-action="Plus" data-trekkie-id="Main Nav Plus" rel="nofollow">Shopify Plus </a></li></ul></div></div></li><li><a href="/precos" class="marketing-nav__item marketing-nav__item--primary" itemprop="name" data-ga-event="Main Nav" data-ga-action="Pricing" data-trekkie-event="Main Nav" data-trekkie-action="Pricing" data-trekkie-id="Main Nav Pricing">Preços </a></li><li><a href="/blog" class="marketing-nav__item marketing-nav__item--primary" itemprop="name" data-ga-event="Main Nav" data-ga-action="Blog" data-trekkie-event="Main Nav" data-trekkie-action="Blog" data-trekkie-id="Main Nav Blog">Blog </a></li><li><div class="popover-wrapper js-popover" data-position="bottom" data-toggle-only-on-click="false"><button type="button" class="popover-trigger marketing-nav__item marketing-nav__item--primary" itemprop="name" data-ga-event="Main Nav" data-ga-action="Resources" data-trekkie-event="Main Nav" data-trekkie-action="Resources" data-trekkie-id="Main Nav Resources">Recursos<svg class="icon marketing-nav__arrow" aria-hidden="true" focusable="false"> <use xlink:href="#nav-arrow-down" /> </svg></button><div class="popover"><ul class="popover-content"><li><a href="https://apps.shopify.com/" class="marketing-nav__item marketing-nav__item--child" itemprop="name" data-ga-event="Main Nav" data-ga-action="App store" data-trekkie-event="Main Nav" data-trekkie-action="App store" data-trekkie-id="Main Nav App store" rel="nofollow">App Store </a></li><li><a href="https://themes.shopify.com/" class="marketing-nav__item marketing-nav__item--child" itemprop="name" data-ga-event="Main Nav" data-ga-action="Theme store" data-trekkie-event="Main Nav" data-trekkie-action="Theme store" data-trekkie-id="Main Nav Theme store" rel="nofollow">Loja de modelos </a></li><li><a href="/ferramentas" class="marketing-nav__item marketing-nav__item--child" itemprop="name" data-ga-event="Main Nav" data-ga-action="Tools" data-trekkie-event="Main Nav" data-trekkie-action="Tools" data-trekkie-id="Main Nav Tools">Ferramentas </a></li><li><a href="https://pt.shopify.com/burst" class="marketing-nav__item marketing-nav__item--child" itemprop="name" data-ga-event="Main Nav" data-ga-action="Burst" data-trekkie-event="Main Nav" data-trekkie-action="Burst" data-trekkie-id="Main Nav Burst" rel="nofollow">Banco de imagens grátis </a></li><li><a href="/parcerias" class="marketing-nav__item marketing-nav__item--child" itemprop="name" data-ga-event="Main Nav" data-ga-action="Partners" data-trekkie-event="Main Nav" data-trekkie-action="Partners" data-trekkie-id="Main Nav Partners">Parcerias </a></li></ul></div></div></li>
+      </ul>
+
+        <ul class="marketing-nav__items marketing-nav__user display--expanded-nav">
+          <li><a href="/login" class="marketing-nav__item marketing-nav__item--user" itemprop="name" data-ga-event="Main Nav" data-ga-action="Login" data-trekkie-event="Main Nav" data-trekkie-action="Login" data-trekkie-id="Main Nav Login">Entrar </a></li><li><form class="button_to" method="post" action="https://app.shopify.com/services/signup/setup"><input class="js-open-signup marketing-nav__button marketing-button marketing-button--small" data-ga-event="Main Nav" data-ga-action="Get Started" data-trekkie-event="Main Nav" data-trekkie-action="Get Started" data-trekkie-id="Main Nav Get Started" id="MainNavSignupButton" type="submit" value="Começar" /></form></li>
+        </ul>
+
+      
+
+</nav>
+
+  </div>
+
+    
+<div id="NavDrawer" class="drawer drawer--right ">
+  <div class="drawer__inner">
+    <div class="drawer__top">
+        <div class="marketing-nav__logo">
+          <a href="/" class="marketing-nav__logo__shopify">
+
+            <svg class="icon" aria-labelledby="icon-shopify-full-color-black-16-title" role="img"><title id="icon-shopify-full-color-black-16-title">Início</title> <use xlink:href="#shopify-full-color-black" /> </svg>
+</a>        </div>
+
+      <button name="button" type="button" class="drawer__close-button js-drawer-close" aria-controls="NavDrawer" aria-expanded="true">
+        <svg class="icon" aria-labelledby="icon-polaris/cancel-17-title" role="img"><title id="icon-polaris/cancel-17-title">Fechar navegação principal</title> <use xlink:href="#polaris/cancel" /> </svg>
+</button>    </div>
+
+    <nav aria-label="Navegação principal">
+        <ul class="drawer__items drawer__items--primary" id="DrawerNavPrimaryAccordion">
+          <li class="accordion-item"><button name="button" type="button" class="drawer__item drawer__item--primary drawer__item--active accordion-link">Formas de vender<svg class="icon marketing-nav__arrow" aria-hidden="true" focusable="false"> <use xlink:href="#nav-arrow-down" /> </svg></button><ul class="drawer__items drawer__items--nested accordion-content"><li><a href="/online" class="drawer__item drawer__item--active" itemprop="name" data-ga-event="Main Nav" data-ga-action="Online store" data-trekkie-event="Main Nav" data-trekkie-action="Online store" data-trekkie-id="Main Nav Online store">Loja virtual </a></li><li><a href="/pdv" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="Point of sale" data-trekkie-event="Main Nav" data-trekkie-action="Point of sale" data-trekkie-id="Main Nav Point of sale">Ponto de venda </a></li><li><a href="/pdv/varejo" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="Retail Package" data-trekkie-event="Main Nav" data-trekkie-action="Retail Package" data-trekkie-id="Main Nav Retail Package">Pacote de varejo </a></li><li><a href="/botao-de-compra" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="Buy button" data-trekkie-event="Main Nav" data-trekkie-action="Buy button" data-trekkie-id="Main Nav Buy button">Botão comprar </a></li><li><a href="/facebook" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="Facebook" data-trekkie-event="Main Nav" data-trekkie-action="Facebook" data-trekkie-id="Main Nav Facebook">Loja no Facebook </a></li><li><a href="/messenger" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="Messenger" data-trekkie-event="Main Nav" data-trekkie-action="Messenger" data-trekkie-id="Main Nav Messenger">Facebook Messenger </a></li><li><a href="/plus" class="drawer__item" itemprop="name" target="_blank" data-ga-event="Main Nav" data-ga-action="Plus" data-trekkie-event="Main Nav" data-trekkie-action="Plus" data-trekkie-id="Main Nav Plus" rel="nofollow">Shopify Plus </a></li></ul></li><li><a href="/precos" class="drawer__item drawer__item--primary" itemprop="name" data-ga-event="Main Nav" data-ga-action="Pricing" data-trekkie-event="Main Nav" data-trekkie-action="Pricing" data-trekkie-id="Main Nav Pricing">Preços </a></li><li><a href="/blog" class="drawer__item drawer__item--primary" itemprop="name" data-ga-event="Main Nav" data-ga-action="Blog" data-trekkie-event="Main Nav" data-trekkie-action="Blog" data-trekkie-id="Main Nav Blog">Blog </a></li><li class="accordion-item"><button name="button" type="button" class="drawer__item drawer__item--primary accordion-link">Recursos<svg class="icon marketing-nav__arrow" aria-hidden="true" focusable="false"> <use xlink:href="#nav-arrow-down" /> </svg></button><ul class="drawer__items drawer__items--nested accordion-content"><li><a href="https://apps.shopify.com/" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="App store" data-trekkie-event="Main Nav" data-trekkie-action="App store" data-trekkie-id="Main Nav App store" rel="nofollow">App Store </a></li><li><a href="https://themes.shopify.com/" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="Theme store" data-trekkie-event="Main Nav" data-trekkie-action="Theme store" data-trekkie-id="Main Nav Theme store" rel="nofollow">Loja de modelos </a></li><li><a href="/ferramentas" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="Tools" data-trekkie-event="Main Nav" data-trekkie-action="Tools" data-trekkie-id="Main Nav Tools">Ferramentas </a></li><li><a href="https://pt.shopify.com/burst" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="Burst" data-trekkie-event="Main Nav" data-trekkie-action="Burst" data-trekkie-id="Main Nav Burst" rel="nofollow">Banco de imagens grátis </a></li><li><a href="/parcerias" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="Partners" data-trekkie-event="Main Nav" data-trekkie-action="Partners" data-trekkie-id="Main Nav Partners">Parcerias </a></li></ul></li>
+        </ul>
+
+        <ul class="drawer__items drawer__items--user">
+          <li><a href="/login" class="drawer__item" itemprop="name" data-ga-event="Main Nav" data-ga-action="Login" data-trekkie-event="Main Nav" data-trekkie-action="Login" data-trekkie-id="Main Nav Login">Entrar </a></li><li><form class="button_to" method="post" action="https://app.shopify.com/services/signup/setup"><input class="js-open-signup drawer__item drawer__item--signup" data-ga-event="Main Nav" data-ga-action="Get Started" data-trekkie-event="Main Nav" data-trekkie-action="Get Started" data-trekkie-id="Main Nav Get Started" type="submit" value="Começar" /></form></li>
+        </ul>
+
+        <ul class="drawer__items drawer__items--corporate">
+          <li><a href="/quem-somos" class="drawer__item" itemprop="name">Sobre </a></li><li><a href="/sitemap" class="drawer__item" itemprop="name">Mapa do site </a></li>
+        </ul>
+
+    </nav>
+  </div>
+</div>
+
+</header>
+
+
+
+<div id="PageContainer">
+  <main role="main" id="Main">
+    
+
+<header class="channel-hero--online channel-hero">
+  <div class="grid">
+    <div class="grid__item grid__item--tablet-up-4 grid__item--tablet-up-push-1 grid__item--desktop-up-half grid__item--desktop-up-push-reset">
+      <div class="section-heading section-heading--tight">
+        <p class="section-heading__kicker heading--5">Loja virtual</p>
+          <h1 class="section-heading__heading heading--1 heading--1">Tudo que você precisa para criar uma loja virtual e vender na internet
+</h1>
+</div>
+</div></div></header>
+
+
+<section class="section section--tight">
+  <div class="grid">
+    <div class="grid__item grid__item--desktop-up-7 gutter-bottom--tablet-down">
+      <p class="text-major color-ink-lighter gutter-bottom--reset">
+        Vender na internet com seu próprio e-commerce nunca foi tão fácil, rápido ou escalável. Impressione seus clientes com uma loja linda.
+
+</p></div>    <div class="grid__item grid__item--desktop-up-5">
+      
+<form class="js-signup-inline marketing-form--inline gutter-bottom--half" novalidate="novalidate" action="https://app.shopify.com/services/signup/setup" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="marketing-input-wrapper marketing-input-button-pair"><div class="marketing-input-button__field-wrapper"><label class="marketing-input-button-pair__input"><span class="marketing-label marketing-label--in-field marketing-label--floating">E-mail</span><input placeholder="Insira seu e-mail" class="marketing-input-button-pair__input marketing-input marketing-input--floating" type="email" name="signup[email]" /></label><button class="marketing-button marketing-form__button marketing-input-button-pair__button " name="button" data-ga-event="Email capture signup" data-ga-action="CTA button click" type="submit">Começar</button></div><span class="marketing-form__messages"></span></div>
+</form>
+  <p class="text-minor color-ink-lighter gutter-bottom--reset text-center--tablet-down text-right--desktop-up marketing-form__fallback-cta text-center">Avaliação gratuita de 14 dias, sem necessidade de cartão de crédito.</p>
+
+</div></div></section>
+
+<section class="section section--border section--padding-top-only">
+  <div class="grid">
+    <div class="grid__item grid__item--desktop-up-half grid__item--desktop-up-push-6 gutter-bottom">
+      <video class="video inline-video gutter-bottom online-store-video" data-webm-src="https://cdn.shopify.com/assets2/online-store-video-743c7a3f0089204af2875e1bbe435eaef2851518e0fdcd39fb27f6f0cdc3140e.webm" data-mp4-src="https://cdn.shopify.com/assets2/online-store-video-46572fe93f8bf75739118c3be1d65b9f18f646fcf98d90a59091b3fc3a270db8.mp4" data-poster="https://cdn.shopify.com/assets2/online-store/online-store-video-placeholder-d1e8a7badceee52049e17fd48cd8fc99c080ae0b1e7097f6ca7182ff70767292.jpg" aria-label="Editor de lojas virtuais da Shopify sendo utilizado para alterar o layout de uma loja da Shopify.
+" autoplay="autoplay" canplay="false" loop="loop" muted="muted" role="img" volume="0"><source type="video/webm" /><source type="video/mp4" /></video>
+</div>
+    <div class="grid__item grid__item--desktop-up-half grid__item--desktop-up-pull-6">
+      <div class="section-heading section-heading--left">
+        <h2 class="section-heading__heading heading--2">Vender na internet nunca foi tão fácil</h2>
+        <p class="section-heading__subhead heading--3">Configure sua loja em minutos e crie um espaço para sua marca</p>
+</div>
+      <div class="grid grid--bleed">
+        <div class="grid__item grid__item--desktop-up-half">
+          <div class="block">
+            <h3 class="block__heading heading--4">Crie a sua loja facilmente</h3>
+            <p class="block__content">Escolha entre 100 modelos de sites profissionais e gratuitos. Personalize as cores, imagens e fontes com facilidade. Não precisa entender de design.
+</p>
+            <p class="block__cta"><a href="/online/templates">Ver modelos de sites da Shopify</a></p>
+</div>
+</div>
+        <div class="grid__item grid__item--desktop-up-half">
+          <div class="block">
+            <h3 class="block__heading heading--4">Projetado para dispositivos móveis</h3>
+            <p class="block__content">Todos os temas da Shopify são totalmente responsivos, o que significa que seus clientes têm uma experiência consistente na sua loja, seja em um dispositivo móvel ou desktop.
+</p>
+</div></div></div></div></div></section>
+<section class="section section--padding-top-only">
+  <div class="grid">
+    <div class="grid__item grid__item--desktop-up-half gutter-bottom">
+      <span class="image lazyload-image gutter-bottom" style="max-width: 681px; max-height: 561px;"><span class="lazyload-image__placeholder" style="padding-bottom: 82.380%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/online-store/online-optimized-for-growth-small-7dfb60e24b366802203209ca3cffee6d5a6046e61fb556c97f3a9a5e4d886ce5.jpg 1x, https://cdn.shopify.com/assets2/online-store/online-optimized-for-growth-large-676cefe9b9c59918d1fc2b2b82709db65feede2f88d7b096a1b5a9cba15a7025.jpg 2x" alt="Painel destacando as estatísticas totais de vendas e acessos de uma loja da Shopify.
+" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/online-store/online-optimized-for-growth-small-7dfb60e24b366802203209ca3cffee6d5a6046e61fb556c97f3a9a5e4d886ce5.jpg 1x, https://cdn.shopify.com/assets2/online-store/online-optimized-for-growth-large-676cefe9b9c59918d1fc2b2b82709db65feede2f88d7b096a1b5a9cba15a7025.jpg 2x" alt="Painel destacando as estatísticas totais de vendas e acessos de uma loja da Shopify.
+" /></noscript></span></span>
+</div>
+    <div class="grid__item grid__item--desktop-up-half">
+      <div class="section-heading section-heading--left">
+        <h2 class="section-heading__heading heading--2">Otimizado para o crescimento</h2>
+        <p class="section-heading__subhead heading--3">Utilize suas informações de vendas para fazer sua empresa crescer</p>
+</div>
+      <div class="grid grid--bleed">
+        <div class="grid__item grid__item--desktop-up-half">
+          <div class="block">
+            <h3 class="block__heading heading--4">Painel de controle completo</h3>
+            <p class="block__content">Tenha uma visão geral e detalhada do seu negócio para entender melhor as vendas, pedidos e clientes, e com base nisso adaptar seus produtos e marketing.
+</p>
+</div></div>
+        <div class="grid__item grid__item--desktop-up-half">
+          <div class="block">
+            <h3 class="block__heading heading--4">Marketing simplificado</h3>
+            <p class="block__content">Com os recursos de SEO, marketing automatizado e material educativo gratuito da Shopify, você sempre estará um passo à frente da concorrência.
+</p>
+</div></div>
+          <div class="grid__item grid__item--desktop-up-half">
+            <div class="block">
+              <h3 class="block__heading heading--4">Expanda a Shopify com apps</h3>
+              <p class="block__content">Existem mais de 2.400 aplicativos como Mailchimp, Xero Accounting e Kit, que têm integração perfeita com a Shopify para fazer sua empresa crescer.
+</p>
+              <p class="block__cta"><a href="https://apps.shopify.com/?itcat=brochure&amp;itterm=online-app-small">Ver o App Store da Shopify</a></p>
+</div></div></div></div></div></section>
+<section class="section section--padding-top-only">
+  <div class="grid">
+    <div class="grid__item grid__item--desktop-up-half">
+      <div class="section-heading section-heading--left">
+        <h2 class="section-heading__heading heading--2">Gestão da sua empresa</h2>
+        <p class="section-heading__subhead heading--3">Foque no que você ama e deixe o resto com a gente!</p>
+</div>
+      <div class="grid grid--bleed">
+        <div class="grid__item grid__item--desktop-up-half">
+          <div class="block">
+            <h3 class="block__heading heading--4">Aplicativo Shopify Mobile</h3>
+            <p class="block__content">Fique por dentro de tudo, mesmo quando você estiver ausente, com o aplicativo Shopify Mobile. Você tem acesso aos pedidos, processamento, análises, e mais. Tudo no seu smartphone!
+</p>
+            
+</div>
+          <div class="block">
+            <h3 class="block__heading heading--4">Frete fácil</h3>
+                <p class="block__content">Agora você pode receber as taxas de frete automaticamente de todas as principais transportadoras, evitando ter calculá-las e deixando seus clientes bem à vontade.
+</p>
+                <p class="block__cta"><a href="https://apps.shopify.com//categories/shipping">Saiba mais sobre o frete</a></p>
+</div></div>
+        <div class="grid__item grid__item--desktop-up-half">
+          <div class="block">
+            <h3 class="block__heading heading--4">Todo o seu estoque integrado em um só lugar</h3>
+            <p class="block__content">Nunca fique de fora de uma venda. O estoque da Shopify fica sempre sincronizado em todos os seus canais de vendas.
+</p>
+</div></div></div></div>
+    <div class="grid__item grid__item--desktop-up-half">
+      <span class="image lazyload-image gutter-bottom" style="max-width: 615px; max-height: 610px;"><span class="lazyload-image__placeholder" style="padding-bottom: 99.190%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/online-store/online_your-business-managed-small-07e0eaa8ce99bdfca24cdc84ef617ca9f15d287dd91999b6d203bc7e28af475c.jpg 1x, https://cdn.shopify.com/assets2/online-store/online_your-business-managed-large-2e0c8563ee9a92b328c59edb69806933c812c51dc520f32378efe048f6657b68.jpg 2x" alt="Aplicativo da Shopify mostrando o total de visitas à loja virtual em um dispositivo iPhone.
+" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/online-store/online_your-business-managed-small-07e0eaa8ce99bdfca24cdc84ef617ca9f15d287dd91999b6d203bc7e28af475c.jpg 1x, https://cdn.shopify.com/assets2/online-store/online_your-business-managed-large-2e0c8563ee9a92b328c59edb69806933c812c51dc520f32378efe048f6657b68.jpg 2x" alt="Aplicativo da Shopify mostrando o total de visitas à loja virtual em um dispositivo iPhone.
+" /></noscript></span></span>
+</div></div></section>
+
+<section class="section background-light color-ink social-proof">
+  <div class="grid">
+    <div class="grid__item grid__item--desktop-up-two-thirds grid__item--desktop-up-align-center">
+      <div class="section-heading">
+        <h2 class="section-heading__heading heading--1">A Shopify é a plataforma de e-commerce escolhida por empreendedores do mundo&nbsp;todo</h2>
+</div></div>
+    <div class="grid__item grid__item--desktop-up-3 grid__item--desktop-up-offset-1 text-center">
+      <div class="block gutter-bottom--mobile">
+        <p class="block__heading heading--1 color-primary">600.000</p>
+        <p class="block__content heading--5 color-ink-lighter">empresas utilizam a plataforma da Shopify</p>
+</div></div>
+    <div class="grid__item grid__item--desktop-up-third text-center">
+      <div class="block gutter-bottom--mobile">
+          <p class="block__content heading--5 color-ink-lighter stat-prefix">Mais de</p>
+        <p class="block__heading heading--1 color-primary">1.000.000</p>
+        <p class="block__content heading--5 color-ink-lighter">usuários ativos</p>
+</div></div>
+    <div class="grid__item grid__item--desktop-up-3 text-center">
+      <div class="block">
+          <p class="block__content heading--5 color-ink-lighter stat-prefix">Mais de</p>
+        <p class="block__heading heading--1 color-primary">72 bilhões</p>
+        <p class="block__content heading--5 color-ink-lighter">de dólares em vendas na Shopify</p>
+</div></div></div>
+  <div class="grid grid--social-proof">
+      <div class="grid__item grid__item--tablet-up-third">
+        <blockquote class="social-proof__quote quote-1 social-proof__quote--atacado">
+          <p class="social-proof__quote-text text-major color-ink-lighter gutter-bottom">Consegui lançar minha operação em apenas 2 meses utilizando a Shopify e alguns aplicativos da App Store da Shopify. Hoje tenho um marketplace com mais de 10 mil produtos e 150 fabricantes diferentes, e sei que ainda posso crescer muito mais com a Shopify.
+</p>
+
+          <div class="social-proof__author text-center color-white">
+            <span class="image lazyload-image social-proof__image" style="max-width: 80px; max-height: 80px;"><span class="lazyload-image__placeholder" style="padding-bottom: 100.000%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/testimonials/testimonials-atacado-small-29c395dbb2e8237737f30c0cef2fa2f077421b983f80d788f5bfbad305634641.jpg 1x, https://cdn.shopify.com/assets2/testimonials/testimonials-atacado-large-f532f9d74cfb07f5a4fe4fe373154a53345425b8714bf43c2e6474fd532efb29.jpg 2x" alt="" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/testimonials/testimonials-atacado-small-29c395dbb2e8237737f30c0cef2fa2f077421b983f80d788f5bfbad305634641.jpg 1x, https://cdn.shopify.com/assets2/testimonials/testimonials-atacado-large-f532f9d74cfb07f5a4fe4fe373154a53345425b8714bf43c2e6474fd532efb29.jpg 2x" alt="" /></noscript></span></span>
+            <cite>
+              <p class="social-proof__author-name text-major gutter-bottom--reset">Alexandre Reganati</p>
+              <p>Fundador da Atacado.com</p>
+            </cite>
+          </div>
+        </blockquote>
+</div>      <div class="grid__item grid__item--tablet-up-third">
+        <blockquote class="social-proof__quote quote-2 social-proof__quote--codigo">
+          <p class="social-proof__quote-text text-major color-ink-lighter gutter-bottom">A Shopify permitiu que nós focássemos apenas no principal do nosso negócio, que é a criação de novos conteúdos de qualidade. Isso abriu portas para conseguirmos reduzir custos de manutenção de software e termos muita tranquilidade no dia a dia.
+</p>
+
+          <div class="social-proof__author text-center color-white">
+            <span class="image lazyload-image social-proof__image" style="max-width: 80px; max-height: 80px;"><span class="lazyload-image__placeholder" style="padding-bottom: 100.000%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/testimonials/testimonials-codigo-small-1e11afcc18958271f6dd1f3f7aa0ae7ccfa3af994bce6055791644ca62e89b17.jpg 1x, https://cdn.shopify.com/assets2/testimonials/testimonials-codigo-large-21389e1b7a447e4b4a8e5ad882ae3a91e6352779a6a93927a27cd955110849d6.jpg 2x" alt="" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/testimonials/testimonials-codigo-small-1e11afcc18958271f6dd1f3f7aa0ae7ccfa3af994bce6055791644ca62e89b17.jpg 1x, https://cdn.shopify.com/assets2/testimonials/testimonials-codigo-large-21389e1b7a447e4b4a8e5ad882ae3a91e6352779a6a93927a27cd955110849d6.jpg 2x" alt="" /></noscript></span></span>
+            <cite>
+              <p class="social-proof__author-name text-major gutter-bottom--reset">Adriano Almeida</p>
+              <p>Co-fundador da Casa do Código</p>
+            </cite>
+          </div>
+        </blockquote>
+</div>      <div class="grid__item grid__item--tablet-up-third">
+        <blockquote class="social-proof__quote quote-3 social-proof__quote--tattly">
+          <p class="social-proof__quote-text text-major color-ink-lighter gutter-bottom">Estou muito feliz de ter optado por administrar a nossa loja virtual no Shopify. Com recursos poderosos e fáceis de configurar, gerenciar nossa loja virtual ficou muito divertido!
+</p>
+
+          <div class="social-proof__author text-center color-white">
+            <span class="image lazyload-image social-proof__image" style="max-width: 80px; max-height: 80px;"><span class="lazyload-image__placeholder" style="padding-bottom: 100.000%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/testimonials/testimonials-tattly-small-c7790cbdcab32a889b922bdaf552555c5db01934ed2ef84981c26cd848fc0b30.jpg 1x, https://cdn.shopify.com/assets2/testimonials/testimonials-tattly-large-060442c0be093d19f4e738dfce92e948511020f723483731508fd93f8e8b4639.jpg 2x" alt="" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/testimonials/testimonials-tattly-small-c7790cbdcab32a889b922bdaf552555c5db01934ed2ef84981c26cd848fc0b30.jpg 1x, https://cdn.shopify.com/assets2/testimonials/testimonials-tattly-large-060442c0be093d19f4e738dfce92e948511020f723483731508fd93f8e8b4639.jpg 2x" alt="" /></noscript></span></span>
+            <cite>
+              <p class="social-proof__author-name text-major gutter-bottom--reset">Tina Roth Eisenberg</p>
+              <p>Designer, fundadora da Tattly</p>
+            </cite>
+          </div>
+        </blockquote>
+</div></div>
+
+  <section class="section">
+    <div class="grid">
+      <div class="grid__item grid__item--desktop-up-two-thirds grid__item--desktop-up-align-center">
+        <div class="section-heading">
+            <h2 class="section-heading__heading heading--2">Todos os recursos que você precisa</h2>
+          <p class="section-heading__subhead heading--3">Perfeito para principiantes e especialistas.</p>
+</div></div></div>
+    <div class="grid grid--equal-height">
+  <div class="grid__item grid__item--tablet-up-half grid__item--desktop-up-third">
+    <div class="block social-proof__feature gutter-bottom--half gutter-bottom--tablet-down">
+      <span class="image lazyload-image social-proof__icon" style="max-width: 161px; max-height: 165px;"><span class="lazyload-image__placeholder" style="padding-bottom: 102.480%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/polaris/spot-website-a851ac16955c22e177683029cae378310de765904b077be5b728400822bd9339.svg" alt="" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/polaris/spot-website-a851ac16955c22e177683029cae378310de765904b077be5b728400822bd9339.svg" alt="" /></noscript></span></span>
+
+      <div class="social-proof__feature-text">
+        <h3 class="block__heading heading--4 social-proof__heading">Site, loja virtual e blog totalmente personalizáveis</h3>
+        <p class="block__cta"><a class="social-proof__link" href="/online/solucoes-de-ecommerce#storefront">Recursos do site</a></p>
+      </div>
+</div></div>
+  <div class="grid__item grid__item--tablet-up-half grid__item--desktop-up-third">
+    <div class="block social-proof__feature gutter-bottom--half gutter-bottom--tablet-down">
+      <span class="image lazyload-image social-proof__icon" style="max-width: 157px; max-height: 160px;"><span class="lazyload-image__placeholder" style="padding-bottom: 101.910%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/polaris/spot-rocket-e71c34237035abb272833d5fbc827896c939369d0976656cebf3cb186bc67fbd.svg" alt="" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/polaris/spot-rocket-e71c34237035abb272833d5fbc827896c939369d0976656cebf3cb186bc67fbd.svg" alt="" /></noscript></span></span>
+
+      <div class="social-proof__feature-text">
+        <h3 class="block__heading heading--4 social-proof__heading">Largura de banda, inventário de produtos e dados de clientes ilimitados
+</h3>
+        <p class="block__cta"><a class="social-proof__link" href="/online/solucoes-de-ecommerce#products">Recursos de inventário</a></p>
+      </div>
+</div></div>
+  <div class="grid__item grid__item--tablet-up-half grid__item--desktop-up-third">
+    <div class="block social-proof__feature gutter-bottom--half gutter-bottom--tablet-down">
+      <span class="image lazyload-image social-proof__icon" style="max-width: 152px; max-height: 155px;"><span class="lazyload-image__placeholder" style="padding-bottom: 101.970%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/polaris/spot-marketing-daa226dc4ccdbcf9b787d930d0350444aaac58f99daed2a3c6472d0e851f3bfe.svg" alt="" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/polaris/spot-marketing-daa226dc4ccdbcf9b787d930d0350444aaac58f99daed2a3c6472d0e851f3bfe.svg" alt="" /></noscript></span></span>
+
+      <div class="social-proof__feature-text">
+        <h3 class="block__heading heading--4 social-proof__heading">Venda em novos canais, tais como Pinterest e&nbsp;Amazon</h3>
+        <p class="block__cta"><a class="social-proof__link" href="/canais">Canais de vendas</a></p>
+      </div>
+</div></div>
+  <div class="grid__item grid__item--tablet-up-half grid__item--desktop-up-third">
+    <div class="block social-proof__feature gutter-bottom--half gutter-bottom--tablet-down">
+      <span class="image lazyload-image social-proof__icon" style="max-width: 152px; max-height: 155px;"><span class="lazyload-image__placeholder" style="padding-bottom: 101.970%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/polaris/spot-cards-a1cb3b5d84a6647756d26dc7c07bd29e74291dddeb86b6856d726b9eaf1cce2f.svg" alt="" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/polaris/spot-cards-a1cb3b5d84a6647756d26dc7c07bd29e74291dddeb86b6856d726b9eaf1cce2f.svg" alt="" /></noscript></span></span>
+
+      <div class="social-proof__feature-text">
+          <h3 class="block__heading heading--4 social-proof__heading">Mais de 100 gateways de pagamento internacionais compatíveis
+</h3>
+          <p class="block__cta"><a class="social-proof__link" href="/gateways-de-pagamento">100+ gateways de pagamento</a></p>
+      </div>
+</div></div>
+  <div class="grid__item grid__item--tablet-up-half grid__item--desktop-up-third">
+    <div class="block social-proof__feature gutter-bottom--half gutter-bottom--tablet-down">
+        <span class="image lazyload-image social-proof__icon" style="max-width: 157px; max-height: 160px;"><span class="lazyload-image__placeholder" style="padding-bottom: 101.910%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/polaris/spot-globe-1fa8522b395c9ab5a20394fdac4b1adb96bc2ec0cca69a6c97874c2a2e76f47b.svg" alt="" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/polaris/spot-globe-1fa8522b395c9ab5a20394fdac4b1adb96bc2ec0cca69a6c97874c2a2e76f47b.svg" alt="" /></noscript></span></span>
+
+        <div class="social-proof__feature-text">
+            <h3 class="block__heading heading--4 social-proof__heading">Automatize seu processamento de pedidos com aplicativos de frete de&nbsp;terceiros
+</h3>
+            <p class="block__cta"><a class="social-proof__link" href="https://apps.shopify.com/categories/shipping">Aplicativos e integrações de frete</a></p>
+        </div>
+</div></div>
+  <div class="grid__item grid__item--tablet-up-half grid__item--desktop-up-third">
+    <div class="block social-proof__feature gutter-bottom--half gutter-bottom--tablet-down">
+      <span class="image lazyload-image social-proof__icon" style="max-width: 152px; max-height: 155px;"><span class="lazyload-image__placeholder" style="padding-bottom: 101.970%"><img data-sizes="100vw" data-srcset="https://cdn.shopify.com/assets2/polaris/spot-support-04397c36a03ee7fd0500ebe66ed2a8f4042de4a3732df3eca44adac1396fe885.svg" alt="" class="lazyload" /><noscript><img sizes="100vw" srcset="https://cdn.shopify.com/assets2/polaris/spot-support-04397c36a03ee7fd0500ebe66ed2a8f4042de4a3732df3eca44adac1396fe885.svg" alt="" /></noscript></span></span>
+
+      <div class="social-proof__feature-text">
+          <h3 class="block__heading heading--4 social-proof__heading">Nossa equipe de atendimento ao cliente está à disposição</h3>
+
+          <p class="block__cta"><a class="social-proof__link" href="mailto:atendimento@shopify.com">atendimento@shopify.com</a></p>
+      </div>
+</div></div></div>
+</section></section>
+
+      <section class="section footer-signup background-light">
+  <div class="grid">
+    <div class="grid__item grid__item--desktop-up-half">
+      <div class="section-heading gutter-bottom--reset text-center--tablet-down">
+        <h2 class="section-heading__heading heading--2">Comece seu <span class="color-primary">teste grátis</span> de 14 dias hoje mesmo!
+</h2>
+</div></div>
+      <div class="grid__item grid__item--desktop-up-5 grid__item--desktop-up-offset-1">
+        
+<form class="js-signup-inline marketing-form--inline gutter-bottom--half" novalidate="novalidate" action="https://app.shopify.com/services/signup/setup" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="marketing-input-wrapper marketing-input-button-pair"><div class="marketing-input-button__field-wrapper"><label class="marketing-input-button-pair__input"><span class="marketing-label marketing-label--in-field marketing-label--floating">E-mail</span><input placeholder="Insira seu e-mail" class="marketing-input-button-pair__input marketing-input marketing-input--floating" type="email" name="signup[email]" /></label><button class="marketing-button marketing-form__button marketing-input-button-pair__button " name="button" data-ga-event="Email capture signup" data-ga-action="CTA button click" type="submit">Começar</button></div><span class="marketing-form__messages"></span></div>
+</form>
+  <p class="text-minor gutter-bottom--reset text-center--tablet-down text-right--desktop-up marketing-form__fallback-cta text-center">Sem nenhum risco nem necessidade de cartão de crédito.</p>
+
+</div></div></section>
+
+  </main>
+    
+
+  <footer class="footer--main" id="ShopifyMainFooter" role="contentinfo">
+    <div class="footer-top">
+  <div class="grid">
+    <div class="grid__item">
+        <div class="footer-nav">
+            <a href="/quem-somos">Sobre</a>
+            <a href="/sitemap">Mapa do site</a>
+        </div>
+</div>
+    
+      <div class="grid__item grid__item--tablet-up-quarter grid__item--desktop-up-2">
+  <h3 class="footer-heading heading--5 ">E-commerce</h3>
+
+  <a class="footer-link " href="/loja-virtual">Loja virtual</a>
+  <a class="footer-link " href="/plataforma-de-e-commerce">Plataforma de e-commerce</a>
+  <a class="footer-link " href="/sites-de-compras">Sites de compras</a>
+  <a class="footer-link " href="/loja-online">Venda online</a>
+  <a class="footer-link " href="/blog/topics/seo">SEO</a>
+</div>
+<div class="grid__item grid__item--tablet-up-quarter grid__item--desktop-up-2 footer-column--nameless">
+  <a class="footer-link " href="/blog/topics/como-criar-um-blog">Crie um blog</a>
+  <a class="footer-link " href="/blog/topics/redes-sociais">Redes sociais</a>
+  <a class="footer-link " href="/dropshipping">Dropshipping</a>
+  <a class="footer-link " href="/dominios">Dominios</a>
+  <a class="footer-link " href="/ferramentas">Ferramentas</a>
+  <a class="footer-link " href="/vender/roupas">Venda roupas</a>
+</div>
+<div class="grid__item grid__item--tablet-up-quarter grid__item--desktop-up-2 footer-column--nameless">
+  <a class="footer-link " href="/ferramentas/gerador-nomes-para-empresas">Gerador de nomes</a>
+  <a class="footer-link " href="/facebook">Venda no Facebook</a>
+  <a class="footer-link " href="/ferramentas/criar-logotipo">Criar Logotipo</a>
+  <a class="footer-link " href="/burst">Banco de imagens grátis</a>
+  <a class="footer-link " href="/botao-de-compra">Venda no seu blog</a>
+  <a class="footer-link " href="/blog/topics/como-vender-pela-internet">Venda pela internet</a>
+</div>
+
+</div></div>
+
+  <div class="footer-bottom">
+  <div class="grid">
+    <div class="grid__item grid__item--tablet-up-2 footer-bottom__social text-center--mobile">
+      <a class="footer-social__icon " target="_blank" rel="me noopener" data-ga-event="Social" data-ga-action="Facebook" data-ga-label="Footer" href="https://www.facebook.com/shopify"><svg class="icon" aria-labelledby="icon-social-facebook-1-title" role="img"><title id="icon-social-facebook-1-title">Facebook</title> <use xlink:href="#social-facebook" /> </svg></a>
+      <a class="footer-social__icon " target="_blank" rel="me noopener" data-ga-event="Social" data-ga-action="Twitter" data-ga-label="Footer" href="https://twitter.com/shopify"><svg class="icon" aria-labelledby="icon-social-twitter-2-title" role="img"><title id="icon-social-twitter-2-title">Twitter</title> <use xlink:href="#social-twitter" /> </svg></a>
+      <a class="footer-social__icon " target="_blank" rel="me noopener" data-ga-event="Social" data-ga-action="YouTube" data-ga-label="Footer" href="https://www.youtube.com/user/shopify"><svg class="icon" aria-labelledby="icon-social-youtube-3-title" role="img"><title id="icon-social-youtube-3-title">YouTube</title> <use xlink:href="#social-youtube" /> </svg></a>
+      <a class="footer-social__icon " target="_blank" rel="me noopener" data-ga-event="Social" data-ga-action="Instagram" data-ga-label="Footer" href="https://www.instagram.com/shopify"><svg class="icon" aria-labelledby="icon-social-instagram-4-title" role="img"><title id="icon-social-instagram-4-title">Instagram</title> <use xlink:href="#social-instagram" /> </svg></a>
+      <a class="footer-social__icon " target="_blank" rel="me noopener" data-ga-event="Social" data-ga-action="LinkedIn" data-ga-label="Footer" href="https://www.linkedin.com/company/shopify"><svg class="icon" aria-labelledby="icon-social-linkedin-5-title" role="img"><title id="icon-social-linkedin-5-title">LinkedIn</title> <use xlink:href="#social-linkedin" /> </svg></a>
+      <a class="footer-social__icon " target="_blank" rel="me noopener" data-ga-event="Social" data-ga-action="Pinterest" data-ga-label="Footer" href="https://www.pinterest.com/shopify"><svg class="icon" aria-labelledby="icon-social-pinterest-6-title" role="img"><title id="icon-social-pinterest-6-title">Pinterest</title> <use xlink:href="#social-pinterest" /> </svg></a>
+      <a class="footer-social__icon " target="_blank" rel="me noopener" data-ga-event="Social" data-ga-action="Plus" data-ga-label="Footer" href="https://plus.google.com/+shopify"><svg class="icon" aria-labelledby="icon-social-plus-7-title" role="img"><title id="icon-social-plus-7-title">Google Plus</title> <use xlink:href="#social-plus" /> </svg></a>
+      <a class="footer-social__icon " target="_blank" rel="me noopener" data-ga-event="Social" data-ga-action="Snapchat" data-ga-label="Footer" href="https://www.snapchat.com/add/shopify"><svg class="icon" aria-labelledby="icon-social-snapchat-8-title" role="img"><title id="icon-social-snapchat-8-title">Snapchat</title> <use xlink:href="#social-snapchat" /> </svg></a>
+</div>
+    <div class="grid__item grid__item--tablet-up-4 footer-bottom__links text-center--mobile text-right--tablet-up">
+      
+    <a rel="nofollow" href="/legal/terms">Termos de serviço</a>
+    <a rel="nofollow" href="/legal/privacy">Política de privacidade</a>
+    <div class="footer-country-select"><div class="popover-wrapper js-popover footer-country-select__popover" data-position="top" data-toggle-only-on-click="true"><button type="button" class="popover-trigger footer-country-select__trigger" data-ga-event="Footer" data-ga-label="CountrySelector"><svg class="icon footer-country-select__globe" aria-hidden="true" focusable="false"> <use xlink:href="#globe-simple" /> </svg><span class="footer-country-select__text">Brasil</span><span class="visuallyhidden">Altere seu país ou região</span><svg class="icon footer-country-select__arrow" aria-hidden="true" focusable="false"> <use xlink:href="#nav-arrow-down" /> </svg></button><div class="popover"><ul class="popover-content footer-country-select__content"><li class="footer-country-select__country"><a href="https://www.shopify.com/online">USA</a></li><li class="footer-country-select__country"><a href="https://www.shopify.ca/online">Canada (English)</a></li><li class="footer-country-select__country"><a href="https://fr.shopify.ca/site-de-vente-en-ligne">Canada (Français)</a></li><li class="footer-country-select__country"><a href="https://www.shopify.com.au/online">Australia</a></li><li class="footer-country-select__country"><a href="https://pt.shopify.com/online">Brasil</a></li><li class="footer-country-select__country"><a href="https://www.shopify.de/onlineshop-erstellen">Deutschland</a></li><li class="footer-country-select__country"><a href="https://www.shopify.es/online">España</a></li><li class="footer-country-select__country"><a href="https://www.shopify.com.mx/online">México</a></li><li class="footer-country-select__country"><a href="https://www.shopify.com.co/online">Colombia</a></li><li class="footer-country-select__country"><a href="https://es.shopify.com/online">Español (Intl.)</a></li><li class="footer-country-select__country"><a href="https://fr.shopify.com/site-de-vente-en-ligne">France</a></li><li class="footer-country-select__country"><a href="https://www.shopify.hk/online">Hong Kong</a></li><li class="footer-country-select__country"><a href="https://www.shopify.ie/online">Ireland</a></li><li class="footer-country-select__country"><a href="https://www.shopify.in/online">India</a></li><li class="footer-country-select__country"><a href="https://www.shopify.co.id/online">Indonesia</a></li><li class="footer-country-select__country"><a href="https://it.shopify.com/online">Italia</a></li><li class="footer-country-select__country"><a href="https://www.shopify.jp/online">日本</a></li><li class="footer-country-select__country"><a href="https://www.shopify.my/online">Malaysia</a></li><li class="footer-country-select__country"><a href="https://www.shopify.co.nz/online">New Zealand</a></li><li class="footer-country-select__country"><a href="https://www.shopify.com.ng/online">Nigeria</a></li><li class="footer-country-select__country"><a href="https://www.shopify.com.ph/online">Philippines</a></li><li class="footer-country-select__country"><a href="https://ru.shopify.com/online">Russia</a></li><li class="footer-country-select__country"><a href="https://www.shopify.com.sg/online">Singapore</a></li><li class="footer-country-select__country"><a href="https://www.shopify.co.za/online">South Africa</a></li><li class="footer-country-select__country"><a href="https://www.shopify.co.uk/online">United Kingdom</a></li></ul></div></div></div>
+
+</div></div></div>
+</footer>
+
+</div>
+
+
+
+    <script>
+  window.App = window.App || {};
+  window.App.config = {
+    signupHost: 'app.shopify.com',
+    railsEnv: 'production',
+    debugBar: false
+  };
+</script>
+
+<script>window.I18n = window.I18n || {};
+window.I18n.data = {"modal":{"home":"Início","close":"Fechar"},"signup":{"header":"Comece a sua avaliação grátis do Shopify de %{trial_length} dias","create_now":"Crie a sua loja","tooltip":"Comece a sua avaliação grátis do Shopify de %{trial_length} dias hoje mesmo!","labels":{"email":"E-mail","password":"Senha","shop_name":"Nome da loja"},"placeholders":{"shop_name":"Nome da sua loja","email":"E-mail","password":"Senha"},"checking":"Checando...","success_messages":{"email":"Entendi","password":"Ficou ótimo","shop_name":"Esse nome está disponível!"},"details":{"shop_name":"Se você for o dono da loja, pode \u003ca href=\\\"https://%{admin}/admin\\\"\u003eacessá-la aqui\u003c/a\u003e"},"store_address_suffix":".myshopify.com","hint_messages":{"email_typo_html":"Você quis dizer \u003cbutton type=\"button\" data-bind-event-click=\"%{on_click}\"\u003e%{suggestion}\u003c/button\u003e?"}},"forms":{"errors":{"throttled":"Excesso de tentativas do mesmo IP, tente novamente mais tarde.","global":{"invalid":"Digite um e-mail válido","generic":"Desculpe, algo deu errado. Por favor, tente novamente mais tarde.","required":"Campo obrigatório.","throttled":"Excesso de tentativas do mesmo IP, tente novamente mais tarde."},"shop_name":{"empty":"Digite o nome da sua loja","minlength":"O nome da sua loja deve ter pelo menos 4 caracteres","maxlength":"O nome da sua loja não pode ter mais de 60 caracteres","existingAdmin":"Já existe uma loja com esse nome. Se você for o dono da loja, você pode acessá-la \u003ca href='https://%{err}/admin'\u003eaqui\u003c/a\u003e","message":"%{err.message}","matchesPassword":"O nome da sua loja não pode ser igual à sua senha","disallowed":"O nome da sua loja não pode conter a palavra \u003cstrong\u003e%{err}\u003c/strong\u003e. Tente outro nome."},"email":{"empty":"Digite um e-mail","invalid":"Digite um e-mail válido","member_exists":"Você já está cadastrado nesta lista","generic":"Desculpe, algo deu errado. Por favor, tente novamente mais tarde."},"password":{"empty":"Digite uma senha","minlength":"A senha deve ter pelo menos 5 caracteres","spaces":"A senha não pode começar ou terminar com um espaço"}}},"online":{"examples":{"modal":{"nav_next":"Próximo","nav_prev":"Anterior","cta_title_html":"Comece hoje a sua avaliação gratuita de %{trial_length} dias!","cta_button":"Comece já","themes_cta_button":"Comece com este tema"}}},"home":{"login":{"page_title":"Login — Shopify","meta_description":"","log_in_heading":"Entrar na sua loja da Shopify","email_label":"E-mail","password_label":"Senha","store_address_label":"Endereço da loja virtual","store_address_suffix":".myshopify.com","store_address_placeholder":"your-store","remember_label":"Lembrar senha","forgot":"Esqueceu?","forgot_label":"Esqueceu sua senha?","log_in":"Entrar","login_suggestion":{"part_1":"Você também pode fazer login adicionando","slash_admin":"/admin","part_2":"no final do seu endereço myshopify.com.","example":"Exemplo:","example_url":"http://examplestore.myshopify.com/admin"},"errors":{"no_match":"O e-mail ou senha que você inseriu é incorreto.","subdomain":{"empty":"Digite o endereço da sua loja.","suggest":"Você quis dizer %{err.message}?","invalid":"O endereço que você inseriu é incorreto. Procure o e-mail que enviamos quando você criou a sua loja para encontrar o endereço.","multiple":"Você tem mais de uma loja cadastrada com o seu e-mail. Digite o endereço da sua loja para entrar."},"email":{"empty":"Digite um e-mail","invalid":"Digite um e-mail válido"},"password":{"empty":"Digite uma senha","minlength":"A senha deve ter pelo menos 5 caracteres","spaces":"A senha não pode conter espaços"},"generic":{"invalid":"O e-mail ou senha que você inseriu é incorreto.","throttled":"Houve demasiadas tentativas de login no seu IP. Por favor, tente novamente mais tarde."}},"multiple_domains":"Você tem mais de uma loja?","supplemental":{"kit":{"heading_html":"Relaxe e deixe o Kit fazer o trabalho de marketing por você","link_html":"Comece a usar o Kit hoje"},"plus":{"heading_html":"Você tem uma loja com\u003cbr\u003e alto volume de vendas?","link_html":"Descubra a nossa solução para grandes empresas"},"messenger":{"heading_html":"Inicie a conversa\u0026nbsp;com o Facebook\u0026nbsp;Messenger e entre em contato com seus clientes instantaneamente.","link_html":"Inicie a conversa"}}},"forgot_password":{"errors":{"email":{"empty":"Digite um e-mail","error":"Desculpe, algo deu errado. Por favor, verifique o e-mail que você inseriu.","throttled":"Houve demasiadas solicitações do seu IP. Por favor, tente novamente mais tarde."}}}},"activemodel":{"errors":{"messages":{"ajax":"Oops! Something went wrong submitting your form. Please try again later.","bad_protocol":"We'll need a url starting with %{protocols}","bad_uri":"We'll need a valid url","email":"We'll need a valid email address"}}},"app_install":{"messages":{"success":"Thanks, you will receive a download link shortly.","malformed_error":"Something about that phone number doesn’t look quite right.","generic_error":"Sorry, something went wrong, please try again shortly.","empty":"Please enter your phone number."}},"api_banner":{"download":"Download","send":"Enviar link","title":"App da Shopify","description":"Administre sua empresa onde você estiver","open":"Aberto"},"gold":{"index":{"lead_form":{"errors":{"company":{"empty":"Please enter your business name."},"email":{"empty":"Please enter a business email address.","invalid":"Please enter a valid email address.","generic":"Sorry, something went wrong. Please try again later."},"first_name":{"empty":"Please enter your first name."},"last_name":{"empty":"Please enter your last name."},"phone":{"empty":"Please enter your mobile number"},"city":{"empty":"Please enter your city"}},"heading":"Share your details and we will get in touch with you.","email":"Business email","company":"Business name","first_name":"Your first name","last_name":"Your last name","phone":"Mobile number","city":"City / town","URL":"Your website URL","00Nc0000000tWYL":"Partner Agency Name","00Nc0000000tWYO":"Partner Referral Link","00Nc0000000tWYQ":"Feature Interest","00Nc0000000tWYK":"How will you close this deal","first_radio_group":{"label":"Are you an existing Shopify merchant?","opt1":"Yes","opt2":"No"},"second_radio_group":{"label":"What is your annual revenue volume?","opt1":"₹ 0 - 50 Lacs","opt2":"₹ 50 Lac +","opt3":"₹ 3 Crores +","opt4":"₹ 6 Crores +","opt5":"₹ 12 Crores +","others":"Other"},"how_to_close_deal":{"opt1":"I plan to close the deal on my own (without the Shopify Gold Sales Team’s assistance).\n","opt2":"I’d like the Shopify Gold Sales Team to work with me to sell Shopify Gold to this client.\n","opt3":"I’d like to have the Shopify Gold Sales Team work directly with this client without my involvement.\n"},"submit":"Submit"}}},"sponsorships":{"forms":{"errors":{"upload[file]":{"wrong_file_type":"The wrong file type was chosen. Please choose a PDF.","error":"There was an unexpected error with your upload. Please send your PDF to sponsorships@shopify.com."},"event_start_date":{"format":"Invalid date. Try “mm/dd/yyyy”.","late":"Please enter a later date."},"event_end_date":{"format":"Invalid date. Try “mm/dd/yyyy”.","late":"Please enter a later date."},"phone":{"format":"Invalid phone number. Try “xxx-xxx-xxxx”."},"attendee_count":{"format":"Invalid number."},"global":{"generic":"Sorry, an unexpected issue occured. Our developers have been made aware of the issue. In the meantime, please email your request to sponsorships@shopify.com.","invalid":"Please enter a valid email address","required":"This field is required."}},"labels":{"file":"File: %{filename}"}}}};
+window.I18n.globals = {"total_blog_subscribers":"446,005","trial_length":14,"current_year":"2018","supported_languages":"50","total_active_users":"1.000.000","total_apps":"2.400","total_countries":"175","total_countries_partners":50,"total_employees":"3.000","total_experts":"780","total_gateways":"100","total_gmv_billions":"72","total_stores":"600.000","total_themes":"100","uptime":"99,98%","current_domain":"pt.shopify.com","lowest_swipe_rate":"1,5%"};
+</script>
+
+
+  <script src="https://cdn.shopify.com/assets2/bundles/runtime-7ac49c3188caf4aa40e9c569ff604f48018e74ea13428fe90a2b05bf59c66d3a.js"></script>
+<script src="https://cdn.shopify.com/assets2/bundles/vendor-3f47155f97ac021cc98fa8030ff2c014c3fbe8f9ebf0f525c6759148b1e3a108.js"></script>
+<script src="https://cdn.shopify.com/assets2/bundles/manifests/online/overview-7640c3a02f65eb7fa47144c2df93eb4ed895824c5cb41642928a1945441f2a95.js"></script>
+  
+  
+<img height="0" width="0" style="display: none" alt="" src="https://bat.bing.com/action/0?ti=5038399&amp;Ver=2" />
+
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1904241839800487');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="0" width="0" style="display: none" alt="" src="https://www.facebook.com/tr?id=1904241839800487&amp;ev=PageView&amp;noscript=1" />
+</noscript>
+
+<script src="https://js.hs-scripts.com/442636.js" id="hs-script-loader" async="async" defer="defer"></script>
+
+  <img height="0" width="0" style="display: none" alt="" src="https://upx.provenpixel.com/upx.php?upx=10792&amp;pageurl=https://pt.shopify.com/online?term=fachada&amp;Network=Search&amp;SiteTarget=&amp;mt=p&amp;adid=268752520492&amp;device=c&amp;test=&amp;adpos=1t1&amp;CampaignId=1399427445&amp;Source=%7Bportuguese:brazil%7D&amp;gclid=EAIaIQobChMI8pGJnO7E3QIVVwmRCh1POgwuEAAYASAAEgI-pfD_BwE&amp;referrer=https://www.google.com/&amp;cb=ff19701ca0282c01408c4815c0" />
+
+
+
+
+  
+
+</body>
+</html>
+
+

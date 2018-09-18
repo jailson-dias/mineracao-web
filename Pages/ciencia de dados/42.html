@@ -1,0 +1,2046 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#F4792C">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#F4792C">
+  <title>Melhores Mestrados em Ci&ecirc;ncia de Dados 2018/2019</title>
+      <meta name="description" content="Contate as Escolas - Compare 24 Mestrados em Ci&ecirc;ncia de Dados 2018/2019">
+    <link rel="stylesheet" href="//cdn03.masterstudies.com//css/ks_bootstrap.css"/>
+
+            
+  <meta name="google-signin-client_id" content="577423134153-bgnr07kp09cqa02rlic0gth4301n4cs2.apps.googleusercontent.com">
+      <link rel="stylesheet" href="//cdn01.masterstudies.com//css/main.1537268635.css"/>
+    <link rel="stylesheet" href="//cdn02.masterstudies.com//css/sprites/sprites.css"/>
+  <link rel="stylesheet" href="//cdn03.masterstudies.com//sprites/css/sprite_combined.css">
+  
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+
+    <script>
+        googletag.cmd.push(function() {
+                        googletag.defineSlot('/5803363/gmat', [[120, 240], [120, 600], [160, 600]], 'gmat')
+                .addService(googletag.pubads());
+
+                        googletag.defineSlot('/5803363/toefl_subject_specific_pages', [[120, 240], [120, 600], [160, 600]], 'toefl_subject_specific_pages')
+                .addService(googletag.pubads());
+
+                        googletag.defineSlot('/5803363/gre_subject_specific_pages', [[120, 240], [120, 600], [160, 600]], 'gre_subject_specific_pages')
+                .addService(googletag.pubads());
+
+                        googletag.defineSlot('/5803363/listing_data_science', [[120, 240], [120, 600], [160, 600]], 'listing_data_science')
+                .addService(googletag.pubads()).setTargeting("Degree", "Masterstudies | Master");
+
+                        googletag.defineSlot('/5803363/listing_data_science', [[120, 240], [120, 600], [160, 600]], 'listing_data_science_2')
+                .addService(googletag.pubads()).setTargeting("Degree", "Masterstudies | Master");
+
+                        googletag.defineSlot('/5803363/listing_data_science', [[120, 240], [120, 600], [160, 600]], 'listing_data_science_3')
+                .addService(googletag.pubads()).setTargeting("Degree", "Masterstudies | Master");
+
+                                    googletag.defineSlot('/5803363/listing_data_science', [300, 250], 'mobile_listing_data_science').addService(googletag.pubads()).setTargeting("DegreeMobile", "Masterstudies | Master");
+                        googletag.pubads().enableSingleRequest();
+            googletag.pubads().collapseEmptyDivs();
+            googletag.enableServices();
+        });
+    </script>
+  
+  <script type="text/javascript">
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      
+              
+      ga('create', 'UA-3779280-55', {
+          'cookieDomain': 'none'           , allowLinker: true
+              });
+
+      
+      ga('send', 'pageview');
+
+             // Tracking
+        
+              
+      ga('create', 'UA-3779280-67', {
+          'cookieDomain': 'auto'           , allowLinker: true
+                  , name: 't2'
+              });
+
+      
+      ga('t2.send', 'pageview');
+
+             // Tracking
+                </script>
+
+      <link rel="canonical" href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/" />
+              <link rel="alternate" hreflang="pt" href="https://www.master-mestrado.com/Mestrado/Ci%C3%AAncia-de-Dados/" />
+          <link rel="alternate" hreflang="pt-BR" href="https://www.masterstudies.com.br/Mestrado/Ci%C3%AAncia-de-Dados/" />
+          <link rel="alternate" hreflang="pt-PT" href="https://www.masterstudies.pt/Mestrado/Ci%C3%AAncia-de-Dados/" />
+      
+  
+        <link rel="next" href="https://www.masterstudies.com.br/Mestrado/Ci%C3%AAncia-de-Dados/?page=2" />
+  
+
+    </head>
+<body class=" ">
+<!--header-->
+<!--first navbav-->
+
+
+ <nav class="navbar navbar-default topnav hidden-xs" role="navigation" >
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-12">
+        <div class="first-nav ">
+          
+          <div class="navbar-header">
+
+            <span ><ul class="partner-sites nav navbar-nav navbar-left"></ul></span>
+            <!-- landing -->
+          </div>
+
+          <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav pull-right buttons-navbar flip">
+
+              <li class="dropdown">
+                                <button class="dropdown-toggle btn btn-default navbar-btn btn-sm navbar-languages"
+                                                  data-uri-id="{&quot;mode&quot;:&quot;all&quot;,&quot;idType&quot;:1,&quot;idSector&quot;:&quot;15612&quot;,&quot;section&quot;:&quot;listing&quot;}"
+                                                data-loaded="false"
+                        data-toggle="dropdown" type="button">
+                  <div class="flag-icon-16 br site-language-flag pull-left"></div>
+
+                  Portugu&ecirc;s (Brazil)
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                                      <li class="language-loader">
+                      <div class="text-center text-muted padding-10">
+                        <i class="fa fa-spinner fa-pulse fa-2x"   ></i>
+                      </div>
+                    </li>
+                                  </ul>
+              </li>
+
+                                                <a href="https://www.studentshub.com" class="btn btn-default navbar-btn btn-sm">Login para alunos</a>
+                
+                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li class="hidden-sm">
+                  <p class="navbar-btn ">
+                                        <a href="/account/create-new/" class="btn btn-contrast btn-sm ">
+                      Inscreva-se gratuitamente <span class="caret-right"></span>
+                    </a>
+                  </p>
+                </li>
+                          </ul>
+          </div>
+          <!--/.navbar-collapse -->
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+ 
+<!-- for image, search and second navbar-->
+<div class="container second_nav">
+  <div class="row header-logo">
+    <div class="col-sm-8">
+      <a href="https://www.masterstudies.com.br/">
+        <img src="//cdn02.masterstudies.com/img/logo/Mestrado-ms-pt-BR.png" alt="Procurar Melhores Mestrados 2018/2019 - {number:programs} Programas de Mestrado dispon&iacute;veis" height="50" />
+      </a>
+    </div>
+                  <div class="col-sm-4 hidden-xs no-padding">
+          <form method="GET" action="/search/" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Pesquisa" name="q">
+              <div class="input-group-btn">
+                <button class="btn btn-contrast" type="submit"><i class="fa fa-search"   ></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+          
+  </div>
+
+  <div class="pull-right" id="tagline">
+          <h1>Mestrados em Ci&ecirc;ncia de Dados</h1>
+      </div>
+
+
+      <nav class="navbar navbar-default navbar-inverse" role="navigation" >
+      <div class="container">
+        <div class="navbar-header visible-xs visible-sm">
+          <button type="button" class="expand-nav pull-right collapsed" data-toggle="collapse" data-target="#degree-nav" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-bars fa-2x"   ></i>
+          </button>
+                      <button type="button" class="expand-nav pull-right collapsed visible-xs" data-toggle="collapse" data-target="#search-nav" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle search</span>
+            <i class="fa fa-search fa-2x"   ></i>
+          </button>
+            
+
+          <div class="xs-nav-entries visible-xs">
+                          <a class="pull-left" href="https://www.masterstudies.com.br/Mestrado/">Mestrados</a>
+            
+          </div>
+          <div class="xs-nav-entries visible-sm pipe">
+                          <a class="pull-left" href="https://www.masterstudies.com.br/Mestrado/">Mestrados</a>
+                          <a class="pull-left" href="https://www.masterstudies.com.br/Mestrado-em-Ci&ecirc;ncias-(MSc)/">Mestrados em Ci&ecirc;ncias</a>
+            
+          </div>
+
+        </div>
+
+                  <div class="navbar-collapse collapse search-nav visible-xs visible-sm" id="search-nav">
+            <ul class="nav navbar-nav">
+              <li class="search-xs">
+                <form method="GET" action="/search/" role="search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <div class="input-group-btn">
+                      <button class="btn btn-contrast" type="submit"><i class="fa fa-search"   ></i></button>
+                    </div>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </div>
+        
+        <div class="navbar-collapse collapse" id="degree-nav">
+
+          <ul class="nav navbar-nav pipe">
+                                          <li class="hidden-xs hidden-sm">
+                  <a href="https://www.masterstudies.com.br/Mestrado/">Mestrados</a>
+                </li>
+                                                        <li class=" hidden-sm">
+                  <a href="https://www.masterstudies.com.br/Mestrado-em-Ci&ecirc;ncias-(MSc)/">Mestrados em Ciências</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.masterstudies.com.br/Mestrado-em-Ci&ecirc;ncias-Humanas-(MA)/">Mestrados em Humanas</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.academiccourses.com.br/Cursos/">Cursos</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.onlinestudies.com.br/Mestrado/">Cursos com diploma online</a>
+                </li>
+                                                        <li class=" ">
+                  <a href="https://www.masterstudies.com.br/universidades/">Universidades por país</a>
+                </li>
+                                    </ul>
+
+          <ul class="nav navbar-nav visible-xs">
+
+            <li>
+              <a href="https://www.studentshub.com"> Student sign in</a>
+            </li>
+            <li>
+              <a href="/account/create-new/">Inscreva-se gratuitamente</a>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle navbar-languages"
+                                  data-uri-id="{&quot;mode&quot;:&quot;all&quot;,&quot;idType&quot;:1,&quot;idSector&quot;:&quot;15612&quot;,&quot;section&quot;:&quot;listing&quot;}"
+                                  data-loaded="false"
+                 data-toggle="dropdown">
+                Idiomas <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                                  <li class="language-loader">
+                    <div class="text-center text-muted padding-10">
+                      <i class="fa fa-spinner fa-pulse fa-2x"   ></i>
+                    </div>
+                  </li>
+                              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Diplomas <span class="caret"></span></a>
+              <ul class="dropdown-menu partner-sites-mobile"></ul>
+            </li>
+          </ul>
+
+
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </nav>
+  
+</div>
+
+<!-- end image, search and second navbar-->
+
+
+    <script type="application/ld+json">
+
+        [{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em Ci\u00eancia de Dados","duration":"P2Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em Ci\u00eancia de Dados-Austr\u00e1lia-Melbourne","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Melbourne"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-of-Data-Science\/Austr\u00e1lia\/RMIT-Royal-Melbourne-Institute-of-Technology\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-of-Data-Science\/Austr\u00e1lia\/RMIT-Royal-Melbourne-Institute-of-Technology\/","price":"27840","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"RMIT - Royal Melbourne Institute of Technology","description":"One of Australia's original tertiary institutions, RMIT University enjoys an international reputation for excellence in professional and vocational education, applied research, and engagement with the needs of industry and the community.","address":[{"@type":"PostalAddress","streetAddress":"124 La Trobe Street","addressLocality":"Melbourne","postalCode":"3000","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Austr\u00e1lia\/RMIT-Royal-Melbourne-Institute-of-Technology\/"},"startDate":"2019-02"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em Ci\u00eancia de Dados","duration":"P2Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em Ci\u00eancia de Dados-Austr\u00e1lia-Melbourne","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Melbourne"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-of-Data-Science\/Austr\u00e1lia\/RMIT-Royal-Melbourne-Institute-of-Technology\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-of-Data-Science\/Austr\u00e1lia\/RMIT-Royal-Melbourne-Institute-of-Technology\/","price":"27840","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"RMIT - Royal Melbourne Institute of Technology","description":"One of Australia's original tertiary institutions, RMIT University enjoys an international reputation for excellence in professional and vocational education, applied research, and engagement with the needs of industry and the community.","address":[{"@type":"PostalAddress","streetAddress":"124 La Trobe Street","addressLocality":"Melbourne","postalCode":"3000","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Austr\u00e1lia\/RMIT-Royal-Melbourne-Institute-of-Technology\/"},"startDate":"2019-07"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em Ci\u00eancia de Dados Computacionais (MSc)","duration":"P2Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em Ci\u00eancia de Dados Computacionais (MSc)-It\u00e1lia-Bolzano","address":{"@type":"PostalAddress","addressCountry":"It\u00e1lia","addressLocality":"Bolzano"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-in-Computational-Data-Science-(MSc)\/It\u00e1lia\/Free-University-of-Bozen-Bolzano\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-in-Computational-Data-Science-(MSc)\/It\u00e1lia\/Free-University-of-Bozen-Bolzano\/","price":"1346","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"Free University of Bozen - Bolzano","description":"The Free University of Bozen-Bolzano is located in one of the most fascinating European regions, at the crossroads between the German-speaking and Italian economies and cultures. Its trilingualism in teaching and research, its high level of internationalisation as well as an ideal study environment guaranteed by its excellent facilities are some of the reasons why unibz regularly reaches top positions in national and international rankings.","address":[{"@type":"PostalAddress","streetAddress":"Free University of Bozen Bolzano\r\npiazza Universit\u00e0, 1\r\n\r\n","addressLocality":"Bolzano","postalCode":"39100","addressCountry":"It\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/It\u00e1lia\/Free-University-of-Bozen-Bolzano\/"},"startDate":"2018-10"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Universidade de Illinois mestre em ci\u00eancia da computa\u00e7\u00e3o na ci\u00eancia dos dados","location":{"@type":"Place","name":"Universidade de Illinois mestre em ci\u00eancia da computa\u00e7\u00e3o na ci\u00eancia dos dados-EUA-USA Online","address":{"@type":"PostalAddress","addressCountry":"EUA","addressLocality":"USA Online"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.onlinestudies.com.br\/University-of-Illinois-Master-of-Computer-Science-in-Data-Science\/Estados-Unidos\/Coursera\/","offers":{"@type":"Offer","url":"https:\/\/www.onlinestudies.com.br\/University-of-Illinois-Master-of-Computer-Science-in-Data-Science\/Estados-Unidos\/Coursera\/","price":"19200","priceCurrency":"USD"},"organizer":{"@type":"CollegeOrUniversity","name":"Coursera","description":"Coursera is an education platform that partners with top universities and organizations worldwide, to offer courses online for anyone to take, for free.","address":[{"@type":"PostalAddress","addressLocality":"USA Online","addressCountry":"EUA"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Estados-Unidos\/Coursera\/"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado Em Ci\u00eancia De Dados","location":{"@type":"Place","name":"Mestrado Em Ci\u00eancia De Dados-EUA-Newark","address":{"@type":"PostalAddress","addressCountry":"EUA","addressLocality":"Newark"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-of-Science-in-Data-Science\/Estados-Unidos\/New-Jersey-Institute-of-Technology\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-of-Science-in-Data-Science\/Estados-Unidos\/New-Jersey-Institute-of-Technology\/"},"organizer":{"@type":"CollegeOrUniversity","name":"New Jersey Institute of Technology","description":"Welcome to New Jersey Institute of Technology. As the state\u2019s public polytechnic university, we continue to invest in the renewal of our existing facilities in addition to adding new spaces, with the goal of providing an exceptional teaching, learning, and living environment.","address":[],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Estados-Unidos\/New-Jersey-Institute-of-Technology\/"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em Ci\u00eancia de Dados","duration":"P1Y6M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em Ci\u00eancia de Dados-Austr\u00e1lia-Crawley","address":{"@type":"PostalAddress","addressCountry":"Austr\u00e1lia","addressLocality":"Crawley"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-of-Data-Science\/Austr\u00e1lia\/The-University-of-Western-Australia\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-of-Data-Science\/Austr\u00e1lia\/The-University-of-Western-Australia\/","price":"56000","priceCurrency":"AUD"},"organizer":{"@type":"CollegeOrUniversity","name":"The University of Western Australia","description":"Gain an insight into what life's really like at UWA and learn what our students enjoy most.","address":[{"@type":"PostalAddress","streetAddress":"Stirling Highway, 35","addressLocality":"Crawley","postalCode":"6009","addressCountry":"Austr\u00e1lia"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Austr\u00e1lia\/The-University-of-Western-Australia\/"},"startDate":"2019-01"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Master of Data Science and Business Analytics","duration":"P1Y0M0DT0H0M0S","location":{"@type":"Place","name":"Master of Data Science and Business Analytics-Espanha-Barcelona","address":{"@type":"PostalAddress","addressCountry":"Espanha","addressLocality":"Barcelona"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-of-Data-Science-and-Business-Analytics\/Espanha\/CSSS\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-of-Data-Science-and-Business-Analytics\/Espanha\/CSSS\/","price":"11000","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"Castelldefels School of Social Sciences","description":"Castelldefels School of Social Science makes significant addition to society in research, education, persuasion and interrelation.","telephone":"+34 93 116 88 21 ","address":[{"@type":"PostalAddress","name":"Castelldefels School of Social Sciences","url":"http:\/\/www.csss.es\/","telephone":"34 93 116 88 21    ","postalCode":"08007","addressLocality":"Barcelona","addressCountry":"Espanha","streetAddress":"Carrer de Balmes, 7"}],"mainEntityOfPage":"http:\/\/www.csss.es\/","url":"http:\/\/www.csss.es\/","logo":"http:\/\/cdn04.masterstudies.com\/gfx\/logo\/9914\/1490643675\/CSSS.png"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em ci\u00eancia da computa\u00e7\u00e3o na ci\u00eancia dos dados","duration":"P1Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em ci\u00eancia da computa\u00e7\u00e3o na ci\u00eancia dos dados-Holanda-Amsterd\u00e3","address":{"@type":"PostalAddress","addressCountry":"Holanda","addressLocality":"Amsterd\u00e3"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-of-Computer-Science-in-Data-Science\/Holanda\/European-Leadership-University\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-of-Computer-Science-in-Data-Science\/Holanda\/European-Leadership-University\/","price":"9000","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"European Leadership University","description":"Join a thriving community of talent and visionary companies.Together we will pioneer work-based learning for the digital economy.","address":[],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Holanda\/European-Leadership-University\/"},"startDate":"2018-11-12","endDate":"2019-11-12"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em Internet das Coisas (IoT \/ IoE)","duration":"P0Y9M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em Internet das Coisas (IoT \/ IoE)-Espanha-Spain Online","address":{"@type":"PostalAddress","addressCountry":"Espanha","addressLocality":"Spain Online"}},"inLanguage":[{"@type":"Language","name":"Spanish"}],"url":"https:\/\/www.onlinestudies.com.br\/Master-en-Internet-of-Things-(IoTIoE)\/Espanha\/Three-Points-Digital-Business-School\/","offers":{"@type":"Offer","url":"https:\/\/www.onlinestudies.com.br\/Master-en-Internet-of-Things-(IoTIoE)\/Espanha\/Three-Points-Digital-Business-School\/"},"organizer":{"@type":"CollegeOrUniversity","name":"Three Points Digital Business School","description":"No hay elecci\u00f3n: las nuevas tecnolog\u00edas ya no son un mero valor a\u00f1adido, sino que se han convertido en la \u00fanica v\u00eda para lograr la competitividad y la continuidad de las empresas. Una tendencia que no s\u00f3lo est\u00e1 operando grandes cambios en el seno de organizaciones, sino tambi\u00e9n en la sociedad del conocimiento en su conjunto.","address":[],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Espanha\/Three-Points-Digital-Business-School\/"},"startDate":"2018-10"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestre sp\u00e9cialis\u00e9\u00ae grandes an\u00e1lises periciais e m\u00e9tricas","location":{"@type":"Place","name":"Mestre sp\u00e9cialis\u00e9\u00ae grandes an\u00e1lises periciais e m\u00e9tricas-Fran\u00e7a-Troyes","address":{"@type":"PostalAddress","addressCountry":"Fran\u00e7a","addressLocality":"Troyes"}},"inLanguage":[{"@type":"Language","name":"French"}],"url":"https:\/\/www.masterstudies.com.br\/Mastere-Specialise\u00ae-Expert-Big-Analytics-et-Metriques\/Fran\u00e7a\/UTT\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Mastere-Specialise\u00ae-Expert-Big-Analytics-et-Metriques\/Fran\u00e7a\/UTT\/","price":"11500","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Technology Troyes - UTT","description":"UTT's core missions are to conduct research, deliver education & training and facilitate technology transfer. UTT is a French institution of higher education established in 1994. It is today one of the largest engineering schools in France. Over 2,500 students are registered at the University, enrolled on undergraduate, postgraduate and doctoral study programs.","telephone":"+33 (0)3 25 71 76 00","address":[{"@type":"PostalAddress","streetAddress":"12 rue Marie Curie -  CS 42060\r\n10004 Troyes CEDEX, France","addressLocality":"Troyes","postalCode":"10004","addressCountry":"Fran\u00e7a"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Fran\u00e7a\/UTT\/"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado Em Ci\u00eancia De Dados De Sa\u00fade P\u00fablica","duration":"P1Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado Em Ci\u00eancia De Dados De Sa\u00fade P\u00fablica-Fran\u00e7a-Bord\u00e9us","address":{"@type":"PostalAddress","addressCountry":"Fran\u00e7a","addressLocality":"Bord\u00e9us"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-in-Public-Health-Data-Science\/Fran\u00e7a\/University-of-Bordeaux\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-in-Public-Health-Data-Science\/Fran\u00e7a\/University-of-Bordeaux\/","price":"4500","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Bordeaux","description":"The University of Bordeaux was newly established in 2014 following the merger of three universities. Ranked among the top universities in France for the quality of its academic courses and research, it was awarded the \u201cInitiative of Excellence\u201d by the French government in 2011.","address":[{"@type":"PostalAddress","name":"","postalCode":"33 076","addressLocality":"Bordeaux","addressCountry":"Fran\u00e7a","streetAddress":"146 rue L\u00e9o Saignat"},{"@type":"PostalAddress","name":"","postalCode":"33 608","addressLocality":"Pessac","addressCountry":"Fran\u00e7a","streetAddress":"16 avenue L\u00e9on Duguit"},{"@type":"PostalAddress","name":"","postalCode":"33 405","addressLocality":"Talence","addressCountry":"Fran\u00e7a","streetAddress":"351 cours de la Lib\u00e9ration"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Fran\u00e7a\/University-of-Bordeaux\/"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado Em Ci\u00eancia De Dados De Sa\u00fade P\u00fablica","duration":"P1Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado Em Ci\u00eancia De Dados De Sa\u00fade P\u00fablica-Fran\u00e7a-Pessac","address":{"@type":"PostalAddress","addressCountry":"Fran\u00e7a","addressLocality":"Pessac"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-in-Public-Health-Data-Science\/Fran\u00e7a\/University-of-Bordeaux\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-in-Public-Health-Data-Science\/Fran\u00e7a\/University-of-Bordeaux\/","price":"4500","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Bordeaux","description":"The University of Bordeaux was newly established in 2014 following the merger of three universities. Ranked among the top universities in France for the quality of its academic courses and research, it was awarded the \u201cInitiative of Excellence\u201d by the French government in 2011.","address":[{"@type":"PostalAddress","name":"","postalCode":"33 076","addressLocality":"Bordeaux","addressCountry":"Fran\u00e7a","streetAddress":"146 rue L\u00e9o Saignat"},{"@type":"PostalAddress","name":"","postalCode":"33 608","addressLocality":"Pessac","addressCountry":"Fran\u00e7a","streetAddress":"16 avenue L\u00e9on Duguit"},{"@type":"PostalAddress","name":"","postalCode":"33 405","addressLocality":"Talence","addressCountry":"Fran\u00e7a","streetAddress":"351 cours de la Lib\u00e9ration"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Fran\u00e7a\/University-of-Bordeaux\/"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado Em Ci\u00eancia De Dados De Sa\u00fade P\u00fablica","duration":"P1Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado Em Ci\u00eancia De Dados De Sa\u00fade P\u00fablica-Fran\u00e7a-Talence","address":{"@type":"PostalAddress","addressCountry":"Fran\u00e7a","addressLocality":"Talence"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-in-Public-Health-Data-Science\/Fran\u00e7a\/University-of-Bordeaux\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-in-Public-Health-Data-Science\/Fran\u00e7a\/University-of-Bordeaux\/","price":"4500","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"University of Bordeaux","description":"The University of Bordeaux was newly established in 2014 following the merger of three universities. Ranked among the top universities in France for the quality of its academic courses and research, it was awarded the \u201cInitiative of Excellence\u201d by the French government in 2011.","address":[{"@type":"PostalAddress","name":"","postalCode":"33 076","addressLocality":"Bordeaux","addressCountry":"Fran\u00e7a","streetAddress":"146 rue L\u00e9o Saignat"},{"@type":"PostalAddress","name":"","postalCode":"33 608","addressLocality":"Pessac","addressCountry":"Fran\u00e7a","streetAddress":"16 avenue L\u00e9on Duguit"},{"@type":"PostalAddress","name":"","postalCode":"33 405","addressLocality":"Talence","addressCountry":"Fran\u00e7a","streetAddress":"351 cours de la Lib\u00e9ration"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Fran\u00e7a\/University-of-Bordeaux\/"},"startDate":"2018-09"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Gerenciamento de dados mestres e ci\u00eancia","duration":"P2Y0M0DT0H0M0S","location":{"@type":"Place","name":"Gerenciamento de dados mestres e ci\u00eancia-Alemanha-Luneburgo","address":{"@type":"PostalAddress","addressCountry":"Alemanha","addressLocality":"Luneburgo"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-Management-and-Data-Science\/Alemanha\/Leuphana-University-of-Luneburg\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-Management-and-Data-Science\/Alemanha\/Leuphana-University-of-Luneburg\/","price":"350","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"Leuphana University of Luneburg","description":"Leuphana University established Germany\u2019s first public college. Its Graduate School merges the academic demands of masters and doctorates, and its own Professional School offers highly regarded further education programmes.","address":[{"@type":"PostalAddress","streetAddress":"Leuphana University of L\u00fcneburg\nUniversit\u00e4tsallee 1","addressLocality":"L\u00fcneburg","postalCode":"D-21335","addressCountry":"Alemanha"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Alemanha\/Leuphana-University-of-Luneburg\/"},"startDate":"2018-10"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em Internet de Coisas (IoT)","duration":"P2Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em Internet de Coisas (IoT)-Fran\u00e7a-Biot","address":{"@type":"PostalAddress","addressCountry":"Fran\u00e7a","addressLocality":"Biot"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-in-Internet-of-Things-(IoT)\/Fran\u00e7a\/EURECOM\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-in-Internet-of-Things-(IoT)\/Fran\u00e7a\/EURECOM\/","price":"12000","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"EURECOM","description":"EURECOM is a Graduate school and Research Centre in Communication Systems located in the Sophia Antipolis technology park (French Riviera), a major European place for telecommunications activities.","address":[{"@type":"PostalAddress","name":"","addressLocality":"Biot","addressCountry":"Fran\u00e7a","streetAddress":"450 route des Chappes, Campus SophiaTech\n06410 Biot"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Fran\u00e7a\/EURECOM\/"},"startDate":"2018-10"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em Ci\u00eancia e Engenharia de Dados","duration":"P2Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em Ci\u00eancia e Engenharia de Dados-Fran\u00e7a-Biot","address":{"@type":"PostalAddress","addressCountry":"Fran\u00e7a","addressLocality":"Biot"}},"inLanguage":[{"@type":"Language","name":"English"}],"url":"https:\/\/www.masterstudies.com.br\/Master-in-Data-Science-and-Engineering\/Fran\u00e7a\/EURECOM\/","offers":{"@type":"Offer","url":"https:\/\/www.masterstudies.com.br\/Master-in-Data-Science-and-Engineering\/Fran\u00e7a\/EURECOM\/","price":"12000","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"EURECOM","description":"EURECOM is a Graduate school and Research Centre in Communication Systems located in the Sophia Antipolis technology park (French Riviera), a major European place for telecommunications activities.","address":[{"@type":"PostalAddress","name":"","addressLocality":"Biot","addressCountry":"Fran\u00e7a","streetAddress":"450 route des Chappes, Campus SophiaTech\n06410 Biot"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Fran\u00e7a\/EURECOM\/"},"startDate":"2018-10"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em gest\u00e3o de dados e inova\u00e7\u00e3o tecnol\u00f3gica","duration":"P1Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em gest\u00e3o de dados e inova\u00e7\u00e3o tecnol\u00f3gica-Espanha-Barcelona","address":{"@type":"PostalAddress","addressCountry":"Espanha","addressLocality":"Barcelona"}},"inLanguage":[{"@type":"Language","name":"Spanish"}],"url":"https:\/\/www.onlinestudies.com.br\/M\u00e1ster-en-Data-Management-e-Innovaci\u00f3n-Tecnol\u00f3gica\/Espanha\/OBS\/","offers":{"@type":"Offer","url":"https:\/\/www.onlinestudies.com.br\/M\u00e1ster-en-Data-Management-e-Innovaci\u00f3n-Tecnol\u00f3gica\/Espanha\/OBS\/","price":"6500","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"OBS Business School","description":"OBS Business School nace en 2006 como la primera escuela de negocios 100% online en lengua espa\u00f1ola. Se funda en el entorno del Grupo Planeta, l\u00edder mundial en la publicaci\u00f3n de contenidos para el mercado de habla hispana y con un importante know-how en e-learning, con la colaboraci\u00f3n del partner estrat\u00e9gico:","address":[{"@type":"PostalAddress","streetAddress":"OBS Business School\r\nC\/Arag\u00f3 55","addressLocality":"Barcelona","postalCode":"08015 ","addressCountry":"Espanha"},{"@type":"PostalAddress","addressLocality":"Madrid","addressCountry":"Espanha"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Espanha\/OBS\/"},"startDate":"2019-05"},{"@context":"http:\/\/schema.org\/","@type":"EducationEvent","name":"Mestrado em gest\u00e3o de dados e inova\u00e7\u00e3o tecnol\u00f3gica","duration":"P1Y0M0DT0H0M0S","location":{"@type":"Place","name":"Mestrado em gest\u00e3o de dados e inova\u00e7\u00e3o tecnol\u00f3gica-Espanha-Madrid","address":{"@type":"PostalAddress","addressCountry":"Espanha","addressLocality":"Madrid"}},"inLanguage":[{"@type":"Language","name":"Spanish"}],"url":"https:\/\/www.onlinestudies.com.br\/M\u00e1ster-en-Data-Management-e-Innovaci\u00f3n-Tecnol\u00f3gica\/Espanha\/OBS\/","offers":{"@type":"Offer","url":"https:\/\/www.onlinestudies.com.br\/M\u00e1ster-en-Data-Management-e-Innovaci\u00f3n-Tecnol\u00f3gica\/Espanha\/OBS\/","price":"6500","priceCurrency":"EUR"},"organizer":{"@type":"CollegeOrUniversity","name":"OBS Business School","description":"OBS Business School nace en 2006 como la primera escuela de negocios 100% online en lengua espa\u00f1ola. Se funda en el entorno del Grupo Planeta, l\u00edder mundial en la publicaci\u00f3n de contenidos para el mercado de habla hispana y con un importante know-how en e-learning, con la colaboraci\u00f3n del partner estrat\u00e9gico:","address":[{"@type":"PostalAddress","streetAddress":"OBS Business School\r\nC\/Arag\u00f3 55","addressLocality":"Barcelona","postalCode":"08015 ","addressCountry":"Espanha"},{"@type":"PostalAddress","addressLocality":"Madrid","addressCountry":"Espanha"}],"mainEntityOfPage":"https:\/\/www.masterstudies.com.br\/universidades\/Espanha\/OBS\/"},"startDate":"2018-09"}]
+
+    </script>
+
+
+    <div class="container listing-page">
+        <div class="row margin-top-5 main-breadcrumb">
+  <div class="col-sm-12">
+
+          <div class="pull-right flip">
+          <div class="hidden-xs addthis-container blue">
+  <div class="pull-right">
+    <a data-toggle="modal" class="addthis-modal-link" href="#linkToUsModal">
+     Link para esta p&aacute;gina
+    </a>
+  </div>
+
+  <div class="addthis_toolbox">
+    <i class="fa fa-spinner fa-pulse loading-add-this"   ></i>
+    <div class="custom_images">
+      <!--<a class="addthis_button_facebook addthis-button"><img src="//cdn01.masterstudies.com/img_new/addthis_facebook_blue.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+      <a class="addthis_button_twitter addthis-button"><img src="//cdn02.masterstudies.com/img_new/addthis_twitter_blue.png" width="18" height="18" border="0" alt="Share to Twitter" /></a>-->
+        <a class="addthis_button_facebook addthis-button"><img src="//cdn03.masterstudies.com/img_new/FB-f-Logo__blue_144_official.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+        <a class="addthis_button_twitter addthis-button"><img src="//cdn02.masterstudies.com/img_new/Twitter_Logo_Blue_official.png" width="32" height="32" border="0" alt="Share to Twitter" /></a>
+        <a class="addthis_button_more addthis-button"><img src="//cdn02.masterstudies.com/img_new/addthis_more_blue.png" width="18" height="18" border="0" alt="More..." /></a>
+      <a class="addthis_counter addthis_bubble_style"></a>
+    </div>
+  </div>
+</div>
+
+      </div>
+    
+    
+    <div class="hidden-xs">
+              <ul class="breadcrumb">
+
+                      <li>
+                              <a href="/Mestrado/">Master</a>
+                                          </li>
+                      <li>
+                              Ci&ecirc;ncia de Dados
+                                          </li>
+                  </ul>
+          </div>
+  </div>
+</div>
+
+
+
+
+<script type="application/ld+json">
+   {"@context":"http:\/\/schema.org\/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"\/Mestrado\/","name":"Master"}},{"@type":"ListItem","position":2,"item":{"name":"Ci\u00eancia de Dados"}}]}
+</script>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <header class="margin-bottom-10 col-sm-12">
+                        <h1 class="main-heading">Compare 24 Mestrados em Ci&ecirc;ncia de Dados</h1>
+                    </header>
+
+
+                </div>
+
+                <div class="row introduction">
+                    
+                    <div class="col-sm-8 col-lg-9 listingText">
+                        <p>Um mestrado pode ser feito após o termino de um programa de graduação. Para obter um mestrado, você precisa completar de 12 a 18 matérias na faculdade que geralmente envolvem a conclusão de testes e/ou de uma tese.</p><p>Contate as Escolas - Compare 24 Mestrados em Ciência de Dados 2018/2019</p>
+                    </div>
+
+
+                    <div class="col-sm-4 col-lg-3 image hidden-xs">
+                                            </div>
+                </div>
+                <div class="row read_more hide usedColor">
+                    <div class="col-sm-12">
+                        <i class="fa fa-fa fa-chevron-down"   ></i> Ler Mais
+                    </div>
+                </div>
+
+
+                                                                                            </div>
+        </div>
+    </div>
+        <div class="container listing-page">
+
+        <div class="row">
+            <h4 class="col-sm-12 hidden-xs"><b><span>24</span> Resultados em Ciência de Dados
+</b></h4>
+        </div>
+
+        <div class="row">
+            <div class="hidden-xs col-sm-3 col-lg-2">
+                                    <div class="nav-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <a class="nav-accordion-heading" role="tab" id="heading-nav-degrees" data-toggle="collapse" data-parent="#accordion" href="#collapse-nav-degrees" aria-expanded="true" aria-controls="collapse-nav-degrees">
+            Diplomas
+            <span class="pull-right">
+        <i class="fa fa-chevron-up"   ></i>
+                <i class="fa fa-chevron-down"   ></i>
+      </span>
+        </a>
+        <div id="collapse-nav-degrees" class="nav-accordion-content collapse in" role="tabpanel" aria-labelledby="heading-nav-degrees">
+            <div class="padding-10">
+                                    <a data-cookie="search_cross_degree" data-value="all" class="js-filter-setting label label-nav-default label-block" data-idType="all"
+                                              data-reload="true"
+                                                >
+                        Tudo (74)
+                    </a>
+                                    <a data-cookie="search_cross_degree" data-value="1" class="js-filter-setting label label-nav-active label-block" data-idType="1"
+                                           >
+                        Mestrados (24)
+                    </a>
+                                    <a data-cookie="search_cross_degree" data-value="26" class="js-filter-setting label label-nav-default label-block" data-idType="26"
+                                              href="https://www.masterstudies.com.br/Mestrado-em-Ci&ecirc;ncias-(MSc)/Ci&ecirc;ncia-de-Dados/"
+                                           >
+                        Mestrados em Ci&ecirc;ncias (40)
+                    </a>
+                            </div>
+        </div>
+    
+
+
+
+    <a class="nav-accordion-heading" role="tab" id="heading-nav-location" data-toggle="collapse" data-parent="#accordion" href="#collapse-nav-location" aria-expanded="true" aria-controls="collapse-nav-location">
+        Localiza&ccedil;&atilde;o
+        <span class="pull-right">
+      <i class="fa fa-chevron-up"   ></i>
+            <i class="fa fa-chevron-down"   ></i>
+    </span>
+    </a>
+    <div id="collapse-nav-location" class="nav-accordion-content collapse in" role="tabpanel" aria-labelledby="heading-nav-location">
+        <div class="padding-10">
+            
+                            <div class="btn-group margin-bottom-5">
+                    <button type="button" class="btn btn-default btn-block btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        Selecionar Pa&iacute;s <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu max-height-300 dropdown-searchable" role="menu">
+                        
+                                                    <li>
+                                <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Alemanha/">Alemanha</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Austr&aacute;lia/">Austr&aacute;lia</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Estados-Unidos/">EUA</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Espanha/">Espanha</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Fran&ccedil;a/">Fran&ccedil;a</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Holanda/">Holanda</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/It&aacute;lia/">It&aacute;lia</a>
+                            </li>
+                                                    <li>
+                                <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/R&uacute;ssia/">R&uacute;ssia</a>
+                            </li>
+                                            </ul>
+                </div>
+            
+                            
+                
+                                    </div>
+    </div>
+
+            <a class="nav-accordion-heading" role="tab" id="heading-nav-type" data-toggle="collapse" data-parent="#accordion" href="#collapse-nav-type" aria-expanded="true" aria-controls="collapse-nav-type">
+            Tipo de estudo
+            <span class="pull-right">
+      <i class="fa fa-chevron-up"   ></i>
+                <i class="fa fa-chevron-down"   ></i>
+    </span>
+        </a>
+        <div id="collapse-nav-type" class="nav-accordion-content collapse in " role="tabpanel" aria-labelledby="heading-nav-type">
+            <div class="padding-10">
+                                                            <a data-cookie="search_mode" data-value="all" class="js-filter-setting checkboxes" href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/">
+            <span class="checkbox-holder">
+              <i class="fa fa-check check-mark active"></i>
+            </span>
+                            Tudo
+                        </a>
+                                            <a data-cookie="search_mode" data-value="campus" class="js-filter-setting checkboxes" href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/">
+            <span class="checkbox-holder">
+              <i class="fa fa-check check-mark "></i>
+            </span>
+                            C&acirc;mpus
+                        </a>
+                                            <a data-cookie="search_mode" data-value="online" class="js-filter-setting checkboxes" href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/">
+            <span class="checkbox-holder">
+              <i class="fa fa-check check-mark "></i>
+            </span>
+                            Online
+                        </a>
+                                            <a data-cookie="search_mode" data-value="distance" class="js-filter-setting checkboxes" href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Ensino-&agrave;-dist&acirc;ncia/">
+            <span class="checkbox-holder">
+              <i class="fa fa-check check-mark "></i>
+            </span>
+                            Ensino &agrave; dist&acirc;ncia
+                        </a>
+                                                </div>
+        </div>
+    
+        <a class="nav-accordion-heading" role="tab" id="heading-nav-pace" data-toggle="collapse" data-parent="#accordion" href="#collapse-nav-pace" aria-expanded="true" aria-controls="collapse-nav-pace">
+        Ritmo
+        <span class="pull-right">
+      <i class="fa fa-chevron-up"   ></i>
+            <i class="fa fa-chevron-down"   ></i>
+    </span>
+    </a>
+    <div id="collapse-nav-pace" class="nav-accordion-content collapse in" role="tabpanel" aria-labelledby="heading-nav-pace">
+        <div class="padding-10">
+                            <a data-cookie="search_intensity" data-value="all" class="js-filter-setting checkboxes" href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/">
+          <span class="checkbox-holder">
+            <i class="fa fa-check check-mark active"></i>
+          </span>
+                    Tudo
+                </a>
+                            <a data-cookie="search_intensity" data-value="full_time" class="js-filter-setting checkboxes" href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/">
+          <span class="checkbox-holder">
+            <i class="fa fa-check check-mark "></i>
+          </span>
+                    Per&iacute;odo integral
+                </a>
+                            <a data-cookie="search_intensity" data-value="part_time" class="js-filter-setting checkboxes" href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Meio-Per&iacute;odo/">
+          <span class="checkbox-holder">
+            <i class="fa fa-check check-mark "></i>
+          </span>
+                    Meio Per&iacute;odo
+                </a>
+                    </div>
+    </div>
+    
+</div>                
+                <div class="text-left">
+                    <div class="dfp_ads hidden-xs">
+                        <div id='gmat'
+           style='padding-bottom:25px; text-align: center;'>
+          <script>
+              googletag.cmd.push(
+                  function() {
+                      googletag.display('gmat');
+                  });
+          </script>
+      </div>
+                  <div id='toefl_subject_specific_pages'
+           style='padding-bottom:25px; text-align: center;'>
+          <script>
+              googletag.cmd.push(
+                  function() {
+                      googletag.display('toefl_subject_specific_pages');
+                  });
+          </script>
+      </div>
+                  <div id='gre_subject_specific_pages'
+           style='padding-bottom:25px; text-align: center;'>
+          <script>
+              googletag.cmd.push(
+                  function() {
+                      googletag.display('gre_subject_specific_pages');
+                  });
+          </script>
+      </div>
+                  <div id='listing_data_science'
+           style='padding-bottom:25px; text-align: center;'>
+          <script>
+              googletag.cmd.push(
+                  function() {
+                      googletag.display('listing_data_science');
+                  });
+          </script>
+      </div>
+                  <div id='listing_data_science_2'
+           style='padding-bottom:25px; text-align: center;'>
+          <script>
+              googletag.cmd.push(
+                  function() {
+                      googletag.display('listing_data_science_2');
+                  });
+          </script>
+      </div>
+                  <div id='listing_data_science_3'
+           style='padding-bottom:25px; text-align: center;'>
+          <script>
+              googletag.cmd.push(
+                  function() {
+                      googletag.display('listing_data_science_3');
+                  });
+          </script>
+      </div>
+      </div>
+                  </div>
+
+            </div>
+            <div class="col-sm-9 col-lg-10">
+
+
+                                    <div class="row navigation-box-container">
+                        <div class="col-sm-12">
+                            <h4 class="visible-xs is-filter-toggle clearfix"><b><span>24</span> Resultados em Ciência de Dados
+</b>
+                                <small class="pull-right usedColor"><i class="fa fa-filter"   ></i>
+                                    Filter <i class="fa fa-chevron-up filter-opened"   ></i><i class="fa fa-chevron-down filter-closed"   ></i></small>
+                            </h4>
+                        </div>
+                        <div class="col-sm-12" style="position:relative;">
+
+                <div style="position:absolute;right:15px;top:-20px;line-height:2em;color:#777;" class="hidden-xs text-right">
+              Outras op&ccedil;&otilde;es dentro desta &aacute;rea de estudos
+              <div>
+                                                              <a class="usedColor" style="font-weight: bold;font-size:0.95em;" href="https://www.onlinestudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/">Online <i style="font-size:0.8em;" class="fa fa-external-link" aria-hidden="true"></i></a>
+                                                                  |
+                                            <a class="usedColor" style="font-weight: bold;font-size:0.95em;" href="https://www.academiccourses.com.br/Certificado de Pos-Graduacao/Ci&ecirc;ncia-de-Dados/">Certificados de P&oacute;s-Gradua&ccedil;&atilde;o <i style="font-size:0.8em;" class="fa fa-external-link" aria-hidden="true"></i></a>
+                                                                  |
+                                            <a class="usedColor" style="font-weight: bold;font-size:0.95em;" href="https://www.cursos-universitarios.com/Pathway-de-P&oacute;s-Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/">Pathways de P&oacute;s-Gradua&ccedil;&atilde;o <i style="font-size:0.8em;" class="fa fa-external-link" aria-hidden="true"></i></a>
+                                </div>
+          </div>
+      
+    <ul class="nav nav-tabs tab-shadow hidden-xs">
+      <li class="active">
+        <a>Programas</a>
+      </li>
+                  <li>
+             <a class="usedColor" style="color: #f4792c;" href="https://www.onlinestudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/">
+                 Online
+             </a>
+         </li>
+                    <li>
+             <a class="usedColor" style="color: #f4792c;" href="https://www.cursos-universitarios.com/Pathway-de-P&oacute;s-Gradua&ccedil;&atilde;o/Ci&ecirc;ncia-de-Dados/">
+                 Pathway
+             </a>
+         </li>
+                     </ul>
+
+    <div class="navigation-box">
+
+      
+
+
+      <div class="is-filter-setting-container">
+                  <h2 class="is-sub-filter-toggle">
+            <i class="fa fa-chevron-up filter-opened"   ></i>
+            <i class="fa fa-chevron-down filter-closed"   ></i>
+            Ci&ecirc;ncia de Dados
+          </h2>
+
+          <div class="filter-setting">
+            <ol class="breadcrumb">
+                                                <li><a href="/Mestrado/">Master</a></li>
+                                                                <li><a href="">Ci&ecirc;ncia de Dados</a></li>
+                                          </ol>
+          </div>
+        
+                  <div class="filter-setting">
+            <ul class="multicolumn list-unstyled">
+                              <li><a href="https://www.masterstudies.com.br/Mestrado/An&aacute;lise-de-Dados/">An&aacute;lise de Dados</a></li>
+                          </ul>
+          </div>
+        
+              </div>
+
+
+
+      <div class="row visible-xs">
+        <div class="col-sm-8 search-options-left ">
+          <div class="is-filter-setting-container">
+                          <h2 class="is-sub-filter-toggle">
+                <i class="fa fa-chevron-up filter-opened"   ></i>
+                <i class="fa fa-chevron-down filter-closed"   ></i>
+                                                                                                              Mestrados
+                                                            
+                            </h2>
+
+              <div class="filter-setting">
+                <h3 class="hidden-xs">Mestrado</h3>
+                                  <a data-cookie="search_cross_degree" data-value="all" class="js-filter-setting label label-default" data-idType="all"
+                                            data-reload="true"
+                                           >
+                    Tudo (74)
+                  </a>
+                                  <a data-cookie="search_cross_degree" data-value="1" class="js-filter-setting label label-primary" data-idType="1"
+                                           >
+                    Mestrados (24)
+                  </a>
+                                  <a data-cookie="search_cross_degree" data-value="26" class="js-filter-setting label label-default" data-idType="26"
+                                           href="https://www.masterstudies.com.br/Mestrado-em-Ci&ecirc;ncias-(MSc)/Ci&ecirc;ncia-de-Dados/"
+                                           >
+                    Mestrados em Ci&ecirc;ncias (40)
+                  </a>
+                              </div>
+                      </div>
+        </div>
+
+        <div class="col-sm-4 search-options-right">
+          <div class="is-filter-setting-container">
+            <h2 class="is-sub-filter-toggle">
+              <i class="fa fa-chevron-up filter-opened"   ></i>
+              <i class="fa fa-chevron-down filter-closed"   ></i>
+                              Location
+                          </h2>
+
+
+            <div class="filter-setting">
+              <h3 class="hidden-xs">Location</h3>
+
+              
+                              <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Selecionar Pa&iacute;s <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu max-height-300 dropdown-searchable" role="menu">
+                    
+                                          <li>
+                        <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Alemanha/">
+                          Alemanha
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Austr&aacute;lia/">
+                          Austr&aacute;lia
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Estados-Unidos/">
+                          EUA
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Espanha/">
+                          Espanha
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Fran&ccedil;a/">
+                          Fran&ccedil;a
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/Holanda/">
+                          Holanda
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/It&aacute;lia/">
+                          It&aacute;lia
+                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://www.masterstudies.com.br/Mestrado/Ci&ecirc;ncia-de-Dados/R&uacute;ssia/">
+                          R&uacute;ssia
+                        </a>
+                      </li>
+                                      </ul>
+                </div>
+                            
+                            
+              
+                                        </div>
+          </div>
+        </div>
+      
+                      <div class="col-sm-8 search-options-left">
+          <div class="is-filter-setting-container">
+            <h2 class="is-sub-filter-toggle">
+              <i class="fa fa-chevron-up filter-opened"   ></i>
+              <i class="fa fa-chevron-down filter-closed"   ></i>
+                                                                                                      Tudo
+                                                                                                                                                      
+              
+            </h2>
+
+            <div class="filter-setting">
+              <h3 class="hidden-xs">Study type</h3>
+                              
+                  <a data-cookie="search_mode" data-value="all" class="js-filter-setting label label-primary" href="https://www.masterstudies.com.br/Mestrado/Ciência-de-Dados/">
+                    Tudo
+                  </a>
+                
+                  <a data-cookie="search_mode" data-value="campus" class="js-filter-setting label label-default" href="https://www.masterstudies.com.br/Mestrado/Ciência-de-Dados/">
+                    C&acirc;mpus
+                  </a>
+                
+                  <a data-cookie="search_mode" data-value="online" class="js-filter-setting label label-default" href="https://www.masterstudies.com.br/Mestrado/Ciência-de-Dados/">
+                    Online
+                  </a>
+                
+                  <a data-cookie="search_mode" data-value="distance" class="js-filter-setting label label-default" href="https://www.masterstudies.com.br/Mestrado/Ciência-de-Dados/Ensino-à-distância/">
+                    Ensino &agrave; dist&acirc;ncia
+                  </a>
+                                          </div>
+          </div>
+        </div>
+                <div class="col-sm-4 search-options-right">
+          <div class="is-filter-setting-container">
+            <h2 class="is-sub-filter-toggle">
+              <i class="fa fa-chevron-up filter-opened"   ></i>
+              <i class="fa fa-chevron-down filter-closed"   ></i>
+                                                                                Tudo
+                                                                                          
+                          </h2>
+
+            <div class="filter-setting">
+              <h3 class="hidden-xs">Pace</h3>
+              
+                <a data-cookie="search_intensity" data-value="all" class="js-filter-setting label label-primary" href="https://www.masterstudies.com.br/Mestrado/Ciência-de-Dados/">Tudo</a>
+              
+                <a data-cookie="search_intensity" data-value="full_time" class="js-filter-setting label label-default" href="https://www.masterstudies.com.br/Mestrado/Ciência-de-Dados/">Per&iacute;odo integral</a>
+              
+                <a data-cookie="search_intensity" data-value="part_time" class="js-filter-setting label label-default" href="https://www.masterstudies.com.br/Mestrado/Ciência-de-Dados/Meio-Período/">Meio Per&iacute;odo</a>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                    </div>
+                
+
+                
+                    
+                        <div class="row">
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="RMIT - Royal Melbourne Institute of Technology" alt="RMIT - Royal Melbourne Institute of Technology" src="//cdn03.masterstudies.com/gfx/emblem/11497/1536094038/Large/RMIT-Royal-Melbourne-Institute-of-Technology.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-of-Data-Science/Australia/RMIT-Royal-Melbourne-Institute-of-Technology/">
+                        <span >Mestrado em Ci&ecirc;ncia de Dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >RMIT - Royal Melbourne Institute of Technology</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">Meio Período</span>
+                      <span class="label label-default-master ">2&nbsp;-&nbsp;4&nbsp;</span>
+                      <span class="label label-default-master ">February 2019</span>
+                      <span class="label label-default-master ">Austrália</span>
+                      <span class="label label-default-master hide ">Melbourne</span>
+        
+  
+      <span class="labels-more" data-lesslabel="Menos" id="+1 mais">
+      +1 mais
+    </span>
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">O Mestrado em Ciência de Dados aborda a demanda por cientistas especializados em dados para gerenciar e analisar grandes volumes de dados que se acumulam a partir de fontes como mídias sociais, sensores, dados móveis e de transações.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                <p>O Mestrado em Ciência de Dados aborda a demanda por cientistas especializados em dados para gerenciar e analisar grandes volumes de dados que se acumulam a partir de fontes como mídias sociais, sensores, dados móveis e de transações.</p>Visão geral<p>Aproveite o poder do Big Data com o Master of Data Science . Com uma mistura de análise e ciência da computação, você será fundamental para a tomada de decisões de negócios, estratégia corporativa e planejamento do governo.</p><p>Vivemos em um mundo orientado por dados que gera enormes volumes de informação a taxas cada vez maiores, via mídias sociais, transações financeiras, telecomunicações e até mesmo descobertas científicas....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-of-Data-Science/Australia/RMIT-Royal-Melbourne-Institute-of-Technology/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-of-Data-Science/Austrália/RMIT-Royal-Melbourne-Institute-of-Technology/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="Free University of Bozen - Bolzano" alt="Free University of Bozen - Bolzano" src="//cdn04.masterstudies.com/gfx/emblem/5845/1485456987/Large/Free-University-of-Bozen-Bolzano.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-in-Computational-Data-Science-(MSc)/Italy/Free-University-of-Bozen-Bolzano/">
+                        <span >Mestrado em Ci&ecirc;ncia de Dados Computacionais (MSc)</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Free University of Bozen - Bolzano</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">2&nbsp;</span>
+                      <span class="label label-default-master ">October 2018</span>
+                      <span class="label label-default-master ">Itália</span>
+                      <span class="label label-default-master ">Bolzano</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">Nosso programa de mestrado proporcionará as competências-chave que você precisará para desenvolver sistemas de informação de próxima geração usados ​​para descrever e gerenciar dados, descobrir novos fatos e relações nos dados, fazer previsões e dar conselhos aos tomadores de decisão.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                <p>Nosso programa de mestrado proporcionará as competências-chave que você precisará para desenvolver sistemas de informação de próxima geração usados ​​para descrever e gerenciar dados, descobrir novos fatos e relações nos dados, fazer previsões e dar conselhos aos tomadores de decisão.</p>Descrição do Curso<p>Vivemos em uma sociedade digital . As atividades humanas e automáticas geram dados continuamente, armazenando-os em formato digital. Esses dados vêm de todos os lugares: sistemas de informações empresariais, redes sociais, equipamentos portáteis e muito mais.</p><p>Os dados são como petróleo bruto: não refinados, eles são inúteis.</p><p>Em nosso programa, nós ensinamos você a se tornar um cientista de dados computacionais, ou seja, um cientista informático especializado no desenvolvimento de sistemas de informação de próxima geração....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-in-Computational-Data-Science-(MSc)/Italy/Free-University-of-Bozen-Bolzano/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-in-Computational-Data-Science-(MSc)/Itália/Free-University-of-Bozen-Bolzano/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="2">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img title="Universidade de Illinois mestre em ci&ecirc;ncia da computa&ccedil;&atilde;o na ci&ecirc;ncia dos dados" class="img-responsive" alt="Universidade de Illinois mestre em ci&ecirc;ncia da computa&ccedil;&atilde;o na ci&ecirc;ncia dos dados" src="//cdn04.masterstudies.com/gfx/logo/program/3102/1508145511/Coursera/Universidade-De-Illinois-Mestrado-Em-Ciência-Da-Computação-Na-Ciência-Dos-Dados.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.onlinestudies.com/University-of-Illinois-Master-of-Computer-Science-in-Data-Science/USA/Coursera/">
+                        <span >Universidade de Illinois mestre em ci&ecirc;ncia da computa&ccedil;&atilde;o na ci&ecirc;ncia dos dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Coursera</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Online</span>
+        
+                        <span class="label label-default-master ">Meio Período</span>
+                      <span class="label label-default-master ">24&nbsp;-&nbsp;36&nbsp;</span>
+                      <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">EUA</span>
+                      <span class="label label-default-master ">USA Online</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">Um grau flexível e acessível de um dos melhores programas de Ciência da Computação no mundo, focado em um dos campos mais interessantes do novo milênio.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Visão global
+<p>Um grau flexível e acessível de um dos melhores programas de Ciência da Computação no mundo, focado em um dos campos mais interessantes do novo milênio.</p>
+<p>Inscreva-se no Mestrado em Ciências da Computação na Ciência dos Dados (MCS-DS) e obtenha acesso ao conhecimento computacional e estatístico necessário para transformar os grandes dados em idéias significativas. Desenvolva conhecimentos em quatro áreas centrais de computação - visualização de dados, aprendizado de máquinas, mineração de dados e computação em nuvem - enquanto aprende habilidades-chave em estatística e ciência da informação. Este grau completamente on-line é um acessível gateway para uma das carreiras mais lucrativas e de crescimento mais rápido do novo milênio....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.onlinestudies.com/University-of-Illinois-Master-of-Computer-Science-in-Data-Science/USA/Coursera/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.onlinestudies.com.br/University-of-Illinois-Master-of-Computer-Science-in-Data-Science/Estados-Unidos/Coursera/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                             <div class="dfp_ads visible-xs">
+                  <div id='mobile_listing_data_science'>
+          <script>
+              googletag.cmd.push(function() { googletag.display('mobile_listing_data_science'); });
+          </script>
+      </div>
+      </div>
+                                   <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="Harbour Space" alt="Harbour Space" src="//cdn04.masterstudies.com/gfx/logo/6782/1485456023/Harbour-Space.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-of-Data-Science/Spain/Harbour-Space/">
+                        <span >Mestre da ci&ecirc;ncia de dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Harbour Space</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">2&nbsp;</span>
+                      <span class="label label-default-master ">Inscrições abertas</span>
+                      <span class="label label-default-master ">Espanha</span>
+                      <span class="label label-default-master ">Barcelona</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">O programa de Mestrado de Ciência de dados é projetado para aqueles que desejam aprofundar sua compreensão de todos os aspectos das ciências de dados. Os candidatos podem ser graduados de outras licenciaturas com um forte núcleo de matemática, ou aqueles que continuam sua busca acadêmica depois de conseguir uma licenciatura em ciência de dados.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Este programa é ministrado em Inglês. A ciência de dados é uma nova fronteira do conhecimento humano e um novo domínio de descoberta. cientistas de dados têm as habilidades analíticas e de programação necessários para extrair conhecimento valioso de dados. O setor de tecnologia emergente está rapidamente se tornando o epicentro para a ciência de dados.
+<p> 
+O programa de mestrado foi concebido para aqueles que desejam aprofundar sua compreensão de todos os aspectos da ciência de dados. Os candidatos podem ser graduados de outras licenciaturas com um forte núcleo de matemática, ou aqueles que continuam sua busca acadêmica depois de conseguir uma licenciatura em ciência de dados....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-of-Data-Science/Spain/Harbour-Space/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-of-Data-Science/Espanha/Harbour.Space/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="New Jersey Institute of Technology" alt="New Jersey Institute of Technology" src="//cdn02.masterstudies.com/gfx/emblem/11213/1528934417/Large/New-Jersey-Institute-of-Technology.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-of-Science-in-Data-Science/USA/New-Jersey-Institute-of-Technology/">
+                        <span >Mestrado Em Ci&ecirc;ncia De Dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >New Jersey Institute of Technology</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">EUA</span>
+                      <span class="label label-default-master ">Newark</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">À medida que os dados se acumulam em amplos setores da indústria e da academia, vemos a necessidade de cientistas de dados equipados com habilidades para auxiliar na tomada de decisões baseada em dados. Por exemplo, as empresas estão usando dados para determinar a cobertura de seguro, para tomar decisões de marketing, para oferecer recomendações aos clientes e para fornecer assistência médica mais eficiente. Um exemplo famoso da academia é a determinação do Boson de Higgs a partir de dados simulados com métodos de aprendizado de máquina.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Visão geral<p>À medida que os dados se acumulam em amplos setores da indústria e da academia, vemos a necessidade de cientistas de dados equipados com habilidades para auxiliar na tomada de decisões baseada em dados. Por exemplo, as empresas estão usando dados para determinar a cobertura de seguro, para tomar decisões de marketing, para oferecer recomendações aos clientes e para fornecer assistência médica mais eficiente. Um exemplo famoso da academia é a determinação do Boson de Higgs a partir de dados simulados com métodos de aprendizado de máquina.</p><p>Oferecemos um diploma de Mestrado em Ciência de Dados que abrange os fundamentos básicos e avançados em inferência estatística, aprendizado de máquina, visualização de dados, mineração de dados e métodos de big data, todos fundamentais para um cientista de dados treinado. Para ser selecionado para o nosso programa, exigimos uma base básica em cálculo, álgebra linear, probabilidade, programação de computadores, estruturas de dados e algoritmos. Nosso programa está distribuído em 30 créditos e contém projetos envolvendo grandes conjuntos de dados, métodos de classificação, seleção de variáveis ​​e aprendizado profundo, para citar alguns....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-of-Science-in-Data-Science/USA/New-Jersey-Institute-of-Technology/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-of-Science-in-Data-Science/Estados-Unidos/New-Jersey-Institute-of-Technology/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="The University of Western Australia" alt="The University of Western Australia" src="//cdn02.masterstudies.com/gfx/emblem/11505/1536237270/Large/The-University-of-Western-Australia.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-of-Data-Science/Australia/The-University-of-Western-Australia/">
+                        <span >Mestrado em Ci&ecirc;ncia de Dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >The University of Western Australia</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">Meio Período</span>
+                      <span class="label label-default-master ">18&nbsp;-&nbsp;24&nbsp;</span>
+                      <span class="label label-default-master ">January 2019</span>
+                      <span class="label label-default-master ">Austrália</span>
+                      <span class="label label-default-master hide ">Crawley</span>
+        
+  
+      <span class="labels-more" data-lesslabel="Menos" id="+1 mais">
+      +1 mais
+    </span>
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">Adquira as habilidades para enfrentar os desafios do Big Data e competir no mundo digital.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                <p>Um campo em rápida expansão que não mostra sinais de desaceleração. Big data e analytics agora impulsionam e informam decisões estratégicas e inovação, seja em relação a engenharia, finanças, saúde ou outras áreas profissionais. O desafio para as organizações em todo o mundo é como aproveitar volumes cada vez maiores de dados como um ativo.</p><p>O Mestrado em Ciência de Dados fornece aos alunos o conhecimento e as habilidades para entender e aplicar metodologias analíticas apropriadas para transformar a maneira como uma organização atinge seus objetivos, lidar eficientemente com grandes tarefas de gerenciamento de dados e dominar as bases estatísticas e de aprendizado de máquina nas quais dados analíticos é construído e para avaliar e comunicar a eficácia das novas tecnologias....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-of-Data-Science/Australia/The-University-of-Western-Australia/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-of-Data-Science/Austrália/The-University-of-Western-Australia/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="Castelldefels School of Social Sciences" alt="Castelldefels School of Social Sciences" src="//cdn04.masterstudies.com/gfx/emblem/8942/1490643682/Large/CSSS.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-of-Data-Science-and-Business-Analytics/Spain/CSSS/">
+                        <span >Master of Data Science and Business Analytics</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Castelldefels School of Social Sciences</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">1&nbsp;</span>
+                      <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">Espanha</span>
+                      <span class="label label-default-master ">Barcelona</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Mestrados em Ciência de Dados. 
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-of-Data-Science-and-Business-Analytics/Spain/CSSS/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-of-Data-Science-and-Business-Analytics/Espanha/CSSS/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="2">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="European Leadership University" alt="European Leadership University" src="//cdn04.masterstudies.com/gfx/emblem/10678/1517232192/Large/European-Leadership-University.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-of-Computer-Science-in-Data-Science/Netherlands/European-Leadership-University/">
+                        <span >Mestrado em ci&ecirc;ncia da computa&ccedil;&atilde;o na ci&ecirc;ncia dos dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >European Leadership University</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Online</span>
+                     <span class="label label-default-master ">Online & Campus Combined</span>
+        
+                        <span class="label label-default-master ">12&nbsp;-&nbsp;15&nbsp;</span>
+                      <span class="label label-default-master ">November 2018</span>
+                      <span class="label label-default-master ">Holanda</span>
+                      <span class="label label-default-master ">Amsterdã</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">O programa de Mestrado em Ciências da Computação no Data Science consiste em 60 cursos de créditos ECTS com um projeto final. Você pode completar 9 módulos em 12 a 15 meses e obter seu mestrado em Ciência de Dados.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Visão geral<p>O programa de Mestrado em Ciências da Computação no Data Science consiste em 60 cursos de créditos ECTS com um projeto final. Você pode completar 9 módulos em 12 a 15 meses e obter seu mestrado em Ciência de Dados. Você pode aprender mais sobre o Programa de Mestrado em Ciências da Europa e o Programa de Mestrado em Ciências dos Dados aqui.</p><p>Você oferece experiência de aprendizagem digital e cara a cara ao longo do programa. Materiais, projetos e e-bibliotecas digitais abrangentes são fornecidos através da nossa plataforma on-line enquanto você pode fazer parte de uma experiência próspera no campus envolvendo oficinas, hackathons, grupos de aprendizagem de ação e tutoria....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-of-Computer-Science-in-Data-Science/Netherlands/European-Leadership-University/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-of-Computer-Science-in-Data-Science/Holanda/European-Leadership-University/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="10">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="Three Points Digital Business School" alt="Three Points Digital Business School" src="//cdn03.masterstudies.com/gfx/emblem/11117/1526304877/Large/Three-Points-Digital-Business-School.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.estudios-enlinea.com/Master-en-Internet-of-Things-(IoTIoE)/Espana/Three-Points-Digital-Business-School/">
+                        <span >Mestrado em Internet das Coisas (IoT / IoE)</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Three Points Digital Business School</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Online & Campus Combined</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">9&nbsp;</span>
+                      <span class="label label-default-master ">October 2018</span>
+                      <span class="label label-default-master ">Espanha</span>
+                      <span class="label label-default-master ">Spain Online</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">Novas tecnologias estão mudando o mundo como o conhecemos. A Internet das Coisas (IoT) é uma das novas tendências tecnológicas que veio para ficar com um alto impacto em diferentes áreas, tanto nos negócios quanto no campo social.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Mestrados em Ciência de Dados. <p style="text-align:justify;">Novas tecnologias estão mudando o mundo como o conhecemos.</p><p style="text-align:justify;">A Internet das Coisas (IoT) é uma das novas tendências tecnológicas que veio para ficar com um alto impacto em diferentes áreas, tanto nos negócios quanto no campo social. A CISCO estima que, em 2022, o mercado relacionado à IoT gerará 14,4 bilhões de dólares e a Forbes calculou que, desde 2014, o aumento na demanda por engenheiros de produtos relacionados à IoT foi de 214%.</p><p style="text-align:justify;">A adoção de soluções de IoT possibilitará novas oportunidades de negócios, maior eficiência na gestão de recursos, redução de custos operacionais para as empresas, melhoria da qualidade de vida, transformação das cidades como as conhecemos atualmente. E isso é apenas o começo ......
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.estudios-enlinea.com/Master-en-Internet-of-Things-(IoTIoE)/Espana/Three-Points-Digital-Business-School/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.onlinestudies.com.br/Master-en-Internet-of-Things-(IoTIoE)/Espanha/Three-Points-Digital-Business-School/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="University of Technology Troyes - UTT" alt="University of Technology Troyes - UTT" src="//cdn01.masterstudies.com/gfx/emblem/5971/1485456987/Large/UTT.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masteretudes.fr/Mastere-Specialise&reg;-Expert-Big-Analytics-et-Metriques/France/UTT/">
+                        <span >Mestre sp&eacute;cialis&eacute;&reg; grandes an&aacute;lises periciais e m&eacute;tricas</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >University of Technology Troyes - UTT</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">França</span>
+                      <span class="label label-default-master ">Troyes</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">O objetivo do especialista em Big Analytics e métricas é projetar, desenvolver e piloto de soluções inovadoras para lidar com a complexidade de gerenciar e analisar essas grandes quantidades de dados. Ele usa conhecimentos de informática, matemática, estatística, bem como as ciências humanas e sociais.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                <p>BIG DATA: Impulsione sua carreira com gestão e análise de dados digitais!</p>
+Na era do Big Data, é essencial para as empresas e organizações fazem sentido dos volumes recolhidos de dados e construir suporte para ferramentas de tomada de decisão.
+<p>O objectivo daEspecialistas Big Analytics e métricas é projetar, desenvolver e piloto de soluções inovadoras para resolver a complexidade de gerenciar e analisar essas grandes quantidades de dados. Ele usa conhecimentos de informática, matemática, estatística, bem como as ciências humanas e sociais. A posição central do Big Data especialista lhe permiteapoiar a empresa na sua mudança tecnológica e consolidar o posicionamento estratégico do último. Na vida cotidiana, os graduados deste Mestre Spécialisé® Big Data lata liderar uma equipe de cientistas de dados responsável pelo reforço de dados corporativos, fornecer missão de aconselhamento processos ou aplicativos de desenvolvimento relacionados com a exploração de grandes quantidades de dados, ou de acompanhar, como "estrategista de dados" grandes grupos, as PME, os serviços governamentais e as comunidades em controle e governança dos seus dados....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masteretudes.fr/Mastere-Specialise&reg;-Expert-Big-Analytics-et-Metriques/France/UTT/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Mastere-Specialise®-Expert-Big-Analytics-et-Metriques/França/UTT/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="University of Bordeaux" alt="University of Bordeaux" src="//cdn03.masterstudies.com/gfx/logo/11057/1524733512/Large/University-of-Bordeaux.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-in-Public-Health-Data-Science/France/University-of-Bordeaux/">
+                        <span >Mestrado Em Ci&ecirc;ncia De Dados De Sa&uacute;de P&uacute;blica</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >University of Bordeaux</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">1&nbsp;</span>
+                      <span class="label label-default-master ">September 2018</span>
+                      <span class="label label-default-master ">França</span>
+                      <span class="label label-default-master ">Bordéus</span>
+                      <span class="label label-default-master hide ">Pessac</span>
+                      <span class="label label-default-master hide ">Talence</span>
+        
+  
+      <span class="labels-more" data-lesslabel="Menos" id="+2 mais">
+      +2 mais
+    </span>
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">Este programa internacional de mestrado proporciona um ano de pesquisa internacional em ciência de dados de saúde pública, desde a concepção do projeto até a análise de dados de saúde na vida real e a comunicação de resultados.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                <p>Este programa internacional de mestrado proporciona um ano de pesquisa internacional em ciência de dados de saúde pública, desde a concepção do projeto até a análise de dados de saúde na vida real e a comunicação de resultados.</p>Folheto do programaCooperação acadêmica: O Mestrado em Ciência em Dados de Saúde Pública é ministrado em conjunto com o Centro de Pesquisa em Saúde da População de Bordeaux.Requisitos de admissão:Os candidatos devem cumprir o seguinte: realizar pelo menos um grau de Mestrado (ano 1) com honras (mínimo de 240 ECTS ou equivalente) em uma (ou mais) das seguintes disciplinas: estatística, informática ou epidemiologia.Duração do programa: 1 ano, incluindo um estágio (60 ECTS).Requisitos de idioma: Este programa é ministrado inteiramente em inglês. Excelente proficiência em inglês é, portanto, necessária. Os alunos cuja língua materna não é o inglês devem fornecer uma certificação TOEFL ou IELTS: pontuação no TOEFL de 550/213 / 79-80 ou pontuação no IELTS de 6,0.Nível: Mestre (ano 2) da Ciência em Ciência de Dados de Saúde Pública.Propinas:Taxas de matrícula em universidades: 250 € (aproximadamente)Contribuição para a Vida Estudantil: 90 € (a pagar ao CROUS - escritório regional de assistência estudantil)Taxas de treinamento do programa internacional: 4.500 €Em 2018/2019, bolsas de estudos que cobrem integralmente as taxas de treinamento serão concedidas a candidatos selecionados. As inscrições para essas bolsas de estudo devem ser submetidas ao mesmo tempo que a inscrição para o programa de Mestrado.Esquema do programa...
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-in-Public-Health-Data-Science/France/University-of-Bordeaux/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-in-Public-Health-Data-Science/França/University-of-Bordeaux/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="Leuphana University of Luneburg" alt="Leuphana University of Luneburg" src="//cdn04.masterstudies.com/gfx/logo/8406/1485456033/Leuphana-University-of-Luneburg.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-Management-and-Data-Science/Germany/Leuphana-University-of-Luneburg/">
+                        <span >Gerenciamento de dados mestres e ci&ecirc;ncia</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >Leuphana University of Luneburg</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">Meio Período</span>
+                      <span class="label label-default-master ">4&nbsp;-&nbsp;8&nbsp;</span>
+                      <span class="label label-default-master ">October 2018</span>
+                      <span class="label label-default-master ">Alemanha</span>
+                      <span class="label label-default-master hide ">Luneburgo</span>
+        
+  
+      <span class="labels-more" data-lesslabel="Menos" id="+1 mais">
+      +1 mais
+    </span>
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">O Programa de Mestrado em Gestão e Ciência de Dados está voltado para alunos que desejam avançar suas habilidades na análise de dados de fenômenos do mundo real. Após a conclusão deste programa os nossos graduados têm a capacidade
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                <p>O Programa de Mestrado em Gerenciamento e Ciência de Dados é voltado para alunos que desejam avançar suas habilidades na análise de dados de fenômenos do mundo real. Após a conclusão deste programa nossos graduados têm a capacidade para analisar conjuntos de dados enormes e complexos, projetar modelos estatísticos com base na mais recente em tecnologia da informação. O programa é projetado para atender a demanda crescente para os cientistas de dados em negócio, administração pública, e pesquisas.</p>
+CONTEÚDO E IDEA
+<p>As transformações econômicas e tecnológicas rápidas que ocorrem na economia global ea transição de uma economia industrial para uma economia baseada no conhecimento confrontar líderes empresariais com novos desafios. A enxurrada crescente de dados associados com a complexidade dinâmica do ambiente de negócios de hoje já não pode ser tratada por métodos tradicionais e experiência pessoal de um gerente sozinho. Este programa de graduação oferece aprendizagem interdisciplinar e oportunidades de pesquisa, que permite aos alunos adquirir conhecimentos orientada para a aplicação de soluções práticas de gestão. Através da integração de gestão, análise de dados e conhecimento de sistemas de informação, os alunos serão capazes de desenvolver o mais recente em soluções inovadoras para a gestão de organizações orientadas para informação....
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-Management-and-Data-Science/Germany/Leuphana-University-of-Luneburg/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-Management-and-Data-Science/Alemanha/Leuphana-University-of-Luneburg/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="EURECOM" alt="EURECOM" src="//cdn04.masterstudies.com/gfx/emblem/10690/1517414817/Large/EURECOM.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-in-Internet-of-Things-(IoT)/France/EURECOM/">
+                        <span >Mestrado em Internet de Coisas (IoT)</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >EURECOM</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">4&nbsp;</span>
+                      <span class="label label-default-master ">October 2018</span>
+                      <span class="label label-default-master ">França</span>
+                      <span class="label label-default-master ">Biot</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">A Internet das coisas (IoT) representa um novo estágio na revolução digital, contribuindo plenamente para a construção de uma sociedade digital. Vários setores da sociedade digital usam ou usarão a internet de objetos para melhorar os procedimentos de implantação, exploração e industrialização. Estes incluem transporte inteligente, redes inteligentes, cidade inteligente, indústria 4.0 e assim por diante. As questões relativas ao domínio das tecnologias e processos em torno da internet dos objetos são enormes e exigem um nível muito alto de expertise com habilidades de ponta em áreas multidisciplinares.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Descrição<p>A Internet das coisas (IoT) representa um novo estágio na revolução digital, contribuindo plenamente para a construção de uma sociedade digital. Vários setores da sociedade digital usam ou usarão a internet de objetos para melhorar os procedimentos de implantação, exploração e industrialização. Estes incluem transporte inteligente, redes inteligentes, cidade inteligente, indústria 4.0 e assim por diante. As questões relativas ao domínio das tecnologias e processos em torno da internet dos objetos são enormes e exigem um nível muito alto de expertise com habilidades de ponta em áreas multidisciplinares.</p>ObjetivosFerramentas de design para processamento e análise de grandes quantidades de dados de sensores;Concepção e desenvolvimento de aplicações e serviços IoT adaptados às necessidades industriaisCompreender e projetar mecanismos de comunicação adaptados às restrições dos sensores (consumo de energia, falta de capacidade de computação)Adquirir cursos técnicos de dupla competência em campos avançados (exploração de dados, desenvolvimento de software, redes de comunicação em ambientes restritos, Aprendizado de máquinas, segurança de sensores) associados a cursos de Inovação, Gerenciamento de Projetos, Empreendedorismo, etc.Requisitos de admissão...
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-in-Internet-of-Things-(IoT)/France/EURECOM/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-in-Internet-of-Things-(IoT)/França/EURECOM/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="9">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="EURECOM" alt="EURECOM" src="//cdn04.masterstudies.com/gfx/emblem/10690/1517414817/Large/EURECOM.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.masterstudies.com/Master-in-Data-Science-and-Engineering/France/EURECOM/">
+                        <span >Mestrado em Ci&ecirc;ncia e Engenharia de Dados</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >EURECOM</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Campus</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">4&nbsp;</span>
+                      <span class="label label-default-master ">October 2018</span>
+                      <span class="label label-default-master ">França</span>
+                      <span class="label label-default-master ">Biot</span>
+        
+  
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">O fenômeno &quot;Big Data&quot; está enraizado no campo da ciência e engenharia de dados, que visa o desenvolvimento de ferramentas informáticas e matemáticas para armazenamento e processamento de dados. Um volume crescente de dados é produzido diariamente pelos processos industriais modernos (em campos como energia, sistemas de transporte inteligentes, indústria da aviação e muitos outros ...), e alimentados pelo aumento de ferramentas multimídia e a Internet das coisas em nosso vida cotidiana.
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Descrição<p>O fenômeno "Big Data" está enraizado no campo da ciência e engenharia de dados, que visa o desenvolvimento de ferramentas informáticas e matemáticas para armazenamento e processamento de dados. Um volume crescente de dados é produzido diariamente pelos processos industriais modernos (em campos como energia, sistemas de transporte inteligentes, indústria da aviação e muitos outros ...), e alimentados pelo aumento de ferramentas multimídia e a Internet das coisas em nosso vida cotidiana.</p>ObjetivosCombinando ciencias informáticas e estatísticas para desenvolver ferramentas de ponta e fundamentais para abordar de forma eficiente questões aplicadas relacionadas ao processamento de dados.Saiba como desenvolver métodos, algoritmos e software capazes de extrair valor de enormes massas de dados heterogêneos com várias dimensões.Fornecer uma mistura coesa de classes técnicas em mineração de dados, engenharia de software, sistemas distribuídos, juntamente com os fundamentos do Business, Inovação e Gerenciamento de Projetos para desenvolver perfis altamente valorizados pelos recrutadores corporativos.Requisitos de admissão...
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.masterstudies.com/Master-in-Data-Science-and-Engineering/France/EURECOM/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.masterstudies.com.br/Master-in-Data-Science-and-Engineering/França/EURECOM/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                                                            <div class="col-sm-12 list-item"   data-idmode="2">
+    
+    <div class="listing-row row">
+        <div class="col-sm-2 school-info">
+                                                <div class="school-logo-listing hidden-xs">
+                                                <img class="img-responsive" title="OBS Business School" alt="OBS Business School" src="//cdn04.masterstudies.com/gfx/emblem/5481/1485456985/Large/OBS.png" />
+                    </div>
+                                    </div>
+
+        <div class="col-sm-10 school-info">
+            <header>
+                <h4 class="listing-title">
+                    <a href="https://www.estudios-enlinea.com/M&aacute;ster-en-Data-Management-e-Innovaci&oacute;n-Tecnol&oacute;gica/Espana/OBS/">
+                        <span >Mestrado em gest&atilde;o de dados e inova&ccedil;&atilde;o tecnol&oacute;gica</span>
+                                            </a>
+                </h4>
+                
+                                                        <h5 class="listing_provider"><span >OBS Business School</span></h5>
+                            </header>
+
+            <div class="is-item-description">
+
+                                <div class="labels-container">
+                         <span class="label label-default-master ">Online</span>
+        
+                        <span class="label label-default-master ">Período integral</span>
+                      <span class="label label-default-master ">Meio Período</span>
+                      <span class="label label-default-master ">12&nbsp;</span>
+                      <span class="label label-default-master ">May 2019</span>
+                      <span class="label label-default-master ">Espanha</span>
+                      <span class="label label-default-master hide ">Barcelona</span>
+                      <span class="label label-default-master hide ">Madrid</span>
+        
+  
+      <span class="labels-more" data-lesslabel="Menos" id="+2 mais">
+      +2 mais
+    </span>
+  
+</div>                                <span >
+                                      <p class="short_desc dotdotdot-text">O Mestrado em Gestão de Dados e Inovação Tecnológica da OBS é projetado para fornecer aos gestores e profissionais (Data Manager) as chaves para a gestão de sistemas de informação em uma organização, com especial atenção para o ambiente de gerenciamento de dados e, mais especificamente, o Big Data. Este é um projeto para aproveitar ao máximo a tecnologia contra programas de mestrado ...
+                                                            <span class="toogle_moretext">[+]</span>
+                                          </p>
+                    
+                                            <div class="moretext hide_text">
+
+                Mestrado em Gestão de Dados e Inovação Tecnológica
+<p>O Mestrado em Gestão de Dados e Inovação Tecnológica da OBS é projetado para fornecer aos gestores e profissionais (Data Manager) as chaves para a gestão de sistemas de informação em uma organização, com especial atenção para o ambiente de gerenciamento de dados e, mais especificamente, o Big Data.</p>
+<p>Este é um projeto para aproveitar ao máximo a tecnologia, contra os programas que mostram que a tecnologia disponível permite Mestres. A tecnologia é uma ferramenta e serviço que deve contribuir para atingir os objetivos estratégicos da empresa.</p>
+Oportunidades de carreira
+<p>Alguns dos setores que podem trabalhar são:...
+                            <span class="toogle_lesstext"><i>[-]</i></span>
+              </div>
+                                </span>
+
+                                    <div class=" hidden-xs">
+                        <a href="https://www.estudios-enlinea.com/M&aacute;ster-en-Data-Management-e-Innovaci&oacute;n-Tecnol&oacute;gica/Espana/OBS/" class="btn btn-primary-master ">Ler Mais</a>
+
+                                                    <a class="readmore_alt" href="https://www.onlinestudies.com.br/Máster-en-Data-Management-e-Innovación-Tecnológica/Espanha/OBS/">Leia mais em português</a>
+                        
+                    </div>
+                            </div>
+
+            <div class="visible-xs toggle-description text-muted">
+                <i class="fa fa-chevron-down open-description js-toggle-description"   ></i>
+                <i class="fa fa-chevron-up close-description js-toggle-description"   ></i>
+            </div>
+        </div>
+    </div>
+    <hr class="col-sm-12 list-item-divider">
+    
+</div>
+                                                    </div>
+                    
+                    <div class="row listing-pagination "><ul class="pagination"><li><a class="link" href="https://www.masterstudies.com.br/Mestrado/Ci%C3%AAncia-de-Dados/?page=2">Seguinte &raquo;</a></li></ul></div><br />
+                            </div>
+
+
+        </div>
+    </div>
+
+<div class="container">
+  <div class="row">
+    <footer class="page-footer clearfix">
+      <div class="col-sm-12">
+        <div class="row">
+
+          <div class="brand col-sm-12">
+            <h2 class="usedColor">MASTERSTUDIES.COM.BR</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
+
+            <div class="footer-social pull-right">
+              <div class="hidden-xs addthis-container white">
+  <div class="pull-right">
+    <a data-toggle="modal" class="addthis-modal-link" href="#linkToUsModal">
+     Link para esta p&aacute;gina
+    </a>
+  </div>
+
+  <div class="addthis_toolbox">
+    <i class="fa fa-spinner fa-pulse loading-add-this"   ></i>
+    <div class="custom_images">
+      <!--<a class="addthis_button_facebook addthis-button"><img src="//cdn02.masterstudies.com/img_new/addthis_facebook_white.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+      <a class="addthis_button_twitter addthis-button"><img src="//cdn03.masterstudies.com/img_new/addthis_twitter_white.png" width="18" height="18" border="0" alt="Share to Twitter" /></a>-->
+        <a class="addthis_button_facebook addthis-button"><img src="//cdn03.masterstudies.com/img_new/FB-f-Logo__blue_144_official.png" width="18" height="18" border="0" alt="Share to Facebook" /></a>
+        <a class="addthis_button_twitter addthis-button"><img src="//cdn02.masterstudies.com/img_new/Twitter_Logo_Blue_official.png" width="32" height="32" border="0" alt="Share to Twitter" /></a>
+        <a class="addthis_button_more addthis-button"><img src="//cdn03.masterstudies.com/img_new/addthis_more_white.png" width="18" height="18" border="0" alt="More..." /></a>
+      <a class="addthis_counter addthis_bubble_style"></a>
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div class="footer-links">
+                              <a href="https://www.masterstudies.com.br/Schools_and_Universities/Contate-nos.html">Fale conosco</a>
+                              <a href="https://www.keystoneacademic.com.br/">Keystone Academic Solutions</a>
+                              <a href="https://www.masterstudies.com.br/Schools_and_Universities/Termos-e-Condi&ccedil;&otilde;es.html">Termos e condi&ccedil;&otilde;es de uso</a>
+                              <a href="https://www.masterstudies.com.br/Schools_and_Universities/Pol&iacute;tica-de-privacidade.html">Privacidade</a>
+                              <a href="/sitemap/">Mapa do Site</a>
+                              <a href="https://br.studenttests.com/">StudentTests</a>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="linkToUsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Link to and share "Melhores Mestrados em Ci&ecirc;ncia de Dados 2018/2019"</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="radio">
+              <label>
+                <input type="radio" name="link_to_us_url" class="link_to_us_url" checked data-title="Masterstudies.com.br - Melhores Mestrados em Ci&ecirc;ncia de Dados 2018/2019" data-url="https://www.masterstudies.com.br/Mestrado/Ci%C3%AAncia-de-Dados/">
+                Link to this page
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="link_to_us_url" class="link_to_us_url" data-title="Masterstudies.com.br" data-url="https://www.masterstudies.com.br/">
+                Link to Masterstudies.com.br start page
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="link_to_us_url_input">Paste link in email or IM:</label>
+              <input type="text" id="link_to_us_url_input" class="form-control link_to_us_plain_link">
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <img src="//cdn02.masterstudies.com/img/logo/Mestrado-ms-pt-BR.png" class="link-to-us-image">
+
+            
+            <div class="pull-right">
+
+              <label class="radio">
+                <input type="radio" name="link_to_us_image" class="link-to-us-image-radio" checked data-alt="Masterstudies.com.br" data-image="//cdn02.masterstudies.com/img/logo/Mestrado-ms-pt-BR.png">
+                Masterstudies.com.br logo
+              </label>
+
+              
+              <label class="radio">
+                <input type="radio" name="link_to_us_image" class="link-to-us-image-radio" data-image="">
+                No image
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <label for="link_to_us_textarea">HTML-code:</label>
+            <textarea name="" id="link_to_us_textarea" class="form-control link-to-us-html" rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
+
+
+<script src="//cdn04.masterstudies.com/js/application.1537268635.js"></script>
+<script src="//cdn04.masterstudies.com/js/randexp/randexp.min.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBikK5pARri5jnUcBnqAFDIUWrLp3eTLUk"></script>
+
+
+    <script type="text/javascript">
+        $(function ($) {
+
+            $('.is-filter-toggle').on('click', function () {
+                $(this).closest('.navigation-box-container').toggleClass('open');
+            });
+
+            $('.is-sub-filter-toggle').on('click', function () {
+                $(this).closest('.is-filter-setting-container').toggleClass('open');
+            });
+
+
+            if ($('.listingText').height() >= 270 && !$('.listingText').hasClass("toggleText")) {
+                $('.listingText').addClass('toggleText');
+                $('.read_more').removeClass('hide');
+            }
+
+            $(".read_more").click(function () {
+                if ($('.listingText').hasClass("toggleText")) {
+                    $('.listingText').removeClass('toggleText');
+                    $(".read_more").html('<i class="fa fa-chevron-up"></i> Ler Menos');
+
+                } else {
+                    $('.listingText').addClass('toggleText');
+                    $(".read_more").html('<i class="fa fa-chevron-down"></i> Ler Mais');
+                }
+            });
+
+
+            
+            $('.form-search').appendTo($('#place-search-form-here'));
+            $('.form-search').removeClass('pull-right');
+            $('.form-search').removeClass('span7');
+            $('.form-search').addClass('span15');
+
+            
+            $('.toogle_lesstext_lead').appendTo($('.toogle_lesstext_lead').siblings('p').last());
+
+            jQuery('.grid').find('a').click(function (event) {
+
+                event.preventDefault();
+                //$(this).unbind('click');
+
+                params = {
+                    action: 'count_search_listing_click',
+                    json: $(this).parents('[data-track-click]').attr('data-track-click'),
+                    num: '',
+                    r: Math.ceil(100 * Math.random())
+                };
+
+                var link = $(this);
+
+                jQuery.ajax({
+                    url: '/ajax_handler.php',
+                    dataType: 'html',
+                    type: 'GET',
+                    data: params,
+                    success: function () {
+                        if (jQuery(link).attr('href')) window.location.href = jQuery(link).attr('href');
+                    },
+                    error: function () {
+                        if (jQuery(link).attr('href')) window.location.href = jQuery(link).attr('href');
+                    }
+                });
+
+                return false;
+            });
+
+
+        });
+    </script>
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        var $partner_sites = [];
+        var $partner_sites_mobile = [];
+
+                $partner_sites.push($('<li><a class="navbar-brand active" href="https://www.masterstudies.com.br/">Mestrado</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.masterstudies.com.br/">Mestrado</a></li>'));
+
+                                                                  $partner_sites.push($('<li><a class="navbar-brand " href="https://www.phdstudies.com.br/">Doutorado</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.phdstudies.com.br/">Doutorado</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.lawstudies.com.br/">Direito</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.lawstudies.com.br/">Direito</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.bachelorstudies.com.br/">Gradua&ccedil;&atilde;o</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.bachelorstudies.com.br/">Gradua&ccedil;&atilde;o</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.mbastudies.com.br/">MBA</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.mbastudies.com.br/">MBA</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.healthcarestudies.com.br/">Sa&uacute;de</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.healthcarestudies.com.br/">Sa&uacute;de</a></li>'));
+                                                            $partner_sites.push($('<li><a class="navbar-brand " href="https://www.academiccourses.com.br/">Cursos</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.academiccourses.com.br/">Cursos</a></li>'));
+                                                $partner_sites.push($('<li><a class="navbar-brand " href="https://www.onlinestudies.com.br/">Online</a></li>'));
+        $partner_sites_mobile.push($('<li><a href="https://www.onlinestudies.com.br/">Online</a></li>'));
+                        $('.partner-sites').first().append($partner_sites);
+        $('.partner-sites-mobile').first().append($partner_sites_mobile);
+
+
+      
+      
+    });
+</script>
+
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bb510f4a41","applicationID":"7303044","transactionName":"YQdQbRRSCxZYBUdQV1hNZ0sPHAwLXQNLF0heEg==","queueTime":0,"applicationTime":446,"atts":"TUBTG1xIGBg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

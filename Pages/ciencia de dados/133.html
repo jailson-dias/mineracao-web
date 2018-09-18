@@ -1,0 +1,478 @@
+ï»¿<!DOCTYPE HTML>
+<html lang="pt">
+    <!-- <head> -->
+<meta name="google-site-verification" content="gjJ7kbAGPzFrzxWMwecxinjfhFxHHXrYYiWQxHA9ijY" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- <meta name="language" http-equiv="content-language" content="pt"/> -->
+<title>FCT &mdash; Contactos</title>
+
+<meta name="Keywords" content="ciÃªncia, investigaÃ§Ã£o, tecnologia, projectos, bolsas, unidades de investigaÃ§Ã£o, laboratÃ³rios, contactos" />
+<meta name="Description" content="A FundaÃ§Ã£o para a CiÃªncia e a Tecnologia Ã© a entidade governamental portuguesa responsÃ¡vel pelo 
+              financiamento e avaliaÃ§Ã£o do sistema cientÃ­fico e tecnolÃ³gico
+	      Contactos incluindo localizaÃ§Ã£o, maps e telefones." />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+<!-- CSS especÃ­fico do SPRY com pequenas modificaÃ§Ãµes -->
+<link rel="stylesheet" type="text/css" href="/css/dev_SpryAccordion.css" media="screen"/>
+<link rel='stylesheet' type='text/css' href='css/local.css' media='screen'/>
+<!--[if gte IE 7]>
+	<link rel="stylesheet" type="text/css" href="/css/ie7.css"/>
+<![endif]-->
+<script type='text/javascript' src='/javascript/jquery/jquery.min.js'></script><!-- AcordeÃ£o ERANETs -->
+<script type="text/javascript" src="/scripts/accordion_area.js"></script>
+<!-- Notas pop up -->
+<script type="text/javascript" src="/scripts/notes.js"></script>
+<!-- Dispensando o botÃ£o de submit -->
+<script type="text/javascript">
+        function menumuda(){document.mudamenu.submit();}
+</script>
+<!-- Scripts especÃ­ficos do Spry -->
+<script type="text/javascript" src="/scripts/SpryDOMUtils.js"></script>
+<script type="text/javascript" src="/scripts/SpryAccordion.js"></script>
+<script type="text/javascript" src="/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full.js"></script>
+<!-- Limpa o texto na caixa de busca -->
+<script type="text/javascript" src="/scripts/clear.js"></script>
+<script src='http://maps.google.com/maps/api/js?v=3&amp;sensor=false&amp;language=pt' type='text/javascript'></script><script type="text/javascript">
+    var map = null;
+        function initialize() {
+        var centerlatlng = new google.maps.LatLng(38.71, -9.153);
+    var myOptions = {
+      zoom: 13,
+      center: centerlatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP    };
+    map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+       
+        
+    google.maps.event.addListener(map, 'click', function() {
+        infowindow.close();
+        });
+        
+    setMarkers(map, locations);
+    
+ 
+  }
+  
+
+      var locations = [
+          ["<img style='float:right' src='/images/loja_cientista_mini.jpg' alt=''>Loja do Cientista<br/>Av. D. Carlos I, 124-J<br/>Lisboa, Portugal<br/><br/>2Âª a 6Âª, 10-17h", 38.7098, -9.1531, 0],["<img style='float:right' src='/images/FCT-entrada-mini.jpg' alt=''>Sede da FCT<br/>Av. D. Carlos I, 126<br/>Lisboa, Portugal", 38.7101, -9.1532, 1]                  ];
+  
+  function setMarkers(map, locations) {
+  // Add markers to the map
+
+  
+  for (var i = 0; i < locations.length; i++) {
+    var location = locations[i];
+    var myLatLng = new google.maps.LatLng(location[1], location[2]);
+     
+    var marker = createMarker(myLatLng,location[0]);
+    
+  }
+  
+}
+
+var infowindow = new google.maps.InfoWindow(
+  { 
+    size: new google.maps.Size(150,50)
+  });
+  
+  function createMarker(latlng, html) {
+    var contentString = html;
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        zIndex: Math.round(latlng.lat()*-100000)<<5
+        });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(contentString); 
+        infowindow.open(map,marker);
+        });
+}
+
+
+</script>
+<script type='text/javascript' src='/scripts/ga.js'></script></head>
+<body onload='initialize()'>
+  <p class="skipnav"><a href="#texto">Skip nav</a></p>
+	<div id="page">
+	<div style='position:relative' id='left'>
+<!-- Logotipo -->
+	<div id="topbanner">
+            <div id="logo"><a href="/">FundaÃ§Ã£o para a CiÃªncia e a Tecnologia</a></div>
+   </div> <!-- topbanner -->
+   <div id='perfnav'>
+            <ul >
+            <li style='border-left:none;' ><a href="/apoios/" title="Ãrea deApoios">Apoios</a><ul>
+                      <li><a href='/apoios' title='Apoios da FCT, instrumentos de financiamento'>Introdu&ccedil;&atilde;o</a></li>
+                      <li><a href='/apoios/bolsas' title='Bolsas de Forma&ccedil;&atilde;o Avan&ccedil;ada'>Bolsas</a></li>
+                      <li><a href='/apoios/programasdoutoramento/' title='Programas de Doutoramento FCT, Vis&atilde;o Geral e Objetivos'>Prog. Doutoramento</a></li>
+                      <li><a href='/apoios/contratacaodoutorados/empregocientifico/' title='Contrata&ccedil;&atilde;o de Doutorados'>Contratos</a></li>
+                      <li><a href='/apoios/projectos' title='Projectos de Investiga&ccedil;&atilde;o e Desenvolvimento'>Projectos</a></li>
+                      <li><a href='/apoios/unidades' title='Institui&ccedil;&otilde;es de Investiga&ccedil;&atilde;o e Desenvolvimento'>Institui&ccedil;&otilde;es</a></li>
+                      <li><a href='/apoios/pnrc' title='Infraestruturas de Investiga&ccedil;&atilde;o'>Infraestruturas</a></li>
+                      <li><a href='/apoios/facc' title='Apoios'><abbr title='Fundo de Apoio &agrave; Comunidade Cient&iacute;fica'>FACC</abbr></a></li>
+                      <li><a href='/apoios/cooptrans' title='Coopera&ccedil;&atilde;o Transnacional'>Internacional</a></li>
+                      <li><a href='/apoios/protocolos' title='Realiza&ccedil;&atilde;o de protocolos com outras institui&ccedil;&otilde;es'>Protocolos</a></li>
+                      <li><a href='/apoios/premios' title='Pr&eacute;mios apoiados pela FCT'>PrÃ©mios</a></li>
+                    </ul></li>
+            <li style='border-left:none;' ><a href="/concursos/" title="Ãrea deConcursos">Concursos</a><ul>
+                          <li><a href='/apoios/bolsas/concursos' title='Concursos a decorrer'>Bolsas</a></li>
+                          <li><a href='/apoios/programasdoutoramento/' title='Vis&atilde;o geral e objetivos, programas de Doutoramento'>Prog. Doutoramento</a></li>
+                          <li><a href='/apoios/projectos/concursos' title='Concursos, bolsas de forma&ccedil;&atilde;o avan&ccedil;ada'>Projectos</a></li>
+                          <li><a href='/apoios/premios' title='Pr&eacute;mios apoiados pela FCT'>Pr&eacute;mios</a></li>
+                          <li><a href='/apoios/CoLAB' title='Laborat&oacute;rio colaborativo'>CoLAB</a></li>
+                        </ul></li>
+            <li id="midlink" style='border-left:none;' ><a  href="/media" title="Ãrea deMedia">Media</a>
+            <ul>
+                <li><a  href='/noticias/'>NotÃ­cias</a></li>
+                <li><a  href='/media/publicacoes'>PublicaÃ§Ãµes</a></li>
+                <li><a  href='/media/notasimprensa'>Notas de Imprensa</a></li>
+                <li><a  href='/media/conferencias'>ConferÃªncias</a></li>
+                <li><a  href='/logotipos/'>Logotipos</a></li>
+
+            </ul>
+            </li>
+            <li style='border-left:none;' ><a href="/estatisticas/" title="">Estat&iacute;sticas</a><ul>
+                              <li><a href='/estatisticas/global' title='Estat&iacute;sticas, vis&atilde;o Global'>Vis&atilde;o global</a></li>
+                              <li><a href='/estatisticas/bolsas/' title='Estat&iacute;sticas, bolsas de forma&ccedil;&atilde;o Avan&ccedil;ada'>Bolsas</a></li>
+                              <li><a href='/estatisticas/prog-doutoramento/' title='Estat&iacute;sticas, programas de doutoramento'>Prog. Doutoramento</a></li>
+                              <li><a href='/estatisticas/emprego-cientifico/' title='Estat&iacute;sticas, emprego cient&iacute;fico'>Emprego Cient&iacute;fico</a></li>
+                              <li><a href='/estatisticas/projectos/' title='Estat&iacute;sticas, projectos de investiga&ccedil;&atilde;o e desenvolvimento'>Projectos</a></li>
+                              <li><a href='/estatisticas/unidades/' title='Estat&iacute;sticas, institui&ccedil;&otilde;es de investiga&ccedil;&atilde;o e desenvolvimento'>InstituiÃ§Ãµes</a></li>
+                              <li><a href='/estatisticas/infraestruturas/' title='Estat&iacute;sticas, infraestruturas de investiga&ccedil;&atilde;o'>Infraestruturas</a></li>
+                              <li><a href='/estatisticas/facc/' title='Estat&iacute;sticas'><abbr title='Fundo de apoio &amp;agrave; comunidade cient&amp;iacute;fica'>FACC</abbr></a></li>
+                              <li><a href='/estatisticas/prog-quadro/' title='Estat&iacute;sticas, programas-quadro europeus'>Programas-Quadro</a></li>
+                              <li><a href='/estatisticas/avaliacoes' title='Estat&iacute;sticas, avalia&ccedil;&atilde;o de candidaturas a financiamento'>Avalia&ccedil;&atilde;o</a></li>
+                            </ul></li>
+            <li style='border-left:none;border-right:none;background-color:#bcc3cb' ><a href="/fct/" title="">Sobre a FCT</a><ul>
+                    <li><a href='/fct' title='Sobre a FCT...'>Vis&atilde;o e Miss&atilde;o</a></li>
+                    <li><a href='/linhasatividadefct' title='Sobre a FCT, principais linhas de a&ccedil;&atilde;o'>Linhas de a&ccedil;&atilde;o</a></li>
+                    <li><a href='/estruturafct' title='Sobre a FCT, organizaÃ§Ã£o e enquadramento legal'>Organiza&ccedil;&atilde;o</a></li>
+                    <li><a href='/20anos' title='20 anos da FCT'>20 Anos FCT</a></li>
+                    <li><a href='/documentosdiversos' title='Documentos, relat&oacute;rios de atividades, Planos de atividade'>PublicaÃ§Ãµes</a></li>
+                    <li><a href='/dsi/' title='Sociedade da informa&ccedil;&atilde;o'>Soc. da Informa&ccedil;&atilde;o</a></li>
+                    <li><a href='/acessoaberto/' title='Pol&iacute;tica de acesso aberto'>Acesso Aberto</a></li>
+                    <li><a href='/suporte-politicas-IeD/estrategia2020/' title='Estrat&eacute;gia de investiga&ccedil;&atilde;o e Inova&ccedil;&atilde;o 2014-2020'>Suporte Ã  polÃ­tica de I&amp;I</a></li>
+                    <li><a href='/arquivo/' title='O Arquivo de Ci&ecirc;ncia e Tecnologia'>Arquivo de C&amp;T</a></li>
+                    <li><a href='/gabestudosestrategia/' title='Gabinete de estudos e estrat&eacute;gia, miss&atilde;o e fun&ccedil;&otilde;es'>Estudos e EstratÃ©gia</a></li>
+                    <li><a href='/recrutamento/' title='Recrutamento'>Recrutamento</a></li>
+                     <li><a href='/oportunidades_de_formacao/' title='Oportunidades de Forma&ccedil;&atilde;o na FCT'>Oportunidades de Forma&ccedil;&atilde;o</a></li>                   
+                    <li><a href='/concursos_nao_cientificos/obras/' title='aquisi&ccedil;&atilde;o de servi&ccedil;os, procedimentos de selec&ccedil;&atilde;o de fornecedores para realiza&ccedil;&atilde;o de obras'>AquisiÃ§Ã£o de serviÃ§os</a></li>
+                    <li><a href='/contactos' title='Contactos da Funda&ccedil;&atilde;o para a Ci&ecirc;ncia e a Tecnologia'>Contactos</a></li>
+                  </ul></li>
+            </ul></div>
+            
+
+<div  id='breadcrumb'>
+
+<a href='/'>FCT</a> &rsaquo; Contactos
+</div>
+<!-- texto editÃ¡vel -->
+<div  id='texto'>
+	
+<h1>
+  Contactos
+</h1><!--<h2>
+  <img src="/images/logoloja_trans.gif" alt="Loja do Cientista" title=
+  "Logotipo da Loja do Cientista" />
+</h2>
+<p>
+  A <em>Loja do Cientista</em> da <em>FundaÃ§Ã£o para a CiÃªncia e a
+  Tecnologia</em> (FCT) funciona desde 18 de MarÃ§o de 2002 junto Ã  sede na Av.
+  D. Carlos I, com um perÃ­Â­odo de atendimento ao pÃºblico ininterrupto entre as
+  9h30m e as 15h30m de todos os dias Ãºteis.
+</p>-->
+<!--<div class="photo_left">
+  <img src="/images/loja_cientista.jpg" alt="Loja do Cientista logo" />
+</div>--><!--<p>
+  A <em>Loja do Cientista</em> Ã© um espaÃ§o moderno de atendimento pÃºblico
+  presencial que proporciona aos cientistas, jovens investigadores, estudantes
+  de pÃ³s-graduaÃ§Ã£o e cidadÃ£os em geral, a possibilidade de tratarem dos seus
+  assuntos no Ã¢mbito das actividades apoiadas pela FCT num local expressamente
+  concebido para o efeito e que assegura condiÃ§Ãµes de acessibilidade a cidadÃ£os
+  com dificuldades motoras.
+</p>
+<p>
+  A maioria das pessoas que se deslocam Ã  FCT para tratar de assuntos no Ã¢mbito
+  das suas actividades sÃ£o bolseiros ou candidatos a bolseiros, dado que estÃ£o
+  activas cerca de 7000 bolsas e todos os anos sÃ£o apresentadas mais de 5000
+  novas candidaturas. SÃ£o, tambÃ©m, recebidas solicitaÃ§Ãµes diÃ¡rias de
+  investigadores de projectos, de unidades de investigaÃ§Ã£o e de outras acÃ§Ãµes
+  apoiadas pela FCT como as do Fundo de Apoio Ã  Comunidade CientÃ­Â­fica.
+</p>
+<p>
+  Este espaÃ§o permite tambÃ©m assegurar actividades pontuais de interesse para a
+  comunidade cientÃ­Â­fica, como o lanÃ§amento de livros, acÃ§Ãµes de divulgaÃ§Ã£o
+  cientÃ­Â­fica ou debates sobre temas especÃ­Â­ficos.
+</p>-->
+<div style="clear:left;float:left;">
+  <dl>
+    <dt style="font-weight:bold;margin-top:1em">
+      Loja do Cientista<br />
+      PerÃ­Â­odo de atendimento ao pÃºblico:<br />
+      Atendimento presencial temporariamente<br />
+      limitado.
+    </dt>
+    <dd>
+      Av. D. Carlos I, 126<br />
+      1249-074 Lisboa<br />
+      Portugal
+    </dd>
+    <dt style="font-weight:bold;margin-top:1em">
+      Sede
+    </dt>
+    <dd>
+      Av. D. Carlos I, 126<br />
+      1249-074 Lisboa<br />
+      Portugal<br />
+      <br />
+      Tel: 213 924 300<br />
+      Fax: 213 956 519
+    </dd>
+  </dl>
+</div>
+<dl style='clear:right;float:right'>
+  <dt>
+    Contactos por tema
+  </dt>
+  <dd>
+    <ul style='list-style-type:none;margin:0;padding:0'>
+      <li>
+        <a href='/apoios/bolsas/contactos'>Bolsas</a>
+      </li>
+      <li>
+        <a href='/apoios/contratacaodoutorados/contactos'>ContrataÃ§Ã£o de
+        Doutorados</a>
+      </li>
+      <li>
+        <a href='/apoios/projectos/contactos'>Projetos de I&amp;D</a>
+      </li>
+      <li>
+        <a href='/apoios/unidades/contactos'>Unidades de I&amp;D</a>
+      </li>
+      <li>
+        <a href='/apoios/pnrc/contactos'>Infraestruturas de InvestigaÃ§Ã£o</a>
+      </li>
+      <li>
+        <a href='/apoios/facc/contactos'>Fundo de Apoio Ã  Comunidade CientÃ­fica
+        (FACC)</a>
+      </li><!--<li>
+        <a href='mailto:pct@fct.pt'>Portal de CiÃªncia e Tecnologia</a>
+      </li>
+      <li>
+        <a href='mailto:webmaster@fct.pt'>InformÃ¡tica</a>
+      </li>-->
+      <li>
+        <a href='mailto:arquivo@fct.pt'>Arquivo HistÃ³rico de C&amp;T</a>
+      </li>
+      <li>
+        <a href='mailto:gabcom@fct.pt'>Gabinete de ComunicaÃ§Ã£o</a>
+      </li>
+      <li>
+        <a href='mailto:presidencia@fct.pt'>PresidÃªncia</a>
+      </li>
+    </ul>
+  </dd>
+</dl>
+<div style='display:none' class="vcard">
+  <div class="fn org">
+    FundaÃ§Ã£o para a CiÃªncia e a Tecnologia
+  </div>
+  <div class="adr">
+    <div class="street-address">
+      Av. D. Carlos I, 126
+    </div>
+    <div>
+      <span class="locality">Lisbon</span>, <span class="postal-code">1249-074
+      Lisboa</span>
+    </div>
+    <div class="country-name">
+      Portugal
+    </div>
+  </div>
+  <div>
+    <span class="tel"><span class="type">Phone</span>: <span class="value">+351
+    213 924 300</span></span>
+  </div>
+  <div>
+    Email: <span class="email">presidencia@fct.pt</span>
+  </div>
+  <div>
+    <span class="tel type">Fax</span>: <span class="value">+351 213 956
+    519</span>
+  </div>
+</div>
+<div style='clear:both'></div>
+<hr style='margin-top:1em;margin-bottom:1em' />
+<em><a style='font-size:90%' href='/FCT.kmz'>Ver no Google Earth</a></em><div id='map_canvas' style='width: 686px; height: 310px; float:right;margin:1em 0 1em 0'></div><div class='clear'></div>
+</div>
+</div>
+<div id='right'>
+  <span id='xlang'><a href="contactos.phtml.en" title=''>PT | EN</a></span>
+<div id="topmenu">
+
+
+<div id="busca" style="margin: 34px 0 30px;">
+	<form method='post' action='contactos.phtml.pt'>
+		<label for="search"></label>
+     		<input type="text" accesskey='1' id="search" name="search" title='Pesquisa' class="textinput clearme" value='Pesquisa' />
+     	<label for="submit"></label>
+      		<input id="submit" title='Submeter' name="submit" type="image" src="/images/glass_icon.png" class="submit" alt='OK'/>
+	</form>
+</div><!-- busca -->
+
+                
+ 
+	<!-- Contactos,... -->
+	<div id='minimenu'><a href='/contactos.phtml'>contactos</a>&nbsp; &nbsp;<a href='/faq/'>FAQs</a>&nbsp; &nbsp;<a href='/sitemap.phtml'>mapa do site</a>
+            	</div><!-- minimenu -->
+
+
+</div>
+
+<!--<div id='fctsig' class='login'>-->
+<div  id='fctsig' class='login2'>
+    
+            <div>
+              <a href='https://sig.fct.pt/fctsig/'>Login</a>
+                &nbsp;&nbsp;<a href='/registo'>Registo</a>
+            </div>
+       </div>
+
+<div id='box'>
+  <div id='Accordion1' class='Accordion' tabindex='0'>
+<div class='AccordionPanel'>
+<div  class='AccordionPanelTab' style=' background-color:#198861'>InformaÃ§Ã£o geral sobre a FCT</div><div class='AccordionPanelContent'>
+<ul><li><a  href='/fct' title='InformaÃ§Ã£o geral sobre a FCT / Sobre a FCT' >Sobre a FCT</a><ul class='accsubmenu'> <li><a  href='/linhasatividadefct' title='InformaÃ§Ã£o geral sobre a FCT / Principais linhas de aÃ§Ã£o' >Principais linhas de aÃ§Ã£o</a></li>
+<li><a  href='/estruturafct' title='InformaÃ§Ã£o geral sobre a FCT / OrganizaÃ§Ã£o' >OrganizaÃ§Ã£o</a></li>
+<li><a  href='/20anos' title='InformaÃ§Ã£o geral sobre a FCT / 20 anos FCT' >20 anos FCT</a></li>
+<li><a  href='/documentosdiversos' title='InformaÃ§Ã£o geral sobre a FCT / PublicaÃ§Ãµes' >PublicaÃ§Ãµes</a></li>
+</ul></li>
+<li><a  href='/contactos' title='InformaÃ§Ã£o geral sobre a FCT / Contactos' >Contactos</a></li>
+</ul></div></div><div class='AccordionPanel'>
+<div  class='AccordionPanelTab' style=' background-color:#B6974B'>Sociedade da Informa&ccedil;&atilde;o</div><div class='AccordionPanelContent'>
+<ul><li><a  href='/dsi' title='Sociedade da Informa&ccedil;&atilde;o / Introdu&ccedil;&atilde;o' >Introdu&ccedil;&atilde;o</a></li>
+<li><a  href='/dsi/portugalincode2030/' title='Sociedade da Informa&ccedil;&atilde;o / Portugal INCoDe.2030' >Portugal INCoDe.2030</a></li>
+<li><a  href='/dsi/mercadounicodigital/' title='Sociedade da Informa&ccedil;&atilde;o / Mercado Ãnico Digital para a Europa' >Mercado Ãnico Digital para a Europa</a></li>
+<li><a  href='/dsi/agendaportugaldigital/' title='Sociedade da Informa&ccedil;&atilde;o / Agenda Portugal Digital' >Agenda Portugal Digital</a></li>
+<li><a  href='/dsi/inclusaoacessibilidadeliteraciadigitais/' title='Sociedade da Informa&ccedil;&atilde;o / Inclus&atilde;o, Acessibilidade e Literacia Digitais' >Inclus&atilde;o, Acessibilidade e Literacia Digitais</a><ul class='accsubmenu'> <li><a  href='/dsi/inclusaoacessibilidadeliteraciadigitais/inclusaoliteraciadigitais' title='Sociedade da Informa&ccedil;&atilde;o / Inclus&atilde;o e Literacia Digitais' >Inclus&atilde;o e Literacia Digitais</a></li>
+<li><a  href='/dsi/inclusaoacessibilidadeliteraciadigitais/unidadeacesso' title='Sociedade da Informa&ccedil;&atilde;o / Acessibilidade - Unidade Acesso' >Acessibilidade - Unidade Acesso</a></li>
+<li><a  href='/dsi/internetsegura/' title='Sociedade da Informa&ccedil;&atilde;o / Centro Internet Segura - Navega&ccedil;&atilde;o Segura na Internet' >Centro Internet Segura - Navega&ccedil;&atilde;o Segura na Internet</a></li>
+<li><a  href='/dsi/inclusaoacessibilidadeliteraciadigitais/redeticsociedade' title='Sociedade da Informa&ccedil;&atilde;o / Rede TIC &amp; Sociedade' >Rede TIC &amp; Sociedade</a></li>
+<li><a  href='/dsi/inclusaoacessibilidadeliteraciadigitais/enild' title='Sociedade da Informa&ccedil;&atilde;o / Estrat&eacute;gia Nacional para a Inclus&atilde;o e Literacia Digitais (ENILD)' >Estrat&eacute;gia Nacional para a Inclus&atilde;o e Literacia Digitais (ENILD)</a></li>
+</ul></li>
+<li><a  href='/dsi/competenciasdigitais/' title='Sociedade da Informa&ccedil;&atilde;o / Compet&ecirc;ncias Digitais (eSkills)' >Compet&ecirc;ncias Digitais (eSkills)</a><ul class='accsubmenu'> <li><a  href='/dsi/competenciasdigitais/cped/' title='Sociedade da Informa&ccedil;&atilde;o / Coliga&ccedil;&atilde;o Portuguesa para a Empregabilidade Digital (2013-2015)' >Coliga&ccedil;&atilde;o Portuguesa para a Empregabilidade Digital (2013-2015)</a></li>
+<li><a  href='/dsi/competenciasdigitais/campanhaeskills' title='Sociedade da Informa&ccedil;&atilde;o / Campanha eSkills for Jobs (2014-2016)' >Campanha eSkills for Jobs (2014-2016)</a></li>
+</ul></li>
+<li><a  href='/dsi/idi/' title='Sociedade da Informa&ccedil;&atilde;o / Investiga&ccedil;&atilde;o, Desenvolvimento &amp; Inova&ccedil;&atilde;o (I&amp;D&amp;I) em TIC' >Investiga&ccedil;&atilde;o, Desenvolvimento &amp; Inova&ccedil;&atilde;o (I&amp;D&amp;I) em TIC</a><ul class='accsubmenu'> <li><a  href='/dsi/idi/tecnologiasemergentes' title='Sociedade da Informa&ccedil;&atilde;o / Tecnologias Emergentes' >Tecnologias Emergentes</a></li>
+<li><a  href='/dsi/idi/ciberseguranca' title='Sociedade da Informa&ccedil;&atilde;o / Ciberseguran&ccedil;a e Gest&atilde;o do Risco' >Ciberseguran&ccedil;a e Gest&atilde;o do Risco</a></li>
+<li><a  href='/dsi/idi/acessoabertoeciencia' title='Sociedade da Informa&ccedil;&atilde;o / Acesso Aberto e eCi&ecirc;ncia' >Acesso Aberto e eCi&ecirc;ncia</a></li>
+</ul></li>
+<li><a  href='/dsi/politicainternacional/' title='Sociedade da Informa&ccedil;&atilde;o / Pol&iacute;tica Internacional' >Pol&iacute;tica Internacional</a><ul class='accsubmenu'> <li><a  href='/dsi/politicainternacional/ue' title='Sociedade da Informa&ccedil;&atilde;o / Uni&atilde;o Europeia' >Uni&atilde;o Europeia</a></li>
+<li><a  href='/dsi/politicainternacional/organizacoes' title='Sociedade da Informa&ccedil;&atilde;o / Organiza&ccedil;&otilde;es Internacionais' >Organiza&ccedil;&otilde;es Internacionais</a></li>
+</ul></li>
+<li><a  href='/dsi/govinternet/' title='Sociedade da Informa&ccedil;&atilde;o / Governa&ccedil;&atilde;o da Internet' >Governa&ccedil;&atilde;o da Internet</a><ul class='accsubmenu'> <li><a  href='/dsi/govinternet/fgi-igf' title='Sociedade da Informa&ccedil;&atilde;o / Internet Governance Forum' >Internet Governance Forum</a></li>
+<li><a  href='/dsi/govinternet/eurodig' title='Sociedade da Informa&ccedil;&atilde;o / EuroDIG' >EuroDIG</a></li>
+<li><a  href='/dsi/govinternet/iniciativaportuguesa' title='Sociedade da Informa&ccedil;&atilde;o / Iniciativa Portuguesa do FÃ³rum da GovernaÃ§Ã£o da Internet' >Iniciativa Portuguesa do FÃ³rum da GovernaÃ§Ã£o da Internet</a></li>
+</ul></li>
+<li><a  href='/dsi/forumSI/' title='Sociedade da Informa&ccedil;&atilde;o / F&oacute;rum para a Sociedade da Informa&ccedil;&atilde;o' >F&oacute;rum para a Sociedade da Informa&ccedil;&atilde;o</a></li>
+<li><a  href='/dsi/noticias' title='Sociedade da Informa&ccedil;&atilde;o / Not&iacute;cias' >Not&iacute;cias</a></li>
+<li><a  href='/dsi/eventos' title='Sociedade da Informa&ccedil;&atilde;o / Eventos' >Eventos</a></li>
+<li><a  href='/dsi/publicacoes' title='Sociedade da Informa&ccedil;&atilde;o / Publica&ccedil;&otilde;es' >Publica&ccedil;&otilde;es</a></li>
+<li><a  href='/dsi/contactos' title='Sociedade da Informa&ccedil;&atilde;o / Contactos' >Contactos</a></li>
+</ul></div></div><div class='AccordionPanel'>
+<div  class='AccordionPanelTab' style=' background-color:#7ed570'>Acesso Aberto</div><div class='AccordionPanelContent'>
+<ul><li><a  href='/acessoaberto/' title='Acesso Aberto / PolÃ­ticas de Acesso Aberto' >PolÃ­ticas de Acesso Aberto</a></li>
+</ul></div></div><div class='AccordionPanel'>
+<div  class='AccordionPanelTab' style=' background-color:#4ac84a'>Suporte Ã  PolÃ­tica de I&amp;I</div><div class='AccordionPanelContent'>
+<ul><li><a  href='/suporte-politicas-IeD/estrategia2020/' title='Suporte Ã  PolÃ­tica de I&amp;I / EstratÃ©gia de I&amp;I 2014-2020' >EstratÃ©gia de I&amp;I 2014-2020</a><ul class='accsubmenu'> <li><a  href='/esp_inteligente' title='Suporte Ã  PolÃ­tica de I&amp;I / EstratÃ©gia Nacional para a EspecializaÃ§Ã£o Inteligente' >EstratÃ©gia Nacional para a EspecializaÃ§Ã£o Inteligente</a></li>
+<li><a  href='/suporte-politicas-IeD/estrategia2020/prioridadesestrategicas' title='Suporte Ã  PolÃ­tica de I&amp;I / Prioridades EstratÃ©gicas' >Prioridades EstratÃ©gicas</a></li>
+<li><a  href='/esp_inteligente/diagnostico' title='Suporte Ã  PolÃ­tica de I&amp;I / DiagnÃ³stico ao Sistema de I&amp;I' >DiagnÃ³stico ao Sistema de I&amp;I</a></li>
+</ul></li>
+<li><a  href='http://ciencia2012.fct.pt/' title='Suporte Ã  PolÃ­tica de I&amp;I / Ci&ecirc;ncia 2012' >Ci&ecirc;ncia 2012</a></li>
+<li><a  href='/ciencia2008' title='Suporte Ã  PolÃ­tica de I&amp;I / Ci&ecirc;ncia 2007 e 2008' >Ci&ecirc;ncia 2007 e 2008</a></li>
+<li><a  href='http://www.dgeec.mec.pt/np4/19/' title='Suporte Ã  PolÃ­tica de I&amp;I / ProduÃ§Ã£o CientÃ­fica Nacional' >ProduÃ§Ã£o CientÃ­fica Nacional</a></li>
+<li><a  href='/outrosdocumentos' title='Suporte Ã  PolÃ­tica de I&amp;I / Documentos' >Documentos</a></li>
+</ul></div></div><div class='AccordionPanel'>
+<div  class='AccordionPanelTab' style=' background-color:#33A988'>Agendas TemÃ¡ticas</div><div class='AccordionPanelContent'>
+<ul><li><a  href='/agendastematicas/' title='Agendas TemÃ¡ticas / IntroduÃ§Ã£o' >IntroduÃ§Ã£o</a></li>
+<li><a  href='/agendastematicas/' title='Agendas TemÃ¡ticas / Agendas' >Agendas</a><ul class='accsubmenu'> <li><a  href='/agendastematicas/agroflorbiod.phtml.pt' title='Agendas TemÃ¡ticas / Agroalimentar, Florestas e Biodiversidade' >Agroalimentar, Florestas e Biodiversidade</a></li>
+<li><a  href='/agendastematicas/arqport.phtml.pt' title='Agendas TemÃ¡ticas / Arquitetura Portuguesa' >Arquitetura Portuguesa</a></li>
+<li><a  href='/agendastematicas/cienurbcidfut.phtml.pt' title='Agendas TemÃ¡ticas / CiÃªncia Urbana e Cidades para o Futuro' >CiÃªncia Urbana e Cidades para o Futuro</a></li>
+<li><a  href='/agendastematicas/culpatcul.phtml.pt' title='Agendas TemÃ¡ticas / Cultura e PatrimÃ³nio Cultural' >Cultura e PatrimÃ³nio Cultural</a></li>
+<li><a  href='/agendastematicas/ecocirc.phtml.pt' title='Agendas TemÃ¡ticas / Economia Circular' >Economia Circular</a></li>
+<li><a  href='/agendastematicas/espaco.phtml.pt' title='Agendas TemÃ¡ticas / EspaÃ§o e ObservaÃ§Ã£o da Terra' >EspaÃ§o e ObservaÃ§Ã£o da Terra</a></li>
+<li><a  href='/agendastematicas/incsoccid.phtml.pt' title='Agendas TemÃ¡ticas / InclusÃ£o Social e Cidadania' >InclusÃ£o Social e Cidadania</a></li>
+<li><a  href='/agendastematicas/indmanu.phtml.pt' title='Agendas TemÃ¡ticas / IndÃºstria e Manufatura' >IndÃºstria e Manufatura</a></li>
+<li><a  href='/agendastematicas/mar.phtml.pt' title='Agendas TemÃ¡ticas / Mar' >Mar</a></li>
+<li><a  href='/agendastematicas/sauinvclitrans.phtml.pt' title='Agendas TemÃ¡ticas / SaÃºde, InvestigaÃ§Ã£o ClÃ­nica e de TranslaÃ§Ã£o' >SaÃºde, InvestigaÃ§Ã£o ClÃ­nica e de TranslaÃ§Ã£o</a></li>
+<li><a  href='/agendastematicas/siscibercompcom.phtml.pt' title='Agendas TemÃ¡ticas / Sistemas Ciberfisicos e formas avanÃ§adas de ComputaÃ§Ã£o e ComunicaÃ§Ã£o' >Sistemas Ciberfisicos e formas avanÃ§adas de ComputaÃ§Ã£o e ComunicaÃ§Ã£o</a></li>
+<li><a  href='/agendastematicas/sissusenerg.phtml.pt' title='Agendas TemÃ¡ticas / Sistemas SustentÃ¡veis de Energia' >Sistemas SustentÃ¡veis de Energia</a></li>
+<li><a  href='/agendastematicas/trabrobqualempport.phtml.pt' title='Agendas TemÃ¡ticas / Trabalho, RobotizaÃ§Ã£o e QualificaÃ§Ã£o de Emprego em Portugal' >Trabalho, RobotizaÃ§Ã£o e QualificaÃ§Ã£o de Emprego em Portugal</a></li>
+<li><a  href='/agendastematicas/turhospgeslaz.phtml.pt' title='Agendas TemÃ¡ticas / Turismo, Hospitabilidade e GestÃ£o do Lazer' >Turismo, Hospitabilidade e GestÃ£o do Lazer</a></li>
+</ul></li>
+</ul></div></div><div class='AccordionPanel'>
+<div  class='AccordionPanelTab' style=' background-color:#b6be4b'>Arquivo de CiÃªncia e Tecnologia</div><div class='AccordionPanelContent'>
+<ul><li><a  href='/arquivo' title='Arquivo de CiÃªncia e Tecnologia / Sobre o Arquivo de CiÃªncia e Tecnologia' >Sobre o Arquivo de CiÃªncia e Tecnologia</a></li>
+</ul></div></div><div class='AccordionPanel'>
+<div  class='AccordionPanelTab' style=' background-color:#93a747'>Estudos e EstratÃ©gia</div><div class='AccordionPanelContent'>
+<ul><li><a  href='/gabestudosestrategia/' title='Estudos e EstratÃ©gia / IntroduÃ§Ã£o' >IntroduÃ§Ã£o</a></li>
+<li><a  href='/gabestudosestrategia/OCDE/' title='Estudos e EstratÃ©gia / OCDE - Ãreas de CiÃªncia e Tecnologia' >OCDE - Ãreas de CiÃªncia e Tecnologia</a></li>
+<li><a  href='/gabestudosestrategia/ENEI/' title='Estudos e EstratÃ©gia / EstratÃ©gia Nacional para a EspecializaÃ§Ã£o Inteligente' >EstratÃ©gia Nacional para a EspecializaÃ§Ã£o Inteligente</a></li>
+<li><a  href='/gabestudosestrategia/publicacoes/' title='Estudos e EstratÃ©gia / PublicaÃ§Ãµes' >PublicaÃ§Ãµes</a></li>
+<li><a  href='/gabestudosestrategia/eventos/' title='Estudos e EstratÃ©gia / Eventos' >Eventos</a></li>
+<li><a  href='/gabestudosestrategia/contactos' title='Estudos e EstratÃ©gia / Contactos' >Contactos</a></li>
+</ul></div></div><div class='AccordionPanel'>
+<div  class='AccordionPanelTab' style=' background-color:#22bf80'>O sistema de informaÃ§Ã£o da FCT</div><div class='AccordionPanelContent'>
+<ul><li><a  href='/sitemap.phtml' title='O sistema de informaÃ§Ã£o da FCT / Mapa do sÃ­tio' >Mapa do sÃ­tio</a></li>
+<li><a  href='/portaisfct' title='O sistema de informaÃ§Ã£o da FCT / Portais FCT' >Portais FCT</a></li>
+<li><a  href='https://sig.fct.pt/fctsig/' title='O sistema de informaÃ§Ã£o da FCT / Sistema de informaÃ§Ã£o e gestÃ£o' >Sistema de informaÃ§Ã£o e gestÃ£o</a><ul class='accsubmenu'> <li><a  href='/registo/' title='O sistema de informaÃ§Ã£o da FCT / Registo' >Registo</a></li>
+<li><a  href='/registo/recuperacao' title='O sistema de informaÃ§Ã£o da FCT / RecuperaÃ§Ã£o de credenciais' >RecuperaÃ§Ã£o de credenciais</a></li>
+<li><a  href='/faq/brow.phtml.pt?faqtema=B2DE8E72-D33D-4EE4-A532-2EAB1AE4CC4D' title='O sistema de informaÃ§Ã£o da FCT / Ajuda' >Ajuda</a></li>
+</ul></li>
+</ul></div></div><div class='AccordionPanel'>
+<div  class='AccordionPanelTab' style=' background-color:#80bf22'>Recrutamento</div><div class='AccordionPanelContent'>
+<ul><li><a  href='/recrutamento/' title='Recrutamento / Recrutamento' >Recrutamento</a></li>
+<li><a  href='/concursos_nao_cientificos/' title='Recrutamento / Outros Concursos' >Outros Concursos</a></li>
+</ul></div></div><div class='AccordionPanel'>
+<div  class='AccordionPanelTab' style=' background-color:#487262'>AquisiÃ§Ã£o de serviÃ§os</div><div class='AccordionPanelContent'>
+<ul><li><a  href='/concursos_nao_cientificos/obras/' title='AquisiÃ§Ã£o de serviÃ§os / Obras' >Obras</a></li>
+<li><a  href='/concursos_nao_cientificos/auditoria_plurianual_2003_2008/' title='AquisiÃ§Ã£o de serviÃ§os / Auditoria tÃ©cnico-financeira relativa a despesas sob financiamento plurianual 2003/8' >Auditoria tÃ©cnico-financeira relativa a despesas sob financiamento plurianual 2003/8</a></li>
+<li><a  href='/concursos_nao_cientificos/auditoria_unidades_sem1_2007' title='AquisiÃ§Ã£o de serviÃ§os / Auditoria tÃ©cnico-financeira relativa a despesas de I&amp;D relaizadas por instituiÃ§Ãµes no 1Âº semestre de 2007' >Auditoria tÃ©cnico-financeira relativa a despesas de I&amp;D relaizadas por instituiÃ§Ãµes no 1Âº semestre de 2007</a></li>
+<li><a  href='/concursos_nao_cientificos/gestao_documental/' title='AquisiÃ§Ã£o de serviÃ§os / Desenvolvimento de software e parametrizaÃ§Ã£o de um ambiente de Intranet no Ã¢mbito de um sistema colaborativo' >Desenvolvimento de software e parametrizaÃ§Ã£o de um ambiente de Intranet no Ã¢mbito de um sistema colaborativo</a></li>
+<li><a  href='/concursos_nao_cientificos/validacao/' title='AquisiÃ§Ã£o de serviÃ§os / ValidaÃ§Ã£o de despesa no Ã¢mbito de projectos de I&amp;D' >ValidaÃ§Ã£o de despesa no Ã¢mbito de projectos de I&amp;D</a><ul class='accsubmenu'> <li><a  href='/concursos_nao_cientificos/validacao/2016/' title='AquisiÃ§Ã£o de serviÃ§os / 2016' >2016</a></li>
+<li><a  href='/concursos_nao_cientificos/validacao/2014/' title='AquisiÃ§Ã£o de serviÃ§os / 2014' >2014</a></li>
+<li><a  href='/concursos_nao_cientificos/validacao/2013/' title='AquisiÃ§Ã£o de serviÃ§os / 2013' >2013</a></li>
+<li><a  href='/concursos_nao_cientificos/validacao/2012/' title='AquisiÃ§Ã£o de serviÃ§os / 2012' >2012</a></li>
+<li><a  href='/concursos_nao_cientificos/validacao/2011/' title='AquisiÃ§Ã£o de serviÃ§os / 2011' >2011</a></li>
+<li><a  href='/concursos_nao_cientificos/validacao/2010/' title='AquisiÃ§Ã£o de serviÃ§os / 2010' >2010</a></li>
+<li><a  href='/concursos_nao_cientificos/validacao/2009/' title='AquisiÃ§Ã£o de serviÃ§os / 2009' >2009</a></li>
+<li><a  href='/concursos_nao_cientificos/validacao/2008/' title='AquisiÃ§Ã£o de serviÃ§os / 2008' >2008</a></li>
+</ul></li>
+</ul></div></div></div>
+</div>
+    
+</div>               	
+<div class='clear'></div>
+<div id='footerseparator'>
+  <div id='std_footer'>
+    <!-- COPYRIGHT -->
+    <div id="copyright">
+      <p> &copy;2018 &middot; Funda&ccedil;&atilde;o para a Ci&ecirc;ncia e a Tecnologia
+  </p>  
+    </div><!-- /copyright -->
+  <!-- FILIATION -->
+    <div id="filiation">
+    </div>
+  </div>
+</div>
+</div>
+<!-- Painel por omissÃ£o do acordeÃ£o -->
+<script type="text/javascript">
+var acc = new Spry.Widget.Accordion("Accordion1", { defaultPanel: 0 });
+</script>
+</body>
+</html>

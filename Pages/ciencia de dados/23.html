@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://cappra.com.br/xmlrpc.php">
+
+<title>Ciência de Dados &#8211; CAPPRA DATA SCIENCE</title>
+<script type="text/javascript">
+  WebFontConfig = {"google":{"families":["Montserrat:b:latin,latin-ext"]}};
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://s0.wp.com/wp-content/plugins/custom-fonts/js/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+	})();
+</script><style id="jetpack-custom-fonts-css">.wf-active h1{font-style:normal;font-weight:700}.wf-active h5{font-family:"Montserrat",sans-serif;font-style:normal;font-weight:700}.wf-active .comment .comment-reply-title a, .wf-active .comment-reply-title, .wf-active .comment-reply-title .comments-title, .wf-active .comments-area-title .comments-title, .wf-active .entry-card .entry-title, .wf-active .site-title, .wf-active body div#jp-relatedposts h3.jp-relatedposts-headline, .wf-active body div.sharedaddy h3.sd-title, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4{font-family:"Montserrat",sans-serif;font-style:normal;font-weight:700}.wf-active .entry-card--text .entry-header--long .entry-title{font-style:normal;font-weight:700}.wf-active .entry-card--text .entry-header--medium .entry-title{font-style:normal;font-weight:700}.wf-active .entry-card--text .entry-header--short .entry-title{font-style:normal;font-weight:700}.wf-active .site-title, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4{font-weight:700;font-style:normal}.wf-active h5{font-weight:700;font-style:normal}.wf-active .site-title, .wf-active h1{font-style:normal;font-weight:700}.wf-active .page .entry-title.site-title, .wf-active .page h1.entry-title, .wf-active .single .entry-title.site-title, .wf-active .single h1.entry-title{font-style:normal;font-weight:700}.wf-active h2{font-style:normal;font-weight:700}.wf-active h3{font-weight:700;font-style:normal}.wf-active h4{font-style:normal;font-weight:700}.wf-active h5{font-style:normal;font-weight:700}.wf-active .entry-card .entry-title{font-weight:700;font-style:normal}.wf-active .entry-card--text .entry-header--long .entry-title{font-weight:700;font-style:normal}.wf-active .entry-card--portrait .entry-title, .wf-active .entry-card--tall .entry-title{font-weight:700;font-style:normal}.wf-active .entry-card--portrait .entry-header--short .entry-title, .wf-active .entry-card--tall .entry-header--short .entry-title{font-weight:700;font-style:normal}.wf-active .entry-card--portrait .entry-header--medium .entry-title, .wf-active .entry-card--tall .entry-header--medium .entry-title{font-style:normal;font-weight:700}.wf-active .entry-card--portrait .entry-header--long .entry-title, .wf-active .entry-card--tall .entry-header--long .entry-title{font-weight:700;font-style:normal}.wf-active .site-title{font-style:normal;font-weight:700}@media screen and (min-width: 900px){.wf-active .site-title{font-style:normal;font-weight:700}}.wf-active .site-description{font-family:"Montserrat",sans-serif;font-style:normal;font-weight:700}.wf-active .add-comment .add-comment__button, .wf-active .comment-number, .wf-active .comment-number--dark, .wf-active .comment-reply-title:before, .wf-active .comments-area:after{font-weight:700;font-style:normal}.wf-active .comment-reply-title .comments-title, .wf-active .comments-area-title .comments-title{font-weight:700;font-style:normal}.wf-active .comment-reply-title{font-weight:700;font-style:normal}.wf-active .comment .comment-reply-title a{font-style:normal;font-weight:700}.wf-active body div#jp-relatedposts h3.jp-relatedposts-headline, .wf-active body div.sharedaddy h3.sd-title{font-style:normal;font-weight:700}.wf-active body div#jp-relatedposts h3.jp-relatedposts-headline, .wf-active body div#jp-relatedposts h3.jp-relatedposts-headline em, .wf-active body div.sharedaddy h3.sd-title, .wf-active body div.sharedaddy h3.sd-title em{font-weight:700;font-style:normal}.wf-active body div#jp-relatedposts div.jp-relatedposts-items .jp-relatedposts-post-title{font-weight:700;font-style:normal}.wf-active .entry-title a{font-weight:700;font-style:normal}</style>
+		<script src='https://r-login.wordpress.com/remote-login.php?action=js&amp;host=cappra.com.br&amp;id=7818168&amp;t=1537288823&amp;back=https%3A%2F%2Fcappra.com.br%2Fciencia-de-dados%2F' type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//cappra.wordpress.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Feed para CAPPRA DATA SCIENCE &raquo;" href="https://cappra.com.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para CAPPRA DATA SCIENCE &raquo;" href="https://cappra.com.br/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1532082729h&ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJyNjtEOgjAMRX/IWiWA8cH4LWNWGaxsoSOEv7eAvqghvjTtzTm5xTGCDV2iLiEPEP3wcJ3gGG1gEHaepo9rb0V2+FvzriXBhlI0toXl2sJt6ElzjibNBNPNGfLEim1pHMu3Na+1dm3WrO9XVexJBHSyGxhSrUXf3hrji0ItsTUaEUr6rwjelQMzkgSm/2RJk1/QK1+ORZafyvMhK5onJXiNmw==?cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='patch-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A500%2C400%2C300%2C500italic%2C400italic%2C300italic%7COswald%3A300%2C400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s1.wp.com/_static/??-eJx9UNEKwjAM/CFrmG74JH5LV2sXyZrRZOz37ehEh9Kn3HF3yRFYJuM4qo8K42wmmgNGgQXvwauAsENLBrNlT45O5AAIkbWIb1CE/1uDZ0PsrCLHHTEPsphq0eR74pBhgOz6orWQdevy3qYPqtknFi1NQAab1lvbrKW2r+Q6vCc/IR386AWGFgJxb2k13MZr0526S9O1zfn5AqE7lME=?cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyFztEKwjAMBdAfsquTiXsRv6XWOFKXtDbphn69HeiDMBQCgdzDJXZOBtmP5QJiQ517gfx4rybIxv4ChnDITqEh5A/2kRVYF0vxjCOYIpDdUG+16BpXXIqiBCIVraTfLyFPCPNfFkCT8zeTQfC5tJ7o2Hb9Yde3+24bXjRNW9I='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cappra.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://cappra.com.br/ciencia-de-dados/" />
+<link rel='shortlink' href='https://wp.me/PwNRu-1vN' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fcappra.com.br%2Fciencia-de-dados%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fcappra.com.br%2Fciencia-de-dados%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Ciência de Dados" />
+<meta property="og:url" content="https://cappra.com.br/ciencia-de-dados/" />
+<meta property="og:description" content="A CAPPRA é um hub de conhecimento sobre ciência de dados,  mantenedora de um laboratório independente para pesquisa e desenvolvimento dessa disciplina, e fomentadora de uma comunidade global de cie…" />
+<meta property="article:published_time" content="2018-01-18T00:38:27+00:00" />
+<meta property="article:modified_time" content="2018-01-18T02:07:25+00:00" />
+<meta property="og:site_name" content="CAPPRA DATA SCIENCE" />
+<meta property="og:image" content="https://cappra.files.wordpress.com/2015/01/hacker.jpg" />
+<meta property="og:image:width" content="640" />
+<meta property="og:image:height" content="640" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="twitter:creator" content="@cappra" />
+<meta name="twitter:site" content="@cappra" />
+<meta name="twitter:text:title" content="Ciência de Dados" />
+<meta name="twitter:image" content="https://cappra.files.wordpress.com/2015/01/hacker.jpg?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/59cd6c11385ab31265723ced014c3009?s=32" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/59cd6c11385ab31265723ced014c3009?s=32" sizes="16x16" />
+<link rel="apple-touch-icon-precomposed" href="https://secure.gravatar.com/blavatar/59cd6c11385ab31265723ced014c3009?s=114" />
+<link rel='openid.server' href='https://cappra.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://cappra.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://cappra.com.br/osd.xml" title="CAPPRA DATA SCIENCE" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<style type="text/css">
+.widget_twitter li {
+	word-wrap: break-word;
+}
+</style>
+<meta name="application-name" content="CAPPRA DATA SCIENCE" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="CAPPRA DATA SCIENCE" /><meta name="msapplication-task" content="name=Assinar;action-uri=https://cappra.com.br/feed/;icon-uri=https://secure.gravatar.com/blavatar/59cd6c11385ab31265723ced014c3009?s=16" /><meta name="msapplication-task" content="name=Registre um blog gratuito;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Suporte do WordPress.com;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Fóruns;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="A CAPPRA é um hub de conhecimento sobre ciência de dados,  mantenedora de um laboratório independente para pesquisa e desenvolvimento dessa disciplina, e fomentadora de uma comunidade global de cientistas de dados. Já desenvolveu projetos globais baseados em big data e ciência de dados para os mais diferentes fins e organizações. A CAPPRA foi fundada pelo cientista de dados Ricardo&hellip;" />
+			<!-- Site Logo: hide header text -->
+			<style type="text/css">
+			.site-title, .site-description-text {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+			</style>
+			<style type="text/css" id="syntaxhighlighteranchor"></style>
+<style type="text/css" id="custom-colors-css">.single .entry-content h1 a,.single .entry-content h2 a,.single .entry-content h3 a,.sidebar h1 a,.sidebar h2 a,.sidebar h3 a,.entry-card.format-quote .entry-content a:hover{color:#171617}.dropcap{text-shadow:none}.entry-card.format-quote .entry-content a{box-shadow:none}.cat-links a,.entry-format a,.cat-links,.entry-format{color:#000}.page-links a:hover,.smart-link:hover,.single .entry-content a:hover,.page .entry-content a:hover,.edit-link a:hover,.author-info__link:hover,.comments_add-comment:hover,.comment .comment-reply-title a:hover,div#infinite-handle span:hover{color:#000}::selection{color:#000}::-moz-selection{color:#000}.nav--social a:hover:before{color:#5b5b5b}.search-form .search-submit{color:#5b5b5b}.comment-number--dark,.comments-area:after,.comment-reply-title:before,.add-comment .add-comment__button{color:#6d6d6d}.back-to-top-button #arrow{fill:#6d6d6d}div#infinite-footer,.site-footer a[rel=designer],.site-footer a{color:#6d6d6d}.entry-card--text .entry-header a,.entry-card--text .entry-title{color:#6d6d6d}.entry-card.format-quote .entry-content,.entry-card.format-quote blockquote,.entry-card.format-quote cite{color:#6d6d6d}div#infinite-footer .blog-info a,div#infinite-footer .blog-credits a,.site-footer{color:#6d6d6d}body{border-color:#fff}body:before{background:#fff}#bar{fill:#fff}.highlight{color:#fff}div#infinite-footer,.site-footer{background-color:#fff}.entry-card--text .entry-header{background-color:#fff}.entry-card.format-quote .entry-content{background-color:#fff}.comment-number--dark,.comments-area:after,.comment-reply-title:before,.add-comment .add-comment__button{background-color:#fff}.search-form .search-submit{background-color:#ffde00}.back-to-top-button #bar{fill:#7f6e00}.nav--social a:hover:before{background-color:#ffde00}.jetpack_subscription_widget input[type=submit],.widget_blog_subscription input[type=submit],.sidebar .widget a:hover,.grid__item .entry-content a,.page-links a,.smart-link,.single .entry-content a,.page .entry-content a,.edit-link a,.author-info__link,.comments_add-comment,.comment .comment-reply-title a,:first-child:not(input)~.form-submit #submit,div#infinite-handle span,.sidebar a:hover,.nav--main li[class*=current-menu]>a,.nav--main li:hover>a{background-color:#ffde00}.nav--main li[class*=current-menu]>a:before,.nav--main li:hover>a:before,.sidebar a:hover:before{background-color:#ffde00}.cat-links,.entry-format,.sticky .sticky-post{background-color:#ffde00}.sticky .sticky-post:before,.sticky .sticky-post:after{border-top-color:#ffde00}.smart-link:hover,.single .entry-content a:hover,.page .entry-content a:hover,.edit-link a:hover,.author-info__link:hover,.comments_add-comment:hover,.comment .comment-reply-title a:hover,div#infinite-handle span:hover{background-color:#ffde00}.site-footer a:hover{color:#7f6e00}::selection{background:#ffde00}::-moz-selection{background:#ffde00}.nav--social a:hover:before{background:#ffde00}.bypostauthor .comment__author-name:before{color:#ffde00}</style>
+</head>
+
+<body class="page-template-default page page-id-5815 mp6 customizer-styles-applied has_sidebar has-site-logo highlander-enabled highlander-light custom-colors">
+
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Pular para o conteúdo</a>
+
+	<div id="content" class="site-content">
+		<div class="container">
+
+		
+
+<header id="masthead" class="site-header" role="banner">
+	<div class="site-branding">
+
+		<a href="https://cappra.com.br/" class="site-logo-link" rel="home"><img width="1000" height="441" src="https://cappra.files.wordpress.com/2016/07/2a.png?w=1000" class="site-logo attachment-patch-site-logo" alt="" data-size="patch-site-logo" srcset="https://cappra.files.wordpress.com/2016/07/2a.png?w=1000 1000w, https://cappra.files.wordpress.com/2016/07/2a.png?w=150 150w, https://cappra.files.wordpress.com/2016/07/2a.png?w=300 300w, https://cappra.files.wordpress.com/2016/07/2a.png?w=768 768w, https://cappra.files.wordpress.com/2016/07/2a.png?w=1024 1024w, https://cappra.files.wordpress.com/2016/07/2a.png 1182w" sizes="(max-width: 1000px) 100vw, 1000px" data-attachment-id="5127" data-permalink="https://cappra.com.br/2a/" data-orig-file="https://cappra.files.wordpress.com/2016/07/2a.png" data-orig-size="1182,521" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="2a" data-image-description="" data-medium-file="https://cappra.files.wordpress.com/2016/07/2a.png?w=300" data-large-file="https://cappra.files.wordpress.com/2016/07/2a.png?w=980" /></a>
+		<div class="site-title">
+		<a href="https://cappra.com.br/" rel="home">
+			CAPPRA DATA SCIENCE		</a>
+
+		</div>
+		
+			<div class="site-description">
+				<span class="site-description-text">CAPPRA DATA SCIENCE</span>
+			</div>
+
+		
+	</div><!-- .site-branding -->
+
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+
+		<ul id="menu-menu" class="nav nav--main"><li id="menu-item-5859" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5815 current_page_item menu-item-5859"><a href="https://cappra.com.br/ciencia-de-dados/">CIÊNCIA DE DADOS</a></li>
+<li id="menu-item-2195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2195"><a href="https://cappra.com.br/ricardo-cappra/">CIENTISTA CHEFE</a></li>
+<li id="menu-item-5873" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5873"><a href="http://cappralab.com">LAB</a></li>
+<li id="menu-item-857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-857"><a href="https://cappra.com.br/contato/">Contato</a></li>
+</ul>
+		<ul id="menu-redes-sociais-3" class="nav nav--social"><li id="menu-item-1439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1439"><a href="http://twitter.com/cappra">Twitter</a></li>
+<li id="menu-item-1438" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1438"><a href="http://facebook.com/c4ppr4">Facebook</a></li>
+<li id="menu-item-3739" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3739"><a href="http://youtube.com/cappratv">Youtube</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#search">Busca</a></li></ul>
+	</nav><!-- #site-navigation -->
+
+</header><!-- #masthead -->
+
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			
+				
+<article id="post-5815" class="post-5815 page type-page status-publish has-post-thumbnail hentry entry-image--square">
+	<header class="entry-image--square entry-header">
+
+		<h1 class="entry-title">Ciência de Dados</h1>
+		
+			<div class="entry-featured  entry-thumbnail">
+
+				<img width="640" height="640" src="https://cappra.files.wordpress.com/2015/01/hacker.jpg?w=640" class="attachment-patch-single-image size-patch-single-image wp-post-image" alt="" srcset="https://cappra.files.wordpress.com/2015/01/hacker.jpg 640w, https://cappra.files.wordpress.com/2015/01/hacker.jpg?w=150 150w, https://cappra.files.wordpress.com/2015/01/hacker.jpg?w=300 300w" sizes="(max-width: 640px) 100vw, 640px" data-attachment-id="3525" data-permalink="https://cappra.com.br/hacker/" data-orig-file="https://cappra.files.wordpress.com/2015/01/hacker.jpg" data-orig-size="640,640" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="hacker" data-image-description="" data-medium-file="https://cappra.files.wordpress.com/2015/01/hacker.jpg?w=300" data-large-file="https://cappra.files.wordpress.com/2015/01/hacker.jpg?w=640" />
+			</div>
+
+		
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+
+		<p>A CAPPRA é um hub de conhecimento sobre ciência de dados,  <span style="color:#000000;"><a style="color:#000000;" href="http://cappralab.com">mantenedora de um laboratório independente para pesquisa e desenvolvimento dessa disciplina</a></span>, e fomentadora de uma comunidade global de cientistas de dados. Já desenvolveu projetos globais baseados em big data e ciência de dados para os mais diferentes fins e organizações. A CAPPRA foi fundada pelo cientista de dados <span style="color:#000000;"><strong><a style="color:#000000;" href="http://www.cappra.com.br/ricardo-cappra">Ricardo Cappra</a></strong>,</span> que lidera nossas iniciativas e ajuda líderes globais a tomarem decisões melhores através da ciência de dados.</p>
+<p><strong>Na CAPPRA, criamos métodos e práticas que transformam dados não estruturados em poderosas análises e visualizações. Acreditamos que informações qualificadas, estruturadas e visuais, quando entregues para as pessoas certas, são uma fonte de poder. Pessoas ficam mais poderosas quando tem melhores informações para fazerem escolhas. Nos divertimos criando ferramentas (baseadas em sólidas metodologias científicas) que aceleram a solução de problemas complexos.</strong></p>
+<p>Por muito tempo nosso principal trabalho foi torturar dados até que eles confessassem coisas importantes, mas entendemos que nosso papel hoje é criar formas para transformar a ciência de dados em prática, para assim ajudar as pessoas a usarem mais ciência em seu dia-a-dia.</p>
+<p><strong>Nossa missão é criar métodos que simplifiquem a  transformação de  ciência em prática, para assim disseminar cultura analítica.</strong><br />
+<strong> Nosso papel é acelerar a democratização da ciência de dados através de pesquisas, teses e métodos autorais, projetos inéditos e iniciativas abertas.</strong></p>
+<p><span class="aligncenter"><img data-attachment-id="5835" data-permalink="https://cappra.com.br/ciencia-de-dados/captura-de-tela-2018-01-13-as-19-34-33/" data-orig-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-34-33.png" data-orig-size="4216,2358" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Captura de Tela 2018-01-13 às 19.34.33" data-image-description="" data-medium-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-34-33.png?w=300" data-large-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-34-33.png?w=980" class="aligncenter wp-image-5835 size-large" src="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-34-33.png?w=980&#038;h=547" alt="" srcset="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-34-33.png?w=978&amp;h=547 978w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-34-33.png?w=1956&amp;h=1094 1956w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-34-33.png?w=150&amp;h=84 150w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-34-33.png?w=300&amp;h=168 300w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-34-33.png?w=768&amp;h=430 768w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-34-33.png?w=1024&amp;h=573 1024w" sizes="(max-width: 980px) 100vw, 980px"   /></span></p>
+<hr />
+<h2 style="text-align:left;">Um laboratório de Ciência de Dados</h2>
+<p><span class="aligncenter"><a href="http://cappralab.com" class="img-link"><img data-attachment-id="5832" data-permalink="https://cappra.com.br/ciencia-de-dados/captura-de-tela-2018-01-13-as-19-23-18/" data-orig-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-23-18.png" data-orig-size="1670,454" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cappralab" data-image-description="" data-medium-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-23-18.png?w=300&#038;h=82" data-large-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-23-18.png?w=980" class="aligncenter size-medium wp-image-5832" src="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-23-18.png?w=300&#038;h=82" alt="" width="300" height="82" srcset="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-23-18.png?w=300&amp;h=82 300w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-23-18.png?w=600&amp;h=164 600w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-23-18.png?w=150&amp;h=41 150w" sizes="(max-width: 300px) 100vw, 300px" /></a></span></p>
+<p style="text-align:left;">No laboratório da CAPPRA, estudamos o impacto da ciência de dados na sociedade e nos negócios, com foco em 3 pilares: <strong>1) Transformação de dados em informação; 2) Consumo de Informação; e 3) Impacto do uso de dados</strong>; a partir desse conhecimento adquirido, a CAPPRA desenvolve métodos e práticas para democratizar o acesso e uso da ciência de dados, colaborando assim na transformação de indivíduos, sociedade e negócios. Acreditamos que se mais pessoas tiverem acesso a práticas e métodos que simplificam o uso de ciência em suas organizações e vidas, teríamos um mundo melhor, pois essas pessoas poderiam dedicar mais tempo para fazer coisas realmente incríveis. Sendo assim, criar métodos, frameworks, ferramentas e práticas, que simplifiquem o uso da ciência de dados, é o objetivo principal do nosso laboratório, ou seja, ajudar pessoas a resolverem problemas complexos através de práticas testadas e eficazes.</p>
+<p><span class="aligncenter"><img data-attachment-id="5821" data-permalink="https://cappra.com.br/ciencia-de-dados/captura-de-tela-2018-01-13-as-18-53-19/" data-orig-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-18-53-19.png" data-orig-size="1956,1840" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cappra-knowledgehub" data-image-description="" data-medium-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-18-53-19.png?w=300" data-large-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-18-53-19.png?w=980" class="aligncenter wp-image-5821 size-large" src="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-18-53-19.png?w=980&#038;h=923" alt="" srcset="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-18-53-19.png?w=980&amp;h=923 980w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-18-53-19.png?w=150&amp;h=141 150w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-18-53-19.png?w=300&amp;h=282 300w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-18-53-19.png?w=768&amp;h=722 768w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-18-53-19.png?w=1024&amp;h=963 1024w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-18-53-19.png 1956w" sizes="(max-width: 980px) 100vw, 980px"   /></span></p>
+<p style="text-align:left;">Entre os clientes já atendidos pela CAPPRA estão: <strong>Rede Globo, Lojas Americanas, Banco Itaú, Petrobras, Banco Mundial, Gov.USA, Whirlpool, Natura,&#8230;</strong></p>
+<p style="text-align:left;"><em>Diferentes formas são utilizadas para realização desses serviços, podendo ocorrer através de pesquisa &amp; desenvolvimento de métodos e práticas, workshops, hackathons, análises e projetos especiais.</em></p>
+<p>Para conhecer os serviços e iniciativas do laboratório de ciência de deados da CAPPRA você pode visitar o site <strong><span style="color:#000000;"><a style="color:#000000;" href="http://cappralab.com" target="_blank" rel="noopener">cappralab.com</a></span></strong>.</p>
+<hr />
+<h2 style="text-align:left;">Um pouco sobre Ciência de Dados&#8230;</h2>
+<p style="text-align:left;">E se fosse possível descobrir como as pessoas se comportam e quais são os fatores que motivam suas ações?! identificar os fatores de propagação social de uma doença?! comparar meios de comunicação através da ponderação de indicadores?! descobrir o próximo presidente que será eleito?! monitorar toda a jornada de compra de um produto?! e até mensurar a efetividade de um aperto de mão?! E se tudo isso fosse possível usando ciência?!!</p>
+<p style="text-align:left;"> Painéis de gestão de indicadores performance, análise de comportamento dos consumidores, insights para business, identificação de oportunidades e ameaças, são apenas alguns dos produtos finais resultado de projetos baseados em Ciência de Dados.</p>
+<p style="text-align:left;"> Identificar o que realmente importa, descobrir fontes dos dados, coletar, organizar, mostrar e analisar informações relevantes é cada vez mais importante em um cenário global sem fronteiras para competitividade. Tomar decisões utilizando-se apenas da intuição e inteligência emocional é um risco desnecessário na era da informação, onde temos inúmeras possibilidades de dar subsídios racionais e científicos para ajudar as pessoas.</p>
+<p style="text-align:left;"> &#8220;A ciência de dados é a forma mais efetiva de hackear negócios &#8211; e porque não hackear nossas próprias vidas &#8211; usando aspectos racionais para isso, afinal hoje é possível Monitorar, Medir e Analisar absolutamente tudo!&#8221;</p>
+<p style="text-align:left;">Nesse vídeo abaixo contamos um pouco das nossas crenças, sobre ciência de dados&#8230;</p>
+<div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='980' height='552' src='https://www.youtube.com/embed/LhImkECpQAQ?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></div>
+<p>&nbsp;</p>
+<h2 style="text-align:left;">Data Democratization</h2>
+<p style="text-align:left;">A era da informação nos trouxe grandes problemas. Temos volumes absurdos de dados sendo gerados e espalhados todos os dias, nos mais diferentes formatos e lugares, numa velocidade inacreditável (esse é o conceito do big data). Ter acesso a todos esses dados não ajuda muito, eles não costumam ser estruturados para compreensão individual, e isso dificulta o foco na real solução dos nossos problemas do dia-a-dia. É preciso que estes dados sejam traduzidos para cada realidade.</p>
+<p style="text-align:left;">O mundo digital democratizou o acesso a informação &#8211; e todos os dias surgem novas fontes de dados (dispositivos e aplicativos gerando novos dados) &#8211; qualquer pessoa pode ter acesso a tudo isso, infelizmente na maioria das vezes não temos capacidade de compreender ou organizar a quantidade de informação desqualificada que recebemos diariamente.</p>
+<p style="text-align:left;">A democratização de dados pode resolver muitos problemas do mundo, ou seja é uma grande oportunidade se os mesmos forem tratados e organizados de uma forma que faça sentido para as pessoas que os recebem. É preciso sistematizar o fluxo da informação, destacar o mais importante, tirar o lixo, deixar visual, ou seja, Simplificar! E é exatamente isso que fazemos no laboratório de ciência de dados da CAPPRA, criamos ferramentas simples para a utilização de melhores práticas.</p>
+<h3 style="text-align:center;"><strong><a href="https://cappra.com.br/2015/04/13/o-poder-da-informacao/" target="_blank" rel="noopener">Dados -&gt; Informação -&gt; Conhecimento -&gt; Poder</a></strong></h3>
+<p><span class="aligncenter"><img data-attachment-id="5828" data-permalink="https://cappra.com.br/ciencia-de-dados/captura-de-tela-2018-01-13-as-19-10-46/" data-orig-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-10-46.png" data-orig-size="3362,2020" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="datascience-transformation-value-cappra" data-image-description="" data-medium-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-10-46.png?w=300" data-large-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-10-46.png?w=980" class="aligncenter wp-image-5828 size-large" src="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-10-46.png?w=980&#038;h=589" alt="" srcset="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-10-46.png?w=980&amp;h=589 980w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-10-46.png?w=1960&amp;h=1178 1960w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-10-46.png?w=150&amp;h=90 150w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-10-46.png?w=300&amp;h=180 300w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-10-46.png?w=768&amp;h=461 768w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-13-c3a0s-19-10-46.png?w=1024&amp;h=615 1024w" sizes="(max-width: 980px) 100vw, 980px"   /></span></p>
+<hr />
+<h2 style="text-align:left;">As iniciativas abertas da CAPPRA</h2>
+<p>Nos últimos 10 anos pesquisamos e criamos muitas teorias, conceitos, métodos e práticas relacionadas a ciência de dados nos <a href="https://www.cappralab.com/sobre">laboratórios da CAPPRA</a>. Esse trabalho ficou restrito aos nossos clientes de contrato por muito tempo, mas nos últimos anos realizamos algumas atividades abertas (cursos, exposições, eventos, workshops, apoio à causas sociais,…) de forma pontual, esse ano resolvemos estruturar todas essas iniciativas dentro do OPENLAB.</p>
+<p><strong>Em 2018 teremos 7 iniciativas espalhadas pelo Brasil, conheça elas e faça a inscrição para garantir sua participação:</strong></p>
+<p><span class="aligncenter"><a href="http://cappralab.com/openlab" target="_blank" rel="noopener" class="img-link"><img data-attachment-id="5844" data-permalink="https://cappra.com.br/ciencia-de-dados/captura-de-tela-2018-01-14-as-21-42-58/" data-orig-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-14-c3a0s-21-42-58.png" data-orig-size="4228,2380" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cappra-openlab" data-image-description="" data-medium-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-14-c3a0s-21-42-58.png?w=300" data-large-file="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-14-c3a0s-21-42-58.png?w=980" class="aligncenter wp-image-5844 size-large" src="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-14-c3a0s-21-42-58.png?w=980&#038;h=552" alt="" srcset="https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-14-c3a0s-21-42-58.png?w=980&amp;h=552 980w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-14-c3a0s-21-42-58.png?w=1960&amp;h=1104 1960w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-14-c3a0s-21-42-58.png?w=150&amp;h=84 150w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-14-c3a0s-21-42-58.png?w=300&amp;h=169 300w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-14-c3a0s-21-42-58.png?w=768&amp;h=432 768w, https://cappra.files.wordpress.com/2018/01/captura-de-tela-2018-01-14-c3a0s-21-42-58.png?w=1024&amp;h=576 1024w" sizes="(max-width: 980px) 100vw, 980px"   /></a></span></p>
+<hr />
+<h2 style="text-align:left;">Mission Control, o nosso laboratório aberto para análise e visualização de dados</h2>
+<p style="text-align:left;">O Mission Control é um laboratório de pesquisa e desenvolvimento especializado em inteligência de dados, servidores coletam e organizam dados públicos para as mais diversas finalidades. Dados esses que quando organizados geram incríveis possibilidades de análise, e transformam-se em insights e learnings. Neste “hackerspace”, um time de cientistas dedica-se a fazer descobertas na imensidão de dados disponíveis (o big data), com o objetivo de desenvolver novos produtos, serviços e métodos de análise que contribuam com áreas de  inteligência e estratégia. O método e formato de trabalho dessa área foi inspirada no projeto <span style="text-decoration:underline;"><a title="Inside The Cave" href="http://pt.slideshare.net/cappra/inside-the-cave" target="_blank" rel="noopener">The Cave Obama</a></span>. No vídeo abaixo contamos como funciona o Mission Control, para saber mais você pode visitar o <a href="http://www.missioncontrol.com.br/#!/home/" target="_blank" rel="noopener">site </a> ou nossa fanpage no <a href="https://www.facebook.com/missioncontrollab" target="_blank" rel="noopener">facebook</a>.</p>
+<div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='980' height='552' src='https://www.youtube.com/embed/jGdqR_KVOno?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></div>
+<p>&nbsp;</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Compartilhe:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-5815" class="share-facebook sd-button share-icon" href="https://cappra.com.br/ciencia-de-dados/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-5815" class="share-twitter sd-button share-icon" href="https://cappra.com.br/ciencia-de-dados/?share=twitter" target="_blank" title="Clique para compartilhar no Twitter"><span>Twitter</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button share-icon" href="https://cappra.com.br/ciencia-de-dados/?share=email" target="_blank" title="Clique para enviar por email a um amigo"><span>E-mail</span></a></li><li class="share-reddit"><a rel="nofollow noopener noreferrer" data-shared="" class="share-reddit sd-button share-icon" href="https://cappra.com.br/ciencia-de-dados/?share=reddit" target="_blank" title="Clique para compartilhar no Reddit"><span>Reddit</span></a></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>Mais</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-google-plus-1"><a rel="nofollow noopener noreferrer" data-shared="sharing-google-5815" class="share-google-plus-1 sd-button share-icon" href="https://cappra.com.br/ciencia-de-dados/?share=google-plus-1" target="_blank" title="Compartilhe no Google+"><span>Google</span></a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-5815" class="share-linkedin sd-button share-icon" href="https://cappra.com.br/ciencia-de-dados/?share=linkedin" target="_blank" title="Clique para compartilhar no LinkedIn"><span>LinkedIn</span></a></li><li class="share-end"></li><li class="share-pinterest"><a rel="nofollow noopener noreferrer" data-shared="sharing-pinterest-5815" class="share-pinterest sd-button share-icon" href="https://cappra.com.br/ciencia-de-dados/?share=pinterest" target="_blank" title="Clique para compartilhar no Pinterest"><span>Pinterest</span></a></li><li class="share-end"></li></ul></div></div></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-7818168-5815-5ba12a775a3a2' data-src='//widgets.wp.com/likes/index.html?ver=20180319#blog_id=7818168&amp;post_id=5815&amp;origin=cappra.wordpress.com&amp;obj_id=7818168-5815-5ba12a775a3a2' data-name='like-post-frame-7818168-5815-5ba12a775a3a2'><h3 class='sd-title'>Curtir isso:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Curtir</span></span> <span class="loading">Carregando...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>
+		
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+
+		
+	</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+				
+			
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<div id="secondary" class="sidebar" role="complementary">
+
+			<aside id="recent-posts-3" class="widget widget_recent_entries">		<h4 class="widget-title">Últimos posts</h4>		<ul>
+											<li>
+					<a href="https://cappra.com.br/2018/09/06/big-data-revolution-2018-evento-completo/">Big Data Revolution 2018 [evento completo]</a>
+									</li>
+											<li>
+					<a href="https://cappra.com.br/2018/08/16/funcionario-sera-100-data-driven/">Seu próximo funcionário será 100% data-driven</a>
+									</li>
+											<li>
+					<a href="https://cappra.com.br/2018/07/26/inteligencia-artificial-ciencia-de-dados-e-o-proximo-ciclo-de-escassez-no-trabalho/">Inteligência Artificial, Ciência de Dados e o próximo ciclo de escassez no trabalho</a>
+									</li>
+											<li>
+					<a href="https://cappra.com.br/2018/07/04/posicao-do-brasil-no-ranking-de-transformacao-digital/">Posição do Brasil no ranking de Transformação Digital</a>
+									</li>
+											<li>
+					<a href="https://cappra.com.br/2018/06/28/data4good-se-une-ao-unicef-em-hackathon-na-campus-party-brasilia/">Data4Good se une ao Unicef em hackathon na Campus Party Brasília</a>
+									</li>
+											<li>
+					<a href="https://cappra.com.br/2018/06/06/big-data-revolution-rio-13-6-18/">Big Data Revolution [RIO] 13/6/18</a>
+									</li>
+											<li>
+					<a href="https://cappra.com.br/2018/05/02/a-primeira-geracao-de-cientistas-de-dados/">A primeira geração de Cientistas de Dados</a>
+									</li>
+											<li>
+					<a href="https://cappra.com.br/2018/04/26/apaixonados-por-dados-datalovers/">Apaixonados por dados #DATALOVERS</a>
+									</li>
+											<li>
+					<a href="https://cappra.com.br/2018/04/16/data4good-saude-natal/">Saúde: A primeira missão do #DATA4GOOD</a>
+									</li>
+											<li>
+					<a href="https://cappra.com.br/2018/02/22/skinnerbootcamp/">Skinner Bootcamp (5/5/18 no RJ) &#8211; Uma metodologia para decodificar comportamento humano</a>
+									</li>
+					</ul>
+		</aside>
+</div><!-- #secondary -->		</div><!-- .container -->
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="https://wordpress.com/?ref=footer_custom_svg" title="Crie um site ou blog no WordPress.com"><svg style="fill: currentColor; position: relative; top: 1px;" width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title" role="img">
+				<desc id="title">Crie um site ou blog no WordPress.com</desc>
+				<path d="M12.5225848,4.97949746 C13.0138466,5.87586309 13.2934037,6.90452431 13.2934037,7.99874074 C13.2934037,10.3205803 12.0351007,12.3476807 10.1640538,13.4385638 L12.0862862,7.88081544 C12.4453251,6.98296834 12.5648813,6.26504621 12.5648813,5.62667922 C12.5648813,5.39497674 12.549622,5.17994084 12.5225848,4.97949746 L12.5225848,4.97949746 Z M7.86730089,5.04801561 C8.24619178,5.02808979 8.58760099,4.98823815 8.58760099,4.98823815 C8.9267139,4.94809022 8.88671369,4.44972248 8.54745263,4.46957423 C8.54745263,4.46957423 7.52803983,4.54957381 6.86996227,4.54957381 C6.25158863,4.54957381 5.21247202,4.46957423 5.21247202,4.46957423 C4.87306282,4.44972248 4.83328483,4.96816418 5.17254589,4.98823815 C5.17254589,4.98823815 5.49358462,5.02808979 5.83269753,5.04801561 L6.81314716,7.73459399 L5.43565839,11.8651647 L3.14394256,5.04801561 C3.52312975,5.02808979 3.86416859,4.98823815 3.86416859,4.98823815 C4.20305928,4.94809022 4.16305906,4.44972248 3.82394616,4.46957423 C3.82394616,4.46957423 2.80475558,4.54957381 2.14660395,4.54957381 C2.02852925,4.54957381 1.88934333,4.54668493 1.74156477,4.54194422 C2.86690406,2.83350881 4.80113651,1.70529256 6.99996296,1.70529256 C8.638342,1.70529256 10.1302017,2.33173369 11.2498373,3.35765419 C11.222726,3.35602457 11.1962815,3.35261718 11.1683554,3.35261718 C10.5501299,3.35261718 10.1114609,3.89113285 10.1114609,4.46957423 C10.1114609,4.98823815 10.4107217,5.42705065 10.7296864,5.94564049 C10.969021,6.36482346 11.248578,6.90326506 11.248578,7.68133501 C11.248578,8.21992476 11.0413918,8.84503256 10.7696866,9.71584277 L10.1417574,11.8132391 L7.86730089,5.04801561 Z M6.99996296,14.2927074 C6.38218192,14.2927074 5.78595654,14.2021153 5.22195356,14.0362644 L7.11048207,8.54925635 L9.04486267,13.8491542 C9.05760348,13.8802652 9.07323319,13.9089317 9.08989995,13.9358945 C8.43574834,14.1661896 7.73285573,14.2927074 6.99996296,14.2927074 L6.99996296,14.2927074 Z M0.706448182,7.99874074 C0.706448182,7.08630113 0.902152921,6.22015756 1.25141403,5.43749503 L4.25357806,13.6627848 C2.15393732,12.6427902 0.706448182,10.4898387 0.706448182,7.99874074 L0.706448182,7.99874074 Z M6.99996296,0.999 C3.14016476,0.999 0,4.13905746 0,7.99874074 C0,11.8585722 3.14016476,14.999 6.99996296,14.999 C10.8596871,14.999 14,11.8585722 14,7.99874074 C14,4.13905746 10.8596871,0.999 6.99996296,0.999 L6.99996296,0.999 Z" id="wordpress-logo-simplified-cmyk" stroke="none" fill=“currentColor” fill-rule="evenodd"></path>
+			</svg></a>
+			
+					</div><!-- .site-info
+		--><div class="back-to-top-wrapper">
+			<a href="#top" class="back-to-top-button"><svg width="10px" height="19px" viewBox="0 0 10 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs></defs>
+	<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="Rectangle-2-+--">
+			<rect id="bar" fill="#ffde00" x="0" y="0" width="10" height="3"></rect>
+			<path d="M5,5.953125 L9,12 L1,12 L5,5.953125 Z M4,12 L6,12 L6,19 L4,19 L4,12 Z" id="arrow" fill="#FFFFFF"></path>
+		</g>
+	</g>
+</svg></a>
+		</div><!--
+		-->	</footer><!-- #colophon -->
+	<div class="overlay--search">
+		<div class="overlay__wrapper">
+			<form role="search" method="get" class="search-form" action="https://cappra.com.br/">
+				<label>
+					<span class="screen-reader-text">Pesquisar por:</span>
+					<input type="search" class="search-field" placeholder="Pesquisar &hellip;" value="" name="s" title="Pesquisar por:" />
+				</label>
+				<button class="search-submit"><i class="fa fa-search"></i></button>
+			</form>			<p>Digite sua pesquisa acima e pressione Enter para pesquisar. Pressione Esc para cancelar.</p>
+		</div>
+		<b class="overlay__close"></b>
+	</div>
+</div><!-- #page -->
+
+<div class="mobile-header">
+	<div class="mobile-header-wrapper">
+		<button class="navigation__trigger  js-nav-trigger">
+			<i class="fa fa-bars"></i><span class="screen-reader-text">Menu</span>
+		</button>
+		<button class="nav__item--search  search__trigger">
+			<i class="fa fa-search"></i>
+		</button>
+	</div>
+</div>
+
+<!--  -->
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201838y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Adicione suas ideias aqui... (opcional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Publicar em</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancelar</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblogar Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="7818168" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://cappra.com.br" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="CAPPRA DATA SCIENCE" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="e6c082aae8" /><input type="hidden" name="_wp_http_referer" value="/ciencia-de-dados/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/cappra.com.br\/ciencia-de-dados\/":5815};
+	</script>
+					<div id="sharing_email" style="display: none;">
+		<form action="/ciencia-de-dados/" method="post">
+			<label for="target_email">Enviar para oendereço de e-mail</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Seu Nome</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Seu endereço de e-mail</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" title="This field is for validation and should not be changed" />
+			
+			<div
+				class="g-recaptcha"
+				data-sitekey="6LcmyE0UAAAAALID28yVNg7pFCodGaArJzHitez_"
+				data-theme="light"
+				data-type="image"
+				data-tabindex="0"></div>
+			<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=pt-br" async></script>
+			
+			<img style="float: right; display: none" class="loading" src="https://s2.wp.com/wp-content/mu-plugins/post-flair/sharing/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Enviar e-mail" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancelar</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post não foi enviado - verifique os seus endereços de e-mail!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Verificação de e-mail falhou, tente novamente			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Desculpe, seu blog não pode compartilhar posts por e-mail.			</div>
+		</form>
+	</div>
+		<link rel='stylesheet' id='all-css-0-2' href='https://s2.wp.com/_static/??-eJxty0sKgCAQANALZUMfAxfRWWQaQvOHo3b9aNHO7YMHTxIYQ6FQwFeRXL1MYMjEKQY2jUQzJ8WOjMg8QL+jzrEyObBUksZb/PClw++TnNdNKbms9gWmdDAL?cssminify=yes' type='text/css' media='all' />
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825h&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript'>
+/* <![CDATA[ */
+var actionbardata = {"siteID":"7818168","siteName":"CAPPRA DATA SCIENCE","siteURL":"https:\/\/cappra.com.br","icon":"<img alt='' src='https:\/\/secure.gravatar.com\/blavatar\/59cd6c11385ab31265723ced014c3009?s=50&d=https%3A%2F%2Fs2.wp.com%2Fi%2Flogo%2Fwpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"premium\/patch","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/cappra.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcappra.com.br%2Fciencia-de-dados%2F","themeURL":"https:\/\/wordpress.com\/theme\/patch\/","xhrURL":"https:\/\/cappra.com.br\/wp-admin\/admin-ajax.php","nonce":"8e9f338cb2","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"0427c601c9\" \/>","referer":"https:\/\/cappra.com.br\/ciencia-de-dados\/","canFollow":"1","feedID":"19792225","statusMessage":"","customizeLink":"https:\/\/cappra.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fcappra.wordpress.com%2Fciencia-de-dados%2F","postID":"5815","shortlink":"https:\/\/wp.me\/PwNRu-1vN","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/cappra.com.br\/5815","statsLink":"https:\/\/wordpress.com\/stats\/post\/5815\/cappra.com.br","i18n":{"view":"Exibir site","follow":"Seguir","following":"Seguindo","edit":"Editar","login":"Fazer login","signup":"Registre-se","customize":"Personalizar","report":"Denunciar este conte\u00fado","themeInfo":"Obtenha o tema: Patch","shortlink":"Copiar link curto","copied":"Copiado","followedText":"Novos posts deste site ser\u00e3o exibidos agora em seu <a href=\"https:\/\/wordpress.com\/\">Leitor<\/a>","foldBar":"Esconder esta barra","unfoldBar":"Mostrar esta barra","editSubs":"Gerenciar assinaturas","viewReader":"Visualizar site no Leitor","viewReadPost":"Ver post no Leitor","subscribe":"Cadastre-me","enterEmail":"Insira seu endere\u00e7o de email","followers":"Junte-se a 5.912 outros seguidores","alreadyUser":"J\u00e1 tem uma conta do WordPress.com? <a href=\"https:\/\/cappra.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcappra.com.br%2Fciencia-de-dados%2F\">Fa\u00e7a login agora.<\/a>","stats":"Estat\u00edsticas"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"pt","ajaxurl":"https:\/\/cappra.com.br\/wp-admin\/admin-ajax.php","nonce":"f48fc447b1","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"white","comment":"Coment\u00e1rio","post_comment":"Publicar coment\u00e1rio","write_comment":"Escreva um Coment\u00e1rio","loading_comments":"Carregando coment\u00e1rios...","download_original":"Visualizar tamanho original <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Certifique-se de enviar algum texto com o seu coment\u00e1rio.","no_comment_email":"Informe um endere\u00e7o de email para comentar.","no_comment_author":"Forne\u00e7a seu nome para comentar.","comment_post_error":"Desculpe, mas ocorreu um erro ao postar seu coment\u00e1rio. Tente novamente mais tarde.","comment_approved":"Seu coment\u00e1rio foi aprovado.","comment_unapproved":"Seu coment\u00e1rio est\u00e1 aguardando modera\u00e7\u00e3o.","camera":"C\u00e2mera","aperture":"Abertura","shutter_speed":"Velocidade do Obturador","focal_length":"Comprimento Focal","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/cappra.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcappra.com.br%2Fciencia-de-dados%2F","blog_id":"7818168","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (obrigat\u00f3rio)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Nome (obrigat\u00f3rio)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Site<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblogar","reblogged":"Re-blogado","reblog_add_thoughts":"Adicione suas ideias aqui... (opcional)","reblogging":"Reblogando...","post_reblog":"Post Reblog","stats_query_args":"blog=7818168&v=wpcom&tz=-3&user_id=0&subd=cappra","is_public":"1","reblog_enabled":""};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"pt","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyVUltOxDAMvBBpxEpLxQfiLCYxrbt5YSeB3p5UoqtKWyr1y9Z4xvY40d9JmRgyhqwn0RYrGUw/3SRPelPyRSVXBgqiHd1Q9FfBgiME65BXMgXjim3F1og8DCgugkXbeQp7HA8SA8/b8jovj+gbKTF6Kl4nyGbUIIL5sfs5aUUXDeX5pMzD45Kbo4BtJtQH8GIqI7dMxYrMtHi9Yyc7ZAZzkyORyRTDIrpnB2xGSTEIVVS17RV3kP+eStI+PrV/wPNf6LasnfkGOBZBpyfMqTlTK3CgSVGy+nRArGUEpjCssYne/dvz9XK99P1L/zr9AmdvDWA='></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-google-plus-1', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-linkedin', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>		<iframe src='https://widgets.wp.com/likes/master.html?ver=20180319#ver=20180319&amp;lang=pt-br' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> blogueiros gostam disto:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="//stats.wp.com/w.js?56" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'7818168','blog_tz':'-3','user_lang':'pt-br','blog_lang':'pt-br','user_id':'0'}]);
+_stq.push(['view', {'blog':'7818168','v':'wpcom','tz':'-3','user_id':'0','post':'5815','subd':'cappra'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1TaVhzUzFMbjdWNHpwZGhTayxPSUFCMGRVYVNrSFguN3FwSmQ5RGtNX3VQcj1yVzhiflM1THQtLGFdQ2toOXYlK01GLCZ4R1ZvM0swNFhBWGslfFZ5MTg9azZEYU5QLEU4N3omVS53cWQsQjc0QVNWYkNsSGFRMFh1NHllSkcrMnE5N3EleEZXZFAsVmF8WjJQdnFfeSxpR0xobj9iOU5IY05hTWQ4M1RlS2thOERwMVZvUU9KKz1ZLkN3WmJuSjEwbWJoekxQNW9qP05DU2RXVXQ3dDVSNEhSWFB4aGMuM211XXMwUERyWSYl'}]);
+_stq.push([ 'clickTrackerInit', '7818168', '5815' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>
+<!--
+	generated in 0.159 seconds
+	66506 bytes batcached for 300 seconds
+-->

@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="pt-br"
+	itemscope 
+	itemtype="http://schema.org/WebSite" 
+	prefix="og: http://ogp.me/ns#"  class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<title>  Ciência de dados reconstrói a retórica da Revolução Francesa : Revista Pesquisa Fapesp</title>
+
+		<link href="//www.google-analytics.com" rel="dns-prefetch">
+        <link href="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icons/favicon.ico" rel="shortcut icon">
+        <link href="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1, maximum-scale=1">
+		<link rel="alternate" hreflang="en-us" href="http://revistapesquisa.fapesp.br/en/2018/09/11/data-scientists-reconstruct-the-rhetoric-of-the-french-revolution/" />
+<link rel="alternate" hreflang="pt-br" href="http://revistapesquisa.fapesp.br/2018/05/23/ciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa/" />
+
+<!-- All in One SEO Pack 2.7.3 by Michael Torbert of Semper Fi Web Design[-1,-1] -->
+<meta name="description"  content="Pesquisadores usaram técnicas de mineração de dados para analisar transcrições de 40 mil discursos da Assembleia Nacional Constituinte, que funcionou de 1789 a" />
+
+<meta name="keywords"  content="computação,história" />
+
+<link rel="canonical" href="http://revistapesquisa.fapesp.br/2018/05/23/ciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa/" />
+<!-- /all in one seo pack -->
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='stylesheet' id='jquery-ui-css'  href='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css?ver=b12c3f6a6e6e1a53f473392c3377d67b' media='all' />
+<link rel='stylesheet' id='responsive-lightbox-prettyphoto-css'  href='http://revistapesquisa.fapesp.br/wp-content/plugins/responsive-lightbox/assets/prettyphoto/css/prettyPhoto.min.css?ver=2.0.4' media='all' />
+<link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css'  href='//revistapesquisa.fapesp.br/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.css?ver=1' media='all' />
+<link rel='stylesheet' id='html5blank-css'  href='http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/style.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/normalize.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='style-theme-css'  href='http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/css/style.css?ver=b12c3f6a6e6e1a53f473392c3377d67b' media='all' />
+<link rel='stylesheet' id='varnish_http_purge-css'  href='http://revistapesquisa.fapesp.br/wp-content/plugins/varnish-http-purge/style.css?ver=4.5.2' media='all' />
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-content/plugins/responsive-lightbox/assets/prettyphoto/js/jquery.prettyPhoto.min.js?ver=2.0.4'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-content/plugins/responsive-lightbox/assets/infinitescroll/infinite-scroll.pkgd.min.js?ver=b12c3f6a6e6e1a53f473392c3377d67b'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rlArgs = {"script":"prettyphoto","selector":"lightbox","customEvents":" tap","activeGalleries":"1","animationSpeed":"normal","slideshow":"0","slideshowDelay":"5000","slideshowAutoplay":"0","opacity":"0.75","showTitle":"1","allowResize":"1","allowExpand":"0","width":"1080","height":"720","separator":"\/","theme":"pp_default","horizontalPadding":"10","hideFlash":"0","wmode":"opaque","videoAutoplay":"0","modal":"0","deeplinking":"0","overlayGallery":"0","keyboardShortcuts":"1","social":"0","woocommerce_gallery":"0","ajaxurl":"http:\/\/revistapesquisa.fapesp.br\/wp-admin\/admin-ajax.php","nonce":"79d2b41df1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-content/plugins/responsive-lightbox/js/front.js?ver=2.0.4'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/js/lib/conditionizr-4.3.0.min.js?ver=4.3.0'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/js/lib/modernizr-2.7.1.min.js?ver=2.7.1'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/js/jquery.dotdotdot.js?ver=b12c3f6a6e6e1a53f473392c3377d67b'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/js/scripts.js?ver=b12c3f6a6e6e1a53f473392c3377d67b'></script>
+<link rel='https://api.w.org/' href='http://revistapesquisa.fapesp.br/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="http://revistapesquisa.fapesp.br/wp-json/oembed/1.0/embed?url=http%3A%2F%2Frevistapesquisa.fapesp.br%2F2018%2F05%2F23%2Fciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://revistapesquisa.fapesp.br/wp-json/oembed/1.0/embed?url=http%3A%2F%2Frevistapesquisa.fapesp.br%2F2018%2F05%2F23%2Fciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.0.2 stt:1,4,44,2;" />
+<link rel="stylesheet" href="http://revistapesquisa.fapesp.br/wp-content/plugins/revista-player//revista-player.css" /><script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//revistapesquisa.fapesp.br/?wordfence_lh=1&hid=841EC4F9FE05810EA3F01D3986CC37D1');
+</script>
+<!-- BEGIN ExactMetrics v5.3.5 Universal Analytics - https://exactmetrics.com/ -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-159627-5', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- END ExactMetrics Universal Analytics -->
+    <meta property="og:image" content="http://revistapesquisa.fapesp.br/wp-content/thumbs/99548cb3cbd7ae8b743605a495d753f2660811e7_1200-630.jpg" /><meta property="og:image:url" content="http://revistapesquisa.fapesp.br/wp-content/thumbs/99548cb3cbd7ae8b743605a495d753f2660811e7_1200-630.jpg" /><meta property="og:image:type" content="image/jpeg" /><meta property="og:image:width" content="1200" /><meta property="og:image:width" content="630" /><meta property="og:description" content="Uma parceria entre especialistas em história, computação e ciências cognitivas está ajudando a mostrar como ideias surgiram e vicejaram logo após a Revolução Francesa (PNAS, 17 de abril). Os pesquisadores, vinculados às universidades de Indiana e Carnegie Mellon, nos Estados Unidos, usaram técnicas de mineração de dados para analisar transcrições de 40 mil discursos da Assembleia Nacional Constituinte, o primeiro parlamento pós-revolução, que funcionou de 1789 a 1791. Os textos estão disponíveis no Arquivo Digital da Revolução Francesa e foram estudados por meio de um método que combina teoria da informação com estatística para rastrear padrões de uso de palavras&hellip;" />		<script>
+        // conditionizr.com
+        // configure environment tests
+        conditionizr.config({
+            assets: 'http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema',
+            tests: {}
+        });
+        </script>
+
+	</head>
+  	<body class="post-template-default single single-post postid-256961 single-format-standard ciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa">
+
+		<!-- header -->
+		<header class="header" role="banner">
+
+			<a href="" class="icon_menu"></a>
+
+
+			<div class="buttons">
+				<a href="/revista/assine/" class="action orange">assine</a>
+				<a href="http://revistapesquisa.fapesp.br/boletim/" class="action white">boletim</a>
+			</div>
+			<a href="http://revistapesquisa.fapesp.br" class="logo">
+				<img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/logo_revista.jpg" />
+			</a>
+
+			<div class="last-edition">
+				<a href="/#last-edition-anchor">
+					<img src="/wp-content/thumbs/1917add783faac0dfcf3104f3ed886b07ce23c54_125-78.jpg" width="125"/>
+				</a>
+				<p>Edição Impressa</p>
+				<p>Atual | Anteriores</p>
+			</div>
+
+			<div class="idioma">
+							<a href="http://revistapesquisa.fapesp.br/en/2018/09/11/data-scientists-reconstruct-the-rhetoric-of-the-french-revolution/">english</a>
+				<a href="http://revistapesquisa.fapesp.br/es/" class="last">español</a>
+						</div>
+
+			<!-- search -->
+<form class="search closed" method="get" action="http://revistapesquisa.fapesp.br" role="search">
+	<input class="search-input" type="search" name="s" placeholder="Pesquisar">
+	<button class="icon_search" type="button" role="button"/>
+</form>
+
+<!-- /search -->
+		</header>
+
+		<div id="nav">
+			<a class="close"></a>
+			<ul class="menu">
+				<li class="mobile search">
+					<form action="/">
+						<input type="text" placeholder="Busca" class="input_search" name="s" />
+						<input type="button" class="icon_search" />
+					</form>
+				</li>
+			<li><a href='http://revistapesquisa.fapesp.br/category/impressa/ciencia/' class='item-menu'>Ciência</a>
+</li>
+<li><a href='http://revistapesquisa.fapesp.br/cosmos/' class='item-menu'>Cosmos</a>
+</li>
+<li><a href='http://revistapesquisa.fapesp.br/saude/' class='item-menu'>Saúde</a>
+</li>
+<li><a href='http://revistapesquisa.fapesp.br/category/impressa/politica/' class='item-menu'>Política C&T</a>
+</li>
+<li><a href='http://revistapesquisa.fapesp.br/category/impressa/tecnologia/' class='item-menu'>Tecnologia</a>
+</li>
+<li><a href='http://revistapesquisa.fapesp.br/category/impressa/humanidades/' class='item-menu'>Humanas</a>
+</li>
+<li><a href='/tag/etica/' class='item-menu'>Ética</a>
+</li>
+<li><a href='http://revistapesquisa.fapesp.br/ambiente/' class='item-menu'>Ambiente</a>
+</li>
+<li><a href='http://revistapesquisa.fapesp.br/category/impressa/entrevista/' class='item-menu'>Entrevistas</a>
+</li>
+<li><a href='http://revistapesquisa.fapesp.br/category/impressa/carreiras/' class='item-menu'>Carreiras</a>
+</li>
+<li><a href='http://revistapesquisa.fapesp.br/videos/' class='item-menu'>Vídeos</a>
+</li>
+<li><a href='http://revistapesquisa.fapesp.br/multimidi/podcasts/' class='item-menu'>Podcasts</a>
+</li>
+
+				<li class="mobile edicao-mes">
+					<a href="/#last-edition-anchor" class="item-menu">
+						Edição Impressa					</a>
+				</li>
+				<li class="mobile boletim">
+					<a href="" class="item-menu">boletim</a>
+				</li>
+				<li class="idioma_mobile">
+									<a href="http://revistapesquisa.fapesp.br/en/2018/09/11/data-scientists-reconstruct-the-rhetoric-of-the-french-revolution/">english</a>
+					<a href="http://revistapesquisa.fapesp.br/es/" class="last">español</a>
+        				</li>
+			</ul>
+		</div>
+
+	<div id="main">
+
+<main role="main">
+<!-- section -->
+<section>
+<div class="post-icons">
+  <a href="http://www.printfriendly.com/print/v2?url=http://revistapesquisa.fapesp.br/2018/05/23/ciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa/" class="print" target="_blank">Imprimir</a>
+      <a href="http://revistapesquisa.fapesp.br/wp-content/uploads/2018/05/012-017_Notas_267.pdf" target="_blank" class="pdf">PDF</a>
+      <div class="sharebuttons sharebuttons-wrap">
+    <div style="text-align:left">
+		
+		<a
+      data-site="" class="ssba_facebook_share" href="http://www.facebook.com/sharer.php?u=http://revistapesquisa.fapesp.br/2018/05/23/ciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa/" target="_blank">
+      <img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_facebook.png" 
+        srcset="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_facebook.png 30w, http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_facebook@2x.png 60w" 
+        title="Facebook" class="sharebuttons sharebuttons-img" alt="Share on Facebook"></a>
+		<a
+      data-site="" class="ssba_twitter_share" href="http://twitter.com/share?url=http://revistapesquisa.fapesp.br/2018/05/23/ciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa/&amp;text=$title_url" target="_blank">
+			<img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_twitter.png"
+      srcset="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_twitter.png 30w, http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_twitter@2x.png 60w" 
+      title="Twitter" class="sharebuttons sharebuttons-img" alt="Tweet about this on Twitter">
+		</a>
+		<a
+       data-site="email" class="ssba_email_share" href="mailto:?subject=$title&amp;body=%20http://revistapesquisa.fapesp.br/2018/05/23/ciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa/">
+			<img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_email.png"
+      srcset="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_email.png 30w, http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_email@2x.png 60w" 
+      title="Email" class="sharebuttons sharebuttons-img" alt="Email this to someone">
+		</a>
+		<a
+      data-site="linkedin" class="ssba_linkedin_share ssba_share_link" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://revistapesquisa.fapesp.br/2018/05/23/ciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa/" target="_blank">
+			<img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_linkedin.png"
+      srcset="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_linkedin.png 30w, http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_linkedin@2x.png 60w" 
+      title="LinkedIn" class="sharebuttons sharebuttons-img" alt="Share on LinkedIn"></a>
+		<a
+      data-site="" class="ssba_google_share" href="https://plus.google.com/share?url=http://revistapesquisa.fapesp.br/2018/05/23/ciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa/" target="_blank">
+      <img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_google-plus.png" 
+      srcset="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_google-plus.png 30w, http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_google-plus@2x.png 60w" 
+      title="Google+" class="sharebuttons sharebuttons-img" alt="Share on Google+">
+    </a>
+		
+		
+	</div>
+</div></div>
+
+		<!-- article -->
+		<article id="post-256961" class="post-256961 post type-post status-publish format-standard has-post-thumbnail hentry category-notas tag-computacao tag-historia keywords-ciencia-cognitiva keywords-revolucao-francesa">
+
+			<!-- post title -->
+			<header class="post">
+				<h3>
+					Computação</h3>
+				<h1>
+					<a href="http://revistapesquisa.fapesp.br/2018/05/23/ciencia-de-dados-reconstroi-a-retorica-da-revolucao-francesa/" title="Ciência de dados reconstrói a retórica da Revolução Francesa">Ciência de dados reconstrói a retórica da Revolução Francesa</a>
+				</h1>
+				<p></p>
+			</header>
+			<!-- /post title -->
+
+			<div class="cabecalho-interna">
+				<img src="http://revistapesquisa.fapesp.br/wp-content/uploads/2018/05/012_Notas_Abertura-dos-Estados-Gerais_267.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://revistapesquisa.fapesp.br/wp-content/uploads/2018/05/012_Notas_Abertura-dos-Estados-Gerais_267.jpg 1000w, http://revistapesquisa.fapesp.br/wp-content/uploads/2018/05/012_Notas_Abertura-dos-Estados-Gerais_267-250x154.jpg 250w, http://revistapesquisa.fapesp.br/wp-content/uploads/2018/05/012_Notas_Abertura-dos-Estados-Gerais_267-700x432.jpg 700w, http://revistapesquisa.fapesp.br/wp-content/uploads/2018/05/012_Notas_Abertura-dos-Estados-Gerais_267-120x74.jpg 120w" sizes="(max-width: 1000px) 100vw, 1000px" />            <div class="wp-caption">A abertura dos Estados Gerais em Versalhes, 5 de maio de 1789, gravura de Isidore-Stanislas Helman (1743-1806) sobre desenho de Charles Monnet (1732-1808)            					<p class="media-credits">Isidore-Stanislas Helman / Biblioteca Nacional da França / Wikimedia Commons</p>
+				</div>
+			</div>
+				<!-- /post thumbnail -->
+
+			<!-- post details -->
+			<aside class="credits">
+				<hr>
+				<div class="detalhes-edicao">
+Edição 267 <br/> mai. 2018				</div>
+				<hr/>
+        <div class="tags">
+          <a href="http://revistapesquisa.fapesp.br/tag/computacao/" rel="tag">Computação</a><a href="http://revistapesquisa.fapesp.br/tag/historia/" rel="tag">História</a><br>        </div>
+      </aside>
+
+      <!-- /post details -->
+      <div class="post-content">
+                  <aside class="ads generated alignright">
+              <div class="box_anuncio">
+    <script type="text/javascript">
+    // Internal tracking
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'ads',
+      eventAction: 'display',
+      eventLabel: 'anuncios/premiocbmm-bannerfapesp'
+    });
+    function trackClick() {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'ads',
+        eventAction: 'click',
+        eventLabel: 'anuncios/premiocbmm-bannerfapesp'
+      });
+    }
+    </script>
+    <a target="_blank" onclick="trackClick()" href="https://premiocbmm.com/?utm_source=fapesp&utm_medium=banner&utm_campaign=premiocbmm" title="Anuncio">
+        <img src="http://revistapesquisa.fapesp.br/wp-content/uploads/2018/08/M7-0011-18T_PremioCBMM-BannerFapesp-FINAL.jpg" alt="Assine" />
+    </a>
+</div>
+          </aside>
+          <p>Uma parceria entre especialistas em história, computação e ciências cognitivas está ajudando a mostrar como ideias surgiram e vicejaram logo após a Revolução Francesa (<em>PNAS</em>, 17 de abril). Os pesquisadores, vinculados às universidades de Indiana e Carnegie Mellon, nos Estados Unidos, usaram técnicas de mineração de dados para analisar transcrições de 40 mil discursos da Assembleia Nacional Constituinte, o primeiro parlamento pós-revolução, que funcionou de 1789 a 1791. Os textos estão disponíveis no Arquivo Digital da Revolução Francesa e foram estudados por meio de um método que combina teoria da informação com estatística para rastrear padrões de uso de palavras nos debates da assembleia. Enquanto os representantes à esquerda no espectro político utilizavam uma retórica inovadora para apresentar suas ideias, os mais conservadores adotavam um discurso com combinações de palavras familiares para se opor a mudanças. “No início da revolução, havia muita novidade em andamento. Alguns conceitos sobressaíram, as pessoas passaram a gravitar em torno deles e os levaram adiante”, contou a historiadora Rebecca Spang, pesquisadora da Universidade de Indiana e coautora do estudo, segundo o serviço de notícias <em>Eurekalert</em>. A certa altura, o carisma dos oradores foi parcialmente neutralizado nos bastidores da assembleia com a criação de comitês para deliberar sobre temas específicos. “Os comitês se tornaram centros de poder por meio de seu conhecimento especializado”, disse o cientista da computação Alexander Barron, primeiro autor do estudo.</p>
+          <ul class="keywords">
+                          <li>
+                <a href="http://revistapesquisa.fapesp.br/keywords/ciencia-cognitiva/">Ciência cognitiva</a>
+              </li>
+                            <li>
+                <a href="http://revistapesquisa.fapesp.br/keywords/revolucao-francesa/">Revolução Francesa</a>
+              </li>
+                        </ul>
+                </div>
+      		</article>
+		<div class="materias-relacionadas">
+<h2>Matérias relacionadas</h2>
+	<div class="col">
+    <h3>Fotolab</h3>
+    <a href="http://revistapesquisa.fapesp.br/2018/09/18/museu-nacional-quinta-da-boa-vista/" title="Museu Nacional, Quinta da Boa Vista">
+        <img width="356" height="227" class="image-col" src="/wp-content/thumbs/a2595794be4047ec9af73bd2a7dea22d9565980f_356-227cropped.jpg" />    </a>
+        <p>
+            <a href="http://revistapesquisa.fapesp.br/2018/09/18/museu-nacional-quinta-da-boa-vista/" title="Museu Nacional, Quinta da Boa Vista">
+                Museu Nacional, Quinta da Boa Vista            </a>
+    <span class="autor">
+Por <a href="http://revistapesquisa.fapesp.br/autor/redacao/" title="Posts por Redação" class="author url fn" rel="author">Redação</a>    </span>
+        </p>
+    </a>
+</div>
+	<div class="col">
+    <h3>Carreiras</h3>
+    <a href="http://revistapesquisa.fapesp.br/2018/09/12/refugio-no-conhecimento/" title="Refúgio no conhecimento">
+        <img width="356" height="227" class="image-col" src="/wp-content/thumbs/6ca3e3682e9ac19b9470d38c60cb3e81595b9ece_356-227cropped.jpg" />    </a>
+        <p>
+            <a href="http://revistapesquisa.fapesp.br/2018/09/12/refugio-no-conhecimento/" title="Refúgio no conhecimento">
+                Refúgio no conhecimento            </a>
+    <span class="autor">
+Por <a href="http://revistapesquisa.fapesp.br/autor/randrade/" title="Posts por Rodrigo de Oliveira Andrade" class="author url fn" rel="author">Rodrigo de Oliveira Andrade</a>    </span>
+        </p>
+    </a>
+</div>
+	<div class="col">
+    <h3>Podcast</h3>
+    <a href="http://revistapesquisa.fapesp.br/2018/09/10/entrevista-priscila-lena-farias/" title="Entrevista: Priscila Lena Farias">
+        <img width="356" height="227" class="image-col" src="/wp-content/thumbs/0dffa1ffc49d0bcad22cebb1f0acda19b96d52aa_356-227cropped.jpg" />    </a>
+        <p>
+            <a href="http://revistapesquisa.fapesp.br/2018/09/10/entrevista-priscila-lena-farias/" title="Entrevista: Priscila Lena Farias">
+                Entrevista: Priscila Lena Farias            </a>
+    <span class="autor">
+Por <a href="http://revistapesquisa.fapesp.br/autor/redacao/" title="Posts por Redação" class="author url fn" rel="author">Redação</a>    </span>
+        </p>
+    </a>
+</div>
+    <h2>
+        <a href="http://revistapesquisa.fapesp.br/category/impressa/notas/">
+            Mais Notas        </a>
+    </h2>
+            <div class="col">
+              <h3>Geologia</h3>
+              <a href="http://revistapesquisa.fapesp.br/2018/09/18/a-expansao-continua-do-rio-amazonas/" title="A expansão contínua do rio Amazonas">
+                  <img width="356" height="227" class="image-col" src="/wp-content/thumbs/f566e2946e4831b6bc1a63096d7e8f0f3405823f_356-227cropped.jpg" />              </a>
+                  <p>
+                      <a href="http://revistapesquisa.fapesp.br/2018/09/18/a-expansao-continua-do-rio-amazonas/" title="A expansão contínua do rio Amazonas">
+                          A expansão contínua do rio Amazonas                      </a>
+              <span class="autor">
+Por <a href="http://revistapesquisa.fapesp.br/autor/redacao/" title="Posts por Redação" class="author url fn" rel="author">Redação</a>    </span>
+                  </p>
+              </a>
+          </div>
+            <div class="col">
+              <h3>Arqueologia</h3>
+              <a href="http://revistapesquisa.fapesp.br/2018/09/18/mae-neandertal-pai-denisovano/" title="Mãe neandertal, pai denisovano">
+                  <img width="356" height="227" class="image-col" src="/wp-content/thumbs/65a878016185aa6a76b92ed92f8a026fd3b17bb9_356-227cropped.jpg" />              </a>
+                  <p>
+                      <a href="http://revistapesquisa.fapesp.br/2018/09/18/mae-neandertal-pai-denisovano/" title="Mãe neandertal, pai denisovano">
+                          Mãe neandertal, pai denisovano                      </a>
+              <span class="autor">
+Por <a href="http://revistapesquisa.fapesp.br/autor/redacao/" title="Posts por Redação" class="author url fn" rel="author">Redação</a>    </span>
+                  </p>
+              </a>
+          </div>
+            <div class="col">
+              <h3>Arte</h3>
+              <a href="http://revistapesquisa.fapesp.br/2018/09/18/a-evolucao-da-pintura-segundo-a-fisica/" title="A evolução da pintura segundo a física">
+                  <img width="356" height="227" class="image-col" src="/wp-content/thumbs/23c5c1a1e22068088fc9b94a4428df67908512f9_356-227cropped.jpg" />              </a>
+                  <p>
+                      <a href="http://revistapesquisa.fapesp.br/2018/09/18/a-evolucao-da-pintura-segundo-a-fisica/" title="A evolução da pintura segundo a física">
+                          A evolução da pintura segundo a física                      </a>
+              <span class="autor">
+Por <a href="http://revistapesquisa.fapesp.br/autor/redacao/" title="Posts por Redação" class="author url fn" rel="author">Redação</a>    </span>
+                  </p>
+              </a>
+          </div>
+</div>
+		<!-- /article -->
+
+
+	</section>
+	<!-- /section -->
+	</main>
+
+		
+		<div class="section">
+    <div class="section-tags"> 
+          <h5>Assuntos mais procurados</h5>     
+        <div class="searchwords-ctnr"><ul id="searchcloud" class="wrap-tags"></ul></div>
+    </div>
+</div>
+
+	</div>
+	<!-- /wrapper -->
+
+		<!-- footer -->
+		<footer class="footer" role="contentinfo">
+
+			            <div class="section">
+                <div class="section-siga">                    
+                    <h5>Siga-nos</h5>
+                    <div class="wrap-siga">
+                        <a href="http://www.facebook.com/PesquisaFapesp" title="Facebook" class="icon-siga facebook">
+                            <img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_facebook.png" 
+                                srcset="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_facebook.png 30w, http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_facebook@2x.png 60w" 
+                                title="Facebook" class="sharebuttons sharebuttons-img" alt="Facebook"></a>
+                        </a>
+                        <a href="http://twitter.com/PesquisaFapesp" title="Twitter" class="icon-siga twitter">
+                            <img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_twitter.png"
+                                srcset="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_twitter.png 30w, http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_twitter@2x.png 60w" 
+                                title="Twitter" class="sharebuttons sharebuttons-img" alt="Twitter">
+                        </a>
+                        <a href="https://issuu.com/pesquisafapesp" title="Issuu" class="icon-siga issuu">
+                            <img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_issuu.png"  
+                                    title="Issuu" class="sharebuttons sharebuttons-img" alt="Issuu">
+                        </a>
+                        <a href="http://www.youtube.com/user/PesquisaFAPESP" title="Youtube" class="icon-siga youtube">
+                            <img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_youtube.png"  
+                                title="Youtube" class="sharebuttons sharebuttons-img" alt="Youtube">
+                        </a>
+                        <a href="http://instagram.com/pesquisa_fapesp" title="Instagram" class="icon-siga instagram">
+                            <img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_instagram.png" 
+                                srcset="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_instagram.png 30w, http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_instagram@2x.png 60w" 
+                                title="Instagram" class="sharebuttons sharebuttons-img" alt="Instagram">
+                        </a>
+                        <a href="http://feeds.feedburner.com/RevistaPesquisaBrasil_port" title="RSS" class="icon-siga rss">
+                            <img src="http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/img/icon_rss.png"
+                                title="RSS" class="sharebuttons sharebuttons-img" alt="RSS">
+                        </a>                      
+                    </div>
+                </div>
+            </div>
+			<div class="section">
+				<div class="section-links"> 
+					<a href="http://revistapesquisa.fapesp.br/" title="Home">
+						Home					</a> 
+					<a href="http://revistapesquisa.fapesp.br/quem-somos/" title="Quem Somos"
+						>Quem Somos					</a>  
+					
+					<a href="http://revistapesquisa.fapesp.br/revista/anuncie/" title="Anuncie" class="orange">
+						Anuncie					</a>
+					 
+					<a href="http://revistapesquisa.fapesp.br/fale-conosco" title="Fale Conosco">
+						Fale Conosco					</a> 
+				</div>
+				<div class="section-links last">                    
+					<a href="http://www.fapesp.br/" title="FAPESP">
+						FAPESP					</a>  
+					<a href="http://agencia.fapesp.br/" title="Agência FAPESP">
+						Agência FAPESP					</a> 
+					<a href="http://bv.fapesp.br/" title="Biblioteca Virtual">
+						Biblioteca Virtual					</a> 
+				</div>
+			</div>
+
+			<!-- copyright -->
+			<p class="copyright">
+				© Revista Pesquisa FAPESP - Todos os direitos reservados. É proibida a reprodução total ou parcial de textos e imagens sem prévia autorização.			</p>
+			<!-- /copyright -->
+
+		</footer>
+		<!-- /footer -->
+
+		<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-includes/js/comment-reply.min.js?ver=b12c3f6a6e6e1a53f473392c3377d67b'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-content/plugins/revista-player//revista-player.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-includes/js/wp-embed.min.js?ver=b12c3f6a6e6e1a53f473392c3377d67b'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/js/jquery.tagcloud.js?ver=b12c3f6a6e6e1a53f473392c3377d67b'></script>
+<script type='text/javascript' src='http://revistapesquisa.fapesp.br/wp-content/themes/revista-pesquisa-fapesp-tema/js/search-words.js?ver=b12c3f6a6e6e1a53f473392c3377d67b'></script>
+
+	</body>
+</html>

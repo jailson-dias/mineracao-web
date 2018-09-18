@@ -1,0 +1,3099 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+<!--[if lt IE 7]>      <html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" ng-app="portalapp"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie ie7 lt-ie9 lt-ie8" ng-app="portalapp"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie ie8 lt-ie9" ng-app="portalapp"> <![endif]-->
+<!--[if gt IE 8]>
+    <html class="no-js ie" ng-app="portalapp">
+    <!--> <html class="no-js" ng-app="portalapp"> <!--
+<![endif]-->
+
+        <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# 
+                  website: http://ogp.me/ns/website#">
+            <!--<link rel="stylesheet" href="/portal/jslib/vijit/themes/vijit.css"/>-->
+		<!--<link rel="stylesheet" href="/portal/jslib/vijit/themes/claro/claro.css"/>-->
+		
+                
+                <!-------------------SHARED--------------------->
+            
+                
+
+
+
+
+		<meta property="og:image" content="http://www.sebrae.com.br/sebraena-templating/files/img/img-shared-mercado.png">
+        <meta name="og:image" content="http://www.sebrae.com.br/sebraena-templating/files/img/img-shared-mercado.png">
+        <meta name="twitter:image" content="http://www.sebrae.com.br/sebraena-templating/files/img/img-shared-mercado.png">
+
+                
+                <script type="text/javascript">
+			if (typeof vuitConfig === 'undefined') {
+				vuitConfig = {parseOnLoad: false, isDebug: false, extraLocale: ['en'],siteURL:'/portal/site/PortalSebrae',endUserSyncToken:'f20c285faf8de7ded30e1e72a51012a0'};
+			} else {
+				//dont blow away other setups
+				vuitConfig.parseOnLoad = false;
+				vuitConfig.extraLocale = 'en';
+			}
+			if (typeof vQuery === 'undefined') {
+				document.write('<script type="text/javascript" src="/portal/jslib/vquery/vquery.js"><\/script>');
+			}
+			var vuiVcaConfig = {
+				apiPath: "/portal/api",
+				requestURL: "/portal/request",
+				appContext: "/portal"
+			};
+			if (typeof vuiConfig === 'undefined') {
+				vuiConfig = vuiVcaConfig;
+			}
+			document.write('<script type="text/javascript" src="/portal/jslib/vui/impl/vquery/logging.js"><\/script>');
+			document.write('<script type="text/javascript" src="/portal/jslib/vui/impl/vquery/vui-impl.js"><\/script>');
+			document.write('<script type="text/javascript" src="/portal/jslib/vui/vui.js"><\/script>');
+			document.write('<script type="text/javascript" src="/vgn-community-applications/jslib/otsc_base.js"><\/script>');
+			if (typeof vuit === 'undefined') {
+				document.write('<script type="text/javascript" src="/portal/jslib/vuit/vuit.js"><\/script>');
+			}
+			document.write('<script type="text/javascript" src="/portal/jslib/vijit/vca-basic.js"><\/script>');
+			document.write('<script type="text/javascript"> var SYNC_TOKEN ="1057c57daf8de7ded30e1e72a51012a0"; <\/script>');
+			document.write('<script type="text/javascript" src="/vgn-community-applications/jslib/vquery-1.8.2.min.js"><\/script>');
+			document.write('<script type="text/javascript" src="/vgn-community-applications/jslib/vquery-1.8.23-ui.js"><\/script>');
+			document.write('<script type="text/javascript" src="/vgn-community-applications/jslib/vca.js"><\/script>');
+		</script>
+		<script type="text/javascript">
+			vuit.require("vuit.parser");
+			vuit.require("vuit.date.locale");
+			vuit.require("vijit.Dialog");
+			vuit.require("vijit.form.Button");
+			vuit.require("vijit.Menu");
+			vuit.require("vijit.form.DateTextBox");
+			vuit.require("vijit.form.TimeTextBox");
+			vuit.require("vijit.form.DropDownButton");
+			vuit.require("vijit.layout.ContentPane");
+			vuit.require("vijit.layout.TabContainer");
+			vuit.require("vijit.Tooltip");
+			vuit.ready(function() {
+				if (vui && vui.context && vui.context.setSyncToken) {
+					vui.context.setSyncToken("1057c57daf8de7ded30e1e72a51012a0");
+				}
+				vuit.parser.parse();
+			});
+		</script>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.player a[data-type="audio"]').on('click', function() {
+                            $('.other-audios').load('/sites/PortalSebrae/canais_adicionais/outros_audios?codTema=' + $(this).siblings('.codTemaAudio').val());
+                        });
+                        $('.player .stage a[data-type="video"]').on('click', function() {
+                            $('.other-videos').load('/sites/PortalSebrae/canais_adicionais/outros_videos?codTema=' + $(this).siblings('.codTemaVideo').val());
+                        });
+                        $('.player .carousel-content a[data-type="video"]').on('click', function() {
+                            $('.other-videos').load('/sites/PortalSebrae/canais_adicionais/outros_videos?codTema=' + $(this).siblings('.codTemaVideoLista').val());
+                        });
+                        
+                        /*var longUrl=encodeURIComponent(window.location.href);
+                        var urlBty = 'http://api.bit.ly/shorten?version=2.0.1&longUrl=' + longUrl + '&login=sebraenacional&apiKey=R_3e27ada36a6f4351b3192ddc4661cdd8&format=json&callback=?';
+                        var urlCurta;
+                        $.getJSON(urlBty, function(data){
+                                console.log(data);
+                                var url = window.location.href;
+                                //console.log(url);
+                                urlCurta = data.results[url].shortUrl;
+                                $('.menu-compartilhe .fb a').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + urlCurta);
+                                $('.menu-compartilhe .tw a').attr('href', 'https://twitter.com/share?url=' + urlCurta);
+                                $('.link-to-share').val(urlCurta);
+                        });*/
+                        
+                        $('.menu-compartilhe .gp a').attr('href', 'https://plus.google.com/share?url=' + encodeURI(window.location.href));
+                        /*$('.menu-compartilhe .em a').attr('href', 'mailto:?body=Confira esse conteúdo no PortalSebrae(http://www.sebrae.com.br).'+
+                                                                  '%0AClique no link abaixo para ler o texto completo' +
+                                                                  '%0A'+ encodeURI(window.location.href) +
+                                                                  '%0A%0APortal Sebrae' + 
+                                                                  '%0ACadastre-se em http://www.sebrae.com.br/sites/PortalSebrae/Cadastro');*/
+                    });
+                </script>
+		
+
+
+
+
+
+
+
+
+
+
+		<script type="text/javascript" src="/portal/jslib/editlivejava/expressEdit/tinymce/jscripts/tiny_mce/tiny_mce.js?p=140096"></script> 
+            
+			<script src="/sebraena-templating/files/js/jquery-1.9.1.min.js?p=140096"></script>
+			<script src="/sebraena-templating/files/js/modernizr-2.6.2.min.js?p=140096"></script>
+			<script type="text/javascript" src="/sebraena-templating/files/js/angular.min-1.5.8.js"></script>
+			<script type="text/javascript" src="/sebraena-templating/files/js/angular-sanitize-1.5.8.js"></script>
+			<script type="text/javascript" src="/sebraena-templating/files/js/portalapp.module.js?p=140096"></script>
+			<script type="text/javascript" src="/sebraena-templating/files/js/common/directives/repeatEndWatch.directive.js?p=140096"></script>
+			
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            
+
+
+
+<title>Dez dicas de sucesso para vender na internet | Sebrae</title>
+<meta name="description" content="Vender pela internet requer mais atenção. Veja dez dicas para ajudar o empreendedor a montar uma loja virtual bem-sucedida.">
+<meta name="twitter:title" content="Dez dicas de sucesso para vender na internet | Sebrae">
+<meta property="description" content="Vender pela internet requer mais atenção. Veja dez dicas para ajudar o empreendedor a montar uma loja virtual bem-sucedida.">
+<meta name="twitter:description" content="Vender pela internet requer mais atenção. Veja dez dicas para ajudar o empreendedor a montar uma loja virtual bem-sucedida.">
+
+            
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var specialChars = [
+                {val:"a",let:"Ã¡Ã Ã£Ã¢Ã¤"},
+                {val:"e",let:"Ã©Ã¨ÃªÃ«"},
+                {val:"i",let:"Ã­Ã¬Ã®Ã¯"},
+                {val:"o",let:"Ã³Ã²ÃµÃ´Ã¶"},
+                {val:"u",let:"ÃºÃ¹Ã»Ã¼"},
+                {val:"c",let:"Ã§"},
+                {val:"A",let:"ÃÃÃÃÃ"},
+                {val:"E",let:"ÃÃÃÃ"},
+                {val:"I",let:"ÃÃÃÃ"},
+                {val:"O",let:"ÃÃÃÃÃ"},
+                {val:"U",let:"ÃÃÃÃ"},
+                {val:"C",let:"Ã"},
+                {val:"",let:"?!()"}
+        ];
+ 
+
+                function replaceSpecialChars(str) {
+                        var $spaceSymbol = '-';
+                        var regex;
+                        var returnString = str;
+                        for (var i = 0; i < specialChars.length; i++) {
+                                regex = new RegExp("["+specialChars[i].let+"]", "g");
+                                returnString = returnString.replace(regex, specialChars[i].val);
+                                regex = null;
+                        }
+                        return returnString.replace(/\s/g,$spaceSymbol);
+                };
+                var titulo = replaceSpecialChars($("#tituloTeste").val());
+                /*var longUrl=encodeURIComponent(window.location.href);
+                var urlBty = 'http://api.bit.ly/shorten?version=2.0.1&longUrl=' + longUrl + '&login=sebraenacional&apiKey=R_3e27ada36a6f4351b3192ddc4661cdd8&format=json&callback=?';
+                var urlCurta = '';
+                $.getJSON(urlBty, function(data){
+                        var url = window.location.href;
+                        if(data.results != null){
+                            urlCurta = data.results[url].shortUrl;
+                            $('.menu-compartilhe .fb a').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + urlCurta);
+                            $('.menu-compartilhe .tw a').attr('href', 'https://twitter.com/share?url=' + urlCurta + "&text=" + titulo + "&hashtags=sebrae");
+                            $('.link-to-share').val(urlCurta);
+                        }else{
+                            $('.menu-compartilhe .fb a').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + url);
+                            $('.menu-compartilhe .tw a').attr('href', 'https://twitter.com/share?url=' + url + "&text=" + titulo + "&hashtags=sebrae");
+                            $('.link-to-share').val(url);
+                        }
+                });*/
+                $('.menu-compartilhe .fb a').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
+                $('.menu-compartilhe .tw a').attr('href', 'https://twitter.com/share?url=' + encodeURIComponent(window.location.href) + "&text=" + titulo + "&hashtags=sebrae");
+                $('.menu-compartilhe .gp a').attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(window.location.href));
+                $('.menu-compartilhe .em a').attr('href', 'mailto:?subject=' + titulo + '&body=Confira esse conte\u00FAdo no PortalSebrae(http://www.sebrae.com.br).'+
+                                                                  '%0AClique no link abaixo para ler o texto completo' +
+                                                                  '%0A'+ encodeURIComponent(window.location.href) +
+                                                                  '%0A%0APortal Sebrae' + 
+                                                                  '%0ACadastre-se em http://www.sebrae.com.br/sites/PortalSebrae/Cadastro');
+                $('.link-to-share').val(window.location.href);
+            });
+        </script>
+        <input type="hidden" value="Dez dicas de sucesso para vender na internet" id="tituloTeste"/>
+
+            <meta name="viewport" content="" >
+            
+            
+
+
+
+
+<link rel="canonical" href="http://www.sebrae.com.br/sites/PortalSebrae/artigos/dez-dicas-de-sucesso-para-vender-na-internet,2171ce6326c0a410VgnVCM1000003b74010aRCRD"/>
+<link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.sebrae.com.br/sites/PortalSebrae/artigos/dez-dicas-de-sucesso-para-vender-na-internet,2171ce6326c0a410VgnVCM1000003b74010aRCRD">
+            
+            <!---------------------------------------->
+            <link rel="shortcut icon" href="/sebraena-templating/files/img/favicon.png" />
+            
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css?p=140096"/>
+            <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Lato:400,700,900' type='text/css'/>
+            
+            <link rel="stylesheet" href="/sebraena-templating/files/css/global-front.css?p=140096"/>
+            <link rel="stylesheet" href="/sebraena-templating/files/css/contato.css?p=140096"/>
+            <link rel="stylesheet" href="/sebraena-templating/files/css/article.css?p=140096"/>
+            <link rel="stylesheet" href="/sebraena-templating/files/css/tema.css?p=140096"/>
+            <link rel="stylesheet" href="/sebraena-templating/files/css/tipTip.css?p=140096" type="text/css"/>
+            
+            <link rel="stylesheet" href="/sebraena-templating/files/css/jquery.Jcrop.css?p=140096" type="text/css"/>
+            <link rel="stylesheet" href="/sebraena-templating/files/css/area-logada.css?p=140096"/>
+			<link rel="stylesheet" href="/sebraena-templating/files/css/MDstyle.css?p=140096" type="text/css"/>
+			
+            <!-- Style ------->
+            <link rel="stylesheet" href="/sebraena-templating/files/css/styleButton.css?a=1" type="text/css" media="all" title="Style general" />
+            <link rel="stylesheet" href="/sebraena-templating/files/css/prettyPhoto.css?a=1" type="text/css" media="all" title="Style general" />
+            <!-- END: Style -->
+            
+            <link rel="stylesheet" href="/sebraena-templating/files/css/portal.css?p=140096"/>
+            
+
+             <!---------------------------------------->
+            
+            <meta name="google-site-verification" content="M4hdSzpngHYV-C9mKN0fessdyzu85X8u0_bFbBavL_E" />
+            
+            
+            
+            
+            
+            
+
+            
+
+<!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("38f15f709130f245abcf651dba89df27");</script><!-- end Mixpanel -->
+
+
+
+
+			
+			
+
+                                
+
+
+        <input type="hidden" value="null" id="vcm-vd-share">
+        <input type="hidden" value="" id="title-vd-share">
+        <input type="hidden" value="" id="description-vd-share">
+        <input type="hidden" value="" id="thumb-vd-share">
+
+            
+           	<!-- Init Clickjacking Defense - OWASP -->
+            <meta http-equiv="X-Frame-Options" content="sameorigin">
+            
+            <style id="antiClickjack">body{display:none !important;}</style>
+      
+		    <script type="text/javascript">
+           		if(self === top){
+               		var antiClickjack = document.getElementById("antiClickjack");
+               		antiClickjack.parentNode.removeChild(antiClickjack);
+           		}else{
+               		top.location = self.location;
+           		}
+		    </script>
+		    <!-- End Clickjacking Defense - OWASP -->
+	</head>
+	<body class="front-office">
+        
+                
+
+
+<input type="hidden" value="https://meuatendimento.sebrae.com.br/" id="urlHttps"/>
+<input type="hidden" value="http://www.sebrae.com.br/" id="urlHttp"/>
+<input type="hidden" value="false" id="protocolo"/>
+
+        
+                
+
+		
+<link href="/sites/styles/vgn-ext-templating-delivery.css" rel="stylesheet" type="text/css"></link>
+
+		
+
+		
+<script type="text/javascript" src="/sites/scripts/async/ajax.jsp"></script>
+
+        
+            <!-- IFRAME LINK -- >
+            <a href="http://pesquisasebrae.moringadigital.com.br/1984/?iframe=true" class="linkSearch" title="" rel="prettyPhoto">Pesquisa de opinião</a>
+            <!-- END: IFRAME LINK -->
+                
+                
+ 
+
+
+
+
+<header id="header" class="not-logged">
+
+   <style type="text/css">
+        .vgn-ext-region {
+            min-height:  0px !important;
+        }
+
+		.vgn-ext-component {
+			min-height:  0px !important;
+		}
+    </style>
+
+<script type="text/javascript">
+    function redirectHttps(link) {
+		setTimeout(function() {
+			var url = $('#urlHttps').val();
+			window.location.href = url + link;
+		}, 300);
+    }
+
+    function redirectHttp(link) {
+		setTimeout(function() {
+			var url = $('#urlHttp').val();
+			window.location.href = url + link;
+		}, 300);
+    }
+</script>
+
+   
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+		
+
+
+    
+
+
+
+
+<section class="explore-temas-gestao clearfix">
+    <nav>
+        <div class="wrapper">
+            <!--<h5>
+                    Explore os Temas de Gestão
+            </h5>-->
+            <ul class="clearfix" style="padding: 0px">
+
+            
+                <li class="empreendedorismo">
+                    <span class="border-tema"></span>
+                    <!-- replace feito pois a url de leis e normas é diferente do label do banco -->
+                    <a href="http://www.sebrae.com.br/sites/PortalSebrae/tipoconteudo/empreendedorismo?codTema=2" class="clearfix">
+                        <!-- replace feito pois o nome da class de inovacao veio errado da agência, está ico-new_ico_inivacao -->
+                        <div class="left"><i class="ico ico-new_ico_empreendedorismo"></i></div>
+                        <div class="left"><span>Empreendedorismo</span></div>
+                        <div class="box-hover-temas-gestao">
+                            <p>Entenda como abrir, melhorar e ampliar o seu negócio</p>
+                            <div class="bt-add-favorito-pequeno"><i class="ico ico-favorito-thumb"></i></div>
+                        </div>
+                    </a>
+                </li>
+
+            
+                <li class="planejamento">
+                    <span class="border-tema"></span>
+                    <!-- replace feito pois a url de leis e normas é diferente do label do banco -->
+                    <a href="http://www.sebrae.com.br/sites/PortalSebrae/tipoconteudo/planejamento?codTema=9" class="clearfix">
+                        <!-- replace feito pois o nome da class de inovacao veio errado da agência, está ico-new_ico_inivacao -->
+                        <div class="left"><i class="ico ico-new_ico_planejamento"></i></div>
+                        <div class="left"><span>Planejamento</span></div>
+                        <div class="box-hover-temas-gestao">
+                            <p>Saiba mais como traçar os planos da empresa</p>
+                            <div class="bt-add-favorito-pequeno"><i class="ico ico-favorito-thumb"></i></div>
+                        </div>
+                    </a>
+                </li>
+
+            
+                <li class="financas">
+                    <span class="border-tema"></span>
+                    <!-- replace feito pois a url de leis e normas é diferente do label do banco -->
+                    <a href="http://www.sebrae.com.br/sites/PortalSebrae/tipoconteudo/financas?codTema=3" class="clearfix">
+                        <!-- replace feito pois o nome da class de inovacao veio errado da agência, está ico-new_ico_inivacao -->
+                        <div class="left"><i class="ico ico-new_ico_financas"></i></div>
+                        <div class="left"><span>Finanças</span></div>
+                        <div class="box-hover-temas-gestao">
+                            <p>Conheça formas de ter controle financeiro do seu negócio</p>
+                            <div class="bt-add-favorito-pequeno"><i class="ico ico-favorito-thumb"></i></div>
+                        </div>
+                    </a>
+                </li>
+
+            
+                <li class="mercado">
+                    <span class="border-tema"></span>
+                    <!-- replace feito pois a url de leis e normas é diferente do label do banco -->
+                    <a href="http://www.sebrae.com.br/sites/PortalSebrae/tipoconteudo/mercado?codTema=6" class="clearfix">
+                        <!-- replace feito pois o nome da class de inovacao veio errado da agência, está ico-new_ico_inivacao -->
+                        <div class="left"><i class="ico ico-new_ico_mercado"></i></div>
+                        <div class="left"><span>Mercado e Vendas</span></div>
+                        <div class="box-hover-temas-gestao">
+                            <p>Marketing e dicas para os negócios se destacarem no mercado</p>
+                            <div class="bt-add-favorito-pequeno"><i class="ico ico-favorito-thumb"></i></div>
+                        </div>
+                    </a>
+                </li>
+
+            
+                <li class="inovacao">
+                    <span class="border-tema"></span>
+                    <!-- replace feito pois a url de leis e normas é diferente do label do banco -->
+                    <a href="http://www.sebrae.com.br/sites/PortalSebrae/tipoconteudo/inovacao?codTema=4" class="clearfix">
+                        <!-- replace feito pois o nome da class de inovacao veio errado da agência, está ico-new_ico_inivacao -->
+                        <div class="left"><i class="ico ico-new_ico_inivacao"></i></div>
+                        <div class="left"><span>Inovação</span></div>
+                        <div class="box-hover-temas-gestao">
+                            <p>Informações, dicas e soluções para sua empresa fazer diferente</p>
+                            <div class="bt-add-favorito-pequeno"><i class="ico ico-favorito-thumb"></i></div>
+                        </div>
+                    </a>
+                </li>
+
+            
+                <li class="cooperacao">
+                    <span class="border-tema"></span>
+                    <!-- replace feito pois a url de leis e normas é diferente do label do banco -->
+                    <a href="http://www.sebrae.com.br/sites/PortalSebrae/tipoconteudo/cooperacao?codTema=1" class="clearfix">
+                        <!-- replace feito pois o nome da class de inovacao veio errado da agência, está ico-new_ico_inivacao -->
+                        <div class="left"><i class="ico ico-new_ico_cooperacao"></i></div>
+                        <div class="left"><span>Cooperação</span></div>
+                        <div class="box-hover-temas-gestao">
+                            <p>Saiba como fazer parcerias que beneficiem sua empresa</p>
+                            <div class="bt-add-favorito-pequeno"><i class="ico ico-favorito-thumb"></i></div>
+                        </div>
+                    </a>
+                </li>
+
+            
+                <li class="pessoas">
+                    <span class="border-tema"></span>
+                    <!-- replace feito pois a url de leis e normas é diferente do label do banco -->
+                    <a href="http://www.sebrae.com.br/sites/PortalSebrae/tipoconteudo/pessoas?codTema=8" class="clearfix">
+                        <!-- replace feito pois o nome da class de inovacao veio errado da agência, está ico-new_ico_inivacao -->
+                        <div class="left"><i class="ico ico-new_ico_pessoas"></i></div>
+                        <div class="left"><span>Pessoas</span></div>
+                        <div class="box-hover-temas-gestao">
+                            <p>Como gerenciar sua equipe</p>
+                            <div class="bt-add-favorito-pequeno"><i class="ico ico-favorito-thumb"></i></div>
+                        </div>
+                    </a>
+                </li>
+
+            
+                <li class="organizacao">
+                    <span class="border-tema"></span>
+                    <!-- replace feito pois a url de leis e normas é diferente do label do banco -->
+                    <a href="http://www.sebrae.com.br/sites/PortalSebrae/tipoconteudo/organizacao?codTema=7" class="clearfix">
+                        <!-- replace feito pois o nome da class de inovacao veio errado da agência, está ico-new_ico_inivacao -->
+                        <div class="left"><i class="ico ico-new_ico_organizacao"></i></div>
+                        <div class="left"><span>Organização</span></div>
+                        <div class="box-hover-temas-gestao">
+                            <p>Como tornar mais eficientes os processos e procedimentos da sua empresa</p>
+                            <div class="bt-add-favorito-pequeno"><i class="ico ico-favorito-thumb"></i></div>
+                        </div>
+                    </a>
+                </li>
+
+            
+                <li class="leis-normas">
+                    <span class="border-tema"></span>
+                    <!-- replace feito pois a url de leis e normas é diferente do label do banco -->
+                    <a href="http://www.sebrae.com.br/sites/PortalSebrae/tipoconteudo/leis_e_normas?codTema=5" class="clearfix">
+                        <!-- replace feito pois o nome da class de inovacao veio errado da agência, está ico-new_ico_inivacao -->
+                        <div class="left"><i class="ico ico-new_ico_leis-normas"></i></div>
+                        <div class="left"><span>Leis</span></div>
+                        <div class="box-hover-temas-gestao">
+                            <p>Veja como atender aspectos legais e regras governamentais</p>
+                            <div class="bt-add-favorito-pequeno"><i class="ico ico-favorito-thumb"></i></div>
+                        </div>
+                    </a>
+                </li>
+                
+                <!--<li class="entenda_temas_gestao">
+                    <a href="#">
+                        <span>Entenda os <br>temas de gestão</span>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+    </nav>
+</section>
+
+
+
+        
+        
+    
+
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+		
+
+
+
+
+
+<section class="nav-segmento">
+    <nav>
+        <ul class="clearfix">
+        	
+        	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/agricultura" >Agricultura</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/alimentos_e_bebidas" >Alimentos e Bebidas</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/artesanato" >Artesanato</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/beleza" >Beleza</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/construcao" >Construção e Reforma</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/economia_criativa" >Economia Criativa</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/madeira_e_moveis" >Móveis e Decoração</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/mercado_digital" >Mercado Digital</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/mercearia_e_supermercados" >Mercearia e Supermercados</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/metal_mecanico" >Metal Mecânico</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/moda" >Moda</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/pecuaria" >Pecuária</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/petroquimico_e_mineracao" >Petroquímico e Mineração</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/saude_e_bem_estar" >Saúde e bem-estar</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/turismo" >Turismo</a></li>
+           	
+           			<li><a href="http://www.sebrae.com.br/sites/PortalSebrae/segmentos/veiculos" >Veículos</a></li>
+           	
+           	
+        </ul>
+    </nav>
+</section>
+
+
+        
+        
+    
+
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+		
+
+
+
+
+
+<aside id="estados" class="a-z clearfix">
+    <div class="wrapper clearfix">
+        <nav class="nav-estados clearfix">
+            <h2>Sebrae nos Estados</h2>
+            <ul>
+                
+                <li>Centro-Oeste</li>
+                
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/df?codUf=7 " data-estado="df">Distrito Federal</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/go?codUf=10 " data-estado="go">Goiás</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/mt?codUf=12 " data-estado="mt">Mato Grosso</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ms?codUf=13 " data-estado="ms">Mato Grosso do Sul</a></li>
+                
+            </ul>
+            <ul>
+                
+                <li class="">Nordeste</li>
+                
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/al?codUf=2 " data-estado="al">Alagoas</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ba?codUf=5 " data-estado="ba">Bahia</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ce?codUf=6 " data-estado="ce">Ceará</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ma?codUf=11 " data-estado="ma">Maranhão</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pb?codUf=16 " data-estado="pb">Paraíba</a></li>
+                
+            </ul>
+            <ul>
+                <li></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pe?codUf=18" data-estado="pe">Pernambuco</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pi?codUf=19" data-estado="pi">Piauí</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/rn?codUf=21" data-estado="rn">Rio Grande do Norte</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/se?codUf=27" data-estado="se">Sergipe</a></li>
+                
+            </ul>
+            <ul>
+                
+                <li>Norte</li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ac?codUf=1 " data-estado="ac">Acre</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ap?codUf=3 " data-estado="ap">Amapá</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/am?codUf=4 " data-estado="am">Amazonas</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/rr?codUf=9 " data-estado="rr">Roraima</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pa?codUf=15 " data-estado="pa">Pará</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ro?codUf=23 " data-estado="ro">Rondônia</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/to?codUf=24 " data-estado="to">Tocantins</a></li>
+                
+            </ul>
+            <ul>
+                
+                <li>Sudeste</li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/es?codUf=8 " data-estado="es">Espírito Santo</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/mg?codUf=14 " data-estado="mg">Minas Gerais</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/rj?codUf=20 " data-estado="rj">Rio de Janeiro</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/sp?codUf=26 " data-estado="sp">São Paulo</a></li>
+                
+            </ul>
+            <ul>
+                
+                <li>Sul</li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pr?codUf=17 " data-estado="pr">Paraná</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/rs?codUf=22 " data-estado="rs">Rio Grande do Sul</a></li>
+                
+                        <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/sc?codUf=25 " data-estado="sc">Santa Catarina</a></li>
+                
+            </ul>
+
+        </nav>
+        <div class="mapa-header">
+            <div class="map-null">
+                <img src="/sebraena-templating/files/img/map/map-null.png" usemap="#mapArea" border="0" />
+                <map name="mapArea" id="mapArea">
+                    <area shape="poly" data-estado="ac" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ac?codUf=1" coords="75,165,56,153,32,145,4,139,1,143,9,157,20,168,37,171,40,178,60,178" alt="ac" />
+                    <area shape="poly" data-estado="am" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/am?codUf=4" coords="75,163,4,138,5,134,8,132,9,119,25,107,32,105,43,103,45,70,39,61,40,54,48,53,48,49,42,48,44,41,54,41,67,36,71,39,72,44,80,50,87,45,89,50,99,42,103,38,111,34,118,36,118,56,120,65,128,71,131,64,136,61,139,65,144,63,142,60,147,54,157,53,160,62,164,67,170,73,186,79,163,127,168,133,164,139,164,143,165,149,126,150,118,141,106,146,105,152,96,154,95,158,91,156,86,159,81,158" alt="am" />
+                    <area shape="poly" data-estado="rr" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/rr?codUf=9" coords="101,31,111,21,116,21,117,15,124,14,136,9,139,2,148,4,147,9,151,11,151,17,151,38,158,42,157,53,145,53,141,58,144,61,139,65,135,61,128,71,120,65,120,53,120,45,118,39,118,34,111,33,105,32" alt="rr" />
+                    <area shape="poly" data-estado="pa" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pa?codUf=15" coords="168,133,174,148,181,154,186,156,190,157,202,158,217,159,227,158,237,159,248,160,251,159,253,154,258,149,261,144,262,139,261,135,260,132,262,129,265,127,268,124,270,121,271,118,271,115,269,112,269,110,275,106,279,104,283,98,285,95,288,91,291,87,291,83,293,79,295,75,296,72,296,69,293,68,289,66,286,65,280,64,276,63,273,64,271,68,269,71,266,74,264,75,260,75,271,60,267,59,263,58,259,56,257,54,254,51,252,49,249,50,245,53,242,56,241,58,239,61,238,63,235,66,233,68,231,66,228,62,226,60,224,57,222,54,221,51,221,48,222,46,218,45,217,44,215,41,213,40,210,39,209,38,206,36,204,35,203,34,203,31,199,28,196,28,193,29,189,30,188,33,189,35,183,34,178,34,174,34,171,37,168,38,164,39,160,40,159,42,158,49,158,55,160,59,161,61,164,63,168,67,171,69,173,72,176,73,180,74,182,76,186,78,180,90,176,98,173,104,170,112,167,118,165,123,163,125" alt="pa" />
+                    <area shape="poly" data-estado="ap" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ap?codUf=3" coords="242,27,248,29,251,31,253,36,254,37,255,40,255,43,255,46,251,49,249,50,245,53,243,56,241,58,240,60,238,63,236,65,234,66,233,67,231,66,228,64,226,62,224,59,223,56,221,53,221,49,221,46,219,45,217,43,215,40,213,40,210,39,207,37,204,35,203,32,202,30,207,33,212,33,214,32,217,33,226,33,226,30,228,27,230,25,233,26" alt="ap" />
+                    <area shape="poly" data-estado="ma" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ma?codUf=11" coords="270,111,273,113,276,114,279,116,282,119,281,124,281,128,279,133,280,136,282,140,284,142,290,142,287,148,286,151,287,155,288,156,290,159,289,162,291,164,293,166,295,167,297,166,297,161,297,157,296,154,296,151,297,148,299,146,301,142,303,139,305,137,311,134,313,133,316,131,319,131,322,131,324,132,326,131,328,129,329,127,329,124,327,123,328,120,329,117,330,115,330,111,329,106,329,104,329,101,331,98,334,97,336,95,338,93,341,90,335,88,330,86,327,84,324,84,312,78,304,75,299,73,297,72,296,77,294,80,292,86,290,89,288,92,285,97,283,100,280,103,277,105,274,107" alt="ma" />
+                    <area shape="poly" data-estado="pi" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pi?codUf=19" coords="344,90,346,92,345,96,345,99,347,100,348,102,349,106,346,113,349,114,349,117,350,120,351,123,352,126,352,129,354,132,356,134,354,136,353,139,353,142,352,146,349,149,346,151,344,153,343,154,340,156,337,157,333,158,329,160,325,159,320,158,316,159,319,162,319,164,316,168,313,169,310,171,305,173,302,172,300,170,298,168,297,165,297,162,297,159,296,155,296,152,298,148,300,145,303,139,308,135,313,133,318,132,324,131,328,128,329,124,328,122,330,116,330,112,330,106,329,102,330,99,336,96,340,94,340,91" alt="pi" />
+                    <area shape="poly" data-estado="ce" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ce?codUf=6" coords="373,100,377,102,379,104,381,107,384,109,387,112,383,115,380,120,379,124,376,126,374,128,374,133,373,135,374,139,371,142,366,142,364,140,359,139,356,139,354,137,356,135,354,132,352,128,352,124,351,120,349,117,348,114,348,111,349,108,349,105,348,101,347,99,346,97,346,93,348,91,353,91,358,91,365,94" alt="ce" />
+                    <area shape="poly" data-estado="rn" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/rn?codUf=21" coords="389,126,387,130,386,133,391,134,394,134,396,132,396,130,400,130,404,131,407,132,409,132,411,129,411,125,409,122,408,119,405,118,401,116,395,116,390,116,388,114,385,114,383,116,381,119,380,122,378,124,376,126,375,127,378,130,381,130,384,127" alt="rn" />
+                    <area shape="poly" data-estado="pb" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pb?codUf=16" coords="373,143,377,145,381,144,384,144,387,141,390,141,389,143,388,146,388,149,390,150,392,149,397,148,400,147,402,147,405,147,407,144,411,144,411,140,411,137,410,135,404,134,401,132,398,132,397,133,396,136,393,136,390,135,386,133,387,130,388,127,384,126,382,128,380,130,376,129,375,128,374,131,373,133,373,136,375,138" alt="pb" />
+                    <area shape="poly" data-estado="pe" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pe?codUf=18" coords="347,152,350,149,353,147,353,142,353,139,358,139,363,139,366,142,369,143,372,143,374,144,379,145,383,144,386,142,389,140,388,144,387,147,389,150,392,149,396,148,402,148,406,147,408,144,410,144,410,150,409,153,409,157,408,159,404,158,400,158,397,160,393,161,390,161,385,158,385,157,380,158,378,159,376,159,373,156,369,154,368,152,364,152,362,154,360,155,356,157,353,158,351,161,350,158,349,155" alt="pe" />
+                    <area shape="poly" data-estado="al" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/al?codUf=2" coords="395,172,391,171,387,168,385,166,383,164,380,163,378,161,378,160,381,158,384,158,387,158,389,160,392,161,395,160,398,159,400,158,404,158,407,158,406,161,404,163,399,167,401,167,398,169" alt="al" />
+                    <area shape="poly" data-estado="se" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/se?codUf=27" coords="380,164,380,167,381,170,380,172,380,174,378,176,377,177,376,180,378,182,379,184,382,185,385,184,386,181,387,178,390,177,392,176,395,174,393,172,388,169,385,167,383,164" alt="se" />
+                    <area shape="poly" data-estado="ba" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ba?codUf=5" coords="296,169,293,172,292,174,290,177,290,179,292,181,293,182,293,185,291,187,292,190,293,192,293,195,293,199,293,202,292,204,294,208,294,210,294,213,293,216,292,217,295,217,300,216,303,214,308,211,310,211,315,211,316,212,315,214,319,216,324,214,325,217,328,218,331,220,334,221,336,221,339,223,340,225,341,227,347,228,351,229,354,230,355,231,354,234,352,236,350,239,348,241,349,244,349,246,351,250,352,253,356,254,359,253,360,249,361,244,361,240,362,235,363,226,363,220,364,216,364,212,366,207,365,204,366,200,368,198,371,200,373,199,377,195,380,191,381,187,382,184,378,183,377,181,375,179,378,176,379,174,380,170,380,168,378,165,379,163,378,162,375,159,373,157,370,155,367,154,364,153,362,154,360,155,358,157,355,157,352,160,351,162,348,158,348,156,347,154,346,152,343,155,341,156,336,157,333,159,331,161,327,160,324,159,319,158,317,158,318,160,319,163,318,165,315,168,313,170,309,172,305,173,302,173,300,171" alt="ba" />
+                    <area shape="poly" data-estado="to" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/to?codUf=24" coords="250,187,252,191,252,194,255,196,258,196,260,194,262,193,264,197,267,197,269,196,272,198,275,199,279,199,280,198,281,197,284,197,286,196,289,194,292,193,292,190,291,188,293,185,293,183,291,181,289,179,290,177,291,173,293,171,294,170,297,169,295,168,293,166,291,165,289,163,289,160,288,158,287,156,286,154,285,153,285,150,286,146,288,143,289,142,284,141,282,140,280,138,279,135,279,132,280,130,281,127,281,123,281,120,280,119,277,116,276,114,270,112,270,115,271,118,270,122,267,125,264,127,261,129,260,132,262,137,262,141,261,145,258,147,255,151,252,154,251,157,251,161,248,165,248,169,246,173,246,178,246,181,245,185,245,189,246,191,247,192,249,190" alt="to" />
+                    <area shape="poly" data-estado="mt" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/mt?codUf=12" coords="132,151,132,155,131,158,131,161,132,166,133,170,132,172,135,173,139,173,143,174,146,175,147,177,147,180,147,183,149,185,149,189,149,191,147,194,144,197,143,199,142,201,144,205,144,209,146,214,150,217,154,223,157,226,161,232,163,235,164,238,167,241,170,242,173,244,175,246,178,246,182,244,183,243,183,240,186,239,188,241,191,241,194,241,197,242,199,244,204,243,206,243,208,244,211,243,212,241,214,241,214,246,213,247,216,247,218,247,219,246,219,245,219,243,220,240,221,238,222,235,224,233,226,230,227,226,230,225,232,224,234,223,235,221,236,217,239,216,240,215,242,212,243,208,243,206,244,204,245,201,246,198,247,194,247,193,245,190,244,187,244,185,244,182,245,178,245,174,245,172,247,169,247,167,248,163,249,161,243,160,230,159,218,158,204,158,195,159,186,157,182,155,176,152,174,150,171,147,171,143,170,140,168,136,165,137,165,140,164,144,165,147,164,149,156,149,150,149,144,149,136,149" alt="mt" />
+                    <area shape="poly" data-estado="ro" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ro?codUf=23" coords="133,201,130,202,127,200,126,198,121,197,120,195,114,194,110,192,106,192,102,190,97,186,94,183,92,179,92,176,92,173,92,169,92,166,92,163,89,162,85,163,81,164,79,165,76,166,75,168,73,169,70,170,69,170,69,167,72,164,74,163,75,162,77,161,81,159,83,159,85,159,88,158,90,157,92,158,94,158,95,157,95,156,97,154,101,153,104,153,106,152,106,151,106,149,106,147,108,146,112,144,114,144,116,143,118,142,122,146,123,147,124,148,126,150,128,151,131,150,131,156,131,161,131,166,132,169,132,171,136,174,139,173,142,174,145,176,146,178,147,182,148,184,149,186,149,190,148,192,144,197,142,200,139,202" alt="ro" />
+                    <area shape="poly" data-estado="ms" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/ms?codUf=13" coords="174,247,173,256,169,264,170,267,170,269,169,271,171,274,173,277,172,283,171,287,171,289,172,291,174,292,178,293,182,293,185,293,187,291,190,293,192,294,194,299,195,302,196,307,198,309,201,310,205,310,207,311,208,312,211,310,211,308,212,306,213,304,214,301,216,300,219,297,221,295,223,294,226,292,229,291,231,288,231,285,231,284,233,280,235,276,237,273,239,270,240,268,241,264,240,263,235,261,231,259,228,257,224,255,223,253,222,251,220,249,217,248,214,248,213,245,214,241,212,243,209,244,205,245,197,244,196,241,194,241,187,242,186,239,184,239,183,242,182,243,181,245,179,246" alt="ms" />
+                    <area shape="poly" data-estado="go" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/go?codUf=10" coords="241,263,236,262,234,260,230,259,226,255,224,254,224,252,222,251,219,248,219,246,219,242,221,239,222,237,223,233,225,231,226,228,227,226,230,225,232,224,234,223,235,222,236,219,236,217,238,216,241,215,242,213,242,211,243,205,244,203,246,200,246,197,248,194,248,191,249,188,250,189,251,191,251,193,253,194,254,195,256,195,259,196,260,195,260,194,261,197,264,197,268,197,269,196,272,199,277,199,279,199,283,197,286,196,288,194,291,193,293,195,292,199,292,202,292,205,293,207,294,209,294,212,293,214,293,217,293,218,289,214,286,217,285,219,285,223,284,226,281,227,279,225,279,223,276,223,274,223,272,223,270,224,269,227,270,229,272,229,276,229,278,229,279,231,279,233,281,235,279,238,278,241,278,244,278,246,277,250,275,251,271,253,265,253,260,252,257,253,256,255,253,255,250,256,247,257,244,261,243,262" alt="go" />
+                    <area shape="poly" data-estado="df" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/df?codUf=7" coords="279,229,276,229,272,229,270,228,269,226,270,224,272,223,275,223,277,223,279,225,280,226,280,228" alt="df" />
+                    <area shape="poly" data-estado="mg" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/mg?codUf=14" coords="241,269,241,264,244,262,246,260,248,256,254,255,256,254,258,253,262,253,268,254,273,252,276,250,278,248,278,245,278,242,280,239,281,236,280,234,279,231,280,228,282,227,285,225,286,222,286,219,287,216,290,216,292,218,295,218,299,217,304,215,307,213,311,212,314,212,315,214,317,216,320,215,322,215,326,217,330,219,334,221,337,222,339,226,340,227,343,228,348,229,352,230,353,234,351,238,349,241,348,244,349,248,350,250,349,252,347,252,341,252,340,254,341,257,342,258,340,261,341,263,341,265,340,268,338,273,336,275,333,276,332,279,331,283,329,285,326,287,324,290,322,292,320,293,317,294,313,294,307,294,305,296,301,296,299,297,294,297,292,298,289,300,287,300,285,299,283,296,281,294,284,290,284,287,284,286,283,286,281,285,280,284,279,279,279,277,278,275,277,272,275,271,272,271,267,270,263,271,262,271,262,273,257,270,254,269,250,268,246,268,244,269" alt="mg" />
+                    <area shape="poly" data-estado="es" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/es?codUf=8" coords="350,251,353,253,355,255,354,261,354,265,352,269,350,272,348,275,345,279,343,282,340,284,339,286,336,285,334,284,333,281,333,278,335,276,338,275,340,272,341,268,341,266,341,262,341,260,342,258,340,256,340,253,343,252,346,251" alt="es" />
+                    <area shape="poly" data-estado="rj" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/rj?codUf=20" coords="332,283,334,286,338,287,339,286,339,291,339,294,337,296,331,297,327,300,324,302,318,303,311,303,310,303,309,303,306,305,302,303,306,302,308,301,304,300,302,298,302,296,306,296,312,295,318,295,321,294,324,291,327,288,329,285" alt="rj" />
+                    <area shape="poly" data-estado="sp" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/sp?codUf=26" coords="241,269,243,269,247,268,249,268,251,269,256,270,258,272,260,273,262,273,263,271,266,271,269,271,273,271,274,272,277,274,278,275,279,279,280,281,280,284,282,285,283,286,283,289,281,293,281,294,282,295,284,298,286,300,288,301,289,301,293,299,294,299,298,298,301,298,303,298,305,300,306,300,300,302,299,303,301,305,301,306,299,308,296,308,292,310,288,312,285,314,278,318,273,319,271,322,269,325,266,324,266,323,265,322,263,321,263,319,260,319,258,319,258,317,256,313,255,312,254,310,256,307,256,306,254,304,253,303,252,302,251,301,249,300,244,299,242,300,237,297,232,297,224,297,221,297,229,291,231,290,231,287,231,285,232,283,233,280,234,276,236,273,238,272" alt="sp" />
+                    <area shape="poly" data-estado="pr" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/pr?codUf=17" coords="205,328,205,323,206,319,206,317,207,314,210,312,210,310,212,307,213,305,214,302,218,299,219,298,222,298,229,298,234,298,238,300,241,302,244,301,247,300,251,302,253,307,254,309,255,312,257,315,258,318,260,318,262,320,264,323,267,324,266,326,263,328,263,331,261,333,257,334,254,335,250,333,247,333,244,333,242,334,240,336,237,339,235,339,233,339,231,337,227,337,225,336,222,336,220,336,216,335,212,335,212,332,210,330,209,328" alt="pr" />
+                    <area shape="poly" data-estado="sc" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/sc?codUf=25" coords="249,367,249,365,250,361,249,360,246,360,243,357,241,355,238,353,235,351,230,348,227,346,220,346,218,345,212,345,211,344,212,341,212,337,213,336,216,335,220,336,223,336,225,337,228,337,232,338,235,339,237,339,240,337,243,335,246,334,250,334,253,335,256,335,258,334,261,334,262,336,262,341,262,345,263,348,263,352,262,355,261,357,260,360,259,361,258,362,251,362" alt="sc" />
+                    <area shape="poly" data-estado="rs" href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/rs?codUf=22" coords="210,346,205,349,202,350,199,352,197,354,195,355,192,359,189,363,187,365,182,367,180,371,178,374,180,376,183,377,187,379,189,383,194,384,197,387,201,388,203,389,204,391,206,393,210,394,213,395,213,397,212,398,215,401,217,402,216,406,214,408,213,411,215,412,219,412,222,407,225,404,227,400,229,397,229,395,229,391,232,388,233,385,235,383,235,380,237,378,241,378,241,381,239,384,237,386,235,388,233,392,233,393,238,391,240,389,242,386,244,384,245,380,245,379,248,374,249,372,249,370,250,369,249,367,248,366,248,364,248,362,246,360,243,358,240,357,238,355,235,352,232,350,229,348,224,346,218,345,214,345,212,345" alt="rs" />
+                </map>
+            </div>
+            
+            
+            
+            
+            <ul id="map">
+                <li id="crs" data-estado="rs"><a id="rs" title="RS"><img src="/sebraena-templating/files/img/map/null.gif" alt="RS" /></a><span>Rio Grande do Sul <i></i></span></li>
+                <li id="csc" data-estado="sc"><a id="sc" title="SC"><img src="/sebraena-templating/files/img/map/null.gif" alt="SC" /></a><span>Santa Catarina<i></i></span></li>
+                <li id="cpr" data-estado="pr"><a id="pr" title="PR"><img src="/sebraena-templating/files/img/map/null.gif" alt="PR" /></a><span>Paraná<i></i></span></li>
+                <li id="csp" data-estado="sp"><a id="sp" title="SP"><img src="/sebraena-templating/files/img/map/null.gif" alt="SP" /></a><span>São Paulo<i></i></span></li>
+                <li id="cms" data-estado="ms"><a id="ms" title="MS"><img src="/sebraena-templating/files/img/map/null.gif" alt="MS" /></a><span>Mato Grosso do Sul <i></i></span></li>
+                <li id="crj" data-estado="rj"><a id="rj" title="RJ"><img src="/sebraena-templating/files/img/map/null.gif" alt="RJ" /></a><span>Rio de Janeiro<i></i></span></span></li>
+                <li id="ces" data-estado="es"><a id="es" title="ES"><img src="/sebraena-templating/files/img/map/null.gif" alt="ES" /></a><span>Espírito Santo<i></i></span></li>
+                <li id="cmg" data-estado="mg"><a id="mg" title="MG"><img src="/sebraena-templating/files/img/map/null.gif" alt="MG" /></a><span>Minas Gerais<i></i></span></li>
+                <li id="cgo" data-estado="go"><a id="go" title="GO"><img src="/sebraena-templating/files/img/map/null.gif" alt="GO" /></a><span>Goiás<i></i></span></li>
+                <li id="cdf" data-estado="df"><a id="df" title="DF"><img src="/sebraena-templating/files/img/map/null.gif" alt="DF" /></a><span>Distrito Federal<i></i></span></li>
+                <li id="cba" data-estado="ba"><a id="ba" title="BA"><img src="/sebraena-templating/files/img/map/null.gif" alt="BA" /></a><span>Bahia<i></i></span></li>
+                <li id="cmt" data-estado="mt"><a id="mt" title="MT"><img src="/sebraena-templating/files/img/map/null.gif" alt="MT" /></a><span>Mato Grosso<i></i></span></li>
+                <li id="cro" data-estado="ro"><a id="ro" title="RO"><img src="/sebraena-templating/files/img/map/null.gif" alt="RO" /></a><span>Rondônia<i></i></span></li>
+                <li id="cac" data-estado="ac"><a id="ac" title="AC"><img src="/sebraena-templating/files/img/map/null.gif" alt="AC" /></a><span>Acre<i></i></span></li>
+                <li id="cam" data-estado="am"><a id="am" title="AM"><img src="/sebraena-templating/files/img/map/null.gif" alt="AM" /></a><span>Amazonas<i></i></span></li>
+                <li id="crr" data-estado="rr"><a id="rr" title="RR"><img src="/sebraena-templating/files/img/map/null.gif" alt="RR" /></a><span>Roraima<i></i></span></li>
+                <li id="cpa" data-estado="pa"><a id="pa" title="PA"><img src="/sebraena-templating/files/img/map/null.gif" alt="PA" /></a><span>Pará<i></i></span></li>
+                <li id="cap" data-estado="ap"><a id="ap" title="AP"><img src="/sebraena-templating/files/img/map/null.gif" alt="AP" /></a><span>Amapá<i></i></span></li>
+                <li id="cma" data-estado="ma"><a id="ma" title="MA"><img src="/sebraena-templating/files/img/map/null.gif" alt="MA" /></a><span>Maranhão<i></i></span></li>
+                <li id="cto" data-estado="to"><a id="to" title="TO"><img src="/sebraena-templating/files/img/map/null.gif" alt="TO" /></a><span>Tocantins<i></i></span></li>
+                <li id="cse" data-estado="se"><a id="se" title="SE"><img src="/sebraena-templating/files/img/map/null.gif" alt="SE" /></a><span>Sergipe<i></i></span></li>
+                <li id="cal" data-estado="al"><a id="al" title="AL"><img src="/sebraena-templating/files/img/map/null.gif" alt="AL" /></a><span>Alagoas<i></i></span></li>
+                <li id="cpe" data-estado="pe"><a id="pe" title="PE"><img src="/sebraena-templating/files/img/map/null.gif" alt="PE" /></a><span>Pernambuco<i></i></span></li>
+                <li id="cpb" data-estado="pb"><a id="pb" title="PB"><img src="/sebraena-templating/files/img/map/null.gif" alt="PB" /></a><span>Paraíba<i></i></span></li>
+                <li id="crn" data-estado="rn"><a id="rn" title="RN"><img src="/sebraena-templating/files/img/map/null.gif" alt="RN" /></a><span>Rio Grande do Norte<i></i></span></li>
+                <li id="cce" data-estado="ce"><a id="ce" title="CE"><img src="/sebraena-templating/files/img/map/null.gif" alt="CE" /></a><span>Ceará<i></i></span></li>
+                <li id="cpi" data-estado="pi"><a id="pi" title="PI"><img src="/sebraena-templating/files/img/map/null.gif" alt="PI" /></a><span>Piauí<i></i></span></li>
+            </ul>
+            
+        </div>
+    </div>
+</aside>
+
+
+        
+        
+    
+
+    <div class="wrapper clearfix">
+    	<noscript>
+	        <div class="nav-header left">
+	        	Seu browser não suporta javascript, por favor verifique as configurações!
+	        </div>
+        </noscript>
+        <h1 class="logo"><a href="#" onclick="redirectHttp('sites/PortalSebrae')"><img src="/sebraena-templating/files/img/logo.png" alt="SEBRAE" title="Início"></a></h1>
+        <div class="nav-header left">
+            <ul>
+                <li class="temas-gestao">
+                    <a href="#this"><i class="ico ico-gestao-menu"></i> <strong>Temas <br>de Gestão</strong></a>
+                </li>
+                <li class="single-line bt-segmetnos-header">
+                    <a href="#this" class="clearfix" ><i class="ico ico-segmentos"></i> <strong>Segmentos</strong></a>
+                </li>
+                <li>
+                    <a href="#this" class="clearfix link-estados" ><i class="ico ico-estados-menu"></i> <strong>Sebrae <br>nos Estados</strong></a>
+                </li>
+                <li>
+                    <a href="#0" onclick="gerarAtendimentoFooter('fale', 'sites/PortalSebrae/Contato')" class="clearfix"><i class="ico ico-fale-com-sebrae-menu"></i> <strong>Fale com <br>o Sebrae</strong></a>
+                </li>
+                <li class="single-line">
+                    <a href="#this" onclick="gerarAtendimentoFooter('transparencia', 'http://www.transparencia.sebrae.com.br/')" class="clearfix"><i class="ico ico-icone-transparencia"></i> <strong>Transparência</strong></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-header right notlogged">
+            <ul class="nav-header-right">
+                <li>
+                    <a href="#" class="clearfix link-search"><i class="ico ico-search"></i></a>
+                </li>
+                <li class="right">
+                    <a href="#0" onclick="redirectHttps('sites/PortalSebrae/login')" class="clearfix bt-login link-login"><strong>Faça Login <br>ou Cadastre-se</strong></a>
+                </li>
+            </ul>
+        </div>
+
+        <section class="user-data logged">
+            <div class="log-name">
+                <p>Olá, <span class="nomeLogado"></span> </p>
+                <a href="#" id="mural">Ir para meu mural</a>
+				<input type="hidden" id="codAtendimento" />
+            </div>
+
+
+            <!-- <div class="user-picture">
+                <img src="../img/pic-user.jpg" width="22" height="24" alt="Imagem do usuário">
+            </div> -->
+
+            <div class="box-empresa-ativa left perfilPessoa">
+                <a href="" class="buttom-default clearfix" id="cadSuaEmpresa">
+                    <span class="left ico ico-exclamacao"></span>
+                    <span class="left">Cadastrar <br>sua Empresa</span>
+                </a>
+            </div>
+
+            <div class="box-empresa-ativa left perfilEmpresa">
+                <div class="empresa-ativa">Empresa:</div>
+                <div class="user-name new-user-name text-left">
+                    <p><span class="perfilEmpresa" id="nmEmpresa"></span><i class="ico ico-arrow-baixo"></i></p>
+                    <ul>
+                        <li><a href="" id="linkperfil">Meu Perfil</a></li>
+                        <li>
+                            <a href="" id="perfil">
+                                Ver como: <br /><span class="nomeLogado"></span>
+                            </a>
+                        </li>
+                        <li><a href="" class="perfilPessoa" id="falePF">Fale agora com um especialista</a></li>
+                        <li><a href="" class="perfilEmpresa" id="falePJ">Fale agora com um especialista</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#" onclick="javascript: sair();" class="logoff space-top-10">Sair</a>
+        </section>
+
+        <!--login-->
+        <!--<div class="login">
+            <div class="form">
+                <div class="msg-login" id="msg-login">
+                </div>
+                <div class="form-item">
+                    <div id="conteudo-cpf">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" name="cpf" id="cpf" value="" placeholder="ex: 000.000.000-00" maxlength="14" tabindex="1"/>
+                        <input type="hidden" id="check-cpf" value="ativado">
+                    </div>
+                    <div id="conteudo-passaporte">
+                        <label for="passaporte">Passaporte:</label>
+                        <input type="text" name="passaporteLog" id="passaporteLog" value="" placeholder="" maxlength="20"/>
+                    </div>
+                    <span class="pullright" id="link-login-estrang">
+                        <a href="#" class="link-estrangeiro" onclick="javascript: trocaDoc();" >Sou estrangeiro</a>
+                    </span>
+                </div>
+                <div class="form-item">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="password" id="password" value="" placeholder="••••••••" tabindex="2" onkeypress="if(event.keyCode==13){checkDocumento();}"/>
+                    <a href="#" onclick="javascript: checkDocumentoEsqueciSenha();" title="Esqueci minha senha">
+                        Esqueci minha senha
+                        <span><img src="/appportal/images/ajax-loader.gif" alt="" width="20px" style="display:none; margin-left: 10px" id="loaderEsqueciSenha"/></span>
+                    </a>
+                </div>
+                <div class="form-item clearfix">
+                    <a href="/sites/PortalSebrae/Cadastro" class="link-register">Cadastrar</a>
+                    <input type="button" name="Entrar" value="Entrar" onclick="checkDocumento();" tabindex="3" accesskey="enter" id="entrar"/>
+                </div>
+            </div>
+        </div>-->
+        <!--end login-->
+
+        <!-- busca -->
+        <div class="busca-header">
+            <section class="page-search clearfix">
+
+                <input type="search" class="search search-val" />
+                <input type="button" value="pesquisar" />
+
+                <div class="page-title-container">
+                    <h2 class="page-title" title="Busca no site">Digite aqui o que você procura</h2>
+                </div>
+
+            </section>
+        </div>
+        <!-- end busca -->
+    </div>    
+
+
+    
+    
+    
+    
+    
+    
+                                  
+
+<!-- integração com o sapien-->
+<script type="text/javascript">
+
+	function getCookie(cname) {
+	    var name = cname + "=";
+	    var decodedCookie = decodeURIComponent(document.cookie);
+	    var ca = decodedCookie.split(';');
+	    for(var i = 0; i <ca.length; i++) {
+	        var c = ca[i];
+	        while (c.charAt(0) == ' ') {
+	            c = c.substring(1);
+	        }
+	        if (c.indexOf(name) == 0) {
+	            return c.substring(name.length, c.length);
+	        }
+	    }
+	    return "";
+	}
+	
+	var sapienUfs = "ac,am,ap,ba,ce,df,ms,pb,ro,sp";
+	var user = getCookie("user");
+	var sapienEnv = "prod";
+	var exibirSapien= false;
+	var sapienUsuario = {};
+	var loc = window.location.pathname.toLowerCase();
+	
+
+	if (user != null && user != ""){
+		if(loc.indexOf('/ufs') == -1){
+			exibirSapien = true;
+		}else if(sapienUfs.length > 1){
+			sapienUfs = sapienUfs.toLowerCase();
+			var sapienArray = sapienUfs.split(",");
+			
+			for(var x = 0; x < sapienArray.length; x++){
+				var ufStr = sapienArray[x];
+				ufStr = "/ufs/"+ufStr;
+				if(loc.indexOf(ufStr)>=0){
+					exibirSapien = true;
+					break;
+				}
+			}
+		}
+	}
+           
+</script>
+<script type='text/javascript' src='https://meusapiens.com.br/integracao/js/sapien.js'></script>
+<div class='sapienContainer' id='sapienContainer'></div>
+
+<!-- fim da integração com o sapien-->                   
+</header>
+<!-- /main header-->
+
+   
+                    <main id="main-content-front">
+                        
+
+
+
+
+
+
+    
+    
+
+    
+
+
+    
+
+   
+
+        
+    
+        
+	
+	  
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+                
+
+	
+
+
+                
+<script type="text/javascript">
+    var interval;
+    $(document).ready(function() {
+        setVisualizacoesDetalhe();
+        $('.player .carousel-content a[data-type="video"]').on('click', function() {
+            $('.player stage .codTemaVideo').val($(this).siblings('.codTemaVideoLista').val());
+        });
+    });
+    
+    function setVisualizacoesDetalhe() {
+        var url = $('#urlHttps').val();
+        $.ajax({
+            url: url + 'appportal/visualizacao.do',
+            dataType: 'jsonp',
+            crossDomain: true,
+            jsonp: false,
+            jsonpCallback: 'jsonSetVisualizacoes',
+            data: {
+                metodo: 'setVisualizacoes',
+                guid: $('#codigoConteudo').val()
+            },
+            success: function(data) {
+                console.log("success setVisualizacao");
+                getVisualizacoesDetalhe();
+                //getInformacao();
+            },
+            error: function() {
+                console.log('error setVisualizacoes');
+            }
+        });
+    }
+    
+    function getVisualizacoesDetalhe() {
+        var url = $('#urlHttps').val();
+        $.ajax({
+            url: url + 'appportal/visualizacao.do',
+            dataType: 'jsonp',
+            crossDomain: true,
+            jsonp: false,
+            jsonpCallback: 'jsonGetVisualizacoes',
+            async: false,
+            data: {
+                metodo: 'getVisualizacoes',
+                guid: $('#codigoConteudo').val()
+            },
+            success: function(data) {
+                $('.link-views strong').text(data);
+            },
+            error: function() {
+                $('.link-views strong').text('0');
+                console.log('error getVisualizacoes');
+                clearInterval(interval);
+                return false;
+            }
+        });
+        return true;
+    }
+    
+    function getInformacao(){
+        $.ajax({
+            url: '/appportal/atendimento-conteudo.do',
+            
+            async: false,
+            data: {
+                metodo: 'buscaInformacao',
+                guid:  $('#codigoConteudo').val()
+            },
+            success: function(data){
+                console.log("retorno " + data)
+                //console.log('gerou atendimento')
+            }
+        });
+    }
+    function removeCaracteresEspeciais(string){
+    	if(string !== null){
+    		var novaString = "";
+    		for(i = 1; i <= string.split("").length; i++){
+				if(!string.substring(i-1,i).replaceAll("[\\p{ASCII}]", "") == "" &&
+				   !string.substring(i-1,i).replaceAll("[^a-z-^A-Z-^0-9 ]", "") == ""){
+					novaString += string.substring(i-1,i);
+				}
+			}
+			return novaString;
+    	}
+    }
+    function setAtendimento(){
+        var url = $('#urlHttps').val();
+        $.ajax({
+            url: url + 'appportal/atendimento-conteudo.do',
+            dataType: 'jsonp',
+            crossDomain: true,
+            jsonp: false,
+            jsonpCallback: 'jsonRetornoAtendimento',
+            async: false,
+            data: {
+                metodo: 'geraAtendimento',
+                guid:  $('#codigoConteudo').val(),
+                url: window.location.href
+            },
+            success: function(data){
+                console.log("retorno " + data)
+                //console.log('gerou atendimento')
+            }
+        });    
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+	.contextualizacao {
+		display: none;
+	}
+</style>
+
+<link rel="stylesheet" href="/sebraena-templating/files/css/dip.css"/>
+<link rel="stylesheet" href="/sebraena-templating/files/css/estadual.css"/>
+
+
+
+
+
+
+
+
+<div class="hero hero-mercado min-hero noimg contextualizacao contextTema6">
+	<div class="wrapper">
+		<div class="content-hero">
+			<h2><img src="/sebraena-templating/files/img/ico/new_ico_mercado-busca.png" alt="">Mercado e Vendas</h2>
+			<p>Marketing e dicas para os negócios se destacarem no mercado com análises de tendências, posicionamento, preço e vendas. Veja notícias, cursos presenciais e a distância e os eventos do seu estado, além de orientações para ajudar na gestão da sua empresa.</p>
+		</div>
+		
+		
+		
+
+
+
+				
+<style type="text/css">
+	p {
+	    margin: 0 0 10px;
+	}
+	.search-field .ex-search._advanced span a {
+		color: black;
+	}
+	.hero .search-field .ex-search._advanced span a {
+		color: white;
+	}
+	.hero .search-field.space-bottom-60 {
+		margin-bottom: 0px !important;
+	}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(document).on('click', '.buscaAvancada', function() {
+			window.location.href = '/sites/PortalSebrae/BuscaAvancada?q=' + $(this).closest('.search-field').find('.search').val();
+		});
+	})
+</script>
+
+<section  class="search-field page-search-full space-bottom-60 clearfix ">
+	<form action="#this" method="get" class="page-search">
+		<div class="icon-search">
+			<input type="submit" class="ico ico-icon-fiels-search"/>
+		</div>
+		<input type="search search-val " placeholder="Digite aqui o que você procura" value="" class="search full" name="q"/>
+		<input type="submit" value="Buscar"/>
+	</form>
+
+	<div class="ex-search _advanced">
+       	<p>
+			Recomendações de Busca: 
+
+			<a href="#this" onclick="buscaTermo('Nova Lei Trabalhista')">Nova Lei Trabalhista,</a>
+
+			<a href="#this" onclick="buscaTermo('MEI')">MEI,</a>
+
+			<a href="#this" onclick="buscaTermo('Cursos online')">Cursos online,</a>
+
+			<a href="#this" onclick="buscaTermo('Simples 2018')">Simples 2018</a>
+
+		</p>
+		<span>
+            <a href="#this" class="buscaAvancada">Busca avançada</a>
+        </span>
+	</div>
+
+</section>
+	</div>
+</div>
+
+
+
+
+
+<input type='hidden' value=' (+vcmSys-channel : [* TO *]) AND (+vcmSys-type:"2238ed1f7e97c510VgnVCM10000068f71eac____") AND (+int_vcmUsr-temaCod : 6)' id='queryTema'/>
+
+<input type="hidden" id="linkInicioMenuTema" value="/sites/PortalSebrae/tipoconteudo/mercado"/>
+<input type="hidden" id="linkConteudoMenuTema" value="/sites/PortalSebrae/tipoconteudo/mercado/conteudos"/>
+<input type="hidden" id="linkCursosMenuTema" value="/sites/PortalSebrae/tipoconteudo/mercado/cursos"/>
+<nav class="hero-nav box-shadow silver space-bottom-60 contextualizacao contextTema6">
+    <div class="wrapper">
+        <ul>
+            <li class="menuInicio"><a href="/sites/PortalSebrae/tipoconteudo/mercado" title="Início">Início</a></li>
+            <li class="menuConteudo"><a href="/sites/PortalSebrae/tipoconteudo/mercado/conteudos" title="Conteúdo">Conteúdo</a></li>
+            <li class="menuCurso"><a href="/sites/PortalSebrae/tipoconteudo/mercado/cursos" title="Cursos e Eventos">Cursos e Eventos</a></li>
+            
+           
+		</ul>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+	.hero.noimg.segmento {
+    	min-height: 0px;
+	}
+</style>
+
+<div class="hero img-slim-300 noimg segmento contextualizacao contextSegmento9">
+    <div class="bgbanner-full" style="display:none">
+		<img src="null">
+	</div>
+    <div class="wrapper">
+        <div class="content-hero">
+            <h2>Mercado Digital</h2>
+			<p>Encontre aqui informações para abrir sua empresa e melhorar seu negócio nesse segmento. Veja notícias, cursos presenciais e a distância e os eventos do seu estado, além de orientações para ajudar na gestão da sua empresa.</p>
+        </div>
+        
+		
+		
+
+
+
+				
+<style type="text/css">
+	p {
+	    margin: 0 0 10px;
+	}
+	.search-field .ex-search._advanced span a {
+		color: black;
+	}
+	.hero .search-field .ex-search._advanced span a {
+		color: white;
+	}
+	.hero .search-field.space-bottom-60 {
+		margin-bottom: 0px !important;
+	}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(document).on('click', '.buscaAvancada', function() {
+			window.location.href = '/sites/PortalSebrae/BuscaAvancada?q=' + $(this).closest('.search-field').find('.search').val();
+		});
+	})
+</script>
+
+<section  class="search-field page-search-full space-bottom-60 clearfix ">
+	<form action="#this" method="get" class="page-search">
+		<div class="icon-search">
+			<input type="submit" class="ico ico-icon-fiels-search"/>
+		</div>
+		<input type="search search-val " placeholder="Digite aqui o que você procura" value="" class="search full" name="q"/>
+		<input type="submit" value="Buscar"/>
+	</form>
+
+	<div class="ex-search _advanced">
+       	<p>
+			Recomendações de Busca: 
+
+			<a href="#this" onclick="buscaTermo('Nova Lei Trabalhista')">Nova Lei Trabalhista,</a>
+
+			<a href="#this" onclick="buscaTermo('MEI')">MEI,</a>
+
+			<a href="#this" onclick="buscaTermo('Cursos online')">Cursos online,</a>
+
+			<a href="#this" onclick="buscaTermo('Simples 2018')">Simples 2018</a>
+
+		</p>
+		<span>
+            <a href="#this" class="buscaAvancada">Busca avançada</a>
+        </span>
+	</div>
+
+</section>
+    </div>
+</div>
+
+
+
+
+
+<input type='hidden' value=' (+vcmSys-channel : [* TO *]) AND (+vcmSys-type:"1c0a03cdfd531510VgnVCM10000068f71eac____") AND (+int_vcmUsr-PS-CTD-SEGMENTO-SEGMENTO : 9)' id='querySegmento'/>
+<input type="hidden" id="linkInicioMenuSegmento9" value="/sites/PortalSebrae/segmentos/mercado_digital"/>
+<input type="hidden" id="linkConteudoMenuSegmento9" value="/sites/PortalSebrae/segmentos/mercado_digital/conteudos"/>
+<input type="hidden" id="linkCursosMenuSegmento9" value="/sites/PortalSebrae/segmentos/mercado_digital/cursos"/>
+<nav class="hero-nav box-shadow silver space-bottom-60 contextualizacao contextSegmento9">
+    <div class="wrapper">
+        <ul>
+            <li class="menuInicio"><a href="/sites/PortalSebrae/segmentos/mercado_digital" title="Início">Início</a></li>
+			<li class="menuConteudo"><a href="/sites/PortalSebrae/segmentos/mercado_digital/conteudos" title="Conteúdo">Conteúdo</a></li>
+    		<li class="menuCurso"><a href="/sites/PortalSebrae/segmentos/mercado_digital/cursos" title="Cursos e Eventos">Cursos e Eventos</a></li>
+
+    		<li class="menuComoSebraeAtua">
+    			<a href="/sites/PortalSebrae/segmentos/mercado_digital/como-o-sebrae-atua-no-segmento-do-mercado-digital,2b780edf67bef510VgnVCM1000004c00210aRCRD" 
+    				title="Como o Sebrae atua">Como o Sebrae atua</a>
+    		</li>
+
+        </ul>
+    </div>
+</nav>
+
+
+<div class="wrapper space-top-50 split contextualizacao contextDefault">
+	
+	
+
+
+
+				
+<style type="text/css">
+	p {
+	    margin: 0 0 10px;
+	}
+	.search-field .ex-search._advanced span a {
+		color: black;
+	}
+	.hero .search-field .ex-search._advanced span a {
+		color: white;
+	}
+	.hero .search-field.space-bottom-60 {
+		margin-bottom: 0px !important;
+	}
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(document).on('click', '.buscaAvancada', function() {
+			window.location.href = '/sites/PortalSebrae/BuscaAvancada?q=' + $(this).closest('.search-field').find('.search').val();
+		});
+	})
+</script>
+
+<section  class="search-field page-search-full space-bottom-60 clearfix ">
+	<form action="#this" method="get" class="page-search">
+		<div class="icon-search">
+			<input type="submit" class="ico ico-icon-fiels-search"/>
+		</div>
+		<input type="search search-val " placeholder="Digite aqui o que você procura" value="" class="search full" name="q"/>
+		<input type="submit" value="Buscar"/>
+	</form>
+
+	<div class="ex-search _advanced">
+       	<p>
+			Recomendações de Busca: 
+
+			<a href="#this" onclick="buscaTermo('Nova Lei Trabalhista')">Nova Lei Trabalhista,</a>
+
+			<a href="#this" onclick="buscaTermo('MEI')">MEI,</a>
+
+			<a href="#this" onclick="buscaTermo('Cursos online')">Cursos online,</a>
+
+			<a href="#this" onclick="buscaTermo('Simples 2018')">Simples 2018</a>
+
+		</p>
+		<span>
+            <a href="#this" class="buscaAvancada">Busca avançada</a>
+        </span>
+	</div>
+
+</section>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		setContextualizacao();
+		campoBusca();
+	});
+	
+	var origemContext = null;
+	var codTemaContext = null;
+	var codUfContext = null;		
+	var codSegmentoContext = null;
+	var cursosContext = null;
+	
+	function setContextualizacao() {
+		origemContext = findGetParameter('origem');
+		codTemaContext = findGetParameter('codTema');
+		codUfContext = findGetParameter('codUf');		
+		codSegmentoContext = findGetParameter('codSegmento');
+		cursosContext = findGetParameter('cursos');
+		var contextualizado = false;
+		var linkConteudo = '#';
+		var linkCurso = '#';
+		if (!isEmpty(origemContext)) {
+			if (origemContext == 'tema') {
+				if (!isEmpty(codTemaContext)) {
+					if ($('.contextTema' + codTemaContext).length > 0) {
+						$('.contextTema' + codTemaContext).show();
+						contextualizado = true;
+						linkConteudo = $('#linkConteudoMenuTema').val();
+						linkCursos = $('#linkCursosMenuTema').val();
+						$('link[href*="estadual\\.css"]').remove();
+					}
+				}
+			}
+			if (origemContext == 'estadual') {
+				if (!isEmpty(codUfContext)) {
+					if ($('.contextUf' + codUfContext).length > 0) {
+						$('.contextUf' + codUfContext).show();
+						contextualizado = true;
+						linkConteudo = $('#linkConteudoMenuUf').val();
+						linkCursos = $('#linkCursosMenuUf').val();
+						$('link[href*="dip\\.css"]').remove();
+					}
+				}
+			}
+			if (origemContext == 'segmento') {
+				if (!isEmpty(codSegmentoContext)) {
+					if ($('.contextSegmento' + codSegmentoContext).length > 0) {
+						contextualizado = true;
+						linkConteudo = $('#linkConteudoMenuSegmento' + codSegmentoContext).val();
+						linkCursos = $('#linkCursosMenuSegmento' + codSegmentoContext).val();
+						$('link[href*="estadual\\.css"]').remove();
+						$.ajax({
+							url: '/sebraena-templating/controller/segmento/get/' + codSegmentoContext,
+							success: function(data) {
+								if (!isEmpty(data.imagem)) {
+									$('.contextSegmento' + codSegmentoContext).removeClass('noimg');
+									$('.contextSegmento' + codSegmentoContext + ' .bgbanner-full img').attr('src', data.imagem);
+									$('.contextSegmento' + codSegmentoContext + ' .bgbanner-full').show();
+								}
+								$('.contextSegmento' + codSegmentoContext).show();
+							},
+							error: function() {
+								
+							}
+						});						
+					}
+				}
+			}
+			if (contextualizado) {
+				if (cursosContext == 'true') {
+					$('.menuCurso').addClass('active');
+					$('.back-page-box-shadow a').html('Voltar para <br>Cursos e Eventos');
+					$('.back-page-box-shadow a').attr('href', linkCursos);
+				} else {
+					$('.menuConteudo').addClass('active');
+					$('.back-page-box-shadow a').html('Voltar para Conteúdo');
+					$('.back-page-box-shadow a').attr('href', linkConteudo);
+				}
+				return;
+			}
+		}
+		$('link[href*="estadual\\.css"]').remove();
+		$('.contextDefault').show();
+		$('.back-page-box-shadow a').html('Voltar');
+		$('.back-page-box-shadow a').attr('href', 'javascript:history.back();');
+	}
+	
+	function campoBusca() {
+	    $('.search-field .ico-icon-fiels-search').mouseover(listenerBusca);
+	    $('.search-field .search').next().mouseover(listenerBusca);
+	    $('.search-field .search').focus(listenerBusca);
+		$(document).on('mouseover', '.buscaAvancada', listenerBuscaAvancada);
+		// habilitar a busca contextualizada nas recomendacoes e autocomplete
+		//$(document).on('mouseover', '.ex-search', listenerBusca);
+	}
+	
+	function listenerBusca() {
+	    $('.search-field .search').unbind('keypress');
+	    $('.search-field .search').next().unbind('click');
+	    $('.search-field .ico-icon-fiels-search').unbind('click');
+	 	// habilitar a busca contextualizada nas recomendacoes e autocomplete
+	    //$('.ex-search a').unbind('click');
+	    //$('.ex-search a').attr('onclick', null);
+	    $('.page-search-full .page-search .search').keypress(function(e){
+	           var key = e.keyCode ? e.keyCode : e.which;
+	           if (key == 13) {
+	                $(this).next().click();
+	                e.stopPropagation();
+	           }
+	    });
+	    $('.page-search-full .page-search .ico-icon-fiels-search').click(function(e) {
+	          e.preventDefault();
+	          executaBuscaInterna();
+	    });	   
+	    $('.page-search-full .page-search .search').next().click(function(e) {
+	         e.preventDefault();
+	         executaBuscaInterna();
+	    });
+	 	// habilitar a busca contextualizada nas recomendacoes e autocomplete
+	    /*$('.search').catcomplete('option', 'select', function(event, ui) {
+			sendBusca('/sites/PortalSebrae/Busca?q=' + ui.item.label,
+					origemContext, codTemaContext, codUfContext, codSegmentoContext, cursosContext);
+	    	buscaEfetuada = true;
+	    });
+	    $('.ex-search').on('click', 'a', function() {
+			sendBusca('/sites/PortalSebrae/Busca?q=' + $(this).text().replace(',', ''), 
+					origemContext, codTemaContext, codUfContext, codSegmentoContext, cursosContext);
+	    	buscaEfetuada = true;
+	    });*/
+	}
+
+	function listenerBuscaAvancada() {
+		$(document).off('click', '.buscaAvancada');
+		$(document).on('click', '.buscaAvancada', function(event) {
+			event.preventDefault();
+			sendBusca('/sites/PortalSebrae/BuscaAvancada?q=' + $(this).closest('.search-field').find('.search').val() , 
+					origemContext, codTemaContext, codUfContext, codSegmentoContext, cursosContext);
+	    	buscaEfetuada = true;
+		});
+	}
+
+	function executaBuscaInterna() {
+		$('.page-search-full .page-search .search:visible').each(function() {
+			sendBusca('/sites/PortalSebrae/Busca?q=' + encodeURIComponent($(this).val().trim()), 
+					origemContext, codTemaContext, codUfContext, codSegmentoContext, cursosContext);
+	    	buscaEfetuada = true;
+		});
+	}
+	
+	function sendBusca(url, origem, filtroTema, filtroUF, filtroSegmento, cursos) {
+	    if (!buscaEfetuada) {
+	    	if (!isEmpty(origem)) {
+	    		url += '&origem=' + origem;
+	    		if (origem == 'tema') {
+	    			url += '&filtroTema=' + filtroTema;
+	    		}
+	    		if (origem == 'segmento') {
+	    			url += '&filtroSegmento=' + filtroSegmento;
+	    		}
+	    		if (origem == 'estadual') {
+	    			url += '&filtroUF=' + filtroUF;
+	    		}
+	    	}
+	    	if (!isEmpty(cursos)) {
+	    		url += '&cursos=' + cursos;
+	    	}
+	    	window.location.href = url;
+	    }
+	}
+</script>
+
+                
+<b style="display:none;">Mon Aug 14 09:40:07 BRT 2017</b>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		gerarAtendimento('0171ce6326c0a410VgnVCM1000003b74010a____');
+	});
+</script>
+<input type="hidden" id="codigoConteudo" value="0171ce6326c0a410VgnVCM1000003b74010a____"/>
+<input type="hidden" id="tagsConteudo" value="venda online, internet, loja virtual, site"/>
+<input type="hidden" id="codTema" value="6"/>
+<input type="hidden" id="retranca" value="LOJA ONLINE"/>
+<input type="hidden" id="codUf" value="28"/>
+<input type="hidden" id="GUID" value="2171ce6326c0a410VgnVCM1000003b74010aRCRD"/>
+
+<input type="hidden" class="title-ga" value="Dez dicas de sucesso para vender na internet"/>
+<input type="hidden" class="description-ga" value="Vender pela internet requer mais atenção. Veja dez dicas para ajudar o empreendedor a montar uma loja virtual bem-sucedida."/>
+<input type="hidden" id="infoGraf" value="" />
+
+
+
+
+</div>
+
+<!-- Inicio alterações HD 98957 05/01/17 -->
+
+
+
+<div class="wrapper tema-detalhe split">
+
+	<aside class="sidebar" data-limit-scroll=".conteudo-relacionado">
+		<div class="space-top-20 space-bottom-20 back-page-box-shadow box-shadow">
+			<a href="1.1.0_conteudo_tema.php">Voltar para Conteúdo</a>
+		</div>
+		<div class="box-mercado cat-pessoas breadcrumb-tema-cursos filter-audio">
+			<div class="box-tema clearfix border-color-tema">
+				<div class="icon-categoria">
+					<div class="icon"></div>
+					<span class="tema">Mercado e Vendas</span>
+					<span>Texto</span>
+				</div>
+			</div>
+			
+			
+			<div class="box-tema clearfix border-color-tema">
+				<div class="icon-categoria">
+					<div class="list-tag">
+					
+						
+        
+                         
+							<!--  Inicio da lista de segmentos -->
+							<a href="/sites/PortalSebrae/segmentos/mercado_digital" class="tags">Mercado Digital</a> 
+                        
+                         
+						
+					</div>
+				</div>
+			</div>
+			
+
+
+
+			<div class="tags">
+				<span><strong>Tags: </strong></span>
+				
+       			
+                	<a href="/sites/PortalSebrae/Busca?q=venda online" title="Ver conteúdo relacionado ao Tema: venda online" class="underline">venda online</a>, 
+				
+                	<a href="/sites/PortalSebrae/Busca?q= internet" title="Ver conteúdo relacionado ao Tema:  internet" class="underline"> internet</a>, 
+				
+                	<a href="/sites/PortalSebrae/Busca?q= loja virtual" title="Ver conteúdo relacionado ao Tema:  loja virtual" class="underline"> loja virtual</a>, 
+				
+                	<a href="/sites/PortalSebrae/Busca?q= site" title="Ver conteúdo relacionado ao Tema:  site" class="underline"> site</a> 
+				
+				
+			</div>
+			<hr style="display:flex;">
+
+
+			
+			
+   				<span><strong>Fonte:</strong> Sebrae Nacional - 14/08/2017</span>
+ 			
+			
+            <!-- Inicio menu Complemento Estadual -->
+            
+            
+<script type="text/javascript">
+
+function setAtendimento(codigo){
+	var url = $('#urlHttps').val();
+    console.log('teste de url ' + url); 
+    $.ajax({
+        url: url + 'appportal/atendimento-conteudo.do',
+        dataType: 'jsonp',
+        crossDomain: true,
+        jsonp: false,
+        jsonpCallback: 'jsonRetorno',
+        async: false,
+        data: {
+            metodo: 'geraAtendimento',
+            guid:  codigo,
+            url: window.location.href
+        },
+        success: function(data){
+            console.log("retorno " + data);
+            //console.log('gerou atendimento')
+        }
+    });    
+}
+</script>
+                    <!-- Inicio Complemento Estadual -->
+                    
+                    
+                    
+                     <!-- Fim Menu Complemento Estadual -->
+            
+            <!-- Fim Menu Complemento Estadual -->
+			
+		</div>
+	</aside>
+    
+    <article class="main-content new-article space-top-20 space-bottom-50">
+    
+    	<div class="title-page">
+			<h4>LOJA ONLINE</h4>
+			<h3>Dez dicas de sucesso para vender na internet</h3>
+		</div><!-- end title page -->
+
+		<section>
+			<div class="space-bottom-30">
+				
+				<!-- Imagem banner -->
+				
+         		<!--  fim Imagem banner -->
+				
+			</div>
+			<p><i>Vender pela internet requer mais atenção. Veja dez dicas para ajudar o empreendedor a montar uma loja virtual bem-sucedida.</i></p>
+			
+			
+		</section>
+
+		
+
+		<section  name="">
+		
+			
+				
+			
+			
+			
+			<p>O com&eacute;rcio eletr&ocirc;nico &eacute; um espa&ccedil;o virtual no qual produtos e servi&ccedil;os s&atilde;o ofertados aos clientes por meio da internet. Trata-se de um <strong>canal online</strong> em que consumidores podem fazer e acompanhar compras, pedir encomendas, realizar transa&ccedil;&otilde;es financeiras, entre outras coisas, diretamente de qualquer lugar.</p>
+<p>Para vender, n&atilde;o importa qual seja o neg&oacute;cio, &eacute; preciso satisfazer o cliente. Na internet, a l&oacute;gica &eacute; a mesma. No entanto, devido a particularidades do universo online, <strong>&eacute; preciso estar atento a fatores-chave de sucesso</strong>. Caso contr&aacute;rio, por maior que seja o esfor&ccedil;o, as vendas na web podem n&atilde;o decolar.</p>
+<p>Veja, a seguir, <strong>10 dicas</strong>&nbsp;para o sucesso no mercado digital.</p>
+<h4>Estar preparado para entrar na internet</h4>
+<p>Antes de dar o primeiro passo, &eacute; preciso entender o que est&aacute; por tr&aacute;s de um e-commerce: quais investimentos s&atilde;o necess&aacute;rios; quem s&atilde;o os parceiros, fornecedores, clientes e concorrentes; como ser&aacute; a estrat&eacute;gia de marketing.</p>
+<p>Para isso, &eacute; necess&aacute;rio elaborar um Plano de Neg&oacute;cios, que reduzir&aacute; as chances de fracasso e testar&aacute; a viabilidade do projeto. Tenha em conta tamb&eacute;m que &eacute; poss&iacute;vel concorrer em nichos, nos quais o pequeno neg&oacute;cio poder&aacute; ser mais eficiente, ou no mercado de massa, em que a competi&ccedil;&atilde;o ser&aacute; basicamente por pre&ccedil;o.</p>
+<ul>
+<li><a target="_blank" href="https://www.youtube.com/watch?v=5yQHjLYzI2g">Assista ao Papo de Neg&oacute;cio e saiba mais</a>.</li>
+</ul>
+<h4>Ter um site 100% funcional e de &oacute;tima navegabilidade</h4>
+<p>Tudo que estiver dispon&iacute;vel no site deve funcionar da melhor forma poss&iacute;vel. O cliente precisa ter facilidades ao entrar na loja (usabilidade). Caso contr&aacute;rio, ele desiste em um clique e dificilmente voltar&aacute;.</p>
+<p>Os problemas mais comuns s&atilde;o: site lento, imagens muito pequenas, grande quantidade de an&uacute;ncios, pouco contraste entre fundo da p&aacute;gina e cor da letra inadequada.</p>
+<h4>Ser verdadeiro e legal</h4>
+<p>Deve-se evitar prometer o que n&atilde;o se pode cumprir. Tamb&eacute;m &eacute; bom n&atilde;o deixar o cliente confuso, por exemplo, sobre cobran&ccedil;a de frete ou prazo de entrega.</p>
+<p>Isso dar&aacute; confiabilidade ao site e poder&aacute; ser fator decisivo de compra. J&aacute; em termos legais, o empreendimentos deve alinhar-se &agrave;s regras obrigat&oacute;rias para funcionamento de lojas virtuais (nome, CNPJ, atendimento ao cliente etc.).</p>
+<ul>
+<li><a target="_blank" href="http://ecommercenews.com.br/noticias/legislacao-noticias/novas-regras-para-o-e-commerce-entram-em-vigor-a-partir-de-hoje">Confira as novas regras para o <em>e-commerce</em></a>.</li>
+</ul>
+<h4>Ter obsess&atilde;o pela log&iacute;stica</h4>
+<p>N&atilde;o existe contato f&iacute;sico na compra pela web, e isso gera uma grande expectativa no cliente para receber a mercadoria. O tempo de espera deve ser igual ou menor que o prazo acordado no site. E a mercadoria tem que chegar impecavelmente embalada. Sempre!</p>
+<h4>Oferecer multicanais ao cliente</h4>
+<p>&Eacute; necess&aacute;rio estar presente nas redes sociais, ter um chat ou um e-mail espec&iacute;fico para o atendimento ao cliente, colocar o n&uacute;mero de telefone bem vis&iacute;vel no site. Se o empreendimento n&atilde;o tiver um site ou o empreendedor ainda n&atilde;o sabe como cri&aacute;-lo, &eacute; bom avaliar possibilidades de inser&ccedil;&atilde;o em Market Places, isto &eacute;, em locais virtuais para negocia&ccedil;&otilde;es de com&eacute;rcio eletr&ocirc;nico.</p>
+<p>Avaliar a possibilidade de criar um blog, sobretudo se estiver em um mercado de nicho em que conte&uacute;dos sejam influenciadores de compra, &eacute; uma boa a&ccedil;&atilde;o. Al&eacute;m de reunir o p&uacute;blico-alvo, o blog serve para divulgar ofertas da loja virtual, o que favorece aos mecanismos de busca atribuir relev&acirc;ncia &agrave; loja.</p>
+<p>&Eacute; muito importante facilitar ao m&aacute;ximo o acesso do cliente ao neg&oacute;cio, pois o comprador pode sentir a necessidade de contatar a loja antes, durante e depois da compra. E todos os canais precisam efetivamente funcionar. Se algum n&atilde;o funciona, &eacute; melhor n&atilde;o ter.</p>
+<h4>Montar uma equipe preparada e bem treinada</h4>
+<p>Para cuidar do conte&uacute;do, do design, de quest&otilde;es relacionadas &agrave; tecnologia da informa&ccedil;&atilde;o e ao marketing. Todos esses profissionais devem conversar, interagir, se integrar, para que se alcance &ecirc;xito no trabalho que cada um executa.</p>
+<h4>Anunciar</h4>
+<p>Uma boa maneira &eacute; come&ccedil;ar fazendo testes com pequenos investimentos e medindo os resultados (verificar se houve aumento de cliques, de visitas e de vendas).</p>
+<p>H&aacute; muitas maneiras de fazer an&uacute;ncios na internet: por links patrocinados (destaques do empreendimento em mecanismos de busca como Google e Yahoo) ou pelas m&iacute;dias sociais (canais nos quais se pode ter uma segmenta&ccedil;&atilde;o de p&uacute;blico-alvo mais refinada &ndash; tamb&eacute;m se paga por clique).</p>
+<p>Em todos esses formatos de an&uacute;ncio, o mais comum &eacute; pagar por clique.</p>
+<h4>Investir em SEO (<em>Search Engine Optimization</em>)</h4>
+<p>A tradu&ccedil;&atilde;o do termo, Otimiza&ccedil;&atilde;o para Mecanismos de Buscas, j&aacute; diz muito. O trabalho de SEO &eacute; otimizar um site e direcionar os motores de busca para dar destaque ao conte&uacute;do.</p>
+<p>Hoje, os sites de busca s&atilde;o a principal fonte de procura de informa&ccedil;&otilde;es pelos que navegam na web. Portanto, ter um site bem posicionado nesses buscadores &eacute; fundamental para ser visto.</p>
+<p>O trabalho de SEO &eacute; lento e deve ser ininterrupto e detalhado para gerar resultados relevantes. Quando bem-feito, gera maior visibilidade para o neg&oacute;cio e diminui a necessidade de investimentos em an&uacute;ncios.</p>
+<h4>Ter um site seguro</h4>
+<p>H&aacute; diversas empresas que oferecem servi&ccedil;o de prote&ccedil;&atilde;o ao site, an&aacute;lise de vulnerabilidades e bloqueio de ataques para garantir opera&ccedil;&otilde;es seguras. &Eacute; preciso avaliar a solu&ccedil;&atilde;o ideal para o porte do neg&oacute;cio, mas n&atilde;o se pode deixar de garantir seguran&ccedil;a ao cliente no momento da compra, pois este &eacute; um dos fatores mais determinantes de compra no mercado digital.</p>
+<h4>Investir na gest&atilde;o do neg&oacute;cio</h4>
+<p>Depois que o cliente clica no bot&atilde;o comprar, no site de uma loja virtual, se inicia uma complexa e delicada opera&ccedil;&atilde;o, invis&iacute;vel aos olhos dos clientes e que inclui log&iacute;stica, gerenciamento de pedidos, estoque, relat&oacute;rios, faturamento, entre outros.</p>
+<p>O <em>Back Office</em> (&ldquo;a parte de tr&aacute;s do balc&atilde;o&rdquo;) representa a estrutura f&iacute;sica completa nos bastidores do website de uma loja virtual e &eacute; fundamental gerenci&aacute;-lo para garantir que o produto adquirido pelo cliente seja entregue de acordo com as especifica&ccedil;&otilde;es e o prazo combinado.</p>
+<ul>
+<li><a target="_blank" href="/sites/PortalSebrae/bis/gestao-do-back-office-no-e-commerce,fe889cb730905410VgnVCM1000003b74010aRCRD">Saiba mais sobre <em>Back Office</em></a>.</li>
+</ul>
+            
+
+        </section>
+
+
+
+
+
+        <!-- Inicio Complemento Estadual -->
+        
+        
+<script type="text/javascript">
+
+function setAtendimento(codigo){
+	var url = $('#urlHttps').val();
+    console.log('teste de url ' + url); 
+    $.ajax({
+        url: url + 'appportal/atendimento-conteudo.do',
+        dataType: 'jsonp',
+        crossDomain: true,
+        jsonp: false,
+        jsonpCallback: 'jsonRetorno',
+        async: false,
+        data: {
+            metodo: 'geraAtendimento',
+            guid:  codigo,
+            url: window.location.href
+        },
+        success: function(data){
+            console.log("retorno " + data);
+            //console.log('gerou atendimento')
+        }
+    });    
+}
+</script>
+        <!-- Inicio Complemento Estadual -->
+        
+	    
+        <!-- Fim Complemento Estadual -->
+        
+        <!-- Fim Complemento Estadual -->
+
+   		
+
+<footer class="row">
+	
+
+<input type="hidden" id="guidConteudo" value="0171ce6326c0a410VgnVCM1000003b74010a____"/>
+<input type="hidden" id="guidConteudoScope" ng-value="guidConteudo"/>
+
+<script src="/sebraena-templating/files/js/componente/services/conteudoUtil.service.js" type="text/javascript" charset="UTF-8"></script>
+<script src="/sebraena-templating/files/js/componente/controllers/conteudoUtil.controller.js" type="text/javascript" charset="UTF-8"></script>
+
+<style type="text/css">
+.motivoErro{
+	color:#FF0000;
+	margin-left:3px;
+	font-size:10px;
+}
+</style>
+
+<div class="content-util col-boo-7 space-bottom-40" ng-controller="ConteudoUtilController">
+	<div class="content clearfix">
+		<div class="box-content-util poll" ng-show="isConteudoUtil">
+			<p>O conteúdo foi útil para você?</p>
+			<ul class="btnConteudoUtil">
+				<li id="conteudo-util-sim" data-valor="sim" ng-click="conteudoUtilSim()" ng-disabled="isConteudoUtilChecked" ng-class="{ativo: isConteudoUtilChecked}">Sim</li>
+				<li id="conteudo-util-nao" data-valor="nao" ng-click="conteudoUtilNao()" ng-disabled="isConteudoUtilChecked">Não</li>
+			</ul>
+		</div>
+		<div class="poll-success" ng-show="isConteudoUtilSuccess">
+			<p>Enviado com sucesso! Agradecemos sua ajuda.</p>
+		</div>
+		<div class="poll-feedback" ng-show="isConteudoUtilMotivo">
+			<textarea placeholder="O conteúdo não foi útil? Nos explique porquê." ng-model="motivo"></textarea>
+			<span ng-show="isErroMotivo" class="motivoErro" >Atenção! Por favor preencha o campo obrigatório.</span>
+			<input value="enviar" type="button" ng-click="conteudoUtilMotivo()">
+		</div>
+	</div>
+</div>
+	
+
+<input type="hidden" id="wemidConteudo" value="2171ce6326c0a410VgnVCM1000003b74010aRCRD"/>
+<input type="hidden" id="wemidConteudoScope" ng-value="wemidConteudo"/>
+
+<script src="/sebraena-templating/files/js/componente/controllers/favoritos.controller.js" type="text/javascript" charset="UTF-8"></script>
+
+<div class="content-favoritos col-boo-4 right" ng-controller="FavoritosController">
+	<div class="link-bookmarks clearfix">
+		<a href="#0" title="Favoritos" class="favoritos logged" codigo="">Adicionar aos <strong>Favoritos</strong></a>
+		<a href="#0" title="Favoritos" class="link-bookmarks notlogged" codigo="">Adicionar aos <strong>Favoritos</strong></a>
+	</div>
+</div>
+	
+
+<input type="hidden" id="tituloCompartilha" value="Dez dicas de sucesso para vender na internet"/>
+<input type="hidden" id="tituloCompartilhaScope" ng-value="tituloCompartilha"/>
+
+<script src="/sebraena-templating/files/js/componente/controllers/compartilhar.controller.js" type="text/javascript" charset="UTF-8"></script>
+
+<hr style="display:flex;">
+
+<div class="compartilhamento space-top-30" ng-controller="CompartilharController">
+	<p>Compartilhe:</p>
+	<ul>
+		<li><a href="#this" ng-click="compartilharFB()"><img src="/sebraena-templating/files/img/ico/facebook_full.png"></a></li>
+		<li><a href="#this" ng-click="compartilharTW()"><img src="/sebraena-templating/files/img/ico/twitter_full.png"></a></li>
+		<li><a href="#this" ng-click="compartilharGP()"><img src="/sebraena-templating/files/img/ico/google_full.png"></a></li>
+		<li><a href="#this" ng-click="compartilharEM()"><img src="/sebraena-templating/files/img/ico/mail_full.png"></a></li>
+	</ul>
+	<div class="form_compartilhamento">
+		<label for="copiar">
+			<strong>Links: </strong>
+			<input type="text" name="compartilhar" class="input-value-compartilhar" value="{{link}}">
+			<a class="btn-copy-link">Copiar</a>
+		</label>
+	</div>
+</div>
+</footer>
+
+    </article>
+
+</div>
+
+
+
+
+
+
+	  
+	  
+	
+
+
+	
+
+
+
+        
+    
+        
+	
+	  
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+		
+		
+
+<input type="hidden" name="wemidConteudoEvento" id="wemidConteudoEvento" value="2171ce6326c0a410VgnVCM1000003b74010aRCRD"/>
+<input type="hidden" name="codSegmentosEvento" id="codSegmentosEvento" value="9"/>
+<input type="hidden" name="tipoConteudoEvento" id="tipoConteudoEvento" value="PS-CTD-ARTIGO"/>
+
+<script src="/sebraena-templating/files/js/common/services/conteudorelacionado.service.js" type="text/javascript" charset="UTF-8"></script>
+<script src="/sebraena-templating/files/js/conteudoRelacionado/controllers/conteudoRelacionado.controller.js" type="text/javascript" charset="UTF-8"></script>
+
+<!-- section conteudos relacionados -->
+<ng-controller ng-controller="ConteudoRelacionadoController" ng-cloak>
+	<section class="box-cinza clearfix" ng-if="conteudosRelacionados.length > 0">
+		<div class="wrapper clearfix space-top-40">
+			<div class="col-boo-12">
+				<h3>{{titulo}}</h3>
+			</div>
+           </div>
+		<div id="listaConteudoRelacionado" class="wrapper clearfix space-top-20">
+			<div class="row boxs-tema role space-top-20" ng-repeat="item in conteudosRelacionados" ng-if="$index % 2 == 0">
+				
+
+<article class="col-boo-6 box-{{conteudosRelacionados[$index].classTema}}">
+	<div class="row grid-filter">
+		<div class="col-boo-12 filter-texto">
+			<div class="box-tema clearfix">
+				<div class="icon-categoria">
+					<div class="icon"></div>
+					<span class="tema">{{conteudosRelacionados[$index].tema.nome}}</span>
+					<span>{{conteudosRelacionados[$index].tipo}}</span>
+				</div>
+				<h4>
+					<a href="{{conteudosRelacionados[$index].linkIntegra}}">{{conteudosRelacionados[$index].titulo}}</a>
+				</h4>
+				<p ng-if="conteudosRelacionados[$index].classGrupo == 'cursos' || conteudosRelacionados[$index].classGrupo == 'cursos-online'">
+					<span class="local" ng-if="conteudosRelacionados[$index].local">
+						<strong>{{conteudosRelacionados[$index].local}}</strong>
+					</span>
+					<br ng-if="conteudosRelacionados[$index].local"/>
+					<span class="date" ng-if="conteudosRelacionados[$index].dtInicioEventoStr">
+						<strong>Início: </strong><date>{{conteudosRelacionados[$index].dtInicioEventoStr}}</date>
+					</span>
+					<span class="date" ng-if="conteudosRelacionados[$index].dtFinalEventoStr">
+						<strong>Término: </strong><date>{{conteudosRelacionados[$index].dtFinalEventoStr}}</date>
+					</span>
+				</p>
+				<p>
+					<strong ng-if="conteudosRelacionados[$index].classGrupo == 'cursos' || conteudosRelacionados[$index].classGrupo == 'cursos-online'">Objetivo: </strong>
+					{{conteudosRelacionados[$index].resumo}}
+				</p>
+				<div class="list-tag" ng-init="qtdSegmento = conteudosRelacionados[$index].segmentos.length">
+					<a class="tags" ng-repeat="segmento in conteudosRelacionados[$index].segmentos"
+							href="/sites/PortalSebrae/segmentos/{{segmento.label}}" ng-if="$index <= 3">
+						{{segmento.nome}}
+					</a>
+					<span ng-if="qtdSegmento > 4">
+						<a href="#this" class="tags moretags">+ {{qtdSegmento - 4}}</a>
+						<div class="alltags">
+							<a class="tags" ng-repeat="moresegmento in conteudosRelacionados[$index].segmentos" 
+									href="/sites/PortalSebrae/segmentos/{{moresegmento.label}}" ng-if="$index > 3">
+								{{moresegmento.nome}}
+							</a>
+						</div>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+<!-- end box artigos de conteudo -->
+<article class="col-boo-6 box-{{conteudosRelacionados[$index + 1].classTema}}" ng-if="conteudosRelacionados[$index + 1]">
+	<div class="row grid-filter">
+		<div class="col-boo-12 filter-texto">
+			<div class="box-tema clearfix">
+				<div class="icon-categoria">
+					<div class="icon"></div>
+					<span class="tema">{{conteudosRelacionados[$index + 1].tema.nome}}</span>
+					<span>{{conteudosRelacionados[$index + 1].tipo}}</span>
+				</div>
+				<h4>
+					<a href="{{conteudosRelacionados[$index + 1].linkIntegra}}">{{conteudosRelacionados[$index + 1].titulo}}</a>
+				</h4>
+				<p ng-if="conteudosRelacionados[$index + 1].classGrupo == 'cursos' || conteudosRelacionados[$index + 1].classGrupo == 'cursos-online'">
+					<span class="local" ng-if="conteudosRelacionados[$index + 1].local">
+						<strong>{{conteudosRelacionados[$index + 1].local}}</strong>
+					</span>
+					<br ng-if="conteudosRelacionados[$index + 1].local"/>
+					<span class="date" ng-if="conteudosRelacionados[$index + 1].dtInicioEventoStr">
+						<strong>Início: </strong><date>{{conteudosRelacionados[$index + 1].dtInicioEventoStr}}</date>
+					</span>
+					<span class="date" ng-if="conteudosRelacionados[$index + 1].dtFinalEventoStr">
+						<strong>Término: </strong><date>{{conteudosRelacionados[$index + 1].dtFinalEventoStr}}</date>
+					</span>
+				</p>
+				<p>
+					<strong ng-if="conteudosRelacionados[$index + 1].classGrupo == 'cursos' || conteudosRelacionados[$index + 1].classGrupo == 'cursos-online'">Objetivo: </strong>
+					{{conteudosRelacionados[$index + 1].resumo}}
+				</p>
+				<div class="list-tag" ng-init="qtdSegmento = conteudosRelacionados[$index + 1].segmentos.length">
+					<a class="tags" ng-repeat="segmento in conteudosRelacionados[$index + 1].segmentos"
+							href="/sites/PortalSebrae/segmentos/{{segmento.label}}" ng-if="$index <= 3">
+						{{segmento.nome}}
+					</a>
+					<span ng-if="qtdSegmento > 4">
+						<a href="#this" class="tags moretags">+ {{qtdSegmento - 4}}</a>
+						<div class="alltags">
+							<a class="tags" ng-repeat="moresegmento in conteudosRelacionados[$index + 1].segmentos" 
+									href="/sites/PortalSebrae/segmentos/{{moresegmento.label}}" ng-if="$index > 3">
+								{{moresegmento.nome}}
+							</a>
+						</div>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+<!-- end box artigos de conteudo -->
+			</div>
+		</div>
+	</section>
+</ng-controller>
+<!-- end section conteudo relacionado -->
+		
+
+
+<hr style="display:flex"></hr>
+
+
+
+
+
+	  
+	  
+	
+
+
+	
+
+
+
+        
+    
+        
+	
+	  
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+		
+
+
+
+
+<style type="text/css">
+    a.btn {
+        color: #FFFFFF;
+    }
+</style>
+
+<div class="wrapper">
+	<hr style="display:flex">
+    <section class="contant-fale-especialista clearfix">
+        <div class="full-width fale-com">
+            <p>
+                <strong class="notlogged">Fale com um especialista</strong> 
+                <a href="https://meuatendimento.sebrae.com.br/appportal/fale-especialista.do" class="logged perfilPessoa">
+                    <strong>Faça o Diagnóstico de Gestão da sua empresa</strong> 
+                </a>
+                <a href="https://meuatendimento.sebrae.com.br/appportal/fale-especialista.do" class="logged perfilEmpresa">
+                    <strong>Fale com um especialista</strong> 
+                </a>
+                <span class="notlogged">Faça o diagnóstico da sua empresa e seja atendido online.</span>
+                <span class="logged perfilEmpresa">Faça o diagnóstico da sua empresa e seja atendido online.</span>
+                <span class="logged perfilPessoa"> E aumente o índice de competitividade do seu negócio.</span>
+                
+            </p>
+            <a href="/sebraena-templating/controller/integracaoEad/verificarPendencia?urlcallback=0,https%3A%2F%2Fmeuatendimento.sebrae.com.br%2Fappportal%2Ffale-especialista.do" class="quadrado-azul notlogged" 
+                title="Cadastre-se. É rapidinho."><strong>Cadastre-se</strong> É rapidinho.
+            </a>
+            <a href="https://meuatendimento.sebrae.com.br/appportal/addempresa.do" class="quadrado-azul acesse logged perfilPessoa" 
+                title="Acesse">
+                <strong>Cadastre</strong>
+                <span>sua empresa</span>
+            </a>
+            <a href="https://meuatendimento.sebrae.com.br/appportal/fale-especialista.do" class="quadrado-azul acesse logged perfilEmpresa" 
+                title="Acesse"><strong>Acesse</strong>
+            </a>
+        </div>
+
+    </section>
+
+</div>
+
+
+
+	  
+	  
+	
+
+
+	
+
+
+
+
+
+
+
+                    </main>
+   
+                <!-- / wrapper -->
+		
+
+
+
+
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+		
+
+
+
+
+<input type="hidden"  value="www.sebrae.com.br" id="serverName"/>
+
+
+<script type="text/javascript">
+    function redireciona(link){
+        var urlHttp = $('#urlHttp').val();
+        window.location.href = urlHttp + link;
+    }
+    function gerarAtendimentoFooter(valor, link){
+
+        var url = $('#urlHttps').val();
+        var urlHttp = $('#urlHttp').val();
+
+        setTimeout(function() {
+            if(valor == "asn" || valor == "transparencia"){
+                window.open(link);
+            }else{
+                window.location.href = urlHttp + link;
+            }
+        }, 300);
+
+    }
+
+</script>
+<footer id="footer">
+    <div class="over-footer">
+        <div class="wrapper clearfix">
+            <ul class="sitemap-footer">
+                <li><a href="#0" title="Conheça o Sebrae" onclick="gerarAtendimentoFooter('conheca', 'sites/PortalSebrae/canais_adicionais/conheca_quemsomos')">Conheça o Sebrae</a></li>
+                <li><a href="#0" title="O que fazemos" onclick="gerarAtendimentoFooter('oquefazemos', 'sites/PortalSebrae/canais_adicionais/o_que_fazemos')">O que fazemos</a></li>
+                <li><a href="#0" title="Transparência" onclick="gerarAtendimentoFooter('transparencia', 'http://www.transparencia.sebrae.com.br/ ')">Transparência</a></li>
+                <li><a href="#0" title="Licitações" onclick="gerarAtendimentoFooter('licitacoes', 'sites/PortalSebrae/canais_adicionais/conheca_licitacoes')">Licitações</a></li>
+                <li><a href="#0" title="Agência Sebrae de Notícias" onclick="gerarAtendimentoFooter('asn', 'http://www.agenciasebrae.com.br/sites/asn')">Agência Sebrae de Notícias</a></li>
+                
+                <li><a href="#0" title="Ouvidoria" onclick="redireciona('ouvidoria')">Ouvidoria</a></li>
+            </ul>
+       	</div>
+    </div>
+
+    <div class="low-footer">
+        <div class="wrapper clearfix">
+            <ul class="sitemap-footer">
+                <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/sebrae_english" title="About Sebrae"><span>ENG</span> <strong>About us</strong></a></li>
+                <li><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/sebrae_espanol" title="Sobre o Sebrae"><span>ESP</span> <strong>Nosotros</strong></a></li>
+                <li><strong>Central de Atendimento: 0800 570 0800</strong></li>
+            </ul>
+            <div class="right">
+                <div class="redes-footer left">
+                    <ul>
+                        <li><a href="http://facebook.com/sebrae" target="_blank"><i class="ico ico-facebook-footer"></i>/sebrae</a></li>
+                        <li><a href="http://twitter.com/sebrae" target="_blank"><i class="ico ico-twitter-footer"></i>@sebrae</a></li>
+                    </ul>
+                </div>
+            <div class="box-bt-a-z-footer right">
+                <a href="#this" class="btn-default-full"><span><strong>Acesso rápido</strong> <i class="ico ico-setaBaixoBrancaVazadaGrande"></i></span></a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+</footer>
+<aside id="a-z" class="a-z clearfix">
+    <div class="wrapper">
+        <h2>Acesso rápido</h2>
+        <section class="page-search clearfix">
+            <input type="search" class="search searchaz search-footer" id="searchaz"/><input type="button" value="pesquisar"/>
+            <div class="page-title-container">
+                <h2 class="page-title" title="Digite para destacar abaixo">Digite para destacar abaixo</h2>
+            </div>
+        </section>
+        <nav class="nav-a-z">
+
+            <ul>
+
+                <li>
+                    <h3>A</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/6-passos-para-iniciar-bem-o-seu-novo-negocio,a28b5e24d0905410VgnVCM2000003c74010aRCRD" target="_self">Abertura de negócio</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/sebrae-e-abnt-facilitam-o-acesso-a-normas-tecnicas,a0e365dfbb222510VgnVCM1000004c00210aRCRD" target="_self">ABNT</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/Programas/agentes-locais-de-inovacao-receba-o-sebrae-na-sua-empresa,8f51d53342603410VgnVCM100000b272010aRCRD" target="_self">Agentes Locais de Inovação</a></li>
+
+                        <li class="link-a-z"><a href="http://www.agenciasebrae.com.br/sites/asn" target="_blank">Agência Sebrae de Notícias</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/assessoria-legislativa-assuntos-de-interesse-dos-pequenos-negocios,821e38ccdf25a410VgnVCM1000003b74010aRCRD" target="_self">Assessoria Legislativa Sebrae</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>B</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://conteudos.sebrae.com.br/biblioteca-interativa" target="_blank">Biblioteca Sebrae</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/boletins-de-servicos-financeiros,c2a3be061f736410VgnVCM2000003c74010aRCRD" target="_self">Boletim de Serviços Financeiros</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>C</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/capital-empreendedor,382be3796beaf410VgnVCM1000004c00210aRCRD" target="_self">Capital empreendedor</a></li>
+
+                        <li class="link-a-z"><a href="/./Sebrae/Portal Sebrae/Anexos/Cartilha_Tendencias_Digital.pdf" target="_blank">Cartilha Tendências Digitais</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/central-de-negocios-empresas-unidas-se-tornam-mais-competitivas,8d48c24265d14410VgnVCM2000003c74010aRCRD" target="_self">Central de Negócios</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/central-de-oportunidades-aumente-sua-rede-de-negocios,84fd6915c49a4410VgnVCM1000003b74010aRCRD" target="_blank">Central de Oportunidades</a></li>
+
+                        <li class="link-a-z"><a href="#this" target="_self">Centro Sebrae de Referência do Artesanato Brasileiro</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sustentabilidade.sebrae.com.br" target="_blank">Centro Sebrae de Sustentabilidade</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/chamada_projetos" target="_self">Chamadas de projetos</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/click-marketing-monte-seu-plano-estrategico-online,6ae6d106a0754410VgnVCM1000003b74010aRCRD" target="_self">Click Marketing</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/seu-negocio-comeca-bem-aqui,c744e44499f57410VgnVCM1000003b74010aRCRD" target="_self">Começar Bem</a></li>
+
+                        <li class="link-a-z"><a href="#this" target="_self">Compre do Pequeno Negócio</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/acesse-novos-mercados-com-a-rede-nacional-comercio-brasil,aa6a11b59d054410VgnVCM2000003c74010aRCRD" target="_self">Comércio Brasil</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/o-que-voce-precisa-saber-sobre-comercio-eletronico,b3ab55a4873c4410VgnVCM1000003b74010aRCRD" target="_self">Comércio Eletrônico</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/artigos/comercio-justo-e-solidario-inclusao-com-responsabilidade,63181b9915d14410VgnVCM1000003b74010aRCRD" target="_self">Comércio Justo e Solidário</a></li>
+
+                        <li class="link-a-z"><a href="http://www.varejosebrae.blogspot.com.br/" target="_blank">Comércio Varejista (Blog)</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/credencie_sua_empresa" target="_self">Credencie sua empresa</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/ead/" target="_blank">Cursos a distância - EAD Sebrae</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>D</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.datasebrae.com.br/" target="_blank">DataSebrae</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/faca-o-diagnostico-empresarial-e-melhore-a-sua-gestao,8ac42ed961395410VgnVCM1000003b74010aRCRD" target="_self">Diagnóstico Empresarial</a></li>
+
+                	</ul>
+				</li>
+
+            </ul>
+
+            <ul>
+
+                <li>
+                    <h3>E</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/Programas/educacao-empreendedora-para-todos-os-niveis-de-ensino,d809d24a8321c510VgnVCM1000004c00210aRCRD" target="_self">Educação Empreendedora</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/Empreenda-com-o-Facebook:-capacita%C3%A7%C3%A3o-online-gratuita" target="_blank">Empreenda com o Facebook</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/empretec-fortaleca-suas-habilidades-como-empreendedor,db3c36627a963410VgnVCM1000003b74010aRCRD" target="_self">Empretec</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/Programas/programa-nacional-de-encadeamento-produtivo,b9ee6c566dca5410VgnVCM1000003b74010aRCRD" target="_self">Encadeamento produtivo</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/estudos_pesquisas/conheca-melhor-o-ambiente-das-micro-e-pequenas-empresasdestaque19,d6a2f925817b3410VgnVCM2000003c74010aRCRD" target="_self">Estudos e Pesquisas</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>F</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/Contato" target="_self">Fale com o Sebrae</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/fale-com-um-especialista,0d8b0b019cfe5410VgnVCM1000003b74010aRCRD" target="_self">Fale com um especialista</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/faq" target="_blank">FAQ</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/feiras" target="_self">Feira do Empreendedor</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/fomenta-torne-se-fornecedor-para-governos,0d18d106a0754410VgnVCM1000003b74010aRCRD" target="_self">Fomenta</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/entenda-o-sistema-de-franchising,6f6039407feb3410VgnVCM1000003b74010aRCRD" target="_self">Franquias</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/ferramenta-facilita-acesso-ao-credito-para-os-pequenos-negocios,ac58742e7e294410VgnVCM2000003c74010aRCRD" target="_self">Fundo de Aval - Fampe</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>I</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/ideias" target="_blank">Ideias de Negócio</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/leia-os-boletins-de-mercado-de-cada-setor-e-atualize-a-sua-empresa,de5f974198962510VgnVCM1000004c00210aRCRD" target="_blank">Inteligência Competitiva</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>L</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/conheca_legislacao" target="_self">Legislação</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/lei-geral-completa-10-anos-e-beneficia-milhoes-de-empresas,baebd455e8d08410VgnVCM2000003c74010aRCRD" target="_self">Lei Geral da Micro e Pequena Empresa</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/conheca_licitacoes" target="_self">Licitações</a></li>
+
+                	</ul>
+				</li>
+
+            </ul>
+
+            <ul>
+
+                <li>
+                    <h3>M</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/o-que-e-ser-mei,e0ba13074c0a3410VgnVCM1000003b74010aRCRD" target="_self">MEI</a></li>
+
+                        <li class="link-a-z"><a href="http://memorial.sebrae.com.br" target="_blank">Memorial Sebrae</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>N</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/na-medida-solucoes-customizadas-para-os-proprietarios-de-microempresa,d16ab2a178c83410VgnVCM1000003b74010aRCRD" target="_self">Na Medida</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/Programas/negocio-a-negocio-uma-oportunidade-para-crescer,6141d53342603410VgnVCM100000b272010aRCRD" target="_self">Negócio a Negócio</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/o-que-sao-negocios-de-impacto-social,1f4d9e5d32055410VgnVCM1000003b74010aRCRD" target="_self">Negócios sociais</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/no-campo-uma-familia-de-solucoes-educacionais-para-produtores-rurais,ebe0944d48ae3410VgnVCM2000003c74010aRCRD" target="_self">No Campo</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>O</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/conhecimento-e-praticas-mundiais-sobre-pequenos-negocios-num-so-lugar,adf3d106a0754410VgnVCM1000003b74010aRCRD" target="_self">Observatório internacional</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/a-ouvidoria-sebrae,1f2ac80ded253510VgnVCM1000004c00210aRCRD" target="_self">Ouvidoria Sebrae</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>P</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/conheca_patrocinio" target="_self">Patrocínio</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/faq" target="_blank">Perguntas mais Frequentes</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/estudos_pesquisas/conheca-melhor-o-ambiente-das-micro-e-pequenas-empresasdestaque19,d6a2f925817b3410VgnVCM2000003c74010aRCRD" target="_self">Pesquisas</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/premios" target="_self">Prêmios Sebrae</a></li>
+
+                	</ul>
+				</li>
+
+            </ul>
+
+            <ul>
+
+                <li>
+                    <h3>R</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/a-redesimples-simplifica-procedimentos-burocraticos-de-empresas,d37d9993215fe410VgnVCM1000004c00210aRCRD" target="_self">Redesimples</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/revitalizacao-de-espacos-comerciais,c8ff89c0fa400510VgnVCM1000004c00210aRCRD" target="_self">Revitalização de espaços comerciais</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>S</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/Programas/sebrae-mais-conquiste-a-evolucao-de-seu-negocio,31d836627a963410VgnVCM1000003b74010aRCRD" target="_self">Sebrae Mais</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebraemercados.com.br/" target="_blank">Sebrae Mercados (Blog)</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/canal-no-youtube-apresenta-temas-de-interesse-dos-pequenos-negocios,b6a22be693169410VgnVCM2000003c74010aRCRD" target="_blank">Sebrae no Youtube</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/Programas/sebraetec-inovar-no-seu-negocio-pode-ser-facil,c38a5415e6433410VgnVCM1000003b74010aRCRD" target="_self">Sebraetec</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/com-o-sei-voce-aprende-a-cuidar-bem-de-seu-negocio,d4a9f925817b3410VgnVCM2000003c74010aRCRD" target="_self">SEI</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeapp/" target="_self">Soluções online</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/o-que-e-uma-startup,616913074c0a3410VgnVCM1000003b74010aRCRD" target="_self">Startup</a></li>
+
+                	</ul>
+				</li>
+
+                <li>
+                    <h3>T</h3>
+                    <ul>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/trabalhe_sebrae" target="_self">Trabalhe no Sebrae</a></li>
+
+                        <li class="link-a-z"><a href="http://www.transparencia.sebrae.com.br/" target="_self">Transparência</a></li>
+
+                        <li class="link-a-z"><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/conheca_tutorial" target="_self">Tutorial de compras</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+
+
+        </nav>
+        <a class="btn btn-medium scrollTop" href="#">Voltar ao Topo</a>
+    </div>
+</aside>
+
+
+
+
+	
+	
+
+
+		
+		        <div class="overlay"></div>
+                <div class="modal modal-compartilhamento">
+                    <input type="hidden" value="www.sebrae.com.br" id="teste"/>
+                    <input type="hidden" value="80" id="testePorta"/>
+                    <span class="btn-close"><i class="ico ico-close-modal"></i></span>
+                    <ul class="menu-compartilhe">
+                        <li class="fb"><a target="_blank" href="#0"><span class="onde-compartilhar">Facebook</span><i class="ico ico-facebook-largest"></i></a></li>
+                        <li class="tw"><a target="_blank" href="#0"><span class="onde-compartilhar">Twitter</span><i class="ico ico-twitter-largest"></i></a></li>
+                        <li class="gp"><a target="_blank" href="#0"><span class="onde-compartilhar">Google+</span><i class="ico ico-gplus-largest"></i></a></li>
+                        <li class="em"><a href="#0"><span class="onde-compartilhar">E-mail</span><i class="ico ico-email-largest"></i></a></li>
+                    </ul>
+                    <input type="text" class="link-to-share _copy-me" id="link-to-share"/>
+                    <input type="button" class="btn-copy-link _copy-btn" value="Copiar link" id="btn-copy-link"/>
+                </div>
+	
+				<!-- Inicio da importacao do modal favoritar -->
+                <div class="modal modal-favoritar-login">
+					
+
+<div class="modal modal-sugestao modal-favoritar-login" style="display:block" >
+	<input type="hidden" id="codConteudoFavoritar">
+    <span class="btn-close"><i class="ico ico-close-modal"></i></span>
+    <h2 class="titulo-tip">Para continuar, é preciso fazer o login.</h2>
+    <div class="form form-login clearfix">
+    	<div class="msg-loginFavorito" id="msg-loginFavorito">
+    	</div>
+        <div id="conteudo-cpfFavorito" class="form-item">
+            <label for="cpfFavorito">CPF:</label>
+            <input type="text" name="cpfFavorito" id="cpfFavorito" value="" maxlength="14"/>
+            <input type="hidden" id="check-cpfFavorito" value="ativado">
+        </div>
+        <div class="form-item">
+            <label for="senhaFavorito">Senha:</label>
+            <input type="password" name="passwordFavorito" id="passwordFavorito" value=""/>
+        </div>
+        <div class="form-item form-item-lembrar-senha">
+            <div class="radio-group left">
+               <a href="javascript: window.location.href='/sites/PortalSebrae/EsqueciSenha?url='+window.location.href">Esqueci minha senha</a>
+            </div>
+        </div>
+        <div class="form-actions right">
+            <input type="button" value="Entrar" onclick="checkDocumentoFavorito();"/>
+        </div>
+    </div>
+    <div class="register-modal">
+        <span>Não possui conta? <a href="javascript: window.location.href='/sites/PortalSebrae/Cadastro'"> Cadastre-se.</a></span>
+    </div>
+</div><!-- end modal -->
+
+                </div>
+				<!-- Fim da importacao do modal favoritar -->
+                
+                <div class="modal modal-video widget-video" style="position: absolute;  top: 700px;  margin-top: 0px;" id="modalVideo">
+                    <span class="btn-close"><i class="ico ico-close-medium"></i></span>
+                    <div class="palco">
+                        <h2>Titulo</h2>
+                        <p class="descricao"></p>
+                        <iframe width="100%" height="440" id="banner-player" src="" frameborder="0" allowfullscreen></iframe>
+                        <input type="hidden" class="thumbnail-share" />
+                        <input type="hidden" class="guid-share" id="guid-video-share"/>
+                        <a href="#" class="ico ico-setaPrev btn-prev"></a>
+                        <a href="#" class="ico ico-setaNext btn-next"></a>
+                    </div>
+                    
+					<div class="box-share">
+						<div class="row">
+							<div class="col-boo-4 text-right space-top-10">
+								Compartilhe nas redes sociais
+							</div>
+							<div class="left">
+								<ul class="clearfix menu-compartilhe">
+									<li class="fb_share_video"><a href="#this" title="Facebook" target="_blank"><i class="ico ico-facebook-large"></i></a></li>
+									<li class="tw_share_video"><a href="#this" title="Twitter" target="_blank"><i class="ico ico-twitter-large"></i></a></li>
+									<!--<li class="yt_share_video"><a href="#this" title="Youtube" target="_blank"><i class="ico ico-youtube-large"></i></a></li>-->
+									<li class="gp_share_video"><a href="#this" title="Google Plus" target="_blank"><i class="ico ico-gplus-large"></i></a></li>
+								</ul>
+							</div>
+							<div class="col-boo-5">
+								<input type="text" class="link-to-share _copy-me"/>
+								<input type="button" class="btn-copy-link _copy-btn" id="link-to-share" value="Copiar link"/>
+							</div>  
+						</div>
+					</div>
+                    
+                    <div class="other-videos">
+                    </div>
+                </div>
+        
+                <div class="modal modal-audio">
+                    <span class="btn-close"><i class="ico ico-close-medium"></i></span>
+        
+                    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+        
+                    <div id="jp_container_1" class="jp-audio clearfix">
+                        <div class="jp-title">
+                            <ul>
+                                <li>Teste</li>
+                            </ul>
+                        </div>
+                        <div class="jp-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </div>
+                        <div style="display: none" class="jp-guid"></div>
+                        <img class="jp-mini" src="" />
+                        <div class="jp-type-single">
+                            <div class="jp-gui jp-interface">
+                                <ul class="jp-controls">
+                                    <li><a href="javascript:;" class="jp-play ico ico-play-new-big" tabindex="1">play</a></li>
+                                    <li><a href="javascript:;" class="jp-pause ico ico-pause" tabindex="1">pause</a></li>
+                                    <li><a href="javascript:;" class="jp-mute ico ico-sound" tabindex="1" title="mute">mute</a></li>
+                                    <li><a href="javascript:;" class="jp-unmute ico ico-sound-mute" tabindex="1" title="unmute">unmute</a></li>
+                                </ul>
+                                <div class="jp-volume-bar">
+                                    <div class="jp-volume-bar-value2"></div>
+                                </div>
+                                <div class="jp-progress">
+                                    <div class="jp-seek-bar">
+                                        <div class="jp-play-bar"></div><span class="track ico ico-ellipse-player"></span>
+        
+                                    </div>
+                                </div>
+                                <div class="ellapsed-time">
+                                    <div class="jp-current-time"></div> | 
+                                    <div class="jp-duration"></div>
+                                </div>
+                            </div>
+                            <div class="jp-no-solution">
+                                <span>Update Required</span>
+                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                            </div>
+                        </div>
+                    </div>
+					
+					<div class="box-share">
+						<div class="row">
+							<div class="col-boo-4 text-right space-top-10">
+								Compartilhe nas redes sociais
+							</div>
+							<div class="left">
+								<ul class="clearfix menu-compartilhe">
+									<li class="fb_share_audio"><a href="#this" title="Facebook" target="_blank"><i class="ico ico-facebook-large"></i></a></li>
+									<li class="tw_share_audio"><a href="#this" title="Twitter" target="_blank"><i class="ico ico-twitter-large"></i></a></li>
+									<!--<li class="yt_share_audioo"><a href="#this" title="Youtube" target="_blank"><i class="ico ico-youtube-large"></i></a></li>-->
+									<li class="gp_share_audio"><a href="#this" title="Google Plus" target="_blank"><i class="ico ico-gplus-large"></i></a></li>
+								</ul>
+							</div>
+							<div class="col-boo-5">
+								<input type="text" class="link-to-share _copy-me"/>
+								<input type="button" class="btn-copy-link _copy-btn" id="link-to-share" value="Copiar link"/>
+							</div>  
+						</div>
+					</div>
+			
+                    <div class="other-audios">
+                    </div>
+                </div>
+                
+                <!-- todos os jquery.ui.*.js -->
+                <script type="text/javascript" src="//code.jquery.com/ui/1.10.4/jquery-ui.js?p=140096" charset="ISO-8859-1"></script>
+                <!-- todos os jquery.ui.*.js -->
+            
+                <script src="/sebraena-templating/files/js/plugins.js?p=140096"></script>
+                <script src="/sebraena-templating/files/js/main.js?p=140096"></script>
+                <script src="/sebraena-templating/files/js/article.js?p=140096"></script>
+                <script src="/sebraena-templating/files/js/portal.js?p=140096" charset="UTF-8"></script>
+                <script src="/sebraena-templating/files/js/cadastro.js?p=140096"></script>
+                <script src="/sebraena-templating/files/js/cadastro-edit.js?p=140096"></script>
+                <script src="/sebraena-templating/files/js/tema.js?p=140096"></script>
+                <script src="/sebraena-templating/files/js/home.js?p=140096"></script>
+                <script src="/sebraena-templating/files/js/uf.js?p=140096"></script>
+                <script type="text/javascript" src="/sebraena-templating/files/js/jquery.validate.js?p=140096" charset="ISO-8859-1"></script>
+                <script type="text/javascript" src="/sebraena-templating/files/js/jquery.tipTip.js?p=140096" charset="ISO-8859-1"></script>
+                <script type="text/javascript" src="/sebraena-templating/files/js/jquery.meio.mask.js?p=140096" charset="ISO-8859-1"></script>                               
+                
+                <script type="text/javascript" src="/sebraena-templating/files/js/jquery.Jcrop.js?p=140096" charset="ISO-8859-1"></script>
+                <script type="text/javascript" src="/sebraena-templating/files/js/jquery.color.js?p=140096" charset="ISO-8859-1"></script>
+                <script type="text/javascript" src="/sebraena-templating/files/js/jquery.dbmModal.js?p=140096" charset="ISO-8859-1"></script>
+                <script type="text/javascript" src="/sebraena-templating/files/js/dbmScript.js?p=140096"></script>
+                <script type="text/javascript" src="/sebraena-templating/files/js/functions.js?p=140096"></script>
+                <script src="/sebraena-templating/files/js/vendor/galleria/galleria-1.2.9.min.js?p=140096"></script>
+                
+                <script type="text/javascript">
+                    if ($('.galleria').length > 0) {
+                        //* GALLERIA */
+                        // Load the classic theme
+                        Galleria.loadTheme('/sebraena-templating/files/js/vendor/galleria/themes/classic/galleria.classic.min.js?p=140096');
+            
+                        Galleria.configure({
+                            transition: 'fade',
+                            width: 670,
+                            height: 530,
+							wait: true,
+                            thumbCrop: true,
+                            imageCrop: true,
+                            _toggleInfo: false
+                            
+                        });
+            
+                        // Initialize Galleria
+                        Galleria.run('.galleria');
+                        Galleria.ready(function() {
+                            var gallery = this;
+                            this.appendChild('container','image-nav');
+                            this.appendChild('container','info-close');
+                            $('.link-fullscreen').click(function() {
+                        		var indexGalleria = $(".galleria-wrapper").index($(this).parents(".galleria-wrapper"));
+                        		Galleria.get(indexGalleria).enterFullscreen();
+                            });
+                        	$('.galleria-info-close').click(function() {
+                        		gallery.exitFullscreen();
+                        	});
+                        });
+                    }
+                </script>
+        
+        <!-- Scripts ------->
+	<script type="text/javascript" src="/sebraena-templating/files/js/jquery.prettyPhoto.js?p=140096"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			
+			/** PrettyPhoto Request **/
+                        $('.linkSearch').prettyPhoto({
+                            theme: 'light_square' /* pp_default / light_rounded / dark_rounded / light_square / dark_square / facebook */
+                        });
+                        
+                        var UrlToCopy =  document.URL;
+                        console.log("URL atual: " + UrlToCopy);
+                        //$('.link-to-share').val(UrlToCopy);
+		});
+	</script>
+	<!-- END: Scripts -->
+
+				<script src="/sebraena-templating/files/js/owl.carousel.min.js?p=140096"></script>
+	            <script>
+	                var player;
+	                // parametros api youtube
+	                function onYouTubeIframeAPIReady() {
+	                    player = new YT.Player('video-embed', {
+	                        height: 334,
+	                        videoId: 'GYGLqkVVLAA', // url primary
+	                        playerVars: { 'autoplay': 0, 'controls': 1 },
+	                        events: {
+	                            onReady: selectVideo
+	                        }
+	                    });
+	                }
+	                // function play intervalor
+	                function selectVideo () {
+	                    $('.galeria_video .list-thumbl li a').on('click', function () {
+	                        var urlyoutube = $(this).data('urlyoutube');
+	                        results = urlyoutube.match("[\\?&]v=([^&#]*)");
+	                        player.cueVideoById(results[1]);
+	                        player.playVideo();
+	                    });
+	                }
+	                // galeria de video
+	                    $('.galeria_video .list-thumbl ul').owlCarousel({
+	                        items: 3,
+	                        margin: 20,
+	                        loop:true,
+	                        autoHeight:true,
+	                        nav: false,
+	                    });
+	                    var owl = $('.galeria_video .list-thumbl ul');
+	                    owl.owlCarousel();
+	                        $('.left').click(function() {
+	                            owl.trigger('prev.owl.carousel');
+	                        })
+	                        $('.right').click(function() {
+	                            owl.trigger('next.owl.carousel', [300]);
+	                    });
+	            </script>
+
+        
+
+
+
+            
+
+
+			<!-- Google Tag Manager -->
+			<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NG94BN"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NG94BN');</script>
+			<!-- End Google Tag Manager -->
+			
+			
+
+
+
+
+
+		<script>
+			dataLayer.push({'event' : 'pageTrack', 'segmento' : 'Mercado Digital', 'temagestao' : 'Mercado e Vendas'})
+		</script>
+
+
+<!-- Google Tag de Remarketing -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 965670021;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/965670021/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- End Google Tag de Remarketing -->
+
+<!-- Facebook Tag de Remarketing -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '1517096785232298']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1517096785232298&amp;ev=PixelInitialized" /></noscript>
+<!-- End Facebook Tag de Remarketing -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // essa tag deve ser inserida dinamicamente somente no click do botao de acesso ao sebraetec
+        $('.link-azul').each(function() {
+            if ($(this).attr('href').indexOf('http://www.sgctec.sebrae.com.br/sgctec/Inscricao/Login.aspx') != -1) {
+                $(this).click(function() {
+                    $('body').append("<!-- Facebook Tag de Conversao -->" +
+"<script>(function() {" +
+"  var _fbq = window._fbq || (window._fbq = []);" +
+"  if (!_fbq.loaded) {" +
+"    var fbds = document.createElement('script');" +
+"    fbds.async = true;" +
+"    fbds.src = '//connect.facebook.net/en_US/fbds.js';" +
+"    var s = document.getElementsByTagName('script')[0];" +
+"    s.parentNode.insertBefore(fbds, s);" +
+"    _fbq.loaded = true;" +
+"  }" +
+"})();" +
+"window._fbq = window._fbq || [];" +
+"window._fbq.push(['track', '6019896171809', {'value':'0.00','currency':'BRL'}]);" +
+"<\/script>" +
+"<noscript><img height=\"1\" width=\"1\" alt=\"\" style=\"display:none\" src=\"https://www.facebook.com/tr?ev=6019896171809&amp;cd[value]=0.00&amp;cd[currency]=BRL&amp;noscript=1\" \/><\/noscript>");
+                });
+                return;
+            }           
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // essa tag deve ser inserida dinamicamente somente no click do botao de acesso ao sebraetec
+        $('.link-azul').each(function() {
+            if ($(this).attr('href').indexOf('http://www.sgctec.sebrae.com.br/sgctec/Inscricao/Login.aspx') != -1) {
+                $(this).click(function() {
+                    $('body').append("<!-- Google AdWords Tag de Conversão -->" +
+"<script type=\"text/javascript\">" +
+"/* <![CDATA[ */" +
+"var google_conversion_id = 965670021;" +
+"var google_conversion_language = \"en\";" +
+"var google_conversion_format = \"3\";" +
+"var google_conversion_color = \"ffffff\";" +
+"var google_conversion_label = \"LkbKCKib71YQhem7zAM\";" +
+"var google_remarketing_only = false;" +
+"/* ]]> */" +
+"<\/script>" +
+"<script type=\"text/javascript\" src=\"//www.googleadservices.com/pagead/conversion.js\">" +
+"<\/script>" +
+"<noscript>" +
+"<div style=\"display:inline;\">" +
+"<img height=\"1\" width=\"1\" style=\"border-style:none;\" alt=\"\" src=\"//www.googleadservices.com/pagead/conversion/965670021/?label=LkbKCKib71YQhem7zAM&amp;guid=ON&amp;script=0\"\/>" +
+"<\/div>" +
+"<\/noscript>");
+                });
+            }
+        });
+    });
+</script>
+
+				
+			 
+				<script type="text/JavaScript">
+					$(document).ready(function() {
+						$('.temas-gestao-home a, .temas-gestao a, .temas-gestao-menu-logado a').click(function(e) {
+							callAdmotionPostTag('18839');
+						});
+						$(".page-search .search, .page-search .search-diagnostico").next().click(function() {
+							callAdmotionPostTag('18837');
+						});
+						$(' a.link-estados').click(function(e) {
+							callAdmotionPostTag('18851');
+						});
+						$('.btn-duas-linhas, .btn-default-full').click(function(){
+							callAdmotionPostTag('18849');
+						});
+						
+						$('a').click(function(){
+							var jsonArray = [{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"613","nome":"Acompanhe a agência sebrae de notícias","valorInicial":"1","index":"2","emails":"http://www.agenciasebrae.com.br/sites/asn","label":"18884"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"616","nome":"Agência sebrae de notícias","valorInicial":"1","index":"5","emails":"http://www.agenciasebrae.com.br/sites/asn","label":"18888"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"615","nome":"Agronegócio (blog)","valorInicial":"1","index":"4","emails":"http://agrosebrae.com/","label":"18893"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"617","nome":"Biblioteca sebrae","valorInicial":"1","index":"6","emails":"http://bis.sebrae.com.br/bis/","label":"18895"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"618","nome":"Centro sebrae de sustentabilidade","valorInicial":"1","index":"7","emails":"http://sustentabilidade.sebrae.com.br/Sustentabilidade/","label":"18899"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"619","nome":"Comércio varejista (blog)","valorInicial":"1","index":"8","emails":"http://www.varejosebrae.blogspot.com.br/","label":"18905"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"612","nome":"Cursos gratuitos online ead sebrae","valorInicial":"1","index":"1","emails":"http://www.ead.sebrae.com.br/","label":"18879"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"620","nome":"Ensino a distância - ead","valorInicial":"1","index":"9","emails":"https://www.ead.sebrae.com.br/","label":"18911"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"621","nome":"Memorial sebrae","valorInicial":"1","index":"10","emails":"http://memorial.sebrae.com.br/","label":"18923"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"622","nome":"Mercado ao seu alcance (blog)","valorInicial":"1","index":"11","emails":"http://www.sebraemercados.com.br/","label":"18924"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"623","nome":"O negócio é o seguinte (blog)","valorInicial":"1","index":"12","emails":"http://www.onegocioeoseguinte.sebrae.com.br/","label":"18929"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"614","nome":"Ouvidoria","valorInicial":"1","index":"3","emails":"http://web.ouvidoria.sebrae.com.br/ouvidoriaweb.aspx","label":"18890"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"624","nome":"Rádio sebrae","valorInicial":"1","index":"13","emails":"http://radio.sebrae.com.br/","label":"18935"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"625","nome":"Territórios em rede (blog)","valorInicial":"1","index":"14","emails":"http://www.territoriosemrede.com.br/","label":"18941"},{"tipoDominio":{"codigo":"68","nome":"URL_TAG_PORTAL_LINK","label":"URL_TAG_PORTAL_LINK"},"codigo":"626","nome":"Tv sebrae","valorInicial":"1","index":"15","emails":"http://tv.sebrae.com.br/","label":"18944"}];
+							var $ahref = $(this).attr('href');
+							for (i = 0; i < jsonArray.length; i++) {
+								if($ahref == jsonArray[i].emails){
+									console.log(jsonArray[i].label);
+									callAdmotionPostTag(jsonArray[i].label);
+								}
+							}
+						});
+					});
+					
+					function callAdmotionPostTag(code){
+						var ADM_rnd = Math.round(Math.random() * 9999);
+						var ADM_post = new Image();
+						ADM_post.src = 'http://ia.nspmotion.com/ptag/?pt='+code+'&r='+ADM_rnd;
+					} 
+
+				</script>
+			
+			<script type="text/javascript">
+			//IGNITIONONE  TAG	
+			(function(){
+			var Data = {
+			}
+
+			  ,i=Data,d=document,u=encodeURIComponent,x=z='',j=d.createElement('script'),
+			  r=d.referrer,s=d.getElementsByTagName('script')[0];j.type='text/javascript';
+			  j.async=!0;r&&r.split(/[/:?]/)[3]!=d.location.hostname&&(i.ref=r);for(y in i)
+			  x+='&'+y+'='+u(i[y]);j.src='//br-sebrae.netmng.com/'
+			  +'?aid=2415&siclientid='+x;s.parentNode.insertBefore(j,s);
+			})();
+			</script>
+
+			
+				<script src="https://apis.google.com/js/platform.js"></script>
+			
+			<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/75f10aec-c7c2-45e3-a618-95ad1d7ca895-loader.js" ></script>
+		            
+                
+	</body>
+</html>

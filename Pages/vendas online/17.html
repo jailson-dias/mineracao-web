@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR" prefix="og: http://ogp.me/ns#" class="no-js">
+<head>
+    
+    <meta name="currentUrl" data-url="https://endeavor.org.br/operacoes/vendas-online">
+    <meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://endeavor.org.br/wp-content/themes/endeavor/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#f7f7f7">
+    <meta name="msapplication-TileImage" content="https://endeavor.org.br/wp-content/themes/endeavor/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#f7f7f7">
+    <!--[if lt IE 9]>
+    <script src="https://endeavor.org.br/wp-content/themes/endeavor/assets/js/html5.js"></script>
+    <link rel="stylesheet" href="https://endeavor.org.br/wp-content/themes/endeavor/assets/css/trumps/ie8.css" media="all">
+    <![endif]-->
+    <style>.MainHeader{top:0;position:-webkit-sticky;position:sticky;z-index:103;max-width:100%;box-shadow:0 1px 5px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.2)}.MainHeader,.MainHeader .mh-logo{height:60px;background-color:#fff}.MainHeader .mh-logo{position:relative;display:inline-block;width:100%;z-index:110}.MainHeader .mh-logo a{width:170px;height:60px;max-width:calc(100% - 160px);color:#007b77}.MainHeader .mh-logo svg{height:100%;width:100%}.MainHeader .mh-menu{position:fixed;bottom:100%;height:100%;padding-top:60px;z-index:1;transition:bottom .4s ease-out}.MainHeader .mh-busca,.MainHeader .mh-menu{left:0;width:100%;box-sizing:border-box;background-color:#f5f5f5}.MainHeader .mh-busca{position:absolute;top:-126px;z-index:103;padding:50px 20px;height:auto;text-align:center;transition:top .4s ease-out}.MainHeader .mh-busca fieldset{position:relative;width:100%}.MainHeader .mh-busca #buscar,.MainHeader .mh-busca label{padding:0;margin:0;display:block;font:22px/1.2 Montserrat-Regular,Helvetica,Arial,sans-serif;color:#555}.MainHeader .mh-busca #buscar{width:100%;border:0;background-color:transparent}.MainHeader .mh-busca #buscar:focus{outline:none}.MainHeader .mh-busca label{position:absolute;top:0;left:0;right:0;margin:auto;white-space:nowrap;transition:top .4s linear,right .4s ease-in,font-size .4s ease-in}.MainHeader .mh-busca #buscar:focus+label{top:-100%;right:100%;font-size:14px}.MainHeader .mh-btn,.MainHeader .mh-btn-buscar,.MainHeader .mh-btn-entrar{position:absolute;margin:auto;top:10px;right:0;width:60px;height:42px;z-index:110;font:12px Montserrat-Bold,Helvetica,Arial,sans-serif;color:#2c3239;letter-spacing:.5px;border:0;border-radius:3px;background-color:transparent}.MainHeader .mh-user-area{position:relative;display:none;margin-bottom:-30px;background-color:#fff;border-bottom:2px solid #ececec}.MainHeader .mh-user-area .mh-btn-user{display:block;text-decoration:none}.MainHeader .mh-user-area .mh-user-avatar{padding:15px 50px 15px 15px;background-color:#ececec}.MainHeader .mh-user-area .mh-user-avatar .avatar-img{height:48px;width:48px;border-radius:100%}.MainHeader .mh-user-area .mh-user-avatar .avatar-cap{margin-left:15px;vertical-align:top;display:inline-block;font:20px/48px Montserrat-Bold,Helvetica,Arial,sans-serif;letter-spacing:.4px;color:#37474f}.MainHeader .mh-user-area .mh-user-avatar:after{position:absolute;top:30px;right:30px;width:8px;height:8px;margin:auto;display:block;content:"";background-color:transparent;-webkit-transform:rotate(45deg);transform:rotate(45deg);border-bottom:3px solid #333;border-right:3px solid #333;transition:-webkit-transform .4s;transition:transform .4s;transition:transform .4s,-webkit-transform .4s}.MainHeader .mh-user-area .drop-content{padding:0;margin:0;list-style:none}.MainHeader .mh-user-area .drop-content .item{padding-left:16px;border-left:4px solid transparent}.MainHeader .mh-user-area .drop-content .item.-ativo{border-color:#1b9897}.MainHeader .mh-user-area .drop-content .item.-ativo a{font-family:Montserrat-Bold,Helvetica,Arial,sans-serif}.MainHeader .mh-user-area .drop-content .item a{font:16px/48px Montserrat-Regular,Helvetica,Arial,sans-serif;color:#37474f;text-decoration:none}.MainHeader .mh-user-area .mh-user-dropdown{height:auto;max-height:0;overflow:hidden;transition:max-height .4s}.MainHeader .mh-user-area .mh-btn-user.-ativo .mh-user-avatar:after{top:35px;-webkit-transform:rotate(225deg);transform:rotate(225deg)}.MainHeader .mh-user-area .mh-btn-user.-ativo+.mh-user-dropdown{max-height:300px}.MainHeader .menu-list{padding:50px 0;margin:0;text-align:center;list-style:none}.MainHeader .menu-list a{color:#555;font:20px/48px Montserrat-Regular,Helvetica,Arial,sans-serif;letter-spacing:.5px;text-decoration:none}.MainHeader .menu-mobile>.menu-item>a{font-size:24px}.MainHeader .sub-menu{padding:0;margin:0;list-style:none}.MainHeader .mh-btn{margin-right:8px;background-color:#1b9897;color:#fff}.MainHeader .mh-btn-buscar{right:96px}.MainHeader .mh-btn-entrar{right:0;left:0;top:auto;bottom:0;width:100%;height:60px;font:16px Montserrat-Bold,Helvetica,Arial,sans-serif;color:#fff;border-radius:0;background-color:#1b9897}.MainHeader.-logado .mh-user-area{display:block}.MainHeader.-logado .mh-btn-entrar{display:none!important}.IntroHome{position:relative;background-color:#606060;overflow:hidden}.IntroHome .intro-title{margin:0 0 20px;font:32px/1.2 Georgia,serif;color:#fff}.IntroHome .desc{margin-top:-20px;font:1.6em/1.88 Montserrat-Regular,Helvetica,Arial,sans-serif;letter-spacing:.5px;color:#fff;max-width:80%}.IntroHome .sub-title{display:block;margin-bottom:9px;font:14px/1 Montserrat-Bold,Helvetica,Arial,sans-serif;text-transform:uppercase;color:#a1a1a1}.IntroHome .intro-pic{position:relative;height:100%;display:block;overflow:hidden}.IntroHome .intro-img{margin:auto;min-width:100%;height:auto}.IntroHome .intro-cta{margin-bottom:40px;padding:0 35px;font:1.6em/54px Montserrat-Bold,Helvetica,Arial,sans-serif;letter-spacing:.5px;color:#fff;background-color:#1b9897;text-decoration:none}.IntroHome .content{display:flex;position:absolute;bottom:0;width:100%;margin:0;height:100%;flex-direction:column;padding:20% 8px 20px;align-items:baseline;justify-content:flex-end}.IntroHome.-over .content{background:linear-gradient(180deg,transparent,rgba(0,0,0,.9))}.IntroHome.-shadow .intro-title,.IntroHome.-shadow .sub-title{text-shadow:0 0 10px rgba(0,0,0,.5)}@media (max-width:960px){.MainHeader .mh-menu.-ativo{bottom:0;transition:bottom .4s ease-in}.MainHeader .mh-menu{overflow:hidden}.MainHeader .mh-menu.-ativo{overflow:scroll}.MainHeader .mh-busca.-ativo{top:100%;transition:top .4s ease-in}}@media (min-width:960px){.MainHeader .mh-busca #buscar{text-align:center}.MainHeader .mh-busca #buscar:focus+label{right:0}.MainHeader .menu-mobile{display:none!important}.MainHeader{height:90px}.MainHeader .limit{position:relative;display:grid;grid-template-columns:190px calc(100% - 370px) 80px 100px;justify-content:center;align-items:center;height:90px;z-index:110;background-color:#fff}.MainHeader .mh-logo{width:auto}.MainHeader .mh-logo a{width:100%;max-width:100%}.MainHeader .mh-btn-buscar{position:static}.MainHeader .mh-menu{padding:0;display:inline-block;position:static;height:auto}.MainHeader .mh-btn-entrar.only-desk{margin:0 0 0 auto;width:100px;height:40px;margin-top:25px;border-radius:3px;position:static;display:inline-block}.MainHeader .mh-menu{width:auto;background-color:#fff;text-align:center}.MainHeader .mh-menu .menu-item{margin:0 9px;display:inline-block}.MainHeader .mh-menu .menu-list{display:flex;justify-content:center;padding:0}.MainHeader .mh-menu .menu-list a{display:block;line-height:90px;font-size:13px}.MainHeader .mh-busca{top:-230px}.MainHeader .mh-busca.-ativo{top:90px;transition:top .4s ease-in}.MainHeader .mh-busca fieldset{width:100%;margin:auto}.MainHeader .mh-busca #buscar,.MainHeader .mh-busca label{font-size:40px}.MainHeader .mh-busca #buscar:focus+label{font-size:20px;top:-30px}.MainHeader .mh-user-area{position:absolute;right:0;top:0;width:100px;box-sizing:border-box;border:0;background-color:transparent}.MainHeader .mh-user-area .mh-user-avatar{padding:15px 30px 15px 15px;background-color:transparent;height:90px;width:90px;box-sizing:border-box}.MainHeader .mh-user-area .mh-user-avatar .avatar-cap{display:none}.MainHeader .mh-user-area .mh-user-avatar:after{top:35px;right:15px;width:5px;height:5px;border-width:2px}.MainHeader .mh-user-area .drop-content{padding:0}.MainHeader .mh-user-area .drop-content .item{margin:15px 0;padding-left:15px}.MainHeader .mh-user-area .drop-content .item a{line-height:1.4}.MainHeader .mh-user-area .drop-content .item.-js-desconectar{margin:0;padding:15px;background-color:#f8f9fb;border-left:4px solid transparent}.MainHeader .mh-user-area .drop-content .item.-js-desconectar a{color:#f66}.MainHeader .mh-user-area .mh-user-dropdown{position:absolute;top:88px;right:0;width:180px;background-color:#fff;border-bottom-left-radius:3px;border-bottom-right-radius:3px;text-align:left}.MainHeader .mh-user-area .mh-btn-user.-ativo,.MainHeader .mh-user-area .mh-btn-user.-ativo+.mh-user-dropdown{box-shadow:0 12px 18px rgba(0,0,0,.1),0 10px 14px rgba(0,0,0,.05)}.MainHeader .mh-user-area--desk{position:relative;height:90px}.IntroHome.-over .content{background:linear-gradient(270deg,transparent,rgba(0,0,0,.9))}.IntroHome{min-height:0}.IntroHome .content{top:0;bottom:0;right:0;left:0;margin:0;padding:0;width:100%;flex-direction:column;justify-content:center;align-items:baseline;padding:0 40% 30px 8px}.IntroHome .intro-title{margin-bottom:40px;display:block;display:-webkit-box;max-width:100%;height:194.4px;font-size:54px;line-height:1.2;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}.IntroHome .intro-img{bottom:0}}@media (min-width:1140px){.MainHeader .limit{grid-template-columns:220px 750px 70px 100px}.MainHeader .mh-menu .menu-item{margin:0 10px}.MainHeader .mh-menu .menu-list a{transition:color .2s ease-in}.MainHeader .mh-menu .menu-list a:hover{color:#1b9897}.MainHeader .mh-btn-entrar{transition:background-color .4s ease-out}.MainHeader .mh-btn-entrar:hover{background-color:#178281}.MainHeader .mh-busca label{cursor:pointer}.MainHeader .mh-user-area{right:calc((100% - 1140px) / 2)}.IntroHome .content{top:0;bottom:0;left:0;right:0;height:100%;max-width:100%;padding-left:calc((100% - 1140px) /2);padding-right:calc(((100% - 1140px) /2) + 40%)}.IntroHome .intro-cta{transition:background-color .4s}.IntroHome .intro-cta:hover{background-color:#136d6c}}@media (min-width:1420px){.IntroHome{min-height:0}.IntroHome .content{padding-right:calc(((100% - 1140px) /2) + 30%)}}</style><title>3 dicas para aumentar suas vendas online | Endeavor Brasil</title>
+
+<!-- Google Tag Manager for WordPress by DuracellTomi -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];//]]>	
+</script>
+<!-- End Google Tag Manager for WordPress by DuracellTomi -->
+<!-- This site is optimized with the Yoast SEO plugin v8.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="As vendas online são uma grande oportunidade para o empreendedor, mas também um grande desafio. A seguir, confira 3 dicas para aumentar suas vendas online."/>
+<link rel="canonical" href="https://endeavor.org.br/operacoes/vendas-online/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="3 dicas para aumentar suas vendas online | Endeavor Brasil" />
+<meta property="og:description" content="As vendas online são uma grande oportunidade para o empreendedor, mas também um grande desafio. A seguir, confira 3 dicas para aumentar suas vendas online." />
+<meta property="og:url" content="https://endeavor.org.br/operacoes/vendas-online/" />
+<meta property="og:site_name" content="Endeavor" />
+<meta property="article:tag" content="Cadeia de Suprimentos" />
+<meta property="article:tag" content="Logística" />
+<meta property="article:tag" content="Marketing &amp; Vendas" />
+<meta property="article:tag" content="Marketing Digital" />
+<meta property="article:tag" content="Planejamento de Demanda" />
+<meta property="article:tag" content="Planejamento de Vendas" />
+<meta property="article:section" content="Marketing" />
+<meta property="article:published_time" content="2015-07-12T18:17:05-03:00" />
+<meta property="article:modified_time" content="2015-08-10T16:53:03-03:00" />
+<meta property="og:updated_time" content="2015-08-10T16:53:03-03:00" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Endeavor &raquo; 3 dicas valiosas para aumentar suas vendas online" href="https://endeavor.org.br/operacoes/vendas-online/feed/" />
+<link rel='stylesheet' id='modalnaitor-css-css'  href='https://endeavor.org.br/wp-content/plugins/modalnaitor/assets/style.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='endeavor-css'  href='https://endeavor.org.br/wp-content/themes/endeavor/assets/css/endeavor.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='https://endeavor.org.br/wp-content/themes/endeavor/assets/css/print.css?ver=1.0' type='text/css' media='print' />
+<link rel='stylesheet' id='slick-css'  href='https://endeavor.org.br/wp-content/themes/endeavor/assets/css/slick.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-theme-css'  href='https://endeavor.org.br/wp-content/themes/endeavor/assets/css/slick-theme.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://endeavor.org.br/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://endeavor.org.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://endeavor.org.br/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.8.1'></script>
+<link rel='https://api.w.org/' href='https://endeavor.org.br/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://endeavor.org.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://endeavor.org.br/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.8" />
+<link rel='shortlink' href='https://endeavor.org.br/?p=10440' />
+<link rel="alternate" type="application/json+oembed" href="https://endeavor.org.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fendeavor.org.br%2Foperacoes%2Fvendas-online%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://endeavor.org.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fendeavor.org.br%2Foperacoes%2Fvendas-online%2F&#038;format=xml" />
+
+<!-- Google Tag Manager for WordPress by DuracellTomi -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	dataLayer.push({"visitorLoginState":"logged-out","visitorType":"visitor-logged-out","visitorRegistrationDate":"","visitorUsername":"","pageTitle":"3 dicas para aumentar suas vendas online | Endeavor Brasil","pagePostType":"post","pagePostType2":"single-post","pageCategory":["marketing","operacoes","vendas"],"pageAttributes":["cadeia-de-suprimentos","logistica","marketing-vendas","marketing-digital","planejamento-de-demanda","planejamento-de-vendas"],"pagePostAuthor":"Endeavor Brasil","pagePostDate":"julho 12, 2015","pagePostDateYear":"2015","pagePostDateMonth":"07","pagePostDateDay":"12","postFormat":"standard"});//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSP2BML');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by DuracellTomi -->    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0026/0230.js" async="async"></script>
+
+<script id="navegg" type="text/javascript">
+  (function(n,v,g){o="Navegg";if(!n[o]){
+    a=v.createElement('script');a.src=g;b=document.getElementsByTagName('script')[0];
+    b.parentNode.insertBefore(a,b);n[o]=n[o]||function(parms){
+    n[o].q=n[o].q||[];n[o].q.push([this, parms])};}})
+  (window, document, 'https://tag.navdmp.com/universal.min.js');
+  window.naveggReady = window.naveggReady||[];
+  window.nvg52004 = new Navegg({
+    acc: 52004
+  });
+</script></head>
+<body class="post-template-default single single-post postid-10440 single-format-standard" data-ajaxurl="https://endeavor.org.br/wp-admin/admin-ajax.php" data-jsondatetime="https://endeavor.org.br/jsondatetime.php">
+
+    
+    
+    <header class="MainHeader -usuario-logado">
+        <div class="limit">
+
+            <h1 class="mh-logo"><a href="https://endeavor.org.br"><svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 900 200" enable-background="new 0 0 900 200" xml:space="preserve"><title>Endeavor - Brasil</title><g id="Layer_1"><polygon fill="currentcolor" points="636.6,39.8 604.3,105.7 595.2,105.7 561.3,39.8 578.7,39.8 603,90.3 626.4,39.8    "/><path fill="currentcolor" d="M354.9,71.3c0-14.2-9.6-24.8-31.9-24.9c-5.8,0-9.4,0.1-12.6,0.3v44c0,6.7,3,8,13.5,8C341.7,98.8,354.9,87.4,354.9,71.3z M370.3,70.6c0,18.2-15.3,34.4-45.9,34.4h-28.9V39.8h32.9C358,39.8,370.3,55.9,370.3,70.6L370.3,70.6z"/><path fill="currentcolor" d="M164.5,61.8c0-7.8-8.4-16.8-21.5-16.8c-14.2,0-21.8,10.8-23,22h35.3C162.2,67,164.5,65,164.5,61.8zM179.7,67.8c0,4.1-1.8,5.6-5.8,5.6h-54c1.4,16.8,15,25.6,30.6,25.6c9-0.1,18-1.9,26.3-5.5l2.4,5.7c-11.1,4.9-23.2,7.4-35.4,7.2c-19.5,0-38.8-9.9-39.5-33H74.4l3.1-6.4h27.2c2.9-17.8,21.1-28.6,38.1-28.6C170.1,38.4,179.7,57.6,179.7,67.8L179.7,67.8z"/><path fill="currentcolor" d="M712.9,72.4c0-16-10.2-27.6-26.5-27.6c-14.4,0-26.3,10.8-26.3,26.6c0,16.9,10.5,28.6,26.8,28.6C700.6,99.9,712.9,90.3,712.9,72.4z M727.9,72.4c0,21.5-20.9,34-41.3,34s-41.3-12.5-41.3-34s20.9-34,41.3-34S727.9,50.8,727.9,72.4L727.9,72.4z"/><polygon fill="currentcolor" points="271.7,105 262,105 210.5,55.8 210.5,105 201,105 201,39.8 215.2,39.8 262.2,85 262.2,39.8 271.7,39.8  "/><path fill="currentcolor" d="M532.6,69.4v13.9c0,10-9.8,15.6-21.7,15.6c-9.8,0-15.6-4.1-15.6-12.3c0-14.2,24.9-17.2,36.8-17.2L532.6,69.4z M531.2,63.9c-24.7,0-51.1,7.1-51.1,23.4c0,10.5,8,19,23.1,19c12.9,0,23.3-4.7,29.3-7.9v6.6h14.9V66.1c0-21-12-27.7-30.1-27.7c-12.7,0-24.1,2.5-33.3,6.7l2.5,6.4c7.9-3.8,17.2-6.3,25.3-6.3c15,0,20.7,8.6,20.7,18.9L531.2,63.9z"/><path fill="currentcolor" d="M761.4,72.5V46.1c3.3-0.2,6.2-0.4,9.1-0.4c13.6,0.1,19.2,4.5,19.2,13.1c0,10.4-10.1,13.6-25.3,13.6H761.4zM746.5,39.8V105h14.9V78.7c2.8,0,4.5,0,7.9,0c15.2,15.1,28.2,25.3,53,27.4l2.2-4.2c-18-4.9-31.5-17.6-39.7-26.1c9.9-2.2,19.8-7.2,19.8-19.2c0-8.8-7.6-16.9-30.4-16.9L746.5,39.8z"/><path fill="currentcolor" d="M446.4,61.8c0-7.8-8.4-16.8-21.6-16.8c-14.2,0-21.8,10.7-23,22h35.3C444,67,446.4,65,446.4,61.8zM386.2,71.6c0-19,18.5-33.2,38.5-33.2c27.2,0,36.8,19.2,36.8,29.3c0,4.1-1.8,5.6-5.8,5.6h-54c1.4,16.8,15,25.6,30.6,25.6c9-0.1,18-1.9,26.3-5.5l2.4,5.7c-11.1,4.9-23.2,7.4-35.4,7.2C404.7,106.4,386.2,94.7,386.2,71.6z"/><path fill="currentcolor" d="M652.5,161.2h-9.7v-34h9.9c7.6,0,11.3,3.4,11.3,8.8c0.1,3.2-1.9,6-4.9,7.1c3.8,1.2,6.3,3.6,6.3,8.2C665.3,158,660.5,161.2,652.5,161.2z M652.3,132.2H649v9h3c3.8,0,5.9-1.7,5.9-4.6C657.8,133.9,656.2,132.2,652.3,132.2L652.3,132.2z M652.4,145.9H649v10.4h3.5c4.1,0,6.5-1.7,6.5-5.1S656.7,145.9,652.4,145.9L652.4,145.9z"/><path fill="currentcolor" d="M685.2,148.2h-2.8v13h-6.5v-34h10.5c7.6,0,12.2,3.6,12.2,10.2c0,5-2.7,8.1-6.9,9.6l9.2,13.3l-6.9,1.3L685.2,148.2z M686,132.5h-3.6v10.8h3.3c4,0,6.5-1.9,6.5-5.5C692.2,134.4,690,132.5,686,132.5L686,132.5z"/><path fill="currentcolor"d="M731.2,152.6h-12.9l-3,8.6h-6.5l12.7-34.1h6.9l12.5,33.3l-6.5,1.2L731.2,152.6z M720.1,147.3h9.2l-4.6-13.1L720.1,147.3z"/><path fill="currentcolor" d="M760.2,161.6c-3.7,0-7.3-0.8-10.7-2.4l1-5.9c3,1.8,6.3,2.9,9.8,3c3,0,5.1-1.5,5.1-4.1c0-2.5-1.2-3.5-6.1-5.7c-6.6-2.7-9.2-4.9-9.2-10.1c0-6,4.6-9.5,11-9.5c3.1-0.1,6.2,0.6,9,2.1l-1,5.9c-2.4-1.6-5.1-2.5-8-2.7c-3.2,0-4.7,1.6-4.7,3.6s1.1,3.2,5.8,5.2c7,2.9,9.5,5.3,9.5,10.5C771.7,158.2,766.8,161.6,760.2,161.6z"/><path fill="currentcolor" d="M782.4,161.2v-34h6.5v34H782.4z"/><path fill="currentcolor" d="M801.3,161.2v-34h6.5v28.1h11.3l0.9,5.8L801.3,161.2z"/></g></svg></a></h1>
+
+            <nav class="mh-menu">
+
+                <div class="mh-user-area">
+                    <a class="mh-btn-user  -js-abrir-user" href="#">
+                        <figure class="mh-user-avatar">
+                            <img class="avatar-img -img-usuario" src="https://secure.gravatar.com/avatar/?s=96&d=mm&f=y&r=g">
+
+                            <figcaption class="avatar-cap -nome-usuario"></figcaption>
+                        </figure>
+                    </a>
+                    <div class="mh-user-dropdown">
+                        <ul class="drop-content">
+                                                                                            <li class="item"><a href="https://endeavor.org.br/minha-conta/">Minha Conta</a></li>
+                                                                                                                        <li class="item"><a href="https://endeavor.org.br/minha-conta/meus-conteudos/">Meus Conteúdos</a></li>
+                                                                                    <li class="item -js-desconectar"><a rel="nofollow" href="https://endeavor.org.br/wp-login.php?redirect_to=https%3A%2F%2Fendeavor.org.br%2Foperacoes%2Fvendas-online">Acessar</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul id="menu-menu-principal" class="menu-list  only-desk"><li id="menu-item-30238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30238"><a href="https://endeavor.org.br/inspiracao/">Inspiração</a></li>
+<li id="menu-item-30239" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30239"><a href="https://endeavor.org.br/conteudos/">Conteúdos</a></li>
+<li id="menu-item-30240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30240"><a href="https://endeavor.org.br/videos/">Vídeos</a></li>
+<li id="menu-item-30241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30241"><a href="https://endeavor.org.br/quem-apoiamos">Quem Apoiamos</a></li>
+<li id="menu-item-30242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30242"><a href="https://endeavor.org.br/politicas-publicas">Políticas Públicas</a></li>
+<li id="menu-item-30243" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30243"><a href="https://endeavor.org.br/quem-somos">Quem Somos</a></li>
+</ul><ul id="menu-menu-mobile" class="menu-list  menu-mobile  only-mob"><li id="menu-item-30226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30226"><a href="https://endeavor.org.br/inspiracao/">Inspiração</a></li>
+<li id="menu-item-30227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30227"><a href="https://endeavor.org.br/conteudos/">Conteúdos</a></li>
+<li id="menu-item-30228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30228"><a href="https://endeavor.org.br/videos/">Vídeos</a></li>
+<li id="menu-item-30426" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30426"><a href="https://endeavor.org.br/quem-apoiamos/">Quem Apoiamos</a></li>
+<li id="menu-item-30231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30231"><a href="https://endeavor.org.br/politicas-publicas">Políticas Públicas</a></li>
+<li id="menu-item-30230" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30230"><a href="https://endeavor.org.br/quem-somos/">Quem Somos</a></li>
+</ul>  
+                <button class="mh-btn-entrar  only-mob JSmodal-show" data-modal="UserOptions" > Entrar </button>
+            </nav>
+
+            <button class="mh-btn-buscar  -js-abrir-busca"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>Buscar</title><path fill="currentcolor" fill-rule="nonzero" d="M19.696 18.217l-4.93-4.95a7.884 7.884 0 0 0 1.962-5.192C16.728 3.623 12.976 0 8.364 0 3.752 0 0 3.623 0 8.075c0 4.452 3.752 8.075 8.364 8.075a8.48 8.48 0 0 0 4.792-1.461l4.967 4.988c.208.208.487.323.787.323.283 0 .552-.104.756-.294.433-.403.447-1.07.03-1.49zM8 2c3.308 0 6 2.692 6 6s-2.692 6-6 6-6-2.692-6-6 2.692-6 6-6z"/></svg> </button>
+
+            <button class="mh-btn  only-mob -js-abrir-menu"> Menu </button>
+            <div class="mh-user-area--desk">
+                <button class="mh-btn-entrar  only-desk JSmodal-show -js-button-modal-login" data-modal="UserOptions" > Entrar </button>
+            </div>
+        </div>
+
+        <form class="mh-busca" method="get" action="  https://endeavor.org.br ">
+            <fieldset>
+                <input type="search" name="s" id="buscar" autocomplete="off" value="">
+                <label for="buscar">Qual o seu desafio?</label>
+            </fieldset>
+        </form>
+
+    </header>
+
+        <main role="main" id="main">
+<article class="principal">
+        <header class="  Hero  ">
+                <div class="content">
+
+            <h1>3 dicas valiosas para aumentar suas vendas online</h1>
+
+                        
+                                        <ul class="categorias">
+                                            <li><a href="https://endeavor.org.br/desafio/marketing/">Marketing</a></li>
+                                            <li><a href="https://endeavor.org.br/desafio/operacoes/">Operações</a></li>
+                                            <li><a href="https://endeavor.org.br/desafio/vendas/">Vendas</a></li>
+                                            <li><a href="https://endeavor.org.br/formato/artigos/">Artigos</a></li>
+                                    </ul>
+            
+                        <time class="post-time  only-desk" datetime="2015-07-12">12 de julho de 2015</time>
+
+        </div>
+    </header>
+
+        
+        <address class="CardAutor">
+        <img class="autor-img" src="https://images.endeavor.org.br/uploads/2018/06/26140400/userID_2362-160x160.png" alt="Endeavor Brasil ">
+        <div class="group">
+                            <a class="nome" href="#">Endeavor Brasil  </a>
+                        
+                        
+                            <p class="resumo only-desk">A Endeavor é a organização líder no apoio a empreendedores de alto impacto ao redor do mundo. Presente em mais de 30 países, e com 8 escritórios em diversas regiões do Brasil.</p>
+                    </div>
+    </address>
+
+    
+            <p style="text-align: justify;"><strong>Da logística ao seu plano de comunicação, confira dicas valiosas para aumentar suas vendas online</strong></p>
+<p style="text-align: justify;">O e-commerce veio para ficar e as vendas online ainda são uma grande oportunidade para PMEs. Dados do <a href="http://www.ebit.com.br" target="_blank" rel="nofollow">e-bit</a> indicam que o setor teve crescimento de 24% e faturamento de mais de R$ 35,8 bilhões em 2014. Mais dados: o volume de pedidos feitos via internet chegou a 103,4 milhões, resultado 17% superior ao apresentado no ano anterior. O valor médio das compras foi de R$ 347, ante R$ 327 em 2013. Bastante coisa, não é? Pois é. E você está pensando: o que eu preciso fazer para conseguir uma fatia maior desse bolo, não é?</p>
+<p style="text-align: justify;">De ricos a não tão ricos, todos compram pela internet –e cada vez mais. Dados indicam que, em 2014, consumidores de classes A e B representaram 62% do total das vendas online, enquanto as classes C e D corresponderam a 27%. Agora, um alerta: os seus compradores estão comprando cada vez mais em sites internacionais. Ao que parece, 4 em cada 10 consumidores do e-commerce<a href="https://endeavor.org.br/a-importancia-da-concorrencia/" target="_blank"> já compraram na concorrência além mar</a> (dos chineses, mais precisamente), compras que chegam a um montante de R$ 6,6 bilhões. Sim, mais ou menos 18% do faturamento do e-commerce no Brasil, 18% do seu bolo.</p>
+<blockquote>
+<p style="text-align: justify;">Mas, o que é preciso para aumentar as vendas online? Simples: um bom site, preços competitivos, garantia de entrega, cumprimento de prazos, ou uma logística impecável. Mas, também é preciso ganhar a confiança do consumidor, e garantir que ele vá conseguir te encontrar na internet. Sua loja não estará à vista, como o varejo tradicional, o seu consumidor chegará até ela navegando na internet.</p>
+</blockquote>
+<p style="text-align: justify;">A seguir separamos dicas para você pensar cada pilar do seu negócio e aumentar suas vendas online</p>
+<p style="text-align: justify;"><strong>Vamos começar pela logística?</strong></p>
+<p style="text-align: justify;">Para um e-commerce dar certo você precisa de muito, mas muito mais do que apenas montar um site. Apesar de muitas lojas de e-c0mmerce terem realmente começado apenas com um site, e um computador no sofá de casa, dispensando quaisquer outros investimentos, a chave de sucesso de um e-commerce que começa a crescer é a operação. Ou seja: <a href="https://endeavor.org.br/logistica-empresarial/" target="_blank">a logística é o coração do seu negócio</a>.</p>
+<p style="text-align: justify;">Quando o seu cliente escolhe comprar com você pela internet, ele está esperando de você muito mais do que apenas a mercadoria, é uma relação de confiança, e também muito frágil. Você precisa garantir para o seu cliente uma boa experiência de compra, sua marca precisa transmitir segurança e, claro, seus preços precisam ser bons. Qualquer deslize ou problema no percurso de entrega da mercadoria, ou até mesmo após a entrega, pode significar que você perdeu o cliente para sempre.</p>
+<p style="text-align: justify;">O artigo <a href="https://endeavor.org.br/como-bebe-store-faz-logistica-seu-estoque/" target="_blank">Quer ter clientes mais felizes e satisfeitos? Comece pela gestão de estoque</a> vai direto ao ponto. O texto traz o caso da Bebê Store, que passou por diferentes experiências em termos de gestão do estoque. O empreendedor percebeu que a logística era uma peça chave da sua operação, diretamente ligada ao sucesso do negócio. E apenas quando acertaram os ponteiros dessa etapa, a empresa deslanchou.</p>
+<p style="text-align: justify;">Portanto, não vacile. E mais uma coisa: o seu papel não termina quando a mercadoria é entregue. Sua logística precisa prever quaisquer problemas que seu cliente venha a ter com o produto (como ele vir danificado, por exemplo).</p>
+<p style="text-align: justify;">No vídeo a seguir, o diretor executivo da Escalena dá uma aula ferramenta para quem quer abrir um comércio digital no Brasil, passando por tópicos como valor de logística, risco de fraude, plataforma, entrega, sistema de pagamento e muitos outros. Vale a pena parar para assistir:</p>
+<p style="text-align: justify;"><iframe src="https://fast.player.liquidplatform.com/pApiv2/embed/0e0f29808cfbab05f4886b17ef74ac94/0fc87a27cb9002431a62d5f3a136d94c/?autoStart=false&amp;startOutput=480p" width="784" height="538" frameborder="0"></iframe></p>
+<p style="text-align: justify;"><strong>Você precisa montar um site. Mas precisa ir além disso</strong></p>
+<p style="text-align: justify;">Bom, se você pretende fazer vendas online, precisa saber que seu site é muito importante, e que economizar com esse recurso pode custar a vida do seu negócio. Antes de mais nada, <a href="https://endeavor.org.br/arquitetura-da-informacao/" target="_blank">o seu site precisa ter uma boa arquitetura da informação</a>. O que isso significa? Significa que ele será um site intuitivo, de fácil navegação, onde o cliente vai se sentir a vontade para ir e vir e encontrar todas as informações de que necessita, sem dúvidas e sem imprevistos.</p>
+<p style="text-align: justify;">Arquitetura da informação é o que vai definir a hierarquia das informações dentro do seu site, e também qual o caminho que o consumidor fará até encontrar o que busca e conseguir finalizar a compra. Uma dica é contar com um profissional que entenda de UX (User Experience) no momento de montar sua loja virtual. Acredite, o olhar treinado desse profissional fará toda a diferença na vida do seu cliente.</p>
+<p style="text-align: justify;"><strong>Seu site precisa atender aos critérios de SEO e você deve investir em uma estratégia forte de marketing digital</strong></p>
+<p style="text-align: justify;">Se você está na internet, não tem jeito, você precisa entender como funciona o mundo digital e trabalhar dentro das regras dele, isso significa que precisa fazer um trabalho de SEO (sigla para Search Engine Optimization), ter uma estratégia forte de marketing digital e investir em conteúdo relevante.</p>
+<p style="text-align: justify;">Sabe quando você busca alguma palavra do Google e vem uma lista de resultados? <a href="https://endeavor.org.br/o-que-e-seo-e-como-usar-no-seu-negocio/" target="_blank">É o SEO que vai determinar quem estará posicionado à frente de quem nessa lista</a>. Ou seja, em primeiro lugar o seu site precisa ser desenvolvido de tal forma que o Google entenda do que ele trata (ou o que você vende). Mais um critério importante do Google: se o seu site é otimizado, ou seja, se ele funciona em aparelhos celulares. Sobre SEO, não vamos mentir, é um trabalho complexo, que demandará atenção diária, como a logística da sua empresa. Mas não tenha dúvidas de que é uma área muito estratégica para ajudar seus clientes a chegarem até você.</p>
+<p style="text-align: justify;">O também Google vai avaliar do seu site relevância. Esse ponto é mais complicado, está relacionado àquilo que os outros falam dele. Há links ou conteúdos relacionados ao seu site circulando pelas redes sociais? O seu site precisa ser vivo, isso significa que é importante que você tenha também uma estratégia de<a href="https://endeavor.org.br/10-principais-erros-do-marketing-de-conteudo/" target="_blank"> marketing de conteúdo</a>, com um blog por exemplo, e posts frequentes que sejam replicados nas redes sociais.</p>
+<p style="text-align: justify;"><a href="https://endeavor.org.br/10-principais-erros-do-marketing-de-conteudo/" target="_blank">O tipo de conteúdo que você vai veicular atrelado à sua marca também é decisivo</a>. É por meio do conteúdo que você vai criar laços com seu consumidor. Então, sua empresa precisa ser revelante. É<span style="color: #414141;"> por meio do </span><strong style="color: #414141;">plano de comunicação</strong><span style="color: #414141;"> que você poderá atingir os objetivos estabelecidos no – ora, veja – planejamento estratégico, ou de marketing do seu negócio. <a href="https://endeavor.org.br/plano-de-comunicacao/" target="_blank">Aqui você encontra dicas importantes para fazer um bom plano de comunicação. </a> </span></p>
+<p style="text-align: justify;">Bom, crescer as <strong>vendas online</strong> não é uma tarefa simples, exige muito trabalho tanto para melhorar a operação logística da empresa e tornar preços mais competitivos, quanto no campo digital, por meio de uma estratégia de marketing digital que alie SEO à conteúdo relevante. Boa sorte!</p>
+<p style="text-align: justify;"><strong>Leia mais:</strong></p>
+<p style="text-align: justify;"><a href="https://endeavor.org.br/e-commerce-de-a-a-z/" target="_blank">Estratégias e gestão de e-commerce</a></p>
+
+    
+    
+<aside class="Compartilhe">
+    <div class="content">
+                    <div class="MaisArtigos  only-desk">
+                <h4 class="mais-title">Mais artigos sobre:</h4>
+                <ul class="categorias">
+                                            <li><a href="https://endeavor.org.br/desafio/marketing/">Marketing</a></li>
+                                            <li><a href="https://endeavor.org.br/desafio/operacoes/">Operações</a></li>
+                                            <li><a href="https://endeavor.org.br/desafio/vendas/">Vendas</a></li>
+                                            <li><a href="https://endeavor.org.br/formato/artigos/">Artigos</a></li>
+                                            <li><a href="https://endeavor.org.br/setor/varejo-online/">Varejo Online</a></li>
+                                            <li><a href="https://endeavor.org.br/maturidade/validacao/">Validação</a></li>
+                                            <li><a href="https://endeavor.org.br/tag/cadeia-de-suprimentos/">Cadeia de Suprimentos</a></li>
+                                            <li><a href="https://endeavor.org.br/tag/logistica/">Logística</a></li>
+                                            <li><a href="https://endeavor.org.br/tag/marketing-vendas/">Marketing &amp; Vendas</a></li>
+                                            <li><a href="https://endeavor.org.br/tag/marketing-digital/">Marketing Digital</a></li>
+                                            <li><a href="https://endeavor.org.br/tag/planejamento-de-demanda/">Planejamento de Demanda</a></li>
+                                            <li><a href="https://endeavor.org.br/tag/planejamento-de-vendas/">Planejamento de Vendas</a></li>
+                                    </ul>
+            </div>
+                            <div class="Gostou">
+                <h4 class="gostou-title">Gostou? Compartilhe</h4>
+                <a class="twitter" target="_blank" href="https://twitter.com/share?url=https://endeavor.org.br/operacoes/vendas-online/" title="Compartilhar no Twitter"> No Twitter </a>
+                <a class="facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://endeavor.org.br/operacoes/vendas-online/" title="Compartilhar no Facebook"> No Facebook </a>
+                <a class="linkedin" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://endeavor.org.br/operacoes/vendas-online/" title="Compartilhar no LinkedIn"> No LinkedIn </a>
+                <a class="whatsapp  only-mob" target="_blank" href="whatsapp://send?text=https://endeavor.org.br/operacoes/vendas-online/ - 3 dicas valiosas para aumentar suas vendas online" title="Compartilhar no WhatsApp"> No WhatsApp </a>
+            </div>
+            </div>
+</aside>
+</article>
+
+<aside class="  NewsLetter  ">
+    <form method="post" action="https://endeavor.org.br/captalead/" class="form -leads-ajax-form ">
+        <input type="hidden" name="identificador" value="nova-newsletter">
+        <input type="hidden" name="rdstation_post-title" value="3 dicas valiosas para aumentar suas vendas online">
+        <input type="hidden" name="rdstation_post-url" value="https://endeavor.org.br/operacoes/vendas-online/">
+        <input type="hidden" name="rdstation_tags" value="nova-newsletter">
+        <fieldset>
+            <legend class="news-title">Faça parte da maior rede de empreendedores de alto crescimento do país.</legend>
+            <hr>
+            <span class="alert-msg">  </span>
+            <input type="email" name="email" placeholder="Digite aqui seu email" value="" required="required">
+            <input type="submit" value="Assine nossa newsletter">
+            <p class="news-text">Fique tranquilo, nós não enviamos emails indesejados.</p>
+        </fieldset>
+    </form>
+</aside>
+    <aside class="  VejaMais  ">
+        <div class="content">
+            <h2 class="vm-title" >Veja mais conteúdos que podem te interessar</h2>
+            <hr>
+
+            <ul class="CardList-1-3-3">
+                                    <li class="Card">
+                                                    <a class="card-thumb"href="https://endeavor.org.br/marketing/a-digitalizacao-do-varejo-e-o-futuro-do-trade-marketing/">
+                                $imagem_padrao
+                                                                    <img class="card-img" src="https://images.endeavor.org.br/uploads/2018/08/24183836/digitalizacao-varejo-novo-marketing-735x306.png" alt="A digitalização do varejo é o futuro do trade marketing">
+                                                                                            </a>
+                                                <div class="desc">
+                                                            <ul class="categorias">
+                                                                            <li><a class="card-categoria" href="https://endeavor.org.br/desafio/marketing/">Marketing</a></li>
+                                                                    </ul>
+                                
+                            
+                                                            <a href="https://endeavor.org.br/marketing/a-digitalizacao-do-varejo-e-o-futuro-do-trade-marketing/">
+                                    <h3 class="card-title">A digitalização do varejo é o futuro do trade marketing</h3>
+                                </a>
+                                                    </div>
+                    </li>
+                                    <li class="Card">
+                                                    <a class="card-thumb"href="https://endeavor.org.br/vendas/customer-success-o-desafio-para-sua-empresa-continuar-a-crescer/">
+                                $imagem_padrao
+                                                                    <img class="card-img" src="https://images.endeavor.org.br/uploads/2018/08/24111134/sensedata-735x306.png" alt="Customer Success: o desafio para sua empresa continuar a crescer">
+                                                                                                    <img src="https://images.endeavor.org.br/uploads/2018/07/10132131/bandeirinha-cpfl-inova.png" class="card-bandana" alt="Apoio ">
+                                                            </a>
+                                                <div class="desc">
+                                                            <ul class="categorias">
+                                                                            <li><a class="card-categoria" href="https://endeavor.org.br/desafio/operacoes/">Operações</a></li>
+                                                                            <li><a class="card-categoria" href="https://endeavor.org.br/desafio/vendas/">Vendas</a></li>
+                                                                    </ul>
+                                
+                            
+                                                            <a href="https://endeavor.org.br/vendas/customer-success-o-desafio-para-sua-empresa-continuar-a-crescer/">
+                                    <h3 class="card-title">Customer Success: o desafio para sua empresa continuar a crescer</h3>
+                                </a>
+                                                    </div>
+                    </li>
+                                    <li class="Card">
+                                                    <a class="card-thumb"href="https://endeavor.org.br/vendas/os-caminhos-para-a-abordagem-eficiente-de-clientes-b2b/">
+                                $imagem_padrao
+                                                                    <img class="card-img" src="https://images.endeavor.org.br/uploads/2018/07/31105600/funil-vendas-eurofarma-735x307.png" alt="Os caminhos para a abordagem eficiente de clientes B2B">
+                                                                                                    <img src="https://images.endeavor.org.br/uploads/2018/07/10132134/bandeirinha-eurofarma-synapsis.png" class="card-bandana" alt="Apoio ">
+                                                            </a>
+                                                <div class="desc">
+                                                            <ul class="categorias">
+                                                                            <li><a class="card-categoria" href="https://endeavor.org.br/desafio/vendas/">Vendas</a></li>
+                                                                    </ul>
+                                
+                            
+                                                            <a href="https://endeavor.org.br/vendas/os-caminhos-para-a-abordagem-eficiente-de-clientes-b2b/">
+                                    <h3 class="card-title">Os caminhos para a abordagem eficiente de clientes B2B</h3>
+                                </a>
+                                                    </div>
+                    </li>
+                                    <li class="Card">
+                                                    <a class="card-thumb"href="https://endeavor.org.br/vendas/maquina-de-vendas-crie-um-processo-previsivel-e-escalavel-para-crescer-2/">
+                                $imagem_padrao
+                                                                    <img class="card-img" src="https://images.endeavor.org.br/uploads/2017/08/M%C3%A1quina-de-Vendas-crie-um-processo-previs%C3%ADvel-e-escal%C3%A1vel-para-crescer-300x181.jpg" alt="Máquina de Vendas: crie um processo previsível e escalável para crescer">
+                                                                                            </a>
+                                                <div class="desc">
+                                                            <ul class="categorias">
+                                                                            <li><a class="card-categoria" href="https://endeavor.org.br/desafio/vendas/">Vendas</a></li>
+                                                                    </ul>
+                                
+                            
+                                                            <a href="https://endeavor.org.br/vendas/maquina-de-vendas-crie-um-processo-previsivel-e-escalavel-para-crescer-2/">
+                                    <h3 class="card-title">Máquina de Vendas: crie um processo previsível e escalável para crescer</h3>
+                                </a>
+                                                    </div>
+                    </li>
+                                    <li class="Card">
+                                                    <a class="card-thumb"href="https://endeavor.org.br/marketing/tudo-sobre-customer-success-16-passos-para-implementar-na-sua-empresa/">
+                                $imagem_padrao
+                                                                    <img class="card-img" src="https://images.endeavor.org.br/uploads/2017/04/A-func%CC%A7a%CC%83o-do-Customer-Success-na-empresa-300x181.png" alt="Tudo sobre Customer Success: 16 passos para implementar na sua empresa">
+                                                                                            </a>
+                                                <div class="desc">
+                                                            <ul class="categorias">
+                                                                            <li><a class="card-categoria" href="https://endeavor.org.br/desafio/marketing/">Marketing</a></li>
+                                                                    </ul>
+                                
+                            
+                                                            <a href="https://endeavor.org.br/marketing/tudo-sobre-customer-success-16-passos-para-implementar-na-sua-empresa/">
+                                    <h3 class="card-title">Tudo sobre Customer Success: 16 passos para implementar na sua empresa</h3>
+                                </a>
+                                                    </div>
+                    </li>
+                                    <li class="Card">
+                                                    <a class="card-thumb"href="https://endeavor.org.br/vendas/quer-vender-bem-entao-saiba-exatamente-o-que-o-cliente-precisa-comprar/">
+                                $imagem_padrao
+                                                                    <img class="card-img" src="https://images.endeavor.org.br/uploads/2018/06/21155806/Quer-vender-bem-Enta%CC%83o-saiba-exatamente-o-que-o-cliente-precisa-comprar-735x445.jpg" alt="Quer vender bem? Então saiba exatamente o que o cliente precisa comprar">
+                                                                                                    <img src="https://images.endeavor.org.br/uploads/2018/07/10132137/bandeirinha-radar.png" class="card-bandana" alt="Apoio ">
+                                                            </a>
+                                                <div class="desc">
+                                                            <ul class="categorias">
+                                                                            <li><a class="card-categoria" href="https://endeavor.org.br/desafio/vendas/">Vendas</a></li>
+                                                                    </ul>
+                                
+                            
+                                                            <a href="https://endeavor.org.br/vendas/quer-vender-bem-entao-saiba-exatamente-o-que-o-cliente-precisa-comprar/">
+                                    <h3 class="card-title">Quer vender bem? Então saiba exatamente o que o cliente precisa comprar</h3>
+                                </a>
+                                                    </div>
+                    </li>
+                            </ul>
+        </div>
+    </aside>
+</main>
+
+            
+    <footer class="Footer">
+
+        <div class="content -border">
+            <div class = " Sobre "><h4 class="footer-logo">Endeavor Brasil</h4>			<div class="textwidget"><p>
+Somos uma organização global sem fins lucrativos com a missão de multiplicar o poder de transformação dos empreendedores. No Brasil desde 2000, promovemos um ambiente de negócios que estimula o crescimento e o impacto dos empreendedores à frente das Scale-ups, empresas de alto crescimento com modelo escalável e inovador.
+</p></div>
+		</div><div class = " col "><h4>Mapa do Site</h4><div class="menu-rodape-mapa-do-site-container"><ul id="menu-rodape-mapa-do-site" class="menu"><li id="menu-item-29482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29482"><a href="https://endeavor.org.br/inspiracao/">Inspiração</a></li>
+<li id="menu-item-29481" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29481"><a href="https://endeavor.org.br/conteudos/">Conteúdo</a></li>
+<li id="menu-item-31529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31529"><a href="https://endeavor.org.br/videos/">Vídeos</a></li>
+<li id="menu-item-30237" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30237"><a href="https://endeavor.org.br/quem-apoiamos/">Quem Apoiamos</a></li>
+<li id="menu-item-30224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30224"><a href="https://endeavor.org.br/politicas-publicas">Políticas Públicas</a></li>
+</ul></div></div><div class = " col "><h4>Recursos</h4><div class="menu-rodape-recursos-container"><ul id="menu-rodape-recursos" class="menu"><li id="menu-item-30234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30234"><a href="http://www.scaleupendeavor.org.br/">Programas Scale-up</a></li>
+<li id="menu-item-30236" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30236"><a href="https://endeavor.org.br/formato/ebooks/">eBooks</a></li>
+<li id="menu-item-30235" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30235"><a href="https://endeavor.org.br/formato/ferramentas-e-planilhas/">Ferramentas e Planilhas</a></li>
+<li id="menu-item-30692" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30692"><a target="_blank" href="https://checkup.endeavor.org.br/#/landing">Check-up da sua Empresa</a></li>
+</ul></div></div><div class = " col "><h4>Endeavor</h4><div class="menu-rodape-informacoes-container"><ul id="menu-rodape-informacoes" class="menu"><li id="menu-item-30233" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30233"><a href="https://endeavor.org.br/quem-somos">Quem Somos</a></li>
+<li id="menu-item-29486" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29486"><a href="https://jobs.kenoby.com/endeavor">Trabalhe conosco</a></li>
+<li id="menu-item-29487" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29487"><a target="_blank" href="http://doe.endeavor.org.br/">Doe para a nossa causa</a></li>
+<li id="menu-item-29485" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29485"><a href="https://endeavor.org.br/contato/">Fale com a gente</a></li>
+</ul></div></div>        </div>
+
+        <div class="content">
+            <div class = " SocialMidia "><h2 class="widgettitle">Siga nossas redes sociais</h2>
+<div class="menu-rodape-socialmidia-container"><ul id="menu-rodape-socialmidia" class="menu"><li id="menu-item-29731" class="tw menu-item menu-item-type-custom menu-item-object-custom menu-item-29731"><a target="_blank" href="https://twitter.com/endeavorbrasil?lang=en">Twitter</a></li>
+<li id="menu-item-29734" class="ig menu-item menu-item-type-custom menu-item-object-custom menu-item-29734"><a target="_blank" href="https://www.instagram.com/endeavorbrasil/">Instagram</a></li>
+<li id="menu-item-29735" class="yt menu-item menu-item-type-custom menu-item-object-custom menu-item-29735"><a target="_blank" href="https://www.youtube.com/user/endeavorbrasil">Youtube</a></li>
+<li id="menu-item-29736" class="fb menu-item menu-item-type-custom menu-item-object-custom menu-item-29736"><a target="_blank" href="http://facebook.com/endeavorbrasil">Facebook</a></li>
+<li id="menu-item-29738" class="in menu-item menu-item-type-custom menu-item-object-custom menu-item-29738"><a target="_blank" href="https://pt.linkedin.com/company/endeavor-brasil">linkedin</a></li>
+<li id="menu-item-29739" class="rs menu-item menu-item-type-custom menu-item-object-custom menu-item-29739"><a target="_blank" href="/feed/">RSS</a></li>
+</ul></div></div><div class = " Copyrights "><div class="textwidget custom-html-widget"><small class="copyrights">
+© 2018 Endeavor Brasil - <a href="https://endeavor.org.br/termos-de-uso-e-politica-de-privacidade/">Política de Privacidade e Termos de Uso</a>
+</small></div></div>        </div>
+
+    </footer>
+    
+
+    <div class="mask">  
+    </div>
+
+    
+    
+
+<section class=" Modal UserOptions ">
+
+    <button class="fechar ModalClose  only-mob"><svg height="100%" viewBox="0 0 16 16" width="100%"><path d="M13 4L12 3 8 7 4 3 3 4 7 8 3 12 4 13 8 9 12 13 13 12 9 8z" fill="#37474f"></button>
+
+    <div class="ModalHeader">
+
+    </div>
+
+    <div class="Modal-Content">
+
+        <div class="themeOptions  only-desk">
+
+                            <figure class=" DestaqueImg ">
+                    <img  src="https://images.endeavor.org.br/uploads/2018/06/25190737/login-imagem.png" alt="">
+                </figure>
+            
+            <div class="limit">
+                                    <h2 class="OptionsTitle">
+                        Junte-se a mais de 150 mil empreendedores de impacto!                    </h2>
+                    <hr>
+                
+                <ul class="ListOprions">
+<li>Acesso livre e gratuito a todos os conteúdos</li>
+<li>Biblioteca pessoal de conteúdos salvos e favoritos</li>
+<li>Conteúdos personalizados para o seu desafio de crescimento</li>
+<li>Novidades sobre eventos e programas de aceleração</li>
+</ul>
+            </div>
+
+        </div>
+
+        <div class="RegisterOptions hasTab">
+
+            <div class="tab-nav">
+                <a href="#tab_1" class="tabNavItem -JS-active">Entrar na minha conta</a>
+                <a href="#tab_2" class="tabNavItem ">Criar minha conta</a>
+            </div>
+
+            <div class="tabs">
+                <div class="tabItem -JS-active" id="tab_1">
+                    <div class="LoginForm">
+
+                        <form name="loginform" id="loginform" action="https://endeavor.org.br/wp-login.php" method="post">
+
+                            <label for="user_login">
+                                <input type="text" name="log" id="user_login" placeholder="Usuário ou e-mail" class="input" value="" size="20">
+                            </label>
+                            <label for="user_pass">
+                                <input type="password" name="pwd" id="user_pass" placeholder="Senha" class="input" value="" size="20">
+                            </label>
+                            <input name="rememberme" type="checkbox" id="rememberme" value="forever">
+                            <label for="rememberme">Lembrar-me  <a class="lostpass" href="https://endeavor.org.br/wp-login.php?action=lostpassword"> Esqueci minha senha </a> </label>
+
+
+                                                            <div class="g-recaptcha" data-sitekey="6LclwlgUAAAAAKDI4zddLg3eaptJgcywYoH9YVD8"></div>
+                            
+                            <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Acessar">
+                            <input type="hidden" name="redirect_to" value="//endeavor.org.br/operacoes/vendas-online/">
+                            <input type="hidden" name="testcookie" value="1">
+
+                        </form>
+
+                                                                        
+                    </div>
+                </div>
+                <div class="tabItem" id="tab_2">
+                    <div class="RegistroForm">
+
+                        <form name="registerform" id="registerform" action="https://endeavor.org.br/wp-login.php?action=register" method="post" novalidate="novalidate">
+                            <label for="user_login_cad">
+                                <input type="text" name="user_login" placeholder="Nome de usuário" id="user_login_cad" class="input" value="" size="20">
+                            </label>
+                            <label for="user_email_cad">
+                                <input type="email" name="user_email" placeholder="E-mail" id="user_email_cad" class="input" value="" size="25" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            </label>
+                            <input name="empreendedor" type="checkbox" id="empreendedor" value="1">
+                            <label for="empreendedor">
+                                Sou Empreendedor
+                            </label>
+
+                            <input name="newsletter_parceiros" type="checkbox" id="newsletter_parceiros" value="1">
+                            <label for="newsletter_parceiros">
+                                Quero receber e-mail com conteúdos e convites de parceiros da Endeavor
+                            </label>
+
+                            <input name="newsletter_endeavor" type="checkbox" id="newsletter_endeavor" value="1">
+                            <label for="newsletter_endeavor">
+                                Quero receber e-mail com conteúdos e convite de eventos da Endeavor
+                            </label>
+                                                            <div class="g-recaptcha" data-sitekey="6LclwlgUAAAAAKDI4zddLg3eaptJgcywYoH9YVD8"></div>
+                                                                                    <input type="submit" name="wp-submit" id="wp-submit_cad" class="button button-primary button-large" value="Cadastre-se">
+                        </form>
+
+                                                                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ModalFooter">
+
+    </div>
+
+</section>
+
+<div class="modal-mask"></div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSP2BML"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="mask-campanha">
+    </div><script type='text/javascript' src='https://endeavor.org.br/wp-content/plugins/modalnaitor/assets/scripts.js?ver=1.0'></script>
+<script type='text/javascript' src='https://endeavor.org.br/wp-content/themes/endeavor/assets/js/scripts.js?ver=1.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var userdata_info = {"ajax_url":"https:\/\/endeavor.org.br\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://endeavor.org.br/wp-content/themes/endeavor/assets/js/userdata.js?ver=1.0'></script>
+<script type='text/javascript' src='https://endeavor.org.br/wp-content/themes/endeavor/assets/js/slick.min.js?ver=1.0'></script>
+<script type='text/javascript' src='https://endeavor.org.br/wp-content/themes/endeavor/assets/js/jquery.maskMoney.min.js?ver=1.0'></script>
+<script type='text/javascript' src='https://endeavor.org.br/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+<script src="https://js-agent.newrelic.com/nr-1071.min.js"></script>        <!-- Cached: 18/09/2018 04:19:41 -->
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"21ac6749e2","applicationID":"128717422","transactionName":"bl1UYxAAC0pXARJfV1cXd1QWCApXGREPWF9VXQ==","queueTime":0,"applicationTime":777,"atts":"QhpXFVgaGEQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

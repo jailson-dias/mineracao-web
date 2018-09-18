@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="alternate" type="application/rss+xml" title="Plataforma de Ciência de Dados aplicada à Saúde RSS" href="https://bigdata.icict.fiocruz.br/rss.xml" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="https://bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/files//favicon_0.png" type="image/png" />
+  <title>Plataforma de Ciência de Dados aplicada à Saúde</title>
+  <style type="text/css" media="all">
+@import url("https://bigdata.icict.fiocruz.br/modules/system/system.base.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/modules/system/system.menus.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/modules/system/system.messages.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/modules/system/system.theme.css?pew1p8");
+</style>
+<style type="text/css" media="all">
+@import url("https://bigdata.icict.fiocruz.br/modules/comment/comment.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/sites/all/modules/date/date_api/date.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/modules/field/theme/field.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/modules/node/node.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/modules/search/search.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/modules/user/user.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/sites/all/modules/views/css/views.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/sites/all/modules/ckeditor/css/ckeditor.css?pew1p8");
+</style>
+<style type="text/css" media="all">
+@import url("https://bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/themes/sunrise/css/plugins/prettyPhoto.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/sites/all/modules/ctools/css/ctools.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/sites/all/modules/lightbox2/css/lightbox.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/sites/all/libraries/sidr/stylesheets/jquery.sidr.dark.css?pew1p8");
+</style>
+<link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all" />
+<style type="text/css" media="all">
+@import url("https://bigdata.icict.fiocruz.br/sites/all/libraries/superfish/css/superfish.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/sites/all/libraries/superfish/css/superfish-smallscreen.css?pew1p8");
+</style>
+<style type="text/css" media="all">
+@import url("https://bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/themes/sunrise/css/style.css?pew1p8");
+@import url("https://bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/themes/sunrise/css/local.css?pew1p8");
+</style>
+
+<!--[if (lt IE 9)]>
+<link type="text/css" rel="stylesheet" href="https://bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/themes/sunrise/css/ie8.css?pew1p8" media="all" />
+<![endif]-->
+
+    
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="/sites/bigdata.icict.fiocruz.br/themes/sunrise/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/sites/bigdata.icict.fiocruz.br/themes/sunrise/js/jquery.countTo.js"></script>
+
+  <script type="text/javascript">
+    jQuery(function ($) {
+      
+      // start all the timers
+      $('.timer').each(count);
+//      $('.timer').each().onfocus(count);
+
+      function count(options) {
+        var $this = $(this);
+        options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+        $this.countTo(options);
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/misc/drupal.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/modules/single_page_site/js/single-page-site-menu.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/files//languages/pt-br_3EN0Qy1C4cP43DFQOX3nww4BqQgLI2rm-bgoBEeOnLk.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/themes/sunrise/js/plugins/jquery.quicksand.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/themes/sunrise/js/plugins/quicksand_initialize.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/themes/sunrise/js/plugins/jquery.prettyPhoto.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/modules/lightbox2/js/lightbox.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/modules/responsive_menus/styles/sidr/js/responsive_menus_sidr.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/libraries/sidr/jquery.sidr.min.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/modules/google_analytics/googleanalytics.js?pew1p8"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-85981425-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready(function($) { 
+		$(window).scroll(function() {
+			if($(this).scrollTop() != 0) {
+				$("#toTop").fadeIn();	
+			} else {
+				$("#toTop").fadeOut();
+			}
+		});
+		
+		$("#toTop").click(function() {
+			$("body,html").animate({scrollTop:0},800);
+		});	
+		
+		});
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/libraries/superfish/jquery.hoverIntent.minified.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/libraries/superfish/sfsmallscreen.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/libraries/superfish/supposition.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/libraries/superfish/superfish.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/libraries/superfish/supersubs.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/all/modules/superfish/superfish.js?pew1p8"></script>
+<script type="text/javascript" src="https://bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/themes/sunrise/js/jquery.browser.min.js?pew1p8"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"sunrise","theme_token":"jwB4hurEsT9Ohk-StIgx3_bsbmJOMT3wkOcAORSpcqE","js":{"0":1,"\/\/code.jquery.com\/jquery-1.7.2.min.js":1,"1":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/single_page_site\/js\/single-page-site-menu.js":1,"public:\/\/languages\/pt-br_3EN0Qy1C4cP43DFQOX3nww4BqQgLI2rm-bgoBEeOnLk.js":1,"sites\/bigdata.icict.fiocruz.br\/themes\/sunrise\/js\/plugins\/jquery.quicksand.js":1,"sites\/bigdata.icict.fiocruz.br\/themes\/sunrise\/js\/plugins\/quicksand_initialize.js":1,"sites\/bigdata.icict.fiocruz.br\/themes\/sunrise\/js\/plugins\/jquery.prettyPhoto.js":1,"sites\/all\/modules\/lightbox2\/js\/lightbox.js":1,"sites\/all\/modules\/responsive_menus\/styles\/sidr\/js\/responsive_menus_sidr.js":1,"sites\/all\/libraries\/sidr\/jquery.sidr.min.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"2":1,"\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.2.0\/js\/bootstrap.min.js":1,"3":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/sfsmallscreen.js":1,"sites\/all\/libraries\/superfish\/supposition.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/superfish\/superfish.js":1,"sites\/bigdata.icict.fiocruz.br\/themes\/sunrise\/js\/jquery.browser.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/bigdata.icict.fiocruz.br\/themes\/sunrise\/css\/plugins\/prettyPhoto.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/lightbox2\/css\/lightbox.css":1,"sites\/all\/libraries\/sidr\/stylesheets\/jquery.sidr.dark.css":1,"\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.2.0\/css\/bootstrap.min.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/libraries\/superfish\/css\/superfish-smallscreen.css":1,"sites\/bigdata.icict.fiocruz.br\/themes\/sunrise\/css\/style.css":1,"sites\/bigdata.icict.fiocruz.br\/themes\/sunrise\/color\/colors.css":1,"sites\/bigdata.icict.fiocruz.br\/themes\/sunrise\/css\/local.css":1,"sites\/bigdata.icict.fiocruz.br\/themes\/sunrise\/css\/ie8.css":1}},"lightbox2":{"rtl":"0","file_path":"\/(\\w\\w\/)public:\/","default_image":"\/sites\/all\/modules\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":true,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":false,"disable_resize":false,"disable_zoom":false,"force_show_nav":false,"show_caption":true,"loop_items":false,"node_link_text":"View Image Details","node_link_target":false,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":false,"useragent":"python-requests\/2.19.1"},"responsive_menus":[{"selectors":["#superfish-1"],"trigger_txt":"Menu","side":"left","speed":"200","media_size":"768","displace":"1","renaming":1,"onOpen":"","onClose":"","responsive_menus_style":"sidr"}],"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/":true},"superfish":{"1":{"id":"1","sf":{"animation":{"opacity":"show"},"speed":"fast","autoArrows":false,"dropShadows":false},"plugins":{"smallscreen":{"mode":"window_width","breakpointUnit":"px","title":"Menu principal"},"supposition":true,"supersubs":{"minWidth":"16"}}}},"singlePage":{"className":"li","menuClass":"#main-menu","isFrontpage":1}});
+//--><!]]>
+</script>
+  
+</head>
+<body class="html front not-logged-in no-sidebars page-node" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Pular para o conteúdo principal</a>
+  </div>
+    <div id="header-top-content">
+            <!-- #header-top-content -->
+          <div class="region region-header-top-content">
+    <div id="block-block-13" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <script type="text/javascript" src="/sites/all/barra_gov/barra-gov.js"></script>
+  </div>
+</div>
+<div id="block-block-14" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <style type="text/css" media="all">
+    @import url("/sites/all/barra_fiocruz/barra_fiocruz.css");
+</style>
+<div class="barra_portal_prov_global">
+<div class="barra_portal_prov">
+    <div class="fiocruz_logo"><a href="http://portal.fiocruz.br/"><span class="invisivel">Fiocruz</span></a></div>
+    <div class="fale_com_fiocruz_barra"><a href="http://portal.fiocruz.br/pt-br/content/fale-conosco/">Fale com a Fiocruz</a></div>
+    <div class="fundacao_link"><a href="http://portal.fiocruz.br/"><span class="invisivel">Fundação Oswaldo Cruz</span></a></div>
+</div>
+</div>  </div>
+</div>
+<div id="block-block-15" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <img id="header-topo" src="/sites/bigdata.icict.fiocruz.br/themes/sunrise/images/faixa-topo.png" usemap="#map" />
+<map name="map">
+
+<area shape="rect" coords="250,15,670,60" alt="ICICT" href="http://www.icict.fiocruz.br" target="_blank">
+<area shape="rect" coords="795,30,1275,60" alt="Ciência de Dados" href="https://www.bigdata.icict.fiocruz.br">
+
+</map>  </div>
+</div>
+  </div>
+        <!-- EOF:#header-top-content -->
+    </div>
+<div id="header-banner-wrapper">
+    <div id="header-wrapper">
+                    <!-- #header-top -->
+            <div id="header-top" class="clearfix" >
+                <!--<div class="container">-->
+                <!-- #header-top-inside -->
+                <div id="header-top-inside" class="clearfix">
+                    <div class="container">
+                        <div class="col-md-6">                 
+                                                            <!-- #header-top-left -->
+                                <div id="header-top-left" class="clearfix">
+                                      <div class="region region-header-top-left">
+    <div id="block-block-16" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <div id="banner">
+
+       
+        <a href="/" style="text-decoration:none">	  
+        <p class="texto-banner">
+            <span class="texto-grande">Ciência de Dados</span></br>
+            aplicada à Saúde
+        </p></a>
+    </div>  </div>
+</div>
+  </div>
+                                </div>
+                                <!-- EOF:#header-top-left -->
+                                                    </div>
+
+                        <div class="col-md-6">    
+                                                            <!-- #header-top-right -->
+                                <div id="header-top-right" class="clearfix">
+                                      <div class="region region-header-top-right">
+    <div id="block-search-form" class="block block-search clearfix">
+
+    
+  <div class="content">
+    <form action="/" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Formulário de busca</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+ <input onblur="if (this.value == &#039;&#039;) {this.value = &#039;Buscar no site&#039;;}" onfocus="if (this.value == &#039;Buscar no site&#039;) {this.value = &#039;&#039;;}" type="text" id="edit-search-block-form--2" name="search_block_form" value="Buscar no site" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input value="" type="submit" id="edit-submit" name="op" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-0Ld2tYd9iCvBtyvLOAZxRUbwdsQRfBb5ACE7mGHPXBY" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+<div id="block-block-7" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <div class="social">
+<a href="#" title="Facebook" class="facebook"></a><br /><a href="#" title="Twitter" class="twitter"></a><br /><a href="#" title="YouTube" class="youtube"></a><br /><a href="#" title="G+" class="gplus"></a><br /><a href="#" title="Skype" class="skype"></a><br /><a href="#" title="RSS" class="rss"></a>
+</div>
+  </div>
+</div>
+<div id="block-block-1" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <div class="social" style="    margin-top: -75px;">
+<ul class="social">
+	<li>&nbsp;</li>
+	<li>&nbsp;</li>
+	<li>&nbsp;</li>
+	<li>&nbsp;</li>
+	<li>&nbsp;</li>
+	<li>&nbsp;</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+                                </div>
+                                <!-- EOF:#header-top-right -->
+                                                    </div>
+                    </div>
+                </div>
+                <!-- EOF: #header-top-inside -->
+
+
+                <!--</div>-->
+            </div>
+            <!-- EOF: #header-top -->    
+        
+        <!-- header -->
+        <header id="header" role="banner" class="clearfix">
+            <!--  <div class="container"> -->
+
+            <!--</div>-->
+
+        </header>
+        <!-- EOF: #header --> 
+
+        <!-- #main-navigation --> 
+
+        <div id="main-navigation" class="clearfix">
+
+            <!-- #main-navigation-inside -->
+            <div id="main-navigation-inside" class="clearfix">
+                <nav role="navigation">
+                                              <div class="region region-navigation">
+    <div id="block-superfish-1" class="block block-superfish clearfix">
+
+    
+  <div class="content">
+    <ul  id="superfish-1" class="menu sf-menu sf-main-menu sf-horizontal sf-style-none sf-total-items-8 sf-parent-items-1 sf-single-items-7"><li id="menu-949-1" class="first odd sf-item-1 sf-depth-1 sf-no-children"><a href="//bigdata.icict.fiocruz.br/" class="menu-home sf-depth-1">Home</a></li><li id="menu-689-1" class="middle even sf-item-2 sf-depth-1 sf-no-children"><a href="/infraestruturatecnologica" class="sf-depth-1">Interface Tecnológica</a></li><li id="menu-872-1" class="middle odd sf-item-3 sf-depth-1 sf-no-children"><a href="/galeria-visual-de-dados" class="sf-depth-1">Galeria visual de dados</a></li><li id="menu-687-1" class="middle even sf-item-4 sf-depth-1 sf-no-children"><a href="/acesse-a-plataforma-big-data-em-saude" class="sf-depth-1">Acesse a Plataforma</a></li><li id="menu-686-1" class="middle odd sf-item-5 sf-depth-1 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent"><a href="/capacitacao" class="sf-depth-1 menuparent">Capacitação</a><ul><li id="menu-683-1" class="firstandlast odd sf-item-1 sf-depth-2 sf-no-children"><a href="/aprendizagem-colaborativa" class="sf-depth-2">Aprendizagem Colaborativa</a></li></ul></li><li id="menu-681-1" class="middle even sf-item-6 sf-depth-1 sf-no-children"><a href="/equipe" class="sf-depth-1">Equipe</a></li><li id="menu-691-1" class="middle odd sf-item-7 sf-depth-1 sf-no-children"><a href="/instituicoesparceiras" class="sf-depth-1">Instituições Parceiras</a></li><li id="menu-398-1" class="last even sf-item-8 sf-depth-1 sf-no-children"><a href="/contato" class="sf-depth-1">Contato</a></li></ul>  </div>
+</div>
+  </div>
+                                    </nav>
+            </div>
+            <!-- EOF: #main-navigation-inside -->
+        </div>
+        <!-- EOF: #main-navigation -->    
+
+        <!-- #messages-console -->
+                <!-- EOF: #messages-console -->
+
+        <div id="social2" class="clearfix" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">                 
+                                                      <div class="region region-social">
+    <div id="block-block-2" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <p>&nbsp;</p>
+<div style="background: url(//bigdata.icict.fiocruz.br/sites/bigdata.icict.fiocruz.br/themes/sunrise/images/fundo-area1.png);  padding: 2%;     padding-top: 0.5%;     padding-bottom: 0.5%;">
+<p class="rtecenter" style="font-size:1.2em;   color: white;     padding: 2%;    background: rgba(0,0,0,0.7);    font-size: 1.2em;    padding: 2%;"><a href="/node/1" style="color: white; text-decoration: none;">Ciência de Dados é um conjunto de estratégias, ferramentas e técnicas que busca reunir equipes multidisciplinares formadas por pesquisadores com conhecimento substantivo do problema em análise - no nosso caso saúde pública - estatísticos, matemáticos e cientistas da computação. Trata-se de um campo de estudo promissor e destaca-se pela capacidade de auxiliar a descoberta de informação útil a partir de grandes bases de dados e a tomada de decisão orientada por dados</a></p>
+</div>
+<p>&nbsp;</p>
+
+<p class="rtecenter"><iframe align="middle" frameborder="0" scrolling="no" src="/sites/bigdata.icict.fiocruz.br/files/grafico/index.html" style="width: 100%; min-height: 280px; height: auto; margin-top: -60px;"></iframe></p>
+
+<p><a class="post_read_more" href="Apresentação">Leia mais</a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+  </div>
+</div>
+  </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div> <!-- #header-wrapper -->
+
+        
+</div> <!-- #header, menu, slogan and banner wrapper --> 
+
+<!-- #page -->
+<div id="page" class="clearfix">
+
+            <!-- #top-content -->
+        <div id="top-content" class="clearfix">
+            <div class="container">
+                <!-- #top-content-inside -->
+                <div id="top-content-inside" class="clearfix">
+                    <div class="row">
+                        <div class="col-md-12">
+                              <div class="region region-highlighted">
+    <div id="block-block-3" class="block block-block clearfix">
+
+    
+  <div class="content">
+     
+<div class="col-md-4">
+<a href="/análise-visual" style="text-decoration: none !important;">
+<div class="post-highlighted">
+<img src="/sites/bigdata.icict.fiocruz.br/themes/sunrise/images/analise.png"/>
+<h3>Análise Visual</h3>
+<p>Indexação, extração e análise visual de dados</p> 				
+</div>
+</a>
+</div>
+
+<div class="col-md-4">
+<a href="/mineração-de-dados-e-análise-preditiva" style="text-decoration: none !important;">
+<div class="post-highlighted">
+<img src="/sites/bigdata.icict.fiocruz.br/themes/sunrise/images/mineracao.png"/>
+<h3>Mineração de Dados e Análise Preditiva</h3>
+<p>Conexão aos dados da Plataforma via R Studio Server</p> 				
+</div>
+</a>
+</div>
+
+<div class="col-md-4">
+<a href="/data-science-lab" style="text-decoration: none !important;">
+<div class="post-highlighted">
+<img src="/sites/bigdata.icict.fiocruz.br/themes/sunrise/images/mineracao2.png"/>
+<h3>Data Science Lab</h3>
+<p>Inovação e Aprendizagem Colaborativa</p>				
+</div>
+</a>
+</div>
+
+  </div>
+</div>
+  </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- EOF:#top-content-inside -->
+
+            </div>
+        </div>
+        <!-- EOF: #top-content -->
+    
+    <div id="fundo">
+                    <!-- #promoted -->
+            <div id="promoted" class="clearfix">
+                <div id="promoted-inside" class="clearfix">
+                    <div class="row">
+                        <div class="col-md-12">
+                              <div class="region region-promoted">
+    <div id="block-block-10" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <h1 class="rtecenter">O Projeto</h1>
+<p> </p>
+<p class="rtecenter"><span style="font-size:20px;">Tem como objetivo principal desenvolver e disponibilizar Plataforma de Ciência de Dados (<em>PaaS – Platform as a Service</em>) para armazenamento, gestão e análise de grandes quantidades de dados para pesquisadores, docentes e discentes de instituições de ensino e pesquisa</span></p>
+<p> </p>
+<p> </p>
+<div style="background-color:#eee; padding: 20px; margin:0;">
+<h3 class="rtecenter">Microdados de Interesse</h3>
+<p class="rtecenter"><span class="rtecenter"><span style="font-size:20px;">(a partir do ano 2.000)</span> </span></p>
+<p><span class="rtecenter"> </span></p>
+<p><span class="rtecenter"> </span></p>
+<div class="row">
+<div class="col-md-3">
+<div class="post-highlighted">
+<h3 class="rtecenter"><span class="rtecenter"><b class="timer" data-from="0" data-speed="8000" data-to="180">180</b> milhões</span></h3>
+<p class="rtecenter"><span class="rtecenter">autorizações de internações hospitalares (Datasus)</span></p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="post-highlighted">
+<h3 class="rtecenter"><span class="rtecenter"><b class="timer" data-from="0" data-speed="8000" data-to="47">47</b> milhões</span></h3>
+<p class="rtecenter"><span class="rtecenter">registros de nascimentos (Datasus)</span></p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="post-highlighted">
+<h3 class="rtecenter"><span class="rtecenter"><b class="timer" data-from="0" data-speed="8000" data-to="17">17</b> milhões</span></h3>
+<p class="rtecenter"><span class="rtecenter">declarações de óbito (Datasus)</span></p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="post-highlighted">
+<h3 class="rtecenter"><span class="rtecenter"><b class="timer" data-from="0" data-speed="8000" data-to="24">24</b> bilhões</span></h3>
+<p class="rtecenter"><span class="rtecenter">registros de procedimentos ambulatoriais (Datasus)</span></p>
+</div>
+</div>
+<p class="rtecenter"><span class="rtecenter"> </span></p>
+<p class="rtecenter"><span class="rtecenter"> </span></p>
+<p class="rtecenter"><span class="rtecenter"> </span></p>
+<div class="row">
+<div class="col-md-3">
+<div class="post-highlighted">
+<h3 class="rtecenter"><span class="rtecenter"><b class="timer" data-decimals="2" data-from="0" data-speed="8000" data-to="2.5">2.5</b> bilhões</span></h3>
+<p class="rtecenter"><span class="rtecenter">registros de doses de vacinas (Datasus)</span></p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="post-highlighted">
+<h3 class="rtecenter"><span class="rtecenter"><b class="timer" data-from="0" data-speed="8000" data-to="120">120</b> milhões</span></h3>
+<p class="rtecenter"><span class="rtecenter">questionários domiciliares dos Censos de 2000 e 2010 (IBGE)</span></p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="post-highlighted">
+<h3 class="rtecenter"><span class="rtecenter">Milhões+</span></h3>
+<p class="rtecenter"><span class="rtecenter">medições e previsões diárias realizadas pelo INPE e CEMADEN</span></p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="post-highlighted">
+<h3 class="rtecenter"><span class="rtecenter">Bilhões+</span></h3>
+<p class="rtecenter"><span class="rtecenter">interações nas redes sociais e buscadores de conteúdo</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="rtejustify"> </p>
+<h1 class="rtecenter"> </h1>
+<h1 class="rtecenter"><font color="#666666"><font face="Arial, serif"><font><b>Grupo de pesquisa Ciência de Dados aplicada à Saúde</b></font></font></font></h1>
+<p> </p>
+<p class="rtecenter"><span style="font-size:20px;"><font color="#666666"><font face="Arial, serif">As principais repercussões dos trabalhos do grupo são: coletar, processar e analisar informações por meio da Ciência de Dados nos permitirá planejar, monitorar e avaliar políticas públicas e serviços de saúde em tempo real, gerando indicadores de alerta e painéis de monitoramento bastante específicos. Proporcionar aos pesquisadores, docentes e discentes do Icict e de outras instituições acesso facilitado e qualificado a grandes quantidades de microdados. Formar quadros estratégicos que contribuam para o alcance da missão do Instituto, objetivando atender às demandas sociais do SUS.</font></font></span></p>
+<div class="row">
+<div class="col-md-6"><a href="http://dgp.cnpq.br/dgp/espelhogrupo/4230691756969719"><img alt="" src="/sites/bigdata.icict.fiocruz.br/files//ctools/dgp.png" style="width: 275px; height: 183px; margin-left: auto;" /></a></div>
+<div class="col-md-6"><a href="http://dgp.cnpq.br/dgp/espelhogrupo/4230691756969719"><img alt="" src="/sites/bigdata.icict.fiocruz.br/files//ctools/certificado.png" style="width: 135px; height: 106px; margin-right: auto; margin-top: 35px;" /></a></div>
+</div>
+<p> </p>
+<p> </p>
+<div style="background-color:#fff; padding: 20px; margin:0;">
+<h1 class="rtecenter">Infraestrutura Tecnológica</h1>
+<p> </p>
+<p class="rtecenter"> </p>
+<p class="rtecenter"><strong><span style="font-size:20px;">2 servidores para gestão do cluster</span></strong></p>
+<p class="rtecenter"><span style="font-size:20px;">4 Processadores Intel Xeon E5-2630 v3 com 8 Núcleos e 2.4GHz cada</span></p>
+<p class="rtecenter"><span style="font-size:20px;">256 GB memória RDIMM total (128 GB por servidor)</span></p>
+<p class="rtecenter"> </p>
+<p class="rtecenter"><span style="font-size:20px;"><strong>4 servidores para armazenamento de dados</strong></span></p>
+<p class="rtecenter"><span style="font-size:20px;">40 Terabytes de armazenamento</span></p>
+<p class="rtecenter"><span style="font-size:20px;">8 Processadores Intel Xeon E5-2630 v3 com 8 Núcleos e 2.4GHz cada</span></p>
+<p class="rtecenter"><span style="font-size:20px;">64 GB memória RDIMM total (16 GB por servidor)</span></p>
+<p class="rtecenter"> </p>
+<p class="rtecenter"><span style="font-size:20px;"><strong>10 Gigabit conexão internet</strong> </span></p>
+<p class="rtecenter"><img alt="LNCC - Laboratório Nacional de Computação Científica" src="/sites/bigdata.icict.fiocruz.br/files//ctools/lnnc.png" style="width: 250px; height: 129px; margin-left: auto; margin-right: auto;" /></p>
+<div class="col-md-6">
+<div class="glyphicon-block rtecenter"> </div>
+</div>
+<p> </p>
+<p> </p>
+</div>
+  </div>
+</div>
+  </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- EOF: #promoted -->
+        
+
+        <!-- EOF:#page -->
+
+
+
+                    <!-- #google_map_region -->
+            <div id="google_map_region" class="clearfix">
+                  <div class="region region-google-map-region">
+    <div id="block-block-8" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <!-- <span id="map-anchor"><a href="javascript:hideMap()" class="map-toggle"></a></span> -->  </div>
+</div>
+<div id="block-block-17" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <iframe style="pointer-events:none"  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d918.9924057879682!2d-43.240517539425674!3d-22.87758051295341!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997ebae30f0927%3A0xc84731b6c44cab88!2sAv.+Brasil%2C+4006+-+Mar%C3%A9%2C+Rio+de+Janeiro+-+RJ!5e0!3m2!1sen!2sbr!4v1476714626206" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+</div>
+  </div>
+            </div>
+                <!-- EOF:#google_map_region -->
+
+        <!-- #map-canvas -->
+        <!--<div id="map-canvas" style="position: relative; overflow: hidden; display: block; background-color: rgb(229, 227, 223);"></div>-->
+        <!-- EOF: #map-canvas -->
+
+    </div>
+    
+    <footer id="subfooter" class="clearfix">
+        <div class="container">
+
+            <!-- #subfooter-inside -->
+            <div id="subfooter-inside" class="clearfix">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- #subfooter-left -->
+                        <div class="subfooter-area">                  
+                                                              <div class="region region-footer">
+    <div id="block-block-6" class="block block-block clearfix">
+
+    
+  <div class="content">
+    <div class="texto" style="&lt;br /&gt;&#10;    float: left;&lt;br /&gt;&#10;    width: 90%;&lt;br /&gt;&#10;"><br /><p class="credits">Instituto de Comunicação e Informação Científica e Tecnológica em Saúde (Icict/Fiocruz)<br />
+Av. Brasil, 4.036 - Pavilhão da Expansão da Fiocruz, sala 713 - Manguinhos, Rio de Janeiro  CEP: 21040-361<br />
+Tel.: (+55 21) 3882-9229 | (+55 21) 3865-3131 / 2270-2668 </p>
+<p class="credits"> </p>
+<p class="credits"><span style="font-size:10px;">Este portal é regido pela <a href="//portal.fiocruz.br/sites/portal.fiocruz.br/files/documentos/portaria_-_politica_de_acesso_aberto_ao_conhecimento_na_fiocruz.pdf" target="_blank">Política de Acesso Aberto ao Conhecimento</a>, que busca garantir à sociedade o acesso gratuito, público e aberto ao conteúdo integral de toda obra intelectual produzida pela Fiocruz.</span></p>
+<p class="credits">
+<img alt="" height="15" src="//portal.fiocruz.br/sites/portal.fiocruz.br/themes/portalnovo/images/by-nc.png" style="float: left;" title="" width="80" /> <span style="font-size:10px;">O conteúdo deste portal pode ser utilizado para todos os fins não comerciais, respeitados e reservados os direitos morais dos autores.</span></p>
+</div>
+<p> </p>
+  </div>
+</div>
+  </div>
+                                                    </div>
+                        <!-- EOF: #subfooter-left -->
+                    </div>
+                </div>
+            </div>
+            <!-- EOF: #subfooter-inside -->
+
+        </div>
+    </footer>
+    <!-- EOF:#subfooter -->
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+			jQuery("a[data-rel^=prettyPhoto], a.prettyPhoto, a[rel^=prettyPhoto]").prettyPhoto({
+			    overlay_gallery: false,
+			    theme: "pp_default",
+			});
+//--><!]]>
+</script>
+</body>
+</html>

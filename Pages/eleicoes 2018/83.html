@@ -1,0 +1,1980 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7924d91e21","applicationID":"38623054","transactionName":"blYDYEJUDBEFBkcIClccLGJzGiwHExZwDgtNQQ5YXFAQTS0RVgw=","queueTime":0,"applicationTime":390,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <link rel="preconnect" href="//obj.ibxk.com.br">
+    <link rel="preconnect" href="//img.ibxk.com.br">
+    <link rel="preconnect" href="//mega.ibxk.com.br">
+    <link rel="preconnect" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagservices.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="dns-prefetch" href="//apis.google.com">
+    <meta property="fb:pages" content="291139254273536" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="candidatos eleicoes 2018 nomes engracados bizarros divertidos senado brasil santinho fotos">
+    <meta name="description" content="Você pode até ter dúvidas sobre quem votar, mas não pode negar que o que não falta nos candidatos brasileiros é criatividade">
+    <meta name="p:domain_verify" content="ef8ecce608c68b4836dd844db02df403" />
+    <title>Eleições 2018: alguns dos candidatos com os nomes mais engraçados - Mega Curioso</title>
+
+    <link rel="search" type="application/opensearchdescription+xml" title="Mega Curioso" href="https://www.megacurioso.com.br/opensearch.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0 - Novidades do Mega Curioso" href="http://rss.megacurioso.com.br/feed">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+
+        <link rel="alternate" href="android-app://com.gruponzn.tecmundo/http/tecmundo.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm" />
+
+        <link href="ios-app://866586113/megacurioso/news?Url=/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm" rel="alternate" />
+
+        <link rel="amphtml" href="https://m.megacurioso.com.br/amp/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm">
+
+    
+
+
+<meta property="og:title" content="Elei&#231;&#245;es 2018: alguns dos candidatos com os nomes mais engra&#231;ados" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm" />
+<meta property="og:image" itemprop="image" content="https://mega.ibxk.com.br/2018/09/14/14132037248109.jpg?w=600" />
+<meta property="og:site_name" content="MegaCurioso - As curiosidades mais interessantes est&#227;o aqui" />
+<meta property="og:description" content="Voc&#234; pode at&#233; ter d&#250;vidas sobre quem votar, mas n&#227;o pode negar que o que n&#227;o falta nos candidatos brasileiros &#233; criatividade" />
+<meta property="og:locale" content="pt_BR">
+<meta property="fb:app_id" content="388348837923180" />
+<link rel="canonical" href="https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm" />
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm">
+<link rel="image_src" href="https://mega.ibxk.com.br/2018/09/14/14132037248109.jpg">
+
+
+    
+    
+
+
+    <meta property="article:section" content="Curiosidades">
+    <meta property="article:published_time" content="2018-09-14T13:30:42-03:00">
+    <meta property="article:author" content="https://www.facebook.com/megacurioso" />
+    <meta property="article:publisher" content="https://www.facebook.com/megacurioso" />
+        <meta property="article:tag" content="Ciência" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@MegaCurioso">
+    <meta name="twitter:creator" content="@MegaCurioso">
+    <meta name="twitter:description" content="Voc&#234; pode at&#233; ter d&#250;vidas sobre quem votar, mas n&#227;o pode negar que o que n&#227;o falta nos candidatos brasileiros &#233; criatividade">
+    <meta name="twitter:title" content="Elei&#231;&#245;es 2018: alguns dos candidatos com os nomes mais engra&#231;ados">
+    <meta name="twitter:image" content="https://mega.ibxk.com.br/2018/09/14/14132037248109.jpg">
+    <meta name="twitter:url" content="https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm">
+    <meta name="twitter:app:name:iphone" content="Mega Curioso" />
+    <meta name="twitter:app:id:iphone" content="866586113" />
+    <meta name="twitter:app:url:iphone" content="megacurioso://news?Url=/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm" />
+    <meta name="twitter:app:name:googleplay" content="Mega Curioso" />
+    <meta name="twitter:app:id:googleplay" content="com.gruponzn.megacurioso" />
+    <meta name="twitter:app:url:googleplay" content="https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm" />
+    <meta name="thumbnail" content="https://mega.ibxk.com.br/2018/09/14/14132037248109.jpg" />
+
+    <meta property="og:image" itemprop="image" content="https://mega.ibxk.com.br//2018/09/14/14131949717108.jpg?w=600" />
+
+    <meta property="og:see_also" content="https://www.megacurioso.com.br/educacao/108478-pesquisadores-querem-concorrer-as-eleicoes-para-formar-bancada-da-ciencia.htm" />
+    <meta property="og:see_also" content="https://www.megacurioso.com.br/estilo-de-vida/106853-fake-news-podem-influenciar-eleicoes-de-2018-aponta-estudo.htm" />
+    <meta property="og:see_also" content="https://www.megacurioso.com.br/artes-cultura/105820-jim-carrey-faz-campanha-contra-o-facebook-e-deixa-a-rede-social.htm" />
+    <meta property="og:see_also" content="https://www.megacurioso.com.br/ciencia/105206-software-de-leitura-biometrica-usado-pelo-fbi-contem-codigo-russo.htm" />
+    <meta property="og:see_also" content="https://www.megacurioso.com.br/bizarro/37822-voce-se-acha-esquisito-entao-confira-a-historia-dessas-5-pessoas.htm" />
+
+
+
+    <meta name="Robots" content="INDEX,FOLLOW">
+    <meta name="RESOURCE-TYPE" content="DOCUMENT">
+    <meta name="DISTRIBUTION" content="GLOBAL">
+    <meta name="AUTHOR" content="MegaCurioso">
+    <meta name="COPYRIGHT" content="Copyright (c) Grupo NZN">
+    <meta name="language" content="pt-br">
+    <meta name="RATING" content="GENERAL">
+    <!-- end / meta tags -->
+
+    <!-- styles -->
+    
+
+        <link href="https://obj-mega.ibxk.com.br/megacurioso/assets/css/megacurioso.20180912202342.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:600,700,800|Roboto:400,400i,500,700,700i" rel="stylesheet">
+    
+
+    <!-- / styles -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- responsive images -->
+    <script>document.createElement("picture");</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js" async></script>
+    <script>
+        window.lazySizesConfig = window.lazySizesConfig || {};
+        window.lazySizesConfig.customMedia = {
+            '--small': '(min-width: 576px)',
+            '--medium': '(min-width: 768px)',
+            '--large': '(min-width: 1024px)',
+            '--extra-large': '(min-width: 1440px)'
+        };
+    </script>
+    <!-- end / responsive images -->
+
+    <link rel="manifest" href="/manifest.json">
+
+<!-- navegg -->
+<script id="navegg" type="text/javascript" src="//tag.navdmp.com/tm13767.js"></script>
+<!-- end /navegg --><!-- nzn-analytics -->
+<script type="text/javascript" async>
+        var _nznt = _nznt || [];
+        _nznt.push(['_setAccount', 'NZN-WAP-00001']);
+        _nznt.push(['_selectorQueryFR', '[nzn-bi-item="article-body"]']);
+        (function () {
+            var nzna = document.createElement('script');
+            nzna.type = 'text/javascript';
+            nzna.async = true;
+            nzna.src = 'https://lb.nznweb.com.br/tracker/tracker.fr.2018091010.min.js';
+            var snzn = document.getElementsByTagName('script')[0]; snzn.parentNode.insertBefore(nzna, snzn);
+        })();
+</script>
+<!-- /nzn-analytics -->
+<!-- analytics -->
+<script type="text/javascript">
+            var adblock = true;
+</script>
+<script type="text/javascript" src="/adframe.js"></script>
+<script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-144680-19', 'auto', { 'name': 'trackerOne' });  // propriedade exclusiva do megacurioso
+        ga('create', 'UA-144680-62', 'auto', { 'name': 'mgc' });  // propriedade geral da nzn
+
+        if (adblock) {
+            EeLgcbrOHVva = 'Yes';
+        } else {
+            EeLgcbrOHVva = 'No';
+        }
+
+        if (typeof ga !== 'undefined' && EeLgcbrOHVva == 'Yes') {
+            ga('trackerOne.set', 'dimension1', 'Possui Adblock');
+        } else if (typeof ga !== 'undefined' && EeLgcbrOHVva == 'No') {
+            ga('trackerOne.set', 'dimension1', 'Não Possui Adblock');
+        }
+
+        ga('trackerOne.send', 'pageview');
+        ga('mgc.send', 'pageview');
+</script>
+<!-- end / analytics -->
+
+<!-- Ads -->
+    <script type="text/javascript">
+        (function () {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+            '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+<script type="text/javascript">
+    window.IS_MOBILE = function () { return /(iPhone|iPod|Android|Mobile|BlackBerry)/g.test(navigator.userAgent); };
+    function addClass(s, c) { s.classList ? s.classList.add(c) : s.className += " " + c };
+    window.NZN = window.NZN || {};
+    NZN.queue = NZN.queue || [];
+</script>
+<!-- end / Ads --><!-- Admotion  -->
+<script type="text/javascript">
+        var nvgParameters = {},
+            nvgSegment = new Array('gender', 'age', 'education', 'interest', 'product', 'marital', 'income', 'cluster', 'product', 'career', 'brand', 'connection', 'decive', 'os');
+        for (i = 0; i < nvgSegment.length; i++) {
+            if (nvgGetSegment(nvgSegment[i]) != '') {
+                if (nvgSegment[i] == 'interest' || nvgSegment[i] == 'product') nvgParameters['d_nvg_' + nvgSegment[i]] = nvgGetSegment(nvgSegment[i]).replace(/-/g, '|');
+                else nvgParameters['d_nvg_' + nvgSegment[i]] = nvgGetSegment(nvgSegment[i]);
+            }
+        }
+</script>
+<!-- Prebid -->
+<script type="text/javascript">
+    var rubicontag = rubicontag || {};
+    rubicontag.cmd = rubicontag.cmd || [];
+    var gptadslots = [];
+</script>
+
+<script type="text/javascript" src="https://obj.ibxk.com.br/js/megacurioso/prebid@1.15.0.js" async></script>
+
+
+<script type="text/javascript">
+    var PREBID_TIMEOUT = 3000;
+    var targeting = {};
+
+    var pbjs = pbjs || {};
+    pbjs.que = pbjs.que || [];
+
+    pbjs.que.push(function () {
+        pbjs.setConfig({
+            //debug: true,
+            priceGranularity: customConfigObject,
+            bidderSequence: 'random'
+        });
+        //pbjs.setBidderSequence('random');
+        //pbjs.setPriceGranularity("dense");
+        //pbjs.setPriceGranularity(customConfigObject);
+        //console.log(customConfigObject);
+    });
+
+    var customConfigObject = {
+        "buckets": [{
+            "precision": 2, 
+            "min": 0,
+            "max": 50,
+            "increment": 0.01
+        }]
+    };
+    
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function () {
+        googletag.pubads().disableInitialLoad();
+    });
+
+    function sendAdserverRequest() {
+        if (pbjs.adserverRequestSent) return;
+        pbjs.adserverRequestSent = true;
+        googletag.cmd.push(function () {
+            pbjs.que.push(function () {
+                //pbjs.enableSendAllBids();
+                pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+            });
+        });
+    }
+
+    setTimeout(function () {
+        sendAdserverRequest();
+    }, PREBID_TIMEOUT);
+</script>
+<!-- / Prebid -->
+    
+    <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
+    <script type="text/javascript">
+        console.log("REFERENCIA", document.referrer.toString());
+        var urlReferrer = document.referrer.toString();
+        var currentUUID = generateUUID();
+        var conteudoImprorio = false;
+        var urlMateria = 'https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm';
+
+        function generateUUID() {
+            var d = new Date().getTime();
+            var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = (d + Math.random()*16)%16 | 0;
+                d = Math.floor(d/16);
+                return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+            });
+            return uuid;
+        };
+
+        if(conteudoImprorio)
+        {
+            if(document.referrer.indexOf("/restrito/?url=") === -1)
+            {
+                window.location = "/restrito/?url=" + urlMateria;
+            }
+        }
+    </script>
+
+    <!-- WORLDSENSE TAG INTERNA -->
+        <script src="//cdn.worldsense.com/hyperlinker.js" async worldsense-property-id="ws-nzn"></script>
+
+<!-- TABOOLA TAG INTERNA -->
+<script type="text/javascript">
+    window._taboola = window._taboola || [];
+    _taboola.push({ article: 'auto' });
+    !function (e, f, u) {
+        e.async = 1;
+        e.src = u;
+        f.parentNode.insertBefore(e, f);
+    }(document.createElement('script'),
+    document.getElementsByTagName('script')[0],
+    '//cdn.taboola.com/libtrc/gruponzn-megacurioso/loader.js');
+</script>
+
+    
+    
+<script>
+    var adUnits = [{
+        code: 'mgc_internal_leaderboard',
+        sizes: [[728, 90], [970, 90], [970, 250]],
+        bids: [{
+            bidder: 'rubicon',
+            params: {
+                accountId: 14126,
+                siteId: 71696,
+                zoneId: '646246',
+                sizes: [2, 55, 57],
+                position: 'atf',
+                inventory: targeting
+            }
+        },
+        {
+            bidder: 'aol',
+            params: {
+                placement: 4562125,
+                network: 11065.1
+            }
+        },
+        {
+            bidder: 'appnexus',
+            params: {
+                placementId: 11412293
+            }
+        },
+        {
+            bidder: 'criteo',
+            params: {
+                zoneId: 1089118
+            }
+        },
+        {
+            bidder: 'criteo',
+            params: {
+                zoneId: 1089119
+            }
+        }]
+    }, {
+        code: 'mgc_internal_square-halfpage',
+        sizes: [[300, 600], [300, 250]],
+        bids: [{
+            bidder: 'rubicon',
+            params: {
+                accountId: 14126,
+                siteId: 71696,
+                zoneId: '341288-15',
+                position: 'atf',
+                inventory: targeting
+            }
+        },
+        {
+            bidder: 'aol',
+            params: {
+                placement: 4561081,
+                network: 11065.1
+            }
+        },
+        {
+            bidder: 'appnexus',
+            params: {
+                placementId: 11412470
+            }
+        },
+        {
+            bidder: 'criteo',
+            params: {
+                zoneId: 1089116
+            }
+        }]
+    }];
+
+    pbjs.que.push(function () {
+        pbjs.addAdUnits(adUnits);
+        pbjs.requestBids({
+            bidsBackHandler: sendAdserverRequest
+        });
+    });
+
+    googletag.cmd.push(function () {
+
+        try {
+            nvg13767.dfpnvg();
+        } catch (e) { }; // navegg & tail
+
+        if (!window.IS_MOBILE()) {
+            gptadslots[7] = googletag.defineSlot('/36373682/mgc/internal/premium', [[1, 1], [1920, 750], [1920, 1080], [1800, 1000], [1900, 935], [1920, 510]], 'mgc_internal_premium').addService(googletag.pubads());
+            //gptadslots[0] = googletag.defineSlot('/36373682/mgc/internal/halfpage', [[300, 600], [300, 250]], 'mgc_internal_halfpage').addService(googletag.pubads());
+            gptadslots[1] = googletag.defineSlot('/36373682/mgc/internal/leaderboard', [[728, 90], [970, 90], [970, 250]], 'mgc_internal_leaderboard').addService(googletag.pubads());
+            gptadslots[2] = googletag.defineSlot('/36373682/mgc/internal/square-halfpage', [[300, 600], [300, 250]], 'mgc_internal_square-halfpage').addService(googletag.pubads());
+        }
+
+        googletag.defineOutOfPageSlot('/36373682/mgc/internal/inline', 'mgc_internal_inline').addService(googletag.pubads());
+        googletag.defineOutOfPageSlot('/1010728/mgc/seedtag', 'mgc_seedtag').addService(googletag.pubads());
+
+        googletag.pubads().setTargeting("caderno", ['ciencia']);
+        googletag.pubads().setTargeting("megacurioso_tag", ["ciencia","politica","109110"]);
+        googletag.pubads().setTargeting("referer", [document.location.href]);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().enableAsyncRendering();
+        googletag.pubads().enableSingleRequest();
+
+        googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+            if (!event.isEmpty) {
+
+                var domId = event.slot.getSlotElementId();
+
+                function removeLeaderboard() {
+                    googletag.pubads().clear([gptadslots[1]]);
+                    var emptySlot = document.getElementById(gptadslots[1].getSlotElementId());
+                    emptySlot.parentNode.innerHTML = "";
+                    $('#ad-leaderboard-fixed').stickyLeaderboard('destroy');
+                }
+
+                if (event.slot == gptadslots[7] && event.size[0] && event.size[1]) {
+                    switch (event.size.join()) {
+                        case "1920,510":
+                            addClass(document.body, "ad-premium-mega");
+                            break;
+                        case "1920,750":
+                            addClass(document.body, "ad-premium-bg");
+                            break;
+                        case "1920,1080":
+                            addClass(document.body, "ad-premium-env");
+                            removeLeaderboard();
+                            break;
+                        case "1800,1000":
+                            addClass(document.body, "ad-premium-backdrop");
+                            removeLeaderboard();
+                            break;
+                    }
+                }
+                else if (event.slot == gptadslots[1]) {
+                    NZN.queue.push(function () {
+                        $('#ad-leaderboard-fixed').stickyLeaderboard({
+                            scrollLimit: 670,
+                            objLeaderboard: gptadslots[1],
+                            adsReload: true,
+                            forceViewAbility: true,
+                            debug: false
+                        });
+                    });
+                }
+                else if (event.slot == gptadslots[2]) {
+                    $(document.body).trigger("sticky_kit:recalc");
+
+                    $('#mgc_internal_square-halfpage').AdUpdateScroll({
+                        topDistance: $(".article-footer").offset().top,
+                        objLeaderboard: gptadslots[2],
+                        debug: false,
+                        adsReload: true
+                    })
+                }
+
+            }
+        });
+
+        googletag.enableServices();
+    });
+</script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NFMHW66');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFMHW66"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="fb-root"></div>
+
+    <!-- icons sprite -->
+    <svg style="display:none"><symbol viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></symbol><symbol viewBox="0 0 10.15 11.97" id="icon-bookmark-small"><path fill="currentColor" stroke="#currentColor" stroke-width=".15" d="M9.923.466a.881.881 0 0 0-.409-.321.865.865 0 0 0-.345-.07H.981a.864.864 0 0 0-.344.07.88.88 0 0 0-.41.32.829.829 0 0 0-.152.484v10.07a.83.83 0 0 0 .152.485.88.88 0 0 0 .41.32.864.864 0 0 0 .344.07.932.932 0 0 0 .648-.258l3.446-3.311 3.445 3.313a.93.93 0 0 0 .648.25.909.909 0 0 0 .754-.383.828.828 0 0 0 .152-.484V.95a.829.829 0 0 0-.151-.484zm-.848 10.309l-3.3-3.172-.7-.664-.7.664-3.3 3.172v-9.7h8v9.7z"/></symbol><symbol viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-check-circle"><path d="M22 11.07V12a10 10 0 1 1-5.93-9.14"/><path d="M23 3L12 14l-3-3"/></symbol><symbol viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-chevron-left"><path d="M15 18l-6-6 6-6"/></symbol><symbol viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-chevron-right"><path d="M9 18l6-6-6-6"/></symbol><symbol viewBox="0 0 48 48" id="icon-clock"><path d="M24 2C11.9 2 2 11.9 2 24s9.9 22 22 22 22-9.9 22-22S36.1 2 24 2zm0 42C13 44 4 35 4 24S13 4 24 4s20 9 20 20-9 20-20 20z"/><path d="M25 10h-2v15h11v-2h-9z"/></symbol><symbol viewBox="0 0 12.4 12.393" id="icon-clock-small"><g transform="translate(.2 .2)" fill="currentColor" stroke="currentColor" stroke-width=".4"><path d="M11.521 3.661A5.879 5.879 0 0 0 8.326.479 5.9 5.9 0 0 0 5.99 0a5.837 5.837 0 0 0-2.329.479A5.9 5.9 0 0 0 .472 3.661a5.994 5.994 0 0 0 0 4.665 5.91 5.91 0 0 0 3.189 3.189 5.837 5.837 0 0 0 2.329.479 5.9 5.9 0 0 0 2.336-.479 5.892 5.892 0 0 0 3.2-3.189 5.919 5.919 0 0 0 0-4.665zm-.958 4.98a5.264 5.264 0 0 1-1.929 1.922 5.168 5.168 0 0 1-2.644.709 5.081 5.081 0 0 1-2.047-.42 5.365 5.365 0 0 1-1.679-1.12 5.332 5.332 0 0 1-1.122-1.688A5.166 5.166 0 0 1 .728 5.99a5.158 5.158 0 0 1 .7-2.637 5.267 5.267 0 0 1 1.925-1.921A5.128 5.128 0 0 1 5.99.722a5.168 5.168 0 0 1 2.644.71 5.28 5.28 0 0 1 1.929 1.922 5.128 5.128 0 0 1 .709 2.637 5.177 5.177 0 0 1-.709 2.65z"/><path d="M6.371 5.938v-3.4a.378.378 0 0 0-.381-.367.37.37 0 0 0-.361.367v3.451a.3.3 0 0 1 .013.053.343.343 0 0 0 .1.3l1.962 1.962a.373.373 0 0 0 .505 0 .354.354 0 0 0 0-.512z"/></g></symbol><symbol viewBox="0 0 20 20" id="icon-cross"><path d="M10.7 10l5.6-5.6c.2-.2.2-.5 0-.7s-.5-.2-.7 0L10 9.3 4.4 3.6c-.2-.2-.5-.2-.7 0-.2.2-.2.5 0 .7L9.3 10l-5.6 5.6c-.2.2-.2.5 0 .7.1.1.2.1.4.1.1 0 .3 0 .4-.1l5.6-5.6 5.6 5.6c.1.1.2.1.4.1s.3 0 .4-.1c.2-.2.2-.5 0-.7L10.7 10z"/></symbol><symbol viewBox="0 0 1024 1024" id="icon-edit"><path d="M846.183 388.811L485.024 750.397l-83.378-83.378 361.347-361.398 83.19 83.19zm22.614-22.641l-83.178-83.178 55.274-55.282c12.523-12.525 32.766-12.428 45.33.102l37.754 37.65c12.541 12.506 12.633 32.815.153 45.309l-55.334 55.399zM380.919 691.546l79.851 79.851-100.317 19.755 20.465-99.606zM704 320L512 96H160.088C124.693 96 96 124.747 96 160.235v735.531c0 35.476 28.51 64.235 63.918 64.235h480.165c35.301 0 63.918-28.743 63.918-63.705V576.001l242.563-242.563c25.094-25.094 25.155-65.719.309-90.565l-37.744-37.744c-24.924-24.924-65.199-25.057-90.565.309L704.001 320.001zm-32 288v288.211c0 17.55-14.326 31.789-31.999 31.789H159.998c-17.448 0-31.999-14.262-31.999-31.855V159.854c0-17.286 14.264-31.855 31.858-31.855h320.142V287.81c0 35.82 28.624 64.189 63.933 64.189h128.067l-320 320-32 160 160-32 192-192zM512 144l150.398 176H543.895c-17.475 0-31.896-14.453-31.896-32.281V144z"/></symbol><symbol viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol><symbol viewBox="0 0 263 448" id="icon-facebook-sm"><path d="M239.75 3v66H200.5c-30.75 0-36.5 14.75-36.5 36v47.25h73.25l-9.75 74H164V416H87.5V226.25H23.75v-74H87.5v-54.5C87.5 34.5 126.25 0 182.75 0c27 0 50.25 2 57 3z"/></symbol><symbol viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5"/></symbol><symbol viewBox="0 0 384 448" id="icon-instagram-sm"><path d="M256 224c0-35.25-28.75-64-64-64s-64 28.75-64 64 28.75 64 64 64 64-28.75 64-64zm34.5 0c0 54.5-44 98.5-98.5 98.5s-98.5-44-98.5-98.5 44-98.5 98.5-98.5 98.5 44 98.5 98.5zm27-102.5c0 12.75-10.25 23-23 23s-23-10.25-23-23 10.25-23 23-23 23 10.25 23 23zM192 66.5c-28 0-88-2.25-113.25 7.75-8.75 3.5-15.25 7.75-22 14.5s-11 13.25-14.5 22C32.25 136 34.5 196 34.5 224s-2.25 88 7.75 113.25c3.5 8.75 7.75 15.25 14.5 22s13.25 11 22 14.5C104 383.75 164 381.5 192 381.5s88 2.25 113.25-7.75c8.75-3.5 15.25-7.75 22-14.5s11-13.25 14.5-22C351.75 312 349.5 252 349.5 224s2.25-88-7.75-113.25c-3.5-8.75-7.75-15.25-14.5-22s-13.25-11-22-14.5C280 64.25 220 66.5 192 66.5zM384 224c0 26.5.25 52.75-1.25 79.25-1.5 30.75-8.5 58-31 80.5s-49.75 29.5-80.5 31c-26.5 1.5-52.75 1.25-79.25 1.25s-52.75.25-79.25-1.25c-30.75-1.5-58-8.5-80.5-31s-29.5-49.75-31-80.5C-.25 276.75 0 250.5 0 224s-.25-52.75 1.25-79.25c1.5-30.75 8.5-58 31-80.5s49.75-29.5 80.5-31C139.25 31.75 165.5 32 192 32s52.75-.25 79.25 1.25c30.75 1.5 58 8.5 80.5 31s29.5 49.75 31 80.5c1.5 26.5 1.25 52.75 1.25 79.25z"/></symbol><symbol viewBox="0 0 48 48" id="icon-mail"><path d="M43 9H5c-1.7 0-3 1.3-3 3v24c0 1.7 1.3 3 3 3h38c1.7 0 3-1.3 3-3V12c0-1.7-1.3-3-3-3zm1 27.1L28.8 26 44 12.2v23.9c0-.1 0 0 0 0zM4 36V12.3L19.1 26 4 36c0 .1 0 0 0 0zm20.6-9c-.4.4-1 .4-1.4 0L5.5 11h36.8L24.6 27zm-3.9.4l1.3 1.2c.6.5 1.3.8 2 .8s1.4-.3 2-.8l1.3-1.2L41.7 37H6.3l14.4-9.6z"/></symbol><symbol viewBox="0 0 20 20" id="icon-menu"><path d="M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z"/></symbol><symbol viewBox="0 0 16 9.12" id="icon-menu-arrow"><path fill="currentColor" d="M7.999 9.12a1.117 1.117 0 0 1-.792-.328l-6.88-6.88A1.12 1.12 0 0 1 1.912.327l6.087 6.088L14.086.328a1.12 1.12 0 1 1 1.584 1.585l-6.88 6.88a1.117 1.117 0 0 1-.791.327z"/></symbol><symbol viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol><symbol viewBox="0 0 20 28" id="icon-pinterest"><path d="M0 9.328C0 3.562 5.281 0 10.625 0 15.531 0 20 3.375 20 8.547c0 4.859-2.484 10.25-8.016 10.25-1.313 0-2.969-.656-3.609-1.875-1.188 4.703-1.094 5.406-3.719 9L4.437 26l-.141-.156c-.094-.984-.234-1.953-.234-2.938 0-3.187 1.469-7.797 2.188-10.891-.391-.797-.5-1.766-.5-2.641 0-1.578 1.094-3.578 2.875-3.578 1.313 0 2.016 1 2.016 2.234 0 2.031-1.375 3.938-1.375 5.906 0 1.344 1.109 2.281 2.406 2.281 3.594 0 4.703-5.187 4.703-7.953 0-3.703-2.625-5.719-6.172-5.719-4.125 0-7.313 2.969-7.313 7.156 0 2.016 1.234 3.047 1.234 3.531 0 .406-.297 1.844-.812 1.844-.078 0-.187-.031-.266-.047-2.234-.672-3.047-3.656-3.047-5.703z"/></symbol><symbol viewBox="0 0 48 48" id="icon-search"><path d="M46.7 45.3L33.4 32c2.9-3.2 4.6-7.4 4.6-12 0-9.9-8.1-18-18-18S2 10.1 2 20s8.1 18 18 18c4.6 0 8.8-1.8 12-4.6l13.3 13.3 1.4-1.4zM4 20c0-8.8 7.2-16 16-16s16 7.2 16 16-7.2 16-16 16S4 28.8 4 20z"/></symbol><symbol viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></symbol><symbol viewBox="0 0 416 448" id="icon-twitter-sm"><path d="M405 102c-11 16-24.75 30.25-40.5 41.75.25 3.5.25 7 .25 10.5C364.75 261 283.5 384 135 384c-45.75 0-88.25-13.25-124-36.25 6.5.75 12.75 1 19.5 1 37.75 0 72.5-12.75 100.25-34.5-35.5-.75-65.25-24-75.5-56 5 .75 10 1.25 15.25 1.25 7.25 0 14.5-1 21.25-2.75-37-7.5-64.75-40-64.75-79.25v-1c10.75 6 23.25 9.75 36.5 10.25-21.75-14.5-36-39.25-36-67.25 0-15 4-28.75 11-40.75 39.75 49 99.5 81 166.5 84.5-1.25-6-2-12.25-2-18.5 0-44.5 36-80.75 80.75-80.75 23.25 0 44.25 9.75 59 25.5C361 86 378.5 79.25 394 70c-6 18.75-18.75 34.5-35.5 44.5 16.25-1.75 32-6.25 46.5-12.5z"/></symbol><symbol viewBox="0 0 48 48" id="icon-user"><path d="M24 26c6.6 0 12-5.4 12-12S30.6 2 24 2 12 7.4 12 14s5.4 12 12 12zm0-22c5.5 0 10 4.5 10 10s-4.5 10-10 10-10-4.5-10-10S18.5 4 24 4zM33 28H15C7.8 28 2 33.8 2 41v5h2v-5c0-6.1 4.9-11 11-11h18c6.1 0 11 4.9 11 11v5h2v-5c0-7.2-5.8-13-13-13z"/></symbol><symbol viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-video"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></symbol><symbol viewBox="0 0 24 24" id="icon-whatsapp"><path d="M-.009 24l2.194-5.704a11.804 11.804 0 0 1-1.896-6.435C.289 5.32 5.609 0 12.149 0c6.539 0 11.86 5.32 11.86 11.861 0 6.539-5.321 11.86-11.86 11.86a11.81 11.81 0 0 1-6.291-1.813L-.009 24zm5.976-3.026l.175.114a10.954 10.954 0 0 0 6.007 1.79c6.076 0 11.017-4.941 11.017-11.017S18.225.842 12.149.842 1.131 5.785 1.131 11.861c0 2.202.648 4.328 1.874 6.149l.123.182-1.692 4.399 4.531-1.617z"/><path d="M15.135 17.749c-1.433 0-4.369-1.708-5.768-3.108C8.116 13.39 6.26 10.417 6.26 8.874c0-1.542 1.646-3.259 2.761-3.259h.155l.117.1c.296.252 1.788 1.534 2.087 2.117.432.842-.624 2.048-1.181 2.6.249.314.815.986 1.603 1.774.743.744 1.649 1.145 2.07 1.305.366-.36 1.113-1.003 1.796-1.003l.1.011.415.113c.578.297 1.859 1.789 2.109 2.084l.1.118v.154c0 1.116-1.715 2.761-3.257 2.761zM8.886 6.474c-.666.16-1.785 1.385-1.785 2.4 0 1.275 1.731 4.042 2.861 5.172 1.364 1.364 4.071 2.861 5.173 2.861 1.015 0 2.239-1.12 2.397-1.785-.561-.65-1.373-1.521-1.697-1.722l-.208-.05c-.336.035-.928.488-1.326.927l-.179.196-.255-.076c-.155-.046-1.546-.483-2.661-1.597-.73-.73-1.856-1.975-1.954-2.325l-.071-.251.195-.175c.758-.681 1.379-1.589 1.253-1.833-.152-.299-1.067-1.158-1.743-1.742z"/></symbol><symbol viewBox="0 0 384 448" id="icon-youtube-sm"><path d="M242.75 311v52.75c0 11.25-3.25 16.75-9.75 16.75-3.75 0-7.5-1.75-11.25-5.5v-75.25c3.75-3.75 7.5-5.5 11.25-5.5 6.5 0 9.75 5.75 9.75 16.75zm84.5.25v11.5h-22.5v-11.5c0-11.25 3.75-17 11.25-17s11.25 5.75 11.25 17zm-241.5-54.5h26.75v-23.5h-78v23.5h26.25V399h25V256.75zm72 142.25H180V275.5h-22.25V370c-5 7-9.75 10.5-14.25 10.5-3 0-4.75-1.75-5.25-5.25-.25-.75-.25-3.5-.25-8.75v-91h-22.25v97.75c0 8.75.75 14.5 2 18.25 2 6.25 7.25 9.25 14.5 9.25 8 0 16.5-5 25.5-15.25V399zM265 362v-49.25c0-11.5-.5-19.75-2.25-24.75-2.75-9.25-9-14-17.75-14-8.25 0-16 4.5-23.25 13.5v-54.25H199.5V399h22.25v-12c7.5 9.25 15.25 13.75 23.25 13.75 8.75 0 15-4.75 17.75-13.75 1.75-5.25 2.25-13.5 2.25-25zm84.5-2.5v-3.25h-22.75c0 9-.25 14-.5 15.25-1.25 6-4.5 9-10 9-7.75 0-11.5-5.75-11.5-17.25V341.5h44.75v-25.75c0-13.25-2.25-22.75-6.75-29-6.5-8.5-15.25-12.75-26.5-12.75-11.5 0-20.25 4.25-26.75 12.75-4.75 6.25-7 15.75-7 29V359c0 13.25 2.5 23 7.25 29 6.5 8.5 15.25 12.75 27 12.75s21-4.5 27-13.25c2.75-4 4.75-8.5 5.25-13.5.5-2.25.5-7.25.5-14.5zm-152-228.25v-52.5c0-11.5-3.25-17.25-10.75-17.25-7.25 0-10.75 5.75-10.75 17.25v52.5c0 11.5 3.5 17.5 10.75 17.5 7.5 0 10.75-6 10.75-17.5zM377.25 319c0 28.75-.25 59.5-6.5 87.5-4.75 19.75-20.75 34.25-40 36.25-46 5.25-92.5 5.25-138.75 5.25s-92.75 0-138.75-5.25c-19.25-2-35.5-16.5-40-36.25-6.5-28-6.5-58.75-6.5-87.5 0-29 .25-59.5 6.5-87.5C18 211.75 34 197.25 53.5 195c45.75-5 92.25-5 138.5-5s92.75 0 138.75 5c19.25 2.25 35.5 16.75 40 36.5 6.5 28 6.5 58.5 6.5 87.5zM127.75 0h25.5L123 99.75v67.75H98V99.75c-2.25-12.25-7.25-29.75-15.25-53-5.5-15.5-11-31.25-16.25-46.75H93l17.75 65.75zm92.5 83.25V127c0 13.25-2.25 23.25-7 29.5-6.25 8.5-15 12.75-26.5 12.75-11.25 0-20-4.25-26.25-12.75-4.75-6.5-7-16.25-7-29.5V83.25c0-13.25 2.25-23 7-29.25 6.25-8.5 15-12.75 26.25-12.75 11.5 0 20.25 4.25 26.5 12.75 4.75 6.25 7 16 7 29.25zM304 42.75V167.5h-22.75v-13.75c-9 10.5-17.5 15.5-25.75 15.5-7.25 0-12.5-3-14.75-9.25-1.25-3.75-2-9.75-2-18.75v-98.5h22.75v91.75c0 5.25 0 8.25.25 8.75.5 3.5 2.25 5.5 5.25 5.5 4.5 0 9.25-3.5 14.25-10.75V42.75H304z"/></symbol></svg>
+    <!-- end / icons sprite -->
+
+    <div class="main-content">
+
+            <div class="ad-leaderboard-wrapper d-none d-lg-block" id="ad-leaderboard-fixed">
+                <div class="ad-leaderboard-fixed">
+                    
+                <div id="mgc_internal_leaderboard" class="ad-leaderboard">
+            <script type='text/javascript'>
+            if (!window.IS_MOBILE()) {
+                googletag.cmd.push(function () { googletag.display('mgc_internal_leaderboard'); });
+            }
+            </script>
+        </div>
+
+    
+                </div>
+            </div>
+
+        
+
+
+<!-- header -->
+<div class="header-small" id="js-header">
+    <!-- content -->
+    <div class="header-small-content">
+        <div class="header-left">
+            <a href="#" rel="nofollow" class="header-small-menu-btn js-menu-btn" aria-controls="js-menu" aria-expanded="false" aria-label="Menu">
+                <svg class="svg svg-menu" width="40" height="40"><use xlink:href="#icon-menu"></use></svg>
+            </a>
+            <div class="logo-header-small">
+                <a href="https://www.megacurioso.com.br/" title="Mega Curioso" aria-label="Mega Curioso">
+                    <svg class="mega-logo" width="220" height="30" viewBox="0 0 220 30"><path d="M27.49 30h-25A2.52 2.52 0 0 1 0 27.49v-25A2.52 2.52 0 0 1 2.51 0h25.58A1.9 1.9 0 0 1 30 1.89v25.6A2.52 2.52 0 0 1 27.49 30z" fill="#fff"/><path d="M25.19 18.29l-2.94-1.8a.75.75 0 0 0-.85 0L17 19.25l7.39 4.56a.83.83 0 0 0 1.24-.7V19a.94.94 0 0 0-.44-.71zM24.3 6.23l-3.07 1.91L16 11.35v6l9.16-5.66a.82.82 0 0 0 .42-.69V6.9a.82.82 0 0 0-1.28-.67zM5.7 6.23a.83.83 0 0 0-1.24.71V23.1a.83.83 0 0 0 1.24.71l3.5-2.16a.82.82 0 0 0 .39-.71v-4.81a.83.83 0 0 1 1.24-.71L14 17.37v-6z" fill="#c62828"/><path d="M47.05 15.28l-3.79 4.46-3.82-4.46v8.63h-5V6.08h3.47l5.41 6.79 5.48-6.79h3.36v17.84h-5.11v-8.64zM69.8 20.16l.46 3.75H56.5V6.08H69l.46 3.75h-7.9v3.26h5.77l.46 3.75h-6.27v3.33h8.28zM83.6 16.91h-3.22l.46-3.43h7.32v9.16a9.81 9.81 0 0 1-2.94 1 18.35 18.35 0 0 1-3.5.35 12.46 12.46 0 0 1-5.31-1.06 7.71 7.71 0 0 1-3.5-3.11 9.22 9.22 0 0 1-1.24-4.85A8.76 8.76 0 0 1 73.05 10a9.05 9.05 0 0 1 3.71-3.18 11.71 11.71 0 0 1 5.13-1.1 16 16 0 0 1 3.29.39A8 8 0 0 1 88 7.21l-1.51 3.19a17.34 17.34 0 0 0-2.44-.6A14.25 14.25 0 0 0 82 9.62a5.35 5.35 0 0 0-2.37.6A5 5 0 0 0 77.65 12a5.44 5.44 0 0 0-.74 2.9 5.73 5.73 0 0 0 .71 2.94 4.44 4.44 0 0 0 1.84 1.69 5.56 5.56 0 0 0 2.41.53 10.49 10.49 0 0 0 1.77-.14v-3zM89.5 24l7.08-17.92h5L108.72 24h-5.13l-1.27-3.54H95.8L94.49 24h-5zm7.67-7.29h3.68L99 11.82zM123.64 6.72l-.71 1.45c-.74-.25-1.38-.42-1.91-.57a10.92 10.92 0 0 0-2.09-.18 6.08 6.08 0 0 0-3.33 1 6.64 6.64 0 0 0-2.36 2.58 8.43 8.43 0 0 0-.85 3.82 9 9 0 0 0 .74 3.68 6.12 6.12 0 0 0 2.19 2.62 5.94 5.94 0 0 0 3.36 1 10.83 10.83 0 0 0 2.3-.21 10.12 10.12 0 0 0 1.84-.57l.81 1.56a10.76 10.76 0 0 1-2.26.71 11.81 11.81 0 0 1-2.62.28 8.83 8.83 0 0 1-4.74-1.2 8 8 0 0 1-3-3.26 10.23 10.23 0 0 1-1-4.53 10.34 10.34 0 0 1 1.06-4.71 7.84 7.84 0 0 1 3.11-3.33 8.83 8.83 0 0 1 4.67-1.2 14.71 14.71 0 0 1 2.48.28 8.37 8.37 0 0 1 2.31.78zM126.58 6.08h2.19v11.08a5.14 5.14 0 0 0 1.34 3.64 4.82 4.82 0 0 0 3.61 1.38 4.77 4.77 0 0 0 3.61-1.38 5 5 0 0 0 1.34-3.64V6.08h2.23v11.29a6.45 6.45 0 0 1-.88 3.36 6.07 6.07 0 0 1-2.48 2.34 8 8 0 0 1-3.79.85 8.07 8.07 0 0 1-3.79-.85 6.23 6.23 0 0 1-2.48-2.3 6.61 6.61 0 0 1-.88-3.36V6.08zM145.72 23.6V6.08h5.13a9.14 9.14 0 0 1 5.06 1.24 4.32 4.32 0 0 1 1.87 3.86 4.6 4.6 0 0 1-.92 2.83 5.3 5.3 0 0 1-2.41 1.73l4.78 7.82h-2.41l-4.32-7.29a18.43 18.43 0 0 1-1.95.11h-2.65v7.18h-2.19zm5.13-15.78h-3v6.94h2.73a7 7 0 0 0 3.54-.81 3 3 0 0 0 1.38-2.65 2.9 2.9 0 0 0-1.2-2.69 6.38 6.38 0 0 0-3.45-.79zM164.26 6.08V23.6h-2.19V6.08h2.19zM176.85 5.66a8.9 8.9 0 0 1 4.53 1.17 8.11 8.11 0 0 1 3.15 3.17 9.7 9.7 0 0 1 1.13 4.67 9.94 9.94 0 0 1-1.13 4.71 8.72 8.72 0 0 1-3.18 3.33 9.22 9.22 0 0 1-4.6 1.24 8.68 8.68 0 0 1-4.49-1.17 8 8 0 0 1-3.11-3.22 10.2 10.2 0 0 1 0-9.34A8.79 8.79 0 0 1 172.29 7a8.9 8.9 0 0 1 4.56-1.34zm-6.55 9.23a8.58 8.58 0 0 0 .81 3.75 6.82 6.82 0 0 0 2.26 2.62 5.79 5.79 0 0 0 3.29 1 6.35 6.35 0 0 0 3.43-1 6.64 6.64 0 0 0 2.37-2.65 8.43 8.43 0 0 0 .85-3.82 8.58 8.58 0 0 0-.81-3.75 6.54 6.54 0 0 0-2.26-2.62 5.79 5.79 0 0 0-3.29-1 6.35 6.35 0 0 0-3.43 1 6.64 6.64 0 0 0-2.37 2.65 8.22 8.22 0 0 0-.84 3.82zM188.35 22.75l.53-1.59a11.74 11.74 0 0 0 2.16.74 10.12 10.12 0 0 0 2.48.32 5.85 5.85 0 0 0 3.33-.78 2.44 2.44 0 0 0 .6-3.64 5 5 0 0 0-1.59-1.24c-.71-.35-1.63-.78-2.83-1.27a11.84 11.84 0 0 1-3.79-2.23 4 4 0 0 1-1.19-3 3.67 3.67 0 0 1 .74-2.23 5.06 5.06 0 0 1 2.09-1.59A8.06 8.06 0 0 1 194 5.7a10.54 10.54 0 0 1 2.58.32 10.92 10.92 0 0 1 2.23.78l-.74 1.56a13.55 13.55 0 0 0-1.87-.67 8.34 8.34 0 0 0-2.05-.25 5.33 5.33 0 0 0-2.9.71 2.14 2.14 0 0 0-1.1 1.95 2.54 2.54 0 0 0 .53 1.59 5.44 5.44 0 0 0 1.52 1.2c.67.35 1.63.81 2.94 1.38a18.16 18.16 0 0 1 2.79 1.45 5.39 5.39 0 0 1 1.63 1.59 4.12 4.12 0 0 1 .57 2.12 3.74 3.74 0 0 1-.78 2.37 5.19 5.19 0 0 1-2.3 1.63 9.74 9.74 0 0 1-3.54.6 12.83 12.83 0 0 1-2.83-.35 14.45 14.45 0 0 1-2.33-.93zM211.1 5.66a8.9 8.9 0 0 1 4.53 1.17 8.11 8.11 0 0 1 3.14 3.17 9.7 9.7 0 0 1 1.13 4.67 9.94 9.94 0 0 1-1.13 4.71 8.72 8.72 0 0 1-3.18 3.33A9.22 9.22 0 0 1 211 24a8.68 8.68 0 0 1-4.49-1.17 8 8 0 0 1-3.11-3.22 10.2 10.2 0 0 1 0-9.34 8.91 8.91 0 0 1 7.7-4.61zm-6.58 9.23a8.58 8.58 0 0 0 .81 3.75 6.82 6.82 0 0 0 2.26 2.62 5.79 5.79 0 0 0 3.29 1 6.35 6.35 0 0 0 3.43-1 6.64 6.64 0 0 0 2.37-2.65 8.42 8.42 0 0 0 .85-3.82 8.58 8.58 0 0 0-.81-3.75 6.54 6.54 0 0 0-2.26-2.62 5.79 5.79 0 0 0-3.29-1 6.35 6.35 0 0 0-3.43 1 6.64 6.64 0 0 0-2.37 2.65 8.22 8.22 0 0 0-.85 3.82z" fill="#fff"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="header-center">
+            <!-- menu -->
+            
+
+
+
+<div class="menu" id="js-menu">
+    <div class="menu-content">
+
+        <div class="menu-head">
+            <div class="menu-head-left">
+                <a href="#" rel="nofollow" class="logo js-menu-btn" aria-controls="js-menu" aria-expanded="false" aria-label="Menu">
+                    <div class="logo-content">
+                        <svg class="mega-logo-sm" width="48" height="48" viewBox="0 0 48 48"><path d="M44.94 0H4a4 4 0 0 0-4 4v40a4 4 0 0 0 4 4h40a4 4 0 0 0 4-4V3a3 3 0 0 0-3.06-3zM22 27.84l-4.83-3.11a1.69 1.69 0 0 0-.74-.18A1.4 1.4 0 0 0 15 25.86v7.7a1.18 1.18 0 0 1-.43 1.13l-5.5 3.46a1.48 1.48 0 0 1-.69.18A1.35 1.35 0 0 1 7 37V11.14a1.42 1.42 0 0 1 .27-.65A1.14 1.14 0 0 1 8.91 10L22 18.22v9.62zm4-9.63l8.17-5.15L39 10a1.23 1.23 0 0 1 .68-.22A1.28 1.28 0 0 1 41 11.09v6.56a1.21 1.21 0 0 1-.48 1.13L26 27.84v-9.62zM41 37a1.27 1.27 0 0 1-.16.64 1.31 1.31 0 0 1-1.8.48l-11.83-7.3 7.08-4.42a1.19 1.19 0 0 1 1.36 0l4.68 2.89a1.38 1.38 0 0 1 .67 1.16V37z" fill="#fff"/></svg>
+                    </div>
+                    <div class="logo-content">
+                        <svg class="svg svg-menu" width="34" height="34"><use xlink:href="#icon-menu"></use></svg>
+                    </div>
+                </a>
+                
+            </div>
+            <a href="#" rel="nofollow" class="menu-close-btn js-menu-close-btn" aria-label="Fechar">
+                <svg class="svg svg-cross" width="22" height="22"><use xlink:href="#icon-cross"></use></svg>
+            </a>
+        </div>
+
+        <ul class="menu-nav">
+            <li class="menu-nav-item">
+                <a href="//www.megacurioso.com.br/novidades/" onclick="NZN.Analytics.trackEvent('Header', 'Menu', 'Click Novidades')" class="menu-nav-link">
+                    Novidades
+                </a>
+            </li>
+
+            <li class="menu-nav-item">
+                <a href="//www.megacurioso.com.br/mais-lidas/" onclick="NZN.Analytics.trackEvent('Header', 'Menu', 'Click Mais Lidas')" class="menu-nav-link">
+                    Mais Lidas
+                </a>
+            </li>
+            <li class="menu-nav-item">
+                <a href="//www.megacurioso.com.br/ciencia/" onclick="NZN.Analytics.trackEvent('Header', 'Menu', 'Click Ciência')" class="menu-nav-link">
+                    Ciência
+                </a>
+            </li>
+            <li class="menu-nav-item">
+                <a href="//www.megacurioso.com.br/saude-bem-estar/" onclick="NZN.Analytics.trackEvent('Header', 'Menu', 'Click Saúde')" class="menu-nav-link">
+                    Saúde
+                </a>
+            </li>
+            <li class="menu-nav-item">
+                <a href="//www.megacurioso.com.br/artes-cultura/" onclick="NZN.Analytics.trackEvent('Header', 'Menu', 'Click Artes e Cultura')" class="menu-nav-link">
+                    Artes e Cultura
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="menu-mobile-buttons">
+            <a href="https://www.facebook.com/megacurioso" class="icon-btn-xs" target="_blank" aria-label="Facebook">
+                <svg class="svg svg-facebook-sm" width="20" height="20"><use xlink:href="#icon-facebook-sm"></use></svg>
+            </a>
+            <a href="https://instagram.com/megacurioso" class="icon-btn-xs" target="_blank" aria-label="Instagram">
+                <svg class="svg svg-instagram-sm" width="20" height="20"><use xlink:href="#icon-instagram-sm"></use></svg>
+            </a>
+            <a href="https://www.twitter.com/megacurioso" class="icon-btn-xs" target="_blank" aria-label="Twitter">
+                <svg class="svg svg-twitter-sm" width="20" height="20"><use xlink:href="#icon-twitter-sm"></use></svg>
+            </a>
+            <a href="https://www.youtube.com/megacurioso" class="icon-btn-xs" target="_blank" aria-label="Youtube">
+                <svg class="svg svg-youtube-sm" width="20" height="20"><use xlink:href="#icon-youtube-sm"></use></svg>
+            </a>
+            <a href="#" rel="nofollow" class="icon-btn-xs search-btn-xs js-search-btn" aria-label="Buscar">
+                <svg class="svg svg-search" width="20" height="20"><use xlink:href="#icon-search"></use></svg>
+            </a>
+        </div>
+        <a href="https://www.megacurioso.com.br/" onclick="NZN.Analytics.trackEvent('Header', 'Menu', 'Click Ir pra home')" class="menu-home-btn">Ir pra home</a>
+    </div>
+</div>
+            <!-- / menu -->
+        </div>
+        <div class="header-right">
+            <div itemscope itemtype="http://schema.org/Organization" class="header-right-buttons">
+
+                <link itemprop="url" href="https://www.megacurioso.com.br/">
+                <link itemprop="logo" href="https://obj.ibxk.com.br/megacurioso/layout/megacurioso/logo.png">
+
+                <a itemprop="sameAs" href="https://www.facebook.com/megacurioso" class="icon-btn-sm icon-btn-sm-facebook" target="_blank" aria-label="Facebook">
+                    <svg class="svg svg-facebook" width="24" height="24"><use xlink:href="#icon-facebook"></use></svg>
+                </a>
+                <a itemprop="sameAs" href="https://www.instagram.com/megacurioso" class="icon-btn-sm icon-btn-sm-instagram" target="_blank" aria-label="Instagram">
+                    <svg class="svg svg-instagram" width="20" height="20"><use xlink:href="#icon-instagram"></use></svg>
+                </a>
+                <a itemprop="sameAs" href="https://twitter.com/megacurioso" class="icon-btn-sm icon-btn-sm-twitter" target="_blank" aria-label="Twitter">
+                    <svg class="svg svg-twitter" width="24" height="24"><use xlink:href="#icon-twitter"></use></svg>
+                </a>
+                <a itemprop="sameAs" href="https://www.youtube.com/megacurioso" class="icon-btn-sm icon-btn-sm-youtube" target="_blank" aria-label="Youtube">
+                    <svg class="svg svg-youtube-sm" width="20" height="20"><use xlink:href="#icon-youtube-sm"></use></svg>
+                </a>
+                <a href="#" rel="nofollow" class="icon-btn-sm search-btn js-search-btn" aria-label="Buscar">
+                    <svg class="svg svg-search" width="20" height="20"><use xlink:href="#icon-search"></use></svg>
+                </a>
+                <meta itemprop="url" content="https://www.megacurioso.com.br/">
+            </div>
+        </div>
+    </div>
+    <!-- / content -->
+    <!-- search -->
+    <div class="search" id="js-search">
+    <div class="search-content">
+        <form id="nzn-js-search-form" class="search-form" action="//www.megacurioso.com.br/busca">
+            <input id="nzn-js-search-input" name="q" class="form-control" placeholder="Digite sua busca" type="search" required />
+            <button id="nzn-js-search-submit" class="btn btn-block" type="submit">Buscar</button>
+        </form>
+        <a href="#" rel="nofollow" class="search-close-btn js-search-close-btn" aria-label="Fechar">
+            <svg class="svg svg-cross" width="22" height="22"><use xlink:href="#icon-cross"></use></svg>
+        </a>
+    </div>
+</div>
+
+    <!-- / search -->
+</div>
+<!-- / header -->
+
+        <!-- body -->
+        
+
+
+
+
+
+<!-- banners -->
+<!-- /banners -->
+
+<!-- ko with: News -->
+<article itemscope itemtype="http://schema.org/NewsArticle" data-bind="attr: { id: ElementId }">
+
+    
+
+    <header class="article-header">
+        
+<!-- superMedia -->
+<div class="article-parallax" data-bind="with: SuperImage">
+    <div class="article-parallax-content"> 
+        <!-- image -->
+            <picture>
+                <source data-srcset="https://mega.ibxk.com.br//2018/09/14/14131949717108.jpg?w=1920&h=480&mode=crop&scale=both&cropxunits=100&cropyunits=100&crop=0,0,0,-20" media="--extra-large">
+                <source data-srcset="https://mega.ibxk.com.br//2018/09/14/14131949717108.jpg?w=1439&h=480&mode=crop&scale=both&cropxunits=100&cropyunits=100&crop=0,0,0,-20" media="--large">
+                <source data-srcset="https://mega.ibxk.com.br//2018/09/14/14131949717108.jpg?w=1023&h=480&mode=crop&scale=both" media="--medium">
+                <source data-srcset="https://mega.ibxk.com.br//2018/09/14/14131949717108.jpg?w=767&h=524&mode=crop&scale=both" media="--small">
+                <source data-srcset="https://mega.ibxk.com.br//2018/09/14/14131949717108.jpg?w=575&h=524&mode=crop&scale=both">
+                <img itemprop="image" class="article-parallax-img lazyload" data-srcset="https://mega.ibxk.com.br//2018/09/14/14131949717108.jpg?w=575&h=524&mode=crop&scale=both" alt="Elei&#231;&#245;es 2018: alguns dos candidatos com os nomes mais engra&#231;ados" data-bind="attr: { id: ElementId }">
+            </picture>
+        
+        <!-- /image -->
+    </div>
+</div>
+<!-- /superMedia -->
+        <div class="article-header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-7">
+                        
+
+<div class="stats">
+        <div class="stats-item">
+            <a href="#" rel="nofollow" data-bind="click: ScrollToComments">
+                    <div class="value">19</div>
+Coment&#225;rios            </a>
+        </div>
+        <div class="stats-item">
+                <div class="value">961</div>
+Compartilhamentos        </div>
+</div>
+
+<h1 itemprop="headline" class="article-title highlight">Elei&#231;&#245;es 2018: alguns dos candidatos com os nomes mais engra&#231;ados</h1>
+
+<div class="info">
+    <div class="info-item">
+        <svg class="svg svg-clock" width="22" height="22"><use xlink:href="#icon-clock"></use></svg>
+        
+        <time itemprop="datePublished" datetime='2018-09-14T13:30:42-03:00'>
+        14/09/2018
+        
+        </time>
+    </div>
+    <div class="info-item">
+        <svg class="svg svg-user" width="22" height="22"><use xlink:href="#icon-user"></use></svg>
+            <a itemprop="url" rel="author" href="https://www.megacurioso.com.br/autor/182-daiana-geremias/">
+                <span itemprop="name">Daiana Geremias</span>
+            </a>
+    </div>
+    <div class="info-item">
+        <svg class="svg svg-bookmark" width="22" height="22"><use xlink:href="#icon-bookmark"></use></svg>
+        <a href="https://www.megacurioso.com.br/ciencia/" class="label-tag" target="_self">
+            <span itemprop="articleSection">Ci&#234;ncia</span>
+        </a>
+    </div>
+</div>
+
+
+                    </div>
+                    <div class="col-12 col-lg-5 d-none d-lg-flex">
+                        <div>
+                            <div class="item-video">Último Vídeo</div>
+                            <iframe width="367" height="206" allowfullscreen="true" frameborder="0" src="https://mediacenter.nznweb.com.br?youtube_id=eSuwyOz7k_s&amp;dfp_id=36373682&amp;dfp_slot=mgc/internal/pre_roll&amp;url=https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm&amp;adx_id=ca-video-pub-1712420989769758&amp;adx_slot=4338588389&amp;t=0&amp;autoplay=false&amp;utm_source=megacurioso.com.br&amp;utm_medium=interna&amp;utm_campaign=widget-header" class="lazyload"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        
+
+<div class="share">
+    <div class="share-title">Curtiu?</div>
+    <div class="share-list">
+        
+        <div class="share-item">
+            <a rel="nofollow" class="icon-btn icon-btn-facebook" data-bind="tapOrClick: NZN.Social.facebook({ title: 'Elei&#231;&#245;es 2018: alguns dos candidatos com os nomes mais engra&#231;ados', url: 'https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm', id: '388348837923180', targetClick: 'Topo'})" aria-label="Compartilhar no Facebook">
+                <svg class="svg svg-facebook" width="30" height="30"><use xlink:href="#icon-facebook"></use></svg>
+            </a>
+        </div>
+        <div class="share-item">
+            <a rel="nofollow" class="icon-btn icon-btn-twitter" data-bind="tapOrClick: NZN.Social.twitter({ title: 'Elei&#231;&#245;es 2018: alguns dos candidatos com os nomes mais engra&#231;ados', url: 'https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm', id: '388348837923180', targetClick: 'Topo'})" aria-label="Compartilhar no Twitter">
+                <svg class="svg svg-twitter" width="30" height="30"><use xlink:href="#icon-twitter"></use></svg>
+            </a>
+        </div>
+        <!-- ko if: self.isMobile-->
+        <div class="share-item d-lg-none">
+            <a rel="nofollow" class="icon-btn icon-btn-whatsapp" data-bind="tapOrClick: NZN.Social.whatsapp({ id: '388348837923180', title: 'Elei&#231;&#245;es 2018: alguns dos candidatos com os nomes mais engra&#231;ados', summary: 'Voc&#234; pode at&#233; ter d&#250;vidas sobre quem votar, mas n&#227;o pode negar que o que n&#227;o falta nos candidatos brasileiros &#233; criatividade', url: 'https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm', targetClick: 'Topo'})" aria-label="Compartilhar no Whatsapp">
+                <svg class="svg svg-whatsapp" width="30" height="30"><use xlink:href="#icon-whatsapp"></use></svg>
+            </a>
+        </div>
+        <!-- /ko -->
+        <div class="share-item">
+            <a rel="nofollow" class="icon-btn" data-bind="click: ScrollToComments" aria-label="Comentar">
+                <svg class="svg svg-message-square" width="30" height="30"><use xlink:href="#icon-message-square"></use></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+        <div class="row">
+            <div class="col-12 col-lg-8">
+<script type="text/javascript">
+    (function() {
+        var ARTICLE_URL = window.location.href;
+        var CONTENT_ID = 'everything';
+        document.write(
+            '<scr' + 'ipt ' +
+            'src="//survey.g.doubleclick.net/survey?site=_ftqdz4kpk65fgdywazav62hahy' +
+            '&amp;url=' + encodeURIComponent(ARTICLE_URL) +
+            (CONTENT_ID? '&amp;cid=' + encodeURIComponent(CONTENT_ID) : '') +
+            '&amp;random=' + (new Date).getTime() +
+            '" type="text/javascript">' + '\x3C/scr' + 'ipt>');
+    })();
+</script>
+
+                <div class="p402_premium">
+    <div class="news-card-list p402_hide" data-template="desktop" id="js-related-news">
+
+
+
+            <div class="news-card-item js-related-news-item active">
+                <div onclick="NZN.Analytics.trackEvent('Interna', 'Relacionadas', 'Click Abrir Relacionada ' + 1)" class="news-card-img-wrapper">
+                    <a  href="/animais/90673-7-estruturas-bonitas-feitas-por-animais-pequeninos.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=saibamais">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/2016/02/03/03183520870728-t312x176.jpg" media="(min-width: 1340px)">
+                            <img data-srcset="https://mega.ibxk.com.br/2016/02/03/03183520870728-t720x212.jpg" alt="7 estruturas bonitas feitas por animais pequeninos" class="news-card-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="news-card-title-wrapper">
+                    <a href="/animais/90673-7-estruturas-bonitas-feitas-por-animais-pequeninos.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=saibamais">
+                        <h3 class="news-card-title">7 estruturas bonitas feitas por animais pequeninos</h3>
+                    </a>
+                </div>
+                <a href="#" rel="nofollow" class="news-card-close js-related-news-close-btn" onclick="NZN.Analytics.trackEvent('Interna', 'Relacionadas', 'Click Fechar Relacionada ' + 1)" aria-label="Fechar"><svg class="svg svg-cross" width="22" height="22"><use xlink:href="#icon-cross"></use></svg></a>
+            </div>
+            <div class="news-card-item js-related-news-item ">
+                <div onclick="NZN.Analytics.trackEvent('Interna', 'Relacionadas', 'Click Abrir Relacionada ' + 2)" class="news-card-img-wrapper">
+                    <a  href="/ciencia/109076-descubra-como-medicos-italianos-removeram-um-objeto-de-60-cm-de-um-homem.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=saibamais">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/11/11225054586050-t312x176.jpg" media="(min-width: 1340px)">
+                            <img data-srcset="https://mega.ibxk.com.br/2018/09/11/11225054586050-t720x212.jpg" alt="Homem &#39;perde&#39; vibrador de 60 cm no reto, e m&#233;dicos lutam para retir&#225;-lo" class="news-card-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="news-card-title-wrapper">
+                    <a href="/ciencia/109076-descubra-como-medicos-italianos-removeram-um-objeto-de-60-cm-de-um-homem.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=saibamais">
+                        <h3 class="news-card-title">Homem &#39;perde&#39; vibrador de 60 cm no reto, e m&#233;dicos lutam para retir&#225;-lo</h3>
+                    </a>
+                </div>
+                <a href="#" rel="nofollow" class="news-card-close js-related-news-close-btn" onclick="NZN.Analytics.trackEvent('Interna', 'Relacionadas', 'Click Fechar Relacionada ' + 2)" aria-label="Fechar"><svg class="svg svg-cross" width="22" height="22"><use xlink:href="#icon-cross"></use></svg></a>
+            </div>
+            <div class="news-card-item js-related-news-item ">
+                <div onclick="NZN.Analytics.trackEvent('Interna', 'Relacionadas', 'Click Abrir Relacionada ' + 3)" class="news-card-img-wrapper">
+                    <a  href="/ciencia/109103-muito-prazer-terra-5-fatos-que-todos-devem-saber-sobre-nosso-planeta.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=saibamais">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/13/13233758729339-t312x176.jpg" media="(min-width: 1340px)">
+                            <img data-srcset="https://mega.ibxk.com.br/2018/09/13/13233758729339-t720x212.jpg" alt="Muito prazer, Terra! 5 fatos que todos devem saber sobre nosso Planeta " class="news-card-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="news-card-title-wrapper">
+                    <a href="/ciencia/109103-muito-prazer-terra-5-fatos-que-todos-devem-saber-sobre-nosso-planeta.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=saibamais">
+                        <h3 class="news-card-title">Muito prazer, Terra! 5 fatos que todos devem saber sobre nosso Planeta </h3>
+                    </a>
+                </div>
+                <a href="#" rel="nofollow" class="news-card-close js-related-news-close-btn" onclick="NZN.Analytics.trackEvent('Interna', 'Relacionadas', 'Click Fechar Relacionada ' + 3)" aria-label="Fechar"><svg class="svg svg-cross" width="22" height="22"><use xlink:href="#icon-cross"></use></svg></a>
+            </div>
+        <div class="news-card-placeholder">
+            <span class="emoji">&#x1F914</span>
+            Infelizmente não acertamos na sugestão. <a onclick="NZN.Analytics.trackEvent('Interna', 'Relacionadas', 'Click Sugestão Matéria')" href="https://www.megacurioso.com.br/sugerir-noticia.htm">Indique uma matéria</a>
+        </div>
+    </div>
+
+                    <!-- text -->
+                    <div class="article-text highlight" nzn-bi-item="article-body" itemprop="articleBody">
+                        <p dir="ltr"><span>Estamos em pleno per&iacute;odo eleitoral, aquela &eacute;poca de entrar em tretas no Facebook, desfazer amizades, provocar pessoas que votam no candidato que voc&ecirc; n&atilde;o gosta, compartilhar as informa&ccedil;&otilde;es mais bonitas sobre o seu candidato do cora&ccedil;&atilde;o e por a&iacute; vai. </span></p>
+<p dir="ltr"><span>Al&eacute;m de todo esse alvoro&ccedil;o social, que acaba afastando as pessoas, h&aacute; algo que une os do lado de c&aacute; e os do lado de l&aacute;: nomes engra&ccedil;ados. N&atilde;o importa se voc&ecirc; &eacute; de direita ou de esquerda, o importante mesmo, pelo menos aqui e agora, &eacute; dar boas risadas e saudar o lado mais criativo do povo brasileiro. A seguir, veja algumas pessoas que est&atilde;o buscando criar uma carreira na pol&iacute;tica. </span></p>
+<h2 dir="ltr"><span>1 - Vai votar no Alceu? Que Alceu?</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14130925091081.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>2 - Para que escolher um nome, n&atilde;o &eacute; mesmo?</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14130944701083.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>3 - Pol&iacute;tico &eacute; tudo um bando de louco</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131003279100.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>4 - N&atilde;o passa muito no teste de cara-crach&aacute;</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131101716084.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>5 - Eita!</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131126076085.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>6 - O candidato que mata a sua fome</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131211794086.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>7 - O melhor amigo do homem</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131233654087.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>8 - Com cabelo, por&eacute;m...</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131300201088.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>9 - Brasil, mostra a tua cara</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131327701101.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>10 - Os coxinhas detestam</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131403998089.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>11 - Brilha, brilha, estrelinha</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131429341090.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>12 - Rainha</span></h2>
+<p dir="ltr"><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131459232091.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></p>
+<h2 dir="ltr"><span>13 - Como &eacute; que o Brasil n&atilde;o dominou o mundo ainda, minha gente?</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131521560102.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>14 - Oloco!</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131558357092.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>15 - Cabra macho</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131620123093.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>16 - &Eacute; elei&ccedil;&atilde;o ou &eacute; baile funk?</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131653326094.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>17 - Smurf!</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131719857103.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>18 - Cad&ecirc; a Chapeuzinho Vermelho?</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131747435095.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>19 - Teje avisado</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131814404105.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<h2 dir="ltr"><span>20 - Loira do banheiro &eacute; coisa do passado</span></h2>
+<p dir="ltr"><span><span class="img-fc"><img src="https://img.ibxk.com.br/2018/09/14/eleicoes-2018-14131839154106.jpg?w=1040" alt="elei&ccedil;&otilde;es 2018" /></span></span></p>
+<p class="uk-text-center">***</p>
+<p><strong>Voc&ecirc; conhece a&nbsp;<a href="https://www.megacurioso.com.br/newsletter" target="_blank">newsletter</a>&nbsp;do Mega Curioso? Semanalmente, produzimos um conte&uacute;do exclusivo para os amantes das maiores curiosidades e bizarrices deste mund&atilde;o afora! Cadastre seu email e n&atilde;o perca mais essa forma de mantermos contato!</strong></p>
+                    </div>
+                    <!-- / text -->
+
+
+                    
+
+
+
+                    <div class="article-social-cta">
+                        <svg class="svg svg-check-circle" width="24" height="24"><use xlink:href="#icon-check-circle"></use></svg>
+                        <div class="article-social-cta-text">
+                            Você sabia que o Megacurioso está no <a href="https://www.instagram.com/megacurioso/" target="_blank">Instagram</a>, <a href="https://www.facebook.com/megacurioso/" target="_blank">Facebook</a> e no <a href="https://twitter.com/megacurioso" target="_blank">Twitter</a>? Siga-nos por lá.
+                        </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">try{_402_Show();}catch(e){}</script>
+
+                <div class="article-footer">
+                    <div class="article-footer-item">
+                        
+    <!-- article references -->
+    <div class="references">
+        <span class="references-title">
+            Fontes
+        </span>
+        <ul class="references-list">
+                <li class="references-item">
+                    <a href="https://www.tribunapr.com.br/blogs/triboladas/bin-laden-grete-homem-aranha-conheca-os-candidatos-com-nomes-engracados/" title="Tribuna do Paran&#225;" target="_blank" class="references-link">Tribuna do Paran&#225;</a>
+                </li>
+                <li class="references-item">
+                    <a href="https://webinformado.com.br/tag/nomes-de-candidatos-engracados-2018/" title="Webinformado" target="_blank" class="references-link">Webinformado</a>
+                </li>
+        </ul>
+    </div>
+    <!-- / article references -->
+
+
+                    </div>
+                    <div class="article-footer-item">
+                        
+
+                    </div>
+                    <div class="article-footer-item">
+                        
+<div class="tags">
+    <div class="tags-title" aria-label="Tags">
+		<svg class="svg svg-bookmark" width="24" height="24"><use xlink:href="#icon-bookmark"></use></svg>
+    </div>
+    <ul class="tags-list">
+        <li class="tags-item">
+            <a href="/politica" class="tags-link" title="Pol&#237;tica">Pol&#237;tica</a>
+        </li>
+    </ul>
+</div>
+
+                    </div>
+
+                    <div class="article-footer-item">
+                        
+                    </div>
+                    
+                        <div class="article-footer-item">
+                            
+
+
+<div class="related-news-list">
+
+    <div class="related-news-list-title">Matérias Relacionadas</div>
+
+        <article class="related-news-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/Article">
+            <div class="related-news-item-thumb">
+                <a href="https://www.megacurioso.com.br/educacao/108478-pesquisadores-querem-concorrer-as-eleicoes-para-formar-bancada-da-ciencia.htm" title="Pesquisadores querem concorrer &#224;s elei&#231;&#245;es para formar &#39;bancada da ci&#234;ncia&#39;">
+                    <picture itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://mega.ibxk.com.br/2018/08/03/03131945956089.jpg">
+                        <source data-srcset="https://mega.ibxk.com.br/2018/08/03/03131945956089.jpg?w=75&h=55&mode=crop" media="--medium">
+                        <img data-srcset="https://mega.ibxk.com.br/2018/08/03/03131945956089.jpg?w=575&h=275&mode=crop" alt="Imagem de Pesquisadores querem concorrer &#224;s elei&#231;&#245;es para formar &#39;bancada da ci&#234;ncia&#39; no megacurioso" itemprop="image" class="related-news-item-thumb-img lazyload">
+                    </picture>
+                </a>
+            </div>
+            <div class="related-news-item-data">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://obj.ibxk.com.br/megacurioso/layout/megacurioso/logo.png">
+                    </div>
+                    <meta itemprop="name" content="Mega Curioso">
+                </div>
+                <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://www.megacurioso.com.br/educacao/108478-pesquisadores-querem-concorrer-as-eleicoes-para-formar-bancada-da-ciencia.htm" />
+                <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="name" content="Rafael Farinaccio">
+                </div>
+                <div class="related-news-item-data-info">
+                    <meta itemprop="datePublished" content="2018-08-03T20:30:23" />
+                    <meta itemprop="dateModified" content="9/12/2018 12:07:00 PM" />
+                    <span class="related-news-item-data-info-item">
+                        <a href="https://www.megacurioso.com.br/educacao/" title="Educa&#231;&#227;o">
+                            <svg class="svg svg-bookmark-small" width="10" height="12"><use xlink:href="#icon-bookmark-small"></use></svg>
+                            Educa&#231;&#227;o
+                        </a>
+                    </span>
+                    <span class="related-news-item-data-info-item">
+                        <svg class="svg svg-clock-small" width="12" height="12"><use xlink:href="#icon-clock-small"></use></svg>
+                        03/08/2018
+                    </span>
+                </div>
+                <a href="https://www.megacurioso.com.br/educacao/108478-pesquisadores-querem-concorrer-as-eleicoes-para-formar-bancada-da-ciencia.htm" title="Pesquisadores querem concorrer &#224;s elei&#231;&#245;es para formar &#39;bancada da ci&#234;ncia&#39;" class="related-news-item-data-wrapper">
+                    <h2 class="related-news-item-data-wrapper-title" itemprop="headline">Pesquisadores querem concorrer &#224;s elei&#231;&#245;es para formar &#39;bancada da ci&#234;ncia&#39;</h2>
+                </a>
+            </div>
+        </article>
+        <article class="related-news-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/Article">
+            <div class="related-news-item-thumb">
+                <a href="https://www.megacurioso.com.br/estilo-de-vida/106853-fake-news-podem-influenciar-eleicoes-de-2018-aponta-estudo.htm" title="Fake News podem influenciar Elei&#231;&#245;es de 2018, aponta estudo">
+                    <picture itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://mega.ibxk.com.br/2018/04/13/13182702077428.jpg">
+                        <source data-srcset="https://mega.ibxk.com.br/2018/04/13/13182702077428.jpg?w=75&h=55&mode=crop" media="--medium">
+                        <img data-srcset="https://mega.ibxk.com.br/2018/04/13/13182702077428.jpg?w=575&h=275&mode=crop" alt="Imagem de Fake News podem influenciar Elei&#231;&#245;es de 2018, aponta estudo no megacurioso" itemprop="image" class="related-news-item-thumb-img lazyload">
+                    </picture>
+                </a>
+            </div>
+            <div class="related-news-item-data">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://obj.ibxk.com.br/megacurioso/layout/megacurioso/logo.png">
+                    </div>
+                    <meta itemprop="name" content="Mega Curioso">
+                </div>
+                <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://www.megacurioso.com.br/estilo-de-vida/106853-fake-news-podem-influenciar-eleicoes-de-2018-aponta-estudo.htm" />
+                <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="name" content="Leonardo  M&#252;ller">
+                </div>
+                <div class="related-news-item-data-info">
+                    <meta itemprop="datePublished" content="2018-04-15T11:00:40" />
+                    <meta itemprop="dateModified" content="8/11/2018 5:38:00 PM" />
+                    <span class="related-news-item-data-info-item">
+                        <a href="https://www.megacurioso.com.br/estilo-de-vida/" title="Estilo de vida">
+                            <svg class="svg svg-bookmark-small" width="10" height="12"><use xlink:href="#icon-bookmark-small"></use></svg>
+                            Estilo de vida
+                        </a>
+                    </span>
+                    <span class="related-news-item-data-info-item">
+                        <svg class="svg svg-clock-small" width="12" height="12"><use xlink:href="#icon-clock-small"></use></svg>
+                        15/04/2018
+                    </span>
+                </div>
+                <a href="https://www.megacurioso.com.br/estilo-de-vida/106853-fake-news-podem-influenciar-eleicoes-de-2018-aponta-estudo.htm" title="Fake News podem influenciar Elei&#231;&#245;es de 2018, aponta estudo" class="related-news-item-data-wrapper">
+                    <h2 class="related-news-item-data-wrapper-title" itemprop="headline">Fake News podem influenciar Elei&#231;&#245;es de 2018, aponta estudo</h2>
+                </a>
+            </div>
+        </article>
+        <article class="related-news-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/Article">
+            <div class="related-news-item-thumb">
+                <a href="https://www.megacurioso.com.br/artes-cultura/105820-jim-carrey-faz-campanha-contra-o-facebook-e-deixa-a-rede-social.htm" title="Jim Carrey faz campanha contra o Facebook e deixa a rede social">
+                    <picture itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://mega.ibxk.com.br/2018/02/07/07093726792524.jpg">
+                        <source data-srcset="https://mega.ibxk.com.br/2018/02/07/07093726792524.jpg?w=75&h=55&mode=crop" media="--medium">
+                        <img data-srcset="https://mega.ibxk.com.br/2018/02/07/07093726792524.jpg?w=575&h=275&mode=crop" alt="Imagem de Jim Carrey faz campanha contra o Facebook e deixa a rede social no megacurioso" itemprop="image" class="related-news-item-thumb-img lazyload">
+                    </picture>
+                </a>
+            </div>
+            <div class="related-news-item-data">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://obj.ibxk.com.br/megacurioso/layout/megacurioso/logo.png">
+                    </div>
+                    <meta itemprop="name" content="Mega Curioso">
+                </div>
+                <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://www.megacurioso.com.br/artes-cultura/105820-jim-carrey-faz-campanha-contra-o-facebook-e-deixa-a-rede-social.htm" />
+                <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="name" content="Douglas Ciriaco">
+                </div>
+                <div class="related-news-item-data-info">
+                    <meta itemprop="datePublished" content="2018-02-07T19:00:57" />
+                    <meta itemprop="dateModified" content="2/15/2018 2:03:00 PM" />
+                    <span class="related-news-item-data-info-item">
+                        <a href="https://www.megacurioso.com.br/artes-cultura/" title="Artes/cultura">
+                            <svg class="svg svg-bookmark-small" width="10" height="12"><use xlink:href="#icon-bookmark-small"></use></svg>
+                            Artes/cultura
+                        </a>
+                    </span>
+                    <span class="related-news-item-data-info-item">
+                        <svg class="svg svg-clock-small" width="12" height="12"><use xlink:href="#icon-clock-small"></use></svg>
+                        07/02/2018
+                    </span>
+                </div>
+                <a href="https://www.megacurioso.com.br/artes-cultura/105820-jim-carrey-faz-campanha-contra-o-facebook-e-deixa-a-rede-social.htm" title="Jim Carrey faz campanha contra o Facebook e deixa a rede social" class="related-news-item-data-wrapper">
+                    <h2 class="related-news-item-data-wrapper-title" itemprop="headline">Jim Carrey faz campanha contra o Facebook e deixa a rede social</h2>
+                </a>
+            </div>
+        </article>
+        <article class="related-news-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/Article">
+            <div class="related-news-item-thumb">
+                <a href="https://www.megacurioso.com.br/ciencia/105206-software-de-leitura-biometrica-usado-pelo-fbi-contem-codigo-russo.htm" title="Software de leitura biom&#233;trica usado pelo FBI cont&#233;m c&#243;digo russo">
+                    <picture itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://mega.ibxk.com.br/2017/12/28/28151709678025.jpg">
+                        <source data-srcset="https://mega.ibxk.com.br/2017/12/28/28151709678025.jpg?w=75&h=55&mode=crop" media="--medium">
+                        <img data-srcset="https://mega.ibxk.com.br/2017/12/28/28151709678025.jpg?w=575&h=275&mode=crop" alt="Imagem de Software de leitura biom&#233;trica usado pelo FBI cont&#233;m c&#243;digo russo no megacurioso" itemprop="image" class="related-news-item-thumb-img lazyload">
+                    </picture>
+                </a>
+            </div>
+            <div class="related-news-item-data">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://obj.ibxk.com.br/megacurioso/layout/megacurioso/logo.png">
+                    </div>
+                    <meta itemprop="name" content="Mega Curioso">
+                </div>
+                <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://www.megacurioso.com.br/ciencia/105206-software-de-leitura-biometrica-usado-pelo-fbi-contem-codigo-russo.htm" />
+                <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="name" content="Douglas Ciriaco">
+                </div>
+                <div class="related-news-item-data-info">
+                    <meta itemprop="datePublished" content="2018-01-02T11:00:21" />
+                    <meta itemprop="dateModified" content="12/29/2017 1:23:00 PM" />
+                    <span class="related-news-item-data-info-item">
+                        <a href="https://www.megacurioso.com.br/ciencia/" title="Ci&#234;ncia">
+                            <svg class="svg svg-bookmark-small" width="10" height="12"><use xlink:href="#icon-bookmark-small"></use></svg>
+                            Ci&#234;ncia
+                        </a>
+                    </span>
+                    <span class="related-news-item-data-info-item">
+                        <svg class="svg svg-clock-small" width="12" height="12"><use xlink:href="#icon-clock-small"></use></svg>
+                        02/01/2018
+                    </span>
+                </div>
+                <a href="https://www.megacurioso.com.br/ciencia/105206-software-de-leitura-biometrica-usado-pelo-fbi-contem-codigo-russo.htm" title="Software de leitura biom&#233;trica usado pelo FBI cont&#233;m c&#243;digo russo" class="related-news-item-data-wrapper">
+                    <h2 class="related-news-item-data-wrapper-title" itemprop="headline">Software de leitura biom&#233;trica usado pelo FBI cont&#233;m c&#243;digo russo</h2>
+                </a>
+            </div>
+        </article>
+        <article class="related-news-item" itemscope itemprop="itemListElement" itemtype="http://schema.org/Article">
+            <div class="related-news-item-thumb">
+                <a href="https://www.megacurioso.com.br/bizarro/37822-voce-se-acha-esquisito-entao-confira-a-historia-dessas-5-pessoas.htm" title="Voc&#234; se acha esquisito? Ent&#227;o confira a hist&#243;ria dessas 5 pessoas">
+                    <picture itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://mega.ibxk.com.br/2013/08/28/28143359035.jpg">
+                        <source data-srcset="https://mega.ibxk.com.br/2013/08/28/28143359035.jpg?w=75&h=55&mode=crop" media="--medium">
+                        <img data-srcset="https://mega.ibxk.com.br/2013/08/28/28143359035.jpg?w=575&h=275&mode=crop" alt="Imagem de Voc&#234; se acha esquisito? Ent&#227;o confira a hist&#243;ria dessas 5 pessoas no site Mega Curioso" itemprop="image" class="related-news-item-thumb-img lazyload">
+                    </picture>
+                </a>
+            </div>
+            <div class="related-news-item-data">
+                <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="url" content="https://obj.ibxk.com.br/megacurioso/layout/megacurioso/logo.png">
+                    </div>
+                    <meta itemprop="name" content="Mega Curioso">
+                </div>
+                <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://www.megacurioso.com.br/bizarro/37822-voce-se-acha-esquisito-entao-confira-a-historia-dessas-5-pessoas.htm" />
+                <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="name" content="Maria Luciana Rinc&#243;n">
+                </div>
+                <div class="related-news-item-data-info">
+                    <meta itemprop="datePublished" content="2018-05-23T10:01:26" />
+                    <meta itemprop="dateModified" content="9/15/2018 2:41:00 AM" />
+                    <span class="related-news-item-data-info-item">
+                        <a href="https://www.megacurioso.com.br/misterios/" title="Mist&#233;rios">
+                            <svg class="svg svg-bookmark-small" width="10" height="12"><use xlink:href="#icon-bookmark-small"></use></svg>
+                            Mist&#233;rios
+                        </a>
+                    </span>
+                    <span class="related-news-item-data-info-item">
+                        <svg class="svg svg-clock-small" width="12" height="12"><use xlink:href="#icon-clock-small"></use></svg>
+                        23/05/2018
+                    </span>
+                </div>
+                <a href="https://www.megacurioso.com.br/bizarro/37822-voce-se-acha-esquisito-entao-confira-a-historia-dessas-5-pessoas.htm" title="Voc&#234; se acha esquisito? Ent&#227;o confira a hist&#243;ria dessas 5 pessoas" class="related-news-item-data-wrapper">
+                    <h2 class="related-news-item-data-wrapper-title" itemprop="headline">Voc&#234; se acha esquisito? Ent&#227;o confira a hist&#243;ria dessas 5 pessoas</h2>
+                </a>
+            </div>
+        </article>
+</div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="sidebar">
+
+                    <!-- banner ads -->
+                    <div class="ad-wrapper">
+                                <div id="mgc_internal_square-halfpage" class="ad-halfpage d-none d-lg-block">
+            <script type='text/javascript'>
+            if (!window.IS_MOBILE()) {
+                googletag.cmd.push(function () { googletag.display('mgc_internal_square-halfpage'); });
+            }
+            </script>
+        </div>
+
+                    </div>
+                    <!-- /banner ads -->
+
+                    
+
+<aside class="sidebar-news">
+
+    <div class="section-header">
+        <div class="section-title">
+            <a onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar', 'Click Últimas Notícias')" href="/novidades/">
+                <h2>Últimas Notícias</h2>
+                <svg class="svg svg-angle-right" width="18" height="18"><use xlink:href="#icon-angle-right"></use></svg></a>
+        </div>
+    </div>
+
+    <div class="news-list">
+            <div class="news-item">
+                <div class="news-thumb">
+                    <a onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar', 'Click Notícia Últimas Notícias')" href="//www.megacurioso.com.br/artes-cultura/109143-toad-da-serie-mario-e-o-presidente-trump-tem-uma-semelhanca-inusitada.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/18/18125028857100.jpg?w=154&h=85&mode=crop" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/18/18125028857100.jpg?w=154&h=85&mode=crop">
+                            <img data-srcset="https://mega.ibxk.com.br/2018/09/18/18125028857100.jpg?w=142&h=85&mode=crop" alt="Imagem de Toad, da s&#233;rie Mario, e o Presidente Trump t&#234;m uma semelhan&#231;a inusitada no megacurioso" class="news-thumb-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="news-data">
+                    <a href="//www.megacurioso.com.br/artes-cultura/109143-toad-da-serie-mario-e-o-presidente-trump-tem-uma-semelhanca-inusitada.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="news-title">Toad, da s&#233;rie Mario, e o Presidente Trump t&#234;m uma semelhan&#231;a inusitada</h3>
+                        
+                        
+                    </a>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-thumb">
+                    <a onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar', 'Click Notícia Últimas Notícias')" href="//www.megacurioso.com.br/estilo-de-vida/109145-mais-10-imagens-engracadas-de-gatos-para-voce-se-divertir.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/18/18124714624097.jpg?w=154&h=85&mode=crop" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/18/18124714624097.jpg?w=154&h=85&mode=crop">
+                            <img data-srcset="https://mega.ibxk.com.br/2018/09/18/18124714624097.jpg?w=142&h=85&mode=crop" alt="Imagem de Mais 10 imagens engra&#231;adas de gatos para voc&#234; se divertir no megacurioso" class="news-thumb-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="news-data">
+                    <a href="//www.megacurioso.com.br/estilo-de-vida/109145-mais-10-imagens-engracadas-de-gatos-para-voce-se-divertir.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="news-title">Mais 10 imagens engra&#231;adas de gatos para voc&#234; se divertir</h3>
+                        
+                        
+                    </a>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-thumb">
+                    <a onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar', 'Click Notícia Últimas Notícias')" href="//www.megacurioso.com.br/artes-cultura/109144-ballet-de-drones-deixa-publico-de-boca-aberta-no-burning-man.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/18/18121756943072.jpg?w=154&h=85&mode=crop" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/18/18121756943072.jpg?w=154&h=85&mode=crop">
+                            <img data-srcset="https://mega.ibxk.com.br/2018/09/18/18121756943072.jpg?w=142&h=85&mode=crop" alt="Imagem de Ballet de drones deixa p&#250;blico de boca aberta no Burning Man no megacurioso" class="news-thumb-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="news-data">
+                    <a href="//www.megacurioso.com.br/artes-cultura/109144-ballet-de-drones-deixa-publico-de-boca-aberta-no-burning-man.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="news-title">Ballet de drones deixa p&#250;blico de boca aberta no Burning Man</h3>
+                        
+                        
+                    </a>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-thumb">
+                    <a onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar', 'Click Notícia Últimas Notícias')" href="//www.megacurioso.com.br/artes-cultura/109142-este-jovem-japones-faz-esculturas-de-balao-como-ninguem.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/18/18110513452256.jpg?w=154&h=85&mode=crop" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/18/18110513452256.jpg?w=154&h=85&mode=crop">
+                            <img data-srcset="https://mega.ibxk.com.br/2018/09/18/18110513452256.jpg?w=142&h=85&mode=crop" alt="Imagem de Este jovem japon&#234;s faz esculturas de bal&#227;o como ningu&#233;m no megacurioso" class="news-thumb-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="news-data">
+                    <a href="//www.megacurioso.com.br/artes-cultura/109142-este-jovem-japones-faz-esculturas-de-balao-como-ninguem.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="news-title">Este jovem japon&#234;s faz esculturas de bal&#227;o como ningu&#233;m</h3>
+                        
+                        
+                    </a>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-thumb">
+                    <a onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar', 'Click Notícia Últimas Notícias')" href="//www.megacurioso.com.br/politica/99236-conheca-a-origem-dos-termos-esquerda-e-direita-na-politica.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/2016/06/15/15104743216687.jpg?w=154&h=85&mode=crop" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/2016/06/15/15104743216687.jpg?w=154&h=85&mode=crop">
+                            <img data-srcset="https://mega.ibxk.com.br/2016/06/15/15104743216687.jpg?w=142&h=85&mode=crop" alt="Imagem de Conhe&#231;a a origem dos termos “esquerda” e “direita” na pol&#237;tica no megacurioso" class="news-thumb-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="news-data">
+                    <a href="//www.megacurioso.com.br/politica/99236-conheca-a-origem-dos-termos-esquerda-e-direita-na-politica.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="news-title">Conhe&#231;a a origem dos termos “esquerda” e “direita” na pol&#237;tica</h3>
+                        
+                        
+                    </a>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-thumb">
+                    <a onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar', 'Click Notícia Últimas Notícias')" href="//www.megacurioso.com.br/estilo-de-vida/109141-este-gramado-epico-vai-deixar-voce-de-queixo-caido.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/18/18102852701058.jpg?w=154&h=85&mode=crop" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/2018/09/18/18102852701058.jpg?w=154&h=85&mode=crop">
+                            <img data-srcset="https://mega.ibxk.com.br/2018/09/18/18102852701058.jpg?w=142&h=85&mode=crop" alt="Imagem de Este gramado &#233;pico vai deixar voc&#234; de queixo ca&#237;do no megacurioso" class="news-thumb-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="news-data">
+                    <a href="//www.megacurioso.com.br/estilo-de-vida/109141-este-gramado-epico-vai-deixar-voce-de-queixo-caido.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="news-title">Este gramado &#233;pico vai deixar voc&#234; de queixo ca&#237;do</h3>
+                        
+                        
+                    </a>
+                </div>
+            </div>
+    </div>
+
+    
+
+</aside>
+
+                    
+
+
+<aside class="sidebar-video-news">
+
+    <div class="section-header">
+        <div class="section-title">
+            <a onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar', 'Click Últimas Notícias')" href="/tv/">
+                <h2>Mega no YouTube</h2> 
+                <svg class="svg svg-angle-right" width="18" height="18"><use xlink:href="#icon-angle-right"></use></svg></a>
+        </div>
+    </div>
+
+    <div class="video-news-list">
+            <div class="video-news-item">
+                <div class="video-news-thumb">
+                    <a class="video-news-thumb-link" title="6 FALSOS MITOS QUE VOC&#202; AINDA ACREDITA! - Lista - Mega Curioso" onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar Vídeos', 'Click Notícia Últimos Vídeos')" href="//tv.megacurioso.com.br/video/eSuwyOz7k_s-6-falsos-mitos-que-voce-ainda-acredita-lista-mega-curioso.htm">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/youtube/eSuwyOz7k_s/maxresdefault.jpg?w=154&h=85&mode=crop&404=megacurioso" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/youtube/eSuwyOz7k_s/maxresdefault.jpg?w=154&h=85&mode=crop&404=megacurioso">
+                            <img data-srcset="https://mega.ibxk.com.br/youtube/eSuwyOz7k_s/maxresdefault.jpg?w=142&h=85&mode=crop&404=megacurioso" alt="6 FALSOS MITOS QUE VOC&#202; AINDA ACREDITA! - Lista - Mega Curioso" class="video-news-thumb-link-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="video-news-item-data">
+                    <a class="video-news-item-data-link" href="//tv.megacurioso.com.br/video/eSuwyOz7k_s-6-falsos-mitos-que-voce-ainda-acredita-lista-mega-curioso.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="video-news-item-data-link-title" title="6 FALSOS MITOS QUE VOC&#202; AINDA ACREDITA! - Lista - Mega Curioso">6 FALSOS MITOS QUE VOC&#202; AINDA ACREDITA! - Lista - Mega Curioso</h3>
+
+                        <span class="video-news-item-data-link-info">111k - 13/09/2018</span>
+                    </a>
+                </div>
+            </div>
+            <div class="video-news-item">
+                <div class="video-news-thumb">
+                    <a class="video-news-thumb-link" title="4 TIPOS DE PERSONALIDADE DIF&#205;CEIS DE MUDAR - Lista - Mega Curioso" onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar Vídeos', 'Click Notícia Últimos Vídeos')" href="//tv.megacurioso.com.br/video/o6q-0Ni7JYU-4-tipos-de-personalidade-dificeis-de-mudar-lista-mega-curioso.htm">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/youtube/o6q-0Ni7JYU/maxresdefault.jpg?w=154&h=85&mode=crop&404=megacurioso" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/youtube/o6q-0Ni7JYU/maxresdefault.jpg?w=154&h=85&mode=crop&404=megacurioso">
+                            <img data-srcset="https://mega.ibxk.com.br/youtube/o6q-0Ni7JYU/maxresdefault.jpg?w=142&h=85&mode=crop&404=megacurioso" alt="4 TIPOS DE PERSONALIDADE DIF&#205;CEIS DE MUDAR - Lista - Mega Curioso" class="video-news-thumb-link-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="video-news-item-data">
+                    <a class="video-news-item-data-link" href="//tv.megacurioso.com.br/video/o6q-0Ni7JYU-4-tipos-de-personalidade-dificeis-de-mudar-lista-mega-curioso.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="video-news-item-data-link-title" title="4 TIPOS DE PERSONALIDADE DIF&#205;CEIS DE MUDAR - Lista - Mega Curioso">4 TIPOS DE PERSONALIDADE DIF&#205;CEIS DE MUDAR - Lista - Mega Curioso</h3>
+
+                        <span class="video-news-item-data-link-info">120k - 11/09/2018</span>
+                    </a>
+                </div>
+            </div>
+            <div class="video-news-item">
+                <div class="video-news-thumb">
+                    <a class="video-news-thumb-link" title="Aventura no Egito - Como Mike Parrudo ganhou a sua cicatriz - EP03" onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar Vídeos', 'Click Notícia Últimos Vídeos')" href="//tv.megacurioso.com.br/video/Rqk9Zrsaeak-aventura-no-egito-como-mike-parrudo-ganhou-a-sua-cicatriz-ep03.htm">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/youtube/Rqk9Zrsaeak/maxresdefault.jpg?w=154&h=85&mode=crop&404=megacurioso" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/youtube/Rqk9Zrsaeak/maxresdefault.jpg?w=154&h=85&mode=crop&404=megacurioso">
+                            <img data-srcset="https://mega.ibxk.com.br/youtube/Rqk9Zrsaeak/maxresdefault.jpg?w=142&h=85&mode=crop&404=megacurioso" alt="Aventura no Egito - Como Mike Parrudo ganhou a sua cicatriz - EP03" class="video-news-thumb-link-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="video-news-item-data">
+                    <a class="video-news-item-data-link" href="//tv.megacurioso.com.br/video/Rqk9Zrsaeak-aventura-no-egito-como-mike-parrudo-ganhou-a-sua-cicatriz-ep03.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="video-news-item-data-link-title" title="Aventura no Egito - Como Mike Parrudo ganhou a sua cicatriz - EP03">Aventura no Egito - Como Mike Parrudo ganhou a sua cicatriz - EP03</h3>
+
+                        <span class="video-news-item-data-link-info">84k - 06/09/2018</span>
+                    </a>
+                </div>
+            </div>
+            <div class="video-news-item">
+                <div class="video-news-thumb">
+                    <a class="video-news-thumb-link" title="Mitos sobre o Velho Oeste (QUE TODO MUNDO ACREDITA) - Red Dead Redemption 2" onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar Vídeos', 'Click Notícia Últimos Vídeos')" href="//tv.megacurioso.com.br/video/gPScwSkePR8-mitos-sobre-o-velho-oeste-que-todo-mundo-acredita-red-dead-redemption-2.htm">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/youtube/gPScwSkePR8/maxresdefault.jpg?w=154&h=85&mode=crop&404=megacurioso" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/youtube/gPScwSkePR8/maxresdefault.jpg?w=154&h=85&mode=crop&404=megacurioso">
+                            <img data-srcset="https://mega.ibxk.com.br/youtube/gPScwSkePR8/maxresdefault.jpg?w=142&h=85&mode=crop&404=megacurioso" alt="Mitos sobre o Velho Oeste (QUE TODO MUNDO ACREDITA) - Red Dead Redemption 2" class="video-news-thumb-link-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="video-news-item-data">
+                    <a class="video-news-item-data-link" href="//tv.megacurioso.com.br/video/gPScwSkePR8-mitos-sobre-o-velho-oeste-que-todo-mundo-acredita-red-dead-redemption-2.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="video-news-item-data-link-title" title="Mitos sobre o Velho Oeste (QUE TODO MUNDO ACREDITA) - Red Dead Redemption 2">Mitos sobre o Velho Oeste (QUE TODO MUNDO ACREDITA) - Red Dead Redemption 2</h3>
+
+                        <span class="video-news-item-data-link-info">112k - 04/09/2018</span>
+                    </a>
+                </div>
+            </div>
+            <div class="video-news-item">
+                <div class="video-news-thumb">
+                    <a class="video-news-thumb-link" title="4 gatilhos mentais para influenciar pessoas! - Mega Curioso" onclick="NZN.Analytics.trackEvent('Interna', 'Sidebar Vídeos', 'Click Notícia Últimos Vídeos')" href="//tv.megacurioso.com.br/video/W633VZEZeV4-4-gatilhos-mentais-para-influenciar-pessoas-mega-curioso.htm">
+                        <picture>
+                            <source data-srcset="https://mega.ibxk.com.br/youtube/W633VZEZeV4/maxresdefault.jpg?w=154&h=85&mode=crop&404=megacurioso" media="--large">
+                            <source data-srcset="https://mega.ibxk.com.br/youtube/W633VZEZeV4/maxresdefault.jpg?w=154&h=85&mode=crop&404=megacurioso">
+                            <img data-srcset="https://mega.ibxk.com.br/youtube/W633VZEZeV4/maxresdefault.jpg?w=142&h=85&mode=crop&404=megacurioso" alt="4 gatilhos mentais para influenciar pessoas! - Mega Curioso" class="video-news-thumb-link-img lazyload">
+                        </picture>
+                        
+                    </a>
+                </div>
+                <div class="video-news-item-data">
+                    <a class="video-news-item-data-link" href="//tv.megacurioso.com.br/video/W633VZEZeV4-4-gatilhos-mentais-para-influenciar-pessoas-mega-curioso.htm?utm_source=megacurioso.com.br&amp;utm_medium=internas&amp;utm_campaign=ultimasnoticias">
+                        <h3 class="video-news-item-data-link-title" title="4 gatilhos mentais para influenciar pessoas! - Mega Curioso">4 gatilhos mentais para influenciar pessoas! - Mega Curioso</h3>
+
+                        <span class="video-news-item-data-link-info">116k - 30/08/2018</span>
+                    </a>
+                </div>
+            </div>
+    </div>
+
+</aside>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                
+
+                <div class="widget-taboola">
+                    <!-- TABOOLA CONTAINER INTERNA -->
+                    <div id="taboola-below-article-thumbnails"></div>
+                    <script type="text/javascript">
+                        _taboola.push({
+                            mode: 'alternating-thumbnails-a',
+                            container: 'taboola-below-article-thumbnails',
+                            placement: 'Below Article Thumbnails',
+                            target_type: 'mix'
+                        });
+                    </script>
+                </div>
+                
+
+
+<!-- Shopping -->
+
+
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = '//banner.boostbox.com.br/integrations/script.js?token=c712ea1cded962e7852f7a08';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<div id="c712ea1cded962e7852f7a08"></div>
+<!-- /Shopping -->
+                
+                
+<!-- comments -->
+<aside class="comments" data-bind="attr: { id: CommentsElementId }">
+
+    <div class="section-header">
+        <div class="section-title">Comentários</div>
+    </div>
+
+    <div class="comments-box">
+        <!--ko if: CommentsPlugin() == 'disqus'-->
+        <div class="comments-content" data-bind="htmlex: DisqusCommentsHtml()"></div>
+        <!--/ko-->
+        <!--ko if: CommentsPlugin() == 'facebook'-->
+        <div class="comments-content" data-bind="htmlex: FacebookCommentsHtml()"></div>
+        <!--/ko-->
+    </div>
+
+    
+
+</aside>
+<!-- / comments -->
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="sidebar" id="js-sidebar-bottom">
+                    <!-- HALF BANNER -->
+                    
+                    <!-- / HALF BANNER -->
+                    <aside class="widget-newsletter">
+    <svg class="svg svg-mail" width="24" height="24"><use xlink:href="#icon-mail"></use></svg>
+    <div class="widget-newsletter-title">
+        Receba as matérias mais acessadas no seu email.
+    </div>
+    <form onsubmit="return false">
+        <input id="nzn-txt-newsletter" type="text" class="widget-newsletter-input" placeholder="DIGITE SEU EMAIL" />
+        <div id="nzn-feedback-newsletter" class="widget-newsletter-feedback">
+            
+            
+        </div>
+        <button type="submit" class="widget-newsletter-btn" data-bind="tapOrClick: SaveEmailNewsletter">Enviar</button>
+    </form>
+</aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+<!-- ko with: Colaboration -->
+
+<div class="modal modal-contact" data-bind="attr: { id: ColaborationElementId }">
+
+    <a href="#" data-bind="tapOrClick: CloseModal" class="close-modal" aria-label="Fechar"><svg class="svg svg-cross" width="22" height="22"><use xlink:href="#icon-cross"></use></svg></a>
+
+    <div class="colab-content">
+
+        <!-- ko with: Message -->
+        <div class="contact-message" data-bind="visible: Visible">
+            <div class="contact-title" data-bind="text: Text()"></div>
+            <input type="button" class="btn" value="Voltar para a notícia " data-bind="tapOrClick: $parent.CloseModal" />
+        </div>
+        <!-- /ko -->
+
+        <div class="contact-step2" data-bind="visible: Step2Visible">
+            <div class="contact-title">Colabore com o autor</div>
+            <p>Para enviar uma sugestão é necessário entrar com seu Facebook</p>
+            <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false" data-scope="basic_info, email"></div>
+        </div>
+
+        <div class="contact-step3" data-bind="visible: Step3Visible">
+            <div class="contact-header">
+                <img data-bind="attr: { src: Avatar, alt: Name }" class="contact-avatar" />
+                <div class="contact-info">
+                    <div data-bind="text: Name" class="contact-name"></div>
+                    <div data-bind="text: Email" class="contact-mail"></div>
+                </div>
+            </div>
+            <textarea class="form-control" rows="3" data-bind="value: Text" placeholder="Informe sua mensagem"></textarea>
+            <input type="button" class="btn" data-bind="tapOrClick: Send, disable: Sending, value: SendValue" />
+        </div>
+
+    </div>
+
+</div>
+
+<!-- /ko -->
+<div id="share-image" class="share-image-template">
+    <span class="share-image">
+        <span class="share-image-list">
+            <span class="share-image-item">
+                <button id="btn-share-image-fb" class="icon-btn icon-btn-facebook" title="Compartilhar no Facebook" aria-label="Compartilhar no Facebook">
+                    <svg class="svg svg-facebook" width="42" height="42"><use xlink:href="#icon-facebook"></use></svg>
+                </button>
+            </span>
+            <span class="share-image-item">
+                <button id="btn-share-image-pt" class="icon-btn icon-btn-pinterest" title="Compartilhar no Pinterest" aria-label="Compartilhar no Pinterest">
+                    <svg class="svg svg-pinterest" width="38" height="38"><use xlink:href="#icon-pinterest"></use></svg>
+                </button>
+            </span>
+        </span>
+    </span>
+</div>
+<div id="share-selection" class="share-selection">
+    <p class="share-tooltip" title="Selecione uma opção">Selecione uma opção</p>
+    <div class="share-selection-list">
+        <div class="share-selection-item">
+            <button id="buttonShareFacebook" class="icon-btn icon-btn-facebook js-highlight" title="Compartilhe no Facebook">
+                <svg class="svg svg-facebook" width="42" height="42"><use xlink:href="#icon-facebook"></use></svg>
+            </button>
+        </div>
+        <div class="share-selection-item">
+            <button id="buttonShareTwitter" class="icon-btn icon-btn-twitter js-highlight" title="Compartilhe no Twitter">
+                <svg class="svg svg-twitter" width="42" height="42"><use xlink:href="#icon-twitter"></use></svg>
+            </button>
+        </div>
+        <div class="share-selection-item">
+            <!-- ko with: Colaboration -->
+            <button class="icon-btn" data-bind="visible: Step1Visible, click: GoToStep2" title="Sugerir correção">
+                <svg class="svg svg-edit" width="42" height="42"><use xlink:href="#icon-edit"></use></svg>
+            </button>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+<!-- /ko -->
+
+
+        <div id="mgc_internal_inline" class="">
+            <script type='text/javascript'>
+            if (!window.IS_MOBILE()) {
+                googletag.cmd.push(function () { googletag.display('mgc_internal_inline'); });
+            }
+            </script>
+        </div>
+
+<!-- /1010728/mgc/seedtag -->
+        <div id="mgc_seedtag" class="">
+            <script type='text/javascript'>
+            if (!window.IS_MOBILE()) {
+                googletag.cmd.push(function () { googletag.display('mgc_seedtag'); });
+            }
+            </script>
+        </div>
+
+
+<!-- yahoo crawler -->
+<!--
+<div class="YAD-0c1e06cd-ece6-3bc0-a1f3-d51a6717810f"></div>
+    -->
+<!-- end / yahoo crawler -->
+
+
+        <!-- end / body -->
+
+        
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a href="http://nzn.io/" target="_blank" class="footer-logo">
+                    <img src="https://obj.ibxk.com.br/layout/megacurioso/nzn-logo-new.png" width="112" height="42" class="footer-logo-img" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="footer-nav">
+                    <li class="footer-nav-item">
+                        <a href="https://www.tecmundo.com.br/" class="footer-nav-link" target="_blank">TecMundo</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="https://www.megacurioso.com.br/" class="footer-nav-link" target="_blank">Mega Curioso</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="http://www.minhaserie.com.br/" class="footer-nav-link" target="_blank">Minha Série</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="http://www.clickjogos.com.br/" class="footer-nav-link" target="_blank">Click Jogos</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="http://www.baixaki.com.br/" class="footer-nav-link" target="_blank">Baixaki</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="https://www.thebrief.com.br/" class="footer-nav-link" target="_blank">The Brief</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="https://www.voxel.com.br/" class="footer-nav-link" target="_blank">Voxel</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="footer-nav footer-nav-secondary">
+                    <li class="footer-nav-item">
+                        <a href="http://nzn.io/" class="footer-nav-link" target="_blank">Sobre a NZN</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="https://www.megacurioso.com.br/sugerir-noticia.htm" class="footer-nav-link">Sugerir Notícia</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="http://nzn.io/contato" class="footer-nav-link" target="_blank">Contato e Anúncio</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="http://nzn.io/termos-de-privacidade" class="footer-nav-link" target="_blank">Termos de Privacidade</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="footer-copy">
+                    &copy; Copyright 2018 -  No Zebra Network S.A, todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+
+        <div class="ad-premium-wrapper">
+            <div class="ad-premium">
+                
+                <div id="mgc_internal_premium" class="">
+            <script type='text/javascript'>
+            if (!window.IS_MOBILE()) {
+                googletag.cmd.push(function () { googletag.display('mgc_internal_premium'); });
+            }
+            </script>
+        </div>
+
+    
+            </div>
+        </div>
+
+
+    <!-- js -->
+    <script>
+        window.FACEBOOK_ID = '388348837923180';
+        window.FACEBOOK_ACCESS_TOKEN = '388348837923180|M2EbGiHaeihuzGE625qYBdDQZA4';
+        window._lorem = 'TyBxdWUgc2VyaWEgZG8gaG9tZW0gc2VtIGEgZmVsaWNpZGFkZT8=';
+        window._ipsum = 'https://api.megacurioso.com.br';
+        window._dolor = 'false';
+        window._sit = window._ipsum + '/api/v2';
+        window._amet = 'https://www.megacurioso.com.br/';
+        
+        window._consectetur = 10;
+        window._adipiscing = 10;
+        window.Share_Twitter = 'MegaCurioso';
+        window.DisqusStartId = '99360';
+        window._dqs = 'CNQobXcvLI69MOxbfeDkTRh4hhxNXZ8XkiWQ3PVP0H1ZcvWth0fzO8SBX4ugummX';
+        window._rubicon_account_id = Number('14126');
+        window._rubicon_site_id = Number('71696');
+        window._aol_network_id = Number('11065.1');
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+    <script src="https://obj-mega.ibxk.com.br/megacurioso/assets/js/script.20180912202340.js"></script>
+
+    <script type="text/javascript">
+        //NOTIFICAÇÕES
+        if ('serviceWorker' in navigator) {
+            console.log('Service Worker is supported');
+            navigator.serviceWorker.register('/sw.js').then(function (reg) {
+                console.log(':^)', reg);
+                reg.pushManager.subscribe({
+                    userVisibleOnly: true
+                }).then(function (sub) {
+                    var data = {
+                        subscribeId: sub.endpoint.split('https://android.googleapis.com/gcm/send/')[1],
+                        sistema: 'megacurioso'
+                    }
+                    if(getCookie("subscriptionIdv3") != data.subscribeId && data.subscribeId != null && data.subscribeId != undefined){
+                        $.ajax({
+                            url: 'https://alert.nznweb.com.br/api/v1/google/register',
+                            type: 'POST',
+                            beforeSend: function (request)
+                            {
+                                request.setRequestHeader('Accept', 'application/json');
+                                request.setRequestHeader('Content-Type', 'application/json');
+                                request.setRequestHeader('Authorization', 'token dGVjbXVuZG86ZmY0YzAxZWYyZjViNzNmYzJhMGM2Mjc1ODNhNWY5OTZmZGIzZTViMQ==');
+                            },
+                            data: JSON.stringify(data),
+                            credentials: true,
+                            contentType: "application/json",
+                            success: function () {
+                                NZN.Tools.log(':) Salvou subscription id do google');
+                                var CookieDate = new Date;
+                                CookieDate.setFullYear(CookieDate.getFullYear( ) + 1);
+                                document.cookie = "subscriptionIdv3=" + data.subscribeId + "; expires=" + CookieDate.toGMTString() + ";";
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                NZN.Tools.log(':( erro ao salvar subscription id do google');
+                            }
+                        });
+                    }
+                    console.log('endpoint:', sub.endpoint);
+                });
+            }).catch(function (error) {
+                console.log(':^(', error);
+            });
+
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length,c.length);
+                }
+            }
+            return "";
+        }
+    </script>
+
+    <!-- google+ -->
+<script>
+    window.___gcfg = {
+        lang: 'pt-BR'
+    };
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/client:plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+<!-- end / google+ -->
+<!-- facebook -->
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.type = 'text/javascript';
+        js.async = true;
+        js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=" + window.FACEBOOK_ID + "&channelUrl=" + window._amet + "channel.html&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'facebook-jssdk');
+</script>
+<!-- end / facebook -->
+<!-- twitter -->
+<script>
+    (function (d, s, id) {
+        var js,
+            fjs = d.getElementsByTagName(s)[0],
+            p = /^http:/.test(d.location) ? 'http' : 'https';
+
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.type = 'text/javascript';
+            js.async = true;
+            js.id = id;
+            js.src = p + '://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    })(document, 'script', 'twitter-wjs');
+</script>
+<!-- end / twitter -->
+
+
+
+
+
+    
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var _elem = $('.article-text');
+            var _el_html = _elem.html();
+            var _uuid = "##piwikid##";
+            var _url_refer = "##source##";
+            if(_el_html.indexOf(_uuid) >= 0 && _el_html.indexOf(_url_refer) >= 0){
+                elem.html(function(index,html){
+                    return html.replace(_uuid,currentUUID).replace(_url_refer,urlReferrer);
+                });
+            }
+        });
+
+        $(document).ready(function() {
+            $(window).on('message', function(ev) {
+                if(ev.originalEvent.data === "form-submit") {
+                    NZN.Analytics.trackEvent('Surveys', 'TypeForm', 'TypeForm - Submit');
+                }
+            });
+        });
+    </script>
+
+    <script id="json-script">
+        var newsJson = {"Id":109110,"DateSocialISO":"2018-09-17T17:08:00","DateISO":"2018-09-14T13:30:42","Url":"/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm","Title":"Eleições 2018: alguns dos candidatos com os nomes mais engraçados","Image":"https://mega.ibxk.com.br/2018/09/14/14132037248109.jpg","TituloImagemDestaque":"Imagem de Eleições 2018: alguns dos candidatos com os nomes mais engraçados no megacurioso","Social":{"Type":"article","Url":"https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm","Image":"https://mega.ibxk.com.br/2018/09/14/14132037248109.jpg","DescriptionOG":"Você pode até ter dúvidas sobre quem votar, mas não pode negar que o que não falta nos candidatos brasileiros é criatividade","Canonical":"https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm","Alternate":null},"SuperImage":{"Url":"https://mega.ibxk.com.br//2018/09/14/14131949717108.jpg","Source":{"Title":"","Url":""},"Alt":"Eleições 2018: alguns dos candidatos com os nomes mais engraçados"},"Colaboration":{"NewsId":109110,"Name":"","Email":"","Text":"","Avatar":""},"Event":{"IsEvent":false,"Ended":false,"Video":""},"Tag":{"Url":"ciencia","Title":"Ciência","ParentTitle":null},"Infografic":{"Width":0,"Height":0,"IsImage":false,"Url":"","Source":{"Title":"","Url":""},"Alt":null},"TotalComments":19};
+        var recentsJson = {"data":[{"Id":109143,"DateISO":"2018-09-18T14:00:08","TimeElapsed":"há 5 minutos","Title":"Toad, da série Mario, e o Presidente Trump têm uma semelhança inusitada","Chamada":"Atriz que acusa Trump de assédio descreve o formato de seu órgão genital em um livro que será publicado no próximo mês","Image":"https://mega.ibxk.com.br/2018/09/18/18125028857100.jpg","Url":"/artes-cultura/109143-toad-da-serie-mario-e-o-presidente-trump-tem-uma-semelhanca-inusitada.htm","Views":"00","Tag":{"Url":"artes-cultura","Title":"Artes/cultura","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/artes-cultura/109143-toad-da-serie-mario-e-o-presidente-trump-tem-uma-semelhanca-inusitada.htm","Image":"https://mega.ibxk.com.br/2018/09/18/18125028857100.jpg","DescriptionOG":"Atriz que acusa Trump de assédio descreve o formato de seu órgão genital em um livro que será publicado no próximo mês","Canonical":"https://www.megacurioso.com.br/artes-cultura/109143-toad-da-serie-mario-e-o-presidente-trump-tem-uma-semelhanca-inusitada.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Toad, da série Mario, e o Presidente Trump têm uma semelhança inusitada no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Felipe Gugelmin","DataModificado":"2018-09-18T12:51:00"},{"Id":109145,"DateISO":"2018-09-18T13:30:07","TimeElapsed":"há 30 minutos","Title":"Mais 10 imagens engraçadas de gatos para você se divertir","Chamada":"Vem rir com a gente!","Image":"https://mega.ibxk.com.br/2018/09/18/18124714624097.jpg","Url":"/estilo-de-vida/109145-mais-10-imagens-engracadas-de-gatos-para-voce-se-divertir.htm","Views":"219","Tag":{"Url":"estilo-de-vida","Title":"Estilo de vida","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/estilo-de-vida/109145-mais-10-imagens-engracadas-de-gatos-para-voce-se-divertir.htm","Image":"https://mega.ibxk.com.br/2018/09/18/18124714624097.jpg","DescriptionOG":"Vem rir com a gente!","Canonical":"https://www.megacurioso.com.br/estilo-de-vida/109145-mais-10-imagens-engracadas-de-gatos-para-voce-se-divertir.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Mais 10 imagens engraçadas de gatos para você se divertir no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Diego Denck","DataModificado":"2018-09-18T14:00:00"},{"Id":109144,"DateISO":"2018-09-18T13:00:08","TimeElapsed":"há mais de 1 hora","Title":"Ballet de drones deixa público de boca aberta no Burning Man","Chamada":"Acompanhando uma performance de piano, centenas de drones iluminados fizeram uma dança incrível no céu","Image":"https://mega.ibxk.com.br/2018/09/18/18121756943072.jpg","Url":"/artes-cultura/109144-ballet-de-drones-deixa-publico-de-boca-aberta-no-burning-man.htm","Views":"142","Tag":{"Url":"artes-cultura","Title":"Artes/cultura","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/artes-cultura/109144-ballet-de-drones-deixa-publico-de-boca-aberta-no-burning-man.htm","Image":"https://mega.ibxk.com.br/2018/09/18/18121756943072.jpg","DescriptionOG":"Acompanhando uma performance de piano, centenas de drones iluminados fizeram uma dança incrível no céu","Canonical":"https://www.megacurioso.com.br/artes-cultura/109144-ballet-de-drones-deixa-publico-de-boca-aberta-no-burning-man.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Ballet de drones deixa público de boca aberta no Burning Man no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Daiana Geremias","DataModificado":"2018-09-18T14:00:00"},{"Id":109142,"DateISO":"2018-09-18T12:30:07","TimeElapsed":"há mais de 1 hora","Title":"Este jovem japonês faz esculturas de balão como ninguém","Chamada":"E você se achando o máximo por aprender a fazer aquela florzinha…","Image":"https://mega.ibxk.com.br/2018/09/18/18110513452256.jpg","Url":"/artes-cultura/109142-este-jovem-japones-faz-esculturas-de-balao-como-ninguem.htm","Views":"569","Tag":{"Url":"artes-cultura","Title":"Artes/cultura","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/artes-cultura/109142-este-jovem-japones-faz-esculturas-de-balao-como-ninguem.htm","Image":"https://mega.ibxk.com.br/2018/09/18/18110513452256.jpg","DescriptionOG":"E você se achando o máximo por aprender a fazer aquela florzinha…","Canonical":"https://www.megacurioso.com.br/artes-cultura/109142-este-jovem-japones-faz-esculturas-de-balao-como-ninguem.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Este jovem japonês faz esculturas de balão como ninguém no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Daiana Geremias","DataModificado":"2018-09-18T13:11:00"},{"Id":99236,"DateISO":"2018-09-18T12:00:07","TimeElapsed":"há mais de 2 horas","Title":"Conheça a origem dos termos “esquerda” e “direita” na política","Chamada":"Coxinha daqui, petralha dali, esquerdista acolá, direitista de lá – se você ouve e reproduz esses termos, mas não sabe muito bem o que significam, venha cá que a gente explica","Image":"https://mega.ibxk.com.br/2016/06/15/15104743216687.jpg","Url":"/politica/99236-conheca-a-origem-dos-termos-esquerda-e-direita-na-politica.htm","Views":"41.223","Tag":{"Url":"ciencia","Title":"Ciência","ParentTitle":null},"Social":{"Type":"article","Url":"http://www.megacurioso.com.br/politica/99236-conheca-a-origem-dos-termos-esquerda-e-direita-na-politica.htm","Image":"https://mega.ibxk.com.br/2016/06/15/15104743216687.jpg","DescriptionOG":"Coxinha daqui, petralha dali, esquerdista acolá, direitista de lá – se você ouve e reproduz esses termos, mas não sabe muito bem o que significam, venha cá que a gente explica","Canonical":"http://www.megacurioso.com.br/politica/99236-conheca-a-origem-dos-termos-esquerda-e-direita-na-politica.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Conheça a origem dos termos “esquerda” e “direita” na política no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Daiana Geremias","DataModificado":"2018-09-18T13:40:00"},{"Id":109141,"DateISO":"2018-09-18T11:30:07","TimeElapsed":"há mais de 2 horas","Title":"Este gramado épico vai deixar você de queixo caído","Chamada":"Não, não estamos falando do trabalho de jardinagem de algum edifício imenso, castelo ou órgão de governo","Image":"https://mega.ibxk.com.br/2018/09/18/18102852701058.jpg","Url":"/estilo-de-vida/109141-este-gramado-epico-vai-deixar-voce-de-queixo-caido.htm","Views":"530","Tag":{"Url":"estilo-de-vida","Title":"Estilo de vida","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/estilo-de-vida/109141-este-gramado-epico-vai-deixar-voce-de-queixo-caido.htm","Image":"https://mega.ibxk.com.br/2018/09/18/18102852701058.jpg","DescriptionOG":"Não, não estamos falando do trabalho de jardinagem de algum edifício imenso, castelo ou órgão de governo","Canonical":"https://www.megacurioso.com.br/estilo-de-vida/109141-este-gramado-epico-vai-deixar-voce-de-queixo-caido.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Este gramado épico vai deixar você de queixo caído no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Daiana Geremias","DataModificado":"2018-09-18T14:00:00"},{"Id":109140,"DateISO":"2018-09-18T11:00:02","TimeElapsed":"há mais de 3 horas","Title":"Algoritmo consegue detectar pacientes em coma que podem acordar","Chamada":"Inteligência artificial tem bom percentual de acerto em casos de pessoas com problemas relacionados à perda de consciência","Image":"https://mega.ibxk.com.br/2018/09/17/17175236371218.jpg","Url":"/ciencia/109140-algoritmo-consegue-detectar-pacientes-em-coma-que-podem-acordar.htm","Views":"233","Tag":{"Url":"ciencia","Title":"Ciência","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/ciencia/109140-algoritmo-consegue-detectar-pacientes-em-coma-que-podem-acordar.htm","Image":"https://mega.ibxk.com.br/2018/09/17/17175236371218.jpg","DescriptionOG":"Inteligência artificial tem bom percentual de acerto em casos de pessoas com problemas relacionados à perda de consciência","Canonical":"https://www.megacurioso.com.br/ciencia/109140-algoritmo-consegue-detectar-pacientes-em-coma-que-podem-acordar.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Algoritmo consegue detectar pacientes em coma que podem acordar no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Claudio Yuge","DataModificado":null},{"Id":108682,"DateISO":"2018-09-18T10:30:06","TimeElapsed":"há mais de 3 horas","Title":"6 sinais enviados pelo coração que não se devem ignorar!","Chamada":"De Marília Mendonça à artérias que não vão muito bem. Veja 6 dicas que você não deve ignorar sobre o bem-estar do seu coração.","Image":"https://mega.ibxk.com.br/2018/08/16/16181208582233.jpg","Url":"/ciencia/108682-6-sinais-enviados-pelo-coracao-que-nao-se-devem-ignorar.htm","Views":"1.187","Tag":{"Url":"ciencia","Title":"Ciência","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/ciencia/108682-6-sinais-enviados-pelo-coracao-que-nao-se-devem-ignorar.htm","Image":"https://mega.ibxk.com.br/2018/08/16/16181208582233.jpg","DescriptionOG":"De Marília Mendonça à artérias que não vão muito bem. Veja 6 dicas que você não deve ignorar sobre o bem-estar do seu coração.","Canonical":"https://www.megacurioso.com.br/ciencia/108682-6-sinais-enviados-pelo-coracao-que-nao-se-devem-ignorar.htm","Alternate":null},"TituloImagemDestaque":"Imagem de 6 sinais enviados pelo coração que não se devem ignorar! no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Luiza Lafuente","DataModificado":"2018-09-18T09:50:00"},{"Id":36748,"DateISO":"2018-09-18T10:00:06","TimeElapsed":"há mais de 4 horas","Title":"13 gambiarras malucas pra ninguém botar defeito","Chamada":"Você provavelmente já pensou em algumas das facilidades a seguir. Confira as imagens e divirta-se","Image":"https://mega.ibxk.com.br/2013/5/materias/3674829173131.jpg","Url":"/invencoes-malucas/36748-13-gambiarras-malucas-para-preguicoso-nenhum-botar-defeito.htm","Views":"112.969","Tag":{"Url":"ciencia","Title":"Ciência","ParentTitle":null},"Social":{"Type":"article","Url":"http://www.megacurioso.com.br/invencoes-malucas/36748-13-gambiarras-malucas-para-preguicoso-nenhum-botar-defeito.htm","Image":"https://mega.ibxk.com.br/2013/5/materias/3674829173131.jpg","DescriptionOG":"Você provavelmente já pensou em algumas das facilidades a seguir. Confira as imagens e divirta-se","Canonical":"http://www.megacurioso.com.br/invencoes-malucas/36748-13-gambiarras-malucas-para-preguicoso-nenhum-botar-defeito.htm","Alternate":null},"TituloImagemDestaque":"Imagem de 13 gambiarras malucas pra ninguém botar defeito no site Mega Curioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Daiana Geremias","DataModificado":"2018-09-13T16:16:00"},{"Id":103659,"DateISO":"2018-09-18T09:00:06","TimeElapsed":"há mais de 5 horas","Title":"Veja como são as periferias de 15 cidades ao redor do mundo","Chamada":"Estas imagens mostram muito mais do que os cartões-postais","Image":"https://mega.ibxk.com.br/2017/08/14/14150219574241.jpg","Url":"/estilo-de-vida/103659-veja-como-e-a-periferia-de-15-cidades-ao-redor-do-mundo.htm","Views":"13.740","Tag":{"Url":"estilo-de-vida","Title":"Estilo de vida","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/estilo-de-vida/103659-veja-como-e-a-periferia-de-15-cidades-ao-redor-do-mundo.htm","Image":"https://mega.ibxk.com.br/2017/08/14/14150219574241.jpg","DescriptionOG":"Estas imagens mostram muito mais do que os cartões-postais","Canonical":"https://www.megacurioso.com.br/estilo-de-vida/103659-veja-como-e-a-periferia-de-15-cidades-ao-redor-do-mundo.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Veja como é a periferia de 15 cidades ao redor do mundo no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Willian Aust (via N-Experts)","DataModificado":"2018-09-18T12:00:00"},{"Id":90673,"DateISO":"2018-09-18T08:00:00","TimeElapsed":"há mais de 6 horas","Title":"7 estruturas bonitas feitas por animais pequeninos","Chamada":"Conheça alguns arquitetos da natureza que vão deixar você de queixo caído","Image":"https://mega.ibxk.com.br/2016/02/03/03183520870728.jpg","Url":"/animais/90673-7-estruturas-bonitas-feitas-por-animais-pequeninos.htm","Views":"28.303","Tag":{"Url":"ciencia","Title":"Ciência","ParentTitle":null},"Social":{"Type":"article","Url":"http://www.megacurioso.com.br/animais/90673-7-estruturas-bonitas-feitas-por-animais-pequeninos.htm","Image":"https://mega.ibxk.com.br/2016/02/03/03183520870728.jpg","DescriptionOG":"Conheça alguns arquitetos da natureza que vão deixar você de queixo caído","Canonical":"http://www.megacurioso.com.br/animais/90673-7-estruturas-bonitas-feitas-por-animais-pequeninos.htm","Alternate":null},"TituloImagemDestaque":"Imagem de 7 estruturas bonitas feitas por animais pequeninos no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Maria Luciana Rincón","DataModificado":"2018-09-18T13:51:00"},{"Id":100749,"DateISO":"2018-09-17T20:02:47","TimeElapsed":"há mais de 18 horas","Title":"Quantos insetos o Simba deveria comer por dia para sobreviver na selva?","Chamada":"Internautas fizeram os cálculos cruzando a quantidade de carne e de calorias que um leão ingere por dia com o tamanho dos insetos; o resultado é surpreendente","Image":"https://mega.ibxk.com.br/2016/10/14/14182458679360.jpg","Url":"/cinema/100749-quantos-insetos-o-simba-deveria-comer-por-dia-para-sobreviver-na-selva.htm","Views":"18.683","Tag":{"Url":"artes-cultura","Title":"Artes/cultura","ParentTitle":null},"Social":{"Type":"article","Url":"http://www.megacurioso.com.br/cinema/100749-quantos-insetos-o-simba-deveria-comer-por-dia-para-sobreviver-na-selva.htm","Image":"https://mega.ibxk.com.br/2016/10/14/14182458679360.jpg","DescriptionOG":"Internautas fizeram os cálculos cruzando a quantidade de carne e de calorias que um leão ingere por dia com o tamanho dos insetos; o resultado é surpreendente","Canonical":"http://www.megacurioso.com.br/cinema/100749-quantos-insetos-o-simba-deveria-comer-por-dia-para-sobreviver-na-selva.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Quantos insetos o Simba deveria comer por dia para sobreviver na selva? no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Diego Denck","DataModificado":"2018-09-18T14:01:00"},{"Id":109077,"DateISO":"2018-09-17T19:32:44","TimeElapsed":"há mais de 18 horas","Title":"Saiba como funciona o sistema de trava de um carro","Chamada":"O problema que ocorre ao tentar destravar a porta enquanto alguém puxa a maçaneta é um reflexo da versatilidade do sistema","Image":"https://mega.ibxk.com.br/2018/09/12/12093207886015.jpg","Url":"/ciencia/109077-saiba-como-funciona-o-sistema-de-trava-de-um-carro.htm","Views":"1.958","Tag":{"Url":"ciencia","Title":"Ciência","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/ciencia/109077-saiba-como-funciona-o-sistema-de-trava-de-um-carro.htm","Image":"https://mega.ibxk.com.br/2018/09/12/12093207886015.jpg","DescriptionOG":"O problema que ocorre ao tentar destravar a porta enquanto alguém puxa a maçaneta é um reflexo da versatilidade do sistema","Canonical":"https://www.megacurioso.com.br/ciencia/109077-saiba-como-funciona-o-sistema-de-trava-de-um-carro.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Saiba como funciona o sistema de trava de um carro no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Allan França","DataModificado":"2018-09-17T18:36:00"},{"Id":109139,"DateISO":"2018-09-17T19:02:46","TimeElapsed":"há mais de 19 horas","Title":"3 retratos da evolução das espécies diante de grandes catástrofes naturais","Chamada":"O planeta Terra está em constante mutação","Image":"https://mega.ibxk.com.br/2018/09/17/17182004354164.jpg","Url":"/ciencia/109139-3-retratos-da-evolucao-das-especies-diante-de-grandes-catastrofes-naturais.htm","Views":"2.626","Tag":{"Url":"ciencia","Title":"Ciência","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/ciencia/109139-3-retratos-da-evolucao-das-especies-diante-de-grandes-catastrofes-naturais.htm","Image":"https://mega.ibxk.com.br/2018/09/17/17182004354164.jpg","DescriptionOG":"O planeta Terra está em constante mutação","Canonical":"https://www.megacurioso.com.br/ciencia/109139-3-retratos-da-evolucao-das-especies-diante-de-grandes-catastrofes-naturais.htm","Alternate":null},"TituloImagemDestaque":"Imagem de 3 retratos da evolução das espécies diante de grandes catástrofes naturais no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Diego Denck","DataModificado":"2018-09-18T13:01:00"},{"Id":109138,"DateISO":"2018-09-17T18:32:49","TimeElapsed":"há mais de 19 horas","Title":"Veja algumas das primeiras fotos tiradas em um iPhone Xs","Chamada":"Fotógrafo teve acesso antecipado a um dos dispositivos e capturou várias imagens durante uma viagem para a ilha de Zanzibar","Image":"https://mega.ibxk.com.br/2018/09/17/17175748447160.jpg","Url":"/artes-cultura/109138-veja-algumas-das-primeiras-fotos-tiradas-em-um-iphone-xs.htm","Views":"2.476","Tag":{"Url":"artes-cultura","Title":"Artes/cultura","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/artes-cultura/109138-veja-algumas-das-primeiras-fotos-tiradas-em-um-iphone-xs.htm","Image":"https://mega.ibxk.com.br/2018/09/17/17175748447160.jpg","DescriptionOG":"Fotógrafo teve acesso antecipado a um dos dispositivos e capturou várias imagens durante uma viagem para a ilha de Zanzibar","Canonical":"https://www.megacurioso.com.br/artes-cultura/109138-veja-algumas-das-primeiras-fotos-tiradas-em-um-iphone-xs.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Veja algumas das primeiras fotos tiradas em um iPhone Xs no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Felipe Autran","DataModificado":"2018-09-18T01:11:00"},{"Id":109137,"DateISO":"2018-09-17T18:02:42","TimeElapsed":"há mais de 20 horas","Title":"O que você faria se encontrasse mais de R$ 5 mil em moedas em uma fonte?","Chamada":"Experimento social mostra como as pessoas se comportam","Image":"https://mega.ibxk.com.br/2018/09/17/17172042333152.jpg","Url":"/estilo-de-vida/109137-o-que-voce-faria-se-encontrasse-mais-de-r-5-mil-em-moedas-em-uma-fonte.htm","Views":"2.656","Tag":{"Url":"estilo-de-vida","Title":"Estilo de vida","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/estilo-de-vida/109137-o-que-voce-faria-se-encontrasse-mais-de-r-5-mil-em-moedas-em-uma-fonte.htm","Image":"https://mega.ibxk.com.br/2018/09/17/17172042333152.jpg","DescriptionOG":"Experimento social mostra como as pessoas se comportam","Canonical":"https://www.megacurioso.com.br/estilo-de-vida/109137-o-que-voce-faria-se-encontrasse-mais-de-r-5-mil-em-moedas-em-uma-fonte.htm","Alternate":null},"TituloImagemDestaque":"Imagem de O que você faria se encontrasse mais de R$ 5 mil em moedas em uma fonte? no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Diego Denck","DataModificado":"2018-09-18T11:22:00"},{"Id":109136,"DateISO":"2018-09-17T17:32:32","TimeElapsed":"há mais de 20 horas","Title":"Você viu que a Coca-Cola está fazendo um refrigerante de cannabis?","Chamada":"Seguindo a onda dos países que estão discriminalizando a maconha, a grande marca de refrigerantes parece já estar desenvolvendo sua versão à base da erva","Image":"https://mega.ibxk.com.br/2018/09/17/17163819291127.jpg","Url":"/estilo-de-vida/109136-voce-viu-que-a-coca-cola-esta-fazendo-um-refrigerante-de-cannabis.htm","Views":"2.308","Tag":{"Url":"estilo-de-vida","Title":"Estilo de vida","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/estilo-de-vida/109136-voce-viu-que-a-coca-cola-esta-fazendo-um-refrigerante-de-cannabis.htm","Image":"https://mega.ibxk.com.br/2018/09/17/17163819291127.jpg","DescriptionOG":"Seguindo a onda dos países que estão discriminalizando a maconha, a grande marca de refrigerantes parece já estar desenvolvendo sua versão à base da erva","Canonical":"https://www.megacurioso.com.br/estilo-de-vida/109136-voce-viu-que-a-coca-cola-esta-fazendo-um-refrigerante-de-cannabis.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Você viu que a Coca-Cola está fazendo um refrigerante de Cannabis? no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Daiana Geremias","DataModificado":"2018-09-18T12:00:00"},{"Id":109135,"DateISO":"2018-09-17T17:02:40","TimeElapsed":"há mais de 21 horas","Title":"9 dicas de decoração para quem já deixou a juventude e se tornou adulto","Chamada":"Amadurecer também passa pela maneira como você se relaciona com a própria casa","Image":"https://mega.ibxk.com.br/2018/09/17/17161628795121.jpg","Url":"/estilo-de-vida/109135-9-dicas-de-decoracao-para-quem-ja-deixou-a-juventude-e-se-tornou-adulto.htm","Views":"4.133","Tag":{"Url":"estilo-de-vida","Title":"Estilo de vida","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/estilo-de-vida/109135-9-dicas-de-decoracao-para-quem-ja-deixou-a-juventude-e-se-tornou-adulto.htm","Image":"https://mega.ibxk.com.br/2018/09/17/17161628795121.jpg","DescriptionOG":"Amadurecer também passa pela maneira como você se relaciona com a própria casa","Canonical":"https://www.megacurioso.com.br/estilo-de-vida/109135-9-dicas-de-decoracao-para-quem-ja-deixou-a-juventude-e-se-tornou-adulto.htm","Alternate":null},"TituloImagemDestaque":"Imagem de 9 dicas de decoração para quem já deixou a juventude e se tornou adulto no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Diego Denck","DataModificado":"2018-09-18T12:00:00"},{"Id":109134,"DateISO":"2018-09-17T16:32:46","TimeElapsed":"há mais de 21 horas","Title":"Prepare-se: logo seu cotidiano será dominado pela inteligência artificial","Chamada":"Sistema de Inteligência artificial desenvolvido pelo MIT, permite que robôs realizem atividades rotineiras com maior autonomia e precisão. ","Image":"https://mega.ibxk.com.br/2018/09/13/13103216713465.jpg","Url":"/ciencia/109134-prepare-se-logo-seu-cotidiano-sera-dominado-pela-inteligencia-artificial.htm","Views":"2.050","Tag":{"Url":"ciencia","Title":"Ciência","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/ciencia/109134-prepare-se-logo-seu-cotidiano-sera-dominado-pela-inteligencia-artificial.htm","Image":"https://mega.ibxk.com.br/2018/09/13/13103216713465.jpg","DescriptionOG":"Sistema de Inteligência artificial desenvolvido pelo MIT, permite que robôs realizem atividades rotineiras com maior autonomia e precisão. ","Canonical":"https://www.megacurioso.com.br/ciencia/109134-prepare-se-logo-seu-cotidiano-sera-dominado-pela-inteligencia-artificial.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Prepare-se: logo seu cotidiano será dominado pela inteligência artificial no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Hulyan Anzoategui","DataModificado":"2018-09-18T11:03:00"},{"Id":109079,"DateISO":"2018-09-17T16:02:52","TimeElapsed":"há mais de 22 horas","Title":"Por que tão séria? Médicos descobriram o segredo do sorriso de Monalisa ","Chamada":"Desde que foi pintado por Leonardo da Vinci, o retrato de Monalisa e seu sorriso enigmático dividem opiniões","Image":"https://mega.ibxk.com.br/2018/09/12/12233342730099.jpg","Url":"/ciencia/109079-por-que-tao-seria-medicos-descobriram-o-segredo-do-sorriso-de-monalisa.htm","Views":"4.348","Tag":{"Url":"ciencia","Title":"Ciência","ParentTitle":null},"Social":{"Type":"article","Url":"https://www.megacurioso.com.br/ciencia/109079-por-que-tao-seria-medicos-descobriram-o-segredo-do-sorriso-de-monalisa.htm","Image":"https://mega.ibxk.com.br/2018/09/12/12233342730099.jpg","DescriptionOG":"Desde que foi pintado por Leonardo da Vinci, o retrato de Monalisa e seu sorriso enigmático dividem opiniões","Canonical":"https://www.megacurioso.com.br/ciencia/109079-por-que-tao-seria-medicos-descobriram-o-segredo-do-sorriso-de-monalisa.htm","Alternate":null},"TituloImagemDestaque":"Imagem de Por que tão séria? Médicos descobriram o segredo do sorriso de Monalisa  no megacurioso","isSpecialHighlight":false,"isVideo":false,"CodSubtipo":0,"NomeAutor":"Luiza Lafuente","DataModificado":"2018-09-18T14:00:00"}],"previous":null,"next":null,"total":null,"currentPage":1,"tag":null};
+        var tagJson = null;
+    </script>
+
+    <script src="https://obj-mega.ibxk.com.br/megacurioso/assets/js/news-item.20180912202340.js"></script>
+
+    <!--Visual Revenue Reader Response Tracking Script (v6) -->
+    <script type="text/javascript">
+
+        if(document.location.protocol === "http:")
+        {
+            var _vrq = _vrq || [];
+            _vrq.push(['id', 669]);
+            _vrq.push(['automate', false]);
+            _vrq.push(['track', function(){}]); (function(d, a){
+                var s = d.createElement(a),
+                x = d.getElementsByTagName(a)[0];
+                s.async = true;
+                s.src = 'http://a.visualrevenue.com/vrs.js'; x.parentNode.insertBefore(s, x);
+            })(document, 'script');
+        }
+    </script>
+    <!-- End of VR RR Tracking Script - All rights reserved -->
+
+    <script type="text/javascript">
+        //if(window.location.search.indexOf("yahootest")>=0){
+        var sectionId = "5420808",
+        sectionCode = "08d67644-bf15-4a66-8a69-bf2a89203a30";
+
+        (function(){
+            var script = document.createElement("script");
+
+            script.async = true;
+            script.src = "https://s.yimg.com/av/gemini/ga/syndication.js";
+
+            document.body.appendChild(script);
+        })();
+    </script>
+
+    <!-- BEGIN SNIPPET  - YAHOO CRAWLER-->
+    <!--
+    <script type="text/javascript" async>
+        (function(a,b,c,d,e,f){a[d]||(a[d]=
+             function(){(a[d].q=a[d].q||[]).push([arguments,+new Date])});
+            e=b.createElement(c);f=b.getElementsByTagName(c)[0];
+            e.src='https://s.yimg.com/uq/syndication/yad.js';e.async=true;
+            f.parentNode.insertBefore(e,f)}(window,document,'script','yad'));
+        yad('0c1e06cd-ece6-3bc0-a1f3-d51a6717810f');
+    </script>-->
+    <!-- END SNIPPET -->
+
+    <script type="text/javascript">
+        /* THE PAYLOAD IS WORKING TOO */
+        var disqus_config = function () {
+            this.page.api_key = window._dqs;
+            this.page.url = 'https://www.megacurioso.com.br/ciencia/109110-eleicoes-2018-alguns-dos-candidatos-com-os-nomes-mais-engracados.htm';
+        }
+    </script>
+
+    <!---Disqus Comments-->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = 'megacurioso';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <!---End Disqus Comments-->
+
+<!-- TABOOLA FLUSH -->
+<script type="text/javascript">
+    _taboola.push({ flush: true });
+</script>
+
+    <!-- AUTO TODAS-FIM -->
+<!-- comscore -->
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: '2', c2: '8756095' });
+    (function () {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+        s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+<noscript>
+    <img src='https://b.scorecardresearch.com/p?c1=2&c2=8756095&cv=2.0' />
+</noscript>
+<!-- end / comscore -->
+<!-- Begin comScore Tag -->
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "8", c2: "8756095", c3: "2" });
+    (function () {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+<noscript>
+    <img src="https://b.scorecardresearch.com/p?c1=8&c2=8756095&c3=2&c15=&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+    <!-- / AUTO TODAS-FIM -->
+</body>
+</html>

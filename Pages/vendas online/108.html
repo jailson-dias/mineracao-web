@@ -1,0 +1,1282 @@
+ï»¿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vendas Online - FamÃ­lia Rosa Vende Tudo</title>
+
+<style>
+    *{ margin:0; padding:0;}*
+body{ font-family: 'Roboto', sans-serif; font-size:17px; color:#464637; }
+
+a{ color:#464637; }
+
+.font-site{  font-size:17px; color:#464637; font-weight:normal;}
+
+.center{ width:1000px; margin:0 auto;}
+
+.bold{ font-weight:bold;}
+
+
+/***/
+
+#menu { width : 100%; overflow:hidden;  position: fixed; display : none; height:270px; z-index: 999998; color:#fff;}
+	.back-menu{ background:url(../img/back-menu.png); padding:25px 0}
+
+header{ position: relative; top: 0; z-index: 99999; width: 100%; background:url(../img/header.jpg);}
+.index header{position: absolute; background-image: none;}
+
+	#topo-menu{ background:url(../img/topo-background.png); height:auto; padding:20px 0 20px 0;}
+
+nav{ padding-top:20px;}
+	.menu{height:30px;  margin:0 auto; }
+
+
+		.menu li{ list-style:none; float:left; padding:0 11px; position:relative;}
+			.menu li a{display:block; color:#fff; text-decoration:none; font-size:17px; font-weight:bold;}
+				.menu li a:hover{ text-decoration:underline;}
+
+			.menu li:hover ul, .menu li.over ul{display:block;}
+				.menu li ul{position:absolute; z-index:9; left:0px; background:url(../img/back-submenu.png); display:none;}
+					.menu li ul li{ display:block; width:160px; float:none; padding:0; padding-bottom:5px; border-bottom:1px solid #b8cb5f}
+						.menu li ul li.top13{ margin-top:13px;}
+						.menu li ul li a{ padding:10px 8px; font-size:15px; color:#464637;}
+							.menu li ul li a:hover{}
+
+
+#menu-icon { display: hidden; width: 40px; height: 40px; background: #E4B0AD url(../img/menu-icon.png) center;}
+a:hover#menu-icon { background-color: #DB9591; border-radius: 4px 4px 0 0;}
+
+.bx-wrapper{ border:none; box-shadow: none; margin-bottom: 0; }
+.bx-wrapper .bx-pager{ display: none; }
+
+.bx-controls-direction{ display: none; }
+
+.servico-h3{ font-size: 18px; }
+
+/***/
+
+.sobre{ border-bottom: 1px solid #ccc; padding-bottom: 50px; margin-bottom: 50px; }
+.sobre li{ list-style: none; float: left; width: 28%; margin-right: 20px; background-color: #49B1B2; font-size: 13px; color: #fff; padding: 20px; min-height: 160px; }
+	.sobre li h3{ font-size: 20px; font-weight: bold; color: #fff }
+	.sobre li:nth-child(3){ margin-right: 0 }
+/***/
+
+#calendario-de-eventos{ height:auto; padding:50px 0;}
+.barra-title{ margin-bottom:20px;}
+
+.vendas{ background:#E4E5DF; height:auto;}
+	.container-venda{ float:left; width: 33%; font-size:15px; height:530px; padding-top:20px;} /* 1 venda width:100%; // 2 vendas width:50%; // 3 vendas colocar width:33%; // 4 width:25%; */
+	.container-venda a{ color:#464637; text-decoration:none;}
+		.container-venda a:hover{ text-decoration:underline;}
+
+		.conteudo-venda{ background:#F03; height:550px; width:33.7%; background:#eaeae7; display:table;}
+				.conteudo-venda div{ padding:30px; display:table-cell; vertical-align:middle;}
+				.conteudo-venda h3{ font-size:20px;}
+
+		.data-venda{ background:#7B7B6F; border-radius:50%; color:#fff; width:100px; height:80px; margin:0 auto; text-transform:uppercase; padding-top:20px; font-size:25px; font-weight:bold; display:table;margin-bottom:20px; }
+
+		.data-venda i{ font-size:50px; position:relative; top:7px; left:-2px;}
+
+		.data-venda.em-breve{ padding-top:15px; height:85px;}
+		.data-venda.adiada{ background:#A00; font-size:40px;}
+
+
+		.info{ width:342px; margin:0 auto;}
+		.info.maior{ width:380px;}
+			.info.em-breve2{ width:250px;}
+
+		.mapa { width:67%; float:left; height: 550px;  background-position:right; background-size:cover;}
+
+		.vila-cruzeiro{background:url(../hipica-boulevard-vila-cruzeiro/img/mapa.jpg); background-position:center; background-size:cover;}
+		.alphaville0{background:url(../img/vendas/alphaville0-abertura-02-07/mapa.jpg); background-position:center; background-size:cover;}
+		.vila-conceicao{background:url(../img/vendas/vila-conceicao-venda-online/mapa.jpg); background-position:center; background-size:cover;}
+		.indianopolis{background:url(../img/vendas/indianopolis-abertura-10-06/mapa.jpg); background-position:center; background-size:cover;}
+		.campo-belo{background:url(../img/vendas/campo-belo-21-01/mapa.jpg); background-position:center; background-size:cover;}
+		.alphaville6{background:url(../img/vendas/alphaville-res6-16-07/mapa.jpg); background-position:center; background-size:cover;}
+		.jaunas{background:url(../img/vendas/jaunas-24-09/mapa.jpg); background-position:center; background-size:cover;}
+		.morumbi{background:url(../img/vendas/morumbi-abertura-06.08/mapa.jpg); background-position:center; background-size:cover;}
+		.leopoldina{background:url(../img/vendas/vila-leopoldina-abertura-20-08/mapa.jpg); background-position:center; background-size:cover;}
+		.alphaville-res10{background:url(../img/vendas/alphaville-res10-02-09/mapa.jpg); background-position:center; background-size:cover;}
+		.jardim-cordeiro{background:url(../img/vendas/jardim-cordeiro/mapa.jpg); background-position:center; background-size:cover;}
+		.planalto-paulista-02-e-03-de-dezembro{background:url(../img/vendas/planalto-paulista-02-e-03-de-dezembro/mapa.jpg); background-position:center; background-size:cover;}
+		.alto-de-pinheiros{background:url(../img/vendas/alto-de-pinheiros-14-01/mapa.jpg); background-position:center; background-size:cover;}
+		.condominio-vista-golf{background:url(../img/vendas/condominio-vista-golf/mapa.jpg); background-position:center; background-size:cover;}
+		.vila-madalena-18-02{background:url(../img/vendas/alto-de-pinheiros-18-02/mapa.jpg); background-position:center; background-size:cover;}
+		.liquidacao-jaunas{background:url(../img/vendas/liquidacao-jaunas-02-03/mapa.jpg); background-position:center; background-size:cover;}
+		.melville-08-04{background:url(../img/vendas/melville-08-04/mapa.jpg); background-position:center; background-size:cover;}
+		.alphaville-21-04-17{background:url(../img/vendas/alphaville-21-04-17/mapa.jpg); background-position:center; background-size:cover;}
+		.jd-europa-20-e-21-de-maio{background:url(../img/vendas/jd-europa-20-e-21-de-maio/mapa.jpg); background-position:center; background-size:cover;}
+		.interlagos-15-06{background:url(../img/vendas/interlagos-15-06/mapa.jpg); background-position:center; background-size:cover;}
+		.jd-boacava-23-09{background:url(../img/vendas/jd-boacava-23-09/mapa.jpg); background-position:center; background-size:cover;}
+		.santo-amaro-28-10{background:url(../img/vendas/santo-amaro-28-10/mapa.jpg); background-position:center; background-size:cover;}
+		.planalto-paulista-09-12{background:url(../img/vendas/planalto-paulista-09-12/mapa.jpg); background-position:center; background-size:cover;}
+		.jd-paulistano-24-02{background:url(../img/vendas/jd-paulistano-24-02/mapa.jpg); background-position:center; background-size:cover;}
+		.alphaville-02-03{background:url(../img/vendas/alphaville-02-03/mapa.jpg); background-position:center; background-size:cover;}
+		.alto-boa-vista-17-03{background:url(../img/vendas/alto-boa-vista-17-03/mapa.jpg); background-position:center; background-size:cover;}
+		.sorocabaa-17-03{background:url(../img/vendas/sorocaba-17-03/mapa.jpg); background-position:center; background-size:cover;}
+		.cidade-de-itu-24-03{background:url(../img/vendas/cidade-de-itu-24-03/mapa.jpg); background-position:center; background-size:cover;}
+		.jd-santo-amaro-24-03{background:url(../img/vendas/jd-santo-amaro-24-03/mapa.jpg); background-position:center; background-size:cover;}
+		.vila-uberabinha-19-05{background:url(../img/vendas/vila-uberabinha-19-05/mapa.jpg); background-position:center; background-size:cover;}
+
+
+
+.galeria-de-fotos h2{ font-size:30px;}
+
+.paginacao{ background:#dedfd1; padding:5px 0; margin-bottom:20px; }
+	.paginacao a{ color:#242515; text-decoration:none; position:relative;  z-index: 999999;}
+
+.paginacao.desconto a{ padding: 5px 25px; color: #fff; background-color: #DB1C68; }
+.paginacao.desconto{ background-color: #fff;}
+
+.produtos img{ max-width:33.22%; width:33.22%; float:left; height:auto; margin-bottom:2px;}
+	.produtos.vertical img{ max-width: 19.88%;}
+
+
+.produtos img{ margin-right:1.3px;}
+.produtos img:nth-child(3){ margin-right:0;}
+
+.produtos.vertical img:nth-child(3){ margin-right:2px;}
+.produtos.vertical img:nth-child(5){ margin-right:0;}
+
+
+/***/
+
+#espaco-decoracao{ background:url(../img/parallax.jpg); background-attachment:fixed; background-position:center; background-size:cover; padding:60px 0; color:#fff; font-size:23px; text-align:center;}
+	#espaco-decoracao h3{ color:#fff; font-size:50px; text-shadow:-1px 3px #000;}
+	#espaco-decoracao p{ margin-top:20px; height:140px;}
+
+/***/
+
+
+.hoverzoom { position: relative; width:235px; float:left; overflow: hidden; margin-top:40px; }
+	.hoverzoom h4{ font-size:25px; color:#fff;}
+
+.hoverzoom > img { width: 100%; max-width:100%; height:auto;}
+
+.hoverzoom .retina{ position: absolute; width: 100%; height: 100%; top: -3px; left: 0; opacity: 0; background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6); text-align: center; }
+	.hoverzoom .retina div{ text-align:center; padding-top:90px;}
+
+.hoverzoom .retina p{ margin-top:50px; height:60px; font-size:25px;}
+	.hoverzoom .retina a.botao{ font-size:13px;}
+
+
+.hoverzoom:hover .retina { opacity: 1;}
+.hoverzoom .retina p {color: #fff;}
+
+.ir-para-loja{background:#E4E5DF; width:1000px; padding:15px 0; text-align:center; margin-top:30px; font-weight:bold;}
+.ir-para-loja i{ font-size:10px; position:relative; top:-3px;}
+
+/***/
+
+.txt-quem-somos{ background:#E4E5DF; width:50%; height:460px;}
+.video-quem-somos{ width:50%; background:url(../img/video-familia-rosa.jpg); height:460px; background-position:center; background-size:cover; display:table;}
+	.video-quem-somos div{ display:table-cell; vertical-align:middle; text-align:center;}
+
+/***/
+
+#loja-virtual p{ height:80px;}
+
+#redes-sociais a{ text-decoration:none;}
+
+
+/***/
+
+
+
+#destaque{ padding-bottom:50px;}
+.container-destaque{ width:33.3%;}
+	.container-destaque h4{ color:#878787; margin-top:30px; font-size:24px; margin-bottom:0;}
+	.container-destaque p{ font-size:14px;}
+
+/***/
+
+footer{ background:url(../img/background-footer.jpg); background-attachment:fixed;}
+	footer a{ color:#464637; text-decoration:none;}
+
+#midias{ background:#1f1e53; color:#fff; font-size:23px; padding:50px 0;  }
+	.txt-midias{ margin-top:25px;}
+
+
+/***/
+
+#newsletter{ padding:50px 0;}
+
+.form-news{ margin-top:25px;}
+	.form-news img{ position:relative; right:-40px; top:-3px;}
+	.news{ background:#F9F9F9; border-bottom:1px solid #C0C0C0;}
+
+
+/***/
+
+#rodape{ padding-bottom:40px; margin-top:30px;}
+
+#rodape .txt-rodape h5{ font-size:15px;}
+#rodape .img-rodape img{ position:relative; top:-3px;}
+#rodape .txt-rodape{ font-size:11px;}
+	#rodape .txt-rodape a:hover{ text-decoration:underline;}
+
+#termos{ background:#e5e8e2; padding:15px 0 10px 0;  text-align:right;}
+	#termos img{ margin-right:15px;}
+
+
+
+/***/
+
+.conteudo{ height:auto; padding:50px 0;}
+
+.circle{  background:#f4b2ae; float:left; border-radius:50%; width:235px; height:235px; font-size:18px; text-align:center; color:#fff; font-weight:bold; display:table; margin-top:40px; margin-bottom:40px;}
+	.circle:hover{ background:#dc9591}
+	.circle div{ display:table-cell; vertical-align:middle;}
+
+
+#whats{ z-index:9999; position:fixed; right:10px; bottom:10px;}
+	#whats img{ max-width:100%; height:auto;}
+
+	#whats-mobile{ display:none;}
+
+/***/
+
+.midia{ width:135px; height:123px; background:#fff; border-radius:50%; text-align:center; color:#49B1B2; font-size:85px; padding-top:13px;}
+	.midia:hover{ background:#5d5bd9;}
+	.midia a{ color:#1f1e53;}
+
+/***/
+
+.antiguidades-produtos{ float:left; width:12.5%; height:200px; color:#fff; font-size:25px; font-weight:bold; text-align:center; line-height:20px; display:table; }
+	.antiguidades-produtos div{ padding:20px; display:table-cell; vertical-align:middle;}
+
+
+	.cristais{ background:url(../img/cristais.jpg);}
+	.vidro{ background:url(../img/vidro.jpg);}
+	.prata{ background:url(../img/prata-de-lei.jpg);}
+	.prataria{ background:url(../img/prata.jpg);}
+	.quadros{ background:url(../img/quadros.jpg);}
+	.porcelanas{ background:url(../img/porcelana.jpg);}
+	.esculturas{ background:url(../img/esculturas.jpg);}
+	.relogios{ background:url(../img/relogio.jpg);}
+
+	.back-ant{ background-position:center; background-size:cover;}
+
+/***/
+
+
+.saiu-na-midia{ padding-top:100px;}
+	.saiu-na-midia img{ margin-top:50px;}
+
+.linha{ height:70px;}
+	.linha2{ height:40px;}
+
+/***/
+
+.prox-venda{ background:#EFF0EB; color:#49B1B2; text-align:center; width:80%; padding:8px 0; margin:0 auto; font-weight:bold; text-transform:uppercase; font-size:16px; margin-bottom:30px;}
+	.prox-venda-font h2{ font-size:23px; margin-bottom:10px; color:#fff;}
+.prox-venda-font{ font-size:16px; margin-top:100px; color:#fff;}
+
+
+.proxima-venda-index{background:#49B1B2; padding:50px 0;}
+.end{background:#fff; width:45%; padding:20px 0;}
+.sem-fundo{ background-color:transparent;}
+
+
+/** diversos **/
+
+.mobile{ display:none;}
+.form-popup-sucesso{ display:none;}
+
+.desktop{ display:inline;}
+
+.input1, .input2{ width:400px; height:30px; border:1px solid #999999; border-radius:15px; padding-left:50px;}
+.input1:focus, .input2:focus{ outline:none;}
+.input2{ width:250px; margin-right:20px;}
+.input3{ width:210px; height:27px; border:1px solid #D2D2D1; border-radius:10px; padding-left:15px;}
+.input4{ width:650px; height:27px;}
+.input5{ width:300px; height:27px;}
+.input6{ width:1000px; height:27px;}
+
+.input7{ width:370px; height:30px; border:none; padding-left:10px; border-radius:15px; margin-bottom:10px; outline:0;}
+
+.enviar-popup{ background:#bed165; text-align:center; padding:9px 15px; color:#191919; border:none; font-weight:bold; font-size:13px; cursor:pointer;}
+
+.select{ width:303px; height:30px;}
+
+.textarea{ width:1000px; height:150px;}
+.textarea2{ width:472px; border:1px solid #D2D2D1; border-radius:10px; height:180px; margin-top:20px;}
+
+
+
+.bt-enviar{ background:url(../img/botao.jpg); border:none; color:#fff; width:125px; text-align:right; height:30px; font-size:15px; padding-right:5px; border-radius:13px; cursor:pointer;}
+
+.bt-enviar2{ background:#999999; padding:7px 35px; color:#fff; border-radius:10px; border:none; margin-top:20px; cursor:pointer;}
+.bt-enviar3{ background:#E9E9E9; color:#121212; padding:10px 40px; border:none; cursor:pointer;}
+
+.text-shadow{text-shadow:-2px 1px #000;}
+
+.botao{ border:1px solid #fff; padding:5px 30px; color:#fff; text-decoration:none;}
+	.botao.text-shadow{text-shadow:-1px 2px #000;}
+
+.botao-loja{ color:#333326; text-decoration:none;}
+	.botao-loja2{ color:#333326; text-decoration:none; border:1px solid #333326;}
+
+.responsive{ max-width:100%; width:100%; height:auto;}
+
+.background-cinza-claro{ background:#EFF0EB;}
+.background-cinza-media{ background:#eaeae7;}
+.background-cinza{ background:#E4E5DF;}
+.background-azul{ background:#49B1B2}
+
+h1, h2, h3, h4, h5, h6{ color:#353526; font-size:35px; margin-bottom:20px;}
+
+.back-rosa{ background:#E43879 }
+
+.clear{ clear:both;}
+
+.float-left{ float:left;}
+.float-right{ float:right;}
+
+.txt-left{ text-align:left;}
+.txt-center{ text-align:center;}
+.txt-right{ text-align:right;}
+
+.height130{ height:130px;}
+.height600{ height:600px;}
+
+.width100{ width:100px;}
+.width150{ width:150px;}
+.width225{ width:225px;}
+.width260{ width:260px;}
+.width300{ width:300px;}
+.width320{ width:320px;}
+.width350{ width:350px;}
+.width380{ width:380px;}
+.width400{ width:400px;}
+.width450{ width:450px;}
+.width455{ width:455px;}
+.width500{ width:500px;}
+.width545{ width:545px;}
+.width550{ width:550px;}
+.width600{ width:600px;}
+.width650{ width:650px;}
+.width670{ width:670px;}
+.width700{ width:700px;}
+.width800{ width:800px;}
+.width1024{width:1024px}
+
+.width10p{ width:10%;}
+.width33-3p{ width:33.3%;}
+.width40p{ width:40%;}
+.width50p{ width:50%;}
+.width60p{ width:60%;}
+.width66p{ width:66%;}
+.width80p{ width:80%;}
+.width90p{ width:90%;}
+.width99p{ width:99%;}
+.width100p{ width:100%;}
+
+.padding20{ padding:20px;}
+.padding30{ padding:30px;}
+.padding-tb-20{ padding:20px 0;}
+.padding-tb-50{ padding:50px 0;}
+.padding-lr-10{ padding:0 10px;}
+.padding-t40{padding-top:40px;}
+
+.right2{ margin-right:2px;}
+.right5{ margin-right:5px;}
+.right10{ margin-right:10px;}
+.right20{ margin-right:20px;}
+.right30{ margin-right:30px;}
+.right50{ margin-right:50px;}
+.right85{ margin-right:85px;}
+.right90{ margin-right:90px;}
+
+
+.left5{ margin-left:5px;}
+.left20{ margin-left:20px;}
+.left25{ margin-left:25px;}
+
+.txt-limao{ color:#b7d25d;}
+.txt-pink{ color:#DB1C68;}
+.txt-red{color:#99060A}
+
+.font12{ font-size:12px;}
+.font13{ font-size:13px;}
+.font15{ font-size:15px;}
+.font20{ font-size:20px;}
+.font40{ font-size:40px;}
+
+.txt-branco{ color:#fff;}
+
+	.titulo{ background:#CFE669; padding:10px 20px; color:#000; font-size:15px; font-weight:bold; cursor:pointer;}
+	.titulo div{float:right; font-size:25px; margin-top:-10px;}
+	.descricao2{ display:inherit;}
+	.descricao{ height:auto;  display:none;}
+
+	.anexo-title{ background:#fff; text-align:left; padding:0; height:40px; margin-top:20px;}
+	.anexo-bt{height:40px; width:370px; margin-top:20px;}
+
+	.conteudo-anexo{ width:1000px; margin-top:30px;}
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:999998;
+  background:url(http://commitdesign.com.br/img/back-popup.png);
+  display:none;
+}
+
+
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0px;
+  width:440px;
+  height:200px;
+
+  display:none;
+  z-index:999999;
+  padding:20px 10px;
+}
+
+#boxes #dialog2 {
+
+  background:url(../img/background-popup.png);
+  border-radius:5px;
+  width:390px;
+  height:460px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+#boxes #dialog2 p{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.close{display:block; text-align:right; border:none; background-image:url(../img/fechar.png); background-repeat:no-repeat; padding:15px 10px 5px 25px; background-color:transparent; position:absolute; top:5px; cursor:hand; right:-10px;}
+
+
+
+	.midias-mobile iframe{ width:600px;}
+
+
+
+#element_to_pop_up {
+    background-color:#fff;
+    color:#000;
+    display:none;
+    padding:20px;
+	width:630px;
+	height:auto;
+	font-size:15px;
+}
+
+#element_to_pop_up h4{ font-size:23px; margin-top:20px; margin-bottom:20px; color:#99060A;}
+
+#my-button{ cursor:pointer; color:#99060A}
+
+#element_to_pop_up .center{ width:500px;}
+
+
+
+#element_to_pop_up2 {
+    background-color:#fff;
+    color:#000;
+    display:none;
+    padding:20px;
+	width:630px;
+	height:auto;
+	font-size:15px;
+}
+
+#element_to_pop_up2 h4{ font-size:23px; margin-top:20px; margin-bottom:20px; color:#99060A;}
+
+#my-button2{ cursor:pointer; color:#99060A}
+
+#element_to_pop_up2 .center{ width:500px;}
+
+.b-close{ float:right; cursor:pointer}
+
+
+@media only screen and (max-width : 640px) {
+
+.mobile{ display:inline;}
+.desktop, .m-none{ display:none;}
+
+.bxslider{ display: none; }
+
+#boxes{ display:none;}
+
+.center{ width:98%;}
+header{height:517px; background:url(../img/header-m.jpg); background-position:center; background-size:cover; position: relative;}
+.index header{height:517px; background:url(../img/header-m.jpg);background-position:center; background-size:cover; position: relative;}
+header img.padding-tb-20{ max-width:100%; width:100%; height:auto;}
+
+nav{ padding-top:7px;}
+	#menu-icon { display:inline-block; position:absolute; right:20px; top:20px;}
+	.menu, nav:active ul { display: none; position: absolute; height:auto; background: #E4B0AD;	right: 20px; top:60px; width: 60%; border-radius:10px 0px 10px 10px}
+		.menu li { text-align: center; width: 100%;	padding: 10px 0; margin: 0;}
+			nav:hover ul { display: block;}
+				.menu li ul{ display:none;}
+
+.container-venda{ width:100%; height:auto;}
+
+
+.hoverzoom { margin:0 auto; width:235px; margin-top:20px; margin-left:50px;}
+.hoverzoom.right20{ margin-right:0;}
+
+.ir-para-loja{width:100%;}
+
+.txt-quem-somos{ background:#E4E5DF; width:100%; height:auto;}
+.video-quem-somos{ display:none;}
+
+.container-destaque{ width:100%;}
+
+.txt-midias{ width:100%;}
+
+div#redes-sociais{ width:100%; margin-top:20px;}
+	div#redes-sociais right0-m{ margin-right:0;}
+	div#redes-sociais img{ margin-top:10px; max-width:28%; width:28%;}
+	div#redes-sociais.txt-right{ text-align:center;}
+
+	#form-news{ width:100%;}
+	.input1, .input2{ width:60%;}
+	.bt-enviar{ margin-top:20px;}
+
+
+	#newsletter .width455{ width:100%;}
+		#newsletter{ text-align:center;}
+
+	.txt-midias{ text-align:center;}
+
+	.input3{ width:95%; margin-top:10px;}
+	.textarea2{ width:100%;}
+
+	#rodape .width500{ width:100%; margin-bottom:50px;}
+
+	.barra-title{ width:98%; max-width:98%; height:auto;}
+
+	#rodape .width225{ width:50%; float:left;}
+	#rodape .txt-rodape{ font-size:8px;}
+	#rodape .height130{height:100px;}
+
+	.container-venda .padding20{ padding:20px 0;}
+
+#rodape{ padding-bottom:0px;}
+
+.mapa { display:none;}
+
+.circle{  float:none; margin:0 auto; margin-top:0px; margin-bottom:20px;}
+
+.produtos img{ max-width:100%; width:100%; float:none;}
+	.produtos img.right2{ margin-right:0;}
+
+	.produtos.vertical img{ max-width: 48.9%;}
+
+
+div#menu{padding:0; height:10px;}
+	div#menu div{ display:none; padding:0;}
+
+	.info{ width:285px;}
+	.info .right85{ margin-right:30px;}
+	.container-venda div.padding20{ padding:20px 0px;}
+
+
+.midia{ width:90px; height:77px; background:#fff; border-radius:50%; text-align:center; color:#49B1B2; font-size:50px; padding-top:13px;}
+
+	#whats-mobile{ display:inherit; padding:20px 0 10px 0; font-size:13px; background:#5ba256; color:#fff; width:100%; position:fixed; bottom:0; z-index:9999; text-align:center;}
+		#whats-mobile div{ padding:0 20px;}
+	#whats-mobile a{ color:#fff;}
+		#whats-mobile img{ position:relative; top:-5px; left:5px;}
+		#whats-mobile a:hover{ text-decoration:none;}
+		#whats{display:none;}
+
+#termos .width500{ width:50%;}
+
+.conteudo-venda{ width:100%; height:auto; margin-top:-5px;}
+
+#loja-virtual p{ height:100px;}
+
+
+.col.width670{ width:100%;}
+.col.right30{ margin-right:0;}
+.col.width300{ width:100%;}
+.input4{ width:100%;}
+.input5{ width:100%;}
+.col.width320{ width:100%;}
+.textarea{ width:100%;}
+.input6{ width:100%;}
+.select{ width:100%;}
+
+.midias-mobile{ width:100%;}
+	.midias-mobile iframe{ width:100%;}
+
+.antiguidades-produtos{ width:50%; }
+
+
+#element_to_pop_up, #element_to_pop_up2 { padding:0px; max-width:93%;}
+
+
+
+#element_to_pop_up .center, #element_to_pop_up2 .center{ width:80%;}
+
+
+.proxima-venda-index{background:#49B1B2; padding:50px 0;}
+.end{background:#fff; width:45%; padding:20px 0;}
+
+
+.proxima-venda-index .width40p, .width60p{ width:100%;}
+.proxima-venda-index .end{ min-height:200px;}
+
+
+
+
+} /** mobile **/
+
+@media (min-width: 100em) {
+
+.container-venda{padding-top:20px;}
+	#map-canvas{ height:508px;}
+
+	.conteudo-venda, .mapa{  height:550px;}
+
+} /** monitor grande **/
+
+
+@media only screen
+    and (min-device-width : 414px)
+    and (max-device-width : 736px)
+    and (-webkit-min-device-pixel-ratio : 3)
+{
+
+
+
+} /* iphone retrato 6+ */
+
+
+/****** TABLET ABAIXO ******/
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 1){
+
+
+.mobile{ display:inline;}
+.desktop, .m-none{ display:none;}
+
+.center{ width:98%;}
+header{height:517px; background:url(../img/header-m.jpg); background-position:center; background-size:cover;}
+header img.padding-tb-20{ max-width:100%; width:100%; height:auto;}
+
+nav{ padding-top:7px;}
+	#menu-icon { display:inline-block; position:absolute; right:20px; top:20px;}
+	.menu, nav:active ul { display: none; position: absolute; height:auto; background: #E4B0AD;	right: 20px; top:60px; width: 60%; border-radius:10px 0px 10px 10px}
+		.menu li { text-align: center; width: 100%;	padding: 10px 0; margin: 0;}
+			nav:hover ul { display: block;}
+				.menu li ul{ display:none;}
+
+.container-venda{ width:100%; height:auto;}
+
+
+.hoverzoom { margin:0 auto; width:235px; margin-top:20px; margin-left:50px;}
+.hoverzoom.right20{ margin-right:0;}
+
+.ir-para-loja{width:100%;}
+
+.txt-quem-somos{ background:#E4E5DF; width:100%; height:auto;}
+.video-quem-somos{ display:none;}
+
+.container-destaque{ width:100%;}
+
+.txt-midias{ width:100%;}
+
+div#redes-sociais{ width:100%; margin-top:20px;}
+	div#redes-sociais right0-m{ margin-right:0;}
+	div#redes-sociais img{ margin-top:10px; max-width:28%; width:28%;}
+	div#redes-sociais.txt-right{ text-align:center;}
+
+	#form-news{ width:100%;}
+	.input1, .input2{ width:60%;}
+	.bt-enviar{ margin-top:20px;}
+
+
+	#newsletter .width455{ width:100%;}
+		#newsletter{ text-align:center;}
+
+	.txt-midias{ text-align:center;}
+
+	.input3{ width:95%; margin-top:10px;}
+	.textarea2{ width:100%;}
+
+	#rodape .width500{ width:100%; margin-bottom:50px;}
+
+	.barra-title{ width:98%; max-width:98%; height:auto;}
+
+	#rodape .width225{ width:50%; float:left;}
+	#rodape .txt-rodape{ font-size:8px;}
+	#rodape .height130{height:100px;}
+
+	.container-venda .padding20{ padding:20px 0;}
+
+#rodape{ padding-bottom:0px;}
+
+.mapa { display:none;}
+
+.circle{  float:none; margin:0 auto; margin-top:0px; margin-bottom:20px;}
+
+.produtos img{ max-width:100%; width:100%; float:none;}
+	.produtos img.right2{ margin-right:0;}
+
+	.produtos.vertical img{ max-width: 49.4%;}
+
+
+div#menu{ background-color: transparent; padding:0;}
+	div#menu div.center{ display:none;}
+
+	.info{ width:285px;}
+	.info .right85{ margin-right:30px;}
+	.container-venda div.padding20{ padding:20px 0px;}
+
+
+.midia{ width:90px; height:77px; background:#fff; border-radius:50%; text-align:center; color:#49B1B2; font-size:50px; padding-top:13px;}
+
+	#whats-mobile{ display:inherit; padding:20px 0 10px 0; font-size:13px; background:#5ba256; color:#fff; width:100%; position:fixed; bottom:0; z-index:9999; text-align:center;}
+		#whats-mobile div{ padding:0 20px;}
+	#whats-mobile a{ color:#fff;}
+		#whats-mobile img{ position:relative; top:-5px; left:5px;}
+		#whats-mobile a:hover{ text-decoration:none;}
+		#whats{display:none;}
+
+#termos .width500{ width:50%;}
+
+.conteudo-venda{ width:100%; height:auto; margin-top:-5px;}
+
+#loja-virtual p{ height:100px;}
+
+.col.width670{ width:100%;}
+.col.right30{ margin-right:0;}
+.col.width300{ width:100%;}
+.input4{ width:100%;}
+.input5{ width:100%;}
+.col.width320{ width:100%;}
+.textarea{ width:100%;}
+.input6{ width:100%;}
+.select{ width:100%;}
+
+}
+
+
+@media only screen
+    and (min-device-width : 414px)
+    and (max-device-width : 736px)
+    and (-webkit-min-device-pixel-ratio : 3)
+	and (orientation:landscape)
+{
+
+
+.mobile{ display:inherit;}
+.desktop, .m-none{ display:none;}
+
+.center{ width:98%;}
+header{height:517px; background:url(../img/header-m.jpg); background-position:center; background-size:cover;}
+header img.padding-tb-20{ max-width:100%; width:100%; height:auto;}
+
+nav{ padding-top:7px;}
+	#menu-icon { display:inline-block; position:absolute; right:20px; top:20px;}
+	.menu, nav:active ul { display: none; position: absolute; height:auto; background: #E4B0AD;	right: 20px; top:60px; width: 60%; border-radius:10px 0px 10px 10px}
+		.menu li { text-align: center; width: 100%;	padding: 10px 0; margin: 0;}
+			nav:hover ul { display: block;}
+				.menu li ul{ display:none;}
+
+.container-venda{ width:100%; height:auto;}
+
+.hoverzoom { margin:0 auto; width:235px; margin-top:20px; margin-left:50px;}
+.hoverzoom.right20{ margin-right:0;}
+
+.ir-para-loja{width:100%;}
+
+.txt-quem-somos{ background:#E4E5DF; width:100%; height:auto;}
+.video-quem-somos{ display:none;}
+
+.container-destaque{ width:100%;}
+
+.txt-midias{ width:100%;}
+
+div#redes-sociais{ width:100%; margin-top:20px;}
+	div#redes-sociais right0-m{ margin-right:0;}
+	div#redes-sociais img{ margin-top:10px;}
+	div#redes-sociais.txt-right{ text-align:center;}
+
+	#form-news{ width:100%;}
+	.input1, .input2{ width:60%;}
+	.bt-enviar{ margin-top:20px;}
+
+
+	#newsletter .width400{ width:100%;}
+		#newsletter{ text-align:center;}
+
+	.txt-midias{ text-align:center;}
+
+	.input3{ width:95%; margin-top:10px;}
+	.textarea2{ width:100%;}
+
+	#rodape .width500{ width:100%; margin-bottom:50px;}
+
+	.barra-title{ width:98%; max-width:98%; height:auto;}
+
+	#rodape .width225{ width:50%; float:left;}
+	#rodape .txt-rodape{ font-size:8px;}
+	#rodape .height130{height:100px;}
+
+	.container-venda .padding20{ padding:20px 0;}
+
+#rodape{ padding-bottom:0px;}
+
+.mapa { display:none;}
+
+
+} /* iphone paisagem 6+ */
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+	.menu{ width:800px;}
+
+
+} /* somente IE 10*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px){
+
+.produtos img{ max-width:33%; width:33%;}
+	.produtos.vertical img{ max-width:24.8%; width:24.8%;}
+
+} /* tubao */
+header{ height:auto; position: relative;}
+
+
+.container-venda{ width:33%;}
+
+
+</style>
+
+
+<meta name="description" content="Somos especializados na realizaÃ§Ã£o de vendas denominada FamÃ­lia Vende Tudo. Compramos, vendemos ou consignamos seus mÃ³veis e objetos de decoraÃ§Ã£o.">
+
+<meta name="keywords" content="famÃ­lia vende tudo; mÃ³veis antigos, mÃ³veis contemporÃ¢neos, porcelanas, pratarias, lustres, antiguidades, cristais, quadros, tapetes e objetos de decoraÃ§Ã£o">
+
+<meta name="robot" content="index,follow">
+<meta name="rating" content="general">
+<meta name="distribution" content="global">
+<meta name="language" content="pt">
+
+<!-- Google Plus -->
+<link href="https://plus.google.com/u/0/112317410319727262226/" rel="publisher" />
+
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1"> <!-- importante nÃ£o retirar -->
+
+
+ <style>
+
+    section{font-size: 14px; text-align: center;margin-bottom: 40px;}
+    section strong{font-size: 18px;font-weight: bold;}
+
+button {
+    border:1px solid #939393;
+    color: #fff;
+    width: auto;
+    text-align: center;
+    height: auto;
+    font-size: 12px;
+    padding:20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #939393;
+    font-weight: bold;
+}
+
+button:hover{
+
+  background-color: rgb(128, 210, 35);
+}
+
+    .fonte{font-size: 10px; font-weight: bold; color:#403d3d; }
+
+
+
+        .center-produtos{
+            width: 100%; margin: 0 auto; max-width: 1024px ;
+        }
+
+        .bloco-produtos{
+            width:21%; text-align: center; float: left; margin-right: 3%;;
+        }
+
+
+        .bloco-produtos h5{ font-size: 18px; width:100%; height: 50px;  margin-bottom: -20px}
+        .bloco-produtos h6{ font-size: 10px;}
+
+        .bloco-produtos p{margin-bottom: 20px; height: 60px;}
+        .bloco-produtos img{margin: 10px 0 10px 0; width: 100%; }
+
+
+
+
+        .valor{ font-size: 20px; font-weight: 600; width: 50%; margin-left:25%;}
+
+
+        @media (min-width: 720px) and (max-width: 1023px) {
+            .bloco-produtos{width:44%; text-align: center; float: left; padding: 2%; margin: 1%;}
+            .bloco-produtos img{margin: 10px 0 10px 0; width: 80%;}}
+
+
+        @media (max-width: 719px) {
+            .bloco-produtos{width: 94%; text-align: center; float: left; padding: 2%; margin: 1%;}
+            .bloco-produtos img{margin: 10px 0 10px 0; width: 80%;}
+        }
+
+
+            </style>
+
+
+<meta name="description" content="Somos especializados na realizaÃ§Ã£o de vendas denominada FamÃ­lia Vende Tudo. Compramos, vendemos ou consignamos seus mÃ³veis e objetos de decoraÃ§Ã£o.">
+
+<meta name="keywords" content="famÃ­lia vende tudo; mÃ³veis antigos, mÃ³veis contemporÃ¢neos, porcelanas, pratarias, lustres, antiguidades, cristais, quadros, tapetes e objetos de decoraÃ§Ã£o">
+
+<meta name="robot" content="index,follow">
+<meta name="rating" content="general">
+<meta name="distribution" content="global">
+<meta name="language" content="pt">
+
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1"> <!-- importante nÃ£o retirar -->
+
+
+    <!--Required libraries-->
+    <script src="js/min/jquery-v1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/min/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
+    <script src="js/min/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+
+    <!--Include flickerplate-->
+    <link href="css/flickerplate220.css"  type="text/css" rel="stylesheet">
+    <script src="js/min/flickerplate.min.js" type="text/javascript"></script>
+
+    <!--Execute flickerplate-->
+    <script>
+    $(function(){
+        $('.flicker-example').flicker(
+        {
+            auto_flick: true,
+            auto_flick_delay: 5,
+            flick_animation: "transform-slide"
+        });
+    });
+    </script>
+
+
+
+</head>
+
+<body>
+
+
+<div id="menu">
+	<div class="back-menu">
+        <div class="center txt-center">
+            <a href="http://familiarosavendetudo.com.br/">
+                <img src="http://familiarosavendetudo.com.br/img/logo-familia-vende-tudo-menu.png" alt="FamÃ­lia Rosa Vende Tudo" title="FamÃ­lia Rosa Vende Tudo">
+            </a>
+
+                <nav>
+                    <a href="#" id="menu-icon"></a>
+                    <ul class="menu">
+                        <li><a href="http://familiarosavendetudo.com.br/">Home</a></li>
+
+                        <li><a href="http://familiarosavendetudo.com.br/sobre-nos">Sobre NÃ³s</a></li>
+                        <li><a href="http://familiarosavendetudo.com.br/servicos">ServiÃ§os</a></li>
+                        <li><a href="http://familiarosavendetudo.com.br/calendario-familia-vende-tudo">CalendÃ¡rio de Eventos</a></li>
+												<li><a href="http://familiarosavendetudo.com.br/espaco-permanente/moema">EspaÃ§o Permanente</a> </li>
+                        <li><a href="http://familiarosavendetudo.com.br/vendas-online-frvt.php">Venda Online</a> </li>
+												 <li><a href="http://familiarosavendetudo.com.br/imprensa">Imprensa</a></li>
+												<li><a href="http://familiarosavendetudo.com.br/contato">Contato</a></li>
+                    </ul>
+                </nav>
+        </div>
+	</div>
+</div>
+
+
+
+<header>
+	<div id="topo-menu">
+    	<div class="center txt-center">
+
+			<img src="http://familiarosavendetudo.com.br/img/logo-familia-vende-tudo.png" alt="FamÃ­lia Rosa Vende Tudo" title="FamÃ­lia Rosa Vende Tudo">
+			<img src="http://familiarosavendetudo.com.br/img/barra.-menu.png" class="padding-tb-20" alt="FamÃ­lia Rosa Vende Tudo" title="FamÃ­lia Rosa Vende Tudo">
+                <nav>
+                    <a href="#" id="menu-icon"></a>
+                    <ul class="menu ">
+                        <li><a href="http://familiarosavendetudo.com.br/">Home</a></li>
+                        <li><a href="http://familiarosavendetudo.com.br/sobre-nos">Sobre NÃ³s</a></li>
+                        <li><a href="http://familiarosavendetudo.com.br/servicos">ServiÃ§os</a></li>
+                        <li><a href="http://familiarosavendetudo.com.br/calendario-familia-vende-tudo">CalendÃ¡rio de Eventos</a></li>
+                        <li><a href="http://familiarosavendetudo.com.br/espaco-permanente/moema">EspaÃ§o Permanente</a></li>
+												<li><a href="http://familiarosavendetudo.com.br/vendas-online-frvt.php">Venda Online</a> </li>
+                        <li><a href="http://familiarosavendetudo.com.br/imprensa">Imprensa</a></li>
+												<li><a href="http://familiarosavendetudo.com.br/contato">Contato</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </div>
+</header>
+
+
+
+<div  class="conteudo center txt-center">
+    <h1>Venda Online </h1>
+    <img src="img/barra-title.png" class="barra-title" alt="FamÃ­lia Rosa Vende Tudo" title="FamÃ­lia Rosa Vende Tudo">
+
+        <section>
+            <strong>SofisticaÃ§Ã£o, Qualidade e Praticidade vocÃª sÃ³ encontra aqui na Familia Rosa Vende Tudo Online.</strong>
+            <br><br>
+              <strong>A retirada dos produtos Ã© por conta do comprador.</strong>
+              <br><br>
+            <p>Compre online, pague com toda a seguranÃ§a do PagSeguro e ainda parcele* suas compras.
+            <br><br>
+            *Parcelamento com juros da operadora do cartÃ£o</p>
+            <br><br>
+        </section></div>
+
+
+       <div class="center-produtos">
+
+          <!-- INICIO PRODUTO -->
+           <div class="bloco-produtos">
+               <h5>FamÃ­lia Vende Tudo
+                  Apartamento Moema</h5>
+               <br>
+                  <img src="venda-online\img\chamadas\venda-apto-moema.jpg" alt="familia rosa venda online">
+
+                  <button type="button" name="button" onclick="javascript:window.location.href='http://familiarosavendetudo.com.br/venda-online/venda-apto-moema.php'; return false;">[ CLIQUE AQUI ] para ver mais fotos</button>
+
+             </div>
+           <!-- FIM PRODUTO -->
+
+
+           <!-- INICIO PRODUTO -->
+            <div class="bloco-produtos">
+                <h5>Metais Prateados</h5>
+                <br>
+                   <img src="venda-online\img\chamadas\metal-prateado.jpg" alt="familia rosa venda online">
+
+                   <button type="button" name="button" onclick="javascript:window.location.href='http://familiarosavendetudo.com.br/venda-online/metais-prateados.php'; return false;" class="estilo" >[ CLIQUE AQUI ] para ver mais fotos</button>
+
+              </div>
+            <!-- FIM PRODUTO -->
+
+
+
+
+            <!-- INICIO PRODUTO -->
+             <div class="bloco-produtos">
+                 <h5>Quadros</h5>
+                 <br>
+                    <img src="venda-online\img\chamadas\quadros.jpg" alt="familia rosa venda online">
+
+                    <button type="button" name="button" onclick="javascript:window.location.href='http://familiarosavendetudo.com.br/venda-online/quadros.php'; return false;" class="estilo" >[ CLIQUE AQUI ] para ver mais fotos</button>
+
+               </div>
+             <!-- FIM PRODUTO -->
+
+             <!-- INICIO PRODUTO -->
+              <div class="bloco-produtos">
+                  <h5>Diversos</h5>
+                  <br>
+                     <img src="venda-online\img\chamadas\diversos.jpg" alt="familia rosa venda online">
+
+                     <button type="button" name="button" onclick="javascript:window.location.href='http://familiarosavendetudo.com.br/venda-online/diversos.php'; return false;" class="estilo" >[ CLIQUE AQUI ] para ver mais fotos</button>
+
+                </div>
+              <!-- FIM PRODUTO -->
+
+
+        </div> <!--     nÃ£o mexer -  fim da class center produtos -->
+
+</div>
+<div class="clear"></div>
+
+<br><br><br><br>
+
+<footer>
+	<div id="midias">
+    	<div class="center">
+            <div class="float-left txt-left txt-midias width400">
+				Acompanhe a FamÃ­lia Rosa Vende Tudo
+                nas mÃ­dias sociais e  fique por dentro de
+                nossas vendas, liquidaÃ§Ãµes, novidades
+                e muito mais.
+            </div>
+            <div id="redes-sociais" class="float-left width600 txt-right">
+				<div class="float-left midia right30">
+                	<a href="https://www.facebook.com/familiavendetudo/" target="_blank"><i class="fa fa-facebook"></i></a>
+                </div>
+
+                <div class="float-left midia right30">
+                	<a href="https://www.youtube.com/watch?v=hfwvVX6BDqo" target="_blank"><i class="fa fa-youtube"></i></a>
+                </div>
+
+                <div class="float-left midia">
+                	<a href="https://twitter.com/FR_VendeTudo" target="_blank" class="efeito twitter"> <i class="fa fa-twitter"></i> </a>
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+<div class="news">
+    <div id="newsletter" class="center">
+    	<div class="float-left width455">
+        	<h5>Newsletter</h5>
+            <p>
+            Como um bom garimpeiro, vocÃª nÃ£o pode ficar <br>
+            de fora! Cadastre seu e-mail ou whatsapp e <br>
+            seja o primeiro a saber das novidades!
+
+            </p>
+        </div>
+
+
+        <div class="float-left width545" id="form-news">
+        	<form action="http://familiarosavendetudo.com.br/form/news-enviar.php" method="post" class="form-news">
+            	<img src="http://familiarosavendetudo.com.br/img/bt-input.png" class="float-left" width="40" alt="FamÃ­lia Rosa Vende Tudo" title="FamÃ­lia Rosa Vende Tudo">
+                <input type="email" name="emailremetente" placeholder="e-mail" class="input1 float-left" required="required">
+                <div class="clear"></div>
+                <br>
+                <img src="http://familiarosavendetudo.com.br/img/bt-input.png" class="float-left" width="40" alt="FamÃ­lia Rosa Vende Tudo" title="FamÃ­lia Rosa Vende Tudo">
+                <input type="tel" name="whats" placeholder="whatsapp" class="input2 float-left" required="required">
+                <input type="submit" name="submit" value="" class="bt-enviar">
+            </form>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+    <div id="rodape">
+    	<div class="center">
+        	<div class="float-left width500">
+				<form action="http://familiarosavendetudo.com.br/form/contato-index-enviar.php" method="post">
+                	<input type="text" name="nomeremetente" class="input3 float-left right20" placeholder="nome:">
+                    <input type="text" name="emailremetente" class="input3 float-left" placeholder="e-mail:" required="required">
+                    <textarea name="mensagem" class="textarea2"></textarea>
+                    <input type="submit" name="submit" value="Enviar" class="bt-enviar2 right5">
+                    <input type="reset" name="reset" value="Limpar" class="bt-enviar2">
+                </form>
+            </div>
+
+        	<div class="float-left width500">
+				<div class="float-left width225">
+                	<div class="height130">
+                    	<div class="img-rodape float-left right5">
+                        	<img src="http://familiarosavendetudo.com.br/img/telefone.png" alt="FamÃ­lia Rosa Vende Tudo. Telefones." title="FamÃ­lia Rosa Vende Tudo. Telefones.">
+                        </div>
+                        <div class="txt-rodape float-left">
+                            <h5>Telefone</h5>
+                            (11) 4172-3323<br>
+                            (11) 9 6184-3535
+                        </div>
+                    </div>
+                    <div class="height130">
+                    	<div class="img-rodape float-left right5">
+                        	<img src="http://familiarosavendetudo.com.br/img/localizacao.png" alt="FamÃ­lia Rosa Vende Tudo. EndereÃ§o." title="FamÃ­lia Rosa Vende Tudo. EndereÃ§o.">
+                        </div>
+                        <div class="txt-rodape float-left">
+                            <h5>EndereÃ§o</h5>
+                            EspaÃ§o de DecoraÃ§Ã£o FR<br>
+                            Alameda dos JaÃºnas, 28<br>
+                            Moema - SÃ£o Paulo
+                        </div>
+                    </div>
+                </div>
+                <div class="float-left width225">
+                	<div class="height130">
+                     	<div class="img-rodape float-left right5">
+                        	<img src="http://familiarosavendetudo.com.br/img/contato.png" alt="FamÃ­lia Rosa Vende Tudo. MÃ­dias Sociais." title="FamÃ­lia Rosa Vende Tudo. MÃ­dias Sociais.">
+                        </div>
+                        <div class="txt-rodape float-left">
+                            <h5>MÃ­dias Sociais</h5>
+                            <a href="https://www.facebook.com/familiavendetudo/" target="_blank">
+                            	Facebook: /familiavendetudo
+                            </a><br>
+                            <a href="https://twitter.com/FR_VendeTudo" target="_blank">
+                            	Twitter: @FR_VendeTudo<br />
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=hfwvVX6BDqo" target="_blank">
+                            	YouTube: FamÃ­lia Rosa Vende Tudo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="height130">
+                     	<div class="img-rodape float-left right5">
+                        	<img src="http://familiarosavendetudo.com.br/img/email.png" alt="FamÃ­lia Rosa Vende Tudo. Email." title="FamÃ­lia Rosa Vende Tudo. Email.">
+                        </div>
+                        <div class="txt-rodape float-left">
+                            <h5>E-mail</h5>
+                            contato@familiarosavendetudo.com.br
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="termos">
+    	<div class="center">
+        	<div class="float-left width500 txt-left font13">Todos os direitos reservados.</div>
+        	<a href="http://commitdesign.com.br" target="_blank"><img src="http://familiarosavendetudo.com.br/img/commit-design.png" alt="Commit Design" title="Commit Design"></a></div>
+        </div>
+    </div>
+
+<div id="whats">
+	<img src="http://familiarosavendetudo.com.br/img/whats.png" alt="FamÃ­lia Rosa Vende Tudo" title="FamÃ­lia Rosa Vende Tudo">
+</div>
+
+<div id="whats-mobile">
+	<div>
+		<a href="intent://send/5511961843535#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">
+    	Fale conosco atravÃ©s do WhatsApp <br /><br />
+    	<img src="http://familiarosavendetudo.com.br/img/whats-mobile.png" align="center" class="right10" alt="FamÃ­lia Rosa Vende Tudo. WhatsApp." title="FamÃ­lia Rosa Vende Tudo. WhatsApp."> (11) 9 6184-3535
+    </a>
+    </div>
+</div>
+
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65408110-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script><!-- principal -->
+<script type="text/javascript" src="js/show-menu.js"></script><!-- menu -->
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

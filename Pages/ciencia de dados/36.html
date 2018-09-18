@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="pt-br">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="Author" content="Darvin, www.evolveplugged.com" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="bcPiLIpxqCE4OvYYP-OYp-CuACdN-2vpk5VpHU4B0No" />
+	<title>Comparando as principais bibliotecas de ciência de dados para Python, R e Scala | Semantix</title>
+	
+	<link rel="pingback" href="http://www.semantix.com.br/blog/xmlrpc.php" />
+	<link rel="icon" href="http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/favicon.gif" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/favicon.ico" type="image/x-icon" />
+	<link rel="alternate" type="application/rss+xml" title="Semantix RSS 2.0" href="http://www.semantix.com.br/blog/feed/" />
+	<link rel="alternate" type="text/xml" title="Semantix RSS .92" href="http://www.semantix.com.br/blog/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Semantix Atom 1.0" href="http://www.semantix.com.br/blog/feed/atom/" /
+	
+	<link rel="alternate" hreflang="pt-br" href="http://www.semantix.com.br/blog/comparando-as-principais-bibliotecas-para-python-r-e-scala/" />
+
+<!-- This site is optimized with the Yoast SEO plugin v7.5.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Confira o infográfico que mostra as 20 principais bibliotecas em cada linguagem de programação que são benéficas para os cientistas e engenheiros de dados. Essa seleção mostra como as linguagens se relacionam entre si e quais bibliotecas têm uma área de aplicação semelhante."/>
+<link rel="canonical" href="http://www.semantix.com.br/blog/comparando-as-principais-bibliotecas-para-python-r-e-scala/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Comparando as principais bibliotecas de ciência de dados para Python, R e Scala | Semantix" />
+<meta property="og:description" content="Confira o infográfico que mostra as 20 principais bibliotecas em cada linguagem de programação que são benéficas para os cientistas e engenheiros de dados. Essa seleção mostra como as linguagens se relacionam entre si e quais bibliotecas têm uma área de aplicação semelhante." />
+<meta property="og:url" content="http://www.semantix.com.br/blog/comparando-as-principais-bibliotecas-para-python-r-e-scala/" />
+<meta property="og:site_name" content="Semantix" />
+<meta property="article:publisher" content="https://www.facebook.com/SemantixBR/" />
+<meta property="article:section" content="Big Data" />
+<meta property="article:published_time" content="2018-07-04T18:10:38-03:00" />
+<meta property="og:image" content="http://www.semantix.com.br/blog/wp-content/uploads/2018/07/prg.png" />
+<meta property="og:image:width" content="750" />
+<meta property="og:image:height" content="974" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Confira o infográfico que mostra as 20 principais bibliotecas em cada linguagem de programação que são benéficas para os cientistas e engenheiros de dados. Essa seleção mostra como as linguagens se relacionam entre si e quais bibliotecas têm uma área de aplicação semelhante." />
+<meta name="twitter:title" content="Comparando as principais bibliotecas de ciência de dados para Python, R e Scala | Semantix" />
+<meta name="twitter:site" content="@semantixbr" />
+<meta name="twitter:image" content="http://www.semantix.com.br/blog/wp-content/uploads/2018/07/prg.png" />
+<meta name="twitter:creator" content="@semantixbr" />
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Organization","url":"http:\/\/www.semantix.com.br\/blog\/","sameAs":["https:\/\/www.facebook.com\/SemantixBR\/","https:\/\/www.linkedin.com\/company\/semantix-brasil","https:\/\/twitter.com\/semantixbr"],"@id":"http:\/\/www.semantix.com.br\/blog\/#organization","name":"Semantix","logo":"http:\/\/www.semantix.com.br\/wp-content\/uploads\/2016\/12\/12341533_902381576483151_5557223953541136481_n.png"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.semantix.com.br\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='fresco-css'  href='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/fresco/fresco.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/normalize.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='foundation-css'  href='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/foundation.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='fontsg-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700%2C300%2C300italic&#038;ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='fontsawesome-css'  href='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/fonts/font-awesome/css/font-awesome.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='styles-css'  href='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/style.css?ver=1.1.5' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css'  href='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/slickslider/slick.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-theme-css'  href='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/slickslider/slick-theme.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='slider-ui-css'  href='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/noUiSlider/nouislider.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='http://www.semantix.com.br/blog/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.1.6' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='wpml-legacy-dropdown-0-css'  href='//www.semantix.com.br/blog/wp-content/plugins/sitepress-multilingual-cms-master/templates/language-switchers/legacy-dropdown/style.css?ver=1' type='text/css' media='all' />
+<style id='wpml-legacy-dropdown-0-inline-css' type='text/css'>
+.wpml-ls-statics-shortcode_actions{background-color:#ffffff;}.wpml-ls-statics-shortcode_actions, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu, .wpml-ls-statics-shortcode_actions a {border-color:#cdcdcd;}.wpml-ls-statics-shortcode_actions a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions a:hover,.wpml-ls-statics-shortcode_actions a:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language:hover>a, .wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+</style>
+<script>var jquery_placeholder_url = 'http://www.semantix.com.br/blog/wp-content/plugins/gravity-forms-placeholders/jquery.placeholder-1.0.1.js';</script><script type='text/javascript' src='http://www.semantix.com.br/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/slickslider/slick.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/jquery.vide.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/jquery.serializejson.min.js?ver=4.9.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var dropParam = {"upload":"http:\/\/www.semantix.com.br\/blog\/wp-admin\/admin-post.php?action=handle_dropped_media&_ajax_nonce=27d101361e&job_ID=5244","delete":"http:\/\/www.semantix.com.br\/blog\/wp-admin\/admin-post.php?action=handle_deleted_media&_ajax_nonce=27d101361e&job_ID=5244"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/dropzone.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/noUiSlider/nouislider.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/vendor/custom.modernizr.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/fresco/fresco.js?ver=4.9.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SData = {"ajaxurl":"http:\/\/www.semantix.com.br\/blog\/wp-admin\/admin-ajax.php","wpnonce":"27d101361e","jobID":"5244","jobApplicant":[],"i18n":{"en":{"linkedinError":"Sorry! Can\u00b4t connect to Linkedin right now. Try again later.","ajaxError":"Sorry! An error ocurred when trying to create your registration."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/scripts.js?ver=1.1.5'></script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.1.6'></script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.1.6'></script>
+<script type='text/javascript' src='//www.semantix.com.br/blog/wp-content/plugins/sitepress-multilingual-cms-master/templates/language-switchers/legacy-dropdown/script.js?ver=1'></script>
+<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/plugins/gravity-forms-placeholders/gf.placeholders.js?ver=1.0'></script>
+<link rel='https://api.w.org/' href='http://www.semantix.com.br/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.semantix.com.br/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.semantix.com.br/blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='http://www.semantix.com.br/blog/?p=5244' />
+<link rel="alternate" type="application/json+oembed" href="http://www.semantix.com.br/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.semantix.com.br%2Fblog%2Fcomparando-as-principais-bibliotecas-para-python-r-e-scala%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.semantix.com.br/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.semantix.com.br%2Fblog%2Fcomparando-as-principais-bibliotecas-para-python-r-e-scala%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:3.9.2 stt:1,43,2;" />
+<meta name="generator" content="Powered by Slider Revolution 5.1.6 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<link rel="icon" href="http://www.semantix.com.br/blog/wp-content/uploads/2018/05/semantix-favicon.png" sizes="32x32" />
+<link rel="icon" href="http://www.semantix.com.br/blog/wp-content/uploads/2018/05/semantix-favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://www.semantix.com.br/blog/wp-content/uploads/2018/05/semantix-favicon.png" />
+<meta name="msapplication-TileImage" content="http://www.semantix.com.br/blog/wp-content/uploads/2018/05/semantix-favicon.png" />
+ 
+	<!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("55c0d7e3c9a487c4ee59f172f5ada3dc");</script><!-- end Mixpanel -->
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1747597448870017');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1747597448870017&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<!-- Global site tag (gtag.js) - Google AdWords: 994683857 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-994683857"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-994683857');
+</script>
+</head>
+
+<body class="post-template-default single single-post postid-5244 single-format-standard">
+	<nav id="main-topbar" class="main-topbar show-for-large">
+		<div class="row">
+			<div class="column column-12">
+				<ul id="logo" class="menu logo">
+			    	<li class="topbar-title">
+			    		<a href="http://www.semantix.com.br/">
+			    			<img width="160" height="45" src="http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/images/semantix.png" alt="Semantix">
+			    		</a>
+			    	</li>
+			    </ul>
+				<ul id="menu-main" data-dropdown-menu class="menu dropdown">
+						<li id="menu-item-370" class="hide-for-medium menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-370"><a href="http://www.semantix.com.br/w/">Home</a></li>
+						<li id="menu-item-2331" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children .is-dropdown-submenu-parent menu-item-2331">
+							<a href="#">Produtos</a>
+							<ul class="menu sub-menu">
+								<li id="menu-item-4035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4035"><a href="http://www.semantix.com.br/semantix-aijus/">Semantix AIJUS</a></li>
+								<li id="menu-item-4564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4564"><a href="http://www.semantix.com.br/semantix-iot/">Semantix IoT Platform</a></li>
+								<li id="menu-item-4564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4564"><a href="http://www.semantix.com.br/semantix-edutech/">Semantix Edutech</a></li>
+								<li id="menu-item-4564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4564"><a href="http://www.semantix.com.br/semantix-iot/">Semantix IoT</a></li>
+								<li id="menu-item-4564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4564"><a href="http://www.semantix.com.br/semantix-sense/">Semantix Sense</a></li>
+								<li id="menu-item-4564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4564"><a href="http://www.semantix.com.br/opengalaxy/">OpenGalaxy</a></li>
+								<li id="menu-item-4564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4564"><a href="http://www.semantix.com.br/semantix-cloud-studio/">Semantix Cloud Studio</a></li>
+								<li id="menu-item-4564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4564"><a href="http://www.semantix.com.br/robot-process-automation/">Semantix RPA</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-2086" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children .is-dropdown-submenu-parent menu-item-2086">
+							<a href="#">Verticais</a>
+							<ul class="menu sub-menu">
+								<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://www.semantix.com.br/usos-da-industria-financeiro/">Financeiro</a></li>
+								<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://www.semantix.com.br/usos-da-industria-telecom/">Telecom</a></li>
+								<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://www.semantix.com.br/usos-da-industria-saude/">Saúde</a></li>
+								<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://www.semantix.com.br/usos-da-industria-varejo/">Varejo</a></li>
+								<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://www.semantix.com.br/usos-da-industria/">Indústria</a></li>
+								<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://www.semantix.com.br/usos-da-industria-governo/">Governo</a></li>
+								<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://www.semantix.com.br/usos-da-industria-energia/">Energia</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-2331" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children .is-dropdown-submenu-parent menu-item-2331">
+							<a href="http://www.semantix.com.br/datalab/">Datalabs</a>
+							<ul class="menu sub-menu">
+								<li id="menu-item-4035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4035"><a href="http://www.semantix.com.br/datalab-fiap/">Datalab Fiap</a></li>
+								<li id="menu-item-4564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4564"><a href="http://www.semantix.com.br/datalab-unicamp/">Datalab Unicamp</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-315" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children .is-dropdown-submenu-parent menu-item-315">
+							<a href="http://www.semantix.com.br/programacao/">Treinamentos</a>
+							<ul class="menu sub-menu">
+								<li id="menu-item-376" class="highlighted menu-item menu-item-type-post_type menu-item-object-page menu-item-376"><a href="http://www.semantix.com.br/programacao/">Programação</a></li>
+								<li id="menu-item-4505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4505"><a href="http://www.semantix.com.br/semantix-edutech/">Semantix Edutech</a></li>
+								<li id="menu-item-4505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4505"><a href="http://www.semantix.com.br/cloudera-data-scientist/">Cloudera Data Scientist</a></li>
+								<li id="menu-item-429" class="menu-item menu-item-type-post_type menu-item-object-trainning menu-item-429"><a href="http://www.semantix.com.br/cloudera-administrator-for-apache-hadoop/">Cloudera Administrator for Apache Hadoop</a></li>
+								<li id="menu-item-314" class="toupper menu-item menu-item-type-post_type menu-item-object-trainning menu-item-314"><a href="http://www.semantix.com.br/cloudera-data-analyst/">Cloudera Data Analyst</a></li>
+								<li id="menu-item-433" class="menu-item menu-item-type-post_type menu-item-object-trainning menu-item-433"><a href="http://www.semantix.com.br/cloudera-developer-for-hadoop-spark/">Cloudera Developer for Hadoop &#038; Spark I</a></li>
+								<li id="menu-item-436" class="menu-item menu-item-type-post_type menu-item-object-trainning menu-item-436"><a href="http://www.semantix.com.br/cloudera-specialist-in-apache-hbase/">Cloudera Specialist in Apache HBase</a></li>
+								<li id="menu-item-438" class="menu-item menu-item-type-post_type menu-item-object-trainning menu-item-438"><a href="http://www.semantix.com.br/cloudera-search/">Cloudera Search</a></li>
+								<li id="menu-item-313" class="toupper menu-item menu-item-type-post_type menu-item-object-trainning menu-item-313"><a href="http://www.semantix.com.br/lucidworks-solr-unleashed/">LucidWorks Solr Unleashed</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-372" class="hide-for-medium menu-item menu-item-type-post_type menu-item-object-page menu-item-372"><a href="http://www.semantix.com.br/w/contato/">Fale conosco</a></li>
+						<li id="menu-item-2258" class="hide-for-medium menu-item menu-item-type-post_type menu-item-object-page menu-item-2258"><a href="http://www.semantix.com.br/w/trabalhe-conosco/">Trabalhe Conosco</a></li>
+						<li id="menu-item-2078" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2019 current_page_item current_page_parent menu-item-2078"><a href="http://www.semantix.com.br/blog/">Blog</a></li>
+				</ul>
+				<ul id="menu-contact" data-dropdown-menu class="menu dropdown">
+						<li id="menu-item-2256" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children .is-dropdown-submenu-parent menu-item-2256">
+								<a href="#fale-conosco">Fale Conosco</a>
+								<ul class="menu sub-menu">
+										<li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104"><a href="http://www.semantix.com.br/w/contato/">Contato</a></li>
+										<li id="menu-item-2257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2257"><a href="http://www.semantix.com.br/w/trabalhe-conosco/">Trabalhe Conosco</a></li>
+								</ul>
+						</li>
+				</ul>
+				
+			</div>
+		</div>
+	</nav>
+  	<div class="off-canvas-wrapper">
+  		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+  			<div class="off-canvas position-right" id="offCanvas" data-off-canvas data-position="right">
+  				<!-- Close button -->
+		        <button class="close-button" aria-label="Close menu" type="button" data-close>
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+	        	<ul id="menu-main" class="menu vertical"><li id="menu-item-370" class="hide-for-medium menu-item menu-item-type-post_type menu-item-object-page menu-item-370"><a href="http://www.semantix.com.br/blog/pagina-exemplo/">Home</a></li>
+<li id="menu-item-2331" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2331"><a href="#">Produtos</a>
+<ul class="sub-menu">
+	<li id="menu-item-4035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4035"><a href="http://www.semantix.com.br/blog/semantix-aijus/">Semantix AIJUS – Legal Artificial Intelligence</a></li>
+	<li id="menu-item-4564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4564"><a href="http://www.semantix.com.br/blog/iot/">Semantix IoT Platform</a></li>
+</ul>
+</li>
+<li id="menu-item-2086" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2086"><a href="#">Serviços</a>
+<ul class="sub-menu">
+	<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="http://www.semantix.com.br/blog/servicos/">Nossos serviços</a></li>
+	<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://www.semantix.com.br/blog/tecnologias/">Tecnologias</a></li>
+</ul>
+</li>
+<li id="menu-item-315" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-315"><a href="#">Treinamentos</a>
+<ul class="sub-menu">
+	<li id="menu-item-376" class="highlighted menu-item menu-item-type-post_type menu-item-object-page menu-item-376"><a href="http://www.semantix.com.br/blog/programacao/">Programação</a></li>
+	<li id="menu-item-5182" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5182"><a href="http://www.semantix.com.br/blog/treinamentos/cloudera_data_scientist/">Cloudera Data Scientist</a></li>
+	<li id="menu-item-429" class="menu-item menu-item-type-post_type menu-item-object-trainning menu-item-429"><a href="http://www.semantix.com.br/blog/treinamentos/cloudera-administrator-for-apache-hadoop/">Cloudera Administrator for Apache Hadoop</a></li>
+	<li id="menu-item-314" class="toupper menu-item menu-item-type-post_type menu-item-object-trainning menu-item-314"><a href="http://www.semantix.com.br/blog/treinamentos/cloudera-data-analyst/">Cloudera Data Analyst</a></li>
+	<li id="menu-item-433" class="menu-item menu-item-type-post_type menu-item-object-trainning menu-item-433"><a href="http://www.semantix.com.br/blog/treinamentos/cloudera-developer-for-hadoop-spark-i/">Cloudera Developer for Hadoop &#038; Spark I</a></li>
+	<li id="menu-item-436" class="menu-item menu-item-type-post_type menu-item-object-trainning menu-item-436"><a href="http://www.semantix.com.br/blog/treinamentos/cloudera-specialist-in-apache-hbase/">Cloudera Specialist in Apache HBase</a></li>
+	<li id="menu-item-438" class="menu-item menu-item-type-post_type menu-item-object-trainning menu-item-438"><a href="http://www.semantix.com.br/blog/treinamentos/cloudera-search/">Cloudera Search</a></li>
+	<li id="menu-item-313" class="toupper menu-item menu-item-type-post_type menu-item-object-trainning menu-item-313"><a href="http://www.semantix.com.br/blog/treinamentos/lucidworks-solr-unleashed/">LucidWorks Solr Unleashed</a></li>
+</ul>
+</li>
+<li id="menu-item-372" class="hide-for-medium menu-item menu-item-type-post_type menu-item-object-page menu-item-372"><a href="http://www.semantix.com.br/blog/contato/">Fale conosco</a></li>
+<li id="menu-item-2258" class="hide-for-medium menu-item menu-item-type-post_type menu-item-object-page menu-item-2258"><a href="http://www.semantix.com.br/blog/trabalhe-conosco/">Trabalhe Conosco</a></li>
+<li id="menu-item-2078" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2078"><a href="http://www.semantix.com.br/blog/blog/">Blog</a></li>
+<li id="menu-item-2471" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2471"><a href="http://www.semantix.com.br/en/">English</a></li>
+</ul>  			</div>
+     		<div class="off-canvas-content" data-off-canvas-content>
+     			<nav class="hide-for-large">
+					<div class="title-bar">
+					  	<div class="title-bar-left">
+					    	<ul id="mobile-logo" class="menu logo">
+						    	<li class="topbar-title">
+						    		<a href="http://www.semantix.com.br/blog">
+						    			<img width="160" height="45" src="http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/images/semantix.png" alt="Semantix">
+						    		</a>
+						    	</li>
+						    </ul>
+					  	</div>
+					  	<div class="title-bar-right">
+					    	<button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+					  	</div>	
+					</div>
+				</nav>	    
+<div id="page-noticias">
+	  <section id="top-page" class="no-content">
+    <div class="container" style="background-image: url();">
+    	    	    </div>
+    <div class="top-page-overlayer"></div>
+</section>
+	<div class="row">
+		<div class="column large-8">
+			<article class="post type-post">
+	<div class="post-content">
+		<div class="content-inner">
+			<div class="article-content-wrap">
+				<div class="post-header">
+					<h2 class="title"> 
+						<a href="http://www.semantix.com.br/blog/comparando-as-principais-bibliotecas-para-python-r-e-scala/">Comparando as principais bibliotecas de ciência de dados para Python, R e Scala</a> 
+					</h2>
+					<div class="metas">
+						<span class="meta-author"><i class="fa fa-user" aria-hidden="true"></i>By Juliana Monaco</span> 
+						<div>
+							<div class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i> 04 jul 2018</div>
+						</div>
+						<span class="meta-category"><i class="fa fa-tags" aria-hidden="true"></i> <a href="http://www.semantix.com.br/blog/category/big-data/" rel="category tag">Big Data</a></span>
+					</div>
+				</div>
+				<div class="wp-content">
+					<p>A <a href="http://www.semantix.com.br/blog/ciencia-de-dados-e-internet-das-coisas-protocooperacao-no-mundo-big-data/">ciência de dados</a> é um campo promissor e empolgante. A área de casos de uso de ciência de dados está em constante expansão e o kit de ferramentas para implementar essas aplicações está crescendo rapidamente. Portanto, os cientistas de dados devem estar cientes de quais são as melhores soluções para as tarefas específicas.</p>
+<p>Assim, embora muitas linguagens possam ser úteis para um cientista de dados, essas três permanecem como as mais populares e são desenvolvidas para implementar soluções de ciência de dados e de aprendizado de máquina.</p>
+<p>Neste post, há um infográfico que mostra as 20 principais bibliotecas em cada linguagem de programação que são benéficas para os cientistas e engenheiros de dados. Essa seleção mostra como as linguagens se relacionam entre si e quais bibliotecas têm uma área de aplicação semelhante. Embora existam muitos campos específicos de aplicação, queremos nos concentrar naqueles que são perfeitamente adequados para aprendizado de máquina, visualização, matemática e engenharia, manipulação e análise de dados e pesquisa reproduzível.<span id="more-5244"></span></p>
+<p>Você pode ver os campos de implementação em cores diferentes no infográfico abaixo.</p>
+<ul>
+<li>Os programas de <em>Machine Learning</em> cuidam da construção e da implementação dos principais algoritmos de aprendizado de máquina, criando fluxos de trabalho e, em geral, ajudando a resolver problemas. Eles fornecem o kit de ferramentas principal para classificação, regressão e outros diversos problemas.</li>
+<li>Como parte integrante da ciência de dados, o <em>campo da manipulação e análise de dados</em> representa bibliotecas que realizam a captura, ingestão, limpeza, pré-processamento de dados e outras operações que permitem “brincar com os dados” e, como resultado, executar a análise em si.</li>
+<li>Com a ajuda de programas de <em>visualização</em>, você pode exibir os dados visualmente, o que é necessário para entendê-los e interpretá-los melhor. Esses programas contêm vários gráficos de visualização, bem como diferentes opções de representação.</li>
+<li>As bibliotecas de <em>matemática e engenharia</em> fornecem as habilidades para armazenar dados numéricos de uma forma conveniente e executar operações matemáticas e cálculos científicos complexos e avançados. Além disso, esses programas são usados ​​para processar dados mais complexos, como texto e conteúdo.</li>
+<li>Finalmente, os programas para <em>pesquisa reproduzível</em> implementam a ideia de criar documentos que combinam código, dados e conteúdo. Basicamente, você pode produzir um novo trabalho do seu projeto que pode ser imediatamente publicado.</li>
+</ul>
+<p><img class="aligncenter wp-image-5245 size-full" src="http://www.semantix.com.br/blog/wp-content/uploads/2018/07/prg.png" alt="Comparando as principais bibliotecas de ciência de dados para Python, R e Scala " width="750" height="974" srcset="http://www.semantix.com.br/blog/wp-content/uploads/2018/07/prg.png 750w, http://www.semantix.com.br/blog/wp-content/uploads/2018/07/prg-231x300.png 231w" sizes="(max-width: 750px) 100vw, 750px" /></p>
+<p>Cada uma dessas linguagens é adequada para um tipo específico de tarefas, além de cada desenvolvedor escolher a ferramenta mais conveniente para si.</p>
+<h3>R</h3>
+<p>Projetado principalmente para computação estatística, o R oferece um excelente conjunto de programas de alta qualidade para coleta e visualização de dados estatísticos. Outro ponto forte são suas ferramentas bem desenvolvidas para pesquisa reproduzível. No entanto, R pode ser específico de alguma forma, o que não é tão bom quando se trata de engenharia e alguns dos casos de programação de propósito geral.</p>
+<h3>Python</h3>
+<p><a href="http://www.semantix.com.br/blog/um-guia-para-analise-de-dados-com-bibliotecas-python/">Python</a> é mais uma linguagem de propósito geral com um rico conjunto de bibliotecas para uma ampla gama de propósitos. É tão bom para problemas de matemática, engenharia e Deep Learning quanto para manipulação e visualizações de dados. Esta linguagem é uma excelente escolha tanto para iniciantes quanto especialistas, o que a torna extremamente popular entre os cientistas de dados.</p>
+<h3>Scala</h3>
+<p>Scala é uma solução ideal para trabalhar com <a href="http://www.semantix.com.br/blog/iniciando-com-big-data/">Big Data</a>. A combinação Scala e Spark oferece a oportunidade de aproveitar ao máximo a computação em cluster. Portanto, a linguagem possui ótimas bibliotecas para aprendizado de máquina e engenharia. No entanto, falta possibilidades de análise e visualização de dados em comparação com as outras linguagens. Então, se você não está trabalhando com Big Data, o Python e o R podem mostrar um desempenho melhor que o Scala.</p>
+<h3>Conclusão</h3>
+<p>Estas são as linguagens e bibliotecas que provaram ser extremamente úteis em diversos casos de uso de ciência de dados. Lembre-se de que a escolha da linguagem de programação e as bibliotecas que você usará dependem de tarefas específicas. Desse modo, é benéfico saber quais são os pontos fortes e fracos de cada uma delas.</p>
+<p>De fato, esta lista não está completa, muitas outras ferramentas valiosas podem e devem ser examinadas, mas definitivamente será um bom ponto de partida para sua jornada na indústria de ciência de dados.</p>
+<p><em>Fonte: <a href="https://www.datasciencecentral.com/profiles/blogs/comparison-of-top-data-science-libraries-for-python-r-and-scala">Data Science Central</a></em></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are open, but there are no comments. -->
+
+	 
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Deixe uma resposta <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/comparando-as-principais-bibliotecas-para-python-r-e-scala/#respond" style="display:none;">Cancelar resposta</a></small></h3>			<form action="http://www.semantix.com.br/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">O seu endereço de e-mail não será publicado.</span> Campos obrigatórios são marcados com <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comentário</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><input name="wpml_language_code" type="hidden" value="pt-br" /><p class="comment-form-author"><label for="author">Nome <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">E-mail <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Site</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit button" value="Publicar comentário" /> <input type='hidden' name='comment_post_ID' value='5244' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="2a617df0aa" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="2"/></p>			</form>
+			</div><!-- #respond -->
+			</div>
+		<div class="column offset-large-1 large-3 wp-content">
+			<form role="search" method="get" id="searchform" class="searchform" action="http://www.semantix.com.br/blog/">
+				<div>
+					<label class="screen-reader-text" for="s">Pesquisar por:</label>
+					<input type="text" value="" name="s" id="s" placeholder="Pesquisar" />
+					<input type="submit" id="searchsubmit" class="button" value="Pesquisar" />
+				</div>
+			</form>			<h4 class="short-h4">Categories</h2>
+			<ul class="lined-ul">	<li class="cat-item cat-item-12"><a href="http://www.semantix.com.br/blog/category/big-data/" >Big Data</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.semantix.com.br/blog/category/destaque/" >Destaque</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://www.semantix.com.br/blog/category/innovation/" >Innovation</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://www.semantix.com.br/blog/category/inovacao/" >Inovação</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://www.semantix.com.br/blog/category/semantix-aijus/" >Semantix Aijus</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="http://www.semantix.com.br/blog/category/treinamentos/" >Treinamentos</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://www.semantix.com.br/blog/category/visao-semantix/" >Visão Semantix</a>
+</li>
+</ul>
+			<h4 class="short-h4">Archives</h2>
+			<ul class="lined-ul">	<li><a href='http://www.semantix.com.br/blog/2018/09/'>setembro 2018</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2018/08/'>agosto 2018</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2018/07/'>julho 2018</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2018/06/'>junho 2018</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2018/05/'>maio 2018</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2018/04/'>abril 2018</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2018/03/'>março 2018</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2018/02/'>fevereiro 2018</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2018/01/'>janeiro 2018</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2017/12/'>dezembro 2017</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2017/11/'>novembro 2017</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2017/10/'>outubro 2017</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2017/09/'>setembro 2017</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2017/08/'>agosto 2017</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2017/07/'>julho 2017</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2017/06/'>junho 2017</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2017/05/'>maio 2017</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2017/04/'>abril 2017</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2017/03/'>março 2017</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2016/12/'>dezembro 2016</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2016/11/'>novembro 2016</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2016/10/'>outubro 2016</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2016/01/'>janeiro 2016</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2015/12/'>dezembro 2015</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2015/06/'>junho 2015</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2015/02/'>fevereiro 2015</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2015/01/'>janeiro 2015</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2014/11/'>novembro 2014</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2014/09/'>setembro 2014</a></li>
+	<li><a href='http://www.semantix.com.br/blog/2014/08/'>agosto 2014</a></li>
+</ul>
+			<h4 class="short-h4">Recent topics</h2>
+						<ul class="lined-ul">
+									<li>
+						<a href="http://www.semantix.com.br/blog/5-e-books-gratuitos-sobre-big-data-e-business-intelligence/">5 E-books gratuitos sobre Big Data e Business Intelligence</a>
+					</li>
+									<li>
+						<a href="http://www.semantix.com.br/blog/3-maneiras-de-melhorar-o-suporte-remoto-de-ti/">3 Maneiras de melhorar o suporte remoto de TI</a>
+					</li>
+									<li>
+						<a href="http://www.semantix.com.br/blog/as-tendencias-tecnologicas-no-setor-bancario-nos-proximos-anos/">As tendências tecnológicas no setor bancário nos próximos anos</a>
+					</li>
+									<li>
+						<a href="http://www.semantix.com.br/blog/impactos-da-ia-na-educacao/">Impactos positivos e negativos da IA na educação</a>
+					</li>
+									<li>
+						<a href="http://www.semantix.com.br/blog/como-big-data-influencia-o-ensino-superior/">Como Big Data influencia o ensino superior</a>
+					</li>
+							</ul>
+		</div>
+	</div>
+</div>
+
+								<footer id="footer" class="container">
+					<div class="row">
+						<div id="footer-socials" class="column large-12 text-center">
+							<ul class="socials">
+																											<li class="facebook">
+											<a href="https://www.facebook.com/SemantixBR/">
+												<i class="fa fa-facebook" aria-hidden="true"></i>
+											</a>
+										</li>	
+											
+																											<li class="linkedin">
+											<a href="https://br.linkedin.com/company/semantix-brasil">
+												<i class="fa fa-linkedin" aria-hidden="true"></i>
+											</a>
+										</li>	
+											
+																											<li class="twitter">
+											<a href="https://twitter.com/semantixbr">
+												<i class="fa fa-twitter" aria-hidden="true"></i>
+											</a>
+										</li>	
+											
+															</ul>
+						</div>
+						<div id="footer-site-map" class="column large-12 text-center">
+							<ul id="menu-footer" class="menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="http://www.semantix.com.br/blog/pagina-exemplo/">Home</a></li>
+<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="http://www.semantix.com.br/blog/usos-da-industria/">Usos da Indústria</a></li>
+<li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="http://www.semantix.com.br/blog/a-empresa/">A Empresa</a></li>
+<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a href="http://www.semantix.com.br/blog/servicos/">Serviços</a></li>
+<li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="http://www.semantix.com.br/blog/tecnologias/">Tecnologias</a></li>
+<li id="menu-item-98" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-98"><a href="http://www.semantix.com.br/blog/clientes/">Clientes</a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="http://www.semantix.com.br/blog/contato/">Contato</a></li>
+</ul>						</div>
+						<div id="copy" class="column large-12 text-center">
+							&copy; 2018 Semantix | Big Data, Analytics, Enterprise Search, Machine Learning & Internet of Things (IoT).						</div>
+					</div>
+				</footer>
+	     	</div>
+    	</div>
+  	</div>
+  	<script type='text/javascript' src='http://www.semantix.com.br/blog/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+<script async="async" type='text/javascript' src='http://www.semantix.com.br/blog/wp-content/plugins/akismet/_inc/form.js?ver=4.0.3'></script>
+<script src="http://www.semantix.com.br/blog/wp-content/themes/nuke-foundation5/js/foundation.min.js"></script><script>jQuery(document).foundation();</script>
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-81690078-1', 'auto');
+			
+			ga('send', 'pageview');
+			</script>
+
+<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/67cbd48d-1ab3-4689-b015-33c3c8c4bde0-loader.js" ></script>
+
+<script type="text/javascript">
+_linkedin_data_partner_id = "150657";
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=150657&fmt=gif" />
+</noscript>
+</body>
+
+</html>

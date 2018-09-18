@@ -1,0 +1,343 @@
+<!DOCTYPE html><!-- HTML 5 -->
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://posgraduacao.poli.br/xmlrpc.php" />
+
+<title>Ciência de Dados e Analytics &#8211; CPG</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed para CPG &raquo;" href="http://posgraduacao.poli.br/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/posgraduacao.poli.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.7"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='smartline-custom-fonts-css'  href='http://posgraduacao.poli.br/wp-content/themes/smartline-lite/css/custom-fonts.css?ver=20180413' type='text/css' media='all' />
+<link rel='stylesheet' id='sidebar-login-css'  href='http://posgraduacao.poli.br/wp-content/plugins/sidebar-login/assets/css/sidebar-login.css?ver=2.7.3' type='text/css' media='all' />
+<link rel='stylesheet' id='flxmap-css'  href='http://posgraduacao.poli.br/wp-content/plugins/wp-flexible-map/css/styles.css?ver=1.14.0' type='text/css' media='all' />
+<link rel='stylesheet' id='smartline-lite-stylesheet-css'  href='http://posgraduacao.poli.br/wp-content/themes/smartline-lite/style.css?ver=1.5' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://posgraduacao.poli.br/wp-content/themes/smartline-lite/css/genericons/genericons.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='smartline-lite-flexslider-css'  href='http://posgraduacao.poli.br/wp-content/themes/smartline-lite/css/flexslider.css?ver=20160719' type='text/css' media='all' />
+<script type='text/javascript' src='http://posgraduacao.poli.br/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://posgraduacao.poli.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://posgraduacao.poli.br/wp-content/plugins/sidebar-login/assets/js/jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sidebar_login_params = {"ajax_url":"http:\/\/posgraduacao.poli.br\/wp-admin\/admin-ajax.php","force_ssl_admin":"0","is_ssl":"0","i18n_username_required":"Please enter your username","i18n_password_required":"Please enter your password","error_class":"sidebar_login_error"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://posgraduacao.poli.br/wp-content/plugins/sidebar-login/assets/js/sidebar-login.min.js?ver=2.7.3'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://posgraduacao.poli.br/wp-content/themes/smartline-lite/js/html5shiv.min.js?ver=3.7.3'></script>
+<![endif]-->
+<script type='text/javascript' src='http://posgraduacao.poli.br/wp-content/themes/smartline-lite/js/jquery.flexslider-min.js?ver=2.6.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var smartline_slider_params = {"animation":"slide","speed":"7000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://posgraduacao.poli.br/wp-content/themes/smartline-lite/js/slider.js?ver=2.6.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var smartline_menu_title = "Menu";
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://posgraduacao.poli.br/wp-content/themes/smartline-lite/js/navigation.js?ver=20160719'></script>
+<link rel='https://api.w.org/' href='http://posgraduacao.poli.br/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://posgraduacao.poli.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://posgraduacao.poli.br/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.7" />
+<link rel="canonical" href="http://posgraduacao.poli.br/especializacoes/ciencia-de-dados-e-analytics/" />
+<link rel='shortlink' href='http://posgraduacao.poli.br/?p=1501' />
+<link rel="alternate" type="application/json+oembed" href="http://posgraduacao.poli.br/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fposgraduacao.poli.br%2Fespecializacoes%2Fciencia-de-dados-e-analytics%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://posgraduacao.poli.br/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fposgraduacao.poli.br%2Fespecializacoes%2Fciencia-de-dados-e-analytics%2F&#038;format=xml" />
+<style type="text/css">
+			@media only screen and (min-width: 60em) {
+				#content {
+					float: right;
+				}
+				#sidebar {
+					margin-left: 0;
+					margin-right: 70%;
+					background: -moz-linear-gradient(left, #f3f3f3 0%, #e6e6e6 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f3f3f3), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(left, #f3f3f3 0%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(left, #f3f3f3 0%,#e6e6e6 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(left, #f3f3f3 0%,#e6e6e6 100%); /* IE10+ */
+					background: linear-gradient(to right, #f3f3f3 0%,#e6e6e6 100%); /* W3C */
+				}
+					
+			}
+			@media only screen and (max-width: 70em) {
+				#sidebar {
+					margin-right: 67%;
+				}
+			}
+		</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+</head>
+
+<body class="page-template-default page page-id-1501 page-child parent-pageid-27 custom-background wp-custom-logo">
+
+
+<div id="wrapper" class="hfeed">
+
+	<div id="header-wrap">
+
+		
+		<header id="header" class="clearfix" role="banner">
+
+			<div id="logo" class="clearfix">
+
+				<a href="http://posgraduacao.poli.br/" class="custom-logo-link" rel="home" itemprop="url"><img width="960" height="160" src="http://posgraduacao.poli.br/wp-content/uploads/2017/06/poli_banner.png" class="custom-logo" alt="CPG" itemprop="logo" /></a>			    
+		<p class="site-title"><a href="http://posgraduacao.poli.br/" rel="home">CPG</a></p>
+
+					<h2 class="site-description">
+			<p class="site-description">Coordenação Setorial de Pós-graduação e Pesquisa</p>
+
+		</h2>
+			</div>
+
+			<div id="header-content" class="clearfix">
+				
+		<div id="header-social-icons" class="social-icons-wrap clearfix">
+			<ul id="social-icons-menu" class="menu"><li id="menu-item-1749" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1749"><a href="https://pt-br.facebook.com/EscolaPolitecnicadePernambucoUPE/"><span class="screen-reader-text">Facebook</span></a></li>
+</ul>		</div>
+
+
+		<div id="header-search">
+			
+	<form role="search" method="get" class="search-form" action="http://posgraduacao.poli.br/">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s">
+		</label>
+		<button type="submit" class="search-submit">
+			<span class="genericon-search"></span>
+		</button>
+	</form>
+
+		</div>
+
+			</div>
+
+		</header>
+
+	</div>
+
+	<div id="navi-wrap">
+
+		<nav id="mainnav" class="clearfix" role="navigation">
+			<ul id="mainnav-menu" class="main-navigation-menu"><li id="menu-item-933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-933"><a href="http://posgraduacao.poli.br/">Início</a></li>
+<li id="menu-item-934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-934"><a href="http://posgraduacao.poli.br/coordenacao/">Coordenação</a>
+<ul class="sub-menu">
+	<li id="menu-item-935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935"><a href="http://posgraduacao.poli.br/coordenacao/apresentacao/">Apresentação</a></li>
+	<li id="menu-item-936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-936"><a href="http://posgraduacao.poli.br/coordenacao/equipe/">Equipe</a></li>
+	<li id="menu-item-937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-937"><a href="http://posgraduacao.poli.br/coordenacao/historia/">História</a></li>
+</ul>
+</li>
+<li id="menu-item-939" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-939"><a href="http://posgraduacao.poli.br/mestrados/">Mestrados</a>
+<ul class="sub-menu">
+	<li id="menu-item-940" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-940"><a target="_blank" href="http://www.pec.poli.br/#new_tab">Engenharia Civil</a></li>
+	<li id="menu-item-941" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-941"><a target="_blank" href="http://mestrado.ecomp.poli.br/#new_tab">Engenharia da Computação</a></li>
+	<li id="menu-item-942" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-942"><a target="_blank" href="http://ppges.poli.br/#new_tab">Engenharia de Sistemas</a></li>
+	<li id="menu-item-943" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-943"><a target="_blank" href="http://w2.portais.atrio.scire.net.br/upe-ppte/index.php/pt/#new_tab">Tecnologia da Energia</a></li>
+</ul>
+</li>
+<li id="menu-item-944" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-944"><a href="http://posgraduacao.poli.br/especializacoes/">Especializações</a>
+<ul class="sub-menu">
+	<li id="menu-item-2022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2022"><a href="http://posgraduacao.poli.br/especializacoes/">Cursos de Especialização</a></li>
+	<li id="menu-item-2021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2021"><a href="http://posgraduacao.poli.br/editais/">Editais de Inscrição</a></li>
+	<li id="menu-item-2023" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2023"><a href="http://187.94.63.179:2045/Corpore.Net">Portal do Aluno</a></li>
+</ul>
+</li>
+<li id="menu-item-945" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-945"><a href="http://posgraduacao.poli.br/pesquisa/">Pesquisa</a>
+<ul class="sub-menu">
+	<li id="menu-item-946" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-946"><a href="http://posgraduacao.poli.br/pesquisa/grupos-de-pesquisa/">Grupos de Pesquisa</a></li>
+	<li id="menu-item-947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-947"><a href="http://posgraduacao.poli.br/pesquisa/iniciacao-cientifica/">Iniciação Científica</a></li>
+	<li id="menu-item-948" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-948"><a href="http://posgraduacao.poli.br/pesquisa/revistas-cientificas-da-poli/">Revistas Científicas</a></li>
+</ul>
+</li>
+<li id="menu-item-1535" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1535"><a href="http://posgraduacao.poli.br/downloads-2/">Downloads</a></li>
+<li id="menu-item-1536" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1536"><a href="http://posgraduacao.poli.br/noticias/">Notícias</a></li>
+<li id="menu-item-1537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1537"><a href="http://posgraduacao.poli.br/contato/">Contato</a></li>
+<li id="menu-item-1972" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1972"><a href="http://187.94.63.179:2045/Corpore.Net">PORTAL</a></li>
+</ul>		</nav>
+
+	</div>
+
+	
+	<div id="wrap" class="clearfix">
+		
+		<section id="content" class="primary" role="main">
+		
+					
+		
+	<div id="post-1501" class="post-1501 page type-page status-publish hentry">
+				
+		<h1 class="page-title">Ciência de Dados e Analytics</h1>
+		<div class="entry clearfix">
+			<div id="interface">
+<div class="cpg_page_left">
+<figure class="especializacoes_inside"><img src="http://posgraduacao.poli.br/wp-content/uploads/2015/10/ciencia_de_dados_inside.jpg" alt="Ciência de Dados e Analytics" width="302px" height="203px" /></figure>
+</div>
+<div class="cpg_page_main"><strong>CARGA HORÁRIA</strong><br />
+360 horas.<strong>INVESTIMENTO</strong><br />
+Inscrição: R$ 100,00*<br />
+Matrícula: R$ 550,00<br />
+Parcelas: 18 x R$ 550,00</p>
+<p><strong>NÚMERO DE VAGAS</strong><br />
+30 alunos**</p>
+</div>
+<div class="cpg_page_right" style="text-align: right;"><a style="padding: 12px 12px; background-color: #003687; font-size: 16px; color: white;" href="http://posgraduacao.poli.br/inscricoes/">Inscreva-se!</a><a style="padding: 12px 12px; font-size: 16px;" href="http://posgraduacao.poli.br/editais/"> Ver Editais </a></p>
+</div>
+</div>
+<div style="width=100%; float: left;"><strong>COORDENAÇÃO</strong><br />
+Prof. Alexandre Magno Andrade Maciel, Dr.<br />
+E-mail: <em>amam@ecomp.poli.br</em><strong>OBJETIVO</strong><br />
+Colaborar para a formação de cientistas de dados por meio de conceitos e práticas que permitam a identificação de oportunidades de exploração em grandes volumes de dados a fim de descobrir conhecimento e obter informações aplicáveis em benefício das organizações.</p>
+<p><strong>A QUEM SE DESTINA</strong><br />
+Graduação em Engenharia da Computação, Ciência da Computação, Sistemas de Informação, Administração, Estatística, ou outras áreas afins.</p>
+<p><strong>REGIME DE AULAS</strong><br />
+O curso será realizado em tempo parcial, com aulas ministradas quinzenalmente em três dias da semana: quinta e sexta-feira à noite, e sábado manhã e tarde.</p>
+<p><strong>DISCIPLINAS</strong><br />
+• Introdução à Ciência dos Dados (15h)<br />
+• Tecnologias em Processo de Negócios (15h)<br />
+• Banco de Dados Não Convencionais (30h)<br />
+• Business Analytics (BA) (15h)<br />
+• Estatística Computacional (30h)<br />
+• Soluções em Mineração de Dados (30h)<br />
+• Soluções em Processamento para Big Data (30h)<br />
+• Metodologia Científica (15h)<br />
+• Ciência das Redes e Redes Sociais (30h)<br />
+• Internet of Things (IOT) (30h)<br />
+• Deep Learning (30h)<br />
+• Processamento de Dados em Tempo Real (30h)<br />
+• Sistemas de Recomendação (30h)<br />
+• Mineração Textual (15h)<br />
+• Empreendedorismo em Ciência dos Dados (15h)</p>
+<p><strong>PROFESSORES***</strong><br />
+• Alexandre Magno Andrade Maciel, Dr.<br />
+• Andreza Leite de Alencar, MSc.<br />
+• Bruno José Torres Fernandes, Dr.<br />
+• Byron Leite Dantas Bezerra, Dr.<br />
+• Carmelo José Albanez Bastos Filho, Dr.<br />
+• Francisco Saboya Albuquerque Neto, MSc.<br />
+• Jairson Barbosa Rodrigues, MSc.<br />
+• Jorge Cavalcanti Barbosa Fonseca , MSc.<br />
+• Kiev Santos da Gama, Dr.<br />
+• Leandro Maciel Almeida, Dr.<br />
+• Maílson Melo dos Santos Filho, MSc.<br />
+• Rafael Ferreira Leite de Mello, Dr.<br />
+• Rodrigo Lins Rodrigues, Dr.<br />
+• Rômulo César Dias de Andrade, MSc.</p>
+<p><strong>Projeto aprovado de acordo com Resolução CEPE: 041/2016.</strong></p>
+</div>
+<div style="width=100%; float: left;">&#8211;* Este valor será devolvido caso o curso não seja ofertado.<br />
+** A POLI se reserva o direito de não oferecer o curso se as vagas não forem preenchidas.<br />
+*** Os professores listados poderão ser substituídos por razões de força maior.</p>
+<p>&#8212;</p>
+<h2>Outras opções de cursos para você</h2>
+<figure class="especializacoes_mini"><a href="http://posgraduacao.poli.br/?page_id=35"><img src="http://posgraduacao.poli.br/wp-content/uploads/2015/10/engenharia_de_software_mini.jpg" alt="Engenharia de Software" width="212px" height="174px" /></a><a href="http://posgraduacao.poli.br/?page_id=43"><img src="http://posgraduacao.poli.br/wp-content/uploads/2015/10/sistemas_embarcados_mini.jpg" alt="Sistemas Embarcados" width="212px" height="174px" /></a><a href="http://posgraduacao.poli.br/especializacoes/gestao-de-tecnologia-da-informacao/"><img src="http://posgraduacao.poli.br/wp-content/uploads/2015/10/gestao_tecnologia_informacao_mini.jpg" alt="Gestão de Tecnologia da Informação" width="212px" height="174px" /></a></figure>
+</div>
+		
+		</div>
+		
+	</div>		
+				
+		</section>
+		
+		
+	<section id="sidebar" class="secondary clearfix" role="complementary">
+
+				<aside id="recent-posts-3" class="widget widget_recent_entries clearfix">		<h3 class="widgettitle"><span>Notícias</span></h3>		<ul>
+											<li>
+					<a href="http://posgraduacao.poli.br/resultado-edital-2018-2/">RESULTADO EDITAL 2018.2</a>
+									</li>
+											<li>
+					<a href="http://posgraduacao.poli.br/inscricoes-2018-2-prazo-prorrogado/">INSCRIÇÕES 2018.2 – PRAZO PRORROGADO</a>
+									</li>
+											<li>
+					<a href="http://posgraduacao.poli.br/inscricoes-2018-2-abertas/">INSCRIÇÔES 2018.2 ABERTAS &#8211; PÓS-GRADUAÇÃO LATO SENSU</a>
+									</li>
+											<li>
+					<a href="http://posgraduacao.poli.br/identificacao-digital-boa-conduta-de-todo-pesquisador-universitario/">IDENTIFICAÇÃO DIGITAL &#8211; Boa conduta de todo Pesquisador Universitário</a>
+									</li>
+											<li>
+					<a href="http://187.94.63.179:2045/Corpore.Net#new_tab">PORTAL DO ALUNO</a>
+									</li>
+					</ul>
+		</aside><aside id="categories-5" class="widget widget_categories clearfix"><h3 class="widgettitle"><span>Áreas</span></h3>		<ul>
+	<li class="cat-item cat-item-1"><a href="http://posgraduacao.poli.br/category/sem-categoria/" >Outros</a> (9)
+</li>
+	<li class="cat-item cat-item-12"><a href="http://posgraduacao.poli.br/category/pesquisa/" >Pesquisa</a> (11)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://posgraduacao.poli.br/category/pos-graduacao/" >Pós Graduação</a> (29)
+<ul class='children'>
+	<li class="cat-item cat-item-8"><a href="http://posgraduacao.poli.br/category/pos-graduacao/lato-sensu/" >Lato Sensu</a> (28)
+</li>
+</ul>
+</li>
+		</ul>
+</aside><aside id="wp_sidebarlogin-4" class="widget widget_wp_sidebarlogin clearfix"><h3 class="widgettitle"><span>Login</span></h3>
+		<form name="loginform" id="loginform" action="http://posgraduacao.poli.br/wp-login.php" method="post">
+			
+			<p class="login-username">
+				<label for="user_login">Username</label>
+				<input type="text" name="log" id="user_login" class="input" value="" size="20" />
+			</p>
+			<p class="login-password">
+				<label for="user_pass">Password</label>
+				<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" />
+			</p>
+			
+			<p class="login-remember"><label><input name="rememberme" type="checkbox" id="rememberme" value="forever" checked="checked" /> Remember Me</label></p>
+			<p class="login-submit">
+				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Login &rarr;" />
+				<input type="hidden" name="redirect_to" value="http://posgraduacao.poli.br/especializacoes/ciencia-de-dados-e-analytics/" />
+			</p>
+			
+		</form><ul class="pagenav sidebar_login_links"><li class="lost_password-link"><a href="http://posgraduacao.poli.br/wp-login.php?action=lostpassword">Lost Password</a></li></ul></aside>
+	</section>
+		
+	</div>
+	
+
+	
+	<footer id="footer" class="clearfix" role="contentinfo">
+
+		
+		<div id="footer-text">
+
+			
+	<span class="credit-link">
+		Powered by <a href="http://wordpress.org" title="WordPress">WordPress</a> and <a href="https://themezee.com/themes/smartline/" title="Smartline WordPress Theme">Smartline</a>.	</span>
+
+
+		</div>
+
+	</footer>
+
+</div><!-- end #wrapper -->
+
+<script type='text/javascript' src='http://posgraduacao.poli.br/wp-content/plugins/page-links-to/js/new-tab.min.js?ver=2.11.1'></script>
+<script type='text/javascript' src='http://posgraduacao.poli.br/wp-includes/js/wp-embed.min.js?ver=4.9.7'></script>
+</body>
+</html>

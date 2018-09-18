@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html ng-app="aCriticaApp" xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1daa43d379","applicationID":"20297725","transactionName":"cQpfF0pdWQhXQxtZAUUWHhBQXUI=","queueTime":6,"applicationTime":548,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+
+  <title>Empresas utilizam ciência de dados para mapear consumidores em Manaus | Manaus | Acritica.com | Amazônia - Amazonas - Manaus</title>
+<meta name="description" content="A partir do 'Big Data' as empresas mapeiam os consumidores para montar sua estratégia. O mercado nesta área está bastante aquecido" />
+<meta name="keywords" content="Ciência,Dados,Consumidores,Movimentação,empresas de Manaus" />
+<link rel="canonical" href="https://www.acritica.com/channels/manaus/news/domingo-mercado-de-oportunidades" />
+<meta itemprop="name" content="Empresas utilizam ciência de dados para mapear consumidores em Manaus | Manaus" />
+<meta itemprop="description" content="A partir do 'Big Data' as empresas mapeiam os consumidores para montar sua estratégia. O mercado nesta área está bastante aquecido" />
+<meta itemprop="image" content="https://www.acritica.com/uploads/news/image/746399/share_big_gilberto_santos.JPG" />
+<meta property="og:title" content="Empresas utilizam ciência de dados para mapear consumidores em Manaus | Manaus" />
+<meta property="og:description" content="A partir do 'Big Data' as empresas mapeiam os consumidores para montar sua estratégia. O mercado nesta área está bastante aquecido" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.acritica.com/channels/manaus/news/domingo-mercado-de-oportunidades" />
+<meta property="og:image" content="https://www.acritica.com/uploads/news/image/746399/share_big_gilberto_santos.JPG" />
+<meta property="og:site_name" content="A Crítica" />
+<meta property="fb:app_id" content="942072782617153" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@acritica" />
+<meta name="twitter:title" content="Empresas utilizam ciência de dados para mapear consumidores em Manaus | Manaus" />
+<meta name="twitter:description" content="A partir do 'Big Data' as empresas mapeiam os consumidores para montar sua estratégia. O mercado nesta área está bastante aquecido" />
+<meta name="twitter:image" content="https://www.acritica.com/uploads/news/image/746399/share_big_gilberto_santos.JPG" />
+<meta name="twitter:url" content="https://www.acritica.com/channels/manaus/news/domingo-mercado-de-oportunidades" />
+
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" />
+  <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Roboto:400,500" />
+  <link rel="stylesheet" media="all" href="/assets/application-3eae97fbf19a9a1cbc90e58ad014b50bcc5cb578aeba42ad5824063d5d10d0ae.css" data-turbolinks-track="true" />
+
+  <script src="https://www5.smartadserver.com/config.js?nwid=1262" type="text/javascript"></script>
+  <script type="text/javascript">
+    sas.setup({ domain: 'https://www5.smartadserver.com/'});
+  </script>
+
+  <script src="/assets/application-a5a687a0d0faa97e28f9f842ef50738ea081782dae38b6831858cb15544f89cd.js" data-turbolinks-track="true"></script>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="bcrGvPWrTJ7VHjlvBsluOYWSDTqtCYWW+vw+OOEPeosxhFXty4Di7N/SeGH9z41/n9oS2d29zxSaAbmzO1ph/A==" />
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58539678-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head>
+
+<body class="news show">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.11&appId=942072782617153&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  jQuery(function($) {
+    $("img").lazyload();
+  });
+  </script>
+
+  <header
+    class="main-header visible-lg-block"
+    ng-controller="HeaderController"
+  >
+    <nav class="sponsors">
+  <ul>
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="Manaus Hoje" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/manaus-hoje-ffeb94908677f3f690142da3517c23a211683be3b47d8fc723b20451ff125999.png">
+        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="http://rederecord.r7.com/">
+            <img alt="Record" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/record-d85ddc808152192d4c594b0c0a61cb9556952b044ed675c9a6519b1e4dd04715.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="http://www.redetv.uol.com.br/">
+            <img alt="Rede TV" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/rede-tv-9212ba98d282c14d6f35a56537b4b1edf4862d57b6abd49c789913bf579f1595.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="https://www.acritica.com/">
+            <img alt="A Crítica.com" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/acritica-com-e3c40d68df16ba6b9d5ba0ac1bece4aa03941dd9078ce896bb7740d0d8aa0608.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="A Crítica Play" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/acritica-play-0e7bc21d1e717a7e89c83143c809d7a9d78687a437c8037edb8b63511a3f4dd4.png">
+        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="A Crítica +" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/acritica-plus-549b032a8ffb348125a14ce7de5be8c452df8467a1ed27c4cfe3ce7c3e634564.png">
+        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="http://www.acriticafm.com.br/">
+            <img alt="A Crítica FM" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/acritica-fm-3dcb4da4b8e341662447b6dd6871d5a6c88cc84cf6031a628aae69908dd117da.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="http://manaus.jovempanfm.uol.com.br/">
+            <img alt="Jovem Pan" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/jovem-pan-abb6bb9d42ffebdfe6f98a1eae6a0f53afbdb018656f7a2700d96efc822b7716.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="https://www.meutambaqui.com/">
+            <img alt="Tambaqui Urbano" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/tambaqui-urbano-7ae2f82cd901b69e633bd1778a57f5b82ad26a7fe844777de099b6d659ef010f.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="http://www.teatrodirecional.com.br/">
+            <img alt="Manaura" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/manaura-4960c27c16d7268de122679a2b8df3606a84176b399c79eb63f8de88abcb0016.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="RCC" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/rcc-51a27e9143e581f691a51e85dc89c3bc25e73f21723c954dee5a3b9925487b88.png">
+        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="Amazon Color" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/amazon-color-db023d09dc791c4fa5eb1e8767f3dd1511f570c6e864948fa5b7aca2a54f0017.png">
+        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="Editora Amazônia" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/editora-amazonia-4c385a114e0ff75ef5c53108243a7b4a49c26ffc717d6c68f7be134f771fefa8.png">
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+
+    <div class="container">
+      <a href="/">
+        <img class="logo" src="/assets/logo-6655c4cbdc72c84df3fc363d13f9f79e48384b9dc19f582a57e93a7a7e48df4e.png" alt="Logo 6655c4cbdc72c84df3fc363d13f9f79e48384b9dc19f582a57e93a7a7e48df4e" />
+</a>
+      <div current-weather city="Manaus"></div>
+
+      <form class="search-form" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input type="text" name="q" id="q" class="search-field" placeholder="Buscar" />
+        <button name="button" type="submit">Buscar</button>
+</form>
+      <a target="_blank" class="sign-up" href="//assinante.acritica.com">
+        <span>Versão Digital</span>
+        <strong>Assine Acrítica</strong>
+</a>    </div>
+
+    <nav class="main-nav">
+      <div class="container">
+        <ul class="channels">
+            <li>
+              <a style="border-color: #1a9dfc" href="/channels/manaus">Manaus</a>
+            </li>
+            <li>
+              <a style="border-color: #e82218" href="/channels/cotidiano">Cotidiano</a>
+            </li>
+            <li>
+              <a style="border-color: #9517b1" href="/channels/entretenimento">Entretenimento</a>
+            </li>
+            <li>
+              <a style="border-color: #f8601e" href="/channels/esportes">Esportes</a>
+            </li>
+            <li>
+              <a style="border-color: #000000" href="/channels/hoje">Manaus Hoje</a>
+            </li>
+            <li>
+              <a style="border-color: #ffffff" href="/channels/enem">Enem </a>
+            </li>
+
+            <li>
+              <a style="border-color: #00d700" href="/channels/governo">Amazônia</a>
+            </li>
+
+          <li>
+            <a href="/blogs">Blogs</a>
+          </li>
+
+            <li class="has-submenu">
+              <a href="">Mais</a>
+
+              <ul class="submenu">
+                  <li>
+                    <a href="/channels/especiais">Carnaval</a>
+                  </li>
+                  <li>
+                    <a href="/channels/blogs">Blogs</a>
+                  </li>
+                  <li>
+                    <a href="/channels/especiais-3b7127e7-0b22-4a69-b4a5-7fecfe9c0f00">Especial</a>
+                  </li>
+                  <li>
+                    <a href="/channels/eleicoes-2016">Eleições </a>
+                  </li>
+                  <li>
+                    <a href="/channels/rio-2016">Rio 2016</a>
+                  </li>
+                  <li>
+                    <a href="/channels/interior">Interior </a>
+                  </li>
+                  <li>
+                    <a href="/channels/veiculos">Veículos</a>
+                  </li>
+              </ul>
+            </li>
+        </ul>
+
+        <div class="social-networks">
+  <a class="facebook" target="_blank" href="https://www.facebook.com/pages/Portal-A-Critica/175887955775026">Facebook</a>
+  <a class="youtube" target="_blank" href="https://www.youtube.com/user/acriticaweb">YouTube</a>
+  <a class="twitter" target="_blank" href="https://twitter.com/acritica">Twitter</a>
+  <a class="rss" href="/rss">RSS</a>
+</div>
+
+      </div>
+    </nav>
+  </header>
+
+  <header
+    class="mobile-header hidden-lg"
+    ng-controller="MobileHeaderController"
+  >
+    <div class="container">
+      <nav class="pull-left">
+        <ul>
+          <li>
+            <a ng-click="openLeftAsideMenu()">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+              Left Menu
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="pull-right">
+        <ul>
+          <li>
+            <a ng-click="openRightAsideMenu()">
+              <i class="fa fa-indent" aria-hidden="true"></i>
+              Right Menu
+            </a>
+          </li>
+
+          <li>
+            <a ng-click="toggleSearch()">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              search
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="logo-wrapper image-aligner" href="/">
+        <div class="horizontal-aligner">
+          <div class="vertical-aligner">
+            <img class="logo" src="/assets/logo-6655c4cbdc72c84df3fc363d13f9f79e48384b9dc19f582a57e93a7a7e48df4e.png" alt="Logo 6655c4cbdc72c84df3fc363d13f9f79e48384b9dc19f582a57e93a7a7e48df4e" />
+          </div>
+        </div>
+</a>    </div>
+
+    <div class="search-menu container" uib-collapse="isSearchCollapsed" ng-cloak>
+      <form class="search-form" ng-submit="toggleSearch()" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input type="text" name="q" id="q" class="search-field" placeholder="Buscar" />
+
+        <button ng-click="toggleSearch()" type="button">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+</form>    </div>
+  </header>
+
+  
+    <div class="top-banner-wrapper">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 37647,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+
+  <div class="container" id="top">
+    
+
+  <div class="content-show row" ng-controller="NewsShowController">
+  <article class="content-col">
+
+        <strong class="channel" style="background-color: #1a9dfc">
+          Manaus
+        </strong>
+
+    <div class="main">
+      <em class="hat visible-lg-block">
+        TECNOLOGIA 
+      </em>
+
+      <h1 class="title">
+        Empresas utilizam ciência de dados para mapear consumidores em Manaus
+      </h1>
+
+      <em class="summary visible-lg-block">
+        A partir do &#39;Big Data&#39; as empresas mapeiam os consumidores para montar sua estratégia. O mercado nesta área está bastante aquecido
+      </em>
+
+      <small class="published-at">
+          15/04/2018 às 13:16
+
+      </small>
+
+        
+
+        <figure class="image">
+            <img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Show gilberto santos" data-original="https://www.acritica.com/uploads/news/image/746399/show_gilberto_santos.JPG">
+        </figure>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-9 col-xs-12">
+        <div class="main">
+            <figcaption class="image-caption visible-lg-block">
+              Gilberto Santos é um cientista de dados da Fundação Paulo Feitoza - FPF Tech (Foto: Arquivo pessoal/ Gilberto)
+            </figcaption>
+
+            <div class="share-and-comments">
+  <ul class="share-links">
+    <li>
+      <a
+        facebook-share
+        class="facebook icon colored"
+        url="{{currentUrl}}">
+        <i class="fa fa-facebook"></i>
+        facebook
+      </a>
+    </li>
+
+    <li>
+      <a
+        twitter-share
+        class="twitter icon colored"
+        text="Empresas de Manaus utilizam ciência de dados para mapear consumidores"
+        url="{{currentUrl}}">
+        <i class="fa fa-twitter"></i>
+        twitter
+      </a>
+    </li>
+
+    <li>
+      <a
+        gplus-share
+        class="google-plus icon colored"
+        url="{{currentUrl}}">
+        <i class="fa fa-google-plus"></i>
+        google+
+      </a>
+    </li>
+
+    <li class="hidden-lg" ng-hide="whatsappShare == undefined">
+      <a
+        class="whatsapp icon colored"
+        ng-href="{{whatsappShare}}">
+        <i class="fa fa-whatsapp"></i>
+        whatsapp
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="email icon colored"
+        href="mailto:?{{mailShareParameters}}"
+        target="_blank">
+        <i class="fa fa-envelope-o"></i>
+        email
+      </a>
+    </li>
+  </ul>
+</div>
+
+          
+          
+    <div class="banner-wrapper hidden-lg">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 65808,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+
+          <div class="author">
+            <strong class="author-signature">
+              Rebeca Mota
+            </strong>
+
+            <span class="author-location">
+              Manaus (AM)
+            </span>
+          </div>
+
+          <div class="summary-mobile hidden-lg">
+            A partir do &#39;Big Data&#39; as empresas mapeiam os consumidores para montar sua estratégia. O mercado nesta área está bastante aquecido
+          </div>
+
+              <div class="banner-wrapper hidden-lg">
+      <small>Publicidade</small>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- [Adsense] Mobile - 37647 #1 --> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5612868877262101" data-ad-slot="5493351656" data-ad-format="auto"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+    </div>
+
+
+          <div class="text">
+            <p>A Ci&ecirc;ncia dos Dados &eacute; importante para quase todas as empresas e ind&uacute;stria. As escolhas, opini&otilde;es e at&eacute; mesmo os desejos s&atilde;o detalhadamente analisados. Todas essas informa&ccedil;&otilde;es formam o Big Data. A partir desses dados as empresas mapeiam o movimento dos consumidores para montar sua estrat&eacute;gia. Dessa forma, a profiss&atilde;o do cientista torna-se indispens&aacute;vel. Segundo professores da &aacute;rea este mercado est&aacute; bastante aquecido. Exemplo de empresas que t&ecirc;m contratado s&atilde;o: Sidia, INDT, FPF Tech, Triad Systems, RedMaxx, Bemol e outras.&nbsp;</p>
+
+<p>&ldquo;As empresas que conhecem seus clientes e usu&aacute;rios est&atilde;o em vantagem em rela&ccedil;&atilde;o &agrave;quelas que n&atilde;o fazem. Conhecendo os seus clientes &eacute; poss&iacute;vel melhorar e otimizar os servi&ccedil;os e produtos. Isso se torna um grande problema quando o n&uacute;mero de clientes e o volume de servi&ccedil;os e produtos vendidos &eacute; grande. N&atilde;o se pode analisar estes dados manualmente e nem usando tecnologia mais simples&rdquo;, destaca o professor e pesquisador do Instituto de Computa&ccedil;&atilde;o da Universidade Federal do Amazonas (Ufam), Altigran da Silva.&nbsp;</p>
+
+<p><strong>Demanda</strong></p>
+
+<p><strong><img alt="" src="//www.acritica.com/uploads/ckeditor/pictures/22297/content_cientista_de_dados_-_bemol.JPG" style="width: 800px; height: 531px;" /></strong><br />
+Profissionais de todas as &aacute;reas se dedicam a aprender ou melhorar a capacidade de lidar com o Big Data. A profiss&atilde;o de Cientista de Dados foi apontada no F&oacute;rum Econ&ocirc;mico Mundial de Davos como uma das carreiras mais relevantes para o mercado..</p>
+
+<p>&ldquo;Imagine, por exemplo, a riqueza de conhecimento que pode ser extra&iacute;do a partir dos dados gerados pelos smartphones que cada um de n&oacute;s usamos diariamente. Ningu&eacute;m &eacute; capaz de explorar estes dados se n&atilde;o forem aplicadas com t&eacute;cnicas de an&aacute;lise e de minera&ccedil;&atilde;o destes dados. O papel do cientista de dados &eacute; ajudar nisso&rdquo;, diz Altigran.</p>
+
+<p>Para o professor do curso da ci&ecirc;ncia de dados da Buritech, Marcio Palheta, o mercado em Manaus est&aacute; bastante aquecido. Exemplo de empresas que t&ecirc;m contratado seus alunos s&atilde;o: Sidia, INDT, FPF Tech, Triad Systems, RedMaxx, Bemol, Buritech, SEFAZ, Prodam, Samsung Ocean, M&eacute;liuz e Linx Neemu. &ldquo;Toda empresa que gera dados tem potencial para ser assistida por um cientista de dados&rdquo;, diz.</p>
+
+<p>Palheta explica que qualquer pessoa pode ser um cientista de dados, desde que tenha no m&iacute;nimo no&ccedil;&atilde;o voltada a programa&ccedil;&atilde;o. &ldquo;Al&eacute;m disso, preciso ter relacionamento interpessoal e pr&aacute;tica com matem&aacute;tica e estat&iacute;stica&rdquo;, ressalta.&nbsp;</p>
+
+<p><strong>Profissionais</strong></p>
+
+<p>Ludimila Gon&ccedil;alves &eacute; cientista de dados pela Ufam e atua na Bemol fazendo estudos de impacto e previs&atilde;o de demandas relacionadas ao neg&oacute;cio da empresa, como fazer previs&atilde;o de venda de lojas e destaca que o mercado em Manaus est&aacute; em crescimento.&nbsp;</p>
+
+<p>&ldquo;Em Manaus as empresas est&atilde;o come&ccedil;ando a perceber a import&acirc;ncia e o impacto positivo, como: melhoria de regras de neg&oacute;cio e economia nos gastos que a an&aacute;lise de dados tem nas organiza&ccedil;&otilde;es, com isso atualmente a demanda por este profissional &eacute; grande&rdquo;, ressalta.</p>
+
+<p>A cientista revela que por ser mulher, poucas vezes sentiu algum tipo de preoconceito. &ldquo;O preconceito que senti foi mais de forma geral, do tipo &lsquo;homens tem melhor racioc&iacute;nio nas exatas, ent&atilde;o porque voc&ecirc; escolheu essa &aacute;rea&rsquo;, mas n&atilde;o que eu me lembre de forma individual e pessoal&rdquo;, conta.&nbsp;</p>
+
+<p>O Cientista de Dados Gilberto Santos conta que iniciou com 20 anos a carreira voltada para a inform&aacute;tica, programa&ccedil;&atilde;o e tudo relacionado a computadores. Atua na &aacute;rea pela a FPF Tech.&nbsp;</p>
+
+<p>&ldquo;Meu dia a dia &eacute; levantar a necessidades dos clientes da FPF Tech, fazer as propostas comerciais, sugerir as tecnologias que ser&atilde;o utilizadas nos projetos, acompanhar os projetos, gerenciar o time de desenvolvimento, monitorar os riscos e tamb&eacute;m prospectar novos projetos&rdquo;, conta.</p>
+
+<p><strong>&#39;Mercado de oportunidades&#39;</strong></p>
+    <div class="banner-wrapper hidden-lg">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 65812,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+    <div class="banner-wrapper visible-lg-block">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 30265,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+
+<p>Victor Valente &eacute; um cientista de dados formado pela a Universidade Federal do Amazonas (Ufam) que j&aacute; atua na &aacute;rea pela a Buritech. Ele destaca que escolheu a carreira, pois percebe que &eacute; um mercado de grandes oportunidades profissionais nos pr&oacute;ximos anos.&nbsp;</p>
+
+<p>&ldquo;O ecossistema de produtos baseados em intelig&ecirc;ncia artificial, big data e data science ainda &eacute; muito incipiente em Manaus e no Brasil. Existe um grupo de produtos que s&atilde;o viabilizados por profissionais desse ramo que est&atilde;o se tornando indispens&aacute;veis para a ind&uacute;stria da informa&ccedil;&atilde;o, e que est&atilde;o realmente transformando o modo como os usu&aacute;rios interagem com produtos digitais. Participar do in&iacute;cio dessa revolu&ccedil;&atilde;o &eacute; muito gratificante&rdquo;, conta.</p>
+
+<p><strong>Gloss&aacute;rio</strong></p>
+
+<p>Ci&ecirc;ncia de dados - &eacute; uma &aacute;rea interdisciplinar voltada para o estudo e a an&aacute;lise de dados.</p>
+
+<p>Big Data - refere-se &agrave; quantidade exorbitante de dados produzidos diariamente.</p>
+
+<p>Data Mining - &eacute; a &ldquo;minera&ccedil;&atilde;o&rdquo; destes dados em busca de padr&otilde;es consistentes.</p>
+
+<p>Data Warehouse - &eacute; um dep&oacute;sito de dados digitais que serve para armazenar informa&ccedil;&otilde;es.</p>
+
+<p>Business Intelligence (BI) - &nbsp;&eacute; a tomada de decis&atilde;o baseada em dados.</p>
+
+<p>Intelig&ecirc;ncia artificial (IA) - prop&otilde;e a elaborar dispositivos que simulem a capacidade humana.</p>
+
+<p>Blockchain - &Eacute; um grande &ldquo;livro cont&aacute;bil&rdquo; que registra v&aacute;rios tipos de transa&ccedil;&otilde;es registrados em computadores.</p>
+
+<p><strong>R$ 15 mil</strong></p>
+
+<p>&eacute; o sal&aacute;rio m&iacute;nimo de um cientista de dados com titula&ccedil;&atilde;o de mestre, segundo o professor de ci&ecirc;ncia de dados da Buritech, Marcio Palheta. Na Ufam existe mestrado e doutorado na &aacute;rea.</p>
+
+<p><strong>Curso</strong></p>
+
+<p>A BuriTech come&ccedil;a a formar a primeira turma do curso de ci&ecirc;ncia de dados em Manaus. Come&ccedil;ou na &uacute;ltima ter&ccedil;a-feira e vai at&eacute; o dia 07 de maio. A carga hor&aacute;rio &eacute; de 80 horas. Custa R$ 2,8 mil. As pr&oacute;ximas turmas v&atilde;o ocorrer em junho, julho e agosto. Em Manaus temos mestrado e doutorado pela a UFAM (a &uacute;nica institui&ccedil;&atilde;o na Amaz&ocirc;nia) &nbsp;e em breve a UEA ter&aacute; uma p&oacute;s-gradua&ccedil;&atilde;o na &aacute;rea. Informa&ccedil;&otilde;es (92) 99189-1906.&nbsp;</p>
+
+          </div>
+
+
+                <div class="banner-wrapper hidden-lg">
+      <small>Publicidade</small>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- [Adsense] Mobile - 38615 #1 --> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5612868877262101" data-ad-slot="5059372851" data-ad-format="auto"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+    </div>
+
+              <div class="tags">
+    <ul class="tags-list">
+        <li class="tag">
+          <a href="/search_by_tags?q=Ci%C3%AAncia">Ciência</a>
+        </li>
+        <li class="tag">
+          <a href="/search_by_tags?q=Dados">Dados</a>
+        </li>
+        <li class="tag">
+          <a href="/search_by_tags?q=Consumidores">Consumidores</a>
+        </li>
+        <li class="tag">
+          <a href="/search_by_tags?q=Movimenta%C3%A7%C3%A3o">Movimentação</a>
+        </li>
+        <li class="tag">
+          <a href="/search_by_tags?q=empresas+de+Manaus">empresas de Manaus</a>
+        </li>
+    </ul>
+  </div>
+
+            
+            
+    <div class="banner-wrapper hidden-lg">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 65810,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+
+            <div class="visible-lg-block">
+              <div class="share-and-comments">
+  <ul class="share-links">
+    <li>
+      <a
+        facebook-share
+        class="facebook icon colored"
+        url="{{currentUrl}}">
+        <i class="fa fa-facebook"></i>
+        facebook
+      </a>
+    </li>
+
+    <li>
+      <a
+        twitter-share
+        class="twitter icon colored"
+        text="Empresas de Manaus utilizam ciência de dados para mapear consumidores"
+        url="{{currentUrl}}">
+        <i class="fa fa-twitter"></i>
+        twitter
+      </a>
+    </li>
+
+    <li>
+      <a
+        gplus-share
+        class="google-plus icon colored"
+        url="{{currentUrl}}">
+        <i class="fa fa-google-plus"></i>
+        google+
+      </a>
+    </li>
+
+    <li class="hidden-lg" ng-hide="whatsappShare == undefined">
+      <a
+        class="whatsapp icon colored"
+        ng-href="{{whatsappShare}}">
+        <i class="fa fa-whatsapp"></i>
+        whatsapp
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="email icon colored"
+        href="mailto:?{{mailShareParameters}}"
+        target="_blank">
+        <i class="fa fa-envelope-o"></i>
+        email
+      </a>
+    </li>
+  </ul>
+</div>
+
+            </div>
+        </div>
+
+        
+    <div class="top-banner-wrapper visible-lg-block">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 38615,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+
+          <div class="OUTBRAIN" data-src="https://www.acritica.com/channels/manaus/news/domingo-mercado-de-oportunidades" data-widget-id="AR_1" data-ob-template="ACritica"></div>
+				  <script type="text/javascript" async="async" src="https://widgets.outbrain.com/outbrain.js"></script>
+
+          <style>
+            @media only screen and (max-width: 1199px) {
+              .content-show .more-news .channel-name {
+                background-color: #1a9dfc;
+              }
+                .content-show .more-news .channel-name:after {
+                  border-bottom-color: #1a9dfc;
+                }
+            }
+          </style>
+
+        
+    <div class="top-banner-wrapper visible-lg-block">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 30266,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+        
+    <div class="banner-wrapper hidden-lg">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 65811,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+
+        <div class="more-news">
+          <h2 class="channel-name">
+            +
+            Manaus
+
+
+          </h2>
+
+          <ul class="row">
+              <li class="news col-lg-4 col-sm-6 col-xs-12">
+                <a href="/channels/manaus/news/vice-de-bolsonaro-encerra-agenda-politica-em-manaus-com-carreata">
+                    <div class="image" style="border-bottom-color: #1a9dfc">
+                      <img auto-crop="true" ng-cloak="true" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Show thumb bolsonaro zzzzzzz 2c07346a 0d91 48ba 8208 e0c315f9bbb1" data-original="https://www.acritica.com/uploads/news/image/752251/show_thumb_bolsonaro_zzzzzzz_2C07346A-0D91-48BA-8208-E0C315F9BBB1.JPG">
+                  </div>
+
+                  <div class="title">
+                    Vice de Bolsonaro encerra agenda política em Manaus ...
+                  </div>
+
+                    <div class="more-news-summary hidden-lg">
+                      Paralela a carreata de Hamilton Mourão, os...
+                    </div>
+</a>              </li>
+              <li class="news col-lg-4 col-sm-6 col-xs-12">
+                <a href="/channels/manaus/news/homem-e-preso-com-60-kg-de-cocaina-escondidos-dentro-de-sacos-de-farinha">
+                    <div class="image" style="border-bottom-color: #1a9dfc">
+                      <img auto-crop="true" ng-cloak="true" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Show thumb farinha 3748d000 4ba5 4ff9 ba9b dcc491e236c5" data-original="https://www.acritica.com/uploads/news/image/752250/show_thumb_farinha_3748D000-4BA5-4FF9-BA9B-DCC491E236C5.JPG">
+                  </div>
+
+                  <div class="title">
+                    Homem é preso com 60 kg de cocaína escondidos dentro...
+                  </div>
+
+                    <div class="more-news-summary hidden-lg">
+                      Polícia Civil informou que a droga estava ...
+                    </div>
+</a>              </li>
+              <li class="news col-lg-4 col-sm-6 col-xs-12">
+                <a href="/channels/manaus/news/peixes-a-venda-na-feira-do-pirarucu-e-tambaqui-da-fas-esgotam-no-segundo-dia">
+                    <div class="image" style="border-bottom-color: #1a9dfc">
+                      <img auto-crop="true" ng-cloak="true" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Show thumb peixe 471bed16 5214 4491 8dd6 e83ca67f9058" data-original="https://www.acritica.com/uploads/news/image/752249/show_thumb_peixe_471BED16-5214-4491-8DD6-E83CA67F9058.JPG">
+                  </div>
+
+                  <div class="title">
+                    Peixes à venda na Feira do Pirarucu e Tambaqui da FA...
+                  </div>
+
+                    <div class="more-news-summary hidden-lg">
+                      Estoque de peixes de rio foi vendido rapid...
+                    </div>
+</a>              </li>
+              <li class="news col-lg-4 col-sm-6 col-xs-12">
+                <a href="/channels/manaus/news/mulher-morre-atropelada-ao-lado-do-terminal-1-no-centro-de-manaus">
+                    <div class="image" style="border-bottom-color: #1a9dfc">
+                      <img auto-crop="true" ng-cloak="true" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Show thumb acidente 00c4f8e0 add6 4a87 ac54 65c5589a12da" data-original="https://www.acritica.com/uploads/news/image/752248/show_thumb_acidente_00C4F8E0-ADD6-4A87-AC54-65C5589A12DA.JPG">
+                  </div>
+
+                  <div class="title">
+                    Mulher morre atropelada ao lado do Terminal 1 no Cen...
+                  </div>
+
+                    <div class="more-news-summary hidden-lg">
+                      Testemunhas relataram que a vítima tinha d...
+                    </div>
+</a>              </li>
+              <li class="news col-lg-4 col-sm-6 col-xs-12">
+                <a href="/channels/manaus/news/socorristas-denunciam-falta-de-estrutura-do-samu-para-atendimentos-em-manaus">
+                    <div class="image" style="border-bottom-color: #1a9dfc">
+                      <img auto-crop="true" ng-cloak="true" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Show thumb samu quebrado a27ccdb6 2933 4b53 bf6d c968b6e9d76d" data-original="https://www.acritica.com/uploads/news/image/752243/show_thumb_SAMU-QUEBRADO_A27CCDB6-2933-4B53-BF6D-C968B6E9D76D.JPG">
+                  </div>
+
+                  <div class="title">
+                    Socorristas denunciam falta de estrutura do Samu em ...
+                  </div>
+
+                    <div class="more-news-summary hidden-lg">
+                      Serviço conta com dez ambulâncias para ate...
+                    </div>
+</a>              </li>
+              <li class="news col-lg-4 col-sm-6 col-xs-12">
+                <a href="/channels/manaus/news/filho-de-amazonense-vice-de-bolsonaro-faz-carreata-em-manaus-neste-sabado-15">
+                    <div class="image" style="border-bottom-color: #1a9dfc">
+                      <img auto-crop="true" ng-cloak="true" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Show thumb whatsapp image 2018 09 14 at 19.31.16 b48de633 c38e 4035 a737 95c1b7eb87cf" data-original="https://www.acritica.com/uploads/news/image/752239/show_thumb_WhatsApp_Image_2018-09-14_at_19.31.16_B48DE633-C38E-4035-A737-95C1B7EB87CF.jpeg">
+                  </div>
+
+                  <div class="title">
+                    Vice de Bolsonaro faz carreata em Manaus neste sábad...
+                  </div>
+
+                    <div class="more-news-summary hidden-lg">
+                      Evento na Zona Leste é o último da agenda ...
+                    </div>
+</a>              </li>
+              <li class="news col-lg-4 col-sm-6 col-xs-12">
+                <a href="/channels/manaus/news/prefeitura-de-manaus-preve-orcamento-de-r-5-1-bilhoes-para-2019">
+                    <div class="image" style="border-bottom-color: #1a9dfc">
+                      <img auto-crop="true" ng-cloak="true" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Show thumb prefeitura 8ae7ff00 0476 4e10 b3bb 0cd73ed4b07d" data-original="https://www.acritica.com/uploads/news/image/752241/show_thumb_prefeitura_8AE7FF00-0476-4E10-B3BB-0CD73ED4B07D.JPG">
+                  </div>
+
+                  <div class="title">
+                    Prefeitura de Manaus prevê orçamento de R$ 5,1 bilhõ...
+                  </div>
+
+                    <div class="more-news-summary hidden-lg">
+                      Conforme o detalhamento feito pelo secretá...
+                    </div>
+</a>              </li>
+              <li class="news col-lg-4 col-sm-6 col-xs-12">
+                <a href="/channels/manaus/news/o-nome-dele-nao-e-ciro-e-esperanca-diz-amazonino-para-presidenciavel">
+                    <div class="image" style="border-bottom-color: #1a9dfc">
+                      <img auto-crop="true" ng-cloak="true" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Show thumb amazonino e ciro d8bc921b 8835 480c 9a78 4f5b5fc6c56a" data-original="https://www.acritica.com/uploads/news/image/752240/show_thumb_amazonino_e_ciro_D8BC921B-8835-480C-9A78-4F5B5FC6C56A.JPG">
+                  </div>
+
+                  <div class="title">
+                    ‘O nome dele não é Ciro, é esperança’, diz Amazonino...
+                  </div>
+
+                    <div class="more-news-summary hidden-lg">
+                      Reunião organizada pelo governador e candi...
+                    </div>
+</a>              </li>
+              <li class="news col-lg-4 col-sm-6 col-xs-12">
+                <a href="/channels/manaus/news/berg-da-ugt-pretende-limitar-cargos-comissionados-caso-seja-eleito-governador">
+                    <div class="image" style="border-bottom-color: #1a9dfc">
+                      <img auto-crop="true" ng-cloak="true" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Show thumb berg 9b1f698a 819a 41aa 8eb3 19c74f5e755b" data-original="https://www.acritica.com/uploads/news/image/752238/show_thumb_berg_9B1F698A-819A-41AA-8EB3-19C74F5E755B.JPG">
+                  </div>
+
+                  <div class="title">
+                    Berg da UGT pretende limitar cargos comissionados ca...
+                  </div>
+
+                    <div class="more-news-summary hidden-lg">
+                      Candidato do Psol propõe enxugamento da má...
+                    </div>
+</a>              </li>
+          </ul>
+        </div>
+
+        <div class="comments">
+          <div class="fb-comments"></div>
+        </div>
+
+          <div class="channel-link-container hidden-lg" style="background-color: #1a9dfc">
+            <a class="channel-link" href="/channels/manaus">Ver notícias de Manaus</a>
+          </div>
+      </div>
+
+      <div class="see-also col-lg-3 visible-lg-block">
+          <h2>Veja também</h2>
+
+          <ul class="news-list">
+              <li>
+                <a href="/channels/cotidiano/news/filtro-colorido-aumenta-velocidade-de-leitura-de-criancas-com-dislexia-diz-estudo">Filtro colorido aumenta velocidade de leitura de crianças com dislexia</a>
+              </li>
+              <li>
+                <a href="/channels/cotidiano/news/telefonia-celular-alcanca-98-2-da-populacao-brasileira-aponta-anatel">Telefonia celular alcança 98,2% da população brasileira, aponta Anatel </a>
+              </li>
+              <li>
+                <a href="/channels/manaus/news/feriado-da-independencia-aumenta-em-7-a-movimentacao-no-aeroporto-de-manaus">Feriado aumenta em 7% a movimentação no Aeroporto de Manaus</a>
+              </li>
+              <li>
+                <a href="/channels/cotidiano/news/polos-comprovam-a-existencia-de-depositos-de-gelo-na-lua-informa-a-nasa">Polos comprovam a existência de depósitos de gelo na lua, informa a Nasa</a>
+              </li>
+              <li>
+                <a href="/channels/manaus/news/justica-do-am-recebeu-em-sete-meses-188-inqueritos-de-estupro-de-vulneravel">Justiça recebeu, em sete meses, 188 inquéritos de estupro de vulnerável </a>
+              </li>
+              <li>
+                <a href="/channels/manaus/news/mais-de-60-dos-estupros-de-vulneraveis-no-am-sao-cometidos-por-conhecidos-das-vitimas">Mais de 60% dos estupros de vulneráveis são cometidos por conhecidos</a>
+              </li>
+              <li>
+                <a href="/channels/cotidiano/news/entenda-como-as-empresas-monitoram-internautas-pelos-navegadores">Empresas monitoram internautas pelos navegadores</a>
+              </li>
+              <li>
+                <a href="/channels/governo/news/pesquisadores-descobrem-nova-planta-na-serra-no-araca">Pesquisadores descobrem nova planta na Serra no Aracá </a>
+              </li>
+          </ul>
+      </div>
+    </div>
+
+        <div class="banner-wrapper">
+      <small>Publicidade</small>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- [Adsense] Mobile - 30266 #1 --> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5612868877262101" data-ad-slot="3582639650" data-ad-format="auto"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+    </div>
+
+  </article>
+
+    <div class="sidebar-col visible-lg-block">
+      <div class="sidebar" ng-controller="ContentSidebarController">
+    <div class="tv-acritica widget">
+    <h2>
+      <img alt="TV A Crítica HD" src="/assets/tv_acritica_hd-89895a688ba62b810bbe17860bfe89976a2a5cddf49b7ed8de5d0791bf00d5be.png" />
+    </h2>
+
+    <ul class="highlights">
+      <li>
+        <a class="news-snippet highlight video" href="/videos/cantor-silva-traz-a-turne-brasileiro-ao-teatro-manauara-nesta-sexta-feira-14">
+          <div class="image">
+            <img auto-crop="true" ng-cloak="true" src="https://img.youtube.com/vi/KnJwCg-zh4w/mqdefault.jpg" alt="Mqdefault" />
+          </div>
+
+          <div class="title">
+            Cantor Silva traz a turnê ‘Brasileiro’ ao Teatro Manauara, nesta sexta-feira (14)
+          </div>
+</a>      </li>
+
+        <li>
+          <div class="news-snippet video">
+            <a class="image" href="/videos/casamento-coletivo-em-loja-reuniu-16-casais-no-ultimo-feriadao-em-manaus">
+              <img auto-crop="true" ng-cloak="true" src="https://img.youtube.com/vi/jSSZSe4R1Nk/default.jpg" alt="Default" />
+</a>
+            <a class="hat" href="/videos/casamento-coletivo-em-loja-reuniu-16-casais-no-ultimo-feriadao-em-manaus">AÇÃO SOCIAL </a>
+
+            <span class="published-at">
+              5 dias atrás
+            </span>
+
+            <a class="title" href="/videos/casamento-coletivo-em-loja-reuniu-16-casais-no-ultimo-feriadao-em-manaus">Casamento coletivo em loja reuniu 16 casais no último feriadão em Manaus </a>
+          </div>
+        </li>
+        <li>
+          <div class="news-snippet video">
+            <a class="image" href="/videos/dois-sobreviventes-de-tiroteio-entre-cv-e-fdn-na-compensa-seguem-internados">
+              <img auto-crop="true" ng-cloak="true" src="https://img.youtube.com/vi/pVDcL2Mj3gU/default.jpg" alt="Default" />
+</a>
+            <a class="hat" href="/videos/dois-sobreviventes-de-tiroteio-entre-cv-e-fdn-na-compensa-seguem-internados">TIROTEIO</a>
+
+            <span class="published-at">
+              14 dias atrás
+            </span>
+
+            <a class="title" href="/videos/dois-sobreviventes-de-tiroteio-entre-cv-e-fdn-na-compensa-seguem-internados">Dois sobreviventes de tiroteio entre CV e FDN na Compensa seguem internados</a>
+          </div>
+        </li>
+    </ul>
+
+    <div class="see-more">
+      <a href="/videos">
+        Veja mais vídeos da TV A Crítica &raquo;
+</a>    </div>
+  </div>
+
+
+  
+    <div class="banner-wrapper">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 37648,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+
+  <most-read-news-widget limit="5"></most-read-news-widget>
+
+  <most-commented-news-widget limit="5"></most-commented-news-widget>
+
+      <div class="banner-wrapper">
+      <small>Publicidade</small>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- [Adsense] Mobile - 37647 #1 --> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5612868877262101" data-ad-slot="5493351656" data-ad-format="auto"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+    </div>
+
+
+    <div class="videos widget">
+    <h2>Vídeos</h2>
+
+    <a class="news-snippet highlight video" href="/videos/dona-de-mercadinho-no-petropolis-e-assaltada-por-dupla-com-facao-veja-video">
+      <div class="image">
+        <img auto-crop="true" ng-cloak="true" src="https://img.youtube.com/vi/PZ_CrfAcO2M/mqdefault.jpg" alt="Mqdefault" />
+      </div>
+
+      <p class="title">
+        Dona de mercadinho no Petrópolis é assaltada por dupla com facão; veja vídeo
+      </p>
+</a>
+    <ul>
+        <li>
+          <div class="news-snippet video">
+            <a class="image" href="/videos/fogas-lanca-nova-versao-de-aplicativo-e-oferece-servicos-completos-para-clientes">
+              <img auto-crop="true" ng-cloak="true" src="https://img.youtube.com/vi/s8iwDr1pJJY/default.jpg" alt="Default" />
+</a>
+            <a class="channel" style="color: #1a9dfc" href="/channels/manaus">Manaus</a>
+
+            <span class="published-at">
+              19 dias atrás
+            </span>
+
+            <a class="title" href="/videos/fogas-lanca-nova-versao-de-aplicativo-e-oferece-servicos-completos-para-clientes">Fogás lança nova versão de aplicativo e oferece serviços completos para clientes</a>
+          </div>
+        </li>
+        <li>
+          <div class="news-snippet video">
+            <a class="image" href="/videos/projeto-de-inclusao-social-ensina-jiu-jitsu-a-jovens-muito-especiais-em-manaus">
+              <img auto-crop="true" ng-cloak="true" src="https://img.youtube.com/vi/UZkSV4tKp2c/default.jpg" alt="Default" />
+</a>
+            <a class="channel" style="color: #f8601e" href="/channels/esportes">Esportes</a>
+
+            <span class="published-at">
+              20 dias atrás
+            </span>
+
+            <a class="title" href="/videos/projeto-de-inclusao-social-ensina-jiu-jitsu-a-jovens-muito-especiais-em-manaus">Projeto de inclusão social ensina jiu-jitsu a jovens muito especiais em Manaus </a>
+          </div>
+        </li>
+        <li>
+          <div class="news-snippet video">
+            <a class="image" href="/videos/ex-funcionaria-detalha-denuncia-de-abuso-sexual-contra-desembargador-aposentado">
+              <img auto-crop="true" ng-cloak="true" src="https://img.youtube.com/vi/kvQqIkM-RVY/default.jpg" alt="Default" />
+</a>
+            <a class="channel" style="color: #1a9dfc" href="/channels/manaus">Manaus</a>
+
+            <span class="published-at">
+              25 dias atrás
+            </span>
+
+            <a class="title" href="/videos/ex-funcionaria-detalha-denuncia-de-abuso-sexual-contra-desembargador-aposentado">Ex-funcionária detalha denúncia de abuso sexual contra desembargador aposentado</a>
+          </div>
+        </li>
+        <li>
+          <div class="news-snippet video">
+            <a class="image" href="/videos/a-lampada-piscava-parecia-coisa-de-filme-diz-moradora-da-ponta-negra-sobre-tremor-veja-video">
+              <img auto-crop="true" ng-cloak="true" src="https://img.youtube.com/vi/QhS8sv-msRU/default.jpg" alt="Default" />
+</a>
+            <a class="channel" style="color: #1a9dfc" href="/channels/manaus">Manaus</a>
+
+            <span class="published-at">
+              25 dias atrás
+            </span>
+
+            <a class="title" href="/videos/a-lampada-piscava-parecia-coisa-de-filme-diz-moradora-da-ponta-negra-sobre-tremor-veja-video">&quot;A lâmpada piscava, parecia coisa de filme&quot;, diz moradora da Ponta Negra, sobre tremor; veja vídeo</a>
+          </div>
+        </li>
+        <li>
+          <div class="news-snippet video">
+            <a class="image" href="/videos/forte-terremoto-na-venezuela-causa-tremor-em-predios-de-manaus">
+              <img auto-crop="true" ng-cloak="true" src="https://img.youtube.com/vi/ykWUgHam-kw/default.jpg" alt="Default" />
+</a>
+            <a class="channel" style="color: #1a9dfc" href="/channels/manaus">Manaus</a>
+
+            <span class="published-at">
+              25 dias atrás
+            </span>
+
+            <a class="title" href="/videos/forte-terremoto-na-venezuela-causa-tremor-em-predios-de-manaus">Forte terremoto na Venezuela causa tremor em prédios de Manaus</a>
+          </div>
+        </li>
+    </ul>
+
+    <div class="see-more">
+      <a href="#">Veja mais vídeos</a>
+    </div>
+  </div>
+
+
+      <div class="banner-wrapper">
+      <small>Publicidade</small>
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- [Adsense] Mobile - 38615 #1 --> <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5612868877262101" data-ad-slot="5059372851" data-ad-format="auto"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+    </div>
+
+
+  
+    <div class="banner-wrapper">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 38614,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+
+  <nav class="sidebar-nav">
+  <ul class="links">
+    <li class="portal">
+      <a target="_blank" href="#">
+        Você no Portal
+        <small>Participe do nosso portal</small>
+</a>    </li>
+
+    <li class="contact">
+      <a target="_blank" href="#">
+        Fale Conosco
+        <small>Fale com a nossa equipe</small>
+</a>    </li>
+
+    <li class="announce">
+      <a target="_blank" href="#">
+        Anuncie
+        <small>Anuncie no nosso portal</small>
+</a>    </li>
+
+    <li class="digital-edition">
+      <a target="_blank" href="//assinante.acritica.com">
+        Edição Digital
+        <small>Assine a versão digital</small>
+</a>    </li>
+  </ul>
+</nav>
+
+</div>
+
+    </div>
+</div>
+
+
+  </div>
+
+  <footer class="main-footer visible-lg-block">
+    <div class="main">
+      <div class="container">
+        <img class="logo" src="/assets/logo-6655c4cbdc72c84df3fc363d13f9f79e48384b9dc19f582a57e93a7a7e48df4e.png" alt="Logo 6655c4cbdc72c84df3fc363d13f9f79e48384b9dc19f582a57e93a7a7e48df4e" />
+
+        <nav>
+          <ul>
+              <li>
+                <a style="border-color: #1a9dfc" href="/channels/manaus">Manaus</a>
+              </li>
+              <li>
+                <a style="border-color: #e82218" href="/channels/cotidiano">Cotidiano</a>
+              </li>
+              <li>
+                <a style="border-color: #9517b1" href="/channels/entretenimento">Entretenimento</a>
+              </li>
+              <li>
+                <a style="border-color: #f8601e" href="/channels/esportes">Esportes</a>
+              </li>
+              <li>
+                <a style="border-color: #000000" href="/channels/hoje">Manaus Hoje</a>
+              </li>
+              <li>
+                <a style="border-color: #ffffff" href="/channels/enem">Enem </a>
+              </li>
+
+            <li class="submenu">
+              <strong>Institucional</strong>
+
+              <ul>
+                <li>
+                  <a href="#">
+                    Sobre a
+                    <acronym title="Rede Calderaro de Comunicação">
+                      RCC
+                    </acronym>
+</a>                </li>
+
+                <li>
+                  <a href="/sobre/politica-de-privacidade">Política de Privacidade</a>
+                </li>
+
+                <li>
+                  <a href="/sobre/expediente">Expediente</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="submenu">
+              <strong>Anuncie</strong>
+
+              <ul>
+                <li>
+                  <a href="#">No Portal</a>
+                </li>
+
+                <li>
+                  <a href="#">No Impresso</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="container">
+        <nav>
+          <ul class="links">
+            <li>
+              <a href="#">princípios editoriais</a>
+            </li>
+
+            <li>
+              <a href="/sobre/politica-de-privacidade">política de privacidade</a>
+            </li>
+          </ul>
+
+          <div class="social-networks">
+  <a class="facebook" target="_blank" href="https://www.facebook.com/pages/Portal-A-Critica/175887955775026">Facebook</a>
+  <a class="youtube" target="_blank" href="https://www.youtube.com/user/acriticaweb">YouTube</a>
+  <a class="twitter" target="_blank" href="https://twitter.com/acritica">Twitter</a>
+  <a class="rss" href="/rss">RSS</a>
+</div>
+
+        </nav>
+
+        &copy; Copyright 2000-2014 Rede Calderaro de Comunicação S.A.
+      </div>
+    </div>
+
+    <nav class="sponsors">
+  <ul>
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="Manaus Hoje" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/manaus-hoje-ffeb94908677f3f690142da3517c23a211683be3b47d8fc723b20451ff125999.png">
+        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="http://rederecord.r7.com/">
+            <img alt="Record" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/record-d85ddc808152192d4c594b0c0a61cb9556952b044ed675c9a6519b1e4dd04715.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="http://www.redetv.uol.com.br/">
+            <img alt="Rede TV" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/rede-tv-9212ba98d282c14d6f35a56537b4b1edf4862d57b6abd49c789913bf579f1595.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="https://www.acritica.com/">
+            <img alt="A Crítica.com" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/acritica-com-e3c40d68df16ba6b9d5ba0ac1bece4aa03941dd9078ce896bb7740d0d8aa0608.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="A Crítica Play" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/acritica-play-0e7bc21d1e717a7e89c83143c809d7a9d78687a437c8037edb8b63511a3f4dd4.png">
+        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="A Crítica +" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/acritica-plus-549b032a8ffb348125a14ce7de5be8c452df8467a1ed27c4cfe3ce7c3e634564.png">
+        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="http://www.acriticafm.com.br/">
+            <img alt="A Crítica FM" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/acritica-fm-3dcb4da4b8e341662447b6dd6871d5a6c88cc84cf6031a628aae69908dd117da.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="http://manaus.jovempanfm.uol.com.br/">
+            <img alt="Jovem Pan" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/jovem-pan-abb6bb9d42ffebdfe6f98a1eae6a0f53afbdb018656f7a2700d96efc822b7716.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="https://www.meutambaqui.com/">
+            <img alt="Tambaqui Urbano" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/tambaqui-urbano-7ae2f82cd901b69e633bd1778a57f5b82ad26a7fe844777de099b6d659ef010f.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <a target="_blank" href="http://www.teatrodirecional.com.br/">
+            <img alt="Manaura" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/manaura-4960c27c16d7268de122679a2b8df3606a84176b399c79eb63f8de88abcb0016.png">
+</a>        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="RCC" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/rcc-51a27e9143e581f691a51e85dc89c3bc25e73f21723c954dee5a3b9925487b88.png">
+        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="Amazon Color" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/amazon-color-db023d09dc791c4fa5eb1e8767f3dd1511f570c6e864948fa5b7aca2a54f0017.png">
+        </div>
+      </div>
+    </li>
+
+    <li class="image-aligner">
+      <div class="horizontal-aligner">
+        <div class="vertical-aligner">
+          <img alt="Editora Amazônia" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="/assets/sponsors_icons/editora-amazonia-4c385a114e0ff75ef5c53108243a7b4a49c26ffc717d6c68f7be134f771fefa8.png">
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+  </footer>
+
+  
+    <div class="top-banner-wrapper hidden-lg">
+      <small>Publicidade</small>
+
+      <script type="text/javascript">
+        sas.call("std", {
+          siteId: 87939,
+          pageId: 625280,
+          formatId: 65833,
+          target: ''  // Targeting
+        });
+      </script>
+    </div>
+
+
+  <footer class="mobile-footer hidden-lg">
+    <div class="top">
+      <img alt="A Crítica" src="/assets/logo-blue-5a2021c61b21d23cdf1bd1045d930a30c36d3269ef927521c93d9bf454cf5256.png" />
+
+      <nav class="social-links">
+        <ul>
+          <li>
+            <a class="facebook" target="_blank" href="https://www.facebook.com/pages/Portal-A-Critica/175887955775026">
+              <i class="fa fa-facebook"></i>
+              Facebook
+</a>          </li>
+          <li>
+            <a class="youtube" target="_blank" href="https://www.youtube.com/user/acriticaweb">
+              <i class="fa fa-youtube"></i>
+              YouTube
+</a>          </li>
+          <li>
+            <a class="twitter" target="_blank" href="https://twitter.com/acritica">
+              <i class="fa fa-twitter"></i>
+              Twitter
+</a>          </li>
+          <li>
+            <a class="rss" href="/rss">
+              <i class="fa fa-rss"></i>
+              RSS
+</a>          </li>
+          <li>
+            <a class="top" href="#top">
+              <i class="fa fa-chevron-up"></i>
+              Voltar ao Topo
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        &copy; Copyright 2000-2014
+        <br class="visible-xs-inline" />
+        Rede Calderaro de Comunicação S.A.
+      </div>
+    </div>
+  </footer>
+
+  
+  <script type="text/javascript">
+    angular.module("controllers.newsShow")
+      .value("gallery", null)
+      .value("news", {"id":746399,"gallery_id":null,"channel_id":2,"publishing_date":"2018-04-15T13:16:16.000-04:00","summary":"A partir do 'Big Data' as empresas mapeiam os consumidores para montar sua estratégia. O mercado nesta área está bastante aquecido","image":{"url":"https://www.acritica.com/uploads/news/image/746399/gilberto_santos.JPG","share_big":{"url":"https://www.acritica.com/uploads/news/image/746399/share_big_gilberto_santos.JPG"},"share_medium":{"url":"https://www.acritica.com/uploads/news/image/746399/share_medium_gilberto_santos.JPG"},"share_small":{"url":"https://www.acritica.com/uploads/news/image/746399/share_small_gilberto_santos.JPG"},"highlight_big":{"url":"https://www.acritica.com/uploads/news/image/746399/highlight_big_gilberto_santos.JPG"},"highlight_small":{"url":"https://www.acritica.com/uploads/news/image/746399/highlight_small_gilberto_santos.JPG"},"search_snippet":{"url":"https://www.acritica.com/uploads/news/image/746399/search_snippet_gilberto_santos.JPG"},"show":{"url":"https://www.acritica.com/uploads/news/image/746399/show_gilberto_santos.JPG"},"show_thumb":{"url":"https://www.acritica.com/uploads/news/image/746399/show_thumb_gilberto_santos.JPG"},"sidebar":{"url":"https://www.acritica.com/uploads/news/image/746399/sidebar_gilberto_santos.JPG"},"snippet_big":{"url":"https://www.acritica.com/uploads/news/image/746399/snippet_big_gilberto_santos.JPG"},"snippet_small":{"url":"https://www.acritica.com/uploads/news/image/746399/snippet_small_gilberto_santos.JPG"},"thumb":{"url":"https://www.acritica.com/uploads/news/image/746399/thumb_gilberto_santos.JPG"},"top_highlight":{"url":"https://www.acritica.com/uploads/news/image/746399/top_highlight_gilberto_santos.JPG"}},"image_description":"Gilberto Santos é um cientista de dados da Fundação Paulo Feitoza - FPF Tech (Foto: Arquivo pessoal/ Gilberto)","slug":"domingo-mercado-de-oportunidades","title":"Empresas utilizam ciência de dados para mapear consumidores em Manaus","text":"\u003cp\u003eA Ci\u0026ecirc;ncia dos Dados \u0026eacute; importante para quase todas as empresas e ind\u0026uacute;stria. As escolhas, opini\u0026otilde;es e at\u0026eacute; mesmo os desejos s\u0026atilde;o detalhadamente analisados. Todas essas informa\u0026ccedil;\u0026otilde;es formam o Big Data. A partir desses dados as empresas mapeiam o movimento dos consumidores para montar sua estrat\u0026eacute;gia. Dessa forma, a profiss\u0026atilde;o do cientista torna-se indispens\u0026aacute;vel. Segundo professores da \u0026aacute;rea este mercado est\u0026aacute; bastante aquecido. Exemplo de empresas que t\u0026ecirc;m contratado s\u0026atilde;o: Sidia, INDT, FPF Tech, Triad Systems, RedMaxx, Bemol e outras.\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026ldquo;As empresas que conhecem seus clientes e usu\u0026aacute;rios est\u0026atilde;o em vantagem em rela\u0026ccedil;\u0026atilde;o \u0026agrave;quelas que n\u0026atilde;o fazem. Conhecendo os seus clientes \u0026eacute; poss\u0026iacute;vel melhorar e otimizar os servi\u0026ccedil;os e produtos. Isso se torna um grande problema quando o n\u0026uacute;mero de clientes e o volume de servi\u0026ccedil;os e produtos vendidos \u0026eacute; grande. N\u0026atilde;o se pode analisar estes dados manualmente e nem usando tecnologia mais simples\u0026rdquo;, destaca o professor e pesquisador do Instituto de Computa\u0026ccedil;\u0026atilde;o da Universidade Federal do Amazonas (Ufam), Altigran da Silva.\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eDemanda\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003e\u003cimg alt=\"\" src=\"//www.acritica.com/uploads/ckeditor/pictures/22297/content_cientista_de_dados_-_bemol.JPG\" style=\"width: 800px; height: 531px;\" /\u003e\u003c/strong\u003e\u003cbr /\u003e\r\nProfissionais de todas as \u0026aacute;reas se dedicam a aprender ou melhorar a capacidade de lidar com o Big Data. A profiss\u0026atilde;o de Cientista de Dados foi apontada no F\u0026oacute;rum Econ\u0026ocirc;mico Mundial de Davos como uma das carreiras mais relevantes para o mercado..\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026ldquo;Imagine, por exemplo, a riqueza de conhecimento que pode ser extra\u0026iacute;do a partir dos dados gerados pelos smartphones que cada um de n\u0026oacute;s usamos diariamente. Ningu\u0026eacute;m \u0026eacute; capaz de explorar estes dados se n\u0026atilde;o forem aplicadas com t\u0026eacute;cnicas de an\u0026aacute;lise e de minera\u0026ccedil;\u0026atilde;o destes dados. O papel do cientista de dados \u0026eacute; ajudar nisso\u0026rdquo;, diz Altigran.\u003c/p\u003e\r\n\r\n\u003cp\u003ePara o professor do curso da ci\u0026ecirc;ncia de dados da Buritech, Marcio Palheta, o mercado em Manaus est\u0026aacute; bastante aquecido. Exemplo de empresas que t\u0026ecirc;m contratado seus alunos s\u0026atilde;o: Sidia, INDT, FPF Tech, Triad Systems, RedMaxx, Bemol, Buritech, SEFAZ, Prodam, Samsung Ocean, M\u0026eacute;liuz e Linx Neemu. \u0026ldquo;Toda empresa que gera dados tem potencial para ser assistida por um cientista de dados\u0026rdquo;, diz.\u003c/p\u003e\r\n\r\n\u003cp\u003ePalheta explica que qualquer pessoa pode ser um cientista de dados, desde que tenha no m\u0026iacute;nimo no\u0026ccedil;\u0026atilde;o voltada a programa\u0026ccedil;\u0026atilde;o. \u0026ldquo;Al\u0026eacute;m disso, preciso ter relacionamento interpessoal e pr\u0026aacute;tica com matem\u0026aacute;tica e estat\u0026iacute;stica\u0026rdquo;, ressalta.\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eProfissionais\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cp\u003eLudimila Gon\u0026ccedil;alves \u0026eacute; cientista de dados pela Ufam e atua na Bemol fazendo estudos de impacto e previs\u0026atilde;o de demandas relacionadas ao neg\u0026oacute;cio da empresa, como fazer previs\u0026atilde;o de venda de lojas e destaca que o mercado em Manaus est\u0026aacute; em crescimento.\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026ldquo;Em Manaus as empresas est\u0026atilde;o come\u0026ccedil;ando a perceber a import\u0026acirc;ncia e o impacto positivo, como: melhoria de regras de neg\u0026oacute;cio e economia nos gastos que a an\u0026aacute;lise de dados tem nas organiza\u0026ccedil;\u0026otilde;es, com isso atualmente a demanda por este profissional \u0026eacute; grande\u0026rdquo;, ressalta.\u003c/p\u003e\r\n\r\n\u003cp\u003eA cientista revela que por ser mulher, poucas vezes sentiu algum tipo de preoconceito. \u0026ldquo;O preconceito que senti foi mais de forma geral, do tipo \u0026lsquo;homens tem melhor racioc\u0026iacute;nio nas exatas, ent\u0026atilde;o porque voc\u0026ecirc; escolheu essa \u0026aacute;rea\u0026rsquo;, mas n\u0026atilde;o que eu me lembre de forma individual e pessoal\u0026rdquo;, conta.\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003eO Cientista de Dados Gilberto Santos conta que iniciou com 20 anos a carreira voltada para a inform\u0026aacute;tica, programa\u0026ccedil;\u0026atilde;o e tudo relacionado a computadores. Atua na \u0026aacute;rea pela a FPF Tech.\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026ldquo;Meu dia a dia \u0026eacute; levantar a necessidades dos clientes da FPF Tech, fazer as propostas comerciais, sugerir as tecnologias que ser\u0026atilde;o utilizadas nos projetos, acompanhar os projetos, gerenciar o time de desenvolvimento, monitorar os riscos e tamb\u0026eacute;m prospectar novos projetos\u0026rdquo;, conta.\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003e\u0026#39;Mercado de oportunidades\u0026#39;\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cp\u003eVictor Valente \u0026eacute; um cientista de dados formado pela a Universidade Federal do Amazonas (Ufam) que j\u0026aacute; atua na \u0026aacute;rea pela a Buritech. Ele destaca que escolheu a carreira, pois percebe que \u0026eacute; um mercado de grandes oportunidades profissionais nos pr\u0026oacute;ximos anos.\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026ldquo;O ecossistema de produtos baseados em intelig\u0026ecirc;ncia artificial, big data e data science ainda \u0026eacute; muito incipiente em Manaus e no Brasil. Existe um grupo de produtos que s\u0026atilde;o viabilizados por profissionais desse ramo que est\u0026atilde;o se tornando indispens\u0026aacute;veis para a ind\u0026uacute;stria da informa\u0026ccedil;\u0026atilde;o, e que est\u0026atilde;o realmente transformando o modo como os usu\u0026aacute;rios interagem com produtos digitais. Participar do in\u0026iacute;cio dessa revolu\u0026ccedil;\u0026atilde;o \u0026eacute; muito gratificante\u0026rdquo;, conta.\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eGloss\u0026aacute;rio\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cp\u003eCi\u0026ecirc;ncia de dados - \u0026eacute; uma \u0026aacute;rea interdisciplinar voltada para o estudo e a an\u0026aacute;lise de dados.\u003c/p\u003e\r\n\r\n\u003cp\u003eBig Data - refere-se \u0026agrave; quantidade exorbitante de dados produzidos diariamente.\u003c/p\u003e\r\n\r\n\u003cp\u003eData Mining - \u0026eacute; a \u0026ldquo;minera\u0026ccedil;\u0026atilde;o\u0026rdquo; destes dados em busca de padr\u0026otilde;es consistentes.\u003c/p\u003e\r\n\r\n\u003cp\u003eData Warehouse - \u0026eacute; um dep\u0026oacute;sito de dados digitais que serve para armazenar informa\u0026ccedil;\u0026otilde;es.\u003c/p\u003e\r\n\r\n\u003cp\u003eBusiness Intelligence (BI) - \u0026nbsp;\u0026eacute; a tomada de decis\u0026atilde;o baseada em dados.\u003c/p\u003e\r\n\r\n\u003cp\u003eIntelig\u0026ecirc;ncia artificial (IA) - prop\u0026otilde;e a elaborar dispositivos que simulem a capacidade humana.\u003c/p\u003e\r\n\r\n\u003cp\u003eBlockchain - \u0026Eacute; um grande \u0026ldquo;livro cont\u0026aacute;bil\u0026rdquo; que registra v\u0026aacute;rios tipos de transa\u0026ccedil;\u0026otilde;es registrados em computadores.\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eR$ 15 mil\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026eacute; o sal\u0026aacute;rio m\u0026iacute;nimo de um cientista de dados com titula\u0026ccedil;\u0026atilde;o de mestre, segundo o professor de ci\u0026ecirc;ncia de dados da Buritech, Marcio Palheta. Na Ufam existe mestrado e doutorado na \u0026aacute;rea.\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eCurso\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cp\u003eA BuriTech come\u0026ccedil;a a formar a primeira turma do curso de ci\u0026ecirc;ncia de dados em Manaus. Come\u0026ccedil;ou na \u0026uacute;ltima ter\u0026ccedil;a-feira e vai at\u0026eacute; o dia 07 de maio. A carga hor\u0026aacute;rio \u0026eacute; de 80 horas. Custa R$ 2,8 mil. As pr\u0026oacute;ximas turmas v\u0026atilde;o ocorrer em junho, julho e agosto. Em Manaus temos mestrado e doutorado pela a UFAM (a \u0026uacute;nica institui\u0026ccedil;\u0026atilde;o na Amaz\u0026ocirc;nia) \u0026nbsp;e em breve a UEA ter\u0026aacute; uma p\u0026oacute;s-gradua\u0026ccedil;\u0026atilde;o na \u0026aacute;rea. Informa\u0026ccedil;\u0026otilde;es (92) 99189-1906.\u0026nbsp;\u003c/p\u003e\r\n","created_at":"2018-04-13T16:55:49.000-04:00","updated_at":"2018-04-15T13:16:16.000-04:00","video_url":"","hat":"TECNOLOGIA ","author_signature":"Rebeca Mota","draft":false,"author_location":"Manaus (AM)","hidden":false,"headline":"Empresas de Manaus utilizam ciência de dados para mapear consumidores","highlight_position":null,"home_highlight_position":null,"expires_in":60,"sponsor_id":null,"subscribers_only":false,"target_platform":"platform_independent","channel":{"id":2,"name":"Manaus","color":"#1a9dfc","created_at":"2015-09-15T09:43:00.000-04:00","updated_at":"2016-05-16T16:13:48.000-04:00","slug":"manaus","inactive":false,"is_home_special":false,"is_main":true,"description":"","sponsor_id":null}});
+  </script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $.post(Routes.news_views_count_path(746399));
+      });
+    </script>
+
+
+  <script type="text/javascript">
+    (function(angular) {
+      "use strict";
+
+      angular.module("configs.facebookInitialization", [
+        "services.facebook"
+      ]).config(function(facebookServiceProvider) {
+        facebookServiceProvider.config({
+          appId: 465636070301716,
+          version: "v2.5"
+        });
+      });
+
+      angular.module("controllers.mobile.header")
+        .value("aboutRccUrl", "#")
+        .value("announcingUrl", "#")
+        .value("contactUrl", "#")
+        .value("digitalEditionUrl", "//assinante.acritica.com")
+        .value("userParticipationUrl", "#")
+        .value("facebookPageUrl", "https://www.facebook.com/pages/Portal-A-Critica/175887955775026")
+        .value("twitterProfileUrl", "https://twitter.com/acritica")
+        .value("youtubeChannelUrl", "https://www.youtube.com/user/acriticaweb")
+        .value("blogs", [{"id":102,"admin_user_id":342,"name":"Bem Viver Blog","slug":"bem-viver-blog","image":{"url":"https://www.acritica.com/uploads/blog/image/102/PERFIL_REDESOCIAL.png","share_big":{"url":"https://www.acritica.com/uploads/blog/image/102/share_big_PERFIL_REDESOCIAL.png"},"share_medium":{"url":"https://www.acritica.com/uploads/blog/image/102/share_medium_PERFIL_REDESOCIAL.png"},"share_small":{"url":"https://www.acritica.com/uploads/blog/image/102/share_small_PERFIL_REDESOCIAL.png"},"highlight_big":{"url":"https://www.acritica.com/uploads/blog/image/102/highlight_big_PERFIL_REDESOCIAL.png"},"highlight_small":{"url":"https://www.acritica.com/uploads/blog/image/102/highlight_small_PERFIL_REDESOCIAL.png"},"show_thumb":{"url":"https://www.acritica.com/uploads/blog/image/102/show_thumb_PERFIL_REDESOCIAL.png"},"sidebar":{"url":"https://www.acritica.com/uploads/blog/image/102/sidebar_PERFIL_REDESOCIAL.png"},"snippet_big":{"url":"https://www.acritica.com/uploads/blog/image/102/snippet_big_PERFIL_REDESOCIAL.png"},"thumb":{"url":"https://www.acritica.com/uploads/blog/image/102/thumb_PERFIL_REDESOCIAL.png"}},"description":"O Blog da editoria Bem Viver do jornal A CRÍTICA do Amazonas. Cultura, entretenimento, variedades... Arte etc e tal. Email: bemviver@acritica.com e Instagram @bemviverblog","created_at":"2016-03-22T15:40:56.000-04:00","updated_at":"2018-03-23T19:55:43.000-04:00","main_image":{"url":"https://www.acritica.com/uploads/blog/main_image/102/BEM_VIVER_BLOG_-_2ANOS_BANNER.jpg","home_box":{"url":"https://www.acritica.com/uploads/blog/main_image/102/home_box_BEM_VIVER_BLOG_-_2ANOS_BANNER.jpg"},"show":{"url":"https://www.acritica.com/uploads/blog/main_image/102/show_BEM_VIVER_BLOG_-_2ANOS_BANNER.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/main_image/102/thumb_BEM_VIVER_BLOG_-_2ANOS_BANNER.jpg"}}},{"id":112,"admin_user_id":352,"name":"Pronto Pra Casar","slug":"pronto-pra-casar","image":{"url":"https://www.acritica.com/uploads/blog/image/112/11.jpg","share_big":{"url":"https://www.acritica.com/uploads/blog/image/112/share_big_11.jpg"},"share_medium":{"url":"https://www.acritica.com/uploads/blog/image/112/share_medium_11.jpg"},"share_small":{"url":"https://www.acritica.com/uploads/blog/image/112/share_small_11.jpg"},"highlight_big":{"url":"https://www.acritica.com/uploads/blog/image/112/highlight_big_11.jpg"},"highlight_small":{"url":"https://www.acritica.com/uploads/blog/image/112/highlight_small_11.jpg"},"show_thumb":{"url":"https://www.acritica.com/uploads/blog/image/112/show_thumb_11.jpg"},"sidebar":{"url":"https://www.acritica.com/uploads/blog/image/112/sidebar_11.jpg"},"snippet_big":{"url":"https://www.acritica.com/uploads/blog/image/112/snippet_big_11.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/image/112/thumb_11.jpg"}},"description":"Pronto Pra Casar nasceu de um desafio proposto em parceria pela Companhia Athletica e One Clinic a mim, Victor Affonso, jornalista de 25 anos, visando estar com a saúde em dia, corpo em forma e com um novo estilo de vida a tempo do meu casamento, em Agosto de 2016. Constantemente aqui no Portal e toda terça-feira no caderno impresso Bem Viver irei compartilhar os desafios e superações que terei ao longo do caminho, sempre com o intuito de inspirar e universalizar as dicas e experiências! Vamos que vamos!","created_at":"2016-03-23T17:40:28.000-04:00","updated_at":"2016-03-27T17:42:37.000-04:00","main_image":{"url":"https://www.acritica.com/uploads/blog/main_image/112/ppc_ban.jpg","home_box":{"url":"https://www.acritica.com/uploads/blog/main_image/112/home_box_ppc_ban.jpg"},"show":{"url":"https://www.acritica.com/uploads/blog/main_image/112/show_ppc_ban.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/main_image/112/thumb_ppc_ban.jpg"}}},{"id":122,"admin_user_id":602,"name":"JR Santiago","slug":"jr-santiago","image":{"url":"https://www.acritica.com/uploads/blog/image/122/Santiago_Quadrado.jpg","share_big":{"url":"https://www.acritica.com/uploads/blog/image/122/share_big_Santiago_Quadrado.jpg"},"share_medium":{"url":"https://www.acritica.com/uploads/blog/image/122/share_medium_Santiago_Quadrado.jpg"},"share_small":{"url":"https://www.acritica.com/uploads/blog/image/122/share_small_Santiago_Quadrado.jpg"},"highlight_big":{"url":"https://www.acritica.com/uploads/blog/image/122/highlight_big_Santiago_Quadrado.jpg"},"highlight_small":{"url":"https://www.acritica.com/uploads/blog/image/122/highlight_small_Santiago_Quadrado.jpg"},"show_thumb":{"url":"https://www.acritica.com/uploads/blog/image/122/show_thumb_Santiago_Quadrado.jpg"},"sidebar":{"url":"https://www.acritica.com/uploads/blog/image/122/sidebar_Santiago_Quadrado.jpg"},"snippet_big":{"url":"https://www.acritica.com/uploads/blog/image/122/snippet_big_Santiago_Quadrado.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/image/122/thumb_Santiago_Quadrado.jpg"}},"description":"Neste espaço serão compartilhadas opiniões e sugestões sobre relacionamentos humanos, tanto no ambiente familiar e de amigos, bem como no profissional. Pretende ser um espaço para a discussão de diferentes pontos de vista, experiências e, principalmente, daquilo que muitas vezes precisamos enfrentar para melhorarmos como pessoas e profissionais.","created_at":"2016-03-26T15:23:04.000-04:00","updated_at":"2016-03-26T15:23:04.000-04:00","main_image":{"url":"https://www.acritica.com/uploads/blog/main_image/122/jr.jpg","home_box":{"url":"https://www.acritica.com/uploads/blog/main_image/122/home_box_jr.jpg"},"show":{"url":"https://www.acritica.com/uploads/blog/main_image/122/show_jr.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/main_image/122/thumb_jr.jpg"}}},{"id":132,"admin_user_id":612,"name":"Fabrício Lima","slug":"fabricio-lima","image":{"url":"https://www.acritica.com/uploads/blog/image/132/FabricioLima__quadrado.jpg","share_big":{"url":"https://www.acritica.com/uploads/blog/image/132/share_big_FabricioLima__quadrado.jpg"},"share_medium":{"url":"https://www.acritica.com/uploads/blog/image/132/share_medium_FabricioLima__quadrado.jpg"},"share_small":{"url":"https://www.acritica.com/uploads/blog/image/132/share_small_FabricioLima__quadrado.jpg"},"highlight_big":{"url":"https://www.acritica.com/uploads/blog/image/132/highlight_big_FabricioLima__quadrado.jpg"},"highlight_small":{"url":"https://www.acritica.com/uploads/blog/image/132/highlight_small_FabricioLima__quadrado.jpg"},"show_thumb":{"url":"https://www.acritica.com/uploads/blog/image/132/show_thumb_FabricioLima__quadrado.jpg"},"sidebar":{"url":"https://www.acritica.com/uploads/blog/image/132/sidebar_FabricioLima__quadrado.jpg"},"snippet_big":{"url":"https://www.acritica.com/uploads/blog/image/132/snippet_big_FabricioLima__quadrado.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/image/132/thumb_FabricioLima__quadrado.jpg"}},"description":"Sou um multiatleta, pratico Triathlon, Jiu-Jitsu (faixa roxa terceiro grau), Capoeira (corda laranja), Judô (faixa marrom), Longboard e jogo Futebol. Todos os dias, de domingo a domingo, faço atividade física debaixo de sol ou chuva. Mas, há quase 20 anos, eu pesava 110 Kg e tinha vergonha de ir à academia. Entretanto, com muita dedicação consegui mudar de vida e quero contribuir para você transformar a sua também. Neste blog falo sobre esporte, qualidade de vida e bem estar, sempre contando boas histórias e passando dicas para estimular você a começar e continuar no projeto #EsporteeSaudepraSempre. E você que já é fã da prática esportiva, terá uma espécie de guia e um \"ambiente\" para trocar experiências. Está preparado? Então boa leitura, guerreiro (a)!","created_at":"2016-03-26T15:25:19.000-04:00","updated_at":"2016-03-26T15:25:19.000-04:00","main_image":{"url":"https://www.acritica.com/uploads/blog/main_image/132/fab.jpg","home_box":{"url":"https://www.acritica.com/uploads/blog/main_image/132/home_box_fab.jpg"},"show":{"url":"https://www.acritica.com/uploads/blog/main_image/132/show_fab.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/main_image/132/thumb_fab.jpg"}}},{"id":142,"admin_user_id":622,"name":"Artigos","slug":"artigos","image":{"url":"https://www.acritica.com/uploads/blog/image/142/artigoQuadrado.jpg","share_big":{"url":"https://www.acritica.com/uploads/blog/image/142/share_big_artigoQuadrado.jpg"},"share_medium":{"url":"https://www.acritica.com/uploads/blog/image/142/share_medium_artigoQuadrado.jpg"},"share_small":{"url":"https://www.acritica.com/uploads/blog/image/142/share_small_artigoQuadrado.jpg"},"highlight_big":{"url":"https://www.acritica.com/uploads/blog/image/142/highlight_big_artigoQuadrado.jpg"},"highlight_small":{"url":"https://www.acritica.com/uploads/blog/image/142/highlight_small_artigoQuadrado.jpg"},"show_thumb":{"url":"https://www.acritica.com/uploads/blog/image/142/show_thumb_artigoQuadrado.jpg"},"sidebar":{"url":"https://www.acritica.com/uploads/blog/image/142/sidebar_artigoQuadrado.jpg"},"snippet_big":{"url":"https://www.acritica.com/uploads/blog/image/142/snippet_big_artigoQuadrado.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/image/142/thumb_artigoQuadrado.jpg"}},"description":"Este espaço tem o objetivo de democratizar, ainda mais, as opiniões sobre os diversos temas, publicando artigos enviados por internautas e especialistas nos mais variados assuntos, ampliando a visão da sociedade sobre os temas em pauta no dia-a-dia de nossa sociedade. Você também pode ser um dos autores deste blog. Envie sua ideia (texto, ilustração; foto-legenda) comentando os fatos do dia-a-dia da nossa sociedade. Diga o que você pensa, sem medo e envie para online@acritica.com.br . . Não esqueça de enviar junto uma autorização de publicação e uma foto sua. É importante destacar que todo material, antes de ser publicado passará por uma avaliação editorial. Todas as opiniões expressas neste espaço democrático não refletem necessariamente o pensamento do Portal A Crítica, sendo de total responsabilidade do Autor os dados e informações utilizadas na confecção do conteúdo.","created_at":"2016-03-26T15:26:38.000-04:00","updated_at":"2016-04-04T15:33:20.000-04:00","main_image":{"url":"https://www.acritica.com/uploads/blog/main_image/142/art.jpg","home_box":{"url":"https://www.acritica.com/uploads/blog/main_image/142/home_box_art.jpg"},"show":{"url":"https://www.acritica.com/uploads/blog/main_image/142/show_art.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/main_image/142/thumb_art.jpg"}}},{"id":152,"admin_user_id":632,"name":"Orlando Câmara","slug":"orlando-camara","image":{"url":"https://www.acritica.com/uploads/blog/image/152/Orlando_quadrado.jpg","share_big":{"url":"https://www.acritica.com/uploads/blog/image/152/share_big_Orlando_quadrado.jpg"},"share_medium":{"url":"https://www.acritica.com/uploads/blog/image/152/share_medium_Orlando_quadrado.jpg"},"share_small":{"url":"https://www.acritica.com/uploads/blog/image/152/share_small_Orlando_quadrado.jpg"},"highlight_big":{"url":"https://www.acritica.com/uploads/blog/image/152/highlight_big_Orlando_quadrado.jpg"},"highlight_small":{"url":"https://www.acritica.com/uploads/blog/image/152/highlight_small_Orlando_quadrado.jpg"},"show_thumb":{"url":"https://www.acritica.com/uploads/blog/image/152/show_thumb_Orlando_quadrado.jpg"},"sidebar":{"url":"https://www.acritica.com/uploads/blog/image/152/sidebar_Orlando_quadrado.jpg"},"snippet_big":{"url":"https://www.acritica.com/uploads/blog/image/152/snippet_big_Orlando_quadrado.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/image/152/thumb_Orlando_quadrado.jpg"}},"description":"Sexta cidade mais rica da sétima economia mundial, Manaus, que já ostentou o título de \"Paris dos Trópicos\", se vê a braços com os problemas de uma grande cidade. Hoje, mais para \"Bagdá Equatorial\", ela procura soluções para suas questões urbanas, sejam físicas, sejam de propostas de futuro. Estamos nela, falaremos dela!","created_at":"2016-03-26T15:33:21.000-04:00","updated_at":"2016-03-26T15:33:21.000-04:00","main_image":{"url":"https://www.acritica.com/uploads/blog/main_image/152/orl.jpg","home_box":{"url":"https://www.acritica.com/uploads/blog/main_image/152/home_box_orl.jpg"},"show":{"url":"https://www.acritica.com/uploads/blog/main_image/152/show_orl.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/main_image/152/thumb_orl.jpg"}}},{"id":162,"admin_user_id":642,"name":"Otávio Gomes","slug":"otavio-gomes","image":{"url":"https://www.acritica.com/uploads/blog/image/162/otavio_quadrado.jpg","share_big":{"url":"https://www.acritica.com/uploads/blog/image/162/share_big_otavio_quadrado.jpg"},"share_medium":{"url":"https://www.acritica.com/uploads/blog/image/162/share_medium_otavio_quadrado.jpg"},"share_small":{"url":"https://www.acritica.com/uploads/blog/image/162/share_small_otavio_quadrado.jpg"},"highlight_big":{"url":"https://www.acritica.com/uploads/blog/image/162/highlight_big_otavio_quadrado.jpg"},"highlight_small":{"url":"https://www.acritica.com/uploads/blog/image/162/highlight_small_otavio_quadrado.jpg"},"show_thumb":{"url":"https://www.acritica.com/uploads/blog/image/162/show_thumb_otavio_quadrado.jpg"},"sidebar":{"url":"https://www.acritica.com/uploads/blog/image/162/sidebar_otavio_quadrado.jpg"},"snippet_big":{"url":"https://www.acritica.com/uploads/blog/image/162/snippet_big_otavio_quadrado.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/image/162/thumb_otavio_quadrado.jpg"}},"description":"Este blog tratará de assuntos do cotidiano das pessoas no que diz respeito aos assuntos mais palpitantes do momento, procurando destacar temas ligados ao sistema jurídico brasileiro, com enfoque para o direito do consumidor, tema que ganhou nova dimensão a partir da vigência do Código de Defesa do Consumidor. Todavia, é do interesse de quem assina o blog que haja indicação de temas por parte dos leitores, posto que se este espaço se propõe democrático","created_at":"2016-03-26T15:39:12.000-04:00","updated_at":"2016-03-26T15:39:12.000-04:00","main_image":{"url":"https://www.acritica.com/uploads/blog/main_image/162/ot_.jpg","home_box":{"url":"https://www.acritica.com/uploads/blog/main_image/162/home_box_ot_.jpg"},"show":{"url":"https://www.acritica.com/uploads/blog/main_image/162/show_ot_.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/main_image/162/thumb_ot_.jpg"}}},{"id":172,"admin_user_id":872,"name":"Cosmopolita","slug":"cosmopolita","image":{"url":"https://www.acritica.com/uploads/blog/image/172/banner2.jpg","share_big":{"url":"https://www.acritica.com/uploads/blog/image/172/share_big_banner2.jpg"},"share_medium":{"url":"https://www.acritica.com/uploads/blog/image/172/share_medium_banner2.jpg"},"share_small":{"url":"https://www.acritica.com/uploads/blog/image/172/share_small_banner2.jpg"},"highlight_big":{"url":"https://www.acritica.com/uploads/blog/image/172/highlight_big_banner2.jpg"},"highlight_small":{"url":"https://www.acritica.com/uploads/blog/image/172/highlight_small_banner2.jpg"},"show_thumb":{"url":"https://www.acritica.com/uploads/blog/image/172/show_thumb_banner2.jpg"},"sidebar":{"url":"https://www.acritica.com/uploads/blog/image/172/sidebar_banner2.jpg"},"snippet_big":{"url":"https://www.acritica.com/uploads/blog/image/172/snippet_big_banner2.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/image/172/thumb_banner2.jpg"}},"description":"Cosmopolita Gastroblog foi criado da curiosidade da jornalista Romyne Novoa pela gastronomia. O blog trata de asssuntos que envolvem o mundo da boa mesa e afins, ressaltando sempre o que há de mais atual. Escrito por uma curiosa da gastronomia, Cosmopolita Gastroblog pretende apresentar as criações dos profissionais da área, indicar os lugares do momento, informar sobre tudo o mais que envolva o mundo da gastronomia.","created_at":"2016-04-07T16:13:52.000-04:00","updated_at":"2016-04-07T16:13:52.000-04:00","main_image":{"url":"https://www.acritica.com/uploads/blog/main_image/172/banner.jpg","home_box":{"url":"https://www.acritica.com/uploads/blog/main_image/172/home_box_banner.jpg"},"show":{"url":"https://www.acritica.com/uploads/blog/main_image/172/show_banner.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/main_image/172/thumb_banner.jpg"}}},{"id":182,"admin_user_id":892,"name":"Lidica ","slug":"lidica","image":{"url":"https://www.acritica.com/uploads/blog/image/182/BANNER2_SITE.png","share_big":{"url":"https://www.acritica.com/uploads/blog/image/182/share_big_BANNER2_SITE.png"},"share_medium":{"url":"https://www.acritica.com/uploads/blog/image/182/share_medium_BANNER2_SITE.png"},"share_small":{"url":"https://www.acritica.com/uploads/blog/image/182/share_small_BANNER2_SITE.png"},"highlight_big":{"url":"https://www.acritica.com/uploads/blog/image/182/highlight_big_BANNER2_SITE.png"},"highlight_small":{"url":"https://www.acritica.com/uploads/blog/image/182/highlight_small_BANNER2_SITE.png"},"show_thumb":{"url":"https://www.acritica.com/uploads/blog/image/182/show_thumb_BANNER2_SITE.png"},"sidebar":{"url":"https://www.acritica.com/uploads/blog/image/182/sidebar_BANNER2_SITE.png"},"snippet_big":{"url":"https://www.acritica.com/uploads/blog/image/182/snippet_big_BANNER2_SITE.png"},"thumb":{"url":"https://www.acritica.com/uploads/blog/image/182/thumb_BANNER2_SITE.png"}},"description":"Blog de Lídia Ferreira","created_at":"2016-04-19T15:31:48.000-04:00","updated_at":"2016-04-26T16:53:26.000-04:00","main_image":{"url":"https://www.acritica.com/uploads/blog/main_image/182/BANNER_SITE.png","home_box":{"url":"https://www.acritica.com/uploads/blog/main_image/182/home_box_BANNER_SITE.png"},"show":{"url":"https://www.acritica.com/uploads/blog/main_image/182/show_BANNER_SITE.png"},"thumb":{"url":"https://www.acritica.com/uploads/blog/main_image/182/thumb_BANNER_SITE.png"}}},{"id":202,"admin_user_id":922,"name":"Mães Cricri","slug":"maes-cricri","image":{"url":"https://www.acritica.com/uploads/blog/image/202/fdssdgh.jpg","share_big":{"url":"https://www.acritica.com/uploads/blog/image/202/share_big_fdssdgh.jpg"},"share_medium":{"url":"https://www.acritica.com/uploads/blog/image/202/share_medium_fdssdgh.jpg"},"share_small":{"url":"https://www.acritica.com/uploads/blog/image/202/share_small_fdssdgh.jpg"},"highlight_big":{"url":"https://www.acritica.com/uploads/blog/image/202/highlight_big_fdssdgh.jpg"},"highlight_small":{"url":"https://www.acritica.com/uploads/blog/image/202/highlight_small_fdssdgh.jpg"},"show_thumb":{"url":"https://www.acritica.com/uploads/blog/image/202/show_thumb_fdssdgh.jpg"},"sidebar":{"url":"https://www.acritica.com/uploads/blog/image/202/sidebar_fdssdgh.jpg"},"snippet_big":{"url":"https://www.acritica.com/uploads/blog/image/202/snippet_big_fdssdgh.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/image/202/thumb_fdssdgh.jpg"}},"description":"Somos mães críticas, cricri. Não naquele sentido que as pessoas torcem o nariz: chatas, que não estão satisfeitas com nada. Muito pelo contrário. Somos mães animadas, curtimos inventar brincadeiras em casa com nossos filhos e também adoramos comemorar bons programas infantis que aparecem na cidade! Nosso cricri é que somos exigentes e sempre em busca de novidades. Adoramos passar momentos de folga em casa com nossos filhos, mas queremos sempre saber todas as opções de programas se quisermos sair para eventos gratuitos ou não na cidade de Manaus.","created_at":"2016-05-04T13:53:48.000-04:00","updated_at":"2016-11-23T18:48:18.000-04:00","main_image":{"url":"https://www.acritica.com/uploads/blog/main_image/202/CRICRI2__1_.jpg","home_box":{"url":"https://www.acritica.com/uploads/blog/main_image/202/home_box_CRICRI2__1_.jpg"},"show":{"url":"https://www.acritica.com/uploads/blog/main_image/202/show_CRICRI2__1_.jpg"},"thumb":{"url":"https://www.acritica.com/uploads/blog/main_image/202/thumb_CRICRI2__1_.jpg"}}}])
+        .value("mainChannels", [{"id":2,"name":"Manaus","color":"#1a9dfc","created_at":"2015-09-15T09:43:00.000-04:00","updated_at":"2016-05-16T16:13:48.000-04:00","slug":"manaus","inactive":false,"is_home_special":false,"is_main":true,"description":"","sponsor_id":null},{"id":12,"name":"Cotidiano","color":"#e82218","created_at":"2015-09-15T13:05:48.000-04:00","updated_at":"2018-07-23T12:00:20.000-04:00","slug":"cotidiano","inactive":false,"is_home_special":false,"is_main":true,"description":"","sponsor_id":null},{"id":22,"name":"Entretenimento","color":"#9517b1","created_at":"2015-09-18T15:38:15.000-04:00","updated_at":"2017-11-08T13:25:44.000-04:00","slug":"entretenimento","inactive":false,"is_home_special":false,"is_main":true,"description":"","sponsor_id":null},{"id":32,"name":"Esportes","color":"#f8601e","created_at":"2015-09-18T15:39:45.000-04:00","updated_at":"2017-03-10T11:19:49.000-04:00","slug":"esportes","inactive":false,"is_home_special":false,"is_main":true,"description":"","sponsor_id":null},{"id":72,"name":"Manaus Hoje","color":"#000000","created_at":"2016-01-05T12:29:03.000-04:00","updated_at":"2018-08-22T16:53:17.000-04:00","slug":"hoje","inactive":false,"is_home_special":false,"is_main":true,"description":"","sponsor_id":null},{"id":148,"name":"Enem ","color":"#ffffff","created_at":"2018-07-13T16:10:59.000-04:00","updated_at":"2018-07-17T15:37:13.000-04:00","slug":"enem","inactive":false,"is_home_special":false,"is_main":true,"description":"","sponsor_id":null}])
+        .value("specialChannel", {"id":42,"name":"Amazônia","color":"#00d700","created_at":"2015-09-29T10:43:18.000-04:00","updated_at":"2017-10-19T18:42:06.000-04:00","slug":"governo","inactive":false,"is_home_special":true,"is_main":false,"description":"","sponsor_id":null})
+    })(window.angular);
+  </script>
+</body>
+</html>

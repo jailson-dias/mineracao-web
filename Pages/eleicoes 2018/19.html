@@ -1,0 +1,1361 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <title>
+        Eleições 2018 | Poder360    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- MOVER favicon para a raiz do projeto -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=360">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png?v=360" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png?v=360" sizes="16x16">
+    <link rel="manifest" href="/manifest.json?v=360">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=360" color="#fe5202">
+    <link rel="shortcut icon" href="/favicon.ico?v=360">
+    <meta name="apple-mobile-web-app-title" content="Poder360">
+    <meta name="application-name" content="Poder360">
+    <meta name="theme-color" content="#184479">
+
+    
+        <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                ga('create', 'UA-84665300-1', 'auto');
+                // ga('require', 'linkid');
+                ga('send', 'pageview');
+            </script>
+    <!-- End Google Analytics -->
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    //Blocos de anúncios
+    googletag.defineSlot('/50451226/calhau-300x250-desktop-1', [300, 250], 'div-gpt-ad-1533854630544-0').addService(googletag.pubads());
+    googletag.defineSlot('/50451226/calhau-300x250-desktop-2', [300, 250], 'div-gpt-ad-1533854484692-0').addService(googletag.pubads());
+    googletag.defineSlot('/50451226/calhau-300x250', [300, 250], 'div-gpt-ad-1533854671538-0').addService(googletag.pubads());
+    googletag.defineSlot('/50451226/calhau-300x600', [300, 600], 'div-gpt-ad-1533854963096-0').addService(googletag.pubads());
+    googletag.defineSlot('/50451226/calhau-320x50', [320, 50], 'div-gpt-ad-1533855069977-0').addService(googletag.pubads());
+     googletag.defineSlot('/50451226/calhau-728x90', [728, 90], 'div-gpt-ad-1533855097872-0').addService(googletag.pubads());   
+
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
+    <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed de tag para Poder360 &raquo; Eleições 2018" href="https://www.poder360.com.br/tag/eleicoes-2018/feed/" />
+
+<link rel="canonical" href="https://www.poder360.com.br/tag/eleicoes-2018/"/>
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Poder360 | Notícias do poder e da política. Editado por Fernando Rodrigues, com Tales Faria e equipe">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Poder360">
+<meta property="og:image" content="https://static.poder360.com.br/2016/11/poder-fb-azul-600x315.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://www.poder360.com.br/tag/eleicoes-2018/">
+<meta property="fb:app_id" content="176130429467305">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@Poder360" />
+<meta name="twitter:image" content="https://static.poder360.com.br/2016/11/poder-fb-azul-600x315.png" /><meta property="og:description" content="Notícias do poder e da política. Editado por Fernando Rodrigues, com Tales Faria e equipe"><meta name="description" content="Notícias do poder e da política. Editado por Fernando Rodrigues, com Tales Faria e equipe"><link rel='stylesheet' id='pdr_vendor-css'  href='https://www.poder360.com.br/wp-content/themes/poder360/css/vendor.min.css?ver=1536701679904' type='text/css' media='all' />
+<link rel='stylesheet' id='pdr_style-css'  href='https://www.poder360.com.br/wp-content/themes/poder360/css/style.min.css?ver=1536701679904' type='text/css' media='all' />
+<link rel='stylesheet' id='google_fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C300italic%2C400%2C400%2C500%2C700%7CMaterial+Icons&#038;ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://www.poder360.com.br/wp-content/plugins/tablepress/css/default.min.css?ver=1.8.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js?ver=1'></script>
+<link rel='https://api.w.org/' href='https://www.poder360.com.br/wp-json/' />
+
+</head>
+<body>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '176130429467305',
+              xfbml      : true,
+              version    : 'v2.7'
+            });
+            window.api_started = true;
+        };
+
+        (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/pt_BR/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div id="skrollr-body">
+        <header id="header" class="clearfix">
+                        
+<div class="navbar fixed-header">
+	<div class="container relative">
+		<div class="row">
+			<div class="col lg1 xs2 no-padding-left-sm no-padding-left-xs">
+				<div id="bt_menu">
+					<svg class="icon--sprite_menu">
+						<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_menu"></use>
+					</svg>
+					<svg class="icon--sprite_social-close">
+						<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-close"></use>
+					</svg>
+				</div>
+			</div>
+			<div class="col lg5 sm3 xs6 no-padding-right no-padding-left-xs">
+				<a href="https://www.poder360.com.br" class="logo-header clearfix">
+					<svg class="icon--sprite_logo hidden-sm hidden-xs">
+						<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_logo"></use>
+					</svg>
+					<svg class="icon--sprite_logo-menu hidden-sm">
+						<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_logo-menu"></use>
+					</svg>
+					<svg class="icon--sprite_logo-small hidden-lg hidden-md">
+						<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_logo-small"></use>
+					</svg>
+					<!-- <svg class="icon--sprite_logo-small-menu hidden-lg hidden-md">
+						<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_logo-small-menu"></use>
+					</svg> -->
+					<span class="edited hidden-sm hidden-xs">Diretor de Redação <br>Fernando Rodrigues</span>
+					<span class="edited hidden-lg hidden-md">Diretor <br>Fernando <br>Rodrigues</span>
+					<span class="edited hidden-sm hidden-xs">Editor <br>Tales Faria</span>
+					<span class="edited hidden-lg hidden-md">Editor <br>Tales <br>Faria</span>
+				</a>
+			</div>
+			<div class="col lg1 sm4 xs2 search-wrapper first-step no-padding-right-xs">
+				<div class="submit">
+					<svg class="icon--sprite_search">
+						<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_search"></use>
+					</svg>
+					<span class="unselectable hidden-xs">Buscar</span>
+				</div>
+			</div>
+			<div class="col lg7 sm8 xs10 no-padding-xs search-wrapper second-step">
+				<form class="form-search" action="https://www.poder360.com.br" method="get" accept-charset="utf-8">
+					<div class="col lg10 xs8">
+						<input type="search" name="s" class="search" placeholder="O que você está procurando?">
+					</div>
+					<div class="col lg1 xs2 no-padding text-center">
+						<button class="submit" type="submit">
+							<svg class="icon--sprite_search">
+								<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_search"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="col lg1 xs2 no-padding text-center">
+						<div class="close-search">
+							<svg class="icon--sprite_social-close">
+								<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-close"></use>
+							</svg>
+						</div>
+					</div>
+				</form>
+			</div>	
+			<div class="col lg3 sm3 no-padding hidden-xs">
+				<nav class="social right-align">
+					<a href="https://www.facebook.com/Poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Facebook"
+	target="_blank" 
+	class="fb circle link-social">
+
+	<svg class="icon--sprite_social_facebook">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-facebook"></use>
+	</svg>
+</a>
+					<a href="https://flipboard.com/@Poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Flipboard"
+	target="_blank" 
+	class="flipboard circle link-social">
+
+	<svg class="icon--sprite_social_flipboard">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg?t=flip#sprite_social-flipboard"></use>
+	</svg>
+</a>
+					<a href="https://twitter.com/Poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Twitter" 
+	target="_blank" 
+	class="tw circle link-social">
+
+	<svg class="icon--sprite_social-twitter">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-twitter"></use>
+	</svg>
+</a>
+					<a href="https://www.youtube.com/poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no YouTube"
+	target="_blank"
+	class="yt circle link-social">
+	
+	<svg class="icon--sprite_social-youtube">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-youtube"></use>
+	</svg>
+</a>
+					<a href="https://www.instagram.com/poder360/" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Instagram"
+	target="_blank"
+	class="ig circle link-social">
+
+	<svg class="icon--sprite_social-instagram">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-instagram"></use>
+	</svg>
+</a>
+					<a href="http://poder360.com.br/feed"
+	rel="nofollow"
+	title="Veja nosso RSS" 
+	target="_blank" 
+	class="rss circle">
+
+	<svg class="icon--sprite_social-rss">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-rss"></use>
+	</svg>
+</a>
+				</nav>
+			</div>
+			<div class="col lg2 sm1 xs2 no-padding-left">
+				<div class="bt_meus-alertas logged" id="user-off">
+									</div>
+			</div>
+		</div>
+	</div>
+	<div class="sec-navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col lg10 offset-lg1 offset-xs0">
+					<span>Página inicial</span><svg class="icon--sprite_arrow-right hidden-xs"><use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_arrow-right"></use></svg><span class="hidden-xs">Eleições 2018</span>					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section id="menu">
+	
+<div class="container">
+    <div class="row">
+        <div class="col lg6 xs12">
+            <div class="row first-row">
+                <div class="col lg10 xs12 offset-lg2 offset-xs0 no-padding-right">
+                    <a href="https://www.poder360.com.br" class="logo-footer">
+                        <svg class="icon--sprite_logo">
+                            <use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_logo"></use>
+                        </svg>
+                        <p class="label">editado por Fernando Rodrigues</p>
+                    </a>
+                </div>
+            </div>
+            <div class="row list-category">
+                <nav class="col lg4 xs6 offset-lg2 offset-xs0">
+                    <a class='link-category' href='https://www.poder360.com.br/congresso/'>Congresso</a>
+<a class='link-category' href='https://www.poder360.com.br/economia/'>Economia</a>
+<a class='link-category' href='https://www.poder360.com.br/governo/'>Governo</a>
+<a class='link-category' href='https://www.poder360.com.br/justica/'>Justiça</a>
+<a class='link-category' href='https://www.poder360.com.br/eleicoes/'>Eleições</a>
+<a class='link-category' href='https://www.poder360.com.br/pesquisas/'>Pesquisas</a>
+<a class='link-category' href='https://www.poder360.com.br/pesquisas-de-opiniao/'>Agregador de Pesquisas</a>
+<a class='link-category' href='https://www.poder360.com.br/politicos-do-brasil/'>Políticos do Brasil</a>
+<a class='link-category' href='https://www.poder360.com.br/midia/'>Mídia</a>                </nav>
+                <nav class='col lg5 xs6'>
+                    <a class='link-category' href='http://poder360.com.br/analise/'>Análise</a>
+<a class='link-category' href='http://poder360.com.br/opiniao/'>Opinião</a>
+<a class='link-category' href='https://www.poder360.com.br/conteudo-patrocinado/'>Poder360 Mercado</a>
+<a class='link-category' href='https://www.poder360.com.br/internacional/'>Internacional</a>
+<a class='link-category' href='https://www.poder360.com.br/tecnologia/'>Tecnologia</a>
+<a class='link-category' href='https://www.poder360.com.br/nieman/'>Nieman</a>
+<a class='link-category' href='https://www.poder360.com.br/infograficos/'>Infográficos</a>
+<a class='link-category' href='https://www.poder360.com.br/datapoder360/'>DataPoder360</a>
+<a class='link-category' href='https://www.poder360.com.br/paradise-papers/'>Paradise Papers</a>                </nav>
+            </div>
+        </div>
+        <div class="col lg6 xs12">
+            <div class="row first-row">
+                <div class="col lg6 xs12 no-padding-right-sm hidden-xs wrapper-newsletter">
+                    <form method="post" accept-charset="utf-8" class="form-newsletter clearfix">
+                        <label class="label">Receba a newsletter do Poder360</label>
+                        <input type="text" name="email" value="" placeholder="Seu e-mail" required>
+                        <input type="submit" value="ok" class="submit" />
+                    </form>
+                </div>
+                <div class="col lg5 sm6 xs12">
+                    <span class="label">Compartilhe o Poder360</span>
+                    <nav class="social">
+                        <a href="https://www.facebook.com/Poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Facebook"
+	target="_blank" 
+	class="fb circle link-social">
+
+	<svg class="icon--sprite_social_facebook">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-facebook"></use>
+	</svg>
+</a>
+                        <a href="https://flipboard.com/@Poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Flipboard"
+	target="_blank" 
+	class="flipboard circle link-social">
+
+	<svg class="icon--sprite_social_flipboard">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg?t=flip#sprite_social-flipboard"></use>
+	</svg>
+</a>
+                        <a href="https://twitter.com/Poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Twitter" 
+	target="_blank" 
+	class="tw circle link-social">
+
+	<svg class="icon--sprite_social-twitter">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-twitter"></use>
+	</svg>
+</a>
+                        <a href="https://plus.google.com/u/1/106278267143912504691" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Google Plus"
+	target="_blank" 
+	class="gp circle link-social">
+
+	<svg class="icon--sprite_social-plus">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-plus"></use>
+	</svg>
+</a>
+                        <a href="https://www.linkedin.com/company/poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no LinkedIn"
+	target="_blank" 
+	class="in circle link-social">
+
+    <svg class="icon--sprite_social-linkedin">
+        <use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-linkedin"></use>
+    </svg>
+</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="row list-company">
+                <nav class="col lg6 xs12">
+                    <a class='link-company' href='https://www.poder360.com.br/quem-somos/'>Quem somos</a>
+<a class='link-company' href='https://www.poder360.com.br/equipe/'>Equipe</a>
+<a class='link-company' href='https://www.poder360.com.br/articulistas/'>Articulistas</a>
+<a class='link-company' href='https://www.poder360.com.br/drive-premium/'>Drive Premium</a>
+<a class='link-company' href='https://www.poder360.com.br/eventos-poder360-ideias/'>Poder360-ideias</a>
+<a class='link-company' href='https://www.poder360.com.br/pesquisas-datapoder360/'>DataPoder360</a>
+<a class='link-company' href='https://www.poder360.com.br/poder360mercado/'>Poder360 Mercado</a>
+<a class='link-company' href='https://www.poder360.com.br/trabalhe-no-poder360/'>Trabalhe no Poder360</a>
+<a class='link-company' href='https://www.poder360.com.br/contato/'>Contato</a>                </nav>
+                <nav class='col lg5 xs6'>
+                    <a class='link-company' href='https://www.poder360.com.br/politica-editorial/'>Princípios Editoriais</a>
+<a class='link-company' href='https://www.poder360.com.br/conduta/'>Código de Conduta</a>
+<a class='link-company' href='https://www.poder360.com.br/compliance/'>Política de Compliance</a>
+<a class='link-company' href='https://www.poder360.com.br/politica-de-privacidade/'>Política de Privacidade</a>
+<a class='link-company' href='https://www.poder360.com.br/termos-de-uso/'>Termos de uso</a>
+<a class='link-company' href='https://www.poder360.com.br/reproducao-de-material/'>Reprodução de material</a>
+<a class='link-company' href='https://www.poder360.com.br/anuncie/'>Como anunciar</a>
+<a href='http://politicosdobrasil.com.br/' target='_blank' class='link-company'>Políticos do Brasil<!--
+                                --><svg class='icon--sprite_external-link'>
+                                    <use xlink:href='https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_external-link'></use>
+                                </svg>
+                           </a>
+<a href='http://fernandorodrigues.blogosfera.uol.com.br/' target='_blank' class='link-company'>Arquivo Blog Fernando Rodrigues<!--
+                                --><svg class='icon--sprite_external-link'>
+                                    <use xlink:href='https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_external-link'></use>
+                                </svg>
+                           </a>                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+</section>        </header>
+		
+	<main class="tag skrollr-content">
+		
+		<div class="container">
+			<div class="row">
+				<header class="header-page col lg12">
+					<h1>
+						<svg class="icon--sprite_tag">
+							<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_tag"></use>
+						</svg>
+						 Eleições 2018</h1>
+				</header>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<section class="list-posts col lg8 md10 sm12 offset-md1 offset-sm0">
+											<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/contra-rejeicao-bolsonaro-lanca-video-em-que-chora-falando-da-filha/" title="Contra rejeição, Bolsonaro lança vídeo em que chora falando da filha" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  18/09/18 - Por Poder360</p>
+									<h1>Contra rejeição, Bolsonaro lança vídeo em que chora falando da filha</h1>
+																		<p>Militar trabalha por maior eleitorado feminino.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/Bolsonaro-video-filha-569x420.png" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Contra rejeição, Bolsonaro lança vídeo em que chora falando da filha</h1>
+									<p class="info">Eleições  -  18/09/18<br>
+										Por Poder360</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/tse-suspende-propaganda-que-exibe-mensagem-de-lula-em-apoio-a-haddad/" title="TSE suspende propaganda que exibe mensagem de Lula em apoio a Haddad" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  18/09/18 - Por Poder360</p>
+									<h1>TSE suspende propaganda que exibe mensagem de Lula em apoio a Haddad</h1>
+																		<p>Coligação de Bolsonaro formulou o pedido.
+Ministro estipula prazo para manifestação do PT.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/propaganda-PT-Lula-569x420.png" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>TSE suspende propaganda que exibe mensagem de Lula em apoio a Haddad</h1>
+									<p class="info">Eleições  -  18/09/18<br>
+										Por Poder360</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/haddad-diz-que-nao-dara-indulto-a-lula-se-for-presidente/" title="Haddad diz que não dará indulto a Lula se for presidente" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  18/09/18 - Por Poder360</p>
+									<h1>Haddad diz que não dará indulto a Lula se for presidente</h1>
+																		<p>Fernando Pimentel havia dito o contrário.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/haddad-569x420.jpg" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Haddad diz que não dará indulto a Lula se for presidente</h1>
+									<p class="info">Eleições  -  18/09/18<br>
+										Por Poder360</p>
+								</div>
+							</a>
+						</article>
+													<div class="mod-newsletter post-format">
+								<h3 class="title">
+									<svg class="icon--sprite_email-splash">
+										<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_email-splash"></use>
+									</svg>
+									Interessado em Eleições 2018? Receba alertas via e-mail
+								</h3>
+								<form method="post" accept-charset="utf-8" class="form-newsletter clearfix">
+    <input type="text" name="email" value="" placeholder="seu e-mail">
+    <input type="submit" value="ok" class="submit" />
+</form>							</div>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/ciro-gomes-defende-revogar-a-negociacao-de-venda-da-embraer/" title="Ciro Gomes defende revogar a negociação de venda da Embraer" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  18/09/18 - Por Poder360</p>
+									<h1>Ciro Gomes defende revogar a negociação de venda da Embraer</h1>
+																		<p>Mas pedetista quer mantê-la privada.
+Candidato explicou o 'aval solidário'.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/Ciro-Gomes-569x420.png" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Ciro Gomes defende revogar a negociação de venda da Embraer</h1>
+									<p class="info">Eleições  -  18/09/18<br>
+										Por Poder360</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/a-20-dias-do-1o-turno-cenario-comeca-a-se-afunilar-entre-bolsonaro-e-haddad/" title="A 20 dias do 1º turno, cenário começa a se afunilar entre Bolsonaro e Haddad" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  18/09/18 - Por Poder360</p>
+									<h1>A 20 dias do 1º turno, cenário começa a se afunilar entre Bolsonaro e Haddad</h1>
+																		<p>Em 7 eleições, são duas viradas na reta final.
+Lula 1989 e Aécio 2014 vinham em alta.
+Cenário é ruim para Alckmin e Marina.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/Bolsonaro-Haddad-2-569x420.png" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>A 20 dias do 1º turno, cenário começa a se afunilar entre Bolsonaro e Haddad</h1>
+									<p class="info">Eleições  -  18/09/18<br>
+										Por Poder360</p>
+								</div>
+							</a>
+						</article>
+						
+							<section class="adv text-center margin">
+								<div class="hidden-xs">
+									
+<!-- /50451226/calhau-728x90 -->
+<div id='div-gpt-ad-1533855097872-0' style='height:90px; width:728px; margin:auto;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533855097872-0'); });
+</script>
+</div>      
+            								</div>
+								<div class="visible-xs">
+									
+<!-- /50451226/calhau-320x50 -->
+<div id='div-gpt-ad-1533855069977-0' style='height:50px; width:320px; margin:auto;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533855069977-0'); });
+</script>
+</div>       
+            								</div>
+							</section>
+
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/opiniao/eleicoes/democracia-e-premissa-fundamental-defende-roberto-livianu/" title="Democracia é premissa fundamental, defende Roberto Livianu" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  18/09/18 - Por Roberto Livianu</p>
+									<h1>Democracia é premissa fundamental, defende Roberto Livianu</h1>
+																		<p>Constituição Federal completa 30 anos.
+Campanhas ameaçam preceitos democráticos.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+
+	<span title="Indica que é uma opinião de um colunista, não do site" class="etiqueta unselectable">opinião <svg class="icon--sprite_quotes"><use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_quotes"></use></svg>
+	</span>
+
+										<img src="https://static.poder360.com.br/2018/09/promulgacao-constituicao-569x420.jpg" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Democracia é premissa fundamental, defende Roberto Livianu</h1>
+									<p class="info">Eleições  -  18/09/18<br>
+										Por Roberto Livianu</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/opiniao/eleicoes/seu-candidato-e-analgesico-vitamina-ou-laxante/" title="Seu candidato é analgésico, vitamina ou laxante?" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  18/09/18 - Por Hamilton Carvalho</p>
+									<h1>Seu candidato é analgésico, vitamina ou laxante?</h1>
+																		<p>Narrativas satisfazem necessidade humana .</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+
+	<span title="Indica que é uma opinião de um colunista, não do site" class="etiqueta unselectable">opinião <svg class="icon--sprite_quotes"><use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_quotes"></use></svg>
+	</span>
+
+										<img src="https://static.poder360.com.br/2018/09/candidatoshaddadnomeio-1-569x420.png" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Seu candidato é analgésico, vitamina ou laxante?</h1>
+									<p class="info">Eleições  -  18/09/18<br>
+										Por Hamilton Carvalho</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/leia-as-propostas-dos-candidatos-a-presidencia-para-as-agencias-reguladoras/" title="Leia as propostas dos candidatos à Presidência para as agências reguladoras" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  18/09/18 - Por Marlla Sabino</p>
+									<h1>Leia as propostas dos candidatos à Presidência para as agências reguladoras</h1>
+																		<p>PSDB e Rede prometem autonomia.
+6 candidatos não apresentam propostas.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/Faixada-ANEEL-Essencial-569x420.jpg" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Leia as propostas dos candidatos à Presidência para as agências reguladoras</h1>
+									<p class="info">Eleições  -  18/09/18<br>
+										Por Marlla Sabino</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/economistas-defendem-ideias-de-presidenciaveis-no-roda-viva/" title="Economistas defendem ideias de presidenciáveis no Roda Viva" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  17/09/18 - Por Poder360</p>
+									<h1>Economistas defendem ideias de presidenciáveis no Roda Viva</h1>
+																		<p>Estiveram no Roda Viva nesta 2ª feira.
+PT, PDT, PSDB e Rede tinham representantes.
+Economista do Bolsonaro não participou.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/Captura-de-Tela-2018-09-17-às-22.32.20-569x420.png" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Economistas defendem ideias de presidenciáveis no Roda Viva</h1>
+									<p class="info">Eleições  -  17/09/18<br>
+										Por Poder360</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/pesquisas/ibope-eliana-pedrosa-lidera-disputa-ao-governo-do-df-com-22/" title="Ibope: Eliana Pedrosa lidera disputa ao governo do DF com 22%" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Pesquisas  -  17/09/18 - Por Poder360</p>
+									<h1>Ibope: Eliana Pedrosa lidera disputa ao governo do DF com 22%</h1>
+																		<p>Candidata ganha em cenários do 2º turno.
+Fraga, Rollemberg e Rosso estão empatados.
+Leila do Vôlei lidera para o Senado com 25%.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/32727620_10156327144781322_914608831802114048_o-569x420.jpg" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Ibope: Eliana Pedrosa lidera disputa ao governo do DF com 22%</h1>
+									<p class="info">Pesquisas  -  17/09/18<br>
+										Por Poder360</p>
+								</div>
+							</a>
+						</article>
+						
+							<section class="adv text-center margin">
+								<div class="hidden-xs">
+									
+<!-- /50451226/calhau-728x90 -->
+<div id='div-gpt-ad-1533855097872-0' style='height:90px; width:728px; margin:auto;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533855097872-0'); });
+</script>
+</div>      
+            								</div>
+								<div class="visible-xs">
+									
+<!-- /50451226/calhau-320x50 -->
+<div id='div-gpt-ad-1533855069977-0' style='height:50px; width:320px; margin:auto;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533855069977-0'); });
+</script>
+</div>       
+            								</div>
+							</section>
+
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/pesquisas/ibope-anastasia-mantem-lideranca-em-minas-gerais-com-33/" title="Ibope: Anastasia mantém liderança em Minas Gerais com 33%" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Pesquisas  -  17/09/18 - Por Poder360</p>
+									<h1>Ibope: Anastasia mantém liderança em Minas Gerais com 33%</h1>
+																		<p>Candidato cresceu 3 p.p.
+Em 2º, Pimentel tem 22%.
+Dilma lidera para o Senado.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/Captura-de-Tela-2018-09-17-às-20.35.35-569x420.png" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Ibope: Anastasia mantém liderança em Minas Gerais com 33%</h1>
+									<p class="info">Pesquisas  -  17/09/18<br>
+										Por Poder360</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/pesquisas/ibope-paulo-camara-lidera-com-33-disputa-ao-governo-de-pe/" title="Ibope: Paulo Câmara lidera com 33% disputa ao governo de PE" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Pesquisas  -  17/09/18 - Por Poder360</p>
+									<h1>Ibope: Paulo Câmara lidera com 33% disputa ao governo de PE</h1>
+																		<p>Em 2ª, Armando Monteiro tem 25%.
+Levantamento divulgado nesta 2ª.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2017/09/paulo_camara23.9.2016-1-569x420.jpg" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Ibope: Paulo Câmara lidera com 33% disputa ao governo de PE</h1>
+									<p class="info">Pesquisas  -  17/09/18<br>
+										Por Poder360</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/atletico-mineiro-condena-grito-homofobico-ligado-a-bolsonaro-em-jogo/" title="Atlético Mineiro condena grito homofóbico ligado a Bolsonaro em jogo" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  17/09/18 - Por Sabrina Freire</p>
+									<h1>Atlético Mineiro condena grito homofóbico ligado a Bolsonaro em jogo</h1>
+																		<p>Grito: 'Bolsonaro vai matar o viado'.
+Manifestação ocorreu no domingo.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/BOLSONARO-DESCARTA-PR-768x570-569x420.jpg" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Atlético Mineiro condena grito homofóbico ligado a Bolsonaro em jogo</h1>
+									<p class="info">Eleições  -  17/09/18<br>
+										Por Sabrina Freire</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/cidades-registram-buzinaco-a-favor-de-bolsonaro/" title="Cidades registram buzinaço a favor de Bolsonaro" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  17/09/18 - Por Naomi Matsui</p>
+									<h1>Cidades registram buzinaço a favor de Bolsonaro</h1>
+																		<p>Também registrou tuitaço.
+Hashtag contrária era topo no Twitter.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/bolsonaro-2-569x420.jpg" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Cidades registram buzinaço a favor de Bolsonaro</h1>
+									<p class="info">Eleições  -  17/09/18<br>
+										Por Naomi Matsui</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/marina-promete-plano-de-incentivo-a-energia-solar-e-conta-de-luz-mais-barata/" title="Marina promete plano de incentivo à energia solar e conta de luz mais barata" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  17/09/18 - Por Sabrina Freire</p>
+									<h1>Marina promete plano de incentivo à energia solar e conta de luz mais barata</h1>
+																		<p>Serão investidos R$ 50 bi em 4 anos.
+Inicialmente será R$ 20 mil por casa.
+Fará parceria com iniciativa privada.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/WhatsApp-Image-2018-08-24-at-14.23.11-569x420.jpeg" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>Marina promete plano de incentivo à energia solar e conta de luz mais barata</h1>
+									<p class="info">Eleições  -  17/09/18<br>
+										Por Sabrina Freire</p>
+								</div>
+							</a>
+						</article>
+												<article class="post clearfix">
+
+							<a href="https://www.poder360.com.br/eleicoes/ele-esta-permanentemente-conosco-diz-haddad-sobre-influencia-de-lula/" title="&#8216;Ele está permanentemente conosco&#8217;, diz Haddad sobre influência de Lula" class="row link-post">
+								<div class="col lg8 hidden-xs">
+									<p class="info">Eleições  -  17/09/18 - Por Lauriberto Brasil</p>
+									<h1>&#8216;Ele está permanentemente conosco&#8217;, diz Haddad sobre influência de Lula</h1>
+																		<p>Haddad visitou Lula em Curitiba.
+Visitas na cadeira vão continuar depois da eleição.</p>
+								</div>
+								<div class="col lg3 sm4 xs12 offset-lg1 offset-sm0 no-padding-left no-padding-xs">
+									
+									
+									<div class="img-wrapper relative">
+										
+
+										<img src="https://static.poder360.com.br/2018/09/Screen-Shot-2018-09-17-at-16.53.20-569x420.png" alt="">
+										<div class="flag default">
+											<svg class="icon--sprite_default">
+												<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_default"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col xs12 visible-xs">
+									<h1>&#8216;Ele está permanentemente conosco&#8217;, diz Haddad sobre influência de Lula</h1>
+									<p class="info">Eleições  -  17/09/18<br>
+										Por Lauriberto Brasil</p>
+								</div>
+							</a>
+						</article>
+										</section>
+				<aside id="aside" class="aside col lg3 offset-lg1 visible-lg push-lg1">
+					<div id="area__1" class="limit">
+						<div class="control" 
+							data-121-top="@class: control;"
+							data-120-top="@class: control fixed;"
+							data--600-top="@class: control bottom;"
+							data-anchor-target="#area__1">
+
+							<section class="adv margin-bottom text-center">
+								
+<!-- /50451226/calhau-300x250-desktop-1 -->
+<div id='div-gpt-ad-1533854630544-0' style='height:250px; width:300px; margin:auto;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533854630544-0'); });
+</script>
+</div>           
+            							</section>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+		
+		<section class="adv full bottom text-center margin">
+            <div class="hidden-xs">
+                
+<!-- /50451226/calhau-728x90 -->
+<div id='div-gpt-ad-1533855097872-0' style='height:90px; width:728px; margin:auto;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533855097872-0'); });
+</script>
+</div>      
+                        </div>
+            <div class="visible-xs">
+                
+<!-- /50451226/calhau-320x50 -->
+<div id='div-gpt-ad-1533855069977-0' style='height:50px; width:320px; margin:auto;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533855069977-0'); });
+</script>
+</div>       
+                        </div>
+        </section>
+
+		
+<div class="container mod-pagination">
+	<div class="row relative">
+		<div class="col lg12">
+			<nav class="text-center">
+				<span class='page-numbers current'>1</span>
+<a class='page-numbers' href='/tag/eleicoes-2018/?paged=2'>2</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='/tag/eleicoes-2018/?paged=89'>89</a>
+<a class="next page-numbers" href="/tag/eleicoes-2018/?paged=2"><span>Próximo </span>&#62</a>			</nav>
+		</div>
+		<div class="col lg1 sm12 no-padding back">
+			<div class="btn inv bt-voltar visible-sm visible-xs">Voltar ao topo</div>
+			<div class="bt-voltar circle hidden-sm hidden-xs">
+				<svg class="icon--sprite_up">
+					<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_up"></use>
+				</svg>
+				<span>Voltar ao topo</span>
+			</div>
+		</div>
+	</div>
+</div>		
+		<div class="mod-leia-todas">
+	<a href="https://www.poder360.com.br/todas-noticias/" class="bt-leia-todas" title="Leia todas as notícias do Poder360">Leia todas as notícias do Poder360</a>
+</div>
+	</main>
+
+
+			<footer id="footer">
+				
+<div class="container">
+    <div class="row">
+        <div class="col lg6 xs12">
+            <div class="row first-row">
+                <div class="col lg10 xs12 offset-lg2 offset-xs0 no-padding-right">
+                    <a href="https://www.poder360.com.br" class="logo-footer">
+                        <svg class="icon--sprite_logo">
+                            <use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_logo"></use>
+                        </svg>
+                        <p class="label">editado por Fernando Rodrigues</p>
+                    </a>
+                </div>
+            </div>
+            <div class="row list-category">
+                <nav class="col lg4 xs6 offset-lg2 offset-xs0">
+                    <a class='link-category' href='https://www.poder360.com.br/congresso/'>Congresso</a>
+<a class='link-category' href='https://www.poder360.com.br/economia/'>Economia</a>
+<a class='link-category' href='https://www.poder360.com.br/governo/'>Governo</a>
+<a class='link-category' href='https://www.poder360.com.br/justica/'>Justiça</a>
+<a class='link-category' href='https://www.poder360.com.br/eleicoes/'>Eleições</a>
+<a class='link-category' href='https://www.poder360.com.br/pesquisas/'>Pesquisas</a>
+<a class='link-category' href='https://www.poder360.com.br/pesquisas-de-opiniao/'>Agregador de Pesquisas</a>
+<a class='link-category' href='https://www.poder360.com.br/politicos-do-brasil/'>Políticos do Brasil</a>
+<a class='link-category' href='https://www.poder360.com.br/midia/'>Mídia</a>                </nav>
+                <nav class='col lg5 xs6'>
+                    <a class='link-category' href='http://poder360.com.br/analise/'>Análise</a>
+<a class='link-category' href='http://poder360.com.br/opiniao/'>Opinião</a>
+<a class='link-category' href='https://www.poder360.com.br/conteudo-patrocinado/'>Poder360 Mercado</a>
+<a class='link-category' href='https://www.poder360.com.br/internacional/'>Internacional</a>
+<a class='link-category' href='https://www.poder360.com.br/tecnologia/'>Tecnologia</a>
+<a class='link-category' href='https://www.poder360.com.br/nieman/'>Nieman</a>
+<a class='link-category' href='https://www.poder360.com.br/infograficos/'>Infográficos</a>
+<a class='link-category' href='https://www.poder360.com.br/datapoder360/'>DataPoder360</a>
+<a class='link-category' href='https://www.poder360.com.br/paradise-papers/'>Paradise Papers</a>                </nav>
+            </div>
+        </div>
+        <div class="col lg6 xs12">
+            <div class="row first-row">
+                <div class="col lg6 xs12 no-padding-right-sm hidden-xs wrapper-newsletter">
+                    <form method="post" accept-charset="utf-8" class="form-newsletter clearfix">
+                        <label class="label">Receba a newsletter do Poder360</label>
+                        <input type="text" name="email" value="" placeholder="Seu e-mail" required>
+                        <input type="submit" value="ok" class="submit" />
+                    </form>
+                </div>
+                <div class="col lg5 sm6 xs12">
+                    <span class="label">Compartilhe o Poder360</span>
+                    <nav class="social">
+                        <a href="https://www.facebook.com/Poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Facebook"
+	target="_blank" 
+	class="fb circle link-social">
+
+	<svg class="icon--sprite_social_facebook">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-facebook"></use>
+	</svg>
+</a>
+                        <a href="https://flipboard.com/@Poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Flipboard"
+	target="_blank" 
+	class="flipboard circle link-social">
+
+	<svg class="icon--sprite_social_flipboard">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg?t=flip#sprite_social-flipboard"></use>
+	</svg>
+</a>
+                        <a href="https://twitter.com/Poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Twitter" 
+	target="_blank" 
+	class="tw circle link-social">
+
+	<svg class="icon--sprite_social-twitter">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-twitter"></use>
+	</svg>
+</a>
+                        <a href="https://plus.google.com/u/1/106278267143912504691" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no Google Plus"
+	target="_blank" 
+	class="gp circle link-social">
+
+	<svg class="icon--sprite_social-plus">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-plus"></use>
+	</svg>
+</a>
+                        <a href="https://www.linkedin.com/company/poder360" 
+	rel="nofollow"
+	title="Veja mais sobre o Poder360 no LinkedIn"
+	target="_blank" 
+	class="in circle link-social">
+
+    <svg class="icon--sprite_social-linkedin">
+        <use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-linkedin"></use>
+    </svg>
+</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="row list-company">
+                <nav class="col lg6 xs12">
+                    <a class='link-company' href='https://www.poder360.com.br/quem-somos/'>Quem somos</a>
+<a class='link-company' href='https://www.poder360.com.br/equipe/'>Equipe</a>
+<a class='link-company' href='https://www.poder360.com.br/articulistas/'>Articulistas</a>
+<a class='link-company' href='https://www.poder360.com.br/drive-premium/'>Drive Premium</a>
+<a class='link-company' href='https://www.poder360.com.br/eventos-poder360-ideias/'>Poder360-ideias</a>
+<a class='link-company' href='https://www.poder360.com.br/pesquisas-datapoder360/'>DataPoder360</a>
+<a class='link-company' href='https://www.poder360.com.br/poder360mercado/'>Poder360 Mercado</a>
+<a class='link-company' href='https://www.poder360.com.br/trabalhe-no-poder360/'>Trabalhe no Poder360</a>
+<a class='link-company' href='https://www.poder360.com.br/contato/'>Contato</a>                </nav>
+                <nav class='col lg5 xs6'>
+                    <a class='link-company' href='https://www.poder360.com.br/politica-editorial/'>Princípios Editoriais</a>
+<a class='link-company' href='https://www.poder360.com.br/conduta/'>Código de Conduta</a>
+<a class='link-company' href='https://www.poder360.com.br/compliance/'>Política de Compliance</a>
+<a class='link-company' href='https://www.poder360.com.br/politica-de-privacidade/'>Política de Privacidade</a>
+<a class='link-company' href='https://www.poder360.com.br/termos-de-uso/'>Termos de uso</a>
+<a class='link-company' href='https://www.poder360.com.br/reproducao-de-material/'>Reprodução de material</a>
+<a class='link-company' href='https://www.poder360.com.br/anuncie/'>Como anunciar</a>
+<a href='http://politicosdobrasil.com.br/' target='_blank' class='link-company'>Políticos do Brasil<!--
+                                --><svg class='icon--sprite_external-link'>
+                                    <use xlink:href='https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_external-link'></use>
+                                </svg>
+                           </a>
+<a href='http://fernandorodrigues.blogosfera.uol.com.br/' target='_blank' class='link-company'>Arquivo Blog Fernando Rodrigues<!--
+                                --><svg class='icon--sprite_external-link'>
+                                    <use xlink:href='https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_external-link'></use>
+                                </svg>
+                           </a>                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+			</footer>
+
+			
+<section id="like-modal-yes" class="modal" style="display:none;">
+	<article class="modal-content">
+
+		<h1>Que bom. Deseja compartilhar?</h1>
+
+		<div class="share">
+            <nav class="social inv text-center">
+                
+<a href="#" 
+	rel="nofollow"
+	title="Compartilhe no Facebook: Contra rejeição, Bolsonaro lança vídeo em que chora falando da filha"
+	target="_blank" 
+	class="fb circle link-social custom-share"
+	data-title="Contra rejeição, Bolsonaro lança vídeo em que chora falando da filha"
+	data-text="A campanha do candidato do PSL tenta reverter rejeição entre as mulheres. Leia no Poder360."
+	data-link="https://www.poder360.com.br/eleicoes/contra-rejeicao-bolsonaro-lanca-video-em-que-chora-falando-da-filha/"
+	data-img=""
+	>
+
+	<svg class="icon--sprite_social_facebook">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-facebook"></use>
+	</svg>
+</a>
+                
+<a href="#" 
+	rel="nofollow"
+	title="Compartilhe no Twitter: Contra rejeição, Bolsonaro lança vídeo em que chora falando da filha" 
+	target="_blank" 
+	class="tw circle link-social custom-share"
+	data-text="Contra rejeição, Bolsonaro lança vídeo em que chora falando da filha"
+	data-link="https://www.poder360.com.br/eleicoes/contra-rejeicao-bolsonaro-lanca-video-em-que-chora-falando-da-filha/"
+	>
+
+	<svg class="icon--sprite_social-twitter">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-twitter"></use>
+	</svg>
+</a>
+                
+<a href="#share-modal"
+	rel="modal:open"
+	title="Compartilhe por e-mail: Contra rejeição, Bolsonaro lança vídeo em que chora falando da filha"
+	target="_blank"
+	class="email circle"
+	>
+
+	<svg class="icon--sprite_social-email">
+		<use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_social-email"></use>
+	</svg>
+</a>
+            </nav>
+		</div>
+
+	</article>
+</section>
+			
+<section id="like-modal-no" class="modal" style="display:none;">
+	<article class="modal-content">
+
+		<h1>Não gostou?</h1>
+
+		<div class="form-wrapper">
+		    <form class="form-like" action="" method="post" accept-charset="utf-8">
+		        				    
+				<label>
+					Ajude o Poder360 a melhorar e mande seu recado:<br>
+					<textarea length="180" name="mensagem" ></textarea>
+				</label>
+				<label>
+					Escreva abaixo o seu e-mail:<br>
+					<input type="text" class="email_dest" name="email_dest" placeholder="seuemail@exemplo.com.br" >
+				</label>		            
+
+				<input class="btn" type="submit" value="Ok" />
+
+		    </form>
+		</div>
+
+	</article>
+</section>
+			
+<section id="cadastro-completo-modal" class="modal cadastro-final" style="display:none;">
+	<article class="modal-content">
+
+		<h1>Você fez alterações na sua conta.<br>Deseja salvar antes de sair?</h1>
+
+		<div class="buttons">
+            <div class="btn inv cancel">Cancelar</div>
+            <div class="btn agree">Ok</div>
+		</div>
+
+	</article>
+</section>
+			
+<section id="cadastro-campos-incompletos" class="modal cadastro-final" style="display:none;">
+	<article class="modal-content">
+
+		<h1>Atenção: há 1 ou mais campos vazios.<br>Se você salvar seus dados de maneira incompleta não poderá receber alertas do Poder360.</h1>
+
+		<div class="buttons">
+            <div class="btn inv cancel">Voltar</div>
+            <div class="btn agree">Continuar</div>
+		</div>
+
+	</article>
+</section>
+						
+<section id="author-modal" class="modal share-modal" style="display:none;">
+	<article class="modal-content">
+
+		<h1>Fale com <span class="author-name">o autor</span></h1>
+
+		<div class="form-wrapper">
+		    <form class="form-author-email" action="" method="post" accept-charset="utf-8">
+
+		    	<input type="hidden" name="url" value="http://www.poder360.com.br/tag/eleicoes-2018/">
+		        				    
+				<h2>Suas informações</h2>
+
+				<label>seu nome completo
+					<input type="text" name="nome" minlength="3" />
+				</label>
+					
+				<label>seu e-mail
+					<input type="email" name="email" />
+				</label>
+
+				<label>assunto
+					<select name="assunto">
+						<option value="-" selected="selected" disabled="disabled">selecione</option>
+						<option value="comentário">comentário</option>
+						<option value="reclamação">reclamação</option>
+						<option value="comunicação de erro">comunicação de erro</option>
+						<option value="sugestão de pauta">sugestão de pauta</option>
+						<option value="outros">outros</option>
+					</select>
+
+				</label>
+					
+				<label>mensagem			
+					<textarea maxlength="1000" name="mensagem"></textarea>
+					<small class="right"><span class="counter">0</span>/1000 caracteres</small>
+				</label>
+
+				<input type="hidden" class="id-author" name="id-author" value="">
+						
+				<input class="g-recaptcha btn" type="submit" value="Ok" />
+
+		    </form>
+		</div>
+
+	</article>
+</section>
+			<section class="mod-flash-messages">
+	<div class="flash">
+		<span>
+			<svg class="icon--sprite_error">
+	            <use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_error"></use>
+	        </svg>
+	        <svg class="icon--sprite_confirm">
+	            <use xlink:href="https://www.poder360.com.br/wp-content/themes/poder360/css/svg/sprite.svg#sprite_confirm"></use>
+	        </svg>
+			<span class="message"></span>	
+		</span>
+	</div>
+
+</section>
+
+			<div class="overlay-menu"></div>
+							<div class="creditos-footer">
+							<p>2018 © Todos os direitos Poder360.<br><a href="http://www.elav.com.br/?source=poder360" alt="Logo Elav" title="Powered by ELAV" target="_blank"><img src="https://www.poder360.com.br/wp-content/themes/poder360/images/elav-logo.png"></a></p>
+			</div>
+
+		</div><!-- end #skrollr-body -->
+
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=1'></script>
+<script type='text/javascript' src='https://www.poder360.com.br/wp-content/plugins/visualizer/js/lib/clipboardjs/clipboard.min.js?ver=3.0.1'></script>
+<script type='text/javascript' src='https://www.poder360.com.br/wp-content/themes/poder360/js/equipe/readmorefix.js?ver=0.1a'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js?ver=1'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js?ver=1'></script>
+<script type='text/javascript' src='https://www.poder360.com.br/wp-content/themes/poder360/js/plugins.min.js?ver=1536701679904'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var elav_ajax = {"ajax_url":"https:\/\/www.poder360.com.br\/wordpress\/wp-admin\/admin-ajax.php"};
+var wpurl = {"template_url":"https:\/\/www.poder360.com.br\/wp-content\/themes\/poder360"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.poder360.com.br/wp-content/themes/poder360/js/main.min.js?ver=1536701679904'></script>
+<script type='text/javascript' src='https://www.poder360.com.br/wp-content/themes/poder360/js/adv.min.js?ver=1536701679904'></script>
+<script type='text/javascript' src='https://www.poder360.com.br/wordpress/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+
+			<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"450d4edabb","applicationID":"18597700","transactionName":"b1UAYhADX0dSVkNfCVYfI1UWC15aHEFWUQ==","queueTime":0,"applicationTime":539,"atts":"QxIDFFgZTEk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 3815/3916 objects using memcached
+Page Caching using memcached
+Database Caching 23/62 queries in 0.086 seconds using memcached
+
+ Served from: www.poder360.com.br @ 2018-09-18 13:54:56 by W3 Total Cache -->
