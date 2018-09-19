@@ -38,10 +38,16 @@ import files.FolderFiles;
 public class Lucene {
 	public static void main(String [] args) throws IOException {
 
-
-
+		boolean stopWords = false;
+		boolean stemming = false;
+		
+		String consulta1 = "Corrida Eleitoral";
+		String consulta2 = "Analise de Vendas";
+		
 		StandardAnalyzer analyzer = new StandardAnalyzer();
-		FolderFiles folderFiles = new FolderFiles("../Text 2/Vendas online/", analyzer);
+		FolderFiles folderFiles = new FolderFiles("../Text 2/Vendas online/", 
+				"../Text 2/Ciencia de dados/", "../Text 2/Eleicoes 2018/", 
+				analyzer, stopWords, stemming);
 		folderFiles.readFiles();
 
 		Directory index = new RAMDirectory();
@@ -51,28 +57,29 @@ public class Lucene {
 		IndexWriter w;
 		try {
 			w = new IndexWriter(index, config);
-			folderFiles.addFiles(w, 200);
+			folderFiles.addFiles(w, 500);
 			w.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Digite o termo de pesquisa");
-		String querystr = sc.nextLine();
-		while (!querystr.equalsIgnoreCase("exit")) {
-			querystr = FolderFiles.preparacaoDados(analyzer, "query", querystr, true, true);
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Digite o termo de pesquisa");
+//		String querystr = sc.nextLine();
+		String querystr = consulta1;
+//		while (!querystr.equalsIgnoreCase("exit")) {
+			querystr = FolderFiles.preparacaoDados(analyzer, "query", querystr, stopWords, stemming);
 			querystr = querystr.replaceAll(" ", " AND ");
 
 			System.out.println(querystr);
 			try {
-				HashMap<String, Float> weights = new HashMap<>();
-				weights.put("text", 1F);
-				weights.put("title", 3F);
-				Query q = new MultiFieldQueryParser(new String[] {"text", "title"}, analyzer, weights).parse(querystr);
+//				HashMap<String, Float> weights = new HashMap<>();
+//				weights.put("text", 1F);
+//				weights.put("title", 2F);
+				Query q = new MultiFieldQueryParser(new String[] {"text", "title"}, analyzer).parse(querystr);
 
 
-				int hitsPerPage = 10;
+				int hitsPerPage = 15;
 				IndexReader reader = DirectoryReader.open(index);
 				IndexSearcher searcher = new IndexSearcher(reader);
 				TopDocs docs = searcher.search(q, hitsPerPage);
@@ -83,14 +90,14 @@ public class Lucene {
 				for(int i=0;i<hits.length;++i) {
 					int docId = hits[i].doc;
 					Document d = searcher.doc(docId);
-					System.out.println((i + 1) + ". " + d.get("title") + "\t\t" + d.get("text").substring(0, 100));
+					System.out.println((i + 1) + ". " + d.get("title").substring(0, Math.min(50, d.get("title").length())) + "\t\t" + d.get("text").substring(0, Math.min(100, d.get("text").length())));
 					path = d.get("path");
 				}
-				if (path.length() > 1) {
-					List<String> file = Files.readAllLines(Paths.get(path));
-					String text = String.join(" ",file);
-					System.out.println("\n" + text + "\n");
-				}
+//				if (path.length() > 1) {
+//					List<String> file = Files.readAllLines(Paths.get("/Users/porquin/Documents/Jailson/Min Web/Lucene/../Text 2/Ciencia de dados/69.txt"));
+//					String text = String.join(" ",file);
+//					System.out.println("\n" + text + "\n");
+//				}
 
 
 			} catch (ParseException e) {
@@ -100,9 +107,9 @@ public class Lucene {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("Digite o termo de pesquisa");
-			querystr = sc.nextLine();
-		}
-		sc.close();
+//			System.out.println("Digite o termo de pesquisa");
+//			querystr = sc.nextLine();
+//		}
+//		sc.close();
 	}
 }

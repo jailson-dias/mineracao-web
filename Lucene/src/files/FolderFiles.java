@@ -22,18 +22,27 @@ import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.IndexWriter;
 
 public class FolderFiles {
-	private String folder;
+	private String folder1, folder2, folder3;
 	private ArrayList<File> files;
 	private Analyzer analyzer;
-	public FolderFiles(String folder, Analyzer analyzer) {
-		this.folder = folder;
+	private boolean stopWords;
+	private boolean stemming;
+	
+	public FolderFiles(String folder1, String folder2, String folder3, 
+			Analyzer analyzer, boolean stopwords, boolean stemming) {
+		this.folder1 = folder1;
+		this.folder2 = folder2;
+		this.folder3 = folder3;
 		this.files = new ArrayList<>();
 		this.analyzer = analyzer;
+		this.stopWords = stopwords;
+		this.stemming = stemming;
 	}
 
 	public void readFiles() {
-		File folder = new File(this.folder);
-		ArrayList<File> listOfFiles = new ArrayList<>(Arrays.asList(folder.listFiles()));
+		ArrayList<File> listOfFiles = new ArrayList<>(Arrays.asList((new File(this.folder1)).listFiles()));
+		listOfFiles.addAll(Arrays.asList((new File(this.folder2).listFiles())));
+		listOfFiles.addAll(Arrays.asList((new File(this.folder3).listFiles())));
 
 //		listOfFiles.sort(new Comparator<File>() {
 //			@Override
@@ -42,7 +51,7 @@ public class FolderFiles {
 //	        }
 //		});
 		for (File f : listOfFiles) {
-			System.out.println(f.getName());
+			System.out.println(f.getAbsolutePath());
 			if (f.isFile() && f.getName().endsWith(".txt")) {
 				this.files.add(f);
 			}
@@ -54,6 +63,7 @@ public class FolderFiles {
 	}
 
 	public void addFiles(IndexWriter w, int n) throws IOException {
+		System.out.println("tam array" + this.files.size());
 		n = Math.min(files.size(),n);
 		for (int i = 0;i<n;i++) {
 			File f = files.get(i);
@@ -64,12 +74,12 @@ public class FolderFiles {
 //			String title1 = preparacaoDados("title", title, false, false);
 //			String title2 = preparacaoDados("title", title, true, false);
 //			String title3 = preparacaoDados("title", title, false, true);
-			String title4 = preparacaoDados(analyzer, "title", title, true, true);
+			String title4 = preparacaoDados(analyzer, "title", title, this.stopWords, this.stemming);
 			
 //			String text1 = preparacaoDados("text", text, false, false);
 //			String text2 = preparacaoDados("text", text, true, false);
 //			String text3 = preparacaoDados("text", text, false, true);
-			String text4 = preparacaoDados(analyzer, "text", text, true, true);
+			String text4 = preparacaoDados(analyzer, "text", text, this.stopWords, this.stemming);
 			
 			String filePath = f.getAbsolutePath();
 			
