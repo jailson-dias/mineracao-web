@@ -1,9 +1,12 @@
 package main;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
@@ -40,10 +43,25 @@ public class Lucene {
 
 		boolean stopWords = false;
 		boolean stemming = false;
+
+		int consulta = 2;
 		
+		consulta(stopWords, stemming, consulta);
+
+	}
+	
+	private static void consulta(boolean stopWords, boolean stemming, int consulta) throws IOException {
+		String consulta1FilesPath = "./Relevantes Corrida.txt";
+		String consulta2FilesPath = "./Relevantes Vendas.txt";
+
+		List<String> positivosConsulta1 = Arrays.asList(String.join("", Files.readAllLines(
+				Paths.get(new File(consulta1FilesPath).getAbsolutePath()))).split(";"));
+		List<String> positivosConsulta2 = Arrays.asList(String.join("", Files.readAllLines(
+				Paths.get(new File(consulta2FilesPath).getAbsolutePath()))).split(";"));
+
 		String consulta1 = "Corrida Eleitoral";
 		String consulta2 = "Analise de Vendas";
-		
+
 		StandardAnalyzer analyzer = new StandardAnalyzer();
 		FolderFiles folderFiles = new FolderFiles("../Text 2/Vendas online/", 
 				"../Text 2/Ciencia de dados/", "../Text 2/Eleicoes 2018/", 
@@ -60,56 +78,63 @@ public class Lucene {
 			folderFiles.addFiles(w, 500);
 			w.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		Scanner sc = new Scanner(System.in);
-//		System.out.println("Digite o termo de pesquisa");
-//		String querystr = sc.nextLine();
+
 		String querystr = consulta1;
-//		while (!querystr.equalsIgnoreCase("exit")) {
-			querystr = FolderFiles.preparacaoDados(analyzer, "query", querystr, stopWords, stemming);
-			querystr = querystr.replaceAll(" ", " AND ");
+		if (consulta == 2) {
+			querystr = consulta2;
+		}
+		querystr = FolderFiles.preparacaoDados(analyzer, "query", querystr, stopWords, stemming);
+		querystr = querystr.replaceAll(" ", " AND ");
 
-			System.out.println(querystr);
-			try {
-//				HashMap<String, Float> weights = new HashMap<>();
-//				weights.put("text", 1F);
-//				weights.put("title", 2F);
-				Query q = new MultiFieldQueryParser(new String[] {"text", "title"}, analyzer).parse(querystr);
-
-
-				int hitsPerPage = 15;
-				IndexReader reader = DirectoryReader.open(index);
-				IndexSearcher searcher = new IndexSearcher(reader);
-				TopDocs docs = searcher.search(q, hitsPerPage);
-				ScoreDoc[] hits = docs.scoreDocs;
-
-				System.out.println("Found " + hits.length + " hits.");
-				String path = "";
-				for(int i=0;i<hits.length;++i) {
-					int docId = hits[i].doc;
-					Document d = searcher.doc(docId);
-					System.out.println((i + 1) + ". " + d.get("title").substring(0, Math.min(50, d.get("title").length())) + "\t\t" + d.get("text").substring(0, Math.min(100, d.get("text").length())));
-					path = d.get("path");
-				}
-//				if (path.length() > 1) {
-//					List<String> file = Files.readAllLines(Paths.get("/Users/porquin/Documents/Jailson/Min Web/Lucene/../Text 2/Ciencia de dados/69.txt"));
-//					String text = String.join(" ",file);
-//					System.out.println("\n" + text + "\n");
-//				}
+		System.out.println(querystr);
+		try {
+			Query q = new MultiFieldQueryParser(new String[] {"text", "title"}, analyzer).parse(querystr);
 
 
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			int hitsPerPage = 15;
+			IndexReader reader = DirectoryReader.open(index);
+			IndexSearcher searcher = new IndexSearcher(reader);
+			TopDocs docs = searcher.search(q, hitsPerPage);
+			ScoreDoc[] hits = docs.scoreDocs;
+
+			System.out.println("Found " + hits.length + " hits.");
+			List<String> positivosConsultaFiles = positivosConsulta1;
+			if (consulta == 2) {
+				positivosConsultaFiles = positivosConsulta2;
 			}
-//			System.out.println("Digite o termo de pesquisa");
-//			querystr = sc.nextLine();
-//		}
-//		sc.close();
+			
+			int relevantes = 0;
+			for(int i=0;i<hits.length;++i) {
+				int docId = hits[i].doc;
+				Document d = searcher.doc(docId);
+				String path = d.get("path");
+				
+				for (String file: positivosConsultaFiles) {
+					if (path.equalsIgnoreCase(file)) {
+						relevantes += 1;
+						break;
+					}
+				}
+			}
+			System.out.println(relevantes);
+			
+			float precisao = (float) relevantes/hits.length;
+			float cobertura = (float) relevantes/positivosConsultaFiles.size();
+			
+			float fMeasure = (float) 2*(precisao*cobertura)/(precisao + cobertura);
+			
+			System.out.println("Precisão: " + precisao);
+			System.out.println("Cobertura: " + cobertura);
+			System.out.println("F-Measure: " + fMeasure);
+
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		};
 	}
 }

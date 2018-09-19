@@ -51,7 +51,7 @@ public class FolderFiles {
 //	        }
 //		});
 		for (File f : listOfFiles) {
-			System.out.println(f.getAbsolutePath());
+//			System.out.println(f.getAbsolutePath());
 			if (f.isFile() && f.getName().endsWith(".txt")) {
 				this.files.add(f);
 			}
@@ -81,9 +81,9 @@ public class FolderFiles {
 //			String text3 = preparacaoDados("text", text, false, true);
 			String text4 = preparacaoDados(analyzer, "text", text, this.stopWords, this.stemming);
 			
-			String filePath = f.getAbsolutePath();
-			
-			addDoc(w, title4, text4, filePath);
+			List<String> filePath = Arrays.asList(f.getAbsolutePath().split("/../Text 2/"));
+//			System.out.println();
+			addDoc(w, title4, text4, "./" + filePath.get(1));
 		}
 	}
 
