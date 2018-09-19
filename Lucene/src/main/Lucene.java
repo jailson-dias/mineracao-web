@@ -44,13 +44,40 @@ public class Lucene {
 		boolean stopWords = false;
 		boolean stemming = false;
 
-		int consulta = 2;
+		int consulta = 1;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite 0 para a consulta (Corrida Eleitoral) ou 1 para (Análise de Vendas)");
+
+		if (sc.next().equalsIgnoreCase("1")) {
+			consulta = 2;
+		}
+		
+		System.out.println("Digite 1 para usar stopwords ou 0 para não usar");
+		
+		if (sc.next().equalsIgnoreCase("1")) {
+			stopWords = true;
+		}
+		
+		System.out.println("Digite 1 para usar stemming ou 0 para não usar");
+		if (sc.next().equalsIgnoreCase("1")) {
+			stemming = true;
+		}
+	
+		System.out.println("Consulta: " + consulta);
+		System.out.println("StopWords: " + stopWords);
+		System.out.println("Stemming: " + stemming);
 		
 		consulta(stopWords, stemming, consulta);
+
+		sc.close();
 
 	}
 	
 	private static void consulta(boolean stopWords, boolean stemming, int consulta) throws IOException {
+		
+		System.out.println("Processando documentos...");
 		String consulta1FilesPath = "./Relevantes Corrida.txt";
 		String consulta2FilesPath = "./Relevantes Vendas.txt";
 
@@ -88,18 +115,18 @@ public class Lucene {
 		querystr = FolderFiles.preparacaoDados(analyzer, "query", querystr, stopWords, stemming);
 		querystr = querystr.replaceAll(" ", " AND ");
 
-		System.out.println(querystr);
+		System.out.println("Query: " + querystr);
 		try {
 			Query q = new MultiFieldQueryParser(new String[] {"text", "title"}, analyzer).parse(querystr);
 
 
-			int hitsPerPage = 15;
+			int hitsPerPage = 500;
 			IndexReader reader = DirectoryReader.open(index);
 			IndexSearcher searcher = new IndexSearcher(reader);
 			TopDocs docs = searcher.search(q, hitsPerPage);
 			ScoreDoc[] hits = docs.scoreDocs;
 
-			System.out.println("Found " + hits.length + " hits.");
+			System.out.println("Encontrou " + hits.length + " documentos.");
 			List<String> positivosConsultaFiles = positivosConsulta1;
 			if (consulta == 2) {
 				positivosConsultaFiles = positivosConsulta2;
@@ -118,13 +145,13 @@ public class Lucene {
 					}
 				}
 			}
-			System.out.println(relevantes);
+			System.out.println("Documentos Relevantes: " + relevantes);
 			
 			float precisao = (float) relevantes/hits.length;
 			float cobertura = (float) relevantes/positivosConsultaFiles.size();
 			
 			float fMeasure = (float) 2*(precisao*cobertura)/(precisao + cobertura);
-			
+			System.out.println();
 			System.out.println("Precisão: " + precisao);
 			System.out.println("Cobertura: " + cobertura);
 			System.out.println("F-Measure: " + fMeasure);

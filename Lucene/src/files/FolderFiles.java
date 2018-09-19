@@ -63,7 +63,7 @@ public class FolderFiles {
 	}
 
 	public void addFiles(IndexWriter w, int n) throws IOException {
-		System.out.println("tam array" + this.files.size());
+//		System.out.println("tam array" + this.files.size());
 		n = Math.min(files.size(),n);
 		for (int i = 0;i<n;i++) {
 			File f = files.get(i);
