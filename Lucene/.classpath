@@ -2,9 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/Users/porquin/Downloads/lucene-7.4.0/core/lucene-core-7.4.0.jar"/>
-	<classpathentry kind="lib" path="/Users/porquin/Downloads/lucene-7.4.0/demo/lucene-demo-7.4.0.jar"/>
-	<classpathentry kind="lib" path="/Users/porquin/Downloads/lucene-7.4.0/queryparser/lucene-queryparser-7.4.0.jar"/>
-	<classpathentry kind="lib" path="/Users/porquin/Downloads/lucene-7.4.0/analysis/common/lucene-analyzers-common-7.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jails/Downloads/lucene-7.4.0/core/lucene-core-7.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jails/Downloads/lucene-7.4.0/demo/lucene-demo-7.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jails/Downloads/lucene-7.4.0/queryparser/lucene-queryparser-7.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jails/Downloads/lucene-7.4.0/analysis/common/lucene-analyzers-common-7.4.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
